@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Längenausdehnung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Längenausdehnung</h1>
+      <h2>Gesetz der Längenausdehnung</h2>
+      <h3>Herleitung</h3>
+      <p>Die Längenausdehnung $\Delta L$ ist:</p>
+      <ul>
+        <li>
+          <p>
+            direkt proportional zur Temperaturänderung $\Delta \theta$ des
+            Stabes:
+          </p>
+          $$ \Delta L \sim \Delta \theta$$
+        </li>
+        <li>
+          <p>direkt proportional zur Anfangslänge $L_0$ des Stabes:</p>
+          $$ \Delta L \sim L_0$$
+        </li>
+      </ul>
+      <p>
+        Die beiden Proportionalitäten lassen sich zusammenschreiben, daher
+        ergibt sich:
+      </p>
+      $$ \Delta L \sim \Delta \theta \cdot L_0$$
+      <p>und</p>
+      $$ \frac{\Delta L}{\Delta \theta \cdot L_0} = konstant$$
+      <p>
+        Die Proportionalitätskonstante drückt die Abhängigkeit der Ausdehnung
+        vom Material aus und wird als Längenausdehnungskoeffizient $\alpha$
+        bezeichnet. Also erhalten wir:
+      </p>
+      $$ \frac{\Delta L}{\Delta \theta \cdot L_0} = \alpha$$
+      <h3>Formel</h3>
+      $$ \Delta L = \alpha \cdot \Delta \theta \cdot L_0 $$
+      <p>oder</p>
+      $$ L - L_0 = \alpha \cdot \left( \theta - \theta_0 \right) \cdot L_0 $$
+      <h2>Längenausdehnung</h2>
+      <p>
+        Die Länge $L$ des Körpers bei der Temperatur $\theta$ ergibt sich durch
+        die Summe aus der Ausgangslänge $L_0$ und der Längenänderung $\Delta L$
+        :
+      </p>
+      $$ L = L_0 + \Delta L = L_0 + \alpha \cdot L_0 \cdot \Delta \theta $$
+      <p>es gilt:</p>
+      $$ L = L_0 \cdot \left( 1+ \alpha \cdot \Delta \theta \right) $$
+      <h2>
+        Längenausdehnungskoeffizient, linearer Wärmeausdehnungskoeffizient
+      </h2>
+      <h3>Definition</h3>
+      <p>
+        Der Längenausdehnungskoeffizient gibt an wie viel oder wenig ein Stoff
+        sich unter Auswirkung von Temperatur ausdehnt.
+      </p>
+      <h3>Einheit</h3>
+      $$ [\alpha] = \frac{1}{K} = \frac{1}{^{\circ}C}$$
+      <h2>Ausdehnung und Verkürzung</h2>
+      <ul>
+        <li>
+          <p><u>Ausdehnung</u></p>
+          <p>
+            Wenn die Temperatur des Körpers steigt, dann dehnt sich der Körper
+            aus; die Längenänderung $\Delta L$ ist positiv. Für $\alpha > 0$:
+          </p>
+          $$ \theta > \theta_0 $$ $$\Leftrightarrow \Delta \theta > 0 $$
+          $$\Leftrightarrow L > L_0 $$ $$\Leftrightarrow \Delta L > 0 $$
+          <p>Es gilt also:</p>
+          $$\Delta \theta > 0 \Leftrightarrow \Delta L > 0$$
+        </li>
+        <li>
+          <p><u>Verkürzung</u></p>
+          <p>
+            Wenn die Temperatur des Körpers sinkt, dann zieht sich der Körper
+            zusammen; die Längenänderung $\Delta L$ ist negativ. Für $\alpha >
+            0$:
+          </p>
+          $$ \theta < \theta_0 $$ $$\Leftrightarrow \Delta \theta < 0 $$
+          $$\Leftrightarrow L < L_0 $$ $$\Leftrightarrow \Delta L < 0 $$
+          <p>Es gilt also:</p>
+          $$\Delta \theta < 0 \Leftrightarrow \Delta L < 0$$
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

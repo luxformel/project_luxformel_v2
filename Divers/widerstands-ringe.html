@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Widerstands Ringe</title>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Widerstands Ringe</h1>
+      <h2>Toleranzstreifen</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th colspan="2"><p>Farbe</p></th>
+            <th><p>A</p></th>
+            <th><p>B</p></th>
+            <th><p>C</p></th>
+            <th><p>Multiplikator</p></th>
+            <th><p>Toleranz</p></th>
+            <th><p>Temperaturkoeffizient</p></th>
+          </tr>
+          <tr>
+            <td><p>Silber</p></td>
+            <td class="silber"></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>$\times 10^{-2}$</p></td>
+            <td><p>$\pm 10\%$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Gold</p></td>
+            <td class="gold"></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>$\times 10^{-1}$</p></td>
+            <td><p>$\pm 5\%$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Schwarz</p></td>
+            <td class="schwarz"></td>
+            <td><p>-</p></td>
+            <td><p>0</p></td>
+            <td><p>0</p></td>
+            <td><p>$\times 10^{0}$</p></td>
+            <td><p>*</p></td>
+            <td><p>$\pm 200 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Braun</p></td>
+            <td class="braun"></td>
+            <td><p>1</p></td>
+            <td><p>1</p></td>
+            <td><p>1</p></td>
+            <td><p>$\times 10^{1}$</p></td>
+            <td><p>$\pm 1\%$</p></td>
+            <td><p>$\pm 100 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Rot</p></td>
+            <td class="rot"></td>
+            <td><p>2</p></td>
+            <td><p>2</p></td>
+            <td><p>2</p></td>
+            <td><p>$\times 10^{2}$</p></td>
+            <td><p>$\pm 2\%$</p></td>
+            <td><p>$\pm 50 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Orange</p></td>
+            <td class="orange"></td>
+            <td><p>3</p></td>
+            <td><p>3</p></td>
+            <td><p>3</p></td>
+            <td><p>$\times 10^{3}$</p></td>
+            <td><p>*</p></td>
+            <td><p>$\pm 20 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Gelb</p></td>
+            <td class="gelb"></td>
+            <td><p>4</p></td>
+            <td><p>4</p></td>
+            <td><p>4</p></td>
+            <td><p>$\times 10^{4}$</p></td>
+            <td><p>*</p></td>
+            <td><p>$\pm 25 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Grün</p></td>
+            <td class="grün"></td>
+            <td><p>5</p></td>
+            <td><p>5</p></td>
+            <td><p>5</p></td>
+            <td><p>$\times 10^{5}$</p></td>
+            <td><p>$\pm 0,5\%$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Blau</p></td>
+            <td class="blau"></td>
+            <td><p>6</p></td>
+            <td><p>6</p></td>
+            <td><p>6</p></td>
+            <td><p>$\times 10^{6}$</p></td>
+            <td><p>$\pm 0,2\%$</p></td>
+            <td><p>$\pm 10 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Violett</p></td>
+            <td class="violett"></td>
+            <td><p>7</p></td>
+            <td><p>7</p></td>
+            <td><p>7</p></td>
+            <td><p>$\times 10^{7}$</p></td>
+            <td><p>$\pm 0,1\%$</p></td>
+            <td><p>$\pm 5 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Grau</p></td>
+            <td class="grau"></td>
+            <td><p>8</p></td>
+            <td><p>8</p></td>
+            <td><p>8</p></td>
+            <td><p>$\times 10^{8}$</p></td>
+            <td><p>*</p></td>
+            <td><p>$\pm 1 \cdot 10^{-6} \frac{1}{K}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Wei&beta;</p></td>
+            <td class="weiss"></td>
+            <td><p>9</p></td>
+            <td><p>9</p></td>
+            <td><p>9</p></td>
+            <td><p>$\times 10^{9}$</p></td>
+            <td><p>*</p></td>
+            <td><p>-</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Bemerkung</h3>
+      <p>* ohne Toleranzstreifen: $\pm 20\%$</p>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <td rowspan="4"><p>Anzahl der Ringe</p></td>
+            <td rowspan="4"><p>4</p></td>
+            <td><p>1.Ring</p></td>
+            <td><p>A</p></td>
+          </tr>
+          <tr>
+            <td><p>2.Ring</p></td>
+            <td><p>B</p></td>
+          </tr>
+          <tr>
+            <td><p>3.Ring</p></td>
+            <td><p>Multiplikator</p></td>
+          </tr>
+          <tr>
+            <td><p>4.Ring</p></td>
+            <td><p>Toleranz</p></td>
+          </tr>
+        </table>
+      </div>
+      <hr />
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <td rowspan="5"><p>Anzahl der Ringe</p></td>
+            <td rowspan="5"><p>5</p></td>
+            <td><p>1.Ring</p></td>
+            <td><p>A</p></td>
+          </tr>
+          <tr>
+            <td><p>2.Ring</p></td>
+            <td><p>B</p></td>
+          </tr>
+          <tr>
+            <td><p>3.Ring</p></td>
+            <td><p>C</p></td>
+          </tr>
+          <tr>
+            <td><p>4.Ring</p></td>
+            <td><p>Multiplikator</p></td>
+          </tr>
+          <tr>
+            <td><p>5.Ring</p></td>
+            <td><p>Toleranz</p></td>
+          </tr>
+        </table>
+      </div>
+      <hr />
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <td rowspan="5"><p>Anzahl der Ringe</p></td>
+            <td rowspan="4"><p>5</p></td>
+            <td><p>1.Ring</p></td>
+            <td><p>A</p></td>
+          </tr>
+          <tr>
+            <td><p>2.Ring</p></td>
+            <td><p>B</p></td>
+          </tr>
+          <tr>
+            <td><p>3.Ring</p></td>
+            <td><p>Multiplikator</p></td>
+          </tr>
+          <tr>
+            <td><p>4.Ring</p></td>
+            <td><p>Toleranz</p></td>
+          </tr>
+          <tr>
+            <td><p>**</p></td>
+            <td><p>5.Ring</p></td>
+            <td><p>Temperaturkoeffizient</p></td>
+          </tr>
+        </table>
+      </div>
+      <hr />
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <td rowspan="6"><p>Anzahl der Ringe</p></td>
+            <td rowspan="5"><p>6</p></td>
+            <td><p>1.Ring</p></td>
+            <td><p>A</p></td>
+          </tr>
+          <tr>
+            <td><p>2.Ring</p></td>
+            <td><p>B</p></td>
+          </tr>
+          <tr>
+            <td><p>3.Ring</p></td>
+            <td><p>C</p></td>
+          </tr>
+          <tr>
+            <td><p>4.Ring</p></td>
+            <td><p>Multiplikator</p></td>
+          </tr>
+          <tr>
+            <td><p>5.Ring</p></td>
+            <td><p>Toleranz</p></td>
+          </tr>
+          <tr>
+            <td><p>**</p></td>
+            <td><p>6.Ring</p></td>
+            <td><p>Temperaturkoeffizient</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Bemerkung</h3>
+      <p>** Ring ist breiter als die anderen</p>
+      <p>
+        Der Toleranzring steht in einem etwas grö&beta;eren Abstand zu den
+        anderen Ringen. Der erste Ring steht näher am Rand des Widerstands als
+        der Toleranzring.
+      </p>
+    </div>
+  </body>
+  <style>
+    .silber {
+      background-color: silver !important;
+    }
+    .gold {
+      background-color: gold !important;
+    }
+    .schwarz {
+      background-color: black !important;
+    }
+    .braun {
+      background-color: brown !important;
+    }
+    .rot {
+      background-color: red !important;
+    }
+    .orange {
+      background-color: orange !important;
+    }
+    .gelb {
+      background-color: yellow !important;
+    }
+    .grün {
+      background-color: green !important;
+    }
+    .blau {
+      background-color: blue !important;
+    }
+    .violett {
+      background-color: violet !important;
+    }
+    .grau {
+      background-color: gray !important;
+    }
+    .weiss {
+      background-color: white !important;
+    }
+  </style>
+</html>

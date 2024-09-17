@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+    <script defer src="/settings/settings.js"></script>
+    <title>Auftrieb</title>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <h1>Astronomische Daten</h1>
+      <h2>Allgemein</h2>
+      <div class="xScrollable">
+        <table>
+          <th></th>
+          <th>
+            <p>Zeichen</p>
+          </th>
+          <th>
+            <p>Größenwert</p>
+          </th>
+          <tr>
+            <td>
+              <p>
+                Astronomische Längeneinheiten <br />
+                mittlere Entfernung Erde-Sonne
+              </p>
+            </td>
+            <td><p>$1 AE$</p></td>
+            <td><p>$1,496 \cdot 10^{11} m$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Lichtjahr <br />
+                Weg des Lichtes in einem Jahr
+              </p>
+            </td>
+            <td><p>$1Lj$</p></td>
+            <td><p>$0,946 \cdot 10^{16} m$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Parallaxensekunde <br />
+                Entfernung entsprechend der Parallaxe einer Bogensekunde
+              </p>
+            </td>
+            <td><p>$1parsec$</p></td>
+            <td><p>$1 pc = 3,086 \cdot 10^6 m$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Siderisches Jahr $365 d\ 6 h\ 9 min\ 10 s$ <br />
+                Zeit zwischen zwei Vorübergängen der mittleren Sonne vor
+                demselben Stern
+              </p>
+            </td>
+            <td></td>
+            <td><p>$365,2563$ mittlere Sonnentage $3,1558 \cdot 10^7 s$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Tropisches Jahr $365 d\ 5 h\ 48 min\ 46 s$ <br />
+                Zeit zwischen zwei Durchgängen der mittleren Sonne durch den
+                Frühlingspunkt
+              </p>
+            </td>
+            <td></td>
+            <td><p>$365,2422$ mittlere Sonnentage $3,1557 \cdot 10^7s$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Siderischer Monat $27 d\ 7 h\ 43 min\ 12 s$ <br />
+                Zeit zwischen zwei Vorübergängen des Mondes vor demselben Stern
+              </p>
+            </td>
+            <td></td>
+            <td><p>$27,3217 d$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Synodischer Monat $29 d\ 12 h\ 44 min\ 3 s$ <br />
+                Zeit zwischen zwei Vorübergängen des Mondes vor der Sonne
+              </p>
+            </td>
+            <td></td>
+            <td><p>$29,5306 d$</p></td>
+          </tr>
+        </table>
+      </div>
+      <h2>Sonne</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th></th>
+            <th><p>Zeichen</p></th>
+            <th><p>Größenwert</p></th>
+          </tr>
+          <tr>
+            <td><p>mittlerer Radius</p></td>
+            <td><p>$R_{\odot }$</p></td>
+            <td>
+              <p>
+                $6,96 \cdot 10^8 m$ <br />
+                Sehwinkel $32^{\prime}$
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Masse</p></td>
+            <td><p>$m_{\odot }$</p></td>
+            <td>
+              <p>$1,989 \cdot 1030 kg\ (= 3,33 \cdot 10^5 m_E)$</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>mittlere Dichte</p></td>
+            <td><p>$\rho_{\odot }$</p></td>
+            <td>
+              <p>$1,409 \cdot 10^3 \frac{kg}{m^3}$</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Schwerebeschleunigung, an der Oberfläche</p></td>
+            <td><p>$g_{\odot }$</p></td>
+            <td>
+              <p>$2,736 \cdot 10^2 \frac{m}{s^2}$</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Oberflächentemperatur</p></td>
+            <td><p>$T$</p></td>
+            <td>
+              <p>$5773K$</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Effektive Temperatur der "Oberfläche"</p></td>
+            <td><p>$T_{eff}$</p></td>
+            <td>
+              <p>$5777K$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Abstand zum nächsten Fixstern, Proxima Centauri</p>
+            </td>
+            <td><p>$e$</p></td>
+            <td>
+              <p>$4,26Lj$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Leuchtkraft, gesamte Strahlungsleistung</p>
+            </td>
+            <td><p>$L_{\odot}$</p></td>
+            <td>
+              <p>$3,86 \cdot 10^{26} W$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                Solarkonstante der auf der Erde ankommende Strahlungsleistung
+              </p>
+            </td>
+            <td><p>$S$</p></td>
+            <td>
+              <p>$1,372 \cdot 10^{3} \frac{W}{m^2}$</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2>Erde</h2>
+
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th></th>
+            <th><p>Zeichen</p></th>
+            <th><p>Größenwert</p></th>
+          </tr>
+          <tr>
+            <td><p>Äquatorradius</p></td>
+            <td><p>$r_{Ea}$</p></td>
+            <td><p>$6,37814 \cdot 10^6 m$</p></td>
+          </tr>
+          <tr>
+            <td><p>Polarradius</p></td>
+            <td><p>$r_{Ep}$</p></td>
+            <td><p>$6,35680 \cdot 10^6 m$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>mittlerer Erdradius, Radius der Kugel mit Volumen der Erde</p>
+            </td>
+            <td><p>$r_{E}$</p></td>
+            <td><p>$6,37104 \cdot 10^6 m$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>mittlere Dichte</p>
+            </td>
+            <td><p>$\rho_{E}$</p></td>
+            <td><p>$5,515 \cdot 10^3 \frac{kg}{m^3}$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Dichte der Erdkruste in 30 bis 70 km Tiefe</p>
+            </td>
+            <td><p>$\rho_{E}$</p></td>
+            <td>
+              <p>
+                $2,6 \cdot 10^3 \frac{kg}{m^3}$ bis $3,0 \cdot 10^3
+                \frac{kg}{m^3} $
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Masse</p>
+            </td>
+            <td><p>$m_{E}$</p></td>
+            <td>
+              <p>$5,9737 \cdot 10^24 kg $</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>mittlere Schwerebeschleunigung</p>
+            </td>
+            <td><p>$g_{E}$</p></td>
+            <td>
+              <p>$9,814 \frac{m}{s^2} $</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2>Mond</h2>
+
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th></th>
+            <th><p>Zeichen</p></th>
+            <th><p>Größenwert</p></th>
+          </tr>
+          <tr>
+            <td><p>mittlerer Radius</p></td>
+            <td><p>$r_M$</p></td>
+            <td><p>$1,738 \cdot 10^6 m$ (Sehwinkel 31)</p></td>
+          </tr>
+          <tr>
+            <td><p>Masse</p></td>
+            <td><p>$m_M$</p></td>
+            <td><p>$7,349 \cdot 10^{22} m\ (=0,0123m_E)$</p></td>
+          </tr>
+          <tr>
+            <td><p>Dichte</p></td>
+            <td><p>$\rho_M$</p></td>
+            <td><p>$3,341 \cdot 10^{3} \frac{kg}{m^3}$</p></td>
+          </tr>
+          <tr>
+            <td><p>Schwerebeschleunigung</p></td>
+            <td><p>$g_M$</p></td>
+            <td>
+              <p>$1,620 \frac{m}{s^2}\ \left( =\frac{1}{6} g_E\right)$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                mittlerer Abstand von Erde (Abstand schwankt zwischen $3,633
+                \cdot 10^8 m$ und $4,055 \cdot 10^8 m$)
+              </p>
+            </td>
+            <td><p>$e$</p></td>
+            <td>
+              <p>$3,844 \cdot 10^8 m$</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Planetensystem</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th rowspan="2"><p>Planet</p></th>
+            <th rowspan="2"><p>Zeichen</p></th>
+            <th colspan="2"><p>Masse des Planeten</p></th>
+            <th colspan="2"><p>mittlere Entfernung $e$ zur Sonne</p></th>
+            <th rowspan="2">
+              <p>
+                siderische Umlaufzeit $T$ Zeit eines vollen Umlaufs um die Sonne
+              </p>
+            </th>
+            <th rowspan="2"><p>Äquatorialer Radius $r$ in $km$</p></th>
+          </tr>
+          <tr>
+            <th><p>absolut in $10^{24}kg$</p></th>
+            <th><p>relativ zur Masse $m_E$ der Erde $\frac{m}{m_E}$</p></th>
+            <th><p>absolut in $10^{9}kg$</p></th>
+            <th>
+              <p>relativ zum Erdbahnradius $r_E$ der Erde $\frac{e}{r_E}$</p>
+            </th>
+          </tr>
+          <tr>
+            <td><p>Merkur</p></td>
+
+            <td>
+              <img
+                src="/Physik/img/Astronomische Daten/Mercury_symbol_(fixed_width).svg.png"
+                alt="merkur zeichen"
+                style="max-width: 3rem"
+              />
+            </td>
+            <td><p>0,330</p></td>
+            <td><p>0,0553</p></td>
+            <td><p>57,9</p></td>
+            <td><p>0,387</p></td>
+            <td><p>87,969 d</p></td>
+            <td><p>2440</p></td>
+          </tr>
+          <tr>
+            <td><p>Venus</p></td>
+            <td>
+              <img
+                src="/Physik/img/Astronomische Daten/Venus_symbol_(fixed_width).svg.png"
+                alt="venus zeichen"
+                style="max-width: 3rem"
+              />
+            </td>
+            <td><p>4,869</p></td>
+            <td><p>0,815</p></td>
+            <td><p>108,2</p></td>
+            <td><p>0,723</p></td>
+            <td><p>224,701 d</p></td>
+            <td><p>6052</p></td>
+          </tr>
+          <tr>
+            <td><p>Erde</p></td>
+            <td>
+              <img
+                src="/Physik/img/Astronomische Daten/Earth_symbol_(fixed_width).svg.png"
+                alt="erde zeichen"
+                style="max-width: 3rem"
+              />
+            </td>
+            <td><p>5,9736</p></td>
+            <td><p>1,000</p></td>
+            <td><p>149,6</p></td>
+            <td><p>1,000</p></td>
+            <td><p>365,256 d</p></td>
+            <td><p>6378</p></td>
+          </tr>
+          <tr>
+            <td><p>Mars</p></td>
+            <td>
+              <img
+                src="/Physik/img/Astronomische Daten/Mars_symbol_(fixed_width).svg.png"
+                alt="mars zeichen"
+                style="max-width: 3rem"
+              />
+            </td>
+            <td><p>0,6419</p></td>
+            <td><p>0,107</p></td>
+            <td><p>227,9</p></td>
+            <td><p>1,523</p></td>
+            <td><p>686,98 d</p></td>
+            <td><p>3397</p></td>
+          </tr>
+          <tr>
+            <td><p>Jupiter</p></td>
+            <td>
+              <p>
+                <img
+                  src="/Physik/img/Astronomische Daten/Jupiter_symbol_(fixed_width).svg.png"
+                  alt="jupiter zeichen"
+                  style="max-width: 3rem"
+                />
+              </p>
+            </td>
+            <td><p>1899</p></td>
+            <td><p>317,9</p></td>
+            <td><p>778,3</p></td>
+            <td><p>5,204</p></td>
+            <td><p>11,862 a</p></td>
+            <td><p>71492</p></td>
+          </tr>
+          <tr>
+            <td><p>Saturn</p></td>
+            <td>
+              <p>
+                <img
+                  src="/Physik/img/Astronomische Daten/Saturn_symbol_(fixed_width).svg.png"
+                  alt="Saturn zeichen"
+                  style="max-width: 3rem"
+                />
+              </p>
+            </td>
+            <td><p>568,5</p></td>
+            <td><p>95,2</p></td>
+            <td><p>1429,4</p></td>
+            <td><p>9,555</p></td>
+            <td><p>29,457 a</p></td>
+            <td><p>60265</p></td>
+          </tr>
+          <tr>
+            <td><p>Uranus</p></td>
+            <td>
+              <p>
+                <img
+                  src="/Physik/img/Astronomische Daten/Uranus_symbol_(fixed_width).svg.png"
+                  alt="Uran zeichen"
+                  style="max-width: 3rem"
+                />
+              </p>
+            </td>
+            <td><p>568,5</p></td>
+            <td><p>95,2</p></td>
+            <td><p>1429,4</p></td>
+            <td><p>9,555</p></td>
+            <td><p>29,457 a</p></td>
+            <td><p>60265</p></td>
+          </tr>
+          <tr>
+            <th colspan="8"><p>zum Vergleich</p></th>
+          </tr>
+          <tr>
+            <td><p>Sonne</p></td>
+            <td>
+              <p>
+                <img
+                  src="/Physik/img/Astronomische Daten/Sun_symbol_(fixed_width).svg.png"
+                  alt="Saturn zeichen"
+                  style="max-width: 3rem"
+                />
+              </p>
+            </td>
+            <td><p>1989100</p></td>
+            <td><p>332950</p></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>695000</p></td>
+          </tr>
+          <tr>
+            <td><p>Mond</p></td>
+            <td>
+              <p>
+                <img
+                  src="/Physik/img/Astronomische Daten/Moon_decrescent_symbol_(fixed_width).svg.png"
+                  alt="mars zeichen"
+                  style="max-width: 3rem"
+                />
+              </p>
+            </td>
+            <td><p>0,0735</p></td>
+            <td><p>0,0123</p></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>-</p></td>
+            <td><p>1738</p></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Gravitation</h1>
+      <h2>Keplersche Gesetze</h2>
+      <ol>
+        <li>
+          <p><u>Keplersche Gesetz:</u></p>
+          <p>
+            Die Planeten bewegen sich auf elliptischen Bahnen, in deren einem
+            Brennpunkt die Sonne steht.
+          </p>
+        </li>
+        <li>
+          <p><u>Keplersche Gesetz:</u></p>
+          <p>
+            Der Radiusvektor von der Sonne zum Planeten überstreicht in gleichen
+            Zeiten gleiche Flächen.
+          </p>
+        </li>
+        <li>
+          <p><u>Keplersche Gesetz:</u></p>
+          <p>
+            Der Quadrat der Umlaufzeit \( T \) eines Planeten ist proportional
+            zum Kubus der gro&beta;en Bahnhalbachse \( a \) der Umlaufbahn.
+          </p>
+          $$\frac{T^{2}_{1}}{a^{3}_{1}} =\frac{T^{2}_{2}}{a^{3}_{2}} =konstant$$
+        </li>
+      </ol>
+      <h2>Newtons Gravitationsgesetz</h2>
+      <p>
+        Zwei punktförmige Kärper $A$ und $B$ der Massen $m_A$ und $m_B$, die
+        sich in der Entfernung $r$ voneinander befinden, ziehen sich gegenseitig
+        an. Die vektorielle schreibweise der Anziehungskraft ist:
+      </p>
+      $$\overrightarrow{F_{A\ auf\ B}} =-\overrightarrow{F_{B\ auf\ A}} =-G\cdot
+      \frac{m_{A}m_{B}}{r^{2}} $$ $$\overrightarrow{F_{A\ auf\ B}}, \ Kraft\
+      von\ A\ auf\ B$$ $$\overrightarrow{F_{B\ auf\ A}}, \ Kraft\ von\ B\ auf\
+      A$$ $$G,\ ist\ die\ Gravitationskonstante $$ $$G=6,67390\cdot
+      10^{-11}\frac{Nm^{2}}{kg^{2}}$$
+      <p>
+        Siehe: <a href="../Divers/naturkonstanten.html">Naturkonstanten</a>.
+      </p>
+      <h3>Herleitung</h3>
+      <p>Es wird vereinfachend angenommen:</p>
+      <ul>
+        <li>
+          <p>Planeten bewegen sich auf Kreisbahnen</p>
+        </li>
+        <li>
+          <p>
+            Auf diesen Kreisbahnen bewegen sich die Planeten mit gleich
+            bleibender Geschwindigkeit
+          </p>
+        </li>
+      </ul>
+      <p>
+        Ein Planet der Masse $m$ bewege sich mit der Bahngeschwindigkeit $v$ auf
+        einem Kreis um die Sonne mit der Masse $M$. Auf ihn wirkt die Sonne mit
+        der Zentripetalkraft:
+      </p>
+      $$ F_z = m \cdot \omega^2 \cdot r $$ $$ = m \cdot \frac{4 \pi^2}{T^2}
+      \cdot r $$ $$ = \frac{4 \pi^2}{C \cdot r^3} \cdot m \cdot r $$ $$ =
+      \frac{4 \pi^2}{C} \cdot \frac{m}{r^2} $$
+      <p>
+        Aus dieser Gleichung folgt: <br />
+        Die Gravitationskraft ist direkt proportional zur Masse $m$ des Planeten
+        und indirekt proportional zum Quadrat seines Abstandes von der Sonne
+        $r$.
+      </p>
+      <p>Es folgt:</p>
+      $$ F_1 \sim \frac{m}{r^2}\ (1) $$
+      <p>und</p>
+      $$ F_2 \sim \frac{M}{r^2}\ (1) $$
+      <p>
+        Nach dem Wechselwirkungsprinzip übt aber auch der umlaufende Körper auf
+        den Zentralkörper eine entgegengesetzt gerichtete, gleich große Kraft
+        $F_2$ aus. Somit gilt: $Fi = F2$ und die beiden Proportionalitäten
+        lassen sich vereinen zu:
+      </p>
+      $$ F \sim \frac{M \cdot m}{r^2} $$
+      <p>Unter Einführung einer Proportionalitätskonstante $k$ ergibt sich:</p>
+      $$ F = k\frac{M \cdot m}{r^2} $$
+      <p>
+        Die Proportionalitätskonstante $k$ ist jedoch in diesem Fall die
+        Gravitationskonstante $G$.
+      </p>
+      <p>Es folgt:</p>
+      $$ F = G\frac{M \cdot m}{r^2} $$
+      <h3>Formel</h3>
+      <p>Beträge:</p>
+      $$ F = G\frac{M \cdot m}{r^2} $$
+      <p>Vektoriell:</p>
+      $$ \overrightarrow{F} = - G \frac{M \cdot m}{r^2} \cdot
+      \overrightarrow{r_0} $$
+      <h2>Gravitationsfeld</h2>
+      <h3>Definition</h3>
+      <p>
+        Ein Gravitationsfeld ist eine Region des Raums, wo eine Masse in einer
+        Gravitationskraft unterliegt.
+      </p>
+      <h2>Bahngeschwindigkeit eines Satelliten</h2>
+      <h3>Herleitung</h3>
+      <p>Es gilt:</p>
+      $$ \overrightarrow{F} = \overrightarrow{F_{Grav}} = m \cdot
+      \overrightarrow{a} = m \cdot \overrightarrow{a_{zp}} $$
+      <p>
+        Da nur eine Kraft am Satelliten angreift und diese Kraftrichtung bekannt
+        ist, kann das Gesetz in skalarer Form geschrieben werden.
+      </p>
+      $$ F_{Grav} = m \cdot a_{zp} $$ $$ \Leftrightarrow G\cdot \frac{m\cdot
+      M}{r^{2}} =m\cdot \frac{v^{2}}{r} $$ $$\Leftrightarrow G\cdot \frac{M}{r}
+      =v^{2}$$ $$\Leftrightarrow v=\sqrt{\frac{G\cdot M}{r} } $$
+
+      <p>
+        Der Satellit bewegt sich in Höhe \( h \) über dem Boden eines
+        Himmelskörpers. Mit einbeziehung deren Radiuses \( R \) erhalten wir: \(
+        r=R+h \) <br />
+        Einsetzen:
+      </p>
+      $$\Leftrightarrow v=\sqrt{\frac{G\cdot M}{R + h} } $$
+      <h3>Formel</h3>
+      $$v=\sqrt{\frac{G\cdot M}{R + h} } $$
+      <h2>Periodendauer eines Satelliten</h2>
+      <h3>Herleitung</h3>
+      <p>
+        Da die Bahngeschwindigkeit \( v \) der Quotient aus Kreisumfang und
+        Umlaufzeit \( T \) entspricht.
+      </p>
+      $$ v=\frac{2 \pi \cdot r}{T}$$ $$\Leftrightarrow T=\frac{2 \pi \cdot r}{v}
+      $$ $$\Leftrightarrow T=\frac{2 \pi \cdot r}{\sqrt{\frac{G\cdot M}{r} }} $$
+      $$\Leftrightarrow T= 2 \pi\frac{r \cdot \sqrt{r}}{\sqrt{G\cdot M}} $$
+      $$\Leftrightarrow T= 2 \pi\frac{\sqrt{r^3}}{\sqrt{G\cdot M}} $$
+      $$\Leftrightarrow T= 2 \pi \sqrt {\frac{(R+h)^3}{G\cdot M}} $$
+      <h3>Formel</h3>
+      $$T= 2 \pi \sqrt {\frac{(R+h)^3}{G\cdot M}} $$
+      <h2>Geostationäre Satellit</h2>
+      <p>
+        Ein geostationärer Satellit ist ein künstlicher Erdsatellit der sich auf
+        einer Kreisbahn über dem Äquator befindet. Die Höhe des Satelliten über
+        dem Äquator wird so gewählt, dass der Satellit der Erddrehung folgt.
+        Dies ist dann der Fall, wenn die Umlaufzeit des Satelliten und die
+        Umlaufdauer der Erde gleich groß sind.
+      </p>
+      <p>Es gilt dann:</p>
+      $$ T = 23h + 56min + 4,0989s = 86\ 164,098\ 9s$$
+      <p>Man nennt diese Periodendauer <u>siedrischer Tag</u>.</p>
+      $$ T=2\pi \sqrt{\frac{r^{3}}{G\cdot M} } $$ $$ \frac{T^2}{4 \pi^2} =
+      \frac{r^3}{G \cdot M} $$ $$ r = \sqrt[3]{\frac{T^2 \cdot G \cdot M}{4
+      \pi^2}} $$ $$ R + h = \sqrt[3]{\frac{T^2 \cdot G \cdot M}{4 \pi^2}} $$ $$h
+      = \sqrt[3]{\frac{T^2 \cdot G \cdot M}{4 \pi^2}} - R$$
+    </div>
+  </body>
+</html>

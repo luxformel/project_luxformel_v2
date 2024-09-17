@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themeSelector.js"></script>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settingsSelector.js"></script>
+
+    <link
+      rel="stylesheet"
+      id="navigator-set"
+      href="/settings/navigator/relative.css"
+    />
+    <link
+      rel="stylesheet"
+      id="side-nav-stylesheet"
+      href="/settings/sideNavigator/on.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      id="no-max-width-stylesheet"
+      href="/settings/noMaxWidth/on.css"
+      type="text/css"
+    />
+
+    <title>Astellungen</title>
+  </head>
+  <body>
+    <div class="settings-container">
+      <h1>Astellungen</h1>
+      <div class="setting-item">
+        <label for="theme-select">Stil:</label>
+        <select id="theme-select" class="custom-select">
+          <option value="default">Hell</option>
+          <option value="dark">Däischter</option>
+          <option value="hackerman">Hackerman</option>
+          <option value="vapor-wave">Vapor Wave</option>
+          <option value="retroformel">Retroformel</option>
+          <option value="damons-formula-tips">Damons Formula Tips</option>
+          <option value="pastel">Pastel</option>
+          <option value="patriot">Patriot</option>
+        </select>
+      </div>
+      <div class="setting-item">
+        <label for="navigator-select">Navigator:</label>
+        <select id="navigator-select" class="custom-select">
+          <option value="relative">Ëmmer uewen</option>
+          <option value="sticky">Fix</option>
+          <option value="bottom">Ënnen</option>
+        </select>
+      </div>
+      <div class="setting-item">
+        <label for="font-select">Schrëft:</label>
+        <select id="font-select" class="custom-select">
+          <option value="none">Normal</option>
+          <option value="dyslexia">Dyslexiker</option>
+          <option value="dyslexia-bold">Fett Dyslexiker</option>
+          <option value="dyslexia-italic">Schief Dyslexiker</option>
+          <option value="arial">Arial</option>
+          <option value="helvetica">Helvetica</option>
+        </select>
+      </div>
+      <div class="setting-item">
+        <label for="side-nav-toggle">Navigator op der Säit:</label>
+        <input type="checkbox" id="side-nav-toggle" class="custom-checkbox" />
+      </div>
+
+      <div class="setting-item">
+        <label for="no-max-width-toggle">Breed Limit fir Kapitelen:</label>
+        <input
+          type="checkbox"
+          id="no-max-width-toggle"
+          class="custom-checkbox"
+        />
+      </div>
+      <div class="setting-item">
+        <label for="no-splash-text">Spréch uweisen:</label>
+        <input type="checkbox" id="no-splash-text" class="custom-checkbox" />
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+
+  <style>
+    /* Container for settings */
+    .settings-container {
+      background: var(--white);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      padding: 1rem;
+      box-shadow: 0 0 15px var(--black);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+      margin: 5vh auto;
+    }
+
+    /* Header style */
+    .settings-container h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--black);
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Individual setting item */
+    .setting-item {
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 1px 3px var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    /* Label style */
+    .setting-item label {
+      color: var(--black);
+      font-size: 1rem;
+      margin-right: 1rem;
+      box-sizing: border-box;
+    }
+
+    /* Custom select box */
+    .custom-select {
+      padding: 0.7rem;
+      font-size: 1rem;
+      border: 1px solid var(--darker-off-white);
+      border-radius: 8px;
+      appearance: none;
+      background-color: var(--off-white);
+      background-size: 10px;
+      box-sizing: border-box;
+    }
+
+    /* Add some hover and focus styles */
+    .custom-select:hover {
+      border-color: var(--dark-grey-shade);
+    }
+
+    .custom-select:focus {
+      border-color: var(--accent-color);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent-color);
+    }
+
+    /* Custom checkbox styling */
+    .custom-checkbox {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: var(--off-white);
+      border: 2px solid var(--darker-off-white);
+      border-radius: 5px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .custom-checkbox:checked {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    .custom-checkbox:checked::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 5px;
+      height: 10px;
+      border: solid var(--white);
+      border-width: 0 2px 2px 0;
+    }
+
+    /* Custom checkbox focus style */
+    .custom-checkbox:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent-color);
+    }
+
+    /* Custom checkbox hover style */
+    .custom-checkbox:hover {
+      border-color: var(--dark-grey-shade);
+    }
+  </style>
+</html>

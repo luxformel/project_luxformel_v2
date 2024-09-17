@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Trigonometrie dans un triangle rectangle</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Trigonometrie dans un triangle rectangle</h1>
+      <h3>Vocabulaire</h3>
+      <p>Soit $ABC$ un trianle rectangle en $C$:</p>
+      <ul>
+        <li>
+          <p>le segment $[AB]$ est <u>l'hypotènuse</u> du triangle $ABC$.</p>
+        </li>
+        <li>
+          <p>
+            le segment $[AC]$ est <u>le cotée adjacent</u> de l'angle
+            $\hat{CAB}$.
+          </p>
+        </li>
+        <li>
+          <p>
+            le segment $[CB]$ est <u>le cotée opposé</u> de l'angle $\hat{CAB}$.
+          </p>
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <h2>Fonctions trigonomètriques</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $ABC$ un triangle rectangle en $C$, et soit $\hat{\alpha}$ l'angle
+        en $A$ de ce triangle. On définit les fonctions trigonomètriques suivant
+        de cet angle:
+      </p>
+      <ol>
+        <li>
+          <p>Le sinus de l'angle $\hat{\alpha}$:</p>
+          $$\sin(\hat{\alpha}) = \frac{opposé}{hypothènuse} $$
+        </li>
+        <li>
+          <p>Le cosinus de l'angle $\hat{\alpha}$:</p>
+          $$\cos(\hat{\alpha}) = \frac{adjacent}{hypothènuse} $$
+        </li>
+        <li>
+          <p>La sécante de l'angle $\hat{\alpha}$:</p>
+          $$\sec(\hat{\alpha}) = \frac{hypothènuse}{adjacent} $$
+        </li>
+        <li>
+          <p>Le cosécante de l'angle $\hat{\alpha}$:</p>
+          $$\csc(\hat{\alpha}) = \frac{hypothènuse}{opposé} $$
+        </li>
+        <li>
+          <p>La tangente de l'angle $\hat{\alpha}$:</p>
+          $$\tan(\hat{\alpha}) = \frac{opposé}{adjacent} $$
+        </li>
+        <li>
+          <p>La cotangente de l'angle $\hat{\alpha}$:</p>
+          $$\cot(\hat{\alpha}) = \frac{adjacent}{opposé} $$
+        </li>
+      </ol>
+      <h3>Conséquences</h3>
+      <ol>
+        <li>
+          <p>
+            La mesure d'un angle est en degrés, mais le cosinus, le sinus et la
+            tangente n'ont pas d'unité. Ce sont des rapports de longueurs.
+          </p>
+        </li>
+        <li>
+          <p>
+            Les rapports ne dépendent pas des longueurs choisisses, mais
+            uniquement de la mesure de l'angle.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dans un triangle rectangle le côté plus long est toujours
+            l'hypoténuse on a donc:
+          </p>
+          $$ 0 \leqslant \sin(\hat{\alpha}) \leqslant 1 $$ $$ 0 \leqslant
+          \cos(\hat{\alpha}) \leqslant 1 $$
+          <p>mais</p>
+          $$ 0 < \tan(\hat{\alpha})$$
+        </li>
+      </ol>
+      <h2>Formule fondamentale de la trigonométrie</h2>
+      <h3>Définition</h3>
+      <p>Pour toute mesure $\alpha$ d'un angle aigu, on a:</p>
+      $$ \sin^2(\alpha) + \cos^2(\alpha) = 1 $$
+      <h3>Démonstration</h3>
+      <p>
+        Soit $ABC$ un triangle rectangle en $C$ avec $\hat{\alpha} = \hat{ABC}$.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Exprimer $\sin(\alpha)$ et $\cos(\alpha)$ dans ce triangle: <br />
+            $\sin(\alpha) = \frac{BC}{AB}$ et $\cos(\alpha) = \frac{AC}{AB}$
+          </p>
+        </li>
+        <li>
+          <p>En déduire $\cos^2(\alpha) + \sin^2(\alpha)$:</p>
+          $$ \sin^2(\alpha) + \cos^2(\alpha) = \left( \frac{AC}{AB} \right)^{2}
+          + \left( \frac{BC}{AB} \right)^2$$ $$ = \frac{AC^2}{AB^2} +
+          \frac{BC^2}{AB^2}$$ $$ = \frac{AC^2 + BC^2}{AB^2} $$
+          <p>
+            D'apres le théorème de
+            <a href="theoreme-de-pythagore.html">Phythagore</a>
+          </p>
+          $$ = \frac{AB^2}{AB^2} $$ $$=1$$
+        </li>
+      </ol>
+      <h3>Remarque</h3>
+      <p>
+        $\cos^2(\alpha) = \left(\cos(\alpha) \right)^2$ et designe le carré des
+        $\cos(\alpha)$ idem pour $\sin^2(\alpha) = \left(\sin(\alpha)
+        \right)^2$. <br />
+        Cette écriture évite des parentheses.
+      </p>
+    </div>
+  </body>
+</html>

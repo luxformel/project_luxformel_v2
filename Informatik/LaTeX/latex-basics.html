@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+    <script src="prism-latex.js"></script>
+    <script src="prism-latex-button.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>LATEX Basics</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>LATEX Basics</h1>
+      <p>Latex is a markup language used to create scientific documentation.</p>
+      <h2>Comment</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% This is a comment
+            </code>
+        </pre>
+        </div>
+      </div>
+      <h2>Basic Notation</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+%Brackets
+( )
+[ ]
+%addition sign
++
+%substration sign
+-
+%multiplication sign
+\times
+\cdot
+%division signs
+/
+:
+% make a fraction
+\frac{numerator}{denominator}
+% inverse sign
+^{-1}
+%plus minus sign
+\pm
+%minus plus sign
+\mp
+%square root 
+\sqrt{}
+%cube root 
+\sqrt[3]{}
+%nth root 
+\sqrt[n]{}
+%percent
+\%
+%
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Number sets</h2>
+      <p>
+        For futher explanation visit : Mathématiques
+        <a href="/Mathe/Theorie des nombres/ensembles-des-nombres.html"
+          >ensembles des nombres</a
+        >.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% ensemble des entiers naturels
+\mathbb{N}
+% ensemble des entiers relatifs
+\mathbb{Z}
+% ensemble des décimaux
+\mathbb{D}
+% ensemble des rationnels
+\mathbb{Q}
+% ensemble des réels
+\mathbb{R}
+% ensemble des complexes
+\mathbb{C}
+% ensemble des quaternions
+\mathbb{H}
+% ensemble des octonions
+\mathbb{O}
+% ensemble des sédénions
+\mathbb{S}
+% ensemble des pathions
+\mathbb{P}
+% ensemble des chingons
+\mathbb{X}
+% ensemble des routons
+\mathbb{U}
+% ensemble des voudrons
+\mathbb{V}
+            </code>
+        </pre>
+        </div>
+      </div>
+      <h2>Quantifiers</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% forall
+\forall
+%it exists
+\exists
+%does not exist
+\nexists
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Set construction</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Empty set
+\varnothingset
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Set operations</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+%intersection
+\cap
+%union
+\cup
+%difference
+\setminus
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Alkane</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Alkane</h1>
+      <h2>Kohlenwasserstoffe</h2>
+      <p>
+        Kohlenwasserstoffe sind Verbindungen, deren Moleküle nur aus
+        Kohlenstoffatomen und Wasserstoffatomen bestehen.
+      </p>
+      <h2>Alkane</h2>
+      <p>
+        Alkane sind gesättigte Kohlenwasserstoffe. Die $\ce{C}$-Atome in Alkanen
+        sind nur durch Einfachbindungen untereinander verbunden.
+      </p>
+      <h2>Homologe Reihe der Alkane</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>Name</p></th>
+            <th><p>Summenformel</p></th>
+            <th><p>Halbstrukturformel</p></th>
+            <th><p>Skelettformel</p></th>
+          </tr>
+          <tr>
+            <td><p>Methan</p></td>
+            <td><p>$\ce{CH4}$</p></td>
+            <td><p>$\ce{CH4}$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Ethan</p></td>
+            <td><p>$\ce{C2H6}$</p></td>
+            <td><p>$\ce{CH3 - CH3}$</p></td>
+            <td>
+              <p>-</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Propan</p></td>
+            <td><p>$\ce{C3H8}$</p></td>
+            <td><p>$\ce{CH3 - CH2 - CH3}$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Butan</p></td>
+            <td><p>$\ce{C4H10}$</p></td>
+            <td><p>$\ce{CH3 - CH2 - CH2 - CH3}$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Pentan</p></td>
+            <td><p>$\ce{C5H12}$</p></td>
+            <td><p>$\ce{CH3 - (CH2)3 - CH3}$</p></td>
+            <td><p>-</p></td>
+          </tr>
+          <tr>
+            <td><p>Hexan</p></td>
+            <td><p>$\ce{C6H14}$</p></td>
+            <td><p>$\ce{CH3 - (CH2)4 - CH3}$</p></td>
+            <td><p>-</p></td>
+          </tr>
+        </table>
+      </div>
+      <h2>Isomerie</h2>
+      <p>
+        Isomere sind unterschiedliche Moleküle welche die gleiche Summenformel
+        besitzen. Sie können durch unterschiedliche Strukturformeln dargestellt
+        werden.
+      </p>
+      <h3>Strukturisomerie</h3>
+      <p>
+        Isomere, die sich in der Abfolge der Bindungen im Molekül unterscheiden
+        bezeichnet man als Strukturisomere oder Konstitutionsisomere.
+      </p>
+      <h2>Nomenklatur</h2>
+      <h3>Bemerkungen</h3>
+      <p>
+        Die Nomenklaturregeln der
+        <abbr title="International Union of Pure and Applied Chemistry"
+          >IUPAC</abbr
+        >
+        (International Union of Pure and Applied Chemistry) ordnen jedem Alkan
+        einen eindeutigen Namen zu.
+      </p>
+      <h3>Regeln</h3>
+      <ol>
+        <li>
+          <p>
+            Die Hauptkette ist die längste Aneinanderreihung von $\ce{C}$-Atomen
+            im Molekül. Sie bestimmt den Stammnamen des Alkans.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Kohlenstoffatome der Hauptkette werden so durchnummeriert, dass
+            die erste Verzweigung auf dem Kohlenstoffatom mit der
+            kleinstmöglichen Zahl sitzt. Bei Gleichheit bestimmt der nächste
+            Substituent die Richtung der Nummerierung.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Seitenketten auch Alkylgruppen genannt oder Substituenten werden
+            benannt:
+          </p>
+          <h3>Erklärung</h3>
+          <p>Substituenten sind Atome anderer Elemente</p>
+          <div class="xScrollable">
+            <table>
+              <tr>
+                <th>Seitenkette</th>
+                <th>Name</th>
+              </tr>
+              <tr>
+                <td><p>$\ce{- CH3}$</p></td>
+                <td><p>Methyl</p></td>
+              </tr>
+              <tr>
+                <td><p>$\ce{- CH2 - CH3}$</p></td>
+                <td><p>Ethyl</p></td>
+              </tr>
+              <tr>
+                <td><p>$\ce{- CH2 - CH2 - CH3}$</p></td>
+                <td><p>Propyl</p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p>Allgemein</p></td>
+              </tr>
+              <tr>
+                <td><p>$\ce{- (CH2)_n - CH3}$</p></td>
+                <td><p>Alkyl</p></td>
+              </tr>
+            </table>
+          </div>
+          <h2>Multiplikative Prefixe</h2>
+          <p>Bei Mehrfachnennung wird die Anzahl durch Zahlworte angegeben.</p>
+          <div class="xScrollable">
+            <table>
+              <tr>
+                <th><p>Zahl</p></th>
+                <th><p>Numerisches Zahlwort</p></th>
+              </tr>
+              <tr>
+                <td><p>1</p></td>
+                <td><p>mono, hen</p></td>
+              </tr>
+              <tr>
+                <td><p>2</p></td>
+                <td><p>di, do</p></td>
+              </tr>
+              <tr>
+                <td><p>3</p></td>
+                <td><p>tri</p></td>
+              </tr>
+              <tr>
+                <td><p>4</p></td>
+                <td><p>tetra</p></td>
+              </tr>
+              <tr>
+                <td><p>5</p></td>
+                <td><p>penta</p></td>
+              </tr>
+              <tr>
+                <td><p>6</p></td>
+                <td><p>hexa</p></td>
+              </tr>
+              <tr>
+                <td><p>7</p></td>
+                <td><p>hepta</p></td>
+              </tr>
+              <tr>
+                <td><p>8</p></td>
+                <td><p>octa</p></td>
+              </tr>
+              <tr>
+                <td><p>9</p></td>
+                <td><p>nona</p></td>
+              </tr>
+              <tr>
+                <td><p>10</p></td>
+                <td><p>deca</p></td>
+              </tr>
+            </table>
+          </div>
+          <p>
+            Für weitere Namen siehe
+            <a href="../Divers/zahlPrefixe.html">Zahl Prefixe</a>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Befinden sich mehrere Seitenketten in gleichwertigen Positionen, so
+            erhält der alphabetisch zuerst genannte Substituent die kleinere
+            Position.
+          </p>
+        </li>
+        <li>
+          <p>
+            Der Name des Moleküls ergibt sich aus den alphabetisch geordneten
+            Namen der Seitenketten mit ihren jeweiligen Positionen und dem
+            Stammnamen.
+          </p>
+        </li>
+      </ol>
+      <strong>Physikalische Eigenschaften</strong>
+      <hr />
+      <h2>Tabelle der zwischenmolekularen Kräfte</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>Name</p></th>
+            <th><p>Zwischenmolekulare Kräfte</p></th>
+          </tr>
+          <tr>
+            <td><p>Alkane</p></td>
+            <td><p>van-der-Waals-Kräfte</p></td>
+          </tr>
+          <tr>
+            <td><p>Alkene</p></td>
+            <td>
+              <p>van-der-Waals-Kräfte; <br />Dipol-Dipol-Wechselwirkungen</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Alkanole</p></td>
+            <td>
+              <p>
+                van-der-Waals-Kräfte; <br />Dipol-Dipol-Wechselwirkungen; <br />
+                Wasserstoffbrückenbindungen
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2>
+        Auswirkungen der zwischenmolekularen Kräfte auf die Stoffeigenschaften
+      </h2>
+      <ol>
+        <li>
+          <p><u>Siedepunkt:</u></p>
+          <p>
+            Je größer die Kräfte zwischen den Teilchen des Stoffs umso mehr
+            Energie wird benötigt, um die Teilchen zu trennen und umso höher ist
+            der Siedepunkt.
+          </p>
+        </li>
+        <li>
+          <p><u>Viskosität:</u></p>
+          <p>
+            Je größer die Kräfte zwischen den Teilchen des Stoffs umso
+            schlechter können die Teilchen im flüssigen Zustand aneinander
+            vorbei gleiten und umso höher ist die Viskosität.
+          </p>
+        </li>
+        <li>
+          <p><u>Löslichkeit:</u></p>
+          <p>
+            Je stärker die Wechselwirkungen zwischen den Teilchen des gelösten
+            Stoffs und denen des Lösungsmittels umso besser werden die Teilchen
+            in Lösung stabilisiert.
+          </p>
+        </li>
+      </ol>
+      <h2>Zwischenmolekulare Kräfte</h2>
+      <ul>
+        <li>
+          <p><u>van-der-Waals Kräfte:</u></p>
+          <p>Kräfte zwischen spontanen und influierten Dipolen</p>
+        </li>
+        <li>
+          <p><u>Dipol-Dipol-Wechselwirkungen:</u></p>
+          <p>Kräfte zwischen permanenten Dipolen</p>
+        </li>
+        <li>
+          <p><u>Wasserstoffbrückenbindungen:</u></p>
+          <p>
+            Kräfte zwischen einem stark positivierten $\ce{H}$-Atom und einem
+            freien Elektronenpaar eines Atoms mit negativer Teilladung.
+          </p>
+        </li>
+      </ul>
+      <p>
+        Alkanmoleküle sind unpolar. Zwischen Alkanmolekülen wirken lediglich
+        van-der-Waals-Kräfte.
+      </p>
+      <h2>Siedepunkte</h2>
+      <p>
+        Die Siedepunkte der Alkane sind abhängig von der molaren Masse und von
+        der Struktur des Moleküls:
+      </p>
+      <ul>
+        <li>
+          <p>die Siedepunkte nehmen mit steigender molarer Masse zu,</p>
+        </li>
+        <li>
+          <p>
+            die Siedepunkte von kugelförmigen, also stark verzweigten Moleküle
+            sind kleiner als die von unverzweigten Molekülen
+          </p>
+        </li>
+      </ul>
+      <h2>Viskosität</h2>
+      <p>Schlecht allgemeng Erklärung</p>
+      <p>
+        Wenn die Moleküle kugelförmiger werden desto weniger
+        van-der-Waals-Kräfte können entstehen. Das bedeutet also längere
+        Hauptketten die so wenig wie möglich verzweigt sind, also geeignet
+        van-der-Waals-Kräfte auszuüben, sind dickflüssiger also hochviskoser als
+        kugelförmigere Moleküle oder kurzkettige Alkane.
+      </p>
+      <h2>Löslichkeit</h2>
+      <ol>
+        <li>
+          <p>
+            Zwischen den Wassermolekülen im Wasser wirken
+            Wasserstoffbrückenbindungen (+Dipol-Dipol +vdW).
+          </p>
+        </li>
+        <li>
+          <p>
+            Zwischen den Alkanmolekülen im Alkan wirken van-der-Wals-Kräfte.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Die Moleküle dringen nicht in den Molekülverband der jeweils anderen
+        Sorte ein, da zwischen jeweils gleichartigen Molekülen insgesamt
+        stärkere Anziehungskräfte wirken als zwischen verschiedenen Molekülen.
+        Beim Entmischen der Emulsion eines Alkans in Wasser nehmen die
+        zwischenmolekularen Kräfte insgesamt zu; der Vorgang ist exotherm und
+        läuft spontan ab.
+      </p>
+      <p>
+        <u> Gleiches löst sich in Gleichem</u> <br />
+        Polare Stoffe sind in polaren Lösungsmitteln löslich. Unpolare Stoffe
+        sind in unpolaren Lösungsmitteln löslich.
+      </p>
+      <h2>Reaktionen der Alkane</h2>
+      <p>
+        Alkane sind sehr reaktionsträge. Mit sehr reaktionsfreudigen
+        Reaktionspartnern, vor allem mit Sauerstoff und Halogenen, können sie
+        jedoch unter bestimmten Bedingungen stark reagieren.
+      </p>
+      <h2>Verbrennung</h2>
+      <ul>
+        <li>
+          <p><u>Vollständige Verbrennung</u></p>
+          <p>
+            Alkan $\ce{+}$ Sauerstoff $\ce{->}$ Kohelstoffdioxid $\ce{+}$ Wasser
+          </p>
+        </li>
+        <li>
+          <p><u>Unvollständige Verbrennung</u></p>
+          <p>Alkan $\ce{+}$ Sauerstoff $\ce{->}$ Kohelstoff $\ce{+}$ Wasser</p>
+          <p>Der hier entstehende Kohlenstoff wird als Ru&beta; bezeichnet.</p>
+        </li>
+      </ul>
+      <h3>Bemerkung</h3>
+      <p>
+        Alkane neigen wegen ihrem hohen Sauerstoff verbrauch bei Verbrennungen
+        zu unvollständigen Verbrennungen. <br />
+        Dies ist durch eine gelb leuchtende Flamme, so wie Ru&beta;entwicklung
+        zu sehen.
+      </p>
+      <h2>Substitution</h2>
+      <p>
+        Eine Reaktion, bei der Atome oder Atomgruppen eines Moleküls durch
+        andere Atome oder Atomgruppen ersetzt werden, bezeichnet man
+        Substitution.
+      </p>
+      <h2>Mechanismus der radikalen Substitution</h2>
+      <ol>
+        <li>
+          <p><u>Startreaktion</u></p>
+          <p>
+            Durch homolytische Spaltung von $\ce{Cl2}$-Molekülen entstehen
+            Chlorteilchen mit ungepaarten Au&beta;enelektronen, sogenannte
+            Chlorradikale. Die Radikale sind sehr reaktionsfreudig.
+          </p>
+          <img
+            src="../img/Alkane/Startreaktion.png"
+            alt="startreaktion"
+            class="zeichnungen"
+          />
+        </li>
+        <li>
+          <p><u>Kettenreaktion</u></p>
+          <p>
+            Beim Zusammentreffen mit einem Methanmolekül können die
+            Chlorradikale eine $\ce{C-H}$-Bindung homolytisch spalten und selbst
+            zu $\ce{H-Cl}$ Molekülen reagieren. Es bleibt ein Methylradikal
+            zurück. Dieses Methylradikal kann dann wieder mit Chlormolekülen zu
+            Chlormethan und Chlorradikalen reagieren.
+          </p>
+          <img
+            src="../img/Alkane/kettenreaktion.png"
+            alt="kettenreaktion"
+            class="zeichnungen"
+          />
+          <p>
+            Die bei der Reaktion gebildeten Chlorradikale können wieder als
+            Edukte für eine nächste, gleichartige Reaktion dienen. Es entsteht
+            eine sich selbst unterhaltende radikalische Reaktionskette.
+          </p>
+        </li>
+        <li>
+          <p><u>Kettenabbruch</u></p>
+          <p>
+            Ein Kettenabbruch erfolgt, wenn die reaktionsfreudigen Radikale dem
+            Reaktionsgemisch entzogen werden:
+          </p>
+          <img
+            src="../img/Alkane/kettenabbruch.png"
+            alt="Kettenabbruch"
+            class="zeichnungen"
+          />
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

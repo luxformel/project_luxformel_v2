@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+    <script src="prism-html.js"></script>
+    <script src="prism-html-button.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>HTML Basics</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>HTML Basics</h1>
+      <p>
+        HTML, stands for HyperText Markup Language. We use it to mark up
+        different content in our website in order for the browser to understand
+        and render the website; or even to be successfully found on search
+        engines. It is used to create websites. The most recent version of HTML
+        is HTML 5.
+      </p>
+      <p>HTML is not a programming language it is a markup language.</p>
+      <h2>Front page</h2>
+      <p>
+        A file containing the code for your frontpage must be named:
+        <u>index.html</u>, otherwise the server will not recognize this as the
+        landing page and will not display the website.
+      </p>
+      <h2>Comment</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-html">
+&lt;!-- This is a comment --&gt;
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Boilerplate code</h2>
+      <p>
+        Boilerplate code refers to the default code necessary to generate
+        something. In this case it is the minimum amount of code to generate a
+        website.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-html">
+&lt;!-- Sets the document type as HTML 5 --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;!-- Sets the language type as english --&gt;
+&lt;html lang="en"&gt;
+&lt;!-- The head tag has useful information invisible to the user --&gt;
+&lt;head&gt;
+    &lt;!-- Meta tag sets the character set as UTF-8 --&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;!-- Makes the website responsive, meaning it resizes to fit certain devices --&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- The title tag can be seen at the top of a tab --&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;!-- Body tag houses the actual content the user sees on the website --&gt;
+&lt;body&gt;
+&lt;!-- closes body tag --&gt;
+&lt;/body&gt;
+&lt;!-- closes HTML tag --&gt;
+&lt;/html&gt;
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Link CSS files</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-html">
+&lt;!-- link tag --&gt;
+&lt;!-- href or hyper reference needs the file path of the stylesheet in the root folder --&gt;
+&lt;!-- rel refers to the type of document linked --&gt;
+        &lt;link rel="stylesheet" href="stylesheet.css" /&gt;
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Website structure tags</h2>
+      <p>
+        Is written in the body tag. Improves the SEO of a website or Search
+        Engine Optimization, meaning a website is now easier found be web
+        crawlers form search engines.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-html">
+&lt;!-- Content sectioning --&gt;
+    &lt;header&gt;&lt;/header&gt;
+    &lt;section&gt;&lt;/section&gt;
+    &lt;nav&gt;&lt;/nav&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+    &lt;address&gt;&lt;/address&gt;
+    &lt;aside&gt;&lt;/aside&gt;
+    &lt;main&gt;&lt;/main&gt;
+    &lt;section&gt;&lt;/section&gt;
+    &lt;article&gt;&lt;/article&gt;
+&lt;!-- Text content --&gt;
+    &lt;blockquote&gt;&lt;/blockquote&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;figure&gt;&lt;/figure&gt;
+    &lt;menu&gt;&lt;/menu&gt;
+&lt;!-- Ordered list --&gt;    
+    &lt;ol&gt;&lt;/ol&gt;
+&lt;!-- Unordered list --&gt;    
+    &lt;ul&gt;&lt;/ul&gt;
+&lt;!-- List item --&gt;    
+    &lt;li&gt;&lt;/li&gt;
+            </code>
+        </pre>
+        </div>
+      </div>
+      <p>
+        For more information visit the
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          >Mozilla developer page</a
+        >.
+      </p>
+
+      <h2>Text content</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-html">
+&lt;!-- Different headers --&gt;
+&lt;!-- There can only ever been one h1 tag --&gt;
+    &lt;h1&gt;&lt;/h1&gt;
+&lt;!-- Every other tag can be used multiple times --&gt;    
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;h3&gt;&lt;/h3&gt;
+    &lt;h4&gt;&lt;/h4&gt;
+    &lt;h5&gt;&lt;/h5&gt;
+    &lt;h6&gt;&lt;/h6&gt;
+&lt;!-- Paragraph tag --&gt;
+    &lt;p&gt;&lt;/p&gt;     
+&lt;!-- Underline text --&gt;
+    &lt;u&gt;&lt;/u&gt;
+&lt;!-- Italicize text --&gt;
+    &lt;i&gt;&lt;/i&gt;
+&lt;!-- put text in quotes --&gt;  
+    &lt;q&gt;&lt;/q&gt;
+&lt;!-- break tag breaks up a line of text --&gt; 
+    &lt;br&gt;        
+&lt;!-- horizontal rule draws a line across the canvas--&gt; 
+    &lt;hr&gt;     
+            </code>
+        </pre>
+        </div>
+      </div>
+      <h2>Links</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-html">
+&lt;!-- anchor tag means a link --&gt;
+&lt;!-- href or hyper reference houses the link which may include --&gt;
+&lt;!-- file paths to a sub page or a external web link, or URL --&gt;
+    &lt;a href="https://luxformel.info/index.html" &gt;link text&lt;/a&gt;
+&lt;!-- between the tag is the text to click on --&gt;
+    &lt;a href="" target=""&gt;link text&lt;/a&gt; 
+&lt;!-- target attribute is optional --&gt;
+&lt;!-- _blank opens the link in a new tab --&gt;
+    &lt;a href="rootfolder/index.html" target="_blank"&gt;link text&lt;/a&gt; 
+            </code>
+        </pre>
+        </div>
+      </div>
+      <!-- here it stops-->
+    </div>
+  </body>
+</html>

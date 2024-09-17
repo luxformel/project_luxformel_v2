@@ -1,0 +1,19 @@
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer {
+  display: none;
+}
+body {
+  margin: 0;
+  margin-top: -50px;
+  padding-bottom: 50px; /* Add padding to the bottom to prevent content from being hidden behind the navigator */
+}
+
+.side-navigator {
+  padding-top: 1rem !important;
+}

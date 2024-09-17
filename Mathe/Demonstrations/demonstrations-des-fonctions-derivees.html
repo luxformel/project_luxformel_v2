@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Démonstrations des fonctions dérivées</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Démonstrations des fonctions dérivées</h1>
+      <h2>Dérivée de la fonction constante</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction constante $f$ définie sur $D_f = \mathbb{R}$ et par $f(x) =
+        k$ $\left( k \in \mathbb{R} \right)$ est dérivable sur $D_{f^{\prime}}$
+        et
+      </p>
+      $$f^{\prime}(x) = 0$$
+      <h3>Démonstration</h3>
+      <p>
+        Soit $a \in \mathbb{R}$ et la fonction constante $f$ définie sur $D_f =
+        \mathbb{R}$ et par $f(x) = k$.
+      </p>
+      $$\lim_{x\rightarrow a} \frac{f\left( x \right) -f\left( a \right)}{x- a}
+      =\lim_{x \rightarrow a} \frac{k - k}{x- a}$$ $$ =\lim_{x \rightarrow a}
+      \frac{0}{x- a}$$ $$=0 $$
+      <p>cqfd.</p>
+      <h2>Dérivée de la fonction affine</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction affine $f$ définie sur $D_f = \mathbb{R}$ par $f(x) = mx +
+        p$, avec $m,p \in \mathbb{R}$ est dérivable sur $D_f = \mathbb{R}$ est:
+      </p>
+      $$ f^{\prime}(x) = m $$
+      <h3>Démonstration</h3>
+      <p>
+        Soit $a \in \mathbb{R}$ et la fonction affine $f$ définie sur $D_f =
+        \mathbb{R}$ par $f(x) = mx + p$, avec $m,p \in \mathbb{R}$:
+      </p>
+      $$\lim_{x\rightarrow a} \frac{f\left( x \right) -f\left( a \right)}{x- a}
+      =\lim_{x\rightarrow a} \frac{mx+p - \left( ma + p \right)}{x- a}$$
+      $$=\lim_{x\rightarrow a} \frac{mx+p - ma - p }{x- a}$$
+      $$=\lim_{x\rightarrow a} \frac{m x - ma }{x- a}$$ $$ = a$$
+      $$=\lim_{x\rightarrow a} \frac{m \left( x - a \right)}{x- a}$$ $$ = a$$
+      <p>cqfd.</p>
+      <h2>Dérivée de la fonction carré</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction carré $f$ définie sur $D_f = \mathbb{R}$ par $f(x) = x^2$
+        est dérivable sur $D_{f^{\prime}}$ :
+      </p>
+      $$ f^{\prime}(x) = 2x $$
+      <h2>Dérivée de la fonction inverse</h2>
+      <h2>Dérivée de la fonction racine carré</h2>
+      <h2>Dérivée de la fonction sinus</h2>
+      <h2>Dérivée de la fonction cosinus</h2>
+      <h2>Dérivée de la fonction tangente</h2>
+    </div>
+  </body>
+</html>

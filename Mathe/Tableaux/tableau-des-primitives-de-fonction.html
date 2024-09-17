@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Tableau des primitives de fonctions</h1>
+      <h2>Primitives de fonctions usuelles</h2>
+
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>Fonction:</p></th>
+            <th><p>Primitive:</p></th>
+            <th><p>Sur l'intervalle $I$:</p></th>
+          </tr>
+          <tr>
+            <td>
+              <p>$m$ (constante)</p>
+            </td>
+            <td><p>$mx + c$</p></td>
+            <td><p>$\mathbb{R}$</p></td>
+          </tr>
+          <tr>
+            <td><p>$x$</p></td>
+            <td><p>$\frac{1}{2}x^2 + c$</p></td>
+            <td><p>$\mathbb{R}$</p></td>
+          </tr>
+          <tr>
+            <td><p>$x^n$ $\left( n \in \mathbb{N} \right)$</p></td>
+            <td><p>$\frac{x^{n+1}}{n+1} + c$</p></td>
+            <td><p>$\mathbb{R}$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                $\frac{1}{x^n}$ $\left( n \in \mathbb{N}\ et\ n \geqslant 2
+                \right)$
+              </p>
+            </td>
+            <td><p>$- \frac{1}{n-1} \cdot \frac{1}{x^{n-1}} + c$</p></td>
+            <td><p>$]-\infty ;0[\ ou\ ]0;+\infty [$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$\frac{1}{x}$</p>
+            </td>
+            <td><p>$\ln \left( \left| x\right| \right) + c$</p></td>
+            <td><p>$]-\infty ;0[\ ou\ ]0;+\infty [$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$\frac{1}{\sqrt{x}}$</p>
+            </td>
+            <td><p>$2\sqrt{x} + c$</p></td>
+            <td><p>$\mathbb{R}^*_+$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$\sin(x)$</p>
+            </td>
+            <td><p>$-\cos(x) + c$</p></td>
+            <td><p>$\mathbb{R}$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$\cos(x)$</p>
+            </td>
+            <td><p>$\sin(x) + c$</p></td>
+            <td><p>$\mathbb{R}$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$e^x$</p>
+            </td>
+            <td><p>$e^x + c$</p></td>
+            <td><p>$\mathbb{R}$</p></td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Primitives de fonctions composées</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>Fonction:</p></th>
+            <th><p>Primitive:</p></th>
+            <th><p>Conditions:</p></th>
+          </tr>
+          <tr>
+            <td>
+              <p>$u^{\prime}(x)u(x)^n$ $\left( n \in \mathbb{N} \right)$</p>
+            </td>
+            <td><p>$\frac{1}{n+1} u(x)^{n+1} + c$</p></td>
+            <td><p>aucune</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                $\frac{u^{\prime}(x)}{u(x)^n}$ $\left( n \in \mathbb{N}\ et\ n
+                \geqslant 2 \right)$
+              </p>
+            </td>
+            <td><p>$-\frac{1}{n-1} \cdot \frac{1}{u(x)^{n-1}} + c$</p></td>
+            <td>$ \forall x \in I,\ u(x) \neq 0 $</td>
+          </tr>
+          <tr>
+            <td>
+              <p>$\frac{u^{\prime}(x)}{u(x)}$</p>
+            </td>
+            <td><p>$\ln \left( \left| u(x) \right| \right) + c$</p></td>
+            <td>$ \forall x \in I,\ u(x) \neq 0 $</td>
+          </tr>
+          <tr>
+            <td>
+              <p>$\frac{u(x)^{\prime}}{\sqrt{u(x)}}$</p>
+            </td>
+            <td><p>$2\sqrt{u(x)} + c$</p></td>
+            <td><p>$ \forall x \in I,\ u(x) > 0 $</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$u(x)^{\prime} \sin(u(x))$</p>
+            </td>
+            <td><p>$-\cos(u(x)) + c$</p></td>
+            <td><p>aucune</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$u(x)^{\prime} \cos(u(x))$</p>
+            </td>
+            <td><p>$\sin(u(x)) + c$</p></td>
+            <td><p>aucune</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$u(x)^{\prime} e^u(x)$</p>
+            </td>
+            <td><p>$e^u(x) + c$</p></td>
+            <td><p>aucune</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>$u^{\prime}(x) v^{\prime} \left[ u(x) \right]$</p>
+            </td>
+            <td><p>$v\left[ u(x) \right] + c$</p></td>
+            <td><p>$\forall x \in I, u[u(x)]$ existe</p></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

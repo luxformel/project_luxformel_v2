@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="converter-code.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+    <link rel="stylesheet" href="converter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+      async
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Dérivéeë Rechnen</h1>
+        <label for="function">Schreift Är Funktioun:</label>
+        <input type="text" id="function" />
+        <button onclick="calculateDerivative()">Dérivée Rechnen</button>
+        <div id="result"></div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+  <script>
+    function calculateDerivative() {
+      var inputFunction = document.getElementById("function").value;
+      inputFunction = toLowerCaseString(inputFunction);
+      try {
+        var derivative = math.derivative(inputFunction, "x").toTex();
+        document.getElementById("result").innerHTML =
+          "D'Dérivée ass: $$" + derivative + "$$";
+        document.getElementById("result").classList.remove("error");
+        MathJax.typeset();
+      } catch (error) {
+        document.getElementById("result").innerHTML =
+          "Feeler: " + error.message;
+        document.getElementById("result").classList.add("error");
+      }
+      function toLowerCaseString(inputString) {
+        return inputString.toLowerCase();
+      }
+    }
+  </script>
+  <style>
+    #result {
+      color: var(--black);
+    }
+  </style>
+</html>

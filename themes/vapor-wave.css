@@ -1,0 +1,68 @@
+/* everything that changes when applying this theme */
+
+:root {
+  --base-font-size: 16px;
+
+  --white: rgba(233, 218, 235);
+  --black: #000;
+  --hero: rgba(243, 0, 252, 0.493);
+  --index-border-color: hsla(250, 100%, 50%, 0.129);
+  --index-card-color: #47e3e9c0;
+  --accent-color: hwb(308 7% 24% / 0.638);
+  --background-color: #47e3e9c0;
+
+  --footer-bg-color: rgba(4, 3, 23, 0.979);
+  --footer-text-color: #ffffff;
+
+  --nav-bg-color: #b66cf1;
+
+  --off-white: rgb(177, 231, 252);
+  --darker-off-white: #ffc4eb;
+
+  --dark-grey-shade: #e2abdf50;
+
+  --splash-text-color: #000000;
+
+  --chapter-index-link-color: #000;
+
+  --default-link-color: blue;
+  --default-link-color-hover: rgb(118, 0, 254);
+  --archive-link-color: blue;
+
+  --changelog-main-text-color: #666;
+
+  --th-bg-color: rgba(192, 37, 189, 0.533);
+  --td-bg-color: #7d9bff;
+  --tr-bg-color: #d4cbf7;
+
+  --side-nav-bg: rgba(169, 182, 255, 0.692);
+  --side-nav-link: rgb(36, 36, 36);
+}
+
+.MJX-TEX {
+  color: rgb(9, 124, 128) !important;
+}
+p {
+  font-family: "Roboto Mono", monospace !important;
+  color: rgba(0, 35, 99, 0.918) !important;
+  font-size: 1.1rem !important;
+}
+
+.splash-text {
+  text-transform: uppercase;
+  word-spacing: 1rem;
+  line-height: 3rem !important;
+  font-size: 5rem !important;
+  font-weight: bolder;
+  font-family: "Geo", sans-serif !important;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Mono", monospace !important;
+  color: #9d3febc9 !important;
+}
+
+h3 {
+  font-family: "Geo", sans-serif !important;
+}

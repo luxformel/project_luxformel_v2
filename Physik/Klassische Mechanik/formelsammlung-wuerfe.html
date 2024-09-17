@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+    <script defer src="/settings/settings.js"></script>
+    <title>Formelsammlung Würfe</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Formelsammlung Würfe</h1>
+      <h2><u>Senkrechter Wurf</u></h2>
+      <h3>s-t-Gesetz:</h3>
+      $$ s_{x}(t)=v_{0}\cdot t-\frac{1}{2} \cdot g\cdot t^{2} $$
+      <h3>v-t-Gesetz:</h3>
+      $$v(t)=v_{0}-g\cdot t$$ $$\frac{d}{dt} s_{x}(t)$$
+      <h3>Steigzeit:</h3>
+      $$t_{h}=\frac{v_{0}}{g}$$
+      <h3>Wurfhöhe:</h3>
+      $$h=\frac{v^{2}_{0}}{2g} $$
+      <h3>Wurfdauer:</h3>
+      $$t_{e}=\frac{2v_{0}}{g} =2t_{h} $$
+      <h3>Endgeschwindigkeit:</h3>
+      $$v_{e}=-v_{0}$$
+      <h2><u>Waagerechter Wurf</u></h2>
+      $$s_{x}=v\cdot t$$ $$s_{y}=\frac{1}{2} \cdot g\cdot t^{2}$$
+      $$v_{x}=v_{0}$$ $$v_{y}=g\cdot t$$
+      <h3>Wurfparabel:</h3>
+      $$s_{y}=\frac{g}{2v^{2}_{0}} \cdot s^{2}_{x}$$
+      <h3>Wurfweite:</h3>
+      $$s_{xw}=\sqrt{\frac{2h}{g} } \cdot v_{0}$$
+      <h3>Wurfzeit:</h3>
+      $$t_{w}=\sqrt{\frac{2h}{g} } $$
+      <h3>Bahngeschwindigkeit:</h3>
+      $$=\sqrt{v^{2}_{0}+g^{2}\cdot t^{2}} $$
+      <h2><u>Schrägerwurf Wurf</u></h2>
+      <h3>Wurfparabel:</h3>
+      $$s_{y}=s_{x}\cdot \tan \left( \alpha \right) -\frac{g}{2v^{2}_{0}\cdot
+      \cos^{2} \left( \alpha \right) } \cdot s^{2}_{x}$$
+      <h3>Wurfweite:</h3>
+      $$s_{xw}=\frac{v^{2}_{0}\cdot \sin \left( 2\alpha \right) }{2g} $$
+      <h3>Steighöhe:</h3>
+      $$s_{xm}=\frac{v^{2}_{0}\cdot \sin^{2} \left( \alpha \right) }{2g} $$
+      <h3>Wurfzeit:</h3>
+      $$t_{w}=\frac{2v_{0}\cdot \sin \left( \alpha \right) }{g} $$
+      <h3>Bahngeschwindigkeit:</h3>
+      $$v=\sqrt{v^{2}_{0}\cdot \cos^{2} \left( \alpha \right) +\left[ v_{0}\cdot
+      \sin \left( \alpha \right) -g\cdot t\right]^{2} } $$
+      $$v=\sqrt{v^{2}_{x}+v^{2}_{y}} $$
+    </div>
+  </body>
+</html>

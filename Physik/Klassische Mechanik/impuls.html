@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Impuls</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Impuls</h1>
+      <h3>Definition</h3>
+      <p>
+        Der Impuls \( p \) eines Körpers ist das Produkt aus seiner Masse \( m
+        \) und seiner Geschwindigkeit \( v \).
+      </p>
+      <h3>Formel</h3>
+      $$ p=m \cdot v $$
+      <p>Vektoriell</p>
+      $$\overrightarrow{p} =m\overrightarrow{v} $$
+      <h3>Einheit</h3>
+      $$ \left[ p\right] =1\frac{kg\cdot m}{s} $$
+      <h2>Stoßvorgänge Definitionen</h2>
+      <ol>
+        <li>
+          <h3>Elastischer Stoß</h3>
+          <p>
+            Der Elastischer Stoß liegt vor, wenn sich die stoßenden Körper nach
+            dem Stoß wieder trennen. Eine kurze Verbindung unter den Körpern
+            existiert nur während des Stoßes
+          </p>
+        </li>
+        <li>
+          <h3>Unelastischer Stoß</h3>
+          <p>
+            Ein Unelastischer Stoß liegt vor, wenn die stoßemdem Körper beim
+            Stoß verhaken oder verbinden und auch nach dem Zusammentreffen
+            verbunden bleiben.
+          </p>
+        </li>
+        <li>
+          <h3>Zentraler Stoß</h3>
+          <p>
+            Ein Zentraler Stoß liegt vor, wenn sich die Schwerpunkte der
+            stoßenden Körper entlang einer geraden Linie aufeinander zu bewegen.
+          </p>
+        </li>
+      </ol>
+      <h2>Zentraler elastischer Stoß</h2>
+      <h3>Impulserhaltung</h3>
+      <p>
+        Beim zentralen elastischen Stoß ist der Gesamtimpuls vor dem Stoß gleich
+        dem Gesamtimpuls nach dem Stoß.
+      </p>
+      $$ \overrightarrow{p} =\overrightarrow{p^{\prime }} $$
+
+      <h3>Energieerhaltung</h3>
+      <p>
+        Beim zentralen elastischen Stoß ist die mechanische Energie \( E \) vor
+        dem Stoß gleich der mechanischen Energie \( E^{\prime} \) nach dem Stoß.
+      </p>
+      <h2>Geschwindigkeiten nach dem zentralen elastischen Stoß</h2>
+      <p>
+        Ein Körper der Masse $m_1$ stößt mit einer Geschwindigkeit
+        $\overrightarrow{v_1}$ gegen einen Körper der Masse $m_2$ welcher sich
+        mit einer Geschwindigkeit $\overrightarrow{v_2}$ bewegt. <br />
+        Es sollen Formeln hergeleitet werden, welche es erlauben, die
+        Geschwindigkeiten beider Körper mach dem Stoß
+        ($\overrightarrow{v_1^{\prime}}$ und $\overrightarrow{v_2^{\prime}}$) in
+        Abhängigkeit der Massen $m_1$ und $m_2$, sowie der Geschwindigkeiten
+        $\overrightarrow{v_1}$ und $\overrightarrow{v_2}$ zu bestimmen. Wenn der
+        Stoß eindimensional ablauft, so können die die Vektoren auf eine x-Achse
+        projiziert werden, welche der Richtung der Bewegung der Körper
+        entspricht.
+      </p>
+      <h3>Herleitung</h3>
+      <p>Aus dem Impulserhaltungssatz ergibt sich entlang der x-Achse:</p>
+      $$ p_{1x} + p_{2x} = p_{1x}^{\prime} + p_{2x}^{\prime}\ (1)$$
+      <p>Energieerhaltungssatz:</p>
+      $$ E_{kin,1} + E_{kin,2} = E^{\prime}_{kin,1} + E^{\prime}_{kin,2}\ (2)$$
+
+      <p>
+        Mit der Definition des Impulses und der kinetischen Energie erhalten wir
+        aus $(1)$ und $(2)$:
+      </p>
+
+      $$ \begin{cases}m_{1}\cdot v_{1x}+m_{2}\cdot v_{2x}=m_{1}\cdot v^{\prime
+      }_{1x}+m_{2}\cdot v^{\prime }_{2x}&\left( 3\right) \\ \frac{1}{2} \cdot
+      m_{1}\cdot v^{2}_{1x}+\frac{1}{2} \cdot m_{2}\cdot v^{2}_{2x}=\frac{1}{2}
+      \cdot m_{1}\cdot v^{\prime^{2} }_{1x}+\frac{1}{2} \cdot m_{2}\cdot
+      v^{\prime^{2} }_{2x}&\left( 4\right) \end{cases} $$ $$ \Leftrightarrow
+      \begin{cases}m_{1}\left( v_{1x}-v^{\prime }_{1x}\right) = m_{2}\left(
+      v^{\prime }_{2x}-v_{2x}\right) &\\ m_{1}\left( v^{2}_{1x}-v^{\prime
+      2}_{1x}\right) = m_{2}\left( v^{\prime 2} _{2x} -v^{2}_{2x}\right)
+      &\end{cases} $$ $$ \Leftrightarrow \begin{cases}v_{1x}-v^{\prime }_{1x} =
+      \frac{m_{2}}{m_{1}}\left( v^{\prime }_{2x}-v_{2x}\right) & \left( 5
+      \right) \\ m_{1}\left( v_{1x}-v^{\prime}_{1x}\right) \left(
+      v_{1x}+v^{\prime_{1x} }\right) =m_{2}\left( v^{\prime}_{2x} -v_{2x}\right)
+      \left( v^{\prime}_{2x} +v_{2x}\right) & \left( 6 \right) \end{cases} $$
+      <p>$(5)$ in $(6)$:</p>
+      $$ m_{1}\cdot \frac{m_{2}}{m_{1}} \left( v^{\prime }_{2x}-v_{2x}\right)
+      \left( v_{1x}+v^{\prime }_{1x}\right) =m_{2}\left( v^{\prime_{2x}
+      -v_{2x}}\right) \left( v^{\prime }_{2x}+v_{2x}\right) $$ $$
+      \Leftrightarrow v_{1x}+v^{\prime }_{1x}=v_{2x}+v^{\prime }_{2x}\ \left(
+      7\right) $$
+      <p>$(3)$ und $(7)$:</p>
+      $$ \begin{cases}m_{1}\cdot v_{1x}+m_{2}\cdot v_{2x}=m_{1}\cdot v^{\prime
+      }_{1x}+m_{2}\cdot v^{\prime }_{2x}& \\ v_{1x}+v^{\prime
+      }_{1x}=v_{2x}+v^{\prime }_{2x} & \end{cases} $$ $$ \Leftrightarrow
+      \begin{cases}m_{1}\cdot v_{1x}+m_{2}\cdot v_{2x}=m_{1}\cdot v^{\prime
+      }_{1x}+m_{2}\cdot v^{\prime }_{2x}& \left(8\right) \\ m_2 v_{1x}+ m_2
+      v^{\prime }_{1x}= m_2 v_{2x}+ m_2 v^{\prime }_{2x} & \left(9\right)
+      \end{cases} $$
+      <p>$(8) - (9)$:</p>
+      $$ m_{1}v_{1x}-m_{2}v_{1x}+m_{2}v_{2x}-m_{2}v^{\prime
+      }_{1x}=m_{1}v^{\prime }_{1x}-m_{2}v_{2x} $$ $$ \Leftrightarrow v^{\prime
+      }_{1x}\left( m_{1}+m_{2}\right) =m_{1}v_{1x}-m_{2}v_{1x}+2m_{2}v_{2x} $$
+      $$ \Leftrightarrow v^{\prime }_{1x}=\frac{m_{1}v_{1x}+m_{2}\left(
+      2v_{2x}-v_{1x}\right) }{m_{1}+m_{2}} \ \left( 10\right) $$
+      <p>$(10)$ in $(7)$:</p>
+      $$ v^{\prime }_{2x}=v_{1x}+v^{\prime }_{1x}-v_{2x} $$ $$ \Leftrightarrow
+      v^{\prime
+      }_{2x}=v_{1x}+\frac{m_{1}v_{1x}-m_{2}v_{1x}+2m_{2}v_{2x}}{m_{1}+m_{2}}
+      -v_{2x} $$ $$ \Leftrightarrow v^{\prime
+      }_{2x}=\frac{m_{1}v_{1x}+m_{2}v_{1x}+m_{1}v_{1x}-m_{2}v_{1x}+2m_{2}v_{2x}-m_{1}v_{2x}-m_{2}v_{2x}}{m_{1}+m_{2}}
+      $$ $$ \Leftrightarrow v^{\prime
+      }_{2x}=\frac{m_{2}v_{2x}+2m_{1}v_{1x}-m_{1}v_{2x}}{m_{1}+m_{2}} $$ $$
+      \Leftrightarrow v^{\prime
+      }_{2x}=\frac{m_{2}v_{2x}+m_{1}(2v_{1x}-v_{2x})}{m_{1}+m_{2}} $$
+      <p>Geschwindigkeiten der Körper nach dem zentralen elastischen Stoß:</p>
+
+      $$ v^{\prime }_{1x}=\frac{m_{1}v_{1x}+m_{2}(2v_{2x}-v_{1x})}{m_{1}+m_{2}}
+      $$ $$ v^{\prime
+      }_{2x}=\frac{m_{2}v_{2x}+m_{1}(2v_{1x}-v_{2x})}{m_{1}+m_{2}} $$
+
+      <h2>Zentraler unelastischer Stoß</h2>
+      <h3>Impulserhaltung</h3>
+      <p>
+        Beim zentralen elastischen Stoß ist der Gesamtimpuls vor dem Stoß gleich
+        dem Gesamtimpuls nach dem Stoß.
+      </p>
+      $$ \overrightarrow{p} =\overrightarrow{p^{\prime }} $$
+      <h3>Energieveränderung</h3>
+      <p>
+        Beim zentralen elastischen Stoß ist die mechanische Energie \( E \) vor
+        dem Stoß größer als die mechanische Energie \( E^{\prime} \) nach dem
+        Stoß. Beim Verhaken der Körper geht mechanische Energie durch
+        Verformungsarbeit verloren.
+      </p>
+      <h3>Herleitung der Energieveränderung</h3>
+      <p>
+        Die Änderung oder Abnahme der kinetischen Energie \( \Delta E_{kin} \)
+        beim unelastischen Stoß entspricht der Differenz zwischen gesamter
+        kinetischer Energie nach dem Stoß und gesamter kinetischer Energie vor
+        dem Stoß. Sie entspricht dem Betrag der Zunahme der thermischen Energie
+        der Körper:
+      </p>
+      $$ \Delta E_{kin} = E^{\prime}_{kin} + E_{kin}$$ $$ \Leftrightarrow \Delta
+      E_{kin} = E^{\prime}_{kin1} + E^{\prime}_{kin2} - E_{kin1} - E_{kin2}$$ $$
+      \Leftrightarrow \Delta E_{kin} = \frac{1}{2} \left( m_{1}+m_{2}\right)
+      \overrightarrow{v}^{\prime^{2} } -\frac{1}{2}
+      m_{1}\overrightarrow{v_{1}}^{2} -\frac{1}{2}
+      m_{2}\overrightarrow{v_{2}}^{2} $$ $$ \Leftrightarrow 2 \Delta E_{kin} =
+      \left( m_{1}+m_{2}\right) \frac{\left( m_{1}\overrightarrow{v_{1}}
+      +m_{2}+\overrightarrow{v_{2}} \right)^{2} }{\left( m_{1}+m_{2}\right)^{2}
+      } - m_{1}\overrightarrow{v_{1}}^{2} - m_{2}\overrightarrow{v_{2}}^{2} $$
+      $$ \Leftrightarrow 2 \Delta E_{kin} = \frac{\left(
+      m_{1}\overrightarrow{v_{1}} +m_{2}+\overrightarrow{v_{2}} \right)^{2} }{
+      m_{1}+m_{2} } - m_{1}\overrightarrow{v_{1}}^{2} -
+      m_{2}\overrightarrow{v_{2}}^{2} $$ $$ \Leftrightarrow 2 \Delta E_{kin} =
+      \frac{m^{2}_{1}\overrightarrow{v_{1}}^{2}
+      +m^{2}_{2}\overrightarrow{v_{2}}^{2} +2m_{1}m_{2}\overrightarrow{v_{1}}
+      \overrightarrow{v_{2}} }{ m_{1}+m_{2} } - m_{1}\overrightarrow{v_{1}}^{2}
+      - m_{2}\overrightarrow{v_{2}}^{2} $$ $$ \Leftrightarrow 2 \Delta E_{kin} =
+      \frac{ m^{2}_{1}\overrightarrow{v_{1}}^{2}
+      +m^{2}_{2}\overrightarrow{v_{2}}^{2} +2m_{1}m_{2}\overrightarrow{v_{1}}
+      \overrightarrow{v_{2}} -\left( m_{1}+m_{2}\right)
+      m_{1}\overrightarrow{v_{1}}^{2} -\left( m_{1}+m_{2}\right)
+      m_{2}\overrightarrow{v_{2}}^{2} }{m_1 + m_2} $$ $$ \Leftrightarrow 2
+      \Delta E_{kin} = \frac{ m^{2}_{1}\overrightarrow{v_{1}}^{2}
+      +m^{2}_{2}\overrightarrow{v_{2}}^{2} +2m_{1}m_{2}\overrightarrow{v_{1}}
+      \overrightarrow{v_{2}} -m^{2}_{1}\overrightarrow{v_{1}}^{2}
+      -m_{1}m_{2}\overrightarrow{v_{1}}^{2}
+      -m_{1}m_{2}\overrightarrow{v_{2}}^{2} -m^{2}_{2}\overrightarrow{v_{2}}^{2}
+      }{m_1 + m_2} $$ $$ \Leftrightarrow 2 \Delta E_{kin} = \frac{
+      2m_{1}m_{2}\overrightarrow{v_{1}} \overrightarrow{v_{2}}
+      -m_{1}m_{2}\overrightarrow{v_{1}}^{2}
+      -m_{1}m_{2}\overrightarrow{v_{2}}^{2} }{m_1 + m_2} $$ $$ \Leftrightarrow 2
+      \Delta E_{kin} = \frac{- \left(-2m_{1}m_{2}\overrightarrow{v_{1}}
+      \overrightarrow{v_{2}} +m_{1}m_{2}\overrightarrow{v_{1}}^{2}
+      +m_{1}m_{2}\overrightarrow{v_{2}}^{2} \right)}{m_1 + m_2} $$ $$
+      \Leftrightarrow 2 \Delta E_{kin} = \frac{-m_{1}m_{2}\left(
+      \overrightarrow{v_{1}}^{2} +\overrightarrow{v_{2}}^{2}
+      -2\overrightarrow{v_{1}} \overrightarrow{v_{2}} \right) }{m_1 + m_2} $$ $$
+      \Leftrightarrow \Delta E_{kin} =\frac{1}{2} \frac{m_1 \cdot m_2}{m_1 +
+      m_2} \cdot \left( \overrightarrow{v_{1}} -\overrightarrow{v_{2}}
+      \right)^2$$
+      <h3>Geschwindigkeit nach dem Stoß</h3>
+      $$ \overrightarrow{p} =\overrightarrow{p}^{ \ \prime } $$
+      $$\Leftrightarrow m_{1}\overrightarrow{v_{1}} +m_{2}\overrightarrow{v_{2}}
+      =\left( m_{1}+m_{2}\right) \overrightarrow{v}^{\prime } $$ $$
+      \Leftrightarrow \overrightarrow{v}^{\prime }
+      =\frac{m_{1}\overrightarrow{v_{1}} +m_{2}\overrightarrow{v_{2}}
+      }{{}m_{1}+m_{2}} $$
+      <h3>
+        Spezialfall: \( \overrightarrow{v_2} = - \overrightarrow{v_1} \) und \(
+        m_1 = m_2 \)
+      </h3>
+      <p>
+        Beide Körper besitzen die gleiche Masse \( m \) und stoßen mit gleicher
+        jedoch entgegengesetzter Geschwindigkeit aufeinander.
+      </p>
+      $$ \overrightarrow{v}^{\prime } =\frac{m\overrightarrow{v_{1}}
+      +m\overrightarrow{v_{2}} }{m+m} =\frac{m\overrightarrow{v_{1}}
+      -m\overrightarrow{v_{1}} }{2m} =\overrightarrow{0} $$
+      <p>
+        Die gesamte kinetische Energie, die vor dem Stoß vorhanden war, hat sich
+        somit während des Stoßes in thermische Energie umgewandelt.
+      </p>
+      <h2>Impulserhaltungssatz</h2>
+      <p>
+        In einem abgeschlossenen System ist die Summe der Impulse \( p \) vor
+        dem Stoß gleich der Summe der Impulse \( p^{\prime} \) nach dem Stoß.
+        Der Gesamtimpuls bleibt erhalten.
+      </p>
+      $$ \sum \overrightarrow{p} =\sum \overrightarrow{p}^{\prime } $$
+      <h2>Zentraler elastischer Stoß gegen einen ruhenden Körper</h2>
+      <h3>Impulserhaltungssatz</h3>
+      $$ \overrightarrow{p_{1}} +\overrightarrow{p_{2}}
+      =\overrightarrow{p_{1}}^{\prime } +\overrightarrow{p_{2}}^{\prime } $$
+      $$\Leftrightarrow m_{1}\overrightarrow{v_{1}} +m_{2}\overrightarrow{v_{2}}
+      =m_{1}\overrightarrow{v _{1}}^{\prime }
+      +m_{2}\overrightarrow{v_{2}}^{\prime } \ (1)$$
+      <h3>Energieerhaltungssatz</h3>
+      $$E_{1}+E_{2}=E^{\prime }_{1}+E^{\prime }_{2}$$ $$\Leftrightarrow
+      \frac{1}{2} m_{1}\overrightarrow{v^{2}_{1}} +0=\frac{1}{2}
+      m_{1}\overrightarrow{v^{2}_{1}}^{\prime } + \frac{1}{2}
+      m_{2}\overrightarrow{v^{2}_{2}}^{\prime } \ (2)$$
+      <h3>Herleitung der Geschwindigkeiten</h3>
+      <p>
+        Wir erhalten ein System mit 2 Gleichungen und 2 unbekannten : \(
+        \overrightarrow{v_{1}}^{\prime } \) und \(
+        \overrightarrow{v_{2}}^{\prime } \).
+      </p>
+      $$ m_{1}\overrightarrow{v_{1}} +m_{2}\overrightarrow{v_{2}}
+      =m_{1}\overrightarrow{v_{1}}^{\prime }
+      +m_{2}\overrightarrow{v_{2}}^{\prime } \ (1)$$ $$ \frac{1}{2}
+      m_{1}\overrightarrow{v^{2}_{1}} +0=\frac{1}{2}
+      m_{1}\overrightarrow{v^2_{1}}^{\prime } + \frac{1}{2}
+      m_{2}\overrightarrow{v^{2}_{2}}^{\prime } \ (2)$$
+      <p>
+        \( (1) \) wird nach \( \overrightarrow{v_{1}}^{\prime } \) umgestellt
+        und in \( (2) \) eingesetzt. <br />
+        Substitutionsmethode:
+      </p>
+      $$ \overrightarrow{v_{1}}^{\prime } =\overrightarrow{v_{1}}
+      -\frac{m_{2}}{m_{1}} \overrightarrow{v_{2}}^{\prime } \ (*)$$
+      <p>und</p>
+      $$ m_{1}\cdot \left( \overrightarrow{v_{1}} -\frac{m_{2}}{m_{1}}
+      \overrightarrow{v_{2}}^{\prime } \right)^{2}
+      +m_{2}\overrightarrow{v_{2}}^{{}^{2}\prime }
+      =m_{1}\overrightarrow{v_{1}}^{2} $$ $$ \Leftrightarrow
+      m_{1}\overrightarrow{v_{1}}^{2} +m_{1}\frac{m^{2}_{2}}{m^{2}_{1}}
+      \overrightarrow{v_{2}}^{2^{\prime }} -2m_{1}\frac{m_{2}}{m_{1}}
+      \overrightarrow{v_{1}} \cdot \overrightarrow{v_{2}}^{\prime }
+      +m_{2}\overrightarrow{v_{2}}^{2^{\prime }}
+      =m_{1}\overrightarrow{v_{1}}^{2} $$ $$ \Leftrightarrow
+      \frac{m^{2}_{2}}{m_{1}} \overrightarrow{v_{2}}^{2 \ \prime}
+      -2m_{2}\overrightarrow{v_{1}} \overrightarrow{v_{2}}^{\prime }
+      +m_{2}\overrightarrow{v_{2}}^{\prime 2} =0 $$ $$ \Leftrightarrow
+      \overrightarrow{v_{2}}^{\prime^{2} } \left( \frac{m^{2}_{2}}{m_{1}}
+      +m_{2}\right) -2m_{2}\overrightarrow{v_{1}} \overrightarrow{v_{2}}^{\prime
+      } =0$$ $$\Leftrightarrow \overrightarrow{v_{2}}^{\prime } \left[
+      \overrightarrow{v_{2}}^{\prime } \left( \frac{m^{2}_{2}}{m_{1}}
+      +m_{2}\right) -2m_{2}\overrightarrow{v_{1}} \right] =0$$ $$\Leftrightarrow
+      \overrightarrow{v_{2}}^{\prime } =0\ oder \ \overrightarrow{v_{2}}^{\prime
+      } \left( \frac{m^{2}_{2}}{m_{1}} +m_{2}\right)
+      -2m_{2}\overrightarrow{v_{1}} = 0$$ $$\Leftrightarrow
+      \overrightarrow{v_{2}}^{\prime } =
+      \frac{2m_{2}\overrightarrow{v_{1}}}{\frac{m^{2}_{2}}{m_{1}} +m_{2}} $$ $$
+      \Leftrightarrow \overrightarrow{v_{2}}^{\prime } = \frac{2m_{2}}{m_2
+      \left( \frac{m_{2}}{m_{1}} +1 \right)} \overrightarrow{v_1} $$ $$
+      \Leftrightarrow \overrightarrow{v_{2}}^{\prime } = \frac{2}{\frac{m_1 +
+      m_2}{m_1}} \overrightarrow{v_1} $$ $$ \Leftrightarrow
+      \overrightarrow{v_{2}}^{\prime } = \frac{2m_1}{m_1 + m_2}
+      \overrightarrow{v_1} $$
+      <p>
+        Um \( \overrightarrow{v_1}^{\prime} \) zu bestimmen wird die soeben
+        gefundene Gleichung \( (*) \) eingesetzt:
+      </p>
+      $$ \overrightarrow{v_{1}}^{\prime } =\overrightarrow{v_{1}}
+      -\frac{m_{2}}{m_{1}} \cdot \frac{2m_{1}}{m_{1}+m_{2}}
+      \overrightarrow{v_{1}} $$ $$\Leftrightarrow \overrightarrow{v_{1}}^{\prime
+      } =\overrightarrow{v_{1}} -\frac{2m_{2}}{m_{1}+m_{2}}
+      \overrightarrow{v_{1}} $$ $$\Leftrightarrow \overrightarrow{v_{1}}^{\prime
+      } =\frac{m_{1}+m_{2}}{m_{1}+m_{2}} \cdot \overrightarrow{v_{1}}
+      -\frac{2m_{2}}{m_{1}+m_{2}} \cdot \overrightarrow{v_{1}} $$
+      $$\Leftrightarrow \overrightarrow{v_{1}}^{\prime }
+      =\frac{m_{1}+m_{2}-2m_{2}}{m_{1}+m_{2}} \cdot \overrightarrow{v_{1}} $$
+      $$\Leftrightarrow \overrightarrow{v_{1}}^{\prime }
+      =\frac{m_{1}-m_{2}}{m_{1}+m_{2}} \cdot \overrightarrow{v_{1}} $$
+      <p>Wir erhalten also:</p>
+      $$ \overrightarrow{v_{2}}^{\prime } = \frac{2m_1}{m_1 + m_2}
+      \overrightarrow{v_1} $$
+      <p>und</p>
+      $$ \overrightarrow{v_{1}}^{\prime } =\frac{m_{1}-m_{2}}{m_{1}+m_{2}} \cdot
+      \overrightarrow{v_{1}} $$
+      <h2>Spezialfälle der Stoßvorgänge</h2>
+      <ol>
+        <li>
+          <h3>Spezialfall: \( m_1 = m_2 \)</h3>
+          <p>
+            Der stoßende und ruhende Körper besitzen die gleiche Masse \( m \).
+            In diesem Fall vereinfachen sich die Formeln zu:
+          </p>
+          $$\overrightarrow{v_{1}}^{\prime } =\frac{m-m}{m+m} \cdot
+          \overrightarrow{v_{1}} =\overrightarrow{0} $$
+          <p>und</p>
+          $$ \overrightarrow{v_{2}}^{\prime } =\frac{2m}{m+m} \cdot
+          \overrightarrow{v_{1}} = \overrightarrow{v_{1}}$$
+        </li>
+        <li>
+          <h3>Spezialfall: \( m_1 > m_2 \)</h3>
+          <p>
+            Die Masse des stoßenden Körpers ist größer als die Masse des
+            ruhenden Körpers. In diesem Fall gilt:
+          </p>
+          $$ \frac{2m_1}{m_1 + m_2} > 0 $$
+          <p>und</p>
+          $$\frac{m_{1}-m_{2}}{m_{1}+m_{2}} > 0 $$
+          <p>
+            Daher kann man schlussfolgern, dass sich beide Körper nach dem Stoß
+            in die Richtung des stoßenden Körpers bewegen.
+          </p>
+        </li>
+        <li>
+          <h3>Spezialfall: \( m_1 < m_2 \)</h3>
+          <p>
+            Die Masse des stoßenden Körpers ist kleiner als die Masse des
+            ruhenden Körpers. In diesem Fall gilt:
+          </p>
+          $$ \frac{2m_1}{m_1 + m_2} < 0 $$
+          <p>und</p>
+          $$\frac{m_{1}-m_{2}}{m_{1}+m_{2}} < 0 $$
+          <p>
+            Daher kann man schlussfolgern, dass der stoßende Körper sich nach
+            dem Stoß in Richtung des ursprünglich stoßenden bewegt.
+          </p>
+        </li>
+        <li>
+          <h3>Spezialfall: \( m_2 >> m_1 \)</h3>
+          <p>
+            Die Masse des ruhenden Körpers ist viel größer als die Masse des
+            stoßenden Körpers. In den Formeln kann dann \( m_1 \) vernachlässigt
+            werden und man findet:
+          </p>
+          $$ \overrightarrow{v_{2}}^{\prime } = \frac{2 \cdot 0}{ m_2}
+          \overrightarrow{v_1} = \overrightarrow{0} $$ $$\Leftrightarrow
+          \overrightarrow{v_{2}}^{\prime} = \overrightarrow{0} $$
+          <p>und</p>
+          $$ \overrightarrow{v_{1}}^{\prime } =\frac{0-m_{2}}{0+m_{2}} \cdot
+          \overrightarrow{v_{1}} $$ $$\Leftrightarrow
+          \overrightarrow{v_{1}}^{\prime } =-\overrightarrow{v_{1}} $$
+          <p>
+            In diesem Fall wird der erste Körper beim Stoß reflektiert; der
+            zweite bleibt in Ruhe.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

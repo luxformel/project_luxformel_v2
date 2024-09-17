@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kreisprozesse</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Kreisprozesse</h1>
+      <h2>Kreisprozesse</h2>
+      <p>
+        Eine geschlossene Kurve im \( p \)-\( V \)-Diagramm bezeichnet man als
+        Kreisprozess. Je nachdem in welchem Drehsinn die Kurve durchlaufen wird,
+        unterscheidet man rechts- und linksgängige Kreisprozesse. Da bei dem
+        Kreisprozess stets wieder der Anfangszustand erreicht wird, haben auch
+        alle Zustandsgrö&beta;en nach einem Durchlauf des Kreisprozesses wieder
+        ihre Ausgangswerte.
+      </p>
+      <h2>Rechtsgänginger Kreisprozess</h2>
+      <p>
+        Soll der Kreisprozess Arbeit nach au&beta;en abgeben, so genannte
+        Nutzarbeit, so muss die Kompressionskurve unterhalb der Expansionskurve
+        verlaufen. Um das zu erreichen, muss vor oder während der Kompression
+        gekühlt und vor oder während der Expansion geheizt werden. Dabei ergibt
+        sich ein rechtsgängiger Durchlauf der Prozesskurve. Da derartige
+        Maschinen Wärme in Arbeit oder Kraft umwandeln, nennt man sie
+        Wärmekraftmaschinen.
+      </p>
+      <img
+        class="zeichnungen"
+        src="../img/rechtsgaenigeKreisprozesse.png"
+        alt="rechtsgäninger Kreisprozess"
+      />
+      <p>
+        Daraus geht hervor, dass \( W_{12} \) die nach au&beta;en abgegebene
+        Expansionsarbeit ist, die betragsmä&beta;ig durch den Flächeninhalt
+        unter der Expansionskurve repräsentiert wird. Das ist aber nicht die
+        Nutzarbeit, die der Kreisprozess nach au&beta;en abgibt, da von
+        <i>3</i> nach <i>4</i> ein arbeitsaufnehmender Takt notwendig ist,
+        dessen Betrag durch den Flächeninhalt unter der Kompressionskurve
+        dargestellt wird. Man erkennt: Die Nutzarbeit kann durch
+        Differenzbildung aus dem arbeitsliefernden Takt und dem
+        arbeitsverzehrenden Takt bestimmt werden.Entsprechend findet man den
+        Betrag der Nutzarbeit als Differenz der die Arbeitsbeträge darstellenden
+        Flächeninhalte.
+      </p>
+      <h2>Nutzarbeit</h2>
+      <p>
+        Die Nutzarbeit \( W \) , die mit jedem Durchlauf des rechtsgängigen
+        Kreisprozesses nach au&beta;en abgegeben wird, entspricht
+        betragsmä&beta;ig dem von der Kreisprozesskurve eingeschlossenen
+        Flächeninhalt.
+      </p>
+      <h2>Energiebilanz</h2>
+      <p>Für jeden Kreisprozess gilt:</p>
+      $$ \sum Q+\sum W=0$$
+      <p>mit \( W_{23}=W_{41}=0 \) und \( Q_{12}=Q_{34}=0 \) folgt:</p>
+      $$Q_{12}+Q_{34}+W_{23}+W_{41}=0$$
+      <p>mit \( W_{N}=W_{12}+W_{34} \)</p>
+      $$ W_{N}=W_{12}+W_{34}=-Q_{23}-Q_{41}$$ $$
+      |W_{N}|=|W_{12}|-W_{34}=Q_{41}-|Q_{23}|$$
+      <h2>Thermischer Wirkungsgrad</h2>
+      $$ \eta =\frac{Nutzen}{Aufwand} $$ $$ \eta =\frac{\left| W_{N}\right|
+      }{Q_{zu}} =\frac{Q_{zu}-\left| Q_{ab}\right| }{Q_{zu}} =1-\frac{\left|
+      Q_{ab}\right| }{Q_{zu}} $$
+      <h2>Linksgängige Kreisprozesse</h2>
+      <p>
+        Verläuft bei einem Kreisprozess die Kompressionskurve oberhalb der
+        Expansionskurve, so wird dem Kreisprozess in der Bilanz Arbeit von
+        au&beta;en zugeführt. Bei solchen Prozessen wird die Prozesskurve im
+        linksgängigen Drehsinn durchlaufen, weshalb man von linksgängigen
+        Kreisprozessen spricht. Diese Kreisprozesse werden als
+        Wärmepumpenprozesse bezeichnet. <br />
+        Der Wärmepumpenprozess kann im Prinzip dadurch realisiert werden, dass
+        man die Laufrichtung einer Wärmekraftmaschine umkehrt und ihr
+        mechanische Arbeit zuführt. Diese aufgewandte Arbeit \( W_{auf}\), lässt
+        sich auch beim Wärmepumpenprozess als Flächeninhalt der vom
+        linksgängigen Kreisprozess eingeschlossenen Fläche wiederfinden.
+      </p>
+      <h2>Leistungszahl</h2>
+      <p>
+        Beim Wärmepumpenprozess, nur dieser wird im Folgenden betrachtet, ist
+        die dem warmen Reservoir zugeführte Wärme der Nutzen. Damit ergibt sich
+        die Leistungszahl zur Bewertung des Wärmepumpenprozesses wie folgt:
+      </p>
+      $$\varepsilon =\frac{Nutzen}{Aufwand} =\frac{\left| Q_{ab}\right|
+      }{W_{auf}} =\frac{\left| Q_{ab}\right| }{\left| Q_{ab}\right| -Q_{zu}}
+      =\frac{1}{\eta } $$
+      <p>
+        Die Leistungszahl des Wärmepumpenprozesses ist der Kehrwert des
+        Wirkungsgrades beim Wärmekraftprozess. Für die Leistungszahl gilt
+        offensichtlich stets: \( \varepsilon > 1 \). <br />
+        Der Grenzfall \( \varepsilon = 1 \) hätte zur Folge, dass die Nutzwärme
+        ausschlie&beta;lich aus der aufgewandten Arbeit gespeist wird. Ein
+        <q>Wärmepumpen</q> fände nicht mehr statt.
+      </p>
+      <h2>Carnot'sche Kreisprozess</h2>
+      <p>
+        Der Carnot'sche Kreisprozess stellt ein idealer Kreisprozess dar. Er
+        besteht aus 2 Isothermen sowie 2 Adiabaten, wobei die Wärmeaufnahme und
+        Wärmeabgabe bei konstanter Temperatur erfolgen.
+      </p>
+      <!-- <h2>Der Carnot'sche Wirkungsgrad</h2> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Filterschaltungen</h1>
+      <h3>Definition</h3>
+      <p>
+        Filterschaltungen sind Schaltungen, die in Abhängigkeit der Frequenz
+        bestimmte Spannungen sperren.
+      </p>
+      <strong>Tiefpass</strong>
+      <hr />
+      <p>
+        Tiefpässe sperren hohe Frequenzen und lassen niedrige Frequenzen
+        passieren.
+      </p>
+      <h2>Zusammenhang Eingang - und Ausgangsspannung</h2>
+      <img
+        src="../img/filterschaltungen/TiefpassSchaltung.png"
+        alt="Tiefpass Schaltung"
+        class="zeichnungen"
+      />
+      $$ \frac{U_a}{U_e} = \frac{X_C}{Z}$$ $$= \frac{X_C}{\sqrt{R^2+X_C^2}}$$
+      $$= \frac{\frac{1}{2\pi \cdot f \cdot C}}{\sqrt{R^2 + \left( \frac{1}{2\pi
+      \cdot f \cdot C} \right)^2}}$$ $$ = \frac{1}{\sqrt{1+ \left( 2\pi \cdot f
+      \cdot C \cdot R \right)^2}}$$
+      <h2>Grenzfrequenz</h2>
+      <h3>Herleitung</h3>
+      <p>Bei Grenzfrequenz gilt:</p>
+      $$ \frac{U_a}{U_e} = \frac{1}{\sqrt{2}} $$ $$ \Rightarrow
+      \frac{X_C}{\sqrt{R^2 + X_C^2}} = \frac{1}{\sqrt{2}}$$ $$ \Leftrightarrow
+      2X_C^2 = R^2 + X_C^2 $$ $$\Leftrightarrow X_C = R $$ $$\Leftrightarrow R =
+      \frac{1}{2\pi \cdot f_g \cdot C} $$ $$\Leftrightarrow f_g = \frac{1}{2\pi
+      \cdot R \cdot C} $$
+      <h3>Formel</h3>
+      $$f_g = \frac{1}{2\pi \cdot R \cdot C} $$
+      <p>
+        Der Hochpass sowie Tiefpass haben die gleiche Formel für die
+        Grenzfrequenz
+      </p>
+      <strong>Hochpass</strong>
+      <hr />
+      <p>
+        Hochpässe lassen hohe Frequenzen passieren und sperren niedrige
+        Frequenzen.
+      </p>
+      <img
+        src="../img/filterschaltungen/HochpassSchaltung.png"
+        alt="Hochpass Schaltung"
+        class="zeichnungen"
+      />
+      $$ \frac{U_a}{U_e} = \frac{R}{Z}$$ $$= \frac{R}{\sqrt{R^2+X_C^2}}$$ $$=
+      \frac{R}{\sqrt{R^2 + \left( \frac{1}{2\pi \cdot f \cdot C} \right)^2}}$$
+      $$ = \frac{1}{\sqrt{1+ \left( \frac{1}{2\pi \cdot f \cdot C \cdot R
+      }\right)^2}}$$
+      <h2>Grenzfrequenz</h2>
+      <h3>Herleitung</h3>
+      <p>Bei Grenzfrequenz gilt:</p>
+      $$ \frac{U_a}{U_e} = \frac{1}{\sqrt{2}} $$ $$ \Rightarrow
+      \frac{R}{\sqrt{R^2 + X_C^2}} = \frac{1}{\sqrt{2}}$$ $$ \Leftrightarrow
+      2R^2 = R^2 + X_C^2 $$ $$\Leftrightarrow X_C = R $$ $$\Leftrightarrow R =
+      \frac{1}{2\pi \cdot f_g \cdot C} $$ $$\Leftrightarrow f_g = \frac{1}{2\pi
+      \cdot R \cdot C} $$
+      <h3>Formel</h3>
+      $$f_g = \frac{1}{2\pi \cdot R \cdot C} $$
+      <h3>Bemerkung</h3>
+      <p>
+        Der Hochpass sowie Tiefpass haben die gleiche Formel für die
+        Grenzfrequenz
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+/* everything that changes when applying this theme */
+
+:root {
+  --base-font-size: 16px;
+
+  --white: #030303;
+  --black: #cfcccc;
+  --hero: rgba(117, 117, 117, 0.549);
+  --index-border-color: hsla(250, 100%, 50%, 0.129);
+  --index-card-color: rgb(24, 23, 23);
+  --accent-color: hsl(250 100% 50% / 0.6);
+  --background-color: rgb(26, 26, 26);
+
+  --footer-bg-color: #6d6d6d;
+  --footer-text-color: #000000;
+
+  --nav-bg-color: #616161;
+
+  --off-white: #525252;
+  --darker-off-white: #3b3b3b;
+
+  --dark-grey-shade: #d8d8d8;
+
+  --splash-text-color: #e6e6e6;
+
+  --chapter-index-link-color: #ffffff;
+
+  --default-link-color: blue;
+  --default-link-color-hover: rgb(118, 0, 254);
+  --archive-link-color: blue;
+
+  --changelog-main-text-color: #b6b6b6;
+
+  --th-bg-color: #555555;
+  --td-bg-color: #dadada;
+  --tr-bg-color: #222121;
+
+  --side-nav-bg: rgba(66, 66, 66, 0.445);
+  --side-nav-link: rgb(219, 219, 219);
+}
+
+.MTH-TEX {
+  color: #fff !important;
+}

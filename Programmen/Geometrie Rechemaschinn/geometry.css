@@ -1,0 +1,44 @@
+.container-geo {
+  max-width: 50rem; /* 800px converted to rem */
+  margin: 1.25rem auto; /* 20px converted to rem */
+  padding: 1.25rem; /* 20px converted to rem */
+  box-shadow: 0 0 0.625rem var(--black); /* 10px converted to rem */
+  border-radius: 0.313rem; /* 5px converted to rem */
+  background-color: var(--white);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem; /* 20px converted to rem */
+}
+
+.tab {
+  padding: 0.625rem 1.25rem; /* 10px and 20px converted to rem */
+  background-color: var(--sixColor);
+  border: 0.063rem solid var(--black); /* 1px converted to rem */
+  border-radius: 0.313rem 0.313rem 0 0; /* 5px converted to rem */
+  cursor: pointer;
+  margin-right: 0.625rem; /* 10px converted to rem */
+  margin-bottom: 0.625rem; /* 10px converted to rem */
+  color: var(--black);
+}
+
+.tab.active {
+  background-color: var(--darker-greyColor);
+}
+
+.content {
+  display: none;
+  padding: 1.25rem; /* 20px converted to rem */
+  border: 0.063rem solid var(--white); /* 1px converted to rem */
+  border-top: none;
+}
+
+.content.active {
+  display: block;
+}
+
+h2 {
+  color: var(--black);
+}

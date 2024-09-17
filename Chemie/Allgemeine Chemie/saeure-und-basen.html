@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Säure und Basen</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Säure und Basen</h1>
+      <h2>Säure und Basen nach Brønsted</h2>
+      <h3>Definition</h3>
+      <p>
+        Teilchen, die bei Reaktionen Protonen ( \( \ce{H+} \)-Ionen) abgeben
+        nennt man Säuren. Säuren sind Protonendonatoren. Teilchen die bei
+        Reaktionen Protonen aufnehmen nennt man Basen. Basen sind
+        Protonenakzeptoren.
+      </p>
+      <h2>Säure - Base - Reaktionen</h2>
+      <p>
+        Eine chemische Reaktionen bei der ein Proton von einer Säure auf eine
+        Base übertragen wird bezeichnet man als Säure-Base-Reaktion oder
+        Protolyse (Protonenübertragungsreaktion)
+      </p>
+      <h2>Korrespondierende Säure-Base-Paare</h2>
+      <p>
+        Eine Säure \( \ce{HA} \) wird in einer Säure-Base-Reaktion zur Base \(
+        \ce{A-} \), die Base \( \ce{B} \) wird dabei zur Säure \( \ce{HB+} \).
+        \( \ce{HA} \)/\( \ce{A-} \) und \( \ce{HB+} \)/\( \ce{B} \) bilden
+        jeweils ein korrespondierendes Säure-Base-Paar.
+      </p>
+      $$ \ce{HA + B -> HB+ + A-} $$
+      <h2>Ampholyte</h2>
+      <p>
+        Ampholyte sind Teilchen, die je nach Reaktionspartner entweder als
+        Brønsted-Säure oder als Brønsted-Base reagieren können.
+      </p>
+      <h2>Autoprotolyse des Wassers</h2>
+      <p>
+        Den Protonenübergang zwischen zwei Wassermolekülen bezeichnet man als
+        Autoprotolyse des Wassers. Es entstehen Oxoniumionen und Hydroxidionen.
+      </p>
+      <h3>Reaktionsgleichung</h3>
+      $$ \ce{H2O + H2O <<=> H3O+ + OH-} $$ $$ K = \frac{ c( \ce{H30+} ) c(
+      \ce{OH-} ) }{ c^2(\ce {H2O})} $$ $$K_W = \overbrace{K}^{konstant} \cdot
+      \overbrace{c^{2}(\ce {H2O}) }^{konstant} =c( \ce{H3O+}) \cdot c( \ce{OH-})
+      $$
+      <h2>Ionenprodukt des Wassers</h2>
+      <p>
+        Das Produkt \( K_W = c( \ce{H3O+}) \cdot c( \ce{OH-}) \) bezeichnet man
+        als Ionenprodukt des Wassers. Der Wert von \( K_W \) ist abhängig von
+        der Temperatur. Bei 25\( ^{\circ} C\) hat das Ionenprodukt einen Wert
+        von \( K_W = 1,00 \cdot 10^{14} \frac{mol^2}{L^2} \)
+      </p>
+      <p>
+        Im reinen Wasser bei 25\( ^{\circ} C\) betragen die Ionenkonzentrationen
+      </p>
+      $$c(\ce{H3O+}) = c(\ce{OH-}) = 10^{-7} \frac{mol}{L} $$
+      <h2>Wässrige Lösungen von Säuren und Basen</h2>
+      <p>
+        Auch in verdünnten wässrigen Lösungen gilt noch die Beziehung für das
+        Ionenprodukt
+      </p>
+      $$K_W = c( \ce{H3O+}) \cdot c( \ce{OH-}) = 10^{-14} \frac{mol^2}{L^2} $$
+      <ol>
+        <li>
+          <p>Säuren reagieren mit Wasser unter Bildung von Oxoniumionen</p>
+          $$ \ce{HA} + \ce{H2O} \ce{<=>} \ce{H3O+} + \ce{A-} $$
+          <p>
+            Nimmt \( c(\ce{H3O+}) \) durch Zugabe einer Säure zu, so wird \(
+            c(\ce{OH-}) \) kleiner bis das Produkt \( c(\ce{H3O+}) \cdot
+            c(\ce{OH-}) \) wieder einen Wert von \( 10^{-14} \frac{mol^2}{L^2}
+            \) erreicht (bei 25\( ^{\circ} C\)) Jetzt ist \( c(\ce{H3O+}) \)
+            grö&beta;er als \( 10^{-7} \frac{mol}{L} \) und \( c(\ce{OH-}) \)
+            kleiner als \( 10^{-7} \frac{mol}{L} \)
+          </p>
+        </li>
+        <li>
+          <p>Basen reagieren mit Wasser unter Bildung von Hydroxidionen</p>
+          $$ \ce{B-} + \ce{H2O} \ce{<=>} \ce{HB} + \ce{OH-} $$
+          <p>
+            Nimmt \( c(\ce{OH-}) \) durch Zugabe einer Base zu, so wird \(
+            c(\ce{H3O+}) \) kleiner bis das Produkt \( c(\ce{H3O+}) \cdot
+            c(\ce{OH-}) \) wieder einen Wert von \( 10^{-14} \frac{mol^2}{L^2}
+            \) erreicht (bei 25\( ^{\circ} C\)) Jetzt ist \( c(\ce{OH-}) \)
+            grö&beta;er als \( 10^{-7} \frac{mol}{L} \) und \( c(\ce{H3O+}) \)
+            kleiner als \( 10^{-7} \frac{mol}{L} \)
+          </p>
+        </li>
+      </ol>
+      <p>
+        Jede wässrige Lösung enthält sowohl Oxoniumionen als auch Hydroxidionen,
+        nur in wechselnden Verhältnissen.
+      </p>
+      <ol>
+        <li>
+          <p>neutrale Lösung: \( c(\ce{H3O+}) = c(\ce{OH-}) \)</p>
+        </li>
+        <li>
+          <p>saure Lösung: \( c(\ce{H3O+}) > c(\ce{OH-}) \)</p>
+        </li>
+        <li>
+          <p>alkalische Lösung: \( c(\ce{H3O+}) < c(\ce{OH-}) \)</p>
+        </li>
+      </ol>
+      <p>In jedem Fall gilt:</p>
+      $$c( \ce{H3O+}) \cdot c( \ce{OH-}) = 10^{-14} \frac{mol^2}{L^2}$$
+      <h2>p\( \ce{H} \) - Wert</h2>
+      <h3>Definition</h3>
+      <p>
+        Der p\( \ce{H} \)-Wert ist ein Ma&beta; für die Stoffmengenkonzentration
+        an Oxoniumionen in einer wässrigen Lösung.
+      </p>
+      $$ p \ce{H} =-\log \left[ c( \ce{H3O+}) \right] $$
+      <p>oder</p>
+      $$ c( \ce{H3O+}) = 10^{-p \ce{H}}$$
+      <h2>p\( \ce{OH} \) - Wert</h2>
+      <h3>Bemerkung</h3>
+      <p>In alkalischen Lösungen wird oft der p\( \ce{OH} \)-Wert benutzt:</p>
+      $$ p \ce{OH} =-\log \left[ c( \ce{OH-}) \right] $$ $$ c( \ce{OH-}) =
+      10^{-p \ce{OH}}$$
+      <h2>Zusammenhang zwischen p\( \ce{H} \) und p\( \ce{OH} \)</h2>
+      <p>
+        Der Zusammenhang zwischen p\( \ce{H} \) und p\( \ce{OH} \) kann aus dem
+        Ionenprodukt des Wassers hergeleitet werden:
+      </p>
+      $$ p \ce{H} + p \ce{OH} = p K_W $$
+      <p>Bei 25\( ^{\circ} C\):</p>
+      $$p K_W = - \log(K_W) = - \log(10^{-14}) = 14 $$ $$ p \ce{H} + p \ce{OH} =
+      14 $$
+      <h2>Starke Säure</h2>
+      <p>
+        Starke Säuren sind in wässriger Lösung (fast) vollständig dissoziiert.
+      </p>
+      $$ \ce{HA + H2O} \rightarrow \ce{H3O+_{(aq)} + A-_{(aq)} } $$
+      <p>
+        Für einprotonige Säuren: <br />
+        \(c(\ce{H3O+}) \simeq c_0(\ce{HA})\) und \(c(\ce{HA}) \simeq 0\)
+      </p>
+      <h2>Schwache Säure</h2>
+      <p>
+        Schwache Säuren sind in wässriger Lösung nur unvollständig dissoziiert.
+        Die Dissoziation ist eine Gleichgewichtsreaktion.
+      </p>
+      $$ \ce{HA + H2O -> H3O+_{(aq)} + A-_{(aq)} } $$
+      <p>
+        Für einprotonige Säuren: <br />
+        \(c(\ce{HA}) \simeq c_0(\ce{HA})\) und \(c(\ce{H3O+}) << c_0(\ce{HA})\)
+      </p>
+      <h2>(Sehr) starke einprotonige Säure</h2>
+      $$pK_{S} < 0 $$
+      <p>
+        Das Gleichgewicht liegt stark auf der rechten Seite: die Protolyse
+        verläuft (fast) vollständig. \( c(\ce{H3O+}) \simeq c_0(\ce{HA}) \).
+        <br />
+        Daraus folgt
+      </p>
+      $$pH=-\log \left[ c(\ce{H3O+}) \right] $$ $$ c(\ce{H3O+}) \simeq
+      c_0(\ce{HA})$$
+      <h3>p\( \ce{H} \)-Wert einer Lösung einer starken Säure</h3>
+      $$pH=-\log \left[ c_0(\ce{HA}) \right] $$
+      <h2>(Sehr) starke einprotonige Base</h2>
+      $$pK_{B} < 0 $$ $$ \ce{B + H2O -> HB+ + OH-}$$
+      <p>
+        Das Gleichgewicht liegt stark auf der rechten Seite: die Protolyse
+        verläuft (fast) vollständig. \( c(\ce{OH-}) \simeq c_0(B) \). <br />
+        Daraus folgt
+      </p>
+      $$ p \ce{OH} = -\log[c_0(\ce{B})] $$
+      <p>Mit p\( \ce{H}\) = 14 - p\( \ce{OH}\)</p>
+      $$ p \ce{H} = 14 + \log[c_0(\ce{B})] $$
+      <h2>Schwache einprotonige Säure</h2>
+      $$ (pK_S > 0) $$ $$ \ce{HA + H2O <=> H3O+ + A- } $$
+      <p>Die Dissoziation ist eine Gleichgewichtsreaktion:</p>
+      $$K_S = \frac{c(\ce{H3O+}) \cdot c(\ce{A-})}{c(\ce{HA})} \ (1)$$
+      <h3>Hypothesen</h3>
+      <ol>
+        <li>
+          <p>
+            Das Gleichgewicht ist stark nach links verschoben; Die
+            Konzentrationsänderung der Säure durch die Protolyse ist
+            vernachlässigbar klein.
+          </p>
+          $$ c(\ce{HA}) \simeq c_0(\ce{HA}) \ (2)$$
+        </li>
+        <li>
+          <p>
+            Die Oxonium-Ionen aus der Autoprotolyse des Wassers können
+            vernachlässigt werden
+          </p>
+          $$ c(\ce{A-}) \simeq c(\ce{H3O+}) \ (3)$$
+        </li>
+      </ol>
+      <p>\( (2),\ (3) \rightarrow (1) \)</p>
+      $$ K_S = \frac{c(\ce{H3O+}) \cdot \overbrace{c(\ce{A-}) }^{\simeq
+      c(\ce{H3O+}) } }{\underbrace{c(\ce{HA})}_{\simeq c_0(\ce{HA})} } $$
+      $$\Leftrightarrow K_S \simeq \frac{c^2(\ce{H3O+})}{c_0(\ce{HA})} $$
+      $$\Leftrightarrow c(\ce{H3O+}) = \sqrt{K_S \cdot c_0(\ce{HA})} $$
+      $$\Leftrightarrow p \ce{H} = -\log{\left\{ [K_S \cdot
+      c_0(\ce{HA})]^{\frac{1}{2}} \right\} }$$ $$\Leftrightarrow p \ce{H} =
+      -\frac{1}{2} \log{ [K_S \cdot c_0(\ce{HA})] } $$ $$\Leftrightarrow p
+      \ce{H} = -\frac{1}{2} \log(K_S) - \frac{1}{2} \log[c_0(\ce{HA})] $$
+      $$\Leftrightarrow p \ce{H} =\frac{1}{2} \left\{ pK_{S}-\log \left[
+      c_0\left( \ce{HA} \right) \right] \right\} $$
+      <h3>p\( \ce{H} \) - Wert einer Lösung einer schwachen Säure</h3>
+      $$ p \ce{H} = \frac{1}{2} [pK_S - \log{(c_0 (\ce{HA}))}] $$
+      <h2>Schwache einprotonige Base</h2>
+      <!-- $$ (pK_S > 0) $$ $$ \ce{HA + H2O <=> H3O+ + A- } $$
+      <p>Die Dissoziation ist eine Gleichgewichtsreaktion:</p>
+      $$K_S = \frac{c(\ce{H3O+}) \cdot c(\ce{A-})}{c(\ce{HA})} \ (1)$$
+      <h3>Hypothesen</h3>
+      <ol>
+        <li>
+          <p>
+            Das Gleichgewicht ist stark nach links verschoben; Die
+            Konzentrationsänderung der Säure durch die Protolyse ist
+            vernachlässigbar klein.
+          </p>
+          $$ c(\ce{HA}) \simeq c_0(\ce{HA}) \ (2)$$
+        </li>
+        <li>
+          <p>
+            Die Oxonium-Ionen aus der Autoprotolyse des Wassers können
+            vernachlässigt werden
+          </p>
+          $$ c(\ce{A-}) \simeq c(\ce{H3O+}) \ (3)$$
+        </li>
+      </ol>
+      <p>\( (2),\ (3) \rightarrow (1) \)</p>
+      $$ K_S = \frac{c(\ce{H3O+}) \cdot \overbrace{c(\ce{A-}) }^{\simeq
+      c(\ce{H3O+}) } }{\underbrace{c(\ce{HA})}_{\simeq c_0(\ce{HA})} } $$
+      $$\Leftrightarrow K_S \simeq \frac{c^2(\ce{H3O+})}{c_0(\ce{HA})} $$
+      $$\Leftrightarrow c(\ce{H3O+}) = \sqrt{K_S \cdot c_0(\ce{HA})} $$
+      $$\Leftrightarrow p \ce{H} = -\log{\left\{ [K_S \cdot
+      c_0(\ce{HA})]^{\frac{1}{2}} \right\} }$$ $$\Leftrightarrow p \ce{H} =
+      -\frac{1}{2} \log{ [K_S \cdot c_0(\ce{HA})] } $$ $$\Leftrightarrow p
+      \ce{H} = -\frac{1}{2} \log(K_S) - \frac{1}{2} \log[c_0(\ce{HA})] $$
+      $$\Leftrightarrow p \ce{H} =\frac{1}{2} \left\{ pK_{S}-\log \left[
+      c_0\left( \ce{HA} \right) \right] \right\} $$
+      <h3>p\( \ce{H} \) - Wert einer Lösung einer schwachen Säure</h3>
+      $$ p \ce{H} = \frac{1}{2} [pK_S - \log{(c_0 (\ce{HA}))}] $$$ -->
+      <p>Nach gleichen überlegungen wie bei der vorherigen Herleitung:</p>
+      $$ p \ce{OH} = \frac {1}{2} \left[ pK_B - \log(c_0(B)) \right] $$
+      <p>oder:</p>
+      $$ p \ce{H} = 14 - \frac {1}{2} \left[ pK_B - \log(c_0(B)) \right] $$
+      <h2>Säure und Base Reaktionen in wässrigen Salzlösungen</h2>
+      <ul>
+        <li>
+          <p>
+            Teilchen, die fast keinen oder wenigen Einfluss auf den Charakter
+            einer Lösung haben sind zum Beispiel:
+          </p>
+          <ul>
+            <li>
+              <p>
+                die Kationen von Alkalimetallen und Erdalkalimetallen: <br />$
+                \ce{Na+}$; $\ce{K+}$; $\ce{Ca^2+}$;...
+              </p>
+            </li>
+            <li>
+              <p>
+                die Anionen von starken und einprotonigen Säuren: <br />$
+                \ce{Cl-}$; $\ce{Br-}$; $\ce{I-}$; $\ce{NO3-}$; $\ce{ClO4-}$;
+                $\ce{SO4-}$
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            Der Charaker der Lösung wird durch das Teilchen mit dem kleineren
+            $pK$-Wert bestimmt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Bei Ampholyten bestimmt die Funktion mit dem niedrigen $pK$-Wert den
+            Charaker des Teilchens.
+          </p>
+        </li>
+      </ul>
+      <h2>Pufferlösungen</h2>
+      <p>
+        Pufferlösungen sind Lösungen deren $p \ce{H}$-Wert sich bei Zugabe einer
+        Säure oder Base nur sehr wenig verändert. <br />
+        Pufferlösungen enthalten sowohl eine schwache Säure als auch eine
+        schwache Base. Häufig verwendet man korrespondierende Säure-Base-Paare
+        $\ce{HA}$/$\ce{A-}$. <br />
+        Die schwache Säure im Gemisch dient zum Abfangen von Hydroxidionen, die
+        schwache Base dient zum Abfangen von Oxoniumionen. <br />
+        Werden der Pufferlösung Oxoniumionen oder Hydroxidionen zugegeben, so
+        sammeln sich diese nicht in der Lösung an (was einer starke Veränderung
+        des pH-Werts bewirken würde), sondern sie werden durch Gleichge-
+        wichtsverschiebung der Protolysereaktion der schwachen Säure/Base zum
+        größten Teil aufgebraucht.
+      </p>
+      <h2>Henderson-Hasselbalch-Gleichung</h2>
+      <p>Protolysereaktion der schwachen Säure $\ce{HA}$ mit Wasser:</p>
+      $$ \ce{HA + H2O <=> A- + H3O+} $$
+      <p>Die Säurekonstante der schwachen Säure beträgt:</p>
+      $$ K_S = \frac{c(\ce{H3O+}) \cdot c(\ce{A-})}{c(\ce{HA})} $$
+      <p>Daraus folgt:</p>
+      $$ c(\ce{H3O+}) = K_s \cdot \frac{c(\ce{HA})}{c(\ce{A-})} $$ $$
+      \Leftrightarrow -\log(c(\ce{H3O+})) = -log \left( K_s \cdot
+      \frac{c(\ce{HA})}{c(\ce{A-})} \right)$$ $$ \Leftrightarrow p\ce{H} = -
+      \log \left(K_S \right) \cdot - log \left( \frac{c(\ce{HA})}{c(\ce{A-})}
+      \right)$$ $$ = pK_S - log \left( \frac{c(\ce{HA})}{c(\ce{A-})} \right) $$
+      $$ = pK_S + log \left( \frac{c(\ce{A-})}{c(\ce{HA})} \right) $$
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <td><p>$p\ce{H} < p \ce{K_S}$</p></td>
+            <td><p>$c(\ce{HA}) > c(\ce{A-})$</p></td>
+            <td>
+              <p>
+                In der Lösung liegt überwiegend die korrespondierende Säure
+                $\ce{HA}$ vor.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>$p\ce{H} = p \ce{K_S}$</p></td>
+            <td><p>$c(\ce{HA}) = c(\ce{A-})$</p></td>
+            <td>
+              <p>
+                Der Stoff liegt jeweils zur Hälfte in Form der Säure und der
+                korrespondierenden Base vor.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>$p\ce{H} > p \ce{K_S}$</p></td>
+            <td><p>$c(\ce{HA}) < c(\ce{A-})$</p></td>
+            <td>
+              <p>
+                In der Lösung liegt überwiegend die korrespondierende Base
+                $\ce{A-}$ vor.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2>Henderson-Hasselbalch-Gleichung mit Soffmengen</h2>
+      $$ p\ce{H} = pK_S + log \left( \frac{c(\ce{A-})}{c(\ce{HA})} \right) $$
+      <p>mit $c=\frac{n}{V_{Lösung}}$</p>
+      $$= pK_S + log \left(
+      \frac{\frac{n(\ce{A-})}{V_{Lösung}}}{\frac{n(\ce{HA})}{V_{Lösung}}}
+      \right) $$ $$= pK_S + log \left( \frac{n(\ce{A-})}{n(\ce{HA})} \right) $$
+      <h2>Säure-Base-Titration</h2>
+      <h3>Wortschatz</h3>
+      <ol>
+        <li>
+          <p>
+            <u>Titration</u> oder auch <u>Ma&beta;analyse</u> <br />Verfahren
+            zum Ermitteln der Konzentration einer Lösung unbekannter
+            Konzentration.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Probelösung</u> <br />Lösung deren Konzentration man ermitteln
+            möchte.
+          </p>
+        </li>
+        <li>
+          <p><u>Ma&beta;lösung</u><br />Lösung bekannter Konzentration.</p>
+        </li>
+        <li>
+          <p>
+            <u>Äquivalenzpunkt</u><br />m Äquivalenzpunkt haben die Säure und
+            die Base im stöchiometrischen Verhältnis miteinander reagiert. Das
+            Reaktionsgemisch muss am Äquivalenzpunkt nicht zwingend neutral
+            sein.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Berechnungen</u><br />Aus dem Volumen an Ma&beta;lösung am
+            Äquivalenzpunkt kann die Anfangskonzentration der Probelösung
+            berechnet werden.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Titrationskurve</u> <br />Grafische Darstellung des pH-Werts in
+            Abhängigkeit vom zugegebenen Volumen an Ma&beta;lösungen
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Neutralpunkt</u> <br />Am Neutralpunkt ist das Reaktionsgemisch
+            neutral; der pH-Wert beträgt 7.
+          </p>
+        </li>
+      </ol>
+      <h2>Äquivalenzpunkt</h2>
+      <p>
+        Der Wendepunkt der Titrationskurve gibt den Äquivalenzpunkt der
+        Titration an. Am Wendepunkt ändert der Graph sein Krümmungsverhalten,
+        geht also zum Beispiel von einer Rechts-in eine Links-kurve über. <br />
+        Der Wendepunkt liegt in der Mitte des $p\ce{H}$-Sprungs. Er kann über
+        die 3-Geraden-Methode oder über die Tangentenmethode grafisch ermittelt
+        werden. Je nach Art der Probelösung oder Ma&beta;lösung kann die Lösung
+        am Äquivalenzpunkt sauer, neutral oder alkalisch sein.
+      </p>
+      <h2>Halbäquivalenzpunkt</h2>
+      <p>
+        Bei der Titration einer schwachen Säure mit einer starken Base kann am
+        Halbäquivalenzpunkt der $pK_S$-Wert der Säure ermittelt werden: <br />
+        Am Halbäquivalenzpunkt haben genau die Hälfte aller Säuremoleküle, die
+        zu Anfang in der Lösung waren, reagiert. Bei dieser Reaktion wurden sie
+        in die korrespondierende Base umgewandelt.
+      </p>
+      $$ n(\ce{HA}) = n(\ce{A-})$$
+      <p>
+        weil: $p\ce{H} = pK_S + \underbrace{\log \left(
+        \frac{c(\ce{HA})}{c(\ce{A-})} \right)}_{\rightarrow 0}$
+      </p>
+      $$ p\ce{H} = pK_S $$
+      <p>Am Halbäquivalenzpunkt folgt also:</p>
+      $$ p\ce{H} = pK_S $$ $$ c(\ce{HA}) = c(\ce{A-}) $$
+      <h3>Schlussfolgerung</h3>
+      <ul>
+        <li>
+          <p>
+            Bei der Titration einer schwachen Säure mit einer starken Base ist
+            der $p\ce{H}$-Wert am Halbäquivalenzpunkt gleich dem $pK_S$ der
+            Säure.
+          </p>
+        </li>
+        <li>
+          <p>
+            Bei der Titration einer schwachen Base mit einer starken Säure ist
+            der $p\ce{H}$-Wert am Halbäquivalenzpunkt gleich dem $pK_S$ der
+            korrespondierenden Säure.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

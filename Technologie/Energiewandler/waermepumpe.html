@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Wärmepumpe</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Wärmepumpe</h1>
+      <h2>Grundlagen</h2>
+      <p>
+        Nach dem 2$^{ten}$ Gesetz der Thermodynamik flie&beta;t Wärme von warm
+        nach kalt. Maschinen die die natürliche Wärmerichtung umdrehen
+        hei&beta;en: Wärmepumpen, es passiert als ein linksgäniger Kreisprozess.
+      </p>
+      <h2>Prinzip</h2>
+      <p>
+        In einer Wärmepumpe gibt es 2 Wärmereservoirs. Ein warmes mit der
+        Temperatur $T_o$ und ein kaltes mit der Temperatur $T_u$. Zwischen den
+        Wärmereservoirs ist ein mit einem Arbeitsgas gefüllten Arbeitszylinder.
+        Der Arbeitszylinder kann mit den Wärmereservoirs in thermischem Kontakt
+        sein.
+      </p>
+      <p>
+        Das Arbeitsgas im Arbeitszylinder wird adiabat expandiert, bis die seine
+        Temperatur unter $T_u$ liegt. Dies führt dazu, dass nun Wärme vom kalten
+        Reservoir an das noch kältere Arbeitsgas im Zylinder flie&beta;t. Der
+        thermische Kontakt löst sich und es wird eine Arbeit mit einem Kolbel
+        auf das Gas verrichtet. Das Gas wird adiabat komprimiert bis seine
+        Temperatur über $T_o$ liegt. Der Zylinder wird nun in thermischen
+        Kontakt mit dem warmen Reservoir gebracht. Die Wärme flie&beta;t vom
+        wärmeren Arbeitsgas zum warmen Reservoir. Ab hier wiederhsolt sich der
+        Prozess wieder.
+      </p>
+      <h2>Schematische Darstellung</h2>
+
+      <img
+        src="../img/Waermepumpe/Schema.png"
+        alt="schema Wärmepumpe"
+        class="zeichnungen"
+      />
+      <h2>Schaltplan</h2>
+      <img
+        src="../img/Waermepumpe/Schaltplan.png"
+        alt="schema Wärmepumpe"
+        class="zeichnungen"
+      />
+      <h2>Leistungszahl</h2>
+      <p>
+        Die Leistungszahl $\varepsilon$ ist das Ma&beta; für die
+        <q>Effektivität</q> der Wärmepumpe.
+      </p>
+      <h3>Kosten</h3>
+      <p>
+        Bezahlt wird nur die Aufgewendete Arbeit $W_{auf}$ der Wärmepumpe. Die
+        benötigte Energie $Q_{zu}$ wird der Umgebung entnommen und kostet somit
+        nichts.
+      </p>
+      <h3>Formel</h3>
+      <p>
+        Da nach dem idealen Carnotprozess die Leistungszahl $\varepsilon =
+        \frac{1}{\eta_c}$ ist gilt dem nach:
+      </p>
+      $$ \varepsilon = \frac{1}{\eta_c} = \frac{T_o}{T_o - T_u} $$
+      <p>
+        Es gilt also, dass die Leistungszahl $\varepsilon$ mit steigender
+        Temperaturdifferenz $\Delta T = T_o - T_u$ abnimmt. Die Wärmepumpe wird
+        weniger effizient.
+      </p>
+      <h2>Reale Wärmepumpen</h2>
+      <p>
+        Um die Leistungszahl zu erhöhen, wird in realen Wärmepumpen eine
+        Änderung des Aggregatzustandes des Arbeitsmittels bewirkt. Hier wird das
+        Arbeitsmittel verdampft und wieder abgekühlt. Da bei
+      </p>
+      <h3>Funktionsweise</h3>
+      <p>
+        Einem kalten Reservoir zum Beispiel der Umgebung wird Wärme entzogen um
+        das flüssige Arbeitsmittel zu verdampfen. Dies geschieht bei der
+        Temperatur $T_u$. Im Verflüssiger wird nun der Druck so hoch erhöht,
+        dass das Arbeitsmittel wieder kondensiert. Es gibt dabei Wärme ab
+        sogenannte Kondensationswärme. Es hat nun die Temperatur $T_o$. <br />
+        Das Arbeitsmittel soll nun bei niedriger Temperatur verdampfen und bei
+        hoher Temperatur kondensieren. Dafür müssen unterschiedliche Drücke
+        herrschen. Dieser Druck reguliert ein Verdichter der ebenfalls das
+        Arbeitsmittel durch die Rohre pumpt. Der Druckunterschied wird durch ein
+        Expansionsventil erhalten.
+      </p>
+      <h3>Leistungszahl</h3>
+      <p>
+        In der Praxis erreichen reale Wärmepumpen Leistungszahlen von:
+        $\varepsilon = 2,5 ... 4,5$
+      </p>
+      <h2>Arbeitsmittel</h2>
+      <p>
+        Das Arbeitsmittel sind die Umweltschädlichen FCKW eine abkürzung für
+        Fluorkohlenwasserstoffe. Sie sind umweltschädlich da sie die Ozonschicht
+        zerstören und müssen daher fachgerecht entsorgt werden.
+      </p>
+      <h2>Einsatz</h2>
+      <p>
+        Wärmepumpen werden benutzt um zu Heizen. Um das zu bewirken müssen sie
+        gro&beta;e Wärmemengen aufnehmen. Das macht sie effektiver und man muss
+        weniger bezahlen. Deswegen werden die Rohrsysteme für Wärmepumpen tief
+        in den Erdboden eingegraben um sie von Frost zu schützen. <br />
+        Die Wärme muss jedoch bei möglichst niedriger Temperatur abgegeben
+        werden. Das ist zum Beispiel der Fall bei Fu&beta;bodenheizungen oder
+        ganz gro&beta;en Heizkörpern. <br />
+        Da die Wärmepumpe gegenüber eisigen Temperaturen empfindlich ist, muss
+        oft ein konventionelles Heizsystem mit eingebaut sein man spricht dann
+        von: <u>bivalenten Heizsystemen</u>.
+      </p>
+      <p>
+        Wärmepumpen kommen oft zum einsatz, wo man die warme und kalte Seite der
+        Wärmepumpe nutzen kann. Zum Beispiel in einem Kaufhaus in den
+        Kühlräumen, wobei der Kühlraum gekühlt wird und der Rest des Kaufhauses
+        geheizt wird.
+      </p>
+    </div>
+  </body>
+</html>

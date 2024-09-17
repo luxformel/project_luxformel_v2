@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Eléments d'arithmétique</h1>
+      <h2>Multiples d'un entier naturel</h2>
+      <p>L'ensemble des entiers naturels est noté \( \mathbb{N} \)</p>
+      $$ \mathbb{N}=\left\{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,...\right\}
+      $$
+      <h3>Définition</h3>
+      <p>
+        Soit \( a \) un entier naturel. Un multiple de \( a \) est un entier
+        naturel de la forme \( a \cdot n \) , où \( n \) est un entier.
+        L'ensemble des multiples de a est noté : \( a \cdot \mathbb{N} \).
+      </p>
+      <h2>Pair</h2>
+      <p>
+        Tout entier pair est de la forme \( 2 \cdot n \), où \( n \) est un
+        entier.
+      </p>
+      <h2>Impair</h2>
+      <p>
+        Tout entier impair est de la forme \( 2n+1 \) ou \( 2n-1 \), où \( n \)
+        est un entier
+      </p>
+      <h2>Diviseurs d'un entier naturel</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( a \) et \( b \) deux entiers naturels. On dit que \( b \) est un
+        diviseur de \( a \) ou encore que \( b \) divise \( a \) (on écrit \( b\
+        |\ a \)) si et seulement si \( a \) est un multiple de \( b \).
+      </p>
+      <h3>Définition</h3>
+      <p>
+        L'ensemble des diviseurs d'un entier naturel \( a \) est noté Div(\( a
+        \)).
+      </p>
+      <h2>Caractères de divisibilité</h2>
+      <ol>
+        <li>
+          <p>
+            Un entier naturel est divisible par 2 si et seulement si il se
+            termine par 0,2,4,6 ou 8
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 3 si et seulement si la somme de
+            ses chiffres est divisible par 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 4 si et seulement si le nombre
+            formé par ses deux derniers chiffres est divisible par 4.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 5 si et seulement si il se
+            termine par 0 ou par 5.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 6 si et seulement si il est
+            divisible par 2 et par 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            Soit \( N \) un entier naturel, \( u \) son dernier chiffre et \( n
+            \) l'entier obtenu en biffant \( u \) dans N. (Par exemple, si \(
+            N=364 \) , alors \( u=4 \) et \( n = 36\)). Alors \( N \) est
+            divisible par 7 si et seulement si \(n - 2u \) est divisible par 7.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 8 si et seulement si le nombre
+            formé par les 3 derniers chiffres est divisible par 8.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 9 si et seulement si la somme de
+            ses chiffres est divisible par 9
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 10 si et seulement si il se
+            termine par 0.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 11 si et seulement si la somme
+            alternée de ses chiffres est divisible par 11.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 25 si et seulement si il se
+            termine par 00, par 25, par 50 ou par 75.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un entier naturel est divisible par 100 ssi il se termine par 00.
+          </p>
+        </li>
+      </ol>
+      <h2>Nombres premiers et factorisation première</h2>
+      <h3>Définition</h3>
+      <p>
+        Un nombre premier est un entier naturel qui \( a \) exactement 2
+        diviseurs <u>1 et lui-même</u> et qui est plus grand que 1.
+      </p>
+      <h3>Remarque</h3>
+      <ol>
+        <li>
+          <p>
+            1 n'est pas un nombre premier car \( Div(1) = {1} \). (1 a un seul
+            diviseur.)
+          </p>
+        </li>
+        <li>
+          <p>
+            0 n'est pas un nombre premier car \( Div(0) = {\mathbb{N}} \). (0 a
+            une infinité de diviseurs.)
+          </p>
+        </li>
+        <li>
+          <p>2 est le seul nombre premier pair.</p>
+        </li>
+        <li>
+          <p>Il y a une infinité de nombres premiers.</p>
+        </li>
+      </ol>
+      <h3>Définition</h3>
+      <p>Les entiers \( > \) 2 qui ne sont pas premiers sont dits composés.</p>
+      <h2>Crible d'Eratosthène</h2>
+      <p>
+        Crible d'Eratosthène est une méthode permettant de trouver assez vite
+        tous les nombres premiers jusqu'à un entier naturel \( M \) donné.
+      </p>
+      <h4>On écrit la liste de tous les entiers de 2 jusqu'à \( M \).</h4>
+      <ol>
+        <li>
+          <p>
+            On garde \( p_{1}=2 \) et on élimine tous les autres multiples de 2
+          </p>
+        </li>
+        <li>
+          <p>
+            On garde \( p_{2}=3 \) qui est le premier élément non éliminé après
+            2 et on élimine tous les autre multiples de 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            On garde \( p_{3}=5 \) qui est le premier élément non éliminé après
+            3 et on élimine tous les autre multiples de 5.
+          </p>
+        </li>
+        <li>
+          <p>
+            On répète le procédé aussi longtemps que \( p_{k} \leqslant \sqrt{M}
+            \).
+          </p>
+        </li>
+      </ol>
+      <p>
+        Les nombres non éliminés sont les nombres premiers \( \leqslant M \)
+      </p>
+      <h2>Factorisation première</h2>
+      <p>
+        Si l'on décompose un entier naturel \( n\geqslant 2 \) en autant de
+        facteurs entiers diffèrent de 1 que possible, alors tous ces facteurs
+        seront des nombres premiers. On obtient ainsi la factorisation première
+        (f.p.) ou décomposition en facteurs premiers de \( n \).
+      </p>
+      <h2>Théorème fondamental de l'arithmétique</h2>
+      <p>
+        Tout entier naturel \( \geqslant 2 \) admet une factorisation première
+        unique.
+      </p>
+    </div>
+  </body>
+</html>

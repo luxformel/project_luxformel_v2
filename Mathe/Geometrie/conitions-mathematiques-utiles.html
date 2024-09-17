@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Conditions Mathématiques utiles</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Conditions Mathématiques utiles</h1>
+      <h2>Droites parallèles</h2>
+      $$ Les\ droites\ \left( AB\right) \ et\ \left( CD\right) \ sont\
+      parallels$$ $$ \Leftrightarrow \overrightarrow{AB} \ et\
+      \overrightarrow{CD} \ sont\ colineaires $$ $$\Leftrightarrow \exists\ k\in
+      \mathbb{R}|\ \overrightarrow{AB} =k\cdot \overrightarrow{CD} $$
+      <h2>Points alignés</h2>
+      $$ Les\ droites\ A,\ B\ et\ C\ sont\ alignés$$ $$ \Leftrightarrow
+      \overrightarrow{AB} \ et\ \overrightarrow{CD} \ sont\ colineaires $$
+      $$\Leftrightarrow \exists\ k\in \mathbb{R}|\ \overrightarrow{AB} =k\cdot
+      \overrightarrow{CD} $$
+      <h2>Parallèlogramme</h2>
+      $$ ABCD\ est\ un\ parallelogramme $$ $$\Leftrightarrow \overrightarrow{AB}
+      \ =\ \overrightarrow{DC} $$
+      <h2>Losange</h2>
+      $$ABCD\ est\ un\ losange$$ $$\Leftrightarrow ABCD\ est\ un\
+      parallelogramme$$ $$ \Leftrightarrow ABCD\ est\ un\ parallelogramme\ et\
+      deux\ vecteurs\ consécutifs\ ont\ la\ même\ norme\ $$
+      <h2>Triangle isocèle</h2>
+      $$ ABC\ est\ un\ triangle\ isocèle\ en\ A $$ $$ \Leftrightarrow \|
+      \overrightarrow{AB} \parallel \ =\ \parallel \overrightarrow{AC}
+      \parallel$$
+      <h2>Triangle équilatérale</h2>
+      $$ABC\ est\ un\ triangle\ équilatérale$$ $$\Leftrightarrow \|
+      \overrightarrow{AB} \parallel \ =\ \parallel \overrightarrow{AC} \parallel
+      \ =\ \| \overrightarrow{BC} \| $$
+      <h2>Triangle rectangle</h2>
+      $$ABC\ est\ un\ triangle\ rectangle\ en\ A$$ $$\Leftrightarrow \|
+      \overrightarrow{BC} \|^{2} =\| \overrightarrow{AB} \|^{2} \ +\ \|
+      \overrightarrow{AC} \|^{2} $$
+      <h3>Remarque</h3>
+      <p>Ceci est la réciproque du théorème du Phythagore</p>
+      <h2>Carré</h2>
+      $$ABCD\ est\ un\ carré$$ $$\Leftrightarrow ABCD\ est\ un\ losange\ et\ il\
+      y\ a\ un\ angle\ droit$$
+      <h2>Médiatrice</h2>
+      <p>
+        Soit \( A \) et \( B \) deux points et \( m_{AB} \) la médiatrice de \(
+        [AB] \)
+      </p>
+      $$M\left( z\right) \in m_{AB}$$ $$\Leftrightarrow AM\ =\ MB$$
+      $$\Leftrightarrow \| \overrightarrow{AM} \| \ =\ \| \overrightarrow{MB} \|
+      $$ $$\Leftrightarrow \left| z-z_{A}\right| =\left| z-z_{B}\right| $$
+      <h2>Cercle</h2>
+      <p>Soit \( C \) le cercle de rayon \( r \) et de centre \( A \)</p>
+      $$M\left( z\right) \in C$$ $$\Leftrightarrow AM=r$$ $$\Leftrightarrow \|
+      \overrightarrow{AM} \| \ =\ r$$ $$\Leftrightarrow \left| z-z_{A}\right| =\
+      r$$
+    </div>
+  </body>
+</html>

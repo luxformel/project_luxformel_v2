@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+    <script defer src="/settings/settings.js"></script>
+    <title>Auftrieb</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Auftrieb</h1>
+      <h2>Auftriebskraft</h2>
+      <p>
+        Auf in Flüssigkeiten eingetauchte Körper wirkt eine der Gewichtskraft
+        entgegen gerichtete Kraft: die Auftriebskraft $\overrightarrow{F_A}$.
+      </p>
+      <h3>Herleitung</h3>
+      <p>
+        Der Betrag der Auftriebskraft $\overrightarrow{F_A}$ kann auch berechnet
+        werden.
+      </p>
+      <img
+        src="/Physik/img/Auftrieb/auftriebHerleitung.png"
+        alt="auftrieb herleitung"
+        class="zeichnungen"
+      />
+      <p>
+        Er ergibt sich durch: Die Auftriebskraft $\overrightarrow{F_A}$ ergibt
+        sich aus der Resultierenden der Kräfte $\overrightarrow{F_1}$ und
+        $\overrightarrow{F_2}$. Unter Berücksichtigung der Richtungssinne
+        erhalten wir für den Betrag der Auftriebskraft:
+      </p>
+      $$ F_A = F_1 - F_2 $$
+      <p>
+        Für die Kräfte gilt: $F_1 = p_1 \cdot A$ und $F_2 = p_2 \cdot A$ <br />
+        und für die Drücke: $p_1 = \rho_F \cdot g \cdot h_1$ und $p_2 = \rho_F
+        \cdot g \cdot h_1$
+      </p>
+      <p>Daher:</p>
+      $$ F_A = p_2 \cdot A - p_1 \cdot A $$ $$ = \rho_F \cdot g \cdot A \cdot
+      h_1 - \rho_F \cdot g \cdot A \cdot h_2$$ $$ = \rho_F \cdot g \cdot
+      \underbrace{ A \cdot \underbrace{\left( h_2 - h_1 \right)}_{= h}}_{=V_K}
+      $$ $$ = \rho_F \cdot g \cdot V_K $$
+      <h3>Formel</h3>
+      $$ F_A = \rho_F \cdot g \cdot V_K $$
+      <h2>Archimedisches Prinzip</h2>
+      <p>
+        Der Betrag der Auftriebskraft ist gleich dem Betrag der Gewichtskraft
+        der verdrängten Flüssigkeit.
+      </p>
+      <h3>Mathematisch</h3>
+      <p>Für das Volumen der verdrängten Flüssigkeit:</p>
+      $$ V_K = V_{FL} $$
+      <p>Also gilt:</p>
+      $$ F_A = \rho_{FL} \cdot g \cdot V_{FL} $$ $$ = m_{FL} \cdot g $$ $$ =
+      F_{G, FL} $$
+      <p>
+        wobei $F_{G, FL}$ die Gewichtskraft der verdrängten Flüssigkeit ist.
+      </p>
+      <h2>Steigen, schweben, sinken</h2>
+      <p>Zusammenhang zwischen Gewichtskraft und Auftriebskraft:</p>
+      <ul>
+        <li>
+          <p>Steigen: $F_A > F_G$</p>
+        </li>
+        <li>
+          <p>Schweben: $F_A = F_G$</p>
+        </li>
+        <li>
+          <p>sinken: $F_A < F_G$</p>
+        </li>
+      </ul>
+      <p>
+        Daraus lässt sich ein einfacher Zusammenhang zwischen der Dichte der
+        Flüssigkeit $\rho_{FL}$ und der Dichte des Körpers $\rho_{K}$ ableiten:
+      </p>
+      <p>
+        Da: $F_G = m_K \cdot g = \rho_K \cdot V_K \cdot g$, ergibt sich für:
+      </p>
+      $$ F_{G}\gtreqless F_{A} $$ $$ \Leftrightarrow \rho_{K} \cdot V_{K}\cdot
+      g\gtreqless \rho_{F} \cdot V_{K}\cdot g$$ $$ \Leftrightarrow \rho_{K}
+      \gtreqless \rho_{F} $$
+      <p>
+        Also: <br />
+        $\rho_{K} > \rho_{F}$: Der Körper sinkt; $\rho_{K} = \rho_{F}$ : Der
+        Körper schwebt; $\rho_{K} < \rho_{F}$ : der Körper steigt bis er
+        schwimmt.
+      </p>
+      <h2>Auftrieb in der Luft</h2>
+      <p>
+        Genauso wie in Flüssigkeiten gibt es auch in Luft (oder anderen Gasen)
+        eine Auftriebskraft. Diese Auftriebskraft entsteht auch hier durch die
+        Veränderung des Schweredrucks der Luft mit der Höhe. Nimmt man an, dass
+        sich der Luftdruck zwischen dem unteren Rand und dem oberen Rand des
+        Körpers nicht verändert, so kann auch die zuvor erstellte Formel
+        angewandt werden, nur muss nun die Dichte der Luft ($\rho_{Luft} = 1,29
+        \frac{g}{L}$) anstatt der Dichte der Flüssigkeit benutzt werden:
+      </p>
+      $$ F_A = \rho_{Luft} \cdot g \cdot V_K $$
+    </div>
+  </body>
+</html>

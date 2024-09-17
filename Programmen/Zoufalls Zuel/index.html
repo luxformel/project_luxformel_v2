@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Zoufalls Zuel</h1>
+        <div class="input-container">
+          <div class="input-box" id="min-input-box">
+            <input
+              type="number"
+              id="min"
+              name="min"
+              min="0"
+              placeholder="Min"
+            />
+          </div>
+          <div class="input-box" id="max-input-box">
+            <input
+              type="number"
+              id="max"
+              name="max"
+              min="0"
+              placeholder="Max"
+            />
+          </div>
+        </div>
+        <div class="output-box" id="output-box">
+          <p>Generéiert Zuel:</p>
+          <div id="random-number">
+            <p>Dréckt "Generéieren" fir eng zoufälleg Zuel ze kréien</p>
+          </div>
+        </div>
+        <button onclick="generateNumber()">Generéieren</button>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+  <script>
+    // Function to generate a random number within the specified range
+    function generateNumber() {
+      const min = parseInt(document.getElementById("min").value);
+      const max = parseInt(document.getElementById("max").value);
+
+      if (isNaN(min) || isNaN(max) || min >= max) {
+        return;
+      }
+
+      const randomNumber = getRandomNumber(min, max);
+      document.getElementById("random-number").textContent = randomNumber;
+    }
+
+    // Function to generate a random number between min and max
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  </script>
+</html>

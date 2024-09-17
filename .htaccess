@@ -1,0 +1,96 @@
+# Enable mod_env
+<IfModule mod_env.c>
+    Header always set X-Content-Type-Options "nosniff"
+    SetEnv modHeadersAvailable true
+</IfModule>
+
+# Speed Optimizations
+## Enable Expires headers
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    # CSS and JS expiration: 1 week
+    ExpiresByType text/css "now plus 1 week"
+    ExpiresByType application/javascript "now plus 1 week"
+
+    # Image file expiration: 1 month
+    ExpiresByType image/gif "now plus 1 month"
+    ExpiresByType image/jpeg "now plus 1 month"
+    ExpiresByType image/png "now plus 1 month"
+    ExpiresByType image/svg+xml "now plus 1 month"
+    ExpiresByType image/ico "now plus 1 month"
+
+    # Font files expiration: 1 month
+    ExpiresByType application/x-font-ttf "now plus 1 month"
+    ExpiresByType application/x-font-opentype "now plus 1 month"
+    ExpiresByType font/woff "now plus 1 month"
+
+    # Audio file expiration: 1 month
+    ExpiresByType audio/mp3 "now plus 1 month"
+
+    # Video file expiration: 1 month
+    ExpiresByType video/mp4 "now plus 1 month"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|ico|woff|woff2|svg)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
+# Compression using mod_deflate
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/xml application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml application/atom+xml application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype
+    AddOutputFilterByType DEFLATE image/svg+xml application/ico
+
+    # Remove browser bugs
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Protect against clickjacking
+    Header always append X-Frame-Options SAMEORIGIN
+
+    # Enable XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Enforce SSL using HSTS (if your site uses HTTPS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Referrer Policy
+    Header set Referrer-Policy "no-referrer-when-downgrade"
+
+    # Vary: Accept-Encoding for compressed resources
+    <FilesMatch "\.(js|css|xml|gz|html)$">
+        Header append Vary: Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+# Default Directory Page
+DirectoryIndex index.html
+
+# Server Signature
+ServerSignature Off
+SetEnv SERVER_ADMIN feedback@luxformel.info
+
+# Error Pages
+ErrorDocument 400 /Error/400.html
+ErrorDocument 401 /Error/401.html
+ErrorDocument 403 /Error/403.html
+ErrorDocument 404 /Error/404.html
+ErrorDocument 500 /Error/500.html
+ErrorDocument 503 /Error/500.html
+ErrorDocument 504 /Error/500.html
+
+# Block access to .htaccess file
+<Files .htaccess>
+    Require all denied
+</Files>

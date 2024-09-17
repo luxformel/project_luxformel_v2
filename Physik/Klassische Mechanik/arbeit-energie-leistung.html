@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+    <script defer src="/settings/settings.js"></script>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link
+      rel="stylesheet"
+      id="navigator-set"
+      href="/settings/navigator/relative.css"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+    <script defer src="/settings/settings.js"></script>
+    <title>Arbeit, Energie, Leistung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Arbeit, Energie, Leistung</h1>
+      <h2>Arbeit</h2>
+      <h3>Definition</h3>
+      <p>
+        Wenn ein Körper unter der Einwirkung einer konstanten Kraft \(
+        \overrightarrow{F} \) die Strecke \( s \) zurückgelegt, dann wird an ihm
+        die Arbeit \( W \) verrichtet.
+      </p>
+      <h3>Mathematisch</h3>
+      <p>Die Arbeit kann berechnet werden nach:</p>
+      $$W=\int^{}_{c} \overrightarrow{F} \cdot \left( \overrightarrow{s} \right)
+      \cdot d\overrightarrow{s} $$
+      <p>oder</p>
+      $$ W \left( \overrightarrow{F} \right) = F \cdot s $$
+      <p>oder</p>
+      $$W(\overrightarrow{F})=F\cdot s \cdot \cos(\alpha)$$
+      <p>Der Winkel \( \alpha \) ist zwischen Kraftrichtung und Wegrichtung.</p>
+      <h3>Einheit</h3>
+      $$\left[ W\right] =Nm=J$$ $$ J,\ Joule$$ $$Nm,\ Newton\ Meter$$
+      <h2>Mechanische Energie</h2>
+      <h3>Definition</h3>
+      <p>
+        Mechanische Energie ist die unabdingbare Bedingung mechanische Arbeit zu
+        verrichten. Mechanische Energie tritt in Form von kinetischer und
+        potentieller Energie auf.
+      </p>
+      <h2>Energie</h2>
+      <h3>Definition</h3>
+      <p>Energie ist die Fähigkeit Arbeit zu verrichten.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Formel</th>
+        </tr>
+        <tr>
+          <td>Potentielle Lageenergie</td>
+          <td>$E_{pot} = m \cdot g \cdot h$</td>
+        </tr>
+        <tr>
+          <td>kinetische Energie</td>
+          <td>$E_{kin} = \frac{1}{2} m \cdot v^2$</td>
+        </tr>
+        <tr>
+          <td>Elektrische Energie</td>
+          <td>$E_{el} = U \cdot I \cdot t$</td>
+        </tr>
+        <tr>
+          <td>Wärmeenergie</td>
+          <td>$Q=m \cdot c \cdot \Delta \theta$</td>
+        </tr>
+        <tr>
+          <td>spann Energie</td>
+          <td>$E_{spann} = \frac{1}{2} D \cdot x^2$</td>
+        </tr>
+      </table>
+      <h3>Anmerkung</h3>
+      <p>
+        Bei der Wäremeenergie wird oft $\Delta \theta$ für Grad Celsius benutzt
+        und $\Delta T$ für Kelvin
+      </p>
+      <h2>Energieerhaltungssatz</h2>
+      <p>
+        Energie kann weder erzeugt noch vernichtet werden, sie kann jediglich
+        von einer Form in eine andere umgewandelt werden.
+      </p>
+      <h3>Bemerkungen</h3>
+      <h4>Benötigte Energie</h4>
+      $$\Delta W=E_{2}-E_{1}$$
+      <h4>Zugeführte Energie</h4>
+      $$\Delta E>0$$
+      <h4>Abgeführte Energie</h4>
+      $$\Delta E < 0 $$
+      <h2>Dreharbeit</h2>
+      <h3>Formel</h3>
+      $$ W_{rotation} = M_r \cdot \Delta \varphi$$
+      <h3>Herleitung</h3>
+      $$ W_{rotation} = F_T \cdot \Delta s$$ $$ = F_T \cdot 2 \pi r \cdot N$$ $$
+      = M_r \cdot 2 \pi \cdot N$$ $$ = M_r \cdot \Delta \varphi$$
+      <h2>Leistung</h2>
+      <h3>Definition</h3>
+      <p>Leistung ist die Geschwindigkeit mit der Energie verbraucht wird.</p>
+      $$P=\frac{W}{t} $$
+      <p>Mit $W = F \cdot s$ erhalten wir</p>
+      $$ P = F \cdot v $$
+      <h3>Einheit</h3>
+      $$\left[ P\right] =W $$
+      <h2>Drehleistung</h2>
+      <h3>Formel</h3>
+      $$ P_{rotation} = M \cdot 2 \pi n $$
+      <h3>Herleitung</h3>
+      $$ P_{rotation} = F_T \cdot v_u $$ $$ = F_T \cdot \omega \cdot r $$ $$ =
+      F_T \cdot 2 \pi n \cdot r $$ $$ = M \cdot 2 \pi n $$
+      <h2>Wirkungsgrad</h2>
+      <h3>Definition</h3>
+
+      <p>
+        Der Wirkungsgrad $\eta$ einer Energieumwandlung gibt an, welcher Teil
+        der zugeführten Energie $E_{zu}$ in nutzbare Energie $E_{nutz}$
+        umgewandelt wird:
+      </p>
+      $$ \eta = \frac{E_{nutz}}{E_{zu}} $$
+      <p>oder</p>
+      <p>
+        Der Wirkungsgrad $\eta$ gibt an, welcher Teil der zugeführten Leistung
+        $P_{zu}$ in nutzbare Leistung $P_{nutz}$ umgewandelt wird:
+      </p>
+      $$ \eta = \frac{P_{nutz}}{P_{zu}} $$
+      <p>oder</p>
+      <p>
+        Der Wirkungsgrad $\eta$ gibt an, welcher Teil der zugeführten Arbeit
+        $W_{zu}$ in nutzbare Arbeit $W_{nutz}$ umgewandelt wird:
+      </p>
+      $$ \eta = \frac{W_{nutz}}{W_{zu}} $$
+      <h3>Einheit</h3>
+      $$ \eta,\ hat\ keine\ Einheit $$
+
+      <h2>Gesamtwirkungsgrad</h2>
+      <p>
+        Der Gesamtwirkungsgrad hängt multiplikativ von allen vorherigen und
+        kommenden Wirkungsgraden ab. Es gilt:
+      </p>
+      $$ \eta_{gesamt} = \eta_1 \cdot \eta_2 \cdot ... \cdot \eta_n $$
+    </div>
+  </body>
+</html>

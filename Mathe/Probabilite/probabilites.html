@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Probabilités</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Probabilités</h1>
+      <h2>Dénombrement</h2>
+      <h3>Définition</h3>
+      <p>
+        Dénombrer, c'est calculer le nombre de possibilités de grouper un
+        certain nombre d'éléments d'un ensemble.
+      </p>
+      <h2>Probabilité d'un événement</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit une expérience aléatoire d'univers $\Omega$ fini, avec $\Omega = \{
+        e_1; e_2; ... ;e_n \}$
+      </p>
+      <ol>
+        <li>
+          <p>
+            Définir une loi de probabilité sur $\Omega$, c'est associer à chaque
+            issue $e_i$ un nombre positif $p(e_i)$ tel que:
+          </p>
+          $$ p(e_1) + p(e_2) +...+ p(e_n) = 1 $$
+        </li>
+        <li>
+          <p>
+            Le nombre $p(e_i)$ est appelé :
+            <u>probabilité de l'événement élémentaire</u>
+          </p>
+        </li>
+        <li>
+          <p>
+            La probabilité d'un événement $A$, notée $p(A)$, est la somme des
+            probabilités de toutes les issues qui réalisent $A$.
+          </p>
+        </li>
+      </ol>
+      <h3>Propriétés</h3>
+      <ol>
+        <li>
+          <p>La probabilité de l'événement certain $\Omega$ vaut:</p>
+          $$ p(\Omega) = 1 $$
+        </li>
+        <li>
+          <p>La probabilité de l'événement impossible $\emptyset$ vaut:</p>
+          $$ p(\emptyset) = 0 $$
+        </li>
+        <li>
+          <p>Pour tout événement $A$, on a:</p>
+          $$ 0 \leqslant p(A) \leqslant 1$$
+        </li>
+        <li>
+          <p>Pour tout événement $A$, $p(A) + p(\bar{A}) = 1$</p>
+        </li>
+      </ol>
+      <h3>Définition</h3>
+      <p>
+        Si une expérience aléatoire d'univers $\Omega$, avec $\Omega = \{ e_1;
+        e_2; ... ;e_n \}$. Si tous les événements élémentaires ont la même
+        probabilité, on dit qu'ils sont équiprobable, et on a:
+      </p>
+      $$ p(e_1) = p(e_2) = ... = p(e_n) = \frac{1}{n} = \frac{1}{card \Omega }
+      $$
+
+      <h2>Arrangement avec répétition</h2>
+      <p>
+        Arrangement avec répétition $B$ de $p$ éléments distincts ou non choisi
+        parmi $n$ éléments distincts:
+      </p>
+      <ul>
+        <li><p>Les $n$ éléments sont tous utilisés.</p></li>
+        <li><p>Les éléments ne se répètent pas.</p></li>
+        <li>
+          <p>Deux groupements diffèrent uniquement par l'ordre des éléments.</p>
+        </li>
+      </ul>
+      <h3>Formule</h3>
+      $$ B^{p}_{n}=n^{p} $$
+
+      <h2>Permutation</h2>
+
+      <p>Permutation $P$ de $n$ éléments distincts:</p>
+      <ul>
+        <li>
+          <p>Les éléments donnés ne sont pas tous utilisés.</p>
+        </li>
+        <li>
+          <p>Les $p$ éléments choisi peuvent se répéter.</p>
+        </li>
+        <li>
+          <p>
+            Deux groupements diffèrent soit par l'ordre soit par la nature des
+            éléments.
+          </p>
+
+          <h3>Formule</h3>
+          $$P_{n}=n!$$
+        </li>
+      </ul>
+      <h2>Arrangement sans répétition</h2>
+      <p>
+        Arrangement sans répétition $A$ de $p$ éléments distincts choisis parmi
+        $n$ éléments distincts:
+      </p>
+      <ul>
+        <li>Les $n$ éléments donnés ne sont pas tous utilisés.</li>
+        <li>Les $p$ éléments choisis ne se répètent pas.</li>
+        <li>
+          Deux groupements diffèrent soit par l'ordre soit par la nature des
+          éléments.
+        </li>
+      </ul>
+      <h3>Formule</h3>
+      $$A^{p}_{n}=\frac{n!}{(n-p)!} $$ $$\left( p \leqslant n \right)$$
+
+      <h2>Combinaison</h2>
+      <p>
+        Combinaison $C$ de $p$ éléments distincts choisis parmi $n$ éléments
+        distincts:
+      </p>
+      <ul>
+        <li>Les $n$ éléments donnés ne sont pas tous utilisés.</li>
+        <li>Les $p$ éléments choisis ne se répètent pas.</li>
+        <li>
+          Deux groupements diffèrent uniquement par la nature des éléments.
+        </li>
+      </ul>
+      <h3>Formule</h3>
+      $$C^{p}_{n}=\frac{n!}{p!\left( n-p\right) !} =\frac{A^{p}_{n}}{P_{n}} $$
+      $$\left( p \leqslant n \right)$$
+
+      <h2>Vocabulaire des événements</h2>
+      <h3>Définition</h3>
+      <ol>
+        <li>
+          <p>
+            Une expérience est dite <u>aléatoire</u> lorsqu'elle a plusieurs
+            résultats possible et qu'on ne peut pas prévoir lequel sera obtenu.
+            Le résultat d'une tell expérience est uniquement dû au hasard.
+          </p>
+        </li>
+        <li>
+          <p>
+            Une <u>issue</u> d'une expérience aléatoire est un résultat possible
+            pour cette expérience.
+          </p>
+        </li>
+        <li>
+          <p>
+            L'ensemble de toutes les issues d'une expérience aléatoire est
+            appelé <u>univers</u> associé à cette expérience. <br />
+            On note souvent: $\Omega$
+          </p>
+        </li>
+        <li>
+          <p>
+            Un événement $A$ est sous-ensemble de l'ensemble $\Omega$. <br />
+            On dit qu'une issue <u>réalise</u> un événement $A$ lorsque cette
+            issue est un résultat appartenant à la partie $A$.
+          </p>
+        </li>
+      </ol>
+      <h3>Schéma</h3>
+      <img
+        src="/Mathe/img/probabilites/universSchema.png"
+        alt="schema univers probabilité"
+        class="zeichnungen"
+      />
+      <h2>Événements particuliers</h2>
+      <ol>
+        <li>
+          <p>
+            L'événement impossible est l'ensemble vide noté $\emptyset$ : aucune
+            issue ne le réalise.
+          </p>
+        </li>
+        <li>
+          <p>
+            L'événement certain est l'univers $\Omega$: toutes les issues le
+            réalisent.
+          </p>
+        </li>
+        <li>
+          <p>
+            Un événement élémentaire est un événement formé d'une seule issue.
+          </p>
+        </li>
+      </ol>
+      <h2>Événements</h2>
+      <h3>Définition</h3>
+      <p>
+        L'intersection de $A$ et $B$, notée $A \bigcap B$ ou $A$ et $B$, est
+        l'événement constitué des issues qui réalisent $A$ <u>et</u> $B$ en même
+        temps.
+      </p>
+      <img
+        src="/Mathe/img/probabilites/intersectionUnion.png"
+        alt="a intersection b"
+        class="zeichnungen"
+      />
+      <h3>Définition</h3>
+      <p>
+        Dans le cas où $A$ et $B$ ne peuvent pas être réalisés en même temps,
+        c'est à dire si $A \bigcap B \notin \emptyset$, on dit que $A$ et $B$
+        sont incompatible ou disjoint.
+      </p>
+      <img
+        src="/Mathe/img/probabilites/incompatible.png"
+        alt="incompatible"
+        class="zeichnungen"
+      />
+      <h3>Définition</h3>
+      <p>
+        La réunion de $A$ et de $B$, notée $A \bigcup B$ ou $A$ ou $B$, est
+        l'événement constitué des issues qui réalisent $A$ <u>ou</u> $B$, c'est
+        à dire au moins l'un des deux.
+      </p>
+      <img
+        src="/Mathe/img/probabilites/intersectionUnion.png"
+        alt="a union b"
+        class="zeichnungen"
+      />
+      <h3>Définition</h3>
+      <p>
+        L'événement contraire de $A$, noté $\bar{A}$ est constitué [...] de
+        $\Omega$ qui ne réalisent pas $A$
+      </p>
+      <img
+        src="/Mathe/img/probabilites/evenementContraire.png"
+        alt="a union b"
+        class="zeichnungen"
+      />
+      <h3>Propriété</h3>
+      <p>
+        Soit une expérience aléatoire où les événements élémentaires sont
+        équiprobables et soit $A$ un événement, alors on a:
+      </p>
+      $$ p(A) = \frac{nombre\ d'issues\ de\ A}{nombre\ totales\ d'issues} $$ $$
+      =\frac{nombre\ d'issues\ favorable\ de\ A}{nombres\ d'issues\ possibles}
+      $$
+
+      <h2>Arbres pondérés</h2>
+      <h3>Propriétés</h3>
+      <ul>
+        <li>
+          <p>
+            Dans un arbre pondéré, la probabilité d'un chemin est égale au
+            <u>produit</u> des branches qui le composent.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dans un arbre pondéré, la probabilité d'un événement
+            <q>composé</q> est égale à la <u>sommes</u> des probabilité qui le
+            composent.
+          </p>
+        </li>
+      </ul>
+      <h2>Variable aléatoire</h2>
+      <h3>Définition</h3>
+      <p>
+        Pour définir une variable aléatoire $X$ sur un univers $\Omega$ d'une
+        expérience aléatoire, on associe un nombre réel $x_i$, a chaque
+        éventualité $e_i$ de $\Omega$.
+      </p>
+      <h2>Probabilité d'une variable aléatoire</h2>
+      <h3>Définition</h3>
+      <p>
+        La loi de probabilité d'une variable aléatoire $X$ est la fonction qui à
+        chaque valeur $x_i$ prise par $X$ associe la probabilité: $p \left( X =
+        x_i \right)$
+      </p>
+
+      <h2>Espace mathématiques</h2>
+      <h3>Definition</h3>
+      <p>
+        L'espérance mathématique de la variable aléatoire $X$, notée $E \left( X
+        \right)$ est la somme des produits de chaque valeur prise par $X$ par la
+        probabilité que $X$ prenne cette valeur :
+      </p>
+      $$ E \left( X \right) = \sum^{k}_{i=1} x_{i}\cdot P\left( X=x_{i}\right)
+      $$ $$ = x_1 \cdot p \left( X = x_1 \right) + x_2 \cdot p \left( X = x_2
+      \right) + ... + x_k \cdot p \left( X = x_k \right) $$
+      <h3>Propriété</h3>
+      <p>
+        Si $X$ est une variable aléatoire égale au gain algébrique d'un jeu
+        hasard, alors $ E \left( X \right)$ représente le gain moyen auquel on
+        peut s'attendre.
+      </p>
+      <ul>
+        <li>
+          <p>
+            Si $ E \left( X \right) > 0$, on dit que le jeu est
+            <u>favorable</u> au joueur.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $ E \left( X \right) = 0$, on dit que le jeu est
+            <u>équitable</u> au joueur.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $ E \left( X \right) < 0$, on dit que le jeu est
+            <u>défavorable</u> au joueur.
+          </p>
+        </li>
+      </ul>
+      <h2>Variance</h2>
+      <h3>Définition</h3>
+      <p>
+        On appelle variance d'une variable aléatoire $X$ le nombre $V(X)$ défini
+        par:
+      </p>
+      $$ V \left( X \right) = \sum^{k}_{i=1} \left( x_{i}-E\left( X\right)
+      \right)^{2} \cdot p\left( X=x_{i}\right) $$ $$ = \left( x_{1}-E\left(
+      X\right) \right)^{2} \cdot p\left( X=x_{1}\right) + \left( x_{2}-E\left(
+      X\right) \right)^{2} \cdot p\left( X=x_{2}\right) +... +\left(
+      x_{k}-E\left( X\right) \right)^{2} \cdot p\left( X=x_{k}\right) $$
+      <h3>Propriété</h3>
+      $$ V \left( X \right) = \sum^{k}_{i=1} x^2_i \cdot p\left( X=x_{i}\right)
+      - \left( E \left( X \right) \right)^2 $$ $$ = x^{2}_{1}\cdot p\left(
+      X=x_{1}\right) + x^{2}_{2}\cdot p\left( X=x_{2}\right) + ... +
+      x^{2}_{k}\cdot p\left( X=x_{k}\right) - \left( E \left( X \right)
+      \right)^2 $$ $$ = E \left( X^2 \right) - \left( E \left( X \right)
+      \right)^2$$
+      <h2>Écart type</h2>
+      <h3>Definition</h3>
+      <p>
+        On appelle écart type d'une variable aléatoire $X$ le nombre $\sigma(X)$
+        défini par:
+      </p>
+      $$ \sigma(X) = \sqrt{V(X)} $$
+      <h3>Propriété</h3>
+      <p>
+        Plus l'écart type et la variance sont grands, plus la variable aléatoire
+        est dispersée.
+      </p>
+    </div>
+  </body>
+</html>

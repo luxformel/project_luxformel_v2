@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Zahlenbereiche der Binärzahlen</title>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <h1>Zahlenbereiche der Binärzahlen</h1>
+      <h2>Zahlenbereiche der Binärzahlen Tabelle</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th rowspan="2"><p>Bits</p></th>
+            <th colspan="2"><p>Unsigned Integer</p></th>
+            <th colspan="2"><p>Signed Integer</p></th>
+          </tr>
+          <tr>
+            <th><p>kleinste Ganzzahl</p></th>
+            <th><p>Größte Ganzzahl</p></th>
+            <th><p>kleinste Ganzzahl</p></th>
+            <th><p>Größte Ganzzahl</p></th>
+          </tr>
+          <tr>
+            <td><p>8</p></td>
+            <td><p>0</p></td>
+            <td><p>255</p></td>
+            <td><p>-128</p></td>
+            <td><p>127</p></td>
+          </tr>
+          <tr>
+            <td><p>16</p></td>
+            <td><p>0</p></td>
+            <td><p>65535</p></td>
+            <td><p>-32768</p></td>
+            <td><p>32767</p></td>
+          </tr>
+          <tr>
+            <td><p>32</p></td>
+            <td><p>0</p></td>
+            <td><p>4294967295</p></td>
+            <td><p>-2147483648</p></td>
+            <td><p>2147483647</p></td>
+          </tr>
+          <tr>
+            <td><p>64</p></td>
+            <td><p>0</p></td>
+            <td><p>18446744073709551615</p></td>
+            <td><p>-9223372036854775808</p></td>
+            <td><p>9223372036854775807</p></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

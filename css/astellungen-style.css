@@ -1,0 +1,144 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.settings-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.settings-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.settings-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.settings-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.settings-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.settings-button:active {
+  transform: scale(0.98);
+}
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 30px;
+
+  padding-left: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+
+  max-width: 600px;
+  margin: 5px 30px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card a {
+  color: #00509e;
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.left-link {
+  text-align: left;
+}
+
+.right-link {
+  text-align: flex-start;
+} /* Media query for small screens (mobile responsiveness) */
+
+@media (max-width: 600px) {
+  .card-links {
+    flex-direction: column; /* Stacks the links vertically */
+    align-items: flex-start; /* Aligns the links to the left */
+  }
+
+  /*     .card {
+        width: 100vw;
+      } */
+
+  .left-link,
+  .right-link {
+    text-align: left; /* Ensure both links align to the left */
+    margin-bottom: 10px; /* Adds space between stacked links */
+  }
+}

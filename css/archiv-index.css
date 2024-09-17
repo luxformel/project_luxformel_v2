@@ -1,0 +1,67 @@
+#main-content {
+  padding: 2rem;
+}
+.chapter-grid {
+  padding: 0.55rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.5rem;
+}
+
+.chapter-card {
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  min-width: 8ch;
+  min-height: 7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow: var(--background-color) 0px 3px 4px -5px,
+    var(--black) 0px 8px 6px -8px;
+  /* border: 0.2rem solid var(--black); */
+  background-color: var(--index-card-color);
+
+  h3 {
+    color: var(--black);
+    font-family: "Garamond", "Georgia";
+    font-weight: bolder;
+    font-style: normal;
+
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+.chapter-card:hover {
+  opacity: 0.8;
+  color: var(--accent-color);
+  transform: scale(1.05);
+  /* Slightly scale the element */
+  box-shadow: 0 0.8rem 0.5rem var(--accent-color);
+  /* Larger shadow for a lifted effect */
+
+  & h3 {
+    color: var(--accent-color);
+  }
+}
+.chapters {
+  border-radius: 0.4rem;
+  border: 0.4rem solid var(--index-border-color);
+
+  max-width: 50rem;
+  margin: 0 auto;
+
+  h2 {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+
+    user-select: none;
+  }
+}

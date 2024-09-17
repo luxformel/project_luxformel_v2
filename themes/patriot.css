@@ -1,0 +1,51 @@
+/* everything that changes when applying this theme */
+
+:root {
+  --base-font-size: 16px;
+
+  --white: #fff;
+  --black: #000;
+  --hero: rgba(231, 65, 76, 0.712);
+  --index-border-color: rgba(255, 204, 0, 0.233);
+  --index-card-color: rgb(0, 164, 224);
+  --accent-color: rgb(255, 206, 0);
+  --background-color: rgb(68, 68, 68);
+
+  --footer-bg-color: #000;
+  --footer-text-color: #fff;
+
+  --nav-bg-color: rgb(239, 51, 64);
+
+  --off-white: #f9f9f9;
+  --darker-off-white: #ccc;
+
+  --dark-grey-shade: #999;
+
+  --splash-text-color: #000000;
+
+  --chapter-index-link-color: #000;
+
+  --default-link-color: blue;
+  --default-link-color-hover: rgb(118, 0, 254);
+  --archive-link-color: blue;
+
+  --changelog-main-text-color: #666;
+
+  --th-bg-color: #b6b3b3;
+  --td-bg-color: #d8d8d8;
+  --tr-bg-color: #e9e9e9;
+
+  --side-nav-bg: rgba(211, 211, 211, 0.692);
+  --side-nav-link: rgb(36, 36, 36);
+}
+
+@font-face {
+  font-family: italiano;
+  src: url(/fonts/Italianno-Regular.ttf);
+}
+
+.index-wrapper #splash-text {
+  font-family: italiano !important;
+  font-size: 4rem !important;
+  line-height: 3rem;
+}

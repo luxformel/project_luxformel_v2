@@ -1,0 +1,7 @@
+.side-navigator {
+  display: none;
+}
+.main-wrapper,
+.table-wrapper {
+  margin-left: 3rem !important;
+}

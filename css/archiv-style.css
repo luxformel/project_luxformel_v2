@@ -1,0 +1,204 @@
+header {
+  background-color: var(--nav-bg-color);
+  position: fixed;
+  width: 100%;
+  padding: 27px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  user-select: none;
+  color: var(--black);
+  font-family: "Roboto Mono", monospace;
+}
+
+h2 {
+  color: var(--black);
+  font-size: 1.6rem;
+  text-decoration: underline;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Side Navigation Styles */
+#side-nav {
+  width: 250px; /* Default width for large screens */
+  background-color: var(--nav-bg-color);
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; /* Ensure it covers the full height */
+  overflow-x: hidden;
+  z-index: 950;
+  transition: width 0.3s ease;
+  margin-left: -20px;
+}
+
+#side-nav ol {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+}
+
+#side-nav ol li {
+  padding: 0.8rem 2rem;
+}
+
+#side-nav ol li a {
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+  line-height: 2rem;
+}
+
+#side-nav ol li a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: var(--black);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#main-content {
+  transition: margin-left 0.3s;
+  margin-left: 250px; /* Leave space for the sidebar on large screens */
+  width: calc(100% - 250px);
+  margin-top: 100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 916px) {
+  #side-nav {
+    width: 0;
+    padding-top: 60px;
+  }
+
+  #main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on small screens */
+  }
+}
+/* Reduce size for small screens */
+@media (max-width: 768px) {
+  #side-nav {
+    width: 200px; /* Slightly smaller sidebar on small screens */
+    padding-top: 60px;
+  }
+
+  #side-nav ul li a {
+    font-size: 1em; /* Reduce font size */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on small screens */
+  }
+
+  #main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Further reduce size for very small screens */
+@media (max-width: 480px) {
+  #side-nav {
+    width: 180px; /* Smaller sidebar for very small screens */
+  }
+
+  #side-nav ul li a {
+    font-size: 0.9em; /* Reduce font size more */
+    padding: 10px 12px; /* Further adjust padding */
+  }
+
+  .hamburger {
+    font-size: 25px; /* Reduce hamburger size */
+  }
+}
+
+hr {
+  color: var(--black);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px var(--black);
+  padding: 15px;
+  width: 85%;
+  max-width: 800px;
+  margin: 5px 30px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card a {
+  color: var(--black);
+  text-decoration: none;
+  line-height: 2rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2rem;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.left-link {
+  text-align: left;
+}
+
+.right-link {
+  text-align: flex-start;
+  color: var(--default-link-color);
+} /* Media query for small screens (mobile responsiveness) */
+
+@media (max-width: 600px) {
+  .card-links {
+    flex-direction: column; /* Stacks the links vertically */
+    align-items: flex-start; /* Aligns the links to the left */
+  }
+
+  /*     .card {
+        width: 100vw;
+      } */
+
+  .left-link,
+  .right-link {
+    text-align: left; /* Ensure both links align to the left */
+    margin-bottom: 10px; /* Adds space between stacked links */
+  }
+}

@@ -1,0 +1,52 @@
+/* everything that changes when applying this theme */
+
+:root {
+  --base-font-size: 16px;
+
+  --white: #000000;
+  --black: #00f729ad;
+  --hero: rgba(117, 117, 117, 0.549);
+  --index-border-color: hsla(120, 72%, 56%, 0.274);
+  --index-card-color: rgb(24, 23, 23);
+  --accent-color: hsla(123, 52%, 45%, 0.6);
+  --background-color: rgb(14, 175, 76);
+
+  --footer-bg-color: #21f006;
+  --footer-text-color: #000000;
+
+  --nav-bg-color: #48683c;
+
+  --off-white: #05470e;
+  --darker-off-white: #0aad2e;
+
+  --dark-grey-shade: #7dc495;
+
+  --splash-text-color: #00f70c;
+
+  --chapter-index-link-color: #3cff00;
+
+  --default-link-color: blue;
+  --default-link-color-hover: rgb(118, 0, 254);
+  --archive-link-color: blue;
+
+  --changelog-main-text-color: #55ad51;
+
+  --th-bg-color: #555555;
+  --td-bg-color: #dadada;
+  --tr-bg-color: #222121;
+
+  --side-nav-bg: rgba(31, 65, 44, 0.445);
+  --side-nav-link: rgb(60, 255, 0);
+}
+
+#splash-text {
+  word-spacing: 1rem;
+  line-height: 3rem !important;
+  font-size: 2rem !important;
+  font-weight: 500;
+  font-family: "Courier New", monospace !important;
+}
+
+.MTH-TEX {
+  color: #11a01d !important;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>RL - Parallelschaltung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>RL - Parallelschaltung</h1>
+      <h2>Schaltung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RL Parallelschaltung/rlParallelschaltungSchaltung.png"
+        alt="RL Parallelschaltung"
+      />
+      <ol>
+        <li>
+          <p>
+            Am Wirkwiderstand \( R \) und an der Induktivität \( L \) liegt die
+            gleiche Spannung \( U \). an.
+          </p>
+        </li>
+        <li>
+          <p>
+            Durch \( R \) fließt der Strom \( I_R \). Er liegt mit \( U \) in
+            Phase.
+          </p>
+        </li>
+        <li>
+          <p>
+            Durch \( X_L \) fließt der Strom \( I_L \). Er eilt \( U \) um 90\(
+            ^\circ \) nach.
+          </p>
+        </li>
+        <li>
+          <p>
+            Deshalb müssen auch die Ströme \( I_R \) und \( I_L \) um 90\(
+            ^\circ \) phasenverschoben sein.
+          </p>
+        </li>
+      </ol>
+      <h2>Stromverhalten, Spannungsverhalten</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RL Parallelschaltung/rlParallelschaltung.png"
+        alt=""
+      />
+      $$ I^{2}=I^{2}_{R}+I^{2}_{L} $$ $$ \Leftrightarrow I^2 =
+      \sqrt{I^{2}_{R}+I^{2}_{L}}$$ $$ \sin(\varphi) = \frac{I_L}{I}$$ $$
+      \cos(\varphi) = \frac{I_R}{I}$$ $$ \tan(\varphi) = \frac{I_L}{I_R}$$
+      <h2>Leitwertverhalten</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RL Parallelschaltung/Leitwertdreieck.png"
+        alt="Leitwertdreieck"
+      />
+      <p>Bestimmung über Ohmsches Gesetz</p>
+      $$ G=\frac{I_{R}}{U} =\frac{1}{R} $$ $$B_{L}=\frac{I_{L}}{U}
+      =\frac{1}{X_{L}} $$ $$Y=\frac{1}{U} =\frac{1}{Z} $$
+      <p>Bestimmung über geometrische Addition</p>
+      $$Y^{2}=G^{2}+B^{2}_{L}$$ $$\Leftrightarrow Y = \sqrt{G^{2}+B^{2}_{L}} $$
+      $$ \sin(\varphi) = \frac{G}{Y}$$ $$ \cos(\varphi) = \frac{B_L}{Y}$$ $$
+      \tan(\varphi) = \frac{B_L}{G}$$
+      <h2>Leistungsverhalten</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RL Parallelschaltung/Leistungsdreieck.png"
+        alt="Leistungsdreieck"
+      />
+      $$ P = U \cdot I_R $$ $$ Q_L = U \cdot I_L $$ $$ S = U \cdot I $$ $$
+      S^{2}=P^{2}+Q^{2}_{L}$$ $$ \Leftrightarrow S = \sqrt{P^{2}+Q^{2}_{L}} $$
+      $$ \sin(\varphi) = \frac{P}{S}$$ $$ \cos(\varphi) = \frac{Q_L}{S}$$ $$
+      \tan(\varphi) = \frac{Q_L}{P}$$
+    </div>
+  </body>
+</html>

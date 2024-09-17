@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Limites</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Limites</h1>
+      <h2>Limites</h2>
+      <h3>Cas 1 limite en \( + \infty \)</h3>
+      <p>
+        Si les nombres d'une fonction \( f(x) \) deviennent plus en plus grand
+        si on prend \(x\) qui se rapproche d'une infinité
+      </p>
+      $$f\left( x\right) \rightarrow +\infty $$
+      <p>On dit que <q>la limite de \( f(x) \) est plus l'infini</q> on note</p>
+      $$\lim_{x\rightarrow +\infty } f\left( x\right) =+\infty $$
+      <p>ou</p>
+      $$\lim_{x\rightarrow -\infty } f\left( x\right) =+\infty $$
+      <p>ou en générale</p>
+      $$\lim_{x\rightarrow \infty } f\left( x\right) =+\infty $$
+      <h3>Cas 2 limite en \( - \infty \)</h3>
+      <p>
+        Si les nombres de \( f(x) \) deviennent plus en plus petit si on prend
+        \(x\) qui se rapproche d'une infinité
+      </p>
+      $$f\left( x\right) \rightarrow -\infty $$
+      <p>On dit que <q>la limite de \(f(x)\) est moins l'infini</q> on note</p>
+      $$\lim_{x\rightarrow +\infty } f\left( x\right) =-\infty $$
+      <p>ou</p>
+      $$\lim_{x\rightarrow -\infty } f\left( x\right) =-\infty $$
+      <p>ou en générale</p>
+      $$\lim_{x\rightarrow \infty } f\left( x\right) =-\infty $$
+      <h3>Cas 3 limite en un point</h3>
+      <p>
+        Si les nombres de \( f(x) \) se rapprochent en un point si on prend
+        \(x\) qui rapproche une infinité
+      </p>
+      $$f\left( x\right) \rightarrow a $$
+      <p>On dit que <q>la limite de \( f(x) \) est a</q> on note</p>
+      $$\lim_{x\rightarrow +\infty } f\left( x\right) =a $$
+      <p>ou</p>
+      $$\lim_{x\rightarrow -\infty } f\left( x\right) =a $$
+      <p>ou en générale</p>
+      $$\lim_{x\rightarrow \infty } f\left( x\right) =a $$
+      <h2>Limite à droite et a gauche</h2>
+      <p>
+        Une fonction \(f\) possède une limite en a si et seulement si \(f\)
+        possède une limite \( a \) gauche et a droite de \(a\) et que les
+        limites sont égales.
+      </p>
+      $$\lim_{x\rightarrow a^{+}} f\left( x\right) =\lim_{x\rightarrow a^{-}}
+      f(x)=\lim_{x\rightarrow a} f\left( x\right)$$
+      <h2>Les asymptotes</h2>
+      <h3>Asymptote horizontale</h3>
+      <p>On note asymptote horizontale : A.H.</p>
+      <h3>Définition</h3>
+      <p>
+        On dit que la courbe \(\mathscr{C}_{f} \) admet une asymptote
+        horizontale (A.H.) d'équation \( y\ =\ l \) en \( +\infty \), si
+      </p>
+      $$ \lim_{x\rightarrow +\infty } f\left( x\right) =l $$
+      <p>A.H. est sous forme:</p>
+      $$A.H.\ \equiv\ y$$
+      <h4>nouveau signe: [ \( \equiv \) ]</h4>
+      <p>On lit :<q>l'asymptote horizontale a pour équation y</q></p>
+      <h3>Asymptote verticale</h3>
+      <p>On note asymptote verticale : A.V.</p>
+      <h3>Définition</h3>
+      <p>
+        On dit que la courbe \(\mathscr{C}_{f} \) admet une asymptote verticale
+        (A.V.) d'équation \( x\ =\ a \), si
+      </p>
+      $$ \lim_{x\rightarrow a } f\left( x\right) = \infty $$
+      <p>A.V. est sous forme:</p>
+      $$A.V.\ \equiv\ x$$
+      <h3>Asymptote Oblique</h3>
+      <p>On note asymptote oblique : A.O.</p>
+      <h3>Définition</h3>
+      <p>
+        On dit que la courbe \(\mathscr{C}_{f} \) admet une asymptote oblique
+        (A.O.) d'équation \( y\ =\ ax\ +\ b \), en \( +\infty \) (respectivement
+        en \( -\infty \)),si
+      </p>
+      $$\lim_{x\rightarrow +\infty } \left[ f\left( x\right) -\left( ax+b\right)
+      \right] =0$$ $$ respectivement $$ $$ \lim_{x\rightarrow -\infty } \left[
+      f\left( x\right) -\left( ax+b\right) \right] =0$$
+      <p>A.O. est sous forme:</p>
+      $$A.O.\equiv ax + b$$
+      <h4>À retenir</h4>
+      <p>On a jamais une A.H. et une A.O. pour une seul fonction.</p>
+      <h2>Formules de Cauchy</h2>
+      <p>
+        La droite d'équation \( y\ =\ ax\ +\ b\) est une A.O. à
+        \(\mathscr{C}_{f} \) si et seulement si:
+      </p>
+      <ol>
+        <li>
+          <p>\( \lim_{x\rightarrow \infty } f\left( x\right) =\infty \)</p>
+        </li>
+        <li>
+          <p>
+            \( \lim_{x\rightarrow \infty } \frac{f\left( x\right) }{x} =a\ avec\
+            a\ \in \mathbb{R}^* \)
+          </p>
+        </li>
+        <li>
+          <p>
+            \( \lim_{x\rightarrow \infty } \left[ f\left( x\right) -ax\right]
+            =b\ avec\ b\ \in \mathbb{R} \)
+          </p>
+        </li>
+      </ol>
+      <h2>Terme du plus haut dégrée</h2>
+      <p>
+        À l'infini, une fonction polynôme a la même limite que son monôme de
+        plus haut degré.
+      </p>
+      $$ \lim_{x\rightarrow \pm \infty } \left(
+      a_{n}x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}\right) =\lim_{x\rightarrow \pm
+      \infty } a_{n}x^{n}\ ,avec\ a_{n}\neq 0 $$
+      <h2>Théorème du plus haut dégrée d'une fonction rationelle</h2>
+      <h3>Definition</h3>
+      <p>Soit</p>
+      $$f(x)=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}}{b_{m}x^{m}+b_{m-1}x^{m-1}+...+b_{1}x+b_{0}}
+      $$
+      <p>une fraction rationelle avec</p>
+      $$\left( a_{n}\neq 0;\ b_{m}\neq 0\right)$$
+      <p>
+        Alors la limite quand f(x) tend vers \( - \infty \) ou \( + \infty \)
+        est égale a la limite du rapport du termes du plus haut degré du
+        numérateur et du dénominateur.
+      </p>
+      $$\lim_{x\rightarrow \pm \infty }
+      \frac{a_{n}x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}}{b_{m}x^{m}+b_{m-1}x^{m-1}+...+b_{1}x+b_{0}}
+      =\lim_{x\rightarrow \pm \infty } \frac{a_{n}x^{n}}{b_{m}x^{m}}$$
+      <h3>Demonstration</h3>
+      $$\lim_{x\rightarrow \pm \infty } f\left( x\right)$$ $$=\lim_{x\rightarrow
+      \pm \infty }
+      \frac{a_{n}x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}}{b_{m}x^{m}+b_{m-1}x^{m-1}+...+b_{1}x+b_{0}}$$
+      $$=\lim_{x\rightarrow \pm \infty }
+      \frac{a_{n}x^{n}(\overbrace{1+\frac{a_{n-1}}{a_{n}x}
+      +...+\frac{a_{1}}{a_{n}x^{n-1}} +\frac{a_{0}}{a_{n}x^{n}} )}^{\rightarrow
+      1} }{b_{m}x^{n}\underbrace{\left( 1+\frac{b_{m-1}}{b_{m}x}
+      +...+\frac{b_{1}}{b_{m}x^{m-1}} +\frac{b_{0}}{b_{m}x^{m}} \right)
+      }_{\rightarrow 1} } $$ $$=\lim_{x\rightarrow \pm \infty }
+      \frac{a_{n}x^{n}}{b_{m}x^{n}} $$
+      <p>cqfd.</p>
+      <h2>Limites des fonctions trigonométriques</h2>
+      <h3>Théorème d'encadrement</h3>
+      <p>
+        Soit \( f \), \( g \) et \( h \) trois fonctions définies sur
+        l'intervalle ouvert \( I \) telles que:
+      </p>
+      $$h\left( x\right) \leq f(x)\leq g(x)$$
+      <p>Si</p>
+      $$\lim_{x\rightarrow a} h(x)=\lim_{x\rightarrow a} g\left( x\right) =l$$
+      <p>avec</p>
+      $$x\neq a\ \left( a\ réel\ ou\ infini\right) $$
+      <p>donc</p>
+      $$\lim_{x\rightarrow a} f\left( x\right) =l$$
+      <h3>Remarque</h3>
+      <p>
+        Le théorème d'encadrement est aussi apellée théorème de sandwich ou des
+        gendarmes.
+      </p>
+      <h3>Théorème de comparaison par minoration ou majoration</h3>
+      <p>
+        Soient \( f \) et \( g \) deux fonctions définies sur un intervalle
+        ouvert \( I \) et soit a une borne de \( I \) ou un réel appartenant à
+        \( I \).
+      </p>
+      <ol>
+        <li>
+          <p>
+            Si pour tout \( x \) de \( I \), \( f\left( x\right) \geqslant
+            g\left( x\right) \) et si:
+          </p>
+          <br />
+          $$ \lim_{x\rightarrow a} g\left( x\right) =+\infty \ \Longrightarrow \
+          \lim_{x\rightarrow a} f\left( x\right) =+\infty $$
+        </li>
+        <li>
+          <p>
+            Si pour tout \( x \) de \( I \), \( f\left( x\right) \leqslant
+            g\left( x\right) \) et si:
+          </p>
+          <br />
+          $$ \lim_{x\rightarrow a} g\left( x\right) =-\infty \ \Longrightarrow \
+          \lim_{x\rightarrow a} f\left( x\right) =-\infty $$
+        </li>
+      </ol>
+      <h2>Théorème sur les limites</h2>
+      <h3>Limite d'une somme</h3>
+      <div class="xScrollable">
+        <table class="tableLines">
+          <tr>
+            <th>$Si\ f\ a\ pour\ limite$</th>
+            <td><p>$l$</p></td>
+            <td><p>$l$</p></td>
+            <td><p>$l$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+          </tr>
+          <tr>
+            <th>$et\ si\ g\ a\ pour\ limite$</th>
+            <td><p>$l^{\prime}$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+          </tr>
+          <tr>
+            <th>$alors\ f\ +\ g\ a\ pour\ limite\ $</th>
+            <td><p>$l\ +\ l^{\prime} $</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$ f.i. $</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Limite d'un produit</h3>
+      <div class="xScrollable">
+        <table class="tableLines">
+          <tr>
+            <th>$Si\ f\ a\ pour\ limite$</th>
+            <td><p>$l$</p></td>
+            <td><p>$l>0$</p></td>
+            <td><p>$l>0$</p></td>
+            <td><p>$l <\ 0$</p></td>
+            <td><p>$l <\ 0$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$0$</p></td>
+          </tr>
+          <tr>
+            <th>$ si\ g\ a\ pour\ limite$</th>
+            <td><p>$l^{\prime}$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty\ ou\ +\infty$</p></td>
+          </tr>
+          <tr>
+            <th>$alors\ f\ \cdot\ g\ a\ pour\ limite$</th>
+            <td><p>$l\ \cdot\ l^{\prime}$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$ f.i. $</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Limite d'un quotient</h3>
+      <div class="xScrollable">
+        <table class="tableLines">
+          <tr>
+            <th>$Si\ f\ a\ pour\ limite$</th>
+            <td><p>$l$</p></td>
+            <td><p>$l$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty\ ou\ +\infty$</p></td>
+            <td><p>$-\infty\ ou\ +\infty$</p></td>
+          </tr>
+          <tr>
+            <th>$et\ si\ g\ a\ pour\ limite$</th>
+            <td><p>$l^{\prime }\neq 0$</p></td>
+            <td><p>$-\infty \ ou\ +\infty $</p></td>
+            <td><p>$l^{\prime}>0$</p></td>
+            <td><p>$l^{\prime} < 0$</p></td>
+            <td><p>$l^{\prime}>0$</p></td>
+            <td><p>$l^{\prime} < 0$</p></td>
+            <td><p>$ -\infty\ ou\ +\infty $</p></td>
+          </tr>
+          <tr>
+            <th>$alors\ \frac{f}{g}\ a\ pour\ limite $</th>
+            <td><p>$\frac{l}{l^{\prime}}$</p></td>
+            <td><p>$0$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$f.i.$</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Limite d'un quotient</h3>
+      <div class="xScrollable">
+        <table class="tableLines">
+          <tr>
+            <th>$Si\ f\ a\ pour\ limite$</th>
+            <td><p>$l> 0\ ou\ +\infty$</p></td>
+            <td><p>$l> 0\ ou\ +\infty$</p></td>
+            <td><p>$l < 0\ ou\ -\infty$</p></td>
+            <td><p>$l < 0\ ou\ -\infty$</p></td>
+            <td><p>$0$</p></td>
+          </tr>
+          <tr>
+            <th>$et\ si\ g\ a\ pour\ limite$</th>
+            <td><p>$0^+$</p></td>
+            <td><p>$0^-$</p></td>
+            <td><p>$0^+$</p></td>
+            <td><p>$0^-$</p></td>
+            <td><p>$0$</p></td>
+          </tr>
+          <tr>
+            <th>$alors\ \frac{f}{g}\ a\ pour\ limite$</th>
+            <td><p>$+\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$-\infty$</p></td>
+            <td><p>$+\infty$</p></td>
+            <td><p>$f.i.$</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Remarque</h3>
+      <p>f.i. signifie <q>forme indéterminée</q></p>
+      <h2>Formes indéterminées</h2>
+      $$ \frac{0}{0} $$ $$ \frac{\infty }{\infty } $$ $$ \infty -\infty $$ $$
+      0\cdot \infty $$ $$ 0^{0} $$ $$ \infty^{0} $$ $$ 1^{\infty } $$
+    </div>
+  </body>
+</html>

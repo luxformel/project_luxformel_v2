@@ -1,0 +1,306 @@
+/* Every style that applies to the entire site! */
+
+::selection {
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+html {
+  scroll-behavior: smooth;
+  /*to keep footer at the bottom*/
+  height: 100%;
+}
+
+body {
+  background-color: var(--white);
+
+  height: 100%;
+  position: relative;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* navigator styling */
+
+/* Basic styling for the navigation bar */
+nav {
+  z-index: 30;
+  height: 30px;
+  background-color: var(--nav-bg-color);
+  /* Background color */
+  padding: 10px 10px;
+  /* Padding around the nav */
+  width: 100%;
+
+  a:hover {
+    color: var(--accent-color);
+  }
+}
+
+nav > ul {
+  /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* Display items in a row */
+
+  li {
+    margin-right: 1rem;
+    margin-top: 5px;
+    /* Spacing between items */
+    list-style: none;
+  }
+}
+
+nav > ul > li > a {
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  /* Remove default underline */
+  color: var(--black);
+  /* Link color */
+  font-size: 1.3rem;
+  /* Font size */
+
+  .material-icons {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.5rem;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+
+    margin-top: -10px;
+    color: var(--black);
+  }
+  .material-icons:hover {
+    color: var(--accent-color);
+    opacity: 0.8;
+  }
+  .print-icon {
+    visibility: hidden;
+  }
+}
+
+/* Pseudo-element for the underline */
+nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  /* Underline thickness */
+  background-color: var(--accent-color);
+  /* Underline color */
+  transform: scaleX(0);
+  /* Start with no underline */
+  transform-origin: bottom right;
+  /* Animation origin */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+}
+
+/* Apply animation on hover */
+nav > ul > li > a:hover::after {
+  transform: scaleX(1);
+  /* Expand underline on hover */
+  transform-origin: bottom left;
+  /* Animation origin */
+}
+
+/* side navigator styling */
+
+/* footer styling */
+
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 2rem;
+  margin-top: auto;
+  z-index: 800;
+
+  & p {
+    color: var(--footer-text-color) !important;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+}
+
+.readme {
+  display: none;
+}
+.chemie {
+  display: none;
+}
+.mathe {
+  display: none;
+}
+.physik {
+  display: none;
+}
+.informatik {
+  display: none;
+}
+.elektrotechnik {
+  display: none;
+}
+.technologie {
+  display: none;
+}
+.messtechnik {
+  display: none;
+}
+.divers {
+  display: none;
+}
+
+@media only screen and (min-width: 375px) {
+  .readme {
+    display: inherit;
+  }
+  .chemie {
+    display: none;
+  }
+  .mathe {
+    display: none;
+  }
+  .physik {
+    display: none;
+  }
+  .informatik {
+    display: none;
+  }
+  .elektrotechnik {
+    display: none;
+  }
+  .technologie {
+    display: none;
+  }
+  .messtechnik {
+    display: none;
+  }
+  .divers {
+    display: none;
+  }
+}
+@media only screen and (min-width: 551px) {
+  .chemie {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 625px) {
+  .chemie {
+    display: inherit;
+  }
+  .physik {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 753px) {
+  .chemie {
+    display: inherit;
+  }
+  .physik {
+    display: inherit;
+  }
+  .informatik {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 925px) {
+  .chemie {
+    display: inherit;
+  }
+  .physik {
+    display: inherit;
+  }
+  .informatik {
+    display: inherit;
+  }
+  .elektrotechnik {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1063px) {
+  .chemie {
+    display: inherit;
+  }
+  .physik {
+    display: inherit;
+  }
+  .informatik {
+    display: inherit;
+  }
+  .elektrotechnik {
+    display: inherit;
+  }
+  .technologie {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1197px) {
+  .chemie {
+    display: inherit;
+  }
+  .physik {
+    display: inherit;
+  }
+  .informatik {
+    display: inherit;
+  }
+  .elektrotechnik {
+    display: inherit;
+  }
+  .technologie {
+    display: inherit;
+  }
+  .messtechnik {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1275px) {
+  .chemie {
+    display: inherit;
+  }
+  .physik {
+    display: inherit;
+  }
+  .informatik {
+    display: inherit;
+  }
+  .elektrotechnik {
+    display: inherit;
+  }
+  .technologie {
+    display: inherit;
+  }
+  .messtechnik {
+    display: inherit;
+  }
+  .divers {
+    display: inherit;
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="/javascript/header.js"></script>
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Trispace&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Trispace&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="preload" href="/css/reset.css" as="style" />
+    <link rel="preload" href="/themes/default.css" as="style" />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/index-style.css" />
+
+    <script defer type="module" src="/javascript/splashText.js"></script>
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Luxformel</title>
+  </head>
+
+  <body>
+    <div class="index-wrapper">
+      <p id="splash-text"></p>
+
+      <header>
+        <div class="hero">
+          <h1>Luxformel</h1>
+          <p>
+            Wëllkomm op luxformel.info! Ären ultimative Site fir alles wat
+            STEM-Fächer ubelaangt. Léiert Formele wei nach ni!
+          </p>
+        </div>
+      </header>
+
+      <a href="https://search.luxformel.info">
+        <div class="big-index-link">
+          <h2>Search</h2>
+        </div>
+      </a>
+
+      <section class="chapters">
+        <h2>Fächer</h2>
+        <div class="chapter-grid">
+          <a href="/Chemie/index.html">
+            <div class="chapter-card">
+              <h3>Chemie</h3>
+            </div>
+          </a>
+
+          <a href="/Mathe/index.html">
+            <div class="chapter-card">
+              <h3>Mathé</h3>
+            </div>
+          </a>
+
+          <a href="/Physik/index.html">
+            <div class="chapter-card">
+              <h3>Physik</h3>
+            </div>
+          </a>
+
+          <a href="/Elektrotechnik/index.html">
+            <div class="chapter-card">
+              <h3>Elektro&shy;technik</h3>
+            </div>
+          </a>
+
+          <a href="/Informatik/index.html">
+            <div class="chapter-card">
+              <h3>Informatik</h3>
+            </div>
+          </a>
+
+          <a href="/Technologie/index.html">
+            <div class="chapter-card">
+              <h3>Technologie</h3>
+            </div>
+          </a>
+
+          <a href="/Messtechnik/index.html">
+            <div class="chapter-card">
+              <h3>Mess&shy;technik</h3>
+            </div>
+          </a>
+
+          <a href="/Divers/index.html">
+            <div class="chapter-card">
+              <h3>Divers</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <a href="/Archiv/index.html">
+        <div class="big-index-link">
+          <h2>Archiv</h2>
+        </div>
+      </a>
+
+      <section class="other-links">
+        <div class="other-grid">
+          <a href="/Programmen/index.html">
+            <div class="other-item">
+              <h3>Programmen</h3>
+            </div>
+          </a>
+
+          <a href="/astellungen.html">
+            <div class="other-item">
+              <h3>Astellungen</h3>
+            </div>
+          </a>
+
+          <a href="/Downloads/index.html">
+            <div class="other-item">
+              <h3>Download</h3>
+            </div>
+          </a>
+          <a href="/Bicher/index.html">
+            <div class="other-item">
+              <h3>Bicher</h3>
+            </div>
+          </a>
+          <a href="/retroformel.html">
+            <div class="other-item">
+              <h3>Retroformel</h3>
+            </div>
+          </a>
+          <a href="changelog.html">
+            <div class="other-item">
+              <h3>Change Log</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+    <footer></footer>
+  </body>
+  <script>
+    // Get the paragraph element
+    const splashText = document.getElementById("splash-text");
+
+    // Function to apply the saved setting to paragraph visibility
+    function applySetting() {
+      const savedSetting = localStorage.getItem("showSplashText");
+
+      if (savedSetting !== null) {
+        // Parse the saved setting and apply it to the paragraph visibility
+        splashText.style.display = JSON.parse(savedSetting) ? "block" : "none";
+      } else {
+        // Default to visible if no setting is saved
+        splashText.style.display = "block";
+      }
+    }
+
+    // Call the function to apply settings on page load
+    applySetting();
+  </script>
+</html>

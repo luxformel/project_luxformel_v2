@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Géométrie dans l'espace</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Géométrie dans l'espace</h1>
+      <h2>Règles de calcul</h2>
+      <h3>Définition</h3>
+      <p>
+        À tout couple des points \( (A; B) \) de l'espace, on associe le vecteur
+        \( \overrightarrow{AB} \). Dans un plan qui convient \( A \) et \( B \),
+        \( \overrightarrow{AB} \) est le vecteur de la translation qui
+        transforme \( A \) en \( B \). Lorsque \( A = B \), le vecteur \(
+        \overrightarrow{AA} \) est le vecteur nul, noté \( \overrightarrow{0}
+        \).
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Dire que deux vecteurs \( \overrightarrow{AB} \) et \(
+        \overrightarrow{CD} \) sont égaux signifie que \( ABCD \) est un
+        parallélogramme éventuellement aplati. <br />
+        Dans ce cas, \( \overrightarrow{AB} \) et \( \overrightarrow{CD} \) sont
+        représentants d'un même vecteur \( \overrightarrow{u} =
+        \overrightarrow{AB} = \overrightarrow{CD} \). Pour tout point \( E \) de
+        l'espace et tout vecteur \( \overrightarrow{v} \), il existe un unique
+        point \( F \) tel que \( \overrightarrow{EF} = \overrightarrow{v} \).
+      </p>
+      <h2>Relation de Chasles</h2>
+      <h3>Définition</h3>
+      <p>Pour tous points \( A,B,C \) de l'espace</p>
+      $$ \overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC} $$
+      <h3>Propriété</h3>
+      <p>
+        Soient \( \overrightarrow{u} \) et \( \overrightarrow{v} \) deux
+        vecteurs non nul et soient \( k \) et \( l \) deux nombres réels. On a:
+      </p>
+      <ol>
+        <li>
+          <p>
+            \( k \overrightarrow{u} = \overrightarrow{0} \) si, et seulement si,
+            \( k=0 \) ou \( \overrightarrow{u} = \overrightarrow{0} \)
+          </p>
+        </li>
+        <li>
+          <p>
+            \( k( \overrightarrow{u} + \overrightarrow{v} ) = k
+            \overrightarrow{u} + k \overrightarrow{v} \)
+          </p>
+        </li>
+        <li>
+          <p>
+            \( (k+l) \overrightarrow{u} = k \overrightarrow{u} + l
+            \overrightarrow{u} \)
+          </p>
+        </li>
+        <li>
+          <p>\( k(l \overrightarrow{u}) = (kl) \overrightarrow{u} \)</p>
+        </li>
+      </ol>
+      <h2>Vecteurs colinéaires, parallélisme, alignement</h2>
+      <h3>Définition</h3>
+      <p>
+        Deux vecteurs non nuls \( \overrightarrow{AB} \) et \(
+        \overrightarrow{CD} \) sont colinéaires si, et seulement si, les droites
+        \( (AB) \) et \( (CD) \) sont parallèles donc s'ils ont la même pente.
+      </p>
+      <h3>Remarque</h3>
+      <p>Le vecteur nul est colinéaire à tout vecteur.</p>
+      <h3>Théorème</h3>
+      <ul>
+        <li>
+          <p>
+            Soient \( \overrightarrow{u} \) et \( \overrightarrow{v} \) deux
+            vecteurs non nuls de l'espace \( \overrightarrow{u} \) et \(
+            \overrightarrow{v} \) sont colinéaires si, et seulement si, il
+            existe un nombre réel \( k \) tel que:
+          </p>
+          $$ \overrightarrow{u} = k \cdot \overrightarrow{v} $$
+          <p>
+            En effet, \( \overrightarrow{u} \) et \( \overrightarrow{v} \) ont
+            alors la même direction.
+          </p>
+        </li>
+        <li>
+          <p>
+            Soient \( A,B,C \) trois points distincts de l'espace \( A,B,C \)
+            sont alignés si et seulement si les vecteurs \( \overrightarrow{AB}
+            \) et \( \overrightarrow{AC} \) sont colinéaires, donc qu'il existe
+            un nombre réel \( k \) tel que:
+          </p>
+          $$ \overrightarrow{AB} =k \cdot \overrightarrow{AC}$$
+        </li>
+      </ul>
+      <h2>Centre de gravité</h2>
+      <h3>Définition</h3>
+      <p>
+        On appelle centre de gravité un triangle \( ABC \) le point \( G \) tel
+        que:
+      </p>
+      $$ \overrightarrow{GA} + \overrightarrow{GB} + \overrightarrow{GC} =
+      \overrightarrow{0}$$
+      <h3>Propriété</h3>
+      <p>
+        Soient un triangle \( ABC \), \( A^{\prime} \), \( B^{\prime} \) et \(
+        C^{\prime} \) les milieux respectifs des côtés \( [BC] \), \( [AC] \) et
+        \( [AB] \) et \( G \) le centre de gravité, alors:
+      </p>
+      $$ \overrightarrow{AG} = \frac{2}{3} \overrightarrow{AA^{\prime}} $$ $$
+      \overrightarrow{BG} = \frac{2}{3} \overrightarrow{BB^{\prime}} $$ $$
+      \overrightarrow{CG} = \frac{2}{3} \overrightarrow{CC^{\prime}} $$
+      <h2>Plans de l'espace, vecteurs coplanaires</h2>
+      <h3>Règle</h3>
+      <p>
+        Par trois points \( A \), \( B \) et \( C \), non alignés, passe un plan
+        et un seul. <br />
+        Ce plan est noté \( (ABC) \). On dit que trois points non alignes
+        déterminent un plan.
+      </p>
+      <h3>Conséquences</h3>
+      <ul>
+        <li>
+          <p>
+            Une droite \( d \) et un point extérieur à \( d \) déterminent un
+            plan.
+          </p>
+        </li>
+        <li>
+          <p>Deux droites sécantes déterminent un plan.</p>
+        </li>
+      </ul>
+      <h3>Règle</h3>
+      <p>
+        Si \( A \) et \( B \) sont deux points distincts d'un plan \(
+        \mathscr{P} \), alors tous les points de la droite \( (AB) \)
+        appartiennent au plan \( \mathscr{P} \).
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        \( A \), \( B \) et \( C \) sont trois points non alignés de l'espace et
+        \( \mathscr{P} \) le plan \( (ABC) \). Un point \( M \) appartient au
+        plan \( \mathscr{P} \) si, et seulement si, il existe des nombres réels
+        \( x \) et \( y \) tels que:
+      </p>
+      $$ \overrightarrow{AM} = x \overrightarrow{AB} + y \overrightarrow{AC}$$
+      <h3>Démonstration</h3>
+      <p>
+        Dans le plan \( \mathscr{P} \), comme les points \( A \), \( B \) et \(
+        C \) ne sont pas alignés, les vecteurs \( \overrightarrow{AB} \) et \(
+        \overrightarrow{AC} \) ne sont pas colinéaires, donc \( (A;
+        \overrightarrow{AB} ; \overrightarrow{AC}) \) est un repère du plan \(
+        \mathscr{P} \). Donc pour tout point \( M \) de \( \mathscr{P} \), \(
+        \overrightarrow{AM} \) se décompose en fonction de \(
+        \overrightarrow{AB} \) et \( \overrightarrow{AC} \), ainsi il existe des
+        nombres réels \( x \) et \( y \) tels que \( \overrightarrow{AM} =x
+        \overrightarrow{AB} +y \overrightarrow{AC}\)
+      </p>
+      <p>
+        Réciproquement, on considère le point \( N \) du plan \( \mathscr{P} \)
+        de coordonnées \( (x;y) \) dans le repère \( (A; \overrightarrow{AB} ;
+        \overrightarrow{AC}) \). Alors \( \overrightarrow{AN} =x
+        \overrightarrow{AB} +y \overrightarrow{AC}\) donc \( \overrightarrow{AN}
+        = \overrightarrow{AM} \) et \( M=N \). Le point \( M \) appartient au
+        plan \( \mathscr{P} \).
+      </p>
+      <h3>Vocabulaire</h3>
+      <p>
+        En générale, un plan est défini par un point \( A \) et deux vecteurs
+        non colinéaires \( \overrightarrow{u} \) et \( \overrightarrow{v} \). On
+        parle alors du plan \( \mathscr{P} (A; \overrightarrow{u};
+        \overrightarrow{v}) \) et on dit que \( \overrightarrow{u} \) et \(
+        \overrightarrow{v} \) sont des vecteurs directeurs de ce plan.
+      </p>
+      <h3>Propriété</h3>
+      <p>
+        Deux plans qui ont deux vecteurs directeurs en commun sont parallèls.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Dire que les vecteurs \( \overrightarrow{u} \), \( \overrightarrow{v} \)
+        et \( \overrightarrow{w} \) sont coplanaires signifie que pour un point
+        \( O \) quelconque de l'espace, les points \( O \), \( A\), \(B \) et \(
+        C \) définis par \( \overrightarrow{OA} =\overrightarrow{u} \), \(
+        \overrightarrow{OB} =\overrightarrow{v} \) et \( \overrightarrow{OC}
+        =\overrightarrow{w} \) sont dans le même plan.
+      </p>
+      <h3>Théorème *</h3>
+      <p>
+        \( \overrightarrow{u} \), \( \overrightarrow{v} \) et \(
+        \overrightarrow{w} \) sont des vecteurs de l'espace tels que \(
+        \overrightarrow{u} \) et \( \overrightarrow{v} \) ne sont pas
+        colinéaires. \( \overrightarrow{u} \), \( \overrightarrow{v} \) et \(
+        \overrightarrow{w} \) sont coplanaires si, et seulement si, il existe
+        des nombres réels \( a \) et \( b \) tels que:
+      </p>
+      $$ \overrightarrow{w} = a \overrightarrow{u} + b \overrightarrow{v} $$
+      <h3>Démonstration</h3>
+      <p>
+        Pour un point \( O \) quelconque de l'espace, \( A \), \( B \), \( C \)
+        sont définis par \( \overrightarrow{OA} = \overrightarrow{u} \), \(
+        \overrightarrow{OB} = \overrightarrow{v} \) et \( \overrightarrow{OC} =
+        \overrightarrow{w} \). \( \overrightarrow{u} \) et \( \overrightarrow{v}
+        \) ne sont pas colinéaires, ce sont donc deux vecteurs directeurs du
+        plan \( (OAB) \). Par définition \( \overrightarrow{u} \), \(
+        \overrightarrow{v} \) et \( \overrightarrow{w} \) sont coplanaires
+        signifie que \( C \) appartient au plan \( (OAB) \). D'après le théorème
+        *, il existe des nombres \( a \) et \( b \) tels que \(
+        \overrightarrow{OC} = a \overrightarrow{OA} + b \overrightarrow{OB}
+        \Leftrightarrow \overrightarrow{w} = a \overrightarrow{u} + b
+        \overrightarrow{v} \)
+      </p>
+      <h3>Conséquences</h3>
+      <ol>
+        <li>
+          <p>
+            Dire que quatre points \( A \), \( B \), \( C \) et \( D \) sont
+            coplanaires équivaut à dire que les vecteurs \( \overrightarrow{AB}
+            \), \( \overrightarrow{AC} \) et \( \overrightarrow{AD} \) sont
+            coplanaires.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dire que les droites \( (AB) \) et \( (CD) \) sont coplanaires
+            équivaut à dire que les vecteurs \( \overrightarrow{AB} \), \(
+            \overrightarrow{AC} \) et \( \overrightarrow{AD} \) sont
+            coplanaires.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dire que les plans sont parallèles équivaut à dire que deux vecteurs
+            non colinéaires de l'un et deux vecteurs non colinéaires de l'autre
+            sont coplanaires.
+          </p>
+        </li>
+      </ol>
+      <h2>Repère dans l'espace</h2>
+      <h3>Définition</h3>
+      <p>
+        Un repère de l'espace noté \( (O; \overrightarrow{i};
+        \overrightarrow{j}; \overrightarrow{k}) \) est formé d'un point \( O \)
+        et d'un triplet \( (\overrightarrow{i}; \overrightarrow{j};
+        \overrightarrow{k}) \) de vecteurs non coplanaires. Le triplet \(
+        (\overrightarrow{i}; \overrightarrow{j}; \overrightarrow{k}) \) est
+        appelé base de vecteurs de l'espace
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        \( (O; \overrightarrow{i}; \overrightarrow{j}; \overrightarrow{k}) \)
+        est un repère de l'espace. Pour tout point \( M \) de l'espace, il
+        existe un unique triplet de nombres réels \( (x;y;z) \) tels que:
+      </p>
+      $$ \overrightarrow{OM} = x \overrightarrow{i} + y \overrightarrow{j} + z
+      \overrightarrow{k} $$
+      <h3>Démonstration</h3>
+      <p>
+        Soit \( (\overrightarrow{i}; \overrightarrow{j}; \overrightarrow{k}) \)
+        une base de l'espace, \( O \) est un point de l'espace et \( \mathscr{P}
+        \) le plan défini par \( O \) et les deux vecteurs non colinéaires \(
+        \overrightarrow{i} \) et \( \overrightarrow{j} \). Soit \( M^{\prime} \)
+        le point d'intersection de la droite passant par \( M \) de vecteur
+        directeur \( \overrightarrow{k} \) et le plan \( \mathscr{P} \). Comme
+        \( M^{\prime} \in \mathscr{P} \) il existe deux nombres réels \( x \) et
+        \( y \) tels que \( \overrightarrow{OM^{\prime}} =x \overrightarrow{i} +
+        y \overrightarrow{j} \) \( \overrightarrow{MM^{\prime}} \) et \(
+        \overrightarrow{k} \) sont colinéaires, donc il existe un nombre réel \(
+        z \) tel que \( \overrightarrow{MM^{\prime}} = z \cdot
+        \overrightarrow{k} \). D'où,
+      </p>
+      $$ \overrightarrow{OM} = \overrightarrow{OM^{\prime} + \overrightarrow{MM}
+      = x \overrightarrow{i} + y \overrightarrow{j} + z \overrightarrow{k} $$
+      <p>On admet l'unicité de celle écriture.</p>
+      <h3>Vocabulaire</h3>
+      <p>
+        \( (x;y;z) \) sont des coordonnées de \( M \) dans le repère \( (O;
+        \overrightarrow{i}; \overrightarrow{j}; \overrightarrow{k}) \). \( x \)
+        est l'abscisse, \( y \) est l'ordonnée et \( z \) la cote de \( M \)
+        dans ce repère.
+      </p>
+      <p>
+        \( (O; \overrightarrow{i}; \overrightarrow{j}; \overrightarrow{k}) \)
+        est un repère. Au vecteur \( \overrightarrow{u} \) associons \( M \) tel
+        que \( \overrightarrow{OM} = \overrightarrow{u}\). Par définition, les
+        coordonnées de \( \overrightarrow{u} \) sont les coordonnées \( (x;y;z)
+        \) de \( M \). Ainsi, tout vecteur \( \overrightarrow{u} \) s'écrit de
+        manière unique:
+      </p>
+      $$ \overrightarrow{u} = x \overrightarrow{i} + y \overrightarrow{j} + z
+      \overrightarrow{k} $$
+      <h2>Paramétrage d'une droite</h2>
+      <h3>Théorème</h3>
+      <p>
+        La droite $ d $ passant par $A(x_0; y_0; z_0)$ et dirigée par le vecteur
+        $ \overrightarrow{u} (a;b;c)$ est l'ensemble des points $M(x;y;z)$ tels
+        que:
+      </p>
+      $$ \left( S\right) :\begin{cases}x=x_{0}+at&\\ y=y_{0}+bt&\\
+      z=z_{0}+ct&\end{cases} ,t \in \mathbb{R}$$
+      <h3>Démonstration</h3>
+      $$ M \in d(A; \overrightarrow{u}) \Leftrightarrow \exists t \in \mathbb{R}
+      | \overrightarrow{AM} = t \cdot \overrightarrow{u}$$ $$\Leftrightarrow
+      \exists t \in \mathbb{R}\ | \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0
+      \end{pmatrix} = t \cdot \begin{pmatrix} a \\ b \\ c \end{pmatrix} $$
+      $$\Leftrightarrow \exists t \in \mathbb{R} | \begin{cases}x-x_{0}&=t\cdot
+      a\\ y-y_{0}&=t\cdot b\\ z-z_{0}&=t\cdot c\end{cases} $$ $$ \Leftrightarrow
+      \exists t \in \mathbb{R} | \begin{cases}x=x_{0}+t\cdot a&\\ y=y_{0}+t\cdot
+      b&\\ z=z_{0}+t\cdot c&\end{cases} $$
+      <p>
+        Le système $ (S) $ est appelé représentation paramétrique de la droite
+        $d(A; \overrightarrow{u})$ dans le repère
+        $(O;\overrightarrow{i};\overrightarrow{j};\overrightarrow{k})$ t est le
+        paramètre.
+      </p>
+      <p>
+        À chaque valuer de $t$, on associe un et un seul point
+        $M(x_0+at;y_0+bt;z_0+ct)$. Réciproquement, à chaque point $M$ de $d$
+        correspond un seul nombre $t$ tel que $\overrightarrow{AM} = t
+        \overrightarrow{u}$
+      </p>
+      <h3>Conséquences</h3>
+      <p>
+        Lorsqu'une représentation paramétrique d'une droite $d$ est écrite sous
+        la forme $(S)$, alors on peut affirmer que $d$ passe par
+        $A(x_0;y_0;z_0)$ et que $\overrightarrow{u}(a;b;c)$ est un vecteur
+        directeur de $d$.
+      </p>
+      <h2>Position relative, intersection de deux droites</h2>
+      <h3>Théorie</h3>
+      <p>
+        Soient $d$ la droite passant par $A(x_0;y_0;z_0)$ de vecteur directeur
+        $\overrightarrow{u} \begin{pmatrix} a \\ b \\ c \end{pmatrix} $ deux
+        droites de l'espace de représentation paramétriques respectives:
+      </p>
+      $$ d: \begin{cases}x=x_{0}+t\cdot a&\\ y=y_{0}+t\cdot b&\\ z=z_{0}+t\cdot
+      c&\end{cases}, t \in \mathbb{R} $$
+      <p>et</p>
+      $$ d: \begin{cases}x^{\prime}=x^{\prime}_{0}+s\cdot a^{\prime}&\\
+      y^{\prime}=y^{\prime}_{0}+s\cdot b^{\prime}&\\
+      z^{\prime}=z^{\prime}_{0}+s\cdot c^{\prime}&\end{cases}, s \in \mathbb{R}
+      $$
+      <p>Ces deux droites $d$ et $d^{\prime}$ peuvent être:</p>
+      <ul>
+        <li>
+          <p>
+            <u>strictement parallèles:</u> $d \cap d^{\prime} = \emptyset$. ($d$
+            et $d^{\prime}$ sont coplanaires)
+          </p>
+        </li>
+        <li>
+          <p><u>confondues:</u> $d=d^{\prime}$</p>
+        </li>
+        <li>
+          <p>
+            <u>sécantes:</u> $d \cap d^{\prime} = \{I\}$ (deux droites sécantes
+            sont coplanaires, elles appartiennent à un même plan)
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>non coplanaires:</u> $d \cap d^{\prime} = \emptyset$ (on dit
+            aussi que $d$ et $d^{\prime}$ sont gauches)
+          </p>
+        </li>
+      </ul>
+      <h3>Conclusions</h3>
+      <table>
+        <tr>
+          <th>$$d\ et\ d^{\prime}\ sont\ ...$$</th>
+          <th>$$Comment\ le\ montrer$$</th>
+        </tr>
+        <tr>
+          <td><p>strictement parallèles ou coplanaires</p></td>
+          <td>
+            <p>
+              $\overrightarrow{u}$ et $\overrightarrow{u^{\prime}}$ sont
+              colinéaires $A \in d$, mais $A \notin d^{\prime}$ (ou $A^{\prime}
+              \in d^{\prime}$, mais $A^{\prime} \notin d$; ou
+              $\overrightarrow{AA^{\prime}}$ et $\overrightarrow{u}$ non
+              colinéaires)
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><p>confondues</p></td>
+          <td>
+            <p>
+              $\overrightarrow{u}$ et $\overrightarrow{u^{\prime}}$ sont
+              colinéaires $A \notin d^{\prime}$ (ou $A^{\prime} \in \
+              d^{\prime}$ et $A^{\prime} \in d$: ou
+              $\overrightarrow{AA^{\prime}}$ et $\overrightarrow{u}$ sont
+              coplanaires)
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><p>sécantes</p></td>
+          <td>
+            <p>
+              il existe un unique couple $(s;t) \in \mathbb{R^2}$ tel que $(S)$:
+            </p>
+            $$ \begin{cases} x_0+at=x^{\prime}_{0}+s\cdot a^{\prime}s&\\
+            y_0+bt=y^{\prime}_{0}+s\cdot b^{\prime}s&\\
+            z_0+ct=z^{\prime}_{0}+s\cdot c^{\prime}s&\\ \end{cases}$$
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>non coplanaires</p>
+          </td>
+          <td>
+            <p>
+              $\overrightarrow{u}$ et $\overrightarrow{v}$ non colinéaires il
+              n'existe pas de couple $(s;t) \in \mathbb{R}^2$ qui vérifie $(S)$
+            </p>
+          </td>
+        </tr>
+      </table>
+      <h2>Produit scalaire dans l'espace</h2>
+      <h3>Définition</h3>
+      <p>
+        Dans l'espace une unité de longuer étant choisie, le produit scalaire
+        des vecteurs $\overrightarrow{u}$ et $\overrightarrow{v}$ est le nombre
+        noté $\overrightarrow{u} \cdot \overrightarrow{v}$ défini par:
+      </p>
+      $$ \overrightarrow{u} \cdot \overrightarrow{v} = \frac{1}{2} [\parallel
+      \overrightarrow{u} + \overrightarrow{v} \parallel ^2 - \parallel
+      \overrightarrow{u} \parallel ^2 - \parallel \overrightarrow{v} \parallel
+      ^2]$$
+      <p>
+        Deux vectuers de l'espace sont nécessairement coplanaires. En effet,
+        quels que soient les trois points $A,B,C$ tels que $\overrightarrow{u} =
+        \overrightarrow{AB}$ et $\overrightarrow{v} = \overrightarrow{AC}$, il
+        existe au moins un plan $\mathscr{P}$ contenant les points $A,B,C$.
+        <br />
+        L'unité de longuer dans le plan étant celle choisie dans l'espace, la
+        définition du produit scalaire des vecteurs $\overrightarrow{AB}$ et
+        $\overrightarrow{AC}$ de l'espace coïncide avec celle du produit
+        scalaire de ces mêmes vecteurs dans le plan $\mathscr{P}$. <br />
+        Il en résulte que les expression du produit scalaire établies dans le
+        plan sont encore valables dans l'espace.
+      </p>
+      <ul>
+        <li>
+          <p>
+            Si $\alpha$ est la mesure de l'angle géométrique associé à
+            $\overrightarrow{u}$ et $\overrightarrow{v}$, alors:
+          </p>
+          $$ \overrightarrow{u} \cdot \overrightarrow{v} = \parallel
+          \overrightarrow{u} \parallel \times \parallel \overrightarrow{v}
+          \parallel \times \cos(\alpha)$$
+          <p>
+            Conséquences: $\overrightarrow{AB} \cdot \overrightarrow{AB} =
+            \parallel \overrightarrow{AB} \parallel ^2 = AB^2\ (1)$
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

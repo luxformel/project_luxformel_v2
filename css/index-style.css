@@ -1,0 +1,240 @@
+/* just the styling that specifically applies to the index page */
+
+.index-wrapper {
+  margin-top: 55px;
+
+  margin: 0.5rem auto;
+  padding: 1rem;
+  max-width: 50rem;
+}
+
+#splash-text {
+  color: var(--splash-text-color);
+
+  font-family: "Silkscreen", cursive;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 2rem 0;
+  line-height: 2.5rem;
+}
+
+/*hover effect*/
+.splashScreenText:hover {
+  animation: rotate 1s ease 5s 69 alternate;
+}
+
+@keyframes rotate {
+  0% {
+    color: crimson;
+    transform: rotate(0);
+  }
+
+  25% {
+    color: blue;
+  }
+
+  50% {
+    color: green;
+  }
+
+  75% {
+    color: yellow;
+  }
+
+  100% {
+    color: aqua;
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  /* min-width: 4rem;
+      min-height: 4rem; */
+  padding: 1rem;
+  background-color: var(--hero);
+  border-radius: 0.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: var(--black);
+
+    padding: 0.5rem;
+    margin-right: 1rem;
+
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  & p {
+    margin: 0.8rem;
+
+    color: var(--black);
+
+    font-family: serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    text-align: justify;
+
+    line-height: 1.5rem;
+  }
+}
+
+.big-index-link {
+  background-color: var(--index-card-color);
+  box-shadow: 5px 5px 10px var(--accent-color);
+  border-radius: 0.4rem;
+
+  padding: 1rem;
+  margin: 1rem 0;
+
+  & h2 {
+    color: var(--black);
+    font-family: "Garamond", "Georgia";
+    font-weight: 600;
+    font-style: normal;
+
+    cursor: pointer;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+.big-index-link:hover {
+  /* opacity: 0.8; */
+
+  transform: scale(0.99);
+  /* Slightly scale the element */
+  box-shadow: 0 0.8rem 0.5rem var(--accent-color);
+  /* Larger shadow for a lifted effect */
+
+  & h2 {
+    color: var(--accent-color);
+  }
+}
+
+.chapters {
+  border-radius: 0.4rem;
+  border: 0.4rem solid var(--index-border-color);
+
+  h2 {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+
+    user-select: none;
+  }
+}
+
+.chapter-grid,
+.other-grid {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.5rem;
+}
+
+.chapter-card {
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  min-width: 8ch;
+  min-height: 7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow: var(--background-color) 0px 3px 4px -5px,
+    var(--black) 0px 8px 6px -8px;
+  /* border: 0.2rem solid var(--black); */
+  background-color: var(--index-card-color);
+
+  h3 {
+    color: var(--black);
+    font-family: "Garamond", "Georgia";
+    font-weight: bolder;
+    font-style: normal;
+
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+.chapter-card:hover,
+.other-item:hover {
+  opacity: 0.8;
+  color: var(--accent-color);
+  transform: scale(1.05);
+  /* Slightly scale the element */
+  box-shadow: 0 0.8rem 0.5rem var(--accent-color);
+  /* Larger shadow for a lifted effect */
+
+  & h3 {
+    color: var(--accent-color);
+  }
+}
+
+.other-links {
+  background-color: var(--hero);
+  border-radius: 0.4rem;
+}
+
+.other-item {
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  min-width: 8ch;
+  min-height: 7rem;
+
+  opacity: 0.7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow: var(--background-color) 0px 3px 4px -5px,
+    var(--black) 0px 8px 6px -8px;
+  /* border: 0.2rem solid var(--black); */
+  background-color: var(--index-card-color);
+
+  h3 {
+    color: var(--black);
+    font-family: "Garamond", "Georgia";
+    font-weight: 600;
+    font-style: normal;
+    opacity: 1;
+
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hero {
+    display: block;
+    justify-content: inherit;
+    align-items: inherit;
+  }
+}

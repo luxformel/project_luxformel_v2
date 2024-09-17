@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Logique Élémentaire</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Logique Élémentaire</h1>
+      <h2>Propositions et assertions</h2>
+      <h3>Definition</h3>
+      <p>
+        Une proposition, ou assertion, est une phrase qui peut être vraie ou
+        fausse.
+      </p>
+      <h3>Remarque</h3>
+      <p>
+        Les propositions peuvent être mathématiques, ou plus générales. <br />
+        Nous utiliserons les lettres capitales A, B etc. pour désigner des
+        assertions mathématiques. On peut noter qu'un phrase en
+        <q>langue naturelle</q> peut être vraie ou fausse, mais peut aussi ne
+        pas avoir de valeur de vérité bien définie.
+      </p>
+      <h2>Tautologie</h2>
+      <h3>Definition</h3>
+      <p>
+        Une tautologie est une assertion qui est vraie du fait de sa
+        construction.
+      </p>
+      <h2>Opérations sur les assertions</h2>
+      <h3>Définitions</h3>
+      <ul>
+        <li>
+          <p>
+            La négation d'une assertion $A$, notée $\neg A$, est l'assertion qui
+            est vraie si $A$ et fausse, et fausse si $A$ est vraie.
+          </p>
+        </li>
+        <li>
+          <p>
+            La conjonction de deux assertions $A$ et $B$, notée $A \wedge B$,
+            est l'assertion qui est vraie si et seulement si $A$ et vraie et $B$
+            est vraie. On la lit “et”.
+          </p>
+        </li>
+        <li>
+          <p>
+            La disjonction de deux assertions $A$ et $B$, est l'assertion $A
+            \vee B$ qui est vraie si et seulement si $A$ est vraie ou $B$ est
+            vraie. On la lit “ou”.
+          </p>
+        </li>
+      </ul>
+      <h3>Remarque</h3>
+      <p>
+        Dans une expression composée, la négation prend la priorité sur $\vee$
+        et $\wedge$.
+      </p>
+      <h2>
+        Propositions atomiques, assertions atomiques, variables proportionnelles
+      </h2>
+      <h3>Definition</h3>
+      <p>
+        Les assertions atomiques, sont des assertions qui ne sont pas obtenues
+        comme composition d'autres assertions.
+      </p>
+      <h2>Table de vérité</h2>
+      <p>
+        Les tables de vérité sont un moyen efficace pour analyser une
+        proposition composée C à partir de plusieurs assertions atomiques $A$,
+        $B$, ... Ce sont des tableaux ayant une ligne pour chaque valeur
+        possible des assertions $A$, $B$, ... qui apparaissent dans $C$, et on
+        met dans les cases correspondantes les valeurs de $C$. Ces valeurs sont
+        obtenues à partir des valeurs des variables propositionnelles en
+        utilisant les tables de vérités qui définissent les opérations $\wedge$,
+        $\vee$ et $\neg$, et en utilisant les règles de priorités sur les
+        opérations. On représente habituellement la valeur “vrai” par $1$ et
+        “faux” par $0$, et on parle de valeurs de vérités.
+      </p>
+      <h2>L'algèbre de Boole</h2>
+      <h3>Propriétés</h3>
+      <ul>
+        <li>
+          <p>Associativité de $\wedge$</p>
+          $$ A \wedge \left( B \wedge C \right) = \left( A \wedge B \right)
+          \wedge C $$
+        </li>
+        <li>
+          <p>Associativité de $\vee$</p>
+          $$ A \vee \left( B \vee C \right) = \left( A \vee B \right) \vee C $$
+        </li>
+        <li>
+          <p>Commutativité de $\wedge $</p>
+          $$ A \wedge B = B \wedge A $$
+        </li>
+        <li>
+          <p>Commutativité de $\vee $</p>
+          $$ A \vee B = B \vee A $$
+        </li>
+        <li>
+          <p>Distributivité de $\wedge$ par rapport à $\vee$</p>
+          $$ A \wedge (B \vee C) = (A \wedge B) \vee (A \wedge C) $$
+        </li>
+        <li>
+          <p>
+            L'assertion vraie 1 est élément neutre pour $\wedge$ et <br />
+            l'assertion fausse 0 est élément neutre pour $\vee$.
+          </p>
+          $$ A \wedge 1 = A $$ $$ A \vee 0 = A $$
+        </li>
+        <li>
+          <p>Distributivité de $\vee$ par rapport à $\wedge$</p>
+          $$ A \vee (B \wedge C) = (A \vee B) \wedge (A \vee C) $$
+        </li>
+        <li>
+          <p>Double négation</p>
+          $$ \neg (\neg A) = A $$
+        </li>
+        <li>
+          <p>Loi de Morgan</p>
+          $$ \neg ( A \vee B ) = (\neg A) \wedge (\neg B) $$
+        </li>
+        <li>
+          <p>Loi de Morgan</p>
+          $$ \neg ( A \wedge B ) = (\neg A) \vee (\neg B) $$
+        </li>
+        <li>$$ (\neg A) \wedge A = 0 $$</li>
+        <li>$$ (\neg A) \vee A = 1 $$</li>
+        <li>
+          <p>Loi d'absorption</p>
+          <ul>
+            <li>$$ (A \wedge B) \vee B = B $$</li>
+            <li>$$ (A \vee B) \wedge B = B $$</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Implication et équivalence</h2>
+      <p>
+        A partir des opérateurs $\neg$, $\wedge$ et $\vee$, on peut introduire
+        d'autres opérateurs logiques utiles.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        On note $\Rightarrow $ l'opérateur "Implication" défini pour deux
+        assertions $A$ et $B$ quelconques par:
+      </p>
+      $$ (A \Rightarrow B) = (\neg A) \vee B$$
+      <h3>Remarque</h3>
+      <p>
+        On dira que $A$ implique $B$ si l'assertion $A \Rightarrow B$ est vraie.
+        On dit que $A$ est l'antécédent, et que $B$ est le conséquent, de
+        l'implication $A \Rightarrow B$.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        L'implication $B \Rightarrow A$ est appelée réciproque de l'implication
+        $A \Rightarrow B$.
+      </p>
+      <h3>Conséquence</h3>
+      <ul>
+        <li>
+          <p>
+            Il suit de la définition que $A \Rightarrow B$ est vraie sauf dans
+            le cas où $A$ est vraie et $B$ est fausse. Ceci correspond à
+            l'implication qu'on utilise dans le langage courant.
+          </p>
+        </li>
+        <li>
+          <p>
+            On note aussi $\Leftarrow$ l'implication dans le sens inverse,
+            c'est-à-dire que $B \Leftarrow A$ est équivalent à $A \Leftarrow B$.
+          </p>
+        </li>
+      </ul>
+      <h3>Définition</h3>
+      <p>
+        L'implication $(\neg B) \Rightarrow (\neg A)$ est appelée
+        <u>contraposée</u> de l'implication $A \Rightarrow B$.
+      </p>
+      <h3>Proposition</h3>
+      <p>Une implication est équivalente à sa contraposée.</p>
+      <h3>Démonstration</h3>
+      <p>
+        On veut montrer que $A \Rightarrow B$ est vraie si et seulement si
+        $(\neg A) \Rightarrow (\neg B)$. Or $A \Rightarrow B$ est fausse si et
+        seulement si $A$ est vraie et $B$ et fausse. Mais $(\neg B) \Rightarrow
+        (\neg A)$ est fausse si et seulement si $(\neg B)$ est vraie et $(\neg
+        A)$ est fausse, donc si et seulement si A est vraie et B est fausse. Les
+        deux assertions ont donc exactement les mêmes valeurs de vérité, elles
+        sont donc équivalentes.
+      </p>
+      $$ \left( A\Rightarrow B\right) =\left( \left( \neg A\right) \vee B\right)
+      $$ $$ =((\neg A) \vee (\neg(\neg B))) $$ $$ =( (\neg(\neg B)) \vee (\neg
+      A) ) $$ $$ (\neg B) \Rightarrow (\neg A) $$
+      <p>cqfd.</p>
+
+      <!-- <h2>Égalité des deux assertions</h2>
+      <p>
+        Deux assertions sont égale si et seulement si, les deux cotés de
+        l'égalité prennent les mêmes valeurs quelle que soit les valeurs de
+        vérité de $A$, $B$, $C$.
+      </p> -->
+    </div>
+  </body>
+</html>

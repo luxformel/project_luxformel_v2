@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+    <script src="prism-java.js"></script>
+    <script src="prism-java-button.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Java Problèmes Types</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Java Problèmes Types</h1>
+      <h2>Calculer le PGCD</h2>
+      <h3>Remarque</h3>
+      <p>
+        PGCD est une abréviation pour: Plus grand commun diviseur, en anglais:
+        Greatest common divisor ou GCD.
+      </p>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int calculateGcd(int pA, int pB) {
+    int gcd = 0;
+    int min;
+    if (pA < pB) {
+        min = pA;
+        gcd = pB;  //pour le cas où a=0 -> gcd=b
+    } else {
+        min = pB;
+        gcd = pA;  //pour le cas où b=0 -> gcd=a
+    }
+
+    for (int i = 1; i <= min; i++) {
+        if (pA % i == 0 && pB % i == 0) {
+            gcd = i;
+        }
+     }
+    return gcd;
+ }
+            </code>
+        </pre>
+        </div>
+      </div>
+      <h3>Algorithme d'Euclide par soustractions</h3>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+ public int calculateGcdEuclidSubtraction() {
+    int gA = a;  
+    int gB = b;
+    if (gA == 0) {
+        return gB;
+    }
+
+    while (gB != 0) {
+        if (gA > gB) {
+            gA = gA - gB;
+        } else {
+             gB = gB - gA;
+        }
+    }
+    return gA;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h3>Algorithme d'Euclide par divisions</h3>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int calculateGcdEuclidDivision() {
+    int gA = a;  
+    int gB = b;
+    int t = 0;
+
+    while (gB != 0) {
+        t  = gB;
+        gB = gA % gB;
+        gA = t;
+    }
+
+    return gA;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>isPrime()</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public boolean isPrime(int pNumber) { 
+    int count = 0; 
+    for (int i = 1; i <= pNumber; i++) {
+        if (pNumber % i == 0) { 
+            count++;
+        }
+    }
+        return (count == 2);
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h3>Radpide</h3>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public boolean isPrime() {
+    int i = 2;
+    while ((i < number) && (number % i != 0)) {
+        i = i + 1;
+    }
+    return i == number;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+      <h3>Plus radpide</h3>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public boolean isPrime() {
+    int n = Math.abs(number);
+    int i = 2;
+    while (i <= Math.sqrt(n) && n % i != 0) {
+        i++;
+    }
+    return n == 2 || n % i != 0 && n > 1;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Génération d'une suite de nombres aléatoires entiers</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+
+public void printRandomNumbers(int pN, int pMin, int pMax){
+    for (int i = 1; i <= pN; i++) {
+        int currentNumber = (int)(Math.random() * (pMax - pMin +1)) +  pMin;
+	    System.out.print(currentNumber+"  ");
+	    if(i%20==0) {
+            System.out.println();
+        }
+    }
+    System.out.println();
+}
+
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public class NombresAleatoire {
+
+    private ArrayList< Double> alNumbers = new ArrayList<>(); 
+	
+    public void randomFill(int pN, double pMin, double pMax) {
+        alNumbers.clear();
+        double currentNumber;
+        for (int i = 0; i < pN; i++) {
+            currentNumber = Math.random() * (pMax - pMin) + pMin;
+            alNumbers.add(currentNumber);
+        }
+    }
+
+    public void print() {
+    	  for (int i = 0; i < alNumbers.size(); i++) {
+    	  	System.out.print(alNumbers.get(i)+"  ");
+		if((i+1)%5==0) System.out.println();
+    	  }
+    	  System.out.println();
+    }
+
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Trouver un élément dans une liste</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int findLast(String pNeedle) {
+    int result = -1; 
+    for (int i = 0; i < alMyList.size(); i++) {
+        if (alMyList.get(i).getAttribute().equals(pNeedle)) {
+            result = i;
+        }
+    }
+    return result;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int findFirst(String pNeedle) {
+    int result = -1; 
+    for (int i = alMyList.size() - 1; i >= 0; i--) {
+        if (alMyList.get(i).getAttribute().equals(pNeedle)) {
+            result = i;
+        }
+    }
+    return result;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+ public int findFirst(String pNeedle) {
+    int result = -1;
+    for (int i = 0; i < alMyList.size(); i++) {
+        if (alMyList.get(i).getAttribute().equals(pNeedle) && result == -1) {
+            result = i;
+        }
+    }
+    return result;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+ public int findFirst(String pNeedle) {
+    int result = -1;
+    int i = 0;
+    while (i < alMyList.size() && result == -1) {
+        if (alMyList.get(i).getAttribute().equals(pNeedle)) {
+            result = i;
+        }
+        i++;
+    }
+    return result;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Trouver le maximum dans une liste</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int getMax() {
+    if (alListOfNumbers.size() > 0) {
+        int max = alListOfNumbers.get(0);
+          int current;
+
+            for (int i = 1; i < alListOfNumbers.size(); i++) {
+                current = alListOfNumbers.get(i);
+                if (max < current) {
+                    max = current;
+                }
+            }
+
+        return max;
+    } else {
+        return -1;
+    }
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int getMin() {
+    if (alListOfNumbers.size() > 0) {
+        int min = alListOfNumbers.get(0);
+          int current;
+
+            for (int i = 1; i < alListOfNumbers.size(); i++) {
+                current = alListOfNumbers.get(i);
+                if (min > alListOfNumbers.size current) {
+                    min = current;
+                }
+            }
+
+        return max;
+    } else {
+        return -1;
+    }
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Calculer la somme des nombres d'une Liste</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public int getSum() {
+    int sum = 0;
+    for (int i = 0; i < alListOfNumbers.size(); i++) {
+        sum = sum + alListOfNumbers.get(i);
+    }
+    return sum;
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public double getAverage() {
+    if (alMarks.size()==0)
+    //La méthode retourne 0 si la liste est vide
+       return 0;
+    else 
+       return (double) getSum() / alListOfNumbers.size();
+}
+      </code>
+        </pre>
+        </div>
+      </div>
+
+      <!-- <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+      </code>
+        </pre>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>

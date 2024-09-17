@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="converter-code.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+    <link rel="stylesheet" href="converter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Text Lieser</h1>
+        <select id="language" onchange="populateVoiceList()">
+          <option value="">Wielt Är Sprooch aus</option>
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="nl">Nederlands</option>
+          <option value="pt">Portugês</option>
+
+          <!-- <option value="lb">Lëtzebuergesch</option> -->
+          <!-- Add more options as needed -->
+        </select>
+        <select id="voice">
+          <!-- Voices will be dynamically added via JavaScript -->
+        </select>
+        <textarea id="textToSpeak" placeholder="Text..."></textarea>
+        <button onclick="speak()">Schwätz</button>
+        <button onclick="stopSpeaking()">Stop!</button>
+        <button onclick="clearTextField()">Text läschen</button>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+  <script>
+    var utterance = null;
+
+    // Function to populate the voice selection dropdown based on selected language
+    function populateVoiceList() {
+      var languageSelect = document.getElementById("language");
+      var lang = languageSelect.value;
+      var voiceSelect = document.getElementById("voice");
+      voiceSelect.innerHTML = "";
+
+      var voices = window.speechSynthesis.getVoices();
+      voices.forEach(function (voice) {
+        if (voice.lang.startsWith(lang) || lang === "") {
+          var option = document.createElement("option");
+          option.textContent = voice.name + " (" + voice.lang + ")";
+          option.setAttribute("data-lang", voice.lang);
+          option.setAttribute("data-name", voice.name);
+          voiceSelect.appendChild(option);
+        }
+      });
+    }
+
+    // Wait for voices to be loaded before populating the dropdown
+    window.speechSynthesis.onvoiceschanged = function () {
+      populateVoiceList();
+    };
+    // Function to trigger text-to-speech conversion
+    function speak() {
+      var text = document.getElementById("textToSpeak").value;
+      var lang = document.getElementById("language").value;
+      var voiceSelect = document.getElementById("voice");
+      var selectedVoiceName =
+        voiceSelect.selectedOptions[0].getAttribute("data-name");
+      utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang;
+      // Find the selected voice by name
+      var voices = window.speechSynthesis.getVoices();
+      var selectedVoice = voices.find(function (voice) {
+        return voice.name === selectedVoiceName;
+      });
+      if (selectedVoice) {
+        utterance.voice = selectedVoice;
+      } else {
+        console.error("Stëmm net fonnt:", selectedVoiceName);
+      }
+      window.speechSynthesis.speak(utterance);
+    }
+    function stopSpeaking() {
+      if (utterance) {
+        window.speechSynthesis.cancel();
+      }
+    }
+    function clearTextField() {
+      document.getElementById("textToSpeak").value = "";
+    }
+  </script>
+</html>

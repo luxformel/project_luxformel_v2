@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Mechanische Wellen</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Mechanische Wellen</h1>
+      <h2>Welle</h2>
+      <h3>Definition</h3>
+      <p>
+        Eine Welle ist ein zeitlich und räumlich periodischer Vorgang. Die
+        zeitliche Periode ist die Schwingungsdauer $T$, die räumliche Periode
+        ist die Wellenlänge $\lambda$.
+      </p>
+      <h3>Bemerkung</h3>
+      <p>Wellen transportieren Energie, keine Materie.</p>
+      <h2>Wellenlänge</h2>
+      <h3>Definition</h3>
+      <p>
+        Die Wellenlänge $\lambda$ ist der kürzeste Abstand zweier in Phase
+        schwingender Punkte entlang der Welle.
+      </p>
+      <h2>Wellenarten</h2>
+      <h3>Definitionen</h3>
+      <ol>
+        <li>
+          <p>
+            <u>Transversalwellen</u> <br />
+            Ist die Auslenkungsrichtung $y$ rechtwinklig zur
+            Ausbreitungsrichtung $x$, so spricht man von einer Transversalwelle.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Lonitudinalwellen</u> <br />lst die Auslenkungsrichtung $y$
+            parallel zur Ausbreitungsrichtung $x$, so spricht man von einer
+            Longitundialwelle.
+          </p>
+        </li>
+      </ol>
+      <h2>Wellengleichung</h2>
+      <h3>Herleitung</h3>
+      <p>
+        Zur Beschreibung der Welle müssen wir einen Ausdruck finden, welcher die
+        doppelte Periodizität im Raum und in der Zeit beschreibt. Ihre
+        Auslenkung $y$ hängt sowohl vom dem betrachteten Ort $x$ als auch vom
+        Zeitpunkt $t$ ab. Es gilt also: $y = f(x,t)$. <br />Die Welle startet
+        durch einen Oszillator am Ursprung $x=0$ und hat eine Amplitude
+        $y_{max}$ und eine Frequenz $f$. <br />
+        Breitet sich die Welle in positiver $x$-Richtung aus, dann erreicht die
+        Welle einen Ort $x$ mit einer Verspätung $\Delta t$. <br />
+        Zu einem Zeitpunkt $t$ führt der Punkt $x$ die gleiche Schwingung aus,
+        welche der Ursprung zum Zeitpunkt $t- \Delta t$ durchgeführt hat. <br />
+        Für die Elongation am Ort $x$ zum Zeitpunkt $t$ gilt also:
+      </p>
+      $$ y(x,t) = y_{max} \cdot \sin \left[ 2\pi f (t- \Delta t) + \varphi_0
+      \right] (1)$$
+      <p>
+        Sei $v_{ph}$ die Phasengeschwindigkeit der in positiver Richtung
+        laufenden Welle. Die benötigte Zeit $\Delta t$ um die Strecke $x$
+        zurückzulegen beträgt:
+      </p>
+      $$ \Delta t = \frac{x}{v_{ph}} (2)$$
+      <p>$(2)$ in $(1)$:</p>
+      $$ y(x,t) = y_{max} \cdot \sin \left[ 2\pi f (t- \frac{x}{v_{ph}}) +
+      \varphi_0 \right] $$
+      <p>mit $f=\frac{1}{T}$ und $v_{ph} = \lambda \cdot f$:</p>
+      $$ y(x,t) = y_{max} \cdot \sin \left[ 2\pi \left(\frac{t}{T}- f \cdot
+      \frac{x}{\lambda \cdot f}\right) + \varphi_0 \right] $$ $$ y(x,t) =
+      y_{max} \cdot \sin \left[ 2\pi \left(\frac{t}{T} -
+      \frac{x}{\lambda}\right) + \varphi_0 \right] $$
+      <h3>Formel</h3>
+      $$ y(x,t) = y_{max} \cdot \sin \left[ 2\pi \left(\frac{t}{T} -
+      \frac{x}{\lambda}\right) + \varphi_0 \right] $$
+      <h2>Überlagerung</h2>
+      <p>
+        Treffen an einer Stelle eines Wellenträgers mehrere Wellen aufeinander,
+        so addieren sich dort die Elongationen der Schwingungen $(y = y_1 +
+        y_2)$. Nach dem Zusammentreffen laufen die Wellen ungestört weiter.
+      </p>
+      <img src="img/" alt="" />
+      <h2>Interferenz</h2>
+      <p>
+        Die ungestörte Überlagerung mehrerer Wellen von gleicher Frequenz wird
+        als Interferenz bezeichnet.
+      </p>
+      <h2>Gangunterschied</h2>
+      <h3>Definition</h3>
+      <p>
+        Der Gangunterschied $\Delta s$ zweier Wellen an einem Ort im Wellenfeld
+        ist die Wegdifferenz $\Delta s = s_2 - s_1$ der Strecken $s_1$ und $s_2$
+        von diesem Ort zu den beiden Erregern $E_1$ und $E_2$.
+      </p>
+      <h2>Interferenz Bedingungen</h2>
+      <ol>
+        <li>
+          <p><u>Verstärkung, konstruktive Interferenz</u> <br /></p>
+          <ul>
+            <li>
+              <p>Phasendifferenz</p>
+              $$ \Delta \varphi = n \cdot 2\pi $$
+              <p>mit $n \in \mathbb{Z}$</p>
+            </li>
+            <li>
+              <p>Gangunterschied</p>
+              $$ \Delta s = n \cdot \lambda $$
+              <p>mit $n \in \mathbb{Z}$</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p><u>Auslöschung, destruktive Interferenz</u> <br /></p>
+          <ul>
+            <li>
+              <p>Phasendifferenz</p>
+              $$ \Delta \varphi = (2n - 1) \cdot \pi $$
+              <p>mit $n \in \mathbb{Z}$</p>
+            </li>
+            <li>
+              <p>Gangunterschied</p>
+              $$ \Delta s = (2n - 1) \cdot \frac{\lambda}{2} $$
+              <p>mit $n \in \mathbb{Z}$</p>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Kohärenz</h2>
+      <h3>Definition</h3>
+      <p>
+        Wellen, die von Erregerzentren ausgehen, die eine konstante
+        Phasendifferenz haben, heißen kohärent. Kohärenz ist eine unabdingbare
+        Voraussetzung für die Entstehung eines über längere Zeit beobachtbaren
+        Interferenzphänomens.
+      </p>
+      <h2>Synchronität</h2>
+      <h3>Definition</h3>
+      <p>
+        Zwei Wellenquellen oder Schwingungen sind synchron, wenn sie
+        gleichphasig schwingen.
+      </p>
+      <h2>Huygens'sches Prinzip</h2>
+      <p>
+        Jeder Punkt einer Wellenfront kann als Ausgangspunkt von Elementarwellen
+        angesehen werden, die sich mit gleicher Phasengeschwindigkeit und
+        gleicher Frequenz wie die ursprüngliche Welle ausbreiten. Die
+        Einhüllende aller Elementarwellen ergibt die neue Wellenfront.
+      </p>
+      <h2>Beugung</h2>
+      <p>
+        Das Eindringen von Wellen in den geometrischen Schattenraum hinter
+        Hindernissen und Öffnungen wird als Beugung bezeichnet. Entscheidend für
+        die Ausprägung der Beugungserscheinungen ist das Verhältnis der Größe
+        der Hindernisse zur Wellenlänge. <br />
+        Die Beugung ist besonders stark, wenn das Ausmaß des beugenden
+        Hindernisses von gleicher Größenordnung ist wie die Wellenlänge oder
+        kleiner.
+      </p>
+      <h2>Reflexionsgesetz der Wellen</h2>
+      <p>Der Einfallswinkel $\alpha$ ist gleich dem Ausfallswinkel $\beta$:</p>
+      $$\alpha = \beta$$
+      <h2>Brechungsgesetz von Wellen</h2>
+      <p>
+        Treten Wellen aus einem Medium in ein anderes, so besitzen die
+        Wellennormalen der einfallenden und der gebrochenen Welle verschiedene
+        Richtungen. Es gilt:
+      </p>
+      $$ \frac{\sin(\alpha)}{\sin(\beta)} = \frac{v_{ph1}}{v_{ph2}} = konstant
+      $$
+      <p>Siehe auch <a href="wellenoptik.html">Wellenoptik</a>.</p>
+    </div>
+  </body>
+</html>

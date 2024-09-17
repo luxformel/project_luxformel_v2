@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Continuité</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Continuité</h1>
+      <h2>Continuité sur un intervalle</h2>
+      <h3>Définition</h3>
+      <p>
+        \( f \) est une fonction définie sur un intervalle \( I \), \( a \) est
+        un nombre qui appartient à \( I \).
+      </p>
+      <ol>
+        <li>
+          <p>
+            La fonction \( f \) est continue en \( a \) si et seulement si \(
+            \lim_{x\rightarrow a} f\left( x\right) =f\left( a\right) \)
+          </p>
+        </li>
+        <li>
+          <p>
+            La fonction \( f \) est continue sur l'intervalle \( I \) si et
+            seulement si \( f \) est continue en tout nombre de \( I \).
+          </p>
+        </li>
+      </ol>
+      <h2>Dérivabilité et continuité</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f \) une fonction définie sur un intervalle \( I \) et \( a \)
+        un nombre qui appartient à \( I \). Si \( f \) est dérivable en \( a \),
+        alors \( f \) est continue en \( a \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Dire que \( f \) est dérivable en \( a \) signifie que la fonction \( g
+        \) définie sur \( I\smallsetminus \left\{ a\right\} \) par
+      </p>
+      $$ g\left( x\right) =\frac{f\left( x\right) -f\left( a\right) }{x-a} $$
+      <p>
+        \( a \) pour limite le nombre réel \( f'(a) \) lorsque \( x \) tend vers
+        \( a \).
+      </p>
+      $$ \forall x \neq a :$$ $$ g\left( x\right) =\frac{f\left( x\right)
+      -f\left( a\right) }{x-a} $$ $$ \Leftrightarrow g\left( x\right) \cdot
+      \left( x-a\right) =f\left( x\right) -f\left( a\right) $$ $$\Leftrightarrow
+      f\left( x\right) =g\left( x\right) \cdot \left( x-a\right) +f\left(
+      a\right) $$
+      <p>On obtient donc</p>
+      $$ \lim_{x\rightarrow a} f\left( x\right) =\lim_{x\rightarrow a} \left(
+      \underbrace{\underbrace{g\left( x\right) }_{\rightarrow f^{\prime }\left(
+      a\right) } \cdot \underbrace{\left( x-a\right) }_{\rightarrow 0}
+      }_{\rightarrow 0} +f\left( a\right) \right) $$
+      <p>\( f \) est donc continue en \( a \)</p>
+      <p>cqfd</p>
+      <h3>Attention</h3>
+      <p>
+        La réciproque du Théorème est fausse. Une fonction peut être continue en
+        \( a \) sans être dérivable en \( a \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Démonstration par un contre exemple. <br />
+        La fonction racine carrée n'est pas dérivable en 0 et sa représentation
+        graphique admet une tangente verticale au point \( (0 ; 0) \). Mais la
+        fonction racine carrée est continue en 0, car:
+      </p>
+      $$ \lim_{x\rightarrow 0} \sqrt{x} =0$$
+      <p>cqfd</p>
+      <h2>Fonctions continues et résolution d'équations</h2>
+      <h3>Théorème des valeurs intermédiaires</h3>
+      <p>
+        Si \( f \) est une fonction continue sur un intervalle \( [a ; b] \) et
+        si \( k \) est un nombre réel compris entre \( f(a) \) et \( f(b) \),
+        alors il existe au moins un nombre réel \( c \) de \( [a ; b] \) tel que
+      </p>
+      $$ f(c)=k $$
+      <h3>Théorème</h3>
+      <p>
+        Si \( f\) est une fonction continue et strictement croissante sur
+        l'intervalle \( I = [a;b] \)
+      </p>
+      <ol>
+        <li>
+          <p>
+            L'image de l'intervalle \( I\) par \( f\) est l'intervalle \(
+            J=[f(a);f(b)]\)
+          </p>
+        </li>
+        <li>
+          <p>Pour tout nombre réel \( k \) de \([f(a);f(b)]\), l'équation</p>
+        </li>
+      </ol>
+      $$ f(x)=k $$
+      <p>a une solution et une seule dans l'intervalle \([a;b] \)</p>
+      <h3>Théorème</h3>
+      <p>
+        Si \( f\) est une fonction continue et strictement monotone sur \(
+        I=[a;b] \) et \( f\left( a\right) \cdot f\left( b\right) < 0 \), alors
+        l'équation \( f\left( x\right) =0 \) a une solution et une seule dans \(
+        I\).
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Si \( f\) est une fonction continue et strictement monotone sur un
+        intervalle \( I\), alors :
+      </p>
+      <ol>
+        <li>
+          <p>
+            L'image \( f(I) \) d'un intervalle \( I\) par \( f\) est un
+            intervalle \( J\).
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour tout nombre réel \( k\) de \( J\), l'équation \( f(x)=k\) a une
+            solution et une seule dans \( I\).
+          </p>
+        </li>
+      </ol>
+      <h2>Résumé</h2>
+      <p>Le tableau suivant résume les différents cas possibles.</p>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <td rowspan="2">$$ Si\ I= $$</td>
+            <td>$$ f\ est\ strictement\ croissante\ sur\ I$$</td>
+            <td>$$ f\ est\ strictement\ décroissante\ sur\ I $$</td>
+          </tr>
+          <tr>
+            <td>$$ f(I)\ est\ l'intervalle$$</td>
+            <td>$$ f(I)\ est\ l'intervalle$$</td>
+          </tr>
+          <tr>
+            <td>$$ [a ; b]$$</td>
+            <td>$$ [f(a); f(b)] $$</td>
+            <td>$$ [f(b); f(a)] $$</td>
+          </tr>
+          <tr>
+            <td>$$ ]a ; b] $$</td>
+            <td>
+              $$ ]\lim_{x\rightarrow a} f\left( x\right) ;f\left( b\right) ] $$
+            </td>
+            <td>
+              $$ [f\left( b\right) ;\lim_{x\rightarrow a} f\left( x\right) [ $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ [a ; b[$$</td>
+            <td>
+              $$[f\left( a\right) ;\lim_{x\rightarrow b} f\left( x\right) [$$
+            </td>
+            <td>
+              $$ ]\lim_{x\rightarrow b} f\left( x\right) ;f\left( a\right) ] $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ ]a ; b[$$</td>
+            <td>
+              $$ ]\lim_{x\rightarrow a} f\left( x\right) ;\lim_{x\rightarrow b}
+              f\left( x\right) [ $$
+            </td>
+            <td>
+              $$ ]\lim_{x\rightarrow a} f\left( x\right) ;\lim_{x\rightarrow b}
+              f\left( x\right) [ $$
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

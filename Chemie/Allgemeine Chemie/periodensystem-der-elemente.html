@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Periodensystem der Elemente</title>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Periodensystem der Elemente</h1>
+
+      <div class="xScrollable">
+        <table class="pseTable">
+          <tr>
+            <th colspan="19">$$Periodensystem\ der\ Elemente$$</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="18">$$Gruppe$$</td>
+          </tr>
+          <tr>
+            <td>$$Periode$$</td>
+            <td>$$1$$</td>
+            <td>$$2$$</td>
+            <td>$$3$$</td>
+            <td>$$4$$</td>
+            <td>$$5$$</td>
+            <td>$$6$$</td>
+            <td>$$7$$</td>
+            <td>$$8$$</td>
+            <td>$$9$$</td>
+            <td>$$10$$</td>
+            <td>$$11$$</td>
+            <td>$$12$$</td>
+            <td>$$13$$</td>
+            <td>$$14$$</td>
+            <td>$$15$$</td>
+            <td>$$16$$</td>
+            <td>$$17$$</td>
+            <td>$$18$$</td>
+          </tr>
+          <tr>
+            <td>$$1$$</td>
+            <td class="pseTableGreen">
+              1 <br />
+              $$\ce{H}$$ <br />
+              1,0
+            </td>
+            <td colspan="16"></td>
+            <td class="pseTableViolet">
+              2 <br />$$\ce{He}$$ <br />
+              4,0
+            </td>
+          </tr>
+          <tr>
+            <td>$$2$$</td>
+            <td class="pseTableRed">3 <br />$$\ce{Li}$$ <br />6,9</td>
+            <td class="pseTablePink">4<br />$$\ce{Be}$$<br />9,0</td>
+            <td colspan="10"></td>
+            <td class="pseTableBrown">5<br />$$\ce{B}$$<br />10,8</td>
+            <td class="pseTableGreen">6<br />$$\ce{C}$$<br />12,0</td>
+            <td class="pseTableGreen">7<br />$$\ce{N}$$<br />14,0</td>
+            <td class="pseTableGreen">8<br />$$\ce{O}$$<br />16,0</td>
+            <td class="pseTableYellow">9<br />$$\ce{F}$$<br />19,0</td>
+            <td class="pseTableViolet">10<br />$$\ce{Ne}$$<br />20,2</td>
+          </tr>
+          <tr>
+            <td>$$3 $$</td>
+            <td class="pseTableRed">11<br />$$\ce{Na}$$<br />23,0</td>
+            <td class="pseTablePink">12<br />$$\ce{Mg}$$<br />24,3</td>
+            <td colspan="10"></td>
+            <td class="pseTableGrey">13<br />$$\ce{Al}$$<br />27,0</td>
+            <td class="pseTableBrown">14<br />$$\ce{Si}$$<br />28,1</td>
+            <td class="pseTableGreen">15<br />$$\ce{P}$$<br />31,0</td>
+            <td class="pseTableGreen">16<br />$$\ce{S}$$<br />32,1</td>
+            <td class="pseTableYellow">17<br />$$\ce{Cl}$$<br />35,5</td>
+            <td class="pseTableViolet">18<br />$$\ce{Ar}$$<br />39,9</td>
+          </tr>
+          <tr>
+            <td>$$4$$</td>
+            <td class="pseTableRed">19<br />$$\ce{K}$$<br />39,1</td>
+            <td class="pseTablePink">20<br />$$\ce{Ca}$$<br />40,1</td>
+            <td class="pseTableLightBlue">21<br />$$\ce{Sc}$$<br />45,0</td>
+            <td class="pseTableLightBlue">22<br />$$\ce{Ti}$$<br />47,9</td>
+            <td class="pseTableLightBlue">23<br />$$\ce{V}$$<br />50,9</td>
+            <td class="pseTableLightBlue">24<br />$$\ce{Cr}$$<br />52,0</td>
+            <td class="pseTableLightBlue">25<br />$$\ce{Mn}$$<br />54,9</td>
+            <td class="pseTableLightBlue">26<br />$$\ce{Fe}$$<br />55,8</td>
+            <td class="pseTableLightBlue">27<br />$$\ce{Co}$$<br />58,9</td>
+            <td class="pseTableLightBlue">28<br />$$\ce{Ni}$$<br />58,7</td>
+            <td class="pseTableLightBlue">29<br />$$\ce{Cu}$$<br />63,5</td>
+            <td class="pseTableLightBlue">30<br />$$\ce{Zn}$$<br />65,4</td>
+            <td class="pseTableGrey">31<br />$$\ce{Ga}$$<br />69,7</td>
+            <td>32<br />$$\ce{Ge}$$<br />72,6</td>
+            <td class="pseTableBrown">33<br />$$\ce{As}$$<br />74,9</td>
+            <td>34<br />$$\ce{Se}$$<br />79,0</td>
+            <td class="pseTableYellow">35<br />$$\ce{Br}$$<br />79,9</td>
+            <td class="pseTableViolet">36<br />$$\ce{Kr}$$<br />83,8</td>
+          </tr>
+          <tr>
+            <td>$$5$$</td>
+            <td class="pseTableRed">37<br />$$\ce{Rb}$$<br />85,5</td>
+            <td class="pseTablePink">38<br />$$\ce{Sr}$$<br />87,6</td>
+            <td class="pseTableLightBlue">39<br />$$\ce{Y}$$<br />88,9</td>
+            <td class="pseTableLightBlue">40<br />$$\ce{Zr}$$<br />91,2</td>
+            <td class="pseTableLightBlue">41<br />$$\ce{Nb}$$<br />92,9</td>
+            <td class="pseTableLightBlue">42<br />$$\ce{Mo}$$<br />95,9</td>
+            <td>43<br />$$\ce{Tc}$$<br />99</td>
+            <td class="pseTableLightBlue">44<br />$$\ce{Ru}$$<br />101,1</td>
+            <td class="pseTableLightBlue">45<br />$$\ce{Rh}$$<br />102,9</td>
+            <td class="pseTableLightBlue">46<br />$$\ce{Pd}$$<br />106,4</td>
+            <td class="pseTableLightBlue">47<br />$$\ce{Ag}$$<br />107,9</td>
+            <td class="pseTableLightBlue">48<br />$$\ce{Cd}$$<br />112,4</td>
+            <td class="pseTableGrey">49<br />$$\ce{In}$$<br />114,8</td>
+            <td class="pseTableGrey">50<br />$$\ce{Sn}$$<br />118,7</td>
+            <td>51<br />$$\ce{Sb}$$<br />121,8</td>
+            <td class="pseTableBrown">52<br />$$\ce{Te}$$<br />127,6</td>
+            <td class="pseTableYellow">53<br />$$\ce{I}$$<br />126,9</td>
+            <td class="pseTableViolet">54<br />$$\ce{Xe}$$<br />131,3</td>
+          </tr>
+          <tr>
+            <td>$$6$$</td>
+            <td class="pseTableRed">55<br />$$\ce{Cs}$$<br />132,9</td>
+            <td class="pseTablePink">56<br />$$\ce{Ba}$$<br />137,3</td>
+            <td>$$57-71$$</td>
+            <td class="pseTableLightBlue">72<br />$$\ce{Hf}$$<br />178,5</td>
+            <td class="pseTableLightBlue">73<br />$$\ce{Ta}$$<br />180,9</td>
+            <td class="pseTableLightBlue">74<br />$$\ce{W}$$<br />183,8</td>
+            <td class="pseTableLightBlue">75<br />$$\ce{Re}$$<br />186,2</td>
+            <td class="pseTableLightBlue">76<br />$$\ce{Os}$$<br />190,2</td>
+            <td class="pseTableLightBlue">77<br />$$\ce{Ir}$$<br />192,2</td>
+            <td class="pseTableLightBlue" s>78<br />$$\ce{Pt}$$<br />195,1</td>
+            <td class="pseTableLightBlue">79<br />$$\ce{Au}$$<br />197,0</td>
+            <td>80<br />$$\ce{Hg}$$<br />200,6</td>
+            <td class="pseTableGrey">81<br />$$\ce{Tl}$$<br />204,4</td>
+            <td class="pseTableGrey">82<br />$$\ce{Pb}$$<br />207,2</td>
+            <td class="pseTableGrey">83<br />$$\ce{Bi}$$<br />209,0</td>
+            <td>84<br />$$\ce{Po}$$<br />209</td>
+            <td>85<br />$$\ce{At}$$<br />210</td>
+            <td class="pseTableViolet">86<br />$$\ce{Rn}$$<br />222</td>
+          </tr>
+          <tr>
+            <td>$$7$$</td>
+            <td class="pseTableRed">87<br />$$\ce{Fr}$$<br />223</td>
+            <td class="pseTablePink">88<br />$$\ce{Ra}$$<br />226</td>
+            <td>$$89-103$$</td>
+            <td>104<br />$$\ce{Rf}$$<br />261</td>
+            <td>105<br />$$\ce{Db}$$<br />262</td>
+            <td>106<br />$$\ce{Sg}$$<br />263</td>
+            <td>107<br />$$\ce{Bh}$$<br />262</td>
+            <td>108<br />$$\ce{Hs}$$<br />265</td>
+            <td>109<br />$$\ce{Mt}$$<br />268</td>
+            <td>110<br />$$\ce{Ds}$$<br />269</td>
+            <td>111<br />$$\ce{Rg}$$<br />272</td>
+            <td>112<br />$$\ce{Cn}$$<br />277</td>
+            <td>113<br />$$\ce{Nh}$$</td>
+            <td>114<br />$$\ce{Fl}$$</td>
+            <td>115<br />$$\ce{Mc}$$</td>
+            <td>116<br />$$\ce{Lv}$$</td>
+            <td>117<br />$$\ce{Ts}$$</td>
+            <td>119<br />$$\ce{Og}$$</td>
+          </tr>
+          <tr>
+            <td colspan="3">$$Lanthanoide$$</td>
+            <td class="pseTableLightBlue">57<br />$$\ce{La}$$<br />138,9</td>
+            <td>58<br />$$\ce{Ce}$$<br />140,1</td>
+            <td>59<br />$$\ce{Pr}$$<br />140,9</td>
+            <td>60<br />$$\ce{Nd}$$<br />144,2</td>
+            <td>61<br />$$\ce{Pm}$$<br />147</td>
+            <td>62<br />$$\ce{Sm}$$<br />150,4</td>
+            <td>63<br />$$\ce{Eu}$$<br />152,0</td>
+            <td>64<br />$$\ce{Gd}$$<br />157,3</td>
+            <td>65<br />$$\ce{Tb}$$<br />158,9</td>
+            <td>66<br />$$\ce{Dy}$$<br />162,5</td>
+            <td>67<br />$$\ce{Ho}$$<br />164,9</td>
+            <td>68<br />$$\ce{Er}$$<br />167,3</td>
+            <td>69<br />$$\ce{Tm}$$<br />168,9</td>
+            <td>70<br />$$\ce{Yb}$$<br />173,0</td>
+            <td>71<br />$$\ce{Lu}$$<br />175,0</td>
+            <td colspan="1"></td>
+          </tr>
+          <tr>
+            <td colspan="3">$$Actinoide$$</td>
+            <td class="pseTableLightBlue">89<br />$$\ce{Ac}$$<br />227</td>
+            <td>90<br />$$\ce{Th}$$<br />232</td>
+            <td>91<br />$$\ce{Pa}$$<br />231</td>
+            <td>92<br />$$\ce{U}$$<br />238</td>
+            <td>93<br />$$\ce{Np}$$<br />237</td>
+            <td>94<br />$$\ce{Pu}$$<br />244</td>
+            <td>95<br />$$\ce{Am}$$<br />243</td>
+            <td>96<br />$$\ce{Cm}$$<br />247</td>
+            <td>97<br />$$\ce{Bk}$$<br />247</td>
+            <td>98<br />$$\ce{Cf}$$ <br />251</td>
+            <td>99<br />$$\ce{Es}$$<br />252</td>
+            <td>100<br />$$\ce{Fm}$$<br />257</td>
+            <td>101<br />$$\ce{Md}$$<br />258</td>
+            <td>102<br />$$\ce{No}$$<br />259</td>
+            <td>103<br />$$\ce{Lr}$$<br />260</td>
+            <td colspan="1"></td>
+          </tr>
+        </table>
+      </div>
+      <h2>Legende</h2>
+      <ul>
+        <li><p>Rot : Alkalimetalle</p></li>
+        <li><p>Hellrot : Erdalkalimetalle</p></li>
+        <li><p>Hellblau : Übergangsmetalle</p></li>
+        <li><p>Grau : Metalle</p></li>
+        <li><p>Braun : Halbmetalle</p></li>
+        <li><p>Grün : Nichtmetalle</p></li>
+        <li><p>Gelb : Halogene</p></li>
+        <li><p>Lila : Edelgase</p></li>
+        <li><p>Zahl über dem Atom : Ordnungszahl</p></li>
+        <li><p>Zahl unter dem Atom : Atomgewicht</p></li>
+      </ul>
+    </div>
+  </body>
+  <style>
+    .pseTable,
+    td {
+      padding: 10px;
+    }
+    .pseTableGreen {
+      background-color: lightgreen;
+    }
+    .pseTableRed {
+      background-color: red;
+    }
+    .pseTablePink {
+      background-color: pink;
+    }
+    .pseTableLightBlue {
+      background-color: aqua;
+    }
+    .pseTableGrey {
+      background-color: grey;
+    }
+    .pseTableViolet {
+      background-color: blueviolet;
+    }
+    .pseTableBrown {
+      background-color: burlywood;
+    }
+    .pseTableYellow {
+      background-color: yellow;
+    }
+  </style>
+</html>

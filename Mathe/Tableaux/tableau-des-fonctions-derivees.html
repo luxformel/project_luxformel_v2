@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Tableau Fonctions-Dérivées</title>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Fonctions-Dérivées</h1>
+      <h2>Tableau Fonctions-Dérivées</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>$$f\left( x\right)$$</th>
+            <th>$$D_{f}$$</th>
+            <th>$$f^{\prime }\left( x\right)$$</th>
+            <th>$$D_{f^{\prime }}$$</th>
+          </tr>
+          <tr>
+            <td>$$k\ (constante)$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$0$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$x$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$1$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$ax+b$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$a$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$x^{2}$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$2x$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$\frac{1}{x}$$</td>
+            <td>$$\mathbb{R}^{\ast}$$</td>
+            <td>$$-\frac{1}{x^{2}} $$</td>
+            <td>$$\mathbb{R}^{\ast}$$</td>
+          </tr>
+          <tr>
+            <td>$$\sqrt{x} $$</td>
+            <td>$$\mathbb{R}_{+}$$</td>
+            <td>$$\frac{1}{2\sqrt{x} } $$</td>
+            <td>$$\mathbb{R}^{\ast }_{+}$$</td>
+          </tr>
+          <tr>
+            <td>$$x^{n}\ avec\ n\in \mathbb{N}\ et\ n>1$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$nx^{x-1}$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$\sin \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$\cos \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$\cos \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$-\sin \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$-\sin \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$-\cos \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$-\cos \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$\sin \left( x\right)$$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$\tan \left( x\right)$$</td>
+            <td>
+              $$\mathbb{R} \backslash \left( \frac{&pi; }{2} \ mod\ 2&pi;
+              \right) $$
+            </td>
+            <td>
+              $$\frac{1}{\cos^{2} \left( x\right) } =1+\tan^{2} \left( x\right)
+              $$
+            </td>
+            <td>
+              $$\mathbb{R} \backslash \left( \frac{&pi; }{2} \ mod\ 2&pi;
+              \right) $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ e^{x} $$</td>
+            <td>$$\mathbb{R}$$</td>
+            <td>$$ e^{x} $$</td>
+            <td>$$\mathbb{R}$$</td>
+          </tr>
+          <tr>
+            <td>$$ \ln(x)$$</td>
+            <td>$$\mathbb{R}^{*}_{+}$$</td>
+            <td>$$\frac{1}{x}$$</td>
+            <td>$$\mathbb{R}^{*}_{+}$$</td>
+          </tr>
+          <tr>
+            <td>$$u\left( x\right) +v\left( x\right) $$</td>
+            <td>$$D_{u}\cap D_{v}$$</td>
+            <td>$$u^{\prime }\left( x\right) +v^{\prime }\left( x\right) $$</td>
+            <td>$$D_{u^{\prime }}\cap D_{v^{\prime }}$$</td>
+          </tr>
+          <tr>
+            <td>$$u\left( x\right) -v\left( x\right) $$</td>
+            <td>$$D_{u}\cap D_{v}$$</td>
+            <td>$$u^{\prime }\left( x\right) -v^{\prime }\left( x\right) $$</td>
+            <td>$$D_{u^{\prime }}\cap D_{v^{\prime }}$$</td>
+          </tr>
+          <tr>
+            <td>$$k\cdot u(x)\ avec\ k\in \mathbb{R}$$</td>
+            <td>$$D_{u}$$</td>
+            <td>$$k\cdot u^{\prime }(x)$$</td>
+            <td>$$D_{u^{\prime }}$$</td>
+          </tr>
+          <tr>
+            <td>$$u(x)\cdot v(x)$$</td>
+            <td>$$D_{u}\cap D_{v}$$</td>
+            <td>$$u^{\prime }(x)\cdot v(x)+u(x)\cdot v^{\prime }(x)$$</td>
+            <td>$$D_{u^{\prime }}\cap D_{v^{\prime }}$$</td>
+          </tr>
+          <tr>
+            <td>$$\frac{1}{u\left( x\right) } $$</td>
+            <td>$$D_{u} \backslash \{ x|u(x)=0\} $$</td>
+            <td>
+              $$-\frac{u^{\prime }\left( x\right) }{u^{2}\left( x\right) } $$
+            </td>
+            <td>$$D_{u^{\prime }} \backslash \{ x|u(x)=0\} $$</td>
+          </tr>
+          <tr>
+            <td>$$\frac{u\left( x\right) }{v\left( x\right) } $$</td>
+            <td>$$D_{v}\cap D_{u} \backslash \{ x|u(x)=0\} $$</td>
+            <td>
+              $$\frac{u^{\prime }\left( x\right) v\left( x\right) -u\left(
+              x\right) v^{\prime }\left( x\right) }{v^{2}\left( x\right) } $$
+            </td>
+            <td>
+              $$D_{v^{\prime }}\cap D_{u^{\prime }} \backslash \{ x|u(x)=0\} $$
+            </td>
+          </tr>
+          <tr>
+            <td>
+              $$v(u\left( x\right) )=\left( v\circ u\left( x\right) \right) $$
+            </td>
+            <td>$$D_{u}\cap \left\{ x|v\left( x\right) \in D_{v}\right\} $$</td>
+            <td>
+              $$v^{\prime }\left( u\left( x\right) \right) \cdot u^{\prime
+              }\left( x\right) $$
+            </td>
+            <td>
+              $$D_{u^{\prime }}\cap \left\{ x|v\left( x\right) \in D_{v^{\prime
+              }}\right\} $$
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2>Cas particuliers</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>$$Nom$$</th>
+            <th>$$f(x)$$</th>
+            <th>$$f^{\prime}(x)$$</th>
+          </tr>
+          <tr>
+            <td>$$ fonction\ puissance$$</td>
+            <td>$$ f\left( x\right) =\left[ u\left( x\right) \right]^{n} $$</td>
+            <td>
+              $$ f^{\prime }\left( x\right) =n\left[ u\left( x\right)
+              \right]^{n-1} \cdot u^{\prime }\left( x\right) $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ racine\ carrée $$</td>
+            <td>$$ f\left( x\right) =\sqrt{u\left( x\right) } $$</td>
+            <td>
+              $$ f^{\prime }\left( x\right) =\frac{u^{\prime }\left( x\right)
+              }{2\sqrt{u\left( x\right) } } $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ sinus $$</td>
+            <td>
+              $$ f\left( x\right) =\sin \left[ u\left( x\right) \right] $$
+            </td>
+            <td>
+              $$ f^{\prime}\left( x\right) =\cos \left[ u\left( x\right) \right]
+              \cdot u^{\prime }(x) $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ arcsinus $$</td>
+            <td>$$ f\left( x\right) =\sin^{-1} (x) $$</td>
+            <td>$$ f^{\prime}\left( x\right) = \frac{1}{\sqrt{1-x^{2}} } $$</td>
+          </tr>
+          <tr>
+            <td>$$fonction\ cosinus$$</td>
+            <td>$$f\left( x\right) =\cos \left[ u\left( x\right) \right] $$</td>
+            <td>
+              $$ f^{\prime }\left( x\right) =-\sin \left[ u\left( x\right)
+              \right] \cdot u^{\prime }\left( x\right) $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ arccosinus $$</td>
+            <td>$$ f\left( x\right) =\cos^{-1} (x) $$</td>
+            <td>
+              $$ f^{\prime}\left( x\right) = - \frac{1}{\sqrt{1-x^{2}} } $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ tangente$$</td>
+            <td>
+              $$ f\left( x\right) =\tan \left[ u\left( x\right) \right] $$
+            </td>
+            <td>
+              $$ f^{\prime }\left( x\right) =\frac{u^{\prime }\left( x\right)
+              }{\cos^{2} \left[ u\left( x\right) \right] } =\left\{ 1+\tan^{2}
+              \left[ u\left( x\right) \right] \right\} \cdot u^{\prime }\left(
+              x\right) $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ arctangente $$</td>
+            <td>$$ f\left( x\right) =\tan^{-1} (x) $$</td>
+            <td>$$ f^{\prime}\left( x\right) = \frac{1}{1+x^{2}} $$</td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ exponentielle$$</td>
+            <td>$$ f\left( x\right) =e^{u\left( x\right) } $$</td>
+            <td>
+              $$ f^{\prime }\left( x\right) =e^{u\left( x\right) }\cdot
+              u^{\prime }\left( x\right) $$
+            </td>
+          </tr>
+          <tr>
+            <td>$$ fonction\ logarithme$$</td>
+            <td>
+              $$ f\left( x\right) =\ln \left [ u\left( x\right) \right] $$
+            </td>
+            <td>
+              $$f^{\prime }\left( x\right) =\frac{u^{\prime }\left( x\right)
+              }{u\left( x\right) } $$
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

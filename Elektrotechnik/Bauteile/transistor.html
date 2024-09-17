@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Transistor</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Transistor</h1>
+      <h2>Aufbau</h2>
+      <p>
+        Der NPN-Transistor besteht aus zwei N-leitenden Zonen, zwischen denen
+        sich eine schmale P- leitende Zone befindet. Die drei Schichten und ihre
+        zugehörigen Anschlüsse werden bei den bipolaren Transistoren als
+        <dfn title="emittere (lat.) = aussenden">Emitter</dfn> $E$,
+        <dfn title="basis (lat.) = Grundlage">Basis</dfn> $B$ und
+        <dfn title="collector (lat.) = Sammler">Kollektor</dfn> $C$ bezeichnet.
+        Der Emitter liefert die Ladungsträger. Der Kollektor sammelt die
+        Ladungsträger wieder ein. Die Basis ist die Steuerelektrode. Im Prinzip
+        ist der Aufbau des Transistors ähnlich wie zwei gegensinnig geschaltete
+        Dioden. Ein Transistor kann aber nicht aus zwei getrennten Dioden
+        aufgebaut werden, da die Basis nur einige $\mu m$ dick sein darf.
+      </p>
+      <img
+        src="../img/Transistor/aufbauTransistor.png"
+        alt="Aufbau eines Transistors"
+        class="zeichnungen"
+      />
+      <h2>Schaltzeichen</h2>
+      <p>
+        Hier abgebildet sind das Schaltzeichen eines Transistors sowie alle
+        Ströme und Spannungen.
+      </p>
+      <img
+        src="../img/Transistor/schaltsymbolTransistor.png"
+        alt="schaltsymbol eines Transistors"
+        class="zeichnungen"
+      />
+      <h2>Funktionsweise</h2>
+      <p>
+        Im NPN-Transistor befinden sich zwei PN-Übergänge. Es entstehen also
+        zwei Sperrschichten in welchen sich keine freien Ladungsträger befinden.
+        Ist die Basis-Emitter-Spannung $U_{BE} = 0V$ oder kleiner als die
+        Schleusenspannung $U_S \simeq 0,7V$ der Basis-Emitter-Strecke, so sperrt
+        der Transistor und es flieẞt kein Strom $I_B = 0$, $I_C = 0$. Wird die
+        Basis-Emitter-Spannung UBE größer als die Schleusenspannung $U_S \simeq
+        0,7V$ der Basis- Emitter-Strecke, so beginnt der Transistor zu leiten.
+        Es flieẞt ein großer Strom $I_C$ vom Kollektor zum Emitter und ein sehr
+        kleiner Strom $I_B$. Die Emitterzone ist beim Bipolartransistor stark
+        dotiert, die Kollektorzone etwas weniger. Die auẞerordentlich dünne
+        Basisschicht enthält nur eine geringe Anzahl Fremdatome. Flieẞt ein
+        Basisstrom $I_B$, überfluten vom Emitter her viele Elektronen die dünne
+        Basisschicht. Da diese Schicht nur schwach dotiert ist, können nur
+        wenige Elektronen mit Löchern rekombinieren. Es flieẞt nur ein schwacher
+        Basisstrom. Die meisten Ladungsträger gelangen durch das starke
+        elektrische Feld der Basis-Kollektor-Sperrschicht zum Kollektor, wodurch
+        ein hoher Kollektorstrom entsteht. Er kann um den Faktor 10 bis 500 mal
+        größer sein als der Basisstrom.
+      </p>
+      <img
+        src="../img/Transistor/funktionsweise.png"
+        alt="Funktionsweise eines Transistors"
+        class="zeichnungen"
+      />
+      <p>
+        Mit einem kleinen Basisstrom $I_B$ kann somit ein großer Kollektorstrom
+        $I_C$ gesteuert werden. Dies erklärt die Verstärkungswirkung des
+        Transistors. Um den kleinen Basisstrom $I_B$ in einen großen
+        Kollektorstrom $I_C$ zu verstärken, muss natürlich eine externe
+        Energiequelle zur Verfügung stehen, die den gröẞeren Kollektorstrom auch
+        liefern kann. Diese externe Energiequelle ist die Versorgungsspannung
+        $U_B$, hier eine Batterie der Transistorschaltung. Der Emitterstrom
+        $I_E$ ist die Summe aus Kollektorstrom $I_C$ und Basisstrom $I_B$.
+      </p>
+      <h3>Formel</h3>
+      $$ I_E = I_C + I_B $$
+      <p>wobei:</p>
+      $$I_B \ll I_C $$
+      <p>also fast vernachlässigbar</p>
+      <h3>Fazit</h3>
+      <p>Ein kleiner Basisstrom steuert einen großen Kollektorstrom.</p>
+      <h2>Bestimmung der Kennlinien</h2>
+      <p>
+        Wie bei einer Diode lassen sich auch bei einem Transistor Kennlinien
+        messtechnisch mit der folgenden Versuchsschaltung aufnehmen:
+      </p>
+      <img
+        src="../img/Transistor/versuchsaufbauKennlinien.png"
+        alt="Aufbau zur Bestimmung der Transistorkennlinie"
+        class="zeichnungen"
+      />
+      <h2>Eingangskennlinie</h2>
+      <p>
+        Der Zusammenhang zwischen dem Basisstrom $I_B$ und der
+        Basis-Emitterspannung $U_{BE}$ wird als Eingangskennlinie eines
+        Transistors bezeichnet. Weil es sich hierbei um einen PN-Übergang
+        handelt ist die Kennlinie identisch mit einer Diodenkennlinie.
+      </p>
+      <img
+        src="../img/Transistor/eingangskennlinie.png"
+        alt="Eingangskennlinie"
+        class="zeichnungen"
+      />
+      <p>
+        Die Eingangskennlinie hat den Verlauf einer in Durchlassrichtung
+        betriebenen Diode. Für Siliziumtransistoren ergibt sich eine
+        Schleusenspannung von ungefähr 0,65$V$. Erst nach Überschreiten der
+        Schleusenspannung kann ein Basisstrom flieẞen.
+      </p>
+      <h2>Stromsteuerkennlinie, Stromverstärkungskennlinie</h2>
+      <p>
+        Die Stromsteuerkennlinie gibt den Zusammenhang zwischen Kollektorstrom
+        $I_C$ und Basisstrom $I_B$ an.
+      </p>
+      <img
+        src="../img/Transistor/Stromsteuerkennlinie.png"
+        alt="Stromsteuerkennlinie"
+        class="zeichnungen"
+      />
+      <h2>Gleichstromverstärkung</h2>
+      <p>
+        Das Verhältnis zwischen Kollektorstrom $I_C$ und Basisstrom $I_B$ wird
+        als Gleichstromverstärkung $B$ bezeichnet.
+      </p>
+      <h3>Formel</h3>
+      $$ B = \frac{I_C}{I_B} $$
+      <h2>Ausgangskennlinien</h2>
+      <p>
+        Die Ausgangskennlinie gibt den Zusammenhang zwischen $I_C$ und $U_{CE}$
+        bei einem konstanten Basisstrom $I_B$ an. Weil dieser Zusammenhang für
+        jeden Basisstrom ändert, gibt es für jeden Basisstrom eine eigene
+        Kennlinie. Man erhält somit ein Ausgangskennlinienfeld.
+      </p>
+      <img
+        src="../img/Transistor/Ausgangskennlinien.png"
+        alt="Ausgangskennlinien"
+        class="zeichnungen"
+      />
+      <h2>Grenzwerte</h2>
+      <p>
+        Jeder Transistor hat natürlich auch Grenzwerte die nicht überschritten
+        werden dürfen, ansonsten wird der Transistor zerstört.
+      </p>
+      <ul>
+        <li>
+          <p>maximaler Kollektorstrom $I_{Cmax}$</p>
+        </li>
+        <li>
+          <p>maximaler Basisstrom $I_{Bmax}$</p>
+        </li>
+        <li>
+          <p>maximale Kollektor-Emitter-Spannung $U_{CEmax}$</p>
+        </li>
+        <li>
+          <p>
+            maximale Verlustleistung $P_{Vmax}$, dies hängt von der Kühlung des
+            Transistors ab <br />
+            mit:
+          </p>
+          $$ P_V = U_{CE} \cdot I_{C} + U_{BE} \cdot I_B $$
+        </li>
+      </ul>
+      <h2>Vierquadranten-Kennlinienfeld</h2>
+      <p>
+        Werden die 3 Kennlinien zu einem so genannten
+        Vierquadranten-Kennlinienfeld zusammengefügt, so erkennt man die
+        Verstärkungswirkung. Legt man eine konstante Betriebsspannung $U_{CE}$
+        von zum Beispiel $U_{CE}$ = 5$V$, an den Transistor und verändert die
+        Eingangsspannung $U_{BE}$ zwischen 0,6$V$ und 0,8$V$, so ergeben sich
+        verschiedene Basisströme $I_B$. Für jeden Basisstrom $I_B$ erhält man
+        einen verstärkten Kollektorstrom $I_C$ und einen entsprechenden
+        Arbeitspunkt $A$ auf einer Ausgangskennlinie.
+      </p>
+      <img
+        src="../img/Transistor/4Quadranten.png"
+        alt="Vierquadranten-Kennlinienfeld"
+        class="zeichnungen"
+      />
+    </div>
+  </body>
+</html>

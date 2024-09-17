@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+    <script defer src="/settings/settings.js"></script>
+    <title>Formelsammlung Wellenoptik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Formelsammlung Wellenoptik</h1>
+      <h2>Konstruktive Interferenz, Verstärkung</h2>
+      $$ \Delta s = 2k \cdot \frac{\lambda}{2} $$
+      <p>mit $k \in \mathbb{Z}$</p>
+      <h2>Destruktive Interferenz, Auslöschung</h2>
+      $$ \Delta s = \left( 2K+1 \right) \cdot \frac{\lambda}{2}$$
+      <p>mit $k \in \mathbb{Z}$</p>
+      <h2>Resümierende Tabelle</h2>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>
+              <p>Spalttyp</p>
+            </th>
+            <th>
+              <p>Verstärkung</p>
+            </th>
+            <th>
+              <p>Auslöschung</p>
+            </th>
+            <th>
+              <p>Gültigkeits&shy;bedingung</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p>Einfachspalt</p>
+            </td>
+            <td>
+              <p>$\sin(\alpha_k) = \frac{2k+1}{l} \cdot \frac{\lambda}{2}$</p>
+            </td>
+            <td>
+              <p>$\sin(\alpha_k) = \frac{2k}{l} \cdot \frac{\lambda}{2}$</p>
+            </td>
+            <td>
+              <p>$k \in \mathbb{Z}^*$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Doppelspalt</p>
+            </td>
+            <td>
+              <p>$\sin(\alpha_k) = \frac{2k}{g} \cdot \frac{\lambda}{2}$</p>
+            </td>
+            <td>
+              <p>$\sin(\alpha_k) = \frac{2k+1}{g} \cdot \frac{\lambda}{2}$</p>
+            </td>
+
+            <td>
+              <p>$k \in \mathbb{Z}$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Gitter</p>
+            </td>
+            <td>
+              <p>$\sin(\alpha_k) = \frac{2k}{g} \cdot \frac{\lambda}{2}$</p>
+            </td>
+            <td>-</td>
+            <td>
+              <p>$k \in \mathbb{Z}$</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

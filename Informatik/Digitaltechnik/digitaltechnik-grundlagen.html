@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Grundlagen der Digitaltechnik</h1>
+      <h2>Information</h2>
+      <h3>Definition</h3>
+      <p>Information ist der Vorgang Wissen zu übertragen.</p>
+      <h2>Wissen</h2>
+      <h3>Definition</h3>
+      <p>Wissen sind gespeicherte Daten.</p>
+      <h2>Daten</h2>
+      <h3>Definition</h3>
+      <p>
+        Daten sind räumliche oder zeitliche Folgen von physikalischen Signalen
+        oder Folgen von Bits. Daten können, oder auch nicht, Informationen
+        enthalten, die ihnen eine Bedeutung verleihen.
+      </p>
+      <hr />
+      <p>
+        Information lässt sich mittels Daten transportieren und speichern. Wo
+        die Bedeutung klar ist, werden die Begriffe Daten und Information häufig
+        synonym verwendet.
+      </p>
+      <h2>Ebenen des Verstehens</h2>
+      <p>Um etwas zu verstehen zu können wird folgende Taktik angewendet.</p>
+      <ul>
+        <li>
+          <p>Syntax: Grammatik, Ortographie</p>
+
+          <p>Die Syntax gibt an wie Daten angeschrieben werden müssen.</p>
+        </li>
+        <li>
+          <p>Semantik: Bedeutung, Sinn</p>
+          <p>Die Semantik gibt an was die Bedeutung der Daten ist.</p>
+        </li>
+        <li>
+          <p>Pragmatik</p>
+          <p>
+            Die Pragmatik gibt an was durch die Vermittlung der Daten nun
+            geschehen soll.
+          </p>
+        </li>
+      </ul>
+      <h2>Informationstragende Einheiten</h2>
+      <ol>
+        <li>
+          <p><u>Bit</u></p>
+          <p>
+            Die kleinst mögliche Einheit der Information ist das Bit. Bei einem
+            Bit sind nur 2 Zustände möglich.Diese sind $0$ und $1$.
+          </p>
+        </li>
+        <li>
+          <p><u>Byte</u></p>
+          <p>8 Bits bilden ein Byte.</p>
+        </li>
+        <li>
+          <p><u>Wort</u></p>
+          <p>16 Bits bilden ein Wort.</p>
+        </li>
+        <li>
+          <p><u>Doppelwort, zwei Wörter</u></p>
+          <p>
+            32 Bits oder 2 Bytes bilden zwei Wörter oder auch ein Doppelwort.
+          </p>
+        </li>
+      </ol>
+      <h3>Bemerkung</h3>
+      <p>
+        Siehe
+        <a href="Tabellen/vorsilben.html">Vorsilben</a>, für eine Tabelle der
+        Binären-Vorsilben.
+      </p>
+      <p>
+        Diese Binären-Vorsilben wurden im Jahre 1998 von der International
+        Electronical Commission oder IEC festgelegt, da vorher die dezimalen
+        Vorsilben benutzt wurden um Binäremengen zu beschreiben was einen Fehler
+        mit sich brachte.
+      </p>
+      <h2>Quantisieren</h2>
+      <p>
+        Die physikalische Welt besteht aus analogen Signalen oder Werten. Da die
+        analogen Signale und Werte kontinuierlich und extrem präzise sind, setzt
+        dies eine Quantisierung voraus. <br />
+        Die analogen Signale und Werte werden also unterteilt in brauchbare und
+        leicht zu verarbeitbare Größen. <br />
+        Eine Quantisierung kann in Wertebereich und im Zeitbereich stattfinden.
+        <br />
+      </p>
+      <h2>ADU, Analog Digital Umsetzer</h2>
+      <p>
+        Die Quantisierung findet mit einem sogenannten ADU statt. <br />
+        Eine ADU hat eine angegebene Präzision diese wird in Bits gemessen.
+        Diese Präzision wird als Wortlänge bezeichnet. <br />
+        Hieraus ergibt sich der Wertebereich der Digitalisierung.
+      </p>
+      <h2>Auflösung eines ADU's</h2>
+      <p>Sei $x$ die Wortlänge eines bestimmten ADU's, also:</p>
+      $$ x-Bit-ADU $$
+      <p>
+        Die Anzahl an Bits gibt die Anzahl von möglichen Werten pro Einheit an,
+        in einer Zweier Potenz.
+      </p>
+      <p>Es gilt: $2^x$ - Anzahl an Werten oder Stufenhöhe für den ADU.</p>
+
+      <h2>Linearität des ADU's</h2>
+      <p>
+        Die Linearität einer Messung eines ADU's gibt an wie gleich die
+        Messungen von einander sind. Eine perfekte lineare Messung ist gewollt,
+        sprich äquidistante Stufenhöhen. Das heißt die Messungen sind alle
+        gleich Groß, keine ist größer oder kleiner als eine andere.
+      </p>
+      <h2>Genauigkeit eines ADU's</h2>
+      <p>
+        Die Genauigkeit eines ADU's setzt sich aus der Stufenhöhe und dem
+        Linearitätsfehler zusammen.
+      </p>
+      <h2>Abtastrate eines ADU's</h2>
+      <p>
+        Die Abtastrate eines ADU's gibt an wie oft pro Zeiteinheit eine Messung
+        durchgeführt wird.
+      </p>
+      <h2>Kenngrößen des Signals</h2>
+      <p>Das Signal wird durch Periodendauer und Frequenz definiert.</p>
+      <h2>Kenngrößen der Abtastung</h2>
+      <p>
+        Die Abtastung wird durch die Abtastpunkte und die Fensterdauer
+        definiert.
+      </p>
+      <h2>Abtastfrequenz, Tastfrequenz, Nyquist-Frequenz</h2>
+      <p>Aus der definition der Abtastfrequenz ergibt sich:</p>
+      <h3>Formel</h3>
+      $$ f_{tast} = \frac{N}{T} $$
+      <p>wobei:</p>
+      $$N,\ Anzahl\ der\ Abtastpunkte$$ $$ T,\ Fensterdauer $$
+      <h2>Abtastintervall, Tastintervall</h2>
+      <p>Aus der definition der Abtastintervall ergibt sich:</p>
+      <h3>Formel</h3>
+      $$ t_{tast} = \frac{T}{N} $$
+      <p>wobei:</p>
+      $$N,\ Anzahl\ der\ Abtastpunkte$$ $$ T,\ Fensterdauer $$
+      <h2>Aliasing, Aliasing-Effekt</h2>
+      <p>
+        Aliasing ist ein Fehler der auftreten kann, bei dem ein Signal nicht
+        eindeutig wieder rekonstruiert werden kann. Das geschieht wenn im
+        abzutastendem Signal ein Signal vorkommt, das höher ist als die halbe
+        Abtastfrequenz.
+      </p>
+      <h2>Shannon Theorem</h2>
+      <p>
+        Ein Signal kann aus seinen Abtastwerten nur dann eindeutig rekonstruiert
+        werden, wenn die Abtastfrequenz mehr als doppelt so groß ist als die
+        höchste im Signal vorkommende Frequenz.
+      </p>
+      <h2>Vermeidung von Aliasing</h2>
+      <p>Der Aliasing-Effekt kann vermieden werden durch:</p>
+      <ul>
+        <li>
+          <p>
+            Erhöhung der Abtastfrequenz über das Doppelte der im Signal
+            vorkommenden Frequenzen.
+          </p>
+        </li>
+        <li>
+          <p>Analoge Tiefpass-Filterung des Signals vor der Abtastung.</p>
+        </li>
+      </ul>
+      <h2>Maximale Quantisierungsfehler</h2>
+      <p>
+        Der maximale Quantisierungsfehler $F_{Qmax}$ ergibt sich aus der
+        Intervallgröße des analogen Signals, sowie dem Wertebereich des
+        digitalen Signals und technisch bedingten Ansprechschwellen.
+      </p>
+      <h2>Unsicherheit im Quantisierungsfehler</h2>
+      <p>
+        Die Unsicherheit eines Quantisierungsfehler gibt an wie groß der Fehler
+        einer Quantisierung ist. <br />
+        Die Unsicherheit wird oft mit dem Buchstaben $\delta$, angeben.
+      </p>
+      <h2>Formeln</h2>
+      <p>
+        Sei das analoge Signal in den Grenzen $S_{min} < S_{max}$ gegeben. Das
+        digitale Signal verfüge über $N$ Werte, dann ergibt sich die
+      </p>
+      <ul>
+        <li>
+          <p>Intervallbreite</p>
+          $$ \Delta S_i = \frac{S_{max} - S_{min}}{N - 1} $$
+        </li>
+        <li>
+          <p>Maximalerquantisierungsfehler ohne Unsicherheit</p>
+          $$ F_{Qmax} = \pm \frac{1}{2} \cdot \Delta S_i $$
+        </li>
+        <li>
+          <p>Maximalerquantisierungsfehler mit Unsicherheit</p>
+          $$ F_{Qmax} = F^{\prime}_{Qmax} \pm \frac{1}{2} \cdot \delta $$
+        </li>
+      </ul>
+      <h2>Informaionsver&shy;arbeitungsprozess</h2>
+      <p>Hier ist ein Schema des Informaionsver&shy;arbeitungsprozesses.</p>
+      <img
+        src="../img/GrundlagenDerDigitalisierung/Informationsverarbeitungsprozess.png"
+        alt="Informationsverarbeitungsprozess"
+        class="zeichnungen"
+      />
+      <h2>Selbstbezüglichkeit</h2>
+      <p>
+        Die Selbstbezüglichkeit ist die Eigenschaft eines Systems, sich auf die
+        Art und Weise zu steuern wie es betrieben wird.
+      </p>
+      <h2>Datenverarbeitung</h2>
+      <p>Alle Daten können mittels Zahlen repräsentiert werden.</p>
+    </div>
+  </body>
+</html>

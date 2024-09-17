@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Strahlenoptik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Strahlenoptik</h1>
+      <h2>Reflektion</h2>
+      <p>Es gibt 2 Arten von Reflektionen:</p>
+      <ul>
+        <li><p>Diffuse Reflektion</p></li>
+        <li><p>Gesetzmäßige Reflektion</p></li>
+      </ul>
+      <h2>Reflektions Gesetz bei gemäßigter Reflektion</h2>
+      <p>
+        Der einfallende Strahl, das Lot und der reflektierte Strahl liegen in
+        einer Ebene. <br />
+        Der Einfallswinkel \( \alpha \) ist gleich dem Reflektionswinkel \(
+        \alpha^{\prime} \)
+      </p>
+      $$ \alpha\ =\ \alpha^{\prime} $$
+      <h2>Das Lot</h2>
+      <p>
+        Das Lot (oder Einfallslot) ist eine Hilfslinie, welche senkrecht zum
+        Spiegel steht, in dem Punkt wo der einfallende Lichtstrahl auf den
+        Spiegel trifft.
+      </p>
+      <h2>Reelles, Virtuelles Bild</h2>
+      <h3>Reelles Bild</h3>
+      <p>
+        Wenn das Bild mittels eines Schirmes aufgefangen werden kann, dann ist
+        das Bild reell.
+      </p>
+      <h3>Virtuelles Bild</h3>
+      <p>
+        Wenn das Bild <u>nicht</u> mittels eines Schirmes aufgefangen werden
+        kann, dann ist das Bild virtuell.
+      </p>
+      <h2>Brechungsindex</h2>
+      <p>
+        Die Lichtgeschwindigkeit ist in materiellen Medien kleiner als im
+        Vakuum.
+      </p>
+      <p>
+        Die Lichtgeschwindigkeit ist eine der wenigen exakten
+        <a href="../Divers/naturkonstanten.html">Naturkonstanten</a>.
+      </p>
+      $$\approx 3\cdot 10^{8}\frac{m}{s} $$
+      <p>
+        Der Brechungsindex n oder Brechzahl eines Mediums ist definiert als der
+        Quotient aus der Lichtgeschwindigkeit \( c_0 \) im Vakuum und der
+        Lichtgeschwindigkeit \( c \) im Medium.
+      </p>
+      <h3>Definition</h3>
+      $$ n=\frac{Geschwindigkeit\ des\ Lichtes\ im\ Vakuum}{Geschwindigkeit\
+      des\ Lichtes\ im\ Medium} $$
+      <br />
+      $$ n=\frac{c_0}{c} $$
+      <h3>
+        Zusammenhang zwischen den Brechzahlen und den Lichtgeschwindigkeiten
+      </h3>
+      $$ \frac{n_{2}}{n_{1}} =\frac{\frac{c_{0}}{c_{2}} }{{}\frac{c_{0}}{c_{1}}
+      } =\frac{c_{1}}{c_{2}} $$
+      <h2>Brechungsgesetz</h2>
+      $$ \frac{\sin \left( \alpha \right) }{\sin \left( \beta \right) }
+      =konstant=\frac{n_{1}}{{}n_{2}} $$ $$ n_{1}\cdot \sin \left( \alpha
+      \right) \ =\ n_{2}\cdot \sin \left( \beta \right) $$ $$ \alpha ,\ Winkel\
+      im\ Medium\ 1\ \left( Einfallswinkel\right) $$ $$\beta ,\ Winkel\ im\
+      Medium\ 2\ \left( Brechungswinkel\right) $$
+      <h2>Prinzip von Fermat</h2>
+      <p>Das Licht nimmt den Weg der am wenigsten Zeit beansprucht.</p>
+      <h2>Brechungsgesetzes von Snellius</h2>
+      <h3>Herleitung</h3>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/snelliusBrechungsgesetz.png"
+        alt="Brechungsgesetz"
+      />
+      <p>
+        Um von A nach B zu gelangen folgt der Strahl dem Prinzip von Fermat, er
+        nimmt den Weg den die geringste Zeit beansprucht.
+      </p>
+      $$ t_{gesamt} = t_1 + t_2 = \frac{s_1}{c_1} + \frac{s_2}{s_2}$$
+      <p>
+        Um die minimale Zeit zu bestimmen berechnen wir die Ableitung und
+        stellen diese gleich null. <br />
+        Laut Pythagoras gilt im Rechtwinkeligen Dreieck:
+      </p>
+      $$ s_1 = \sqrt{x^{2}+y^{2}_{A}} $$ $$ s_2 = \sqrt{(x-x_B)^{2}+y^{2}_{A}}
+      $$ $$ t^{\prime }_{gesamt}=\left( \frac{\sqrt{x^{2}+y^{2}_{A}} }{c_{1}}
+      +\frac{\sqrt{\left( x-x_{B}\right)^{2} +y^{2}_{B}} }{c_{2}}
+      \right)^{\prime} $$
+      <p>Berechnung der Ableitungen</p>
+      $$ A=\sqrt{x^{2}+y^{2}_{A}} \ \rightarrow \ A^{\prime
+      }=\frac{x}{\sqrt{x^{2}+y^{2}_{A}} } $$ $$ B=\sqrt{\left(
+      x-x_{B}\right)^{2} +y^{2}_{B}} \ \rightarrow \ B^{\prime }=\frac{-\left(
+      x-x_{B}\right) }{\sqrt{\left( x-x_{B}\right)^{2} +y^{2}_{B}}} $$ $$
+      C=c_{1}\ \rightarrow \ C^{\prime }=0 $$ $$ D=c_{1}\ \rightarrow \
+      D^{\prime }=0 $$ $$ t^{\prime }_{gesamt}=\frac{x}{\sqrt{x^{2}+y^{2}_{A}}
+      \cdot c_{1}} +\frac{-x+x_{B}}{\sqrt{\left( x-x_{B}\right)^{2} +y^{2}_{B}}
+      \cdot c_{2}} $$ $$ =\frac{\sin \left( \alpha \right) }{c_{1}} -\frac{\sin
+      \left( \beta \right) }{c_{2}} $$
+      <p>Ein minimum liegt vor wenn die Ableitung gleich 0 ist.</p>
+      $$ t^{\prime }_{gesamt}=\frac{\sin \left( \alpha \right) }{c_{1}}
+      -\frac{\sin \left( \beta \right) }{c_{2}} =0$$ $$ \frac{\sin \left( \alpha
+      \right) }{c_{1}} =\frac{\sin \left( \beta \right) }{c_{2}} $$ $$
+      \Longrightarrow \frac{\sin \left( \alpha \right) }{\sin \left( \beta
+      \right) } =\frac{c_{1}}{c_{2}} =\frac{{}n_{2}}{n_{1}} $$
+      <p>Daraus folgt das Brechungsgesetz von Snellius</p>
+      $$\Longrightarrow n_{1}\cdot \sin \left( \alpha \right) =n_{2}\cdot \sin
+      \left( \beta \right) $$
+      <h2>Totalreflektion</h2>
+      <h3>Bestimmung des Grenzwinkels</h3>
+      <p>
+        Mit dem Brechungsgesetz: \( \ n_{1}\cdot \sin \left( \alpha \right)
+        =n_{2}\cdot \sin \left( \beta \right) \ \) <br />
+        und \( \alpha =\alpha_{G} \ \left( in\ Medium\ 1 \right) \) <br />
+        und \(\beta =90^{\circ }\ \left( in\ Medium\ 2\right) \) <br />
+        Wir erhalten also aus dem Brechungsgesetz
+      </p>
+      $$\ n_{1}\cdot \sin \left( \alpha \right) =n_{2}\cdot \sin \left( \beta
+      \right) \ $$ $$ n_{1}\cdot \sin \left( \alpha_{G} \right) =n_{2}\cdot 1 $$
+      $$ \sin \left( \alpha_{G} \right) =\frac{n_{2}}{n_{1}} $$ $$ \alpha_{G}
+      =\arcsin \left( \frac{n_{2}}{n_{1}} \right) =\beta_{G} $$
+      <h3>Bemerkung</h3>
+      <p>
+        Da die Sinusfunktion auf -1 bis 1 definiert ist, gibt es keinen Winkel
+        den der Lichtstrahl einnehmen könnte; deshalb erhalten wir das Phänomen
+        : <i>Totalreflektion</i>.
+      </p>
+      <h2>Planparallele Platte</h2>
+      <p>
+        Fällt ein Lichtstrahl senkrecht auf eine planparallele Platte, so geht
+        der Stahl ungebrochen hindurch. Fällt er schräg auf, so erfährt er beim
+        Durchgang eine Parallelverschiebung.
+      </p>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/planparallelePlatte.png"
+        alt="planparallele platte"
+      />
+      <h3>Herleitung</h3>
+      <p>
+        Wir wollen einen Ausdruck für die Parallelverschiebung \( d \) mit \( h
+        \) und \( \alpha \) und den Brechzahlen \( n_1 \) und \( n_2 \).
+        <br />
+        Im Dreieck \( ANC \) gilt:
+      </p>
+      $$ \cos \left( \beta \right) =\frac{AN}{AC} $$ $$ \Leftrightarrow
+      AC=\frac{h}{\cos \left( \beta \right) } $$
+      <p>Im Dreieck \( ABC \) gilt:</p>
+      $$\sin \left( \alpha -\beta \right) =\frac{d}{AC} $$ $$ \Leftrightarrow
+      AC=\frac{d}{\sin \left( \alpha -\beta \right) } $$
+      <p>
+        Suche nach einem Ausdruck für \( \beta \) <br />
+        Brechungsgesetz:
+      </p>
+      $$ n_{1}\cdot \sin \left( \alpha \right) =n_{2}\cdot \sin \left( \beta
+      \right) $$ $$ \Leftrightarrow \beta =\sin^{-1} \left[ \frac{n_{1}}{n_{2}}
+      \cdot \sin \left( \alpha \right) \right] \ (1)$$ $$ AC = AC $$ $$
+      \Leftrightarrow \frac{h}{\cos \left( \beta \right) } =\frac{d}{\sin \left(
+      \alpha -\beta \right) } \ (2) $$ $$ (2)\ in\ (1): $$ $$d=h\cdot \frac{\sin
+      \left\{ \alpha -\sin^{-1} \left[ \frac{n_{1}}{n_{2}} \cdot \sin \left(
+      \alpha \right) \right] \right\} }{\cos \left\{ \sin^{-1} \left[
+      \frac{n_{1}}{n_{2}} \cdot \sin \left( \alpha \right) \right] \right\} } $$
+      <h2>Prisma</h2>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/gesamtablenkungPrisma.png"
+        alt="gesamtablenkung prisma"
+      />
+      <p>
+        Im Dreieck \( ABC \): <br />
+        Die Summe der Internen Winkeln beträgt \( 180^{\circ } \):
+      </p>
+      $$ \left( 90^{\circ }-\beta_{1} \right) +\left( 90^{\circ }-\beta_{2}
+      \right) +\gamma =180^{\circ }$$ $$ \Leftrightarrow 180^{\circ }-\beta_{1}
+      -\beta_{2} +\gamma =180^{\circ }$$ $$ \Leftrightarrow -\beta_{1}
+      -\beta_{2} +\gamma =0$$ $$\Leftrightarrow \gamma =\beta_{1} +\beta_{2} $$
+      <p>
+        Im Punkt \( C \): <br />
+        Der platte Winkel beträgt \( 180^{\circ } \):
+      </p>
+      $$\left( 90^{\circ }-\alpha_{1} \right) +\gamma +\left( 90^{\circ
+      }-\alpha_{2} \right) +\delta =180^{\circ }$$ $$\Leftrightarrow 180^{\circ
+      }-\alpha_{1} +\gamma -\alpha_{2} +\delta =180^{\circ }$$ $$\Leftrightarrow
+      -\alpha_{1} +\gamma -\alpha_{2} +\delta =0$$ $$\Leftrightarrow \delta
+      =\alpha_{1} +\alpha_{2} -\gamma $$
+      <h2>Prismenwinkel, brechender Winkel</h2>
+      <h3>Definition</h3>
+      <p>
+        Der brechende Winkel \( \gamma \) ist der Winkel zwischen der
+        Eintrittsfläche und der Austrittsfläche des Lichtstrahls.
+      </p>
+      <h2>Ablenkungswinkel, Gesamtablenkung</h2>
+      <h3>Definition</h3>
+      <p>
+        Der Ablenkungswinkel \( \delta \) ist der Winkel zwischen dem
+        einfallenden und dem austretenden Lichtstrahl.
+      </p>
+      <h2>Minimalablenkung in einem Prisma</h2>
+      <h3>Formel der Ablenkung</h3>
+      $$ \delta =\alpha_{1} +\alpha_{2} -\gamma $$
+      <h3>Herleitung</h3>
+      <p>
+        Um die Minimalablenkung \( \delta_{min} \) zu bestimmen muss dei
+        Ableitung einer Funktion in der \( \delta \) vorhanden ist aufgestellt
+        werden, und die gleich Null stellen:
+      </p>
+      <p>Berechnung des Brechungsgesetzes an der Eintrittsfläche</p>
+      $$ n_{1}\cdot \sin \left( \alpha_{1} \right) =n_{2}\cdot \sin \left(
+      \beta_{1} \right) $$ $$\Rightarrow \alpha_{1} =\sin^{-1} \left[
+      \frac{n_{2}}{n_{1}} \cdot \sin \left( \beta_{1} \right) \right] $$
+
+      <p>Berechnung des Brechungsgesetzes an der Austrittsfläche</p>
+      $$ n_{1}\cdot \sin \left( \alpha_{1} \right) =n_{2}\cdot \sin \left(
+      \beta_{1} \right) $$ $$ \Rightarrow \alpha_{2} =\sin^{-1} \left[
+      \frac{n_{2}}{n_{1}} \cdot \sin \left( \beta_{2} \right) \right] $$ $$ mit\
+      \gamma =\beta_{1} +\beta_{2} $$ $$ \Rightarrow \alpha_{2} =\sin^{-1}
+      \left[ \frac{n_{2}}{n_{1}} \cdot \sin \left( \gamma -\beta_{1} \right)
+      \right] $$
+      <p>Für die Ablenkung \( \delta \) gilt also:</p>
+
+      $$ \delta =\sin^{-1} \left[ \frac{n_{2}}{{}n_{1}} \cdot \sin \left(
+      \beta_{1} \right) \right] +\sin^{-1} \left[ \frac{n_{2}}{n_{1}} \cdot \sin
+      \left( \gamma -\beta_{1} \right) \right] -\gamma $$
+      <p>Für Minimalablenkung gilt:</p>
+      $$ \frac{d\delta }{d\beta_{1} } =0$$ $$\Leftrightarrow
+      \frac{\frac{n_{2}}{n_{1}} \cdot \cos \left( \beta_{1} \right)
+      }{\sqrt{1-\left( \frac{n_{2}}{n_{1}} \right)^{2} \cdot \sin^{2} \left(
+      \beta_{1} \right) } } +\frac{\frac{n_{2}}{n_{1}} \cdot \cos \left( \gamma
+      -\beta_{1} \right) \cdot \left( -1\right) }{\sqrt{1-\left(
+      \frac{n_{2}}{n_{1}} \right)^{2} \cdot \sin^{2} \left( \gamma -\beta_{1}
+      \right) } } =0$$ $$ \Leftrightarrow \frac{\cos \left( \beta_{1} \right)
+      }{\sqrt{1-\left( \frac{n_{2}}{n_{1}} \right)^{2} \cdot \sin^{2} \left(
+      \beta_{1} \right) } } =\frac{\cos \left( \gamma -\beta_{1} \right)
+      }{\sqrt{1-\left( \frac{n_{2}}{n_{1}} \right)^{2} \cdot \sin^{2} \left(
+      \gamma -\beta_{1} \right) } } $$
+
+      <p>Dies gilt nur wenn:</p>
+
+      $$ \cos \left( \beta_{1} \right) =\cos \left( \gamma -\beta_{1} \right) $$
+      $$und$$ $$\sin^{2} \left( \beta_{1} \right) =\sin^{2} \left( \gamma
+      -\beta_{1} \right)$$
+
+      <p>Die Gleichungen sind nur wahr wenn:</p>
+      $$\beta_{1} =\gamma -\beta_{1} $$
+      <p>\( \delta \) ist minimal wenn:</p>
+      $$ \beta_{1} =\frac{\gamma }{2} $$
+      <p>Des weiteren gilt:</p>
+      $$ \gamma =\beta_{1} +\beta_{2} $$ $$ \Rightarrow \beta_{2} =\frac{\gamma
+      }{2} $$
+      <p>Das heißt der Strahlengang verläuft symmetrisch durch das Prisma.</p>
+
+      <h2>Fraunhoferformel</h2>
+      <h3>Herleitung</h3>
+      $$\delta_{min} =2\cdot \alpha_{1} -\gamma $$ $$ \Leftrightarrow \alpha_{1}
+      =\frac{\delta_{min} +\gamma }{2} $$ $$und$$ $$ \gamma =\beta_{1}
+      +\beta_{2}$$
+      <p>Bei Minimalablenkung gilt:</p>
+      $$ \Rightarrow \beta_{1} =\beta_{2} =\frac{\gamma }{2} $$
+      <p>
+        Setzt man diese Gleichungen in das Brechungsgesetz ein, so ergibt dies:
+      </p>
+      $$\sin (\alpha_{1} )=\sin \left( \frac{\gamma }{2} \right) $$ $$
+      \Leftrightarrow \sin \left( \frac{\delta_{min} +\gamma }{2} \right)
+      =n\cdot \sin \left( \frac{\gamma }{2} \right) $$ $$ \Leftrightarrow
+      n=\frac{\sin \left( \frac{\delta_{min} +\gamma }{2} \right) }{\sin \left(
+      \frac{\gamma }{2} \right) } $$
+      <h2>Linsen</h2>
+      <p>
+        Eine Linse ist ein rotationssymmetrischer Körper der meist aus Glas oder
+        Kunststoff hergestellt ist. Das optische Medium ist von zwei
+        Kugelflächen begrenzt. Es ergeben sich zwei verschiedene Linsenarten.
+      </p>
+      <h2>Sammellinse, Konvexlinse</h2>
+      <p>Es gibt:</p>
+      <ol>
+        <li>
+          <p>Bikonvexlinsen</p>
+        </li>
+        <li>
+          <p>Plankonvexlinsen</p>
+        </li>
+        <li>
+          <p>Konkavkonvexlinsen</p>
+        </li>
+      </ol>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/sammellinsenZeichnung.png"
+        alt="sammellinsen"
+      />
+      <h3>Skizzierung</h3>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/sammellinseSkizze.png"
+        alt="skizzierung sammellinsen"
+      />
+      <h2>Zerstreuungslinse, Konkavlinsen</h2>
+      <p>
+        Die Zerstreuungslinse, Konkavlinse ist in der Mitte dünner als am Rand.
+        <br />
+        Es gibt:
+      </p>
+      <ol>
+        <li>
+          <p>Bikonkavlinsen</p>
+        </li>
+        <li>
+          <p>Plankonkavlinsen</p>
+        </li>
+        <li>
+          <p>Konvexkonkavlinsen</p>
+        </li>
+      </ol>
+      <img
+        src="/Physik/img/Strahlenoptik/zerstreuungslinsenZeichnung.png"
+        alt="Zerstreuungslinsen"
+        class="zeichnungen"
+      />
+      <h3>Skizzierung</h3>
+      <img
+        src="/Physik/img/Strahlenoptik/zerstreuungslinseSkizze.png"
+        alt="Skizze Zerstreuungslinsen"
+        class="zeichnungen"
+      />
+      <h2>Hauptstrahlen bei Linsen</h2>
+      <h3>Brennpunkt</h3>
+      <p>
+        Ein Lichtbündel, welches parallel zur optischen Achse verläuft, wird
+        nach dem Durchgang durch eine Sammellinse in einem Punkt gebündelt.
+        Dieser Punkt wird Brennpunkt genannt.<br />
+        Symmetrisch zum Mittelpunkt der Linse befindet sich der zweite
+        Brennpunkt.
+      </p>
+      <h3>Brennweite</h3>
+      <p>
+        Die Distanz zwischen dem Mittelpunkt der Linse und dem Brennpunkt ist
+        die Brennweite und wird mit dem Buchstaben \( f \) angeschrieben.
+      </p>
+      <h2>Sammellinse</h2>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/hauptstrahlenBeiLinsenS.png"
+        alt="hauptstrahlen bei Linsen sammellinse"
+      />
+      <p>
+        Brennpunkte: <br />
+        \( F_1 \) und \( F_2 \) <br />
+        Brennweite: <br />
+        \( OF_1\ =\ OF_2 =\ f \)
+      </p>
+      <ol>
+        <li>
+          <p>
+            Ein Lichtstrahl, der parallel zur optischen Achse verläuft, verläuft
+            nach der Brechung durch den Brennpunkt \( F_1 \). Ein
+            Achsenparallelstrahl wird zum Brennpunktstrahl gebrochen.
+          </p>
+        </li>
+        <li>
+          <p>
+            Ein Lichtstrahl, der durch den Brennpunkt \( F_2 \) verläuft,
+            verläuft nach der Brechung parallel zur optischen Achse weiter. Ein
+            Brennpunktstrahl wird zum Achsenparallelstrahl gebrochen.
+          </p>
+        </li>
+        <li>
+          <p>
+            Ein Lichtstrahl, der durch den Mittelpunkt \( O \) verläuft,
+            verläuft in gerader Linie weiter. Ein Mittelpunktstrahl wird nicht
+            gebrochen.
+          </p>
+        </li>
+      </ol>
+      <h2>Zerstreuungslinse</h2>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/hauptstrahlenBeiLinsenZ.png"
+        alt="hauptstrahlen bei Linsen Zerstreuungslinse"
+      />
+      <p>
+        Brennpunkte: <br />
+        \( F_1 \) und \( F_2 \) <br />
+        Brennweite: <br />
+        \( OF_1\ =\ OF_2 =\ f \)
+      </p>
+      <ol>
+        <li>
+          <p>
+            Ein Lichtstrahl, der parallel zur optischen Achse verläuft, scheint
+            nach der Brechung aus dem Brennpunkt \( F_1 \) zu kommen. Ein
+            Achsenparallelstrahl wird zum Brennpunktstrahl gebrochen.
+          </p>
+        </li>
+        <li>
+          <p>
+            Ein Lichtstrahl, der durch den Brennpunkt \( F_2 \) verlaufen
+            müsste, verläuft nach der Brechung parallel zur optischen Achse
+            weiter. Ein Brennpunktstrahl wird zum Achsenparallelstrahl
+            gebrochen.
+          </p>
+        </li>
+        <li>
+          <p>
+            Ein Lichtstrahl, der durch den Mittelpunkt \( O \) verläuft,
+            verläuft in gerader Linie weiter. Ein Mittelpunktstrahl wird nicht
+            gebrochen.
+          </p>
+        </li>
+      </ol>
+      <h2>Bildentstehung an Linsen</h2>
+      <ol>
+        <li>
+          <h3>reelle Bilder</h3>
+          <p>
+            Die Strahlen konvergieren hinter der Linse, somit können diese
+            Bilder auf einem Schirm aufgefangen werden.
+          </p>
+        </li>
+        <li>
+          <h3>virtuelle Bilder</h3>
+          <p>
+            Die Strahlen divergieren hinter der Linse, somit können diese Bilder
+            durch unser Auge erkannt werden, jedoch nicht auf einem Schirm
+            sichtbar gemacht werden.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Ob reelle oder virtuelle Bilder entstehen, hängt von der Position des
+        Gegenstandes zur Linse ab.
+      </p>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/virtuelleReelleBilder.png"
+        alt="reelle und virtuelle Bilder"
+      />
+      <p>Es gilt:</p>
+      $$F_1\ und F_2\, \ Brennpunkte$$ $$G,\ Gegenstandsgröße $$ $$B, \
+      Bildgröße $$ $$g, \ Gegenstandsweite$$ $$b, \ Bildweite $$ $$f,\
+      Brennweite$$
+      <h2>Bildkonstruktion Sammellinsen</h2>
+      <p>Es gelten folgende Vorzeichenregeln:</p>
+      <ol>
+        <li>
+          <h3>Brennweite</h3>
+          <p>
+            Sammellinse: \( f > 0 \) <br />
+            Zerstreuungslinse: \( f < 0 \)
+          </p>
+        </li>
+        <li>
+          <h3>Gegenstand</h3>
+          <p>
+            reeller Gegenstand: \( g>0 \) und \( G>0 \) <br />
+            virtueller Gegenstand: \( g < 0 \) und \( G < 0 \)
+          </p>
+        </li>
+        <li>
+          <h3>Bild</h3>
+          <p>
+            reeller Bild: \( b > 0 \) und \( B > 0 \) <br />
+            virtueller Bild: \( b < 0 \) und \( B < 0 \)
+          </p>
+        </li>
+      </ol>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>Gegenstandsweite \( g \)</th>
+            <th>Bildweite \( b \)</th>
+            <th>Bildeigenschaften</th>
+          </tr>
+          <tr>
+            <td>\( + \infty \)</td>
+            <td>\( f \)</td>
+            <td>verkleinert, umgekehrt, reell</td>
+          </tr>
+          <tr>
+            <td>\( + \infty > g > 2f \)</td>
+            <td>\( f < b < 2f \)</td>
+            <td>verkleinert, umgekehrt, reell</td>
+          </tr>
+          <tr>
+            <td>\( 2f\)</td>
+            <td>\( 2f\)</td>
+            <td>gleich groß, umgekehrt, reell</td>
+          </tr>
+          <tr>
+            <td>\( 2f > g > f\)</td>
+            <td>\( 2f > b > \infty \)</td>
+            <td>vergrößert, umgekehrt, reell</td>
+          </tr>
+          <tr>
+            <td>\( f\)</td>
+            <td>\( + \infty \)</td>
+            <td>sehr groß, umgekehrt, reell</td>
+          </tr>
+          <tr>
+            <td>\( f > g > 0 \)</td>
+            <td>\( -\infty < b < 0 \)</td>
+            <td>vergrößert, aufrecht, virtuell</td>
+          </tr>
+          <tr>
+            <td>\( g \rightarrow 0 \)</td>
+            <td>\( b \rightarrow 0 \)</td>
+            <td>gleich groß, aufrecht, virtuell</td>
+          </tr>
+        </table>
+      </div>
+      <h2>Bildkonstruktion Zerstreuungslinsen</h2>
+      <ol>
+        <li>
+          <h3>Bild</h3>
+          <p>verkleinert; aufrecht, gerade; virtuell</p>
+        </li>
+      </ol>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>Gegenstandweite</th>
+            <th>Bildweite</th>
+          </tr>
+          <tr>
+            <td>\( +\infty > g > 0 \)</td>
+            <td>\( -f < b < 0 \)</td>
+          </tr>
+        </table>
+      </div>
+      <h2>Sehwinkel</h2>
+      <p>
+        Der Sehwinkel ist der Winkel unter dem ein Beobachter einen Gegenstand
+        sieht. Er wird mit \( \omega \) bezeichnet.
+      </p>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/sehwinkel.png"
+        alt="sehwinkel"
+      />
+      <p>Wir erhalten:</p>
+      $$ \frac{G}{g} = \tan(\omega)$$
+      <p>
+        Bei kleinen Winkeln erhalten wir durch Kleinwinkelnäherung (wenn \(
+        \omega \) in \( rad \) ):
+      </p>
+      $$ \omega = \frac{B}{b} = \frac{G}{g} $$
+      <h3>Einheit</h3>
+      <p>
+        Der Sehwinkel kann in \( rad \) oder in Sekunden \( s \) und Minuten \(
+        min \) angegeben werden.
+      </p>
+      $$ 1^{\circ} = 60^{\prime}\ (min)$$ $$ 1^{\circ} = 3600^{\prime \prime}\
+      (s)$$
+      <h2>Abbildungsmaßstab</h2>
+      <h3>Herleitung</h3>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/abbildungsmassstab.png"
+        alt="abbildungsmassstab"
+      />
+      <p>Da ähnliche Dreiecke:</p>
+      $$ \tan(\omega) = \frac{G}{g} = \frac{B}{b} $$ $$ \Leftrightarrow
+      \frac{B}{G} =\frac{b}{g} $$
+      <h3>Abbildungsmaßstab</h3>
+      $$ \Gamma = \left| \frac{B}{G} \right| $$
+      <p>
+        Der Abbildungsmaßstab gibt uns an, wie viel Mal das Bild größer als der
+        Gegenstand ist und ist immer positiv.
+      </p>
+      <h2>Dioptrie</h2>
+      <p>
+        Oft wird nicht die Brennweite einer Linse angegeben, sondern ihre
+        Brechkraft \( D \) in Dioptrien.
+      </p>
+      <h3>Formel</h3>
+      $$ D = \frac{1}{f} $$
+      <h3>Einheit</h3>
+      $$ \left[ D\right] =\frac{1}{m} =1dpt$$
+      <h2>Abbildungsgleichung</h2>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Strahlenoptik/abbildungsgleichung.png"
+        alt="abbildungsmassstab"
+      />
+      <h3>Herleitung</h3>
+      $$\tan \left( \alpha \right) =\frac{G}{g-f} =\frac{b}{f} $$ $$
+      \Leftrightarrow \frac{B}{G} =\frac{f}{g-f} =\frac{b}{g} $$ $$
+      \Leftrightarrow f\cdot g=b\left( g-f\right) $$ $$\Leftrightarrow f\cdot
+      g=bg-bf$$ $$ \Leftrightarrow fg\ +bf=bg$$ $$\Leftrightarrow f\left(
+      b+g\right) =bg$$ $$ \Leftrightarrow f=\frac{bg}{\left( b+g\right) } $$
+      $$\Leftrightarrow \frac{1}{f} =\frac{b}{bg} +\frac{g}{bg} \ $$ $$
+      \Leftrightarrow \frac{1}{f} =\frac{1}{g} +\frac{1}{b} \ $$
+    </div>
+  </body>
+</html>

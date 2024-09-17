@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kinematik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Kinematik</h1>
+      <h2>Trägheitsprinzip</h2>
+      <h3>Definition</h3>
+      <p>
+        Ein sich selbst überlassener Körper bewegt sich ohne äußere Einwirkung
+        geradlining gleichförmig oder bleibt in Ruhe.
+      </p>
+      <h2>Inertialsysteme</h2>
+      <h3>Definition</h3>
+      <p>
+        Inertialsysteme sind Bezugssysteme, in denen ein kräftefreier Körper in
+        Ruhe oder in geradlining gleichförmiger Bewegung verharrt und dem
+        Trägheitsprinzip gehorcht. In beschleunigten Bezugssystemen gilt das
+        Trägheitsprinzip nicht.
+      </p>
+      <h3>Bemerkung</h3>
+      <p>
+        Es gibt unendlich viele gleichberechtigte Inertialsysteme. Es existiert
+        kein absoluter Ruhezustand.
+      </p>
+      <h2>Geschwindigkeit</h2>
+      <h3>Definition</h3>
+      <p>
+        Unter der Geschwindigkeit \( v \) versteht man das Verhältnis des
+        zurückgelegten Weges \( s \) zu der dafür benötigten Zeit \( t \) (Die
+        Geschwindigkeit ist die Positionsänderung pro Zeiteinheit):
+      </p>
+      <h3>Formel</h3>
+      $$ v= \frac{s}{t}$$
+      <h3>Einheit</h3>
+      $$ \left[ v\right] =\frac{m}{s} $$
+      <h2>Durchschnittsgeschwindigkeit</h2>
+      <h3>Definition</h3>
+      <p>
+        Die Durchschnittsgeschwindigkeit wird bestimmt, indem der gesamte
+        zurückgelegte Weg \( s \) durch die dafür benötigte Zeit \( t \) geteilt
+        wird.
+      </p>
+      <h3>Formel</h3>
+      $$ \bar{v} =v_{d}=\frac{s}{t} $$
+      <h2>Momentangeschwindigkeit</h2>
+      <h3>Definition</h3>
+      <p>
+        Die Momentangeschwindigkeit ist die mittlere Geschwindigkeit in einem
+        sehr kurzen Weg - und Zeitintervall.
+      </p>
+      <h3>Formel</h3>
+      $$ v= \frac{ds}{dt}$$
+      <h2>Beschleunigung, Verzögerung</h2>
+      <h3>Definition</h3>
+      <p>
+        Die Beschleunigung oder Verzögerung ist das konstante ändern der
+        Geschwindigkeit \( \Delta v \) über einen Zeitraum \( \Delta t \).
+      </p>
+      <h3>Formel</h3>
+      $$ a=\frac{\Delta v}{\Delta t} $$
+      <h3>Einheit</h3>
+      $$ [a] = \frac{m}{s^2} $$
+      <h3>Anmerkung</h3>
+      <p>
+        Da bei Verzögerung die Geschwindigkeit sich verlangsamt erhält man eine
+        negative Beschleunigung.
+      </p>
+      <h2>Gradlinige gleichförmige Bewegung</h2>
+      <h3>Definition</h3>
+      <p>
+        Eine Körperbewegung ist gleichförmig wenn in gleichen, beliebigen
+        Zeitabschnitten \( \Delta t \) stets gleiche Wegabschnitte zurückgelegt
+        werden.
+      </p>
+
+      $$s=v \cdot t $$ $$ v=konstant$$ $$ a=0 $$
+      <h2>Gradlinig gleichförmig beschleunigte Bewegung</h2>
+
+      <p>Beschleunigung ändert sich der Geschwindigkeit pro Zeiteinheit.</p>
+      $$ s= \frac{1}{2} \cdot a \cdot t^{2} + v_0 \cdot t $$ $$ v = a \cdot t +
+      v_0$$ $$ a=konstant $$
+      <h2>Torricelli-Formel</h2>
+      <h3>Herleitung</h3>
+      <p>
+        Die Gleichung, welche im folgenden hergeleitet wird, dient zu
+        Berechnungen, wenn die Zeit $t$ nicht bekannt ist. Sie wird aus den
+        Gleichungen eliminiert.
+      </p>
+      <p>Weg-Zeit-Gesetz:</p>
+      $$ s = v_0 \cdot t + \frac{1}{1} \cdot a \cdot t^2\ (1) $$
+      <p>Geschwindigkeit-Zeit-Gesetz:</p>
+      $$ v = v_0 + a \cdot t\ (2) $$
+      <p>
+        Aus dem Geschwindigkeit-Zeit-Gesetz $(2)$ erhalten wir nach $t$
+        umgestellt:
+      </p>
+      $$ t = \frac{v-v_0}{a}\ (3) $$
+      <p>$(3)$ in $(1)$:</p>
+      $$ s = v_0 \cdot \frac{v-v_0}{a} + \frac{1}{1} \cdot a \cdot
+      \left(\frac{v-v_0}{a} \right)^2 $$ $$ \Leftrightarrow s=\frac{v\cdot
+      v_{0}-v^{2}_{0}}{a} +\frac{1}{2} \cdot a\cdot \frac{v^{2}-2v\cdot
+      v_{0}+v^{2}_{0}}{a^{2}} $$ $$ \Leftrightarrow s=\frac{2v\cdot
+      v_{0}-2v^{2}_{0}+v^{2}-2v\cdot v_{0}+v^{2}_0}{2a} $$ $$ \Leftrightarrow
+      s=\frac{v^{2}-v^{2}_{0}}{2a} $$ $$ \Leftrightarrow v^{2}-v^{2}_{0}=2\cdot
+      a\cdot s$$
+      <h3>Formel</h3>
+      $$ v^{2}-v^{2}_{0}=2\cdot a\cdot s$$
+    </div>
+  </body>
+</html>

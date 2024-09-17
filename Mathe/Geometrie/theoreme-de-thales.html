@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Théorème de Thalès</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Théorème de Thalès</h1>
+      <h3>Théorème</h3>
+      <p>
+        Considérons deux droites $d_1$ et $d_2$ sécantes en $A$ coupées par deux
+        parallèles $(BC)$ et $(DE)$. <br />
+        Si les droites $(BC)$ et $(DE)$ sont parallèles, alors:
+      </p>
+      $$ \frac{AD}{AB} = \frac{AE}{AC} = \frac{DE}{BC} $$
+      <h3>Démonstration</h3>
+      <p>Considérons la première configuration.</p>
+      <ol>
+        <li>
+          <p>$1^{ière}$ égalité: $\frac{AD}{AB} = \frac{AE}{AC}$</p>
+          <ul>
+            <li>
+              <p>
+                Considérons le triangle $ADE$ et notons $h_1$ la hauteur issue
+                de $E$ du triangle $ADE$
+              </p>
+              <ul>
+                <li>$\mathscr{A}_{ADE} = \frac{AD \cdot h_1}{2}$</li>
+                <li>$\mathscr{A}_{ABE} = \frac{AB \cdot h_1}{2}$</li>
+                <li>
+                  $\frac{\mathscr{A}_{ADE}}{\mathscr{A}_{ABE}} = \frac{\frac{AD
+                  \cdot h_1}{2}}{\frac{AB \cdot h_1}{2}} = \frac{AD}{AB}$
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p>Notons $h_2$ la hauteur issue de $D$ du triangle $ADE$</p>
+              <ul>
+                <li>$\mathscr{A}_{ADE} = \frac{AE \cdot h_2}{2}$</li>
+                <li>$\mathscr{A}_{ADC} = \frac{AC \cdot h_2}{2}$</li>
+                <li>
+                  $\frac{\mathscr{A}_{ADE}}{\mathscr{A}_{ADC}} = \frac{\frac{AE
+                  \cdot h_2}{2}}{\frac{AC \cdot h_2}{2}} = \frac{AD}{AB}$
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p>Considérons les triangles $DEB$ et $DEC$</p>
+              <p>
+                Notons que les triangles $DEB$ et $DEC$ ont une même base
+                $[DE]$. De plus, puisque les droites $(DE)$ et $(BC)$ sont
+                parallèles, ils ont la même hauteur $h$ relative à cette base.
+                <br />
+                On peut conclure que les deux triangles ont la même aire:
+              </p>
+              $$ \underbrace{\mathscr{A}_DEB}_{\frac{1}{2} \cdot DE \cdot h} =
+              \underbrace{\mathscr{A}_DEC}_{\frac{1}{2} \cdot DE \cdot h} $$
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p>Comme $\mathscr{A}_{ABE} = \mathscr{A}_{DEC}$, on a:</p>
+              $$ \frac{\mathscr{A}_{ADE}}{\mathscr{A}_{ABE}} =
+              \frac{\mathscr{A}_{ADE}}{\mathscr{A}_{ADC}} \Leftrightarrow
+              \frac{AD}{AB} = \frac{AE}{AC} $$
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>$2^{ière}$ égalité: $\frac{AD}{AB} = \frac{DE}{BC}$</p>
+          <p>
+            Soit $F$ le point d'intersection de la parallèle à la droite $(AC)$
+            passant par le point $D$ et de la droite $(BC)$.
+          </p>
+          <p>Considérons le quadrilatère $DECF$.</p>
+          <ul>
+            <li>
+              <p>
+                Si un quadrilatère a ses côtés opposés parallèles deux à deux,
+                alors c'est un parallélogramme. Donc $DECF$ est un
+                parallélogramme.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si un quadrilatère est un parallélogramme, alors ses côtés
+                opposés sont de même longuer. <br />
+                Donc $FC = DE$ et $DF = EC$.
+              </p>
+            </li>
+          </ul>
+          <p>
+            On peut maintenant appliquer la $1^{ière}$ égalité démontrée
+            précédemment à la figure formée par les droites $(DA)$ et $(FC)$ et
+            les droites parallèles $(DF)$ et $(AC)$
+          </p>
+        </li>
+      </ol>
+      <h3>Remarque</h3>
+      <p>
+        Le théorème de Thalès permet de calculer une ou plusieurs longuers
+        manquants dans une de ces configurations.
+      </p>
+      <h2>Réciproque de théorème de Thalès</h2>
+      <h3>Théorème</h3>
+      <p>
+        Considérons deux droites $(BC)$ et $(CD)$ sécantes en $A$. <br />
+        Si $\frac{AD}{AB} = \frac{AE}{AC}$ et si les points $ADE$ et les points
+        $A;\ E;\ C$ sont alignés dans le même ordre, alors les droites $(DE)
+        \parallel (BC)$ sont parallèles.
+      </p>
+      <h2>Contraposée de théorème de Thalès</h2>
+      <h3>Théorème</h3>
+      <p>
+        Considérons deux droites $(BD)$ et $(CE)$ sécantes en $A$. <br />
+        Si $\frac{AB}{AD} \neq \frac{AC}{AE}$, alors les droites $(BC)$ et
+        $(DC)$ ne sont pas parallèles.
+      </p>
+    </div>
+  </body>
+</html>

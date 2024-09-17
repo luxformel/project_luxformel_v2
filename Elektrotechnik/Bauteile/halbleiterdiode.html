@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Halbleiterdiode</h1>
+      <h2>Aufbau</h2>
+      <p>
+        Die Halbleiterdiode besteht aus zwei fest miteinander verbundenen
+        Halbleiterkristallschichten, einer P-Schicht und einer N-Schicht.
+      </p>
+      <img
+        src="../img/Halbleiterdiode/aufbauDiode.png"
+        alt="aufbau einer Halbleiterdioden"
+        class="zeichnungen"
+      />
+      <h2>Schaltzeichen</h2>
+      <img
+        src="../img/Halbleiterdiode/schaltzeichenDiode.png"
+        alt="schaltzeichen einer Halbleiterdioden"
+        class="zeichnungen"
+      />
+      <p>
+        Das Dreieck im Schaltzeichen symbolisiert den P-Kristall und der Strich
+        den N-Kristall. Der P-Kristallanschluss wird als Anode und der N-
+        Kristallanschluss wird als Katode bezeichnet. Die Richtung des Pfeils
+        zeigt die Durchlassrichtung der Diode an.
+      </p>
+      <h2>Wirkungsweise</h2>
+      <p>
+        Die Halbleiterdiode lässt den Strom in einer Richtung durch und sperrt
+        ihn in der anderen Richtung die sogenannte Ventilwirkung.
+      </p>
+      <h3>Erklärung</h3>
+      <ul>
+        <li>
+          <p>
+            Liegt der positive Pol einer Spannungsquelle an der Anode und der
+            negative Pol an der Katode, so wird der PN-Übergang niederohmig. Es
+            fließt ein Strom. Der PN-Übergang ist in Durchlassrichtung gepolt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Liegt der negative Pol einer Spannungsquelle an der Anode und der
+            positive Pol an der Katode, so wird der PN-Übergang hochohmig. Es
+            fließt kein Strom. Der PN-Übergang ist in Sperrrichtung gepolt.
+          </p>
+        </li>
+      </ul>
+      <h2>Diodenkennlinie</h2>
+      <p>
+        Die Kennlinie beschreibt die Zusammenhänge zwischen Strom und Spannung
+        an einer Diode. Der Verlauf der Kennlinie ist im Sperrbereich und
+        Durchlassbereich sehr unterschiedlich. Im Durchlassbereich tragen die
+        Achsen die Bezeichnungen $U_F$ und $I_F$. Der Index $F$ kommt aus dem
+        Englischen für <q>forward direction</q>. Im Sperrbereich wird der Index
+        $R$ für <q>reverse direction</q> verwendet.
+      </p>
+      <img
+        src="../img/Halbleiterdiode/diodenkennlinie.png"
+        alt="diodenkennlinie"
+        class="zeichnungen"
+      />
+      <h2>Kennlinienauswertung</h2>
+      <ul>
+        <li>
+          <p>
+            In Durchlassrichtung beginnt die Diode den Strom zu leiten, wenn die
+            äu&beta;ere Spannung den Wert der Diffusionsspannung am PN-Übergang
+            erreicht hat. Diese Spannung wird als Schleusenspannung $U_S$, auch
+            Schwellspannung oder Durchlassspannung genannt.
+          </p>
+          <p><u>Siliziumdiode</u></p>
+          $$ U_S = 0,6V ... 0,8V $$
+          <p><u>Germanium</u></p>
+          $$ U_S = 0,3V ... 0,4V $$
+        </li>
+        <li>
+          <p>
+            Der Durchlassstrom darf den Wert $I_{FMax}$ nicht überschreiten, da
+            die Diode sonst zerstört werden kann.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die $\ce{Si}$-Diode hat eine steilere Durchlasskennlinie als die
+            $\ce{Ge}$-Diode. Bei der $\ce{Si}$-Diode tritt nach Überschreiten
+            der Schleusenspannung schlagartig ein gro&beta;er Stromfluss ein.
+            Bei der $\ce{Ge}$-Diode erfolgt der Übergang vom kleinen zum
+            gro&beta;en Stromfluss allmählich.
+          </p>
+        </li>
+        <li>
+          <p>
+            In Sperrrichtung flie&beta;t fast kein Strom. Ab einer bestimmten
+            Sperrspannung der Spitzensperrspannung $U_{RMax}$ kommt es zu
+            Durchbrüchen, welche normalerweise die Diode zerstören.
+          </p>
+        </li>
+        <li>
+          <p>
+            $\ce{Si}$-Dioden haben ein besseres Sperrverhalten als
+            $\ce{Ge}$-Dioden.
+          </p>
+        </li>
+      </ul>
+      <h2>Idealisierte Kennlinie</h2>
+      <p></p>
+    </div>
+  </body>
+</html>

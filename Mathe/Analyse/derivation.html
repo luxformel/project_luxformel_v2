@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Dérivation</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Dérivation</h1>
+      <h2>Nombre dérivée</h2>
+      <h3>Definition</h3>
+      <p>
+        $f$ est une fonction définie sur un intervalle ouvert $I$ tel que $ a
+        \in I$. <br />
+        On dit que $f$ est dérivable si et seulement si le taux d' accroissement
+        $ \frac{f(x)-f(a)}{x-a} $ tend vers un nombre réel $L$ lorsque $x$ tend
+        vers $a$. <br />
+        Ce nombre L est appelé nombre dérivé et noté $f^{\prime}(x)=L$.
+      </p>
+      $$ f^{\prime}(a) = \lim_{x \rightarrow a} \frac{f(x)-f(a)}{x-a} $$
+      <h2>Tangente</h2>
+      <h3>Definition</h3>
+      <p>
+        $f$ est une fonction définie sur un intervalle ouvert $I$ tel que $a \in
+        I$ et $f$ est dérivable en $a$. $\mathscr{C}_f$ est la courbe
+        représentative de $f$. <br />
+        La droite qui passe par le point $A \left( a; f(a) \right)$ et de pente
+        $f^{\prime}(a)$ est appelée tangente $t_A$ à $\mathscr{C}_f$ au point
+        $A$.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Notons $\mathscr{C}_f$ la courbe représentative d'une fonction $f$
+        dérivable en $a$ et $t_A$ la tangente à $\mathscr{C}_f$ au point $A$
+        d'abscisse $a$.
+        <br />
+        Alors $t_A$ a pour équation :
+      </p>
+      $$ t_A : y = f^{\prime}(a)(x-a) + f(a)$$
+      <h2>Fonctions dérivées</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $f$ une fonction définie sur un intervalle ouvert $I$. On dit que
+        $f$ est dérivable sur $I$, si elle est dérivable en tout nombre $a \in
+        I$. Alors la fonction:
+      </p>
+      $$ f^{\prime}\colon x\longmapsto f^{\prime}\left( x \right) $$
+      <p>est appelée la fonction dérivée de $f$.</p>
+      <h2>Dérivées des fonctions</h2>
+      <p>
+        <a href="/Mathe/demonstrationsDesFonctionsDerviees.html">Voici</a> les
+        démonstrations des fonctions dérivées. <br />
+        Ces dérivées sont aussi resumént dans
+        <a href="/Mathe/tableauDesFonctionsDerivees.html">ce tableau</a>.
+      </p>
+      <h2>Sense de variation</h2>
+      <h3>Théorème</h3>
+      <p>Soit $f$ une fonction dérivable sur un intervalle $I$.</p>
+      <ul>
+        <li>
+          <p>
+            Si $f^{\prime}$ est <u>négative</u> sur $I$, alors $f$ est
+            <u>décroissante</u> sur $I$.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $f^{\prime}$ est <u>nulle</u> sur $I$, alors $f$ est
+            <u>constante</u> sur $I$.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $f^{\prime}$ est <u>positive</u> sur $I$, alors $f$ est
+            <u>croissante</u> sur $I$.
+          </p>
+        </li>
+      </ul>
+      <h2>Extremums d'une fonction</h2>
+      <h3>Définition</h3>
+      <p>Soit $f$ une fonction définie sur un intervalle $I$.</p>
+      <ul>
+        <li>
+          <p>
+            $f(a)$ est le <u>minimum</u> de $f$ sur $I$ si $\forall x \in I :
+            f(x) \geqslant f(a)$
+          </p>
+        </li>
+        <li>
+          <p>
+            $f(a)$ est le <u>maximum</u> de $f$ sur $I$ si $\forall x \in I :
+            f(x) \leqslant f(a)$
+          </p>
+        </li>
+      </ul>
+      <p>
+        On dit que $f$ admet un extremum sur $I$ si $f$ admet un minimum ou un
+        maximum sur $I$.
+      </p>
+      <h2>Extremums locales</h2>
+      <h3>Définition</h3>
+      <p>Soit $f$ une fonction définie sur un intervalle $I$ et $c \in I$</p>
+      <ul>
+        <li>
+          <p>
+            $f$ admet un minimum local en $c$, s'il existe un intervalle ouvert
+            $]a;b[\subset I$ et contenant $c$ tel que $\forall x \in ]a;b[ :
+            f(x) \geqslant f(c)$
+          </p>
+        </li>
+        <li>
+          <p>
+            $f$ admet un maximum local en $c$, s'il existe un intervalle ouvert
+            $]a;b[\subset I$ et contenant $c$ tel que $\forall x \in ]a;b[ :
+            f(x) \leqslant f(c)$
+          </p>
+        </li>
+      </ul>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f$ une fonction dérivable sur un intervalle $I$ et $c \in I$. Si
+        $f$ admet un extremum locale en $c$, alors $f^{\prime}(c) = 0$. Cela
+        signifie que la tangente à la courbe au point de coordonnées $\left( c;
+        f(c) \right)$ est horizontale.
+      </p>
+      <h3>Remarque</h3>
+      <p>La réciproque de ce théorème est fausse.</p>
+      <p>Sàit 135 am cour!!!</p>
+    </div>
+  </body>
+</html>

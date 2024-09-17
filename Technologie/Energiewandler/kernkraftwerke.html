@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Kernkraftwerke</h1>
+      <h2>Kernenergie</h2>
+      <p>
+        Als Kernenergie bezeichnet man die Ausbeutung der Energie, durch
+        Kernspaltung, die in den Atomkernen besteht. Diese Energienutzung ist
+        neu und gibt es erst seit den <time>1950er</time> Jahren. <br />Jedoch
+        war anfangs keine friedliche Nutzung vorgesehen sondern die Nutzung in
+        der Atombombe.
+      </p>
+      <h2>Kernspaltung, Kernfission</h2>
+      <p>
+        Im Jahre <time>1938</time> entdeckten die Physiker <i>Otto Hahn</i> und
+        <i>Fritz Strassmann</i> die Kernspaltung
+      </p>
+      <h3>Funktionsweise</h3>
+      <p>
+        Beschie&beta;t man einen Uran $\ce{^235U}$-Kern mit einem Neutron, so
+        bildet sich ein zwischen Kern der dann zerfällt und in zwei Kerne
+        spaltet. Dabei werden 2 bis 3 Neutronen freigesetzt.
+      </p>
+      <img
+        src="../img/Kernkraftwerke/kernspaltung.png"
+        alt="Kernspaltung"
+        class="zeichnungen"
+      />
+      <p>
+        Bei dieser Spaltreaktion werden pro gespalteter Kern etwa $200 MeV = 3
+        \cdot 10^{-11}J$ freigesetzt.
+      </p>
+      <h2>Kettenreaktion</h2>
+      <p>
+        Um gro&beta;e Mengen an $\ce{^235U}$ Spalten zu können gebraucht man
+        sich der Kettenreaktion. Da pro Spaltung 2 bis 3 Neutronen freigesetzt
+        werden bildet sich eine Kettenreaktion. <br />
+        Die Kettenreaktion erlaubt es gro&beta;e Mengen an Energie freizusetzen.
+      </p>
+      <h2>Vermehrungsfaktor</h2>
+      <p>
+        Die Kettenreaktion zieht jedoch mit sich, dass die Reaktion
+        <i>lawinenartig</i> anwächst. Um das technisch zu beschreiben definiert
+        man den <u>Vermehrungsfaktor $k$</u>.
+      </p>
+      <h3>Formel</h3>
+      $$ k = \frac{Anzahl\ der\ nachfolgenden\ Spaltungen}{Anzahl\ der\
+      vorherigen\ Spaltungen} $$
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>Vermehrungsfaktor</p></th>
+            <th><p>Zustand</p></th>
+            <th><p>Beispiel</p></th>
+            <th><p>Bezeichnung</p></th>
+          </tr>
+          <tr>
+            <td><p>$k < 1$</p></td>
+            <td><p>Die Anzahl an Spaltungen nimmt ab</p></td>
+            <td><p>Herunterfahren des Reaktors</p></td>
+            <td><p>unterkritisch</p></td>
+          </tr>
+          <tr>
+            <td><p>$k = 1$</p></td>
+            <td><p>Die Anzahl an Spaltungen bleibt konstant</p></td>
+            <td><p>stationärer Betrieb des Reaktors</p></td>
+            <td><p>kritisch</p></td>
+          </tr>
+          <tr>
+            <td><p>$k > 1$</p></td>
+            <td><p>Die Anzahl an Spaltungen nimmt zu</p></td>
+            <td><p>Hochfahren des Reaktors</p></td>
+            <td><p>überkritisch</p></td>
+          </tr>
+        </table>
+      </div>
+      <h2>Stationärer Betrieb</h2>
+      <p>
+        Um den stationären Betrieb des Reaktor aufrechtzuerhalten muss eine
+        mindest Menge, genannt kritische Masse, an Spaltstoff vorhanden sein.
+        <br />
+        Wird die kritische Masse überschritten, so verlassen zu viele Neutronen
+        den Spaltstoff ohne eine Spaltung zu bewirken. Dies kann verhindert
+        werden mit Neutronenreflektoren der die Neutronen wieder ins
+        Spaltprodukt reflektiert.
+      </p>
+      <h2>Wechselwirkung zwischen Neutron und Kern</h2>
+      <p>
+        Wenn ein Neutron auf ein Atomkern trifft so gibt es 3 verschiedene
+        Möglichkeiten wie sie mit einander reagieren können. Diese sind
+        <i>Spaltung</i>, <i>Streuung</i>, <i>Absorption</i>. <br />
+        Alle genannten Reaktionen sind möglich, sie hängen also von der
+        statistischen Wahrscheinlichkeit der Reaktion ab, und das unabhängig von
+        der Geschwindigkeit der Neutronen.
+      </p>
+      <h3>Bemerkung</h3>
+      <p>Thermische Neutronen sind langsame Neutronen.</p>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>
+              <p>Bezeichnung</p>
+            </th>
+            <th>
+              <p>Neutrongeschwindigkeit</p>
+            </th>
+          </tr>
+          <tr>
+            <td><p>schnelle Neutronen</p></td>
+            <td><p>$>10^7 \frac{m}{s}$</p></td>
+          </tr>
+          <tr>
+            <td><p>mittelschnelle Neutronen</p></td>
+            <td><p>$>10^5 \frac{m}{s}$ bis $>10^7 \frac{m}{s}$</p></td>
+          </tr>
+          <tr>
+            <td><p>langsame Neutronen</p></td>
+            <td><p>$>10^5 \frac{m}{s}$</p></td>
+          </tr>
+        </table>
+      </div>
+      <ol>
+        <li>
+          <p><u>Spaltung</u></p>
+          <p>Man unterscheidet zwischen:</p>
+          <ul>
+            <li>
+              <p><u>Kerne mit gerader Massenanzahl</u> <br /></p>
+              <p>
+                Ein Neutron kann ein Kern mit gerader Massenzahl spalten, wenn
+                das Neutron ein schnelles Neutron ist.
+              </p>
+            </li>
+            <li>
+              <p><u>Kerne mit ungerader Massenanzahl</u> <br /></p>
+              <p>
+                Hier kann auch ein langsames Neutron den Kern spalten. <br />
+                Wobei schnelle Neutronen auch den Kern Spalten können ist das
+                viel unwahrscheinlicher und werden daher nicht benutzt.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p><u>Streuung</u></p>
+          <p>
+            Die Streuung ist der Sto&beta;vorgang zwischen den Neutronen und den
+            Kernen. Hierbei wird das Neutron nach dem Sto&beta;vorgang abgelenkt
+            und es verliert Energie an den Atomkern. Da hierbei das Neutron an
+            Geschwindigkeit verliert werden die schnellen Neutronen zu
+            thermischen Neutronen. Man spricht hierbei auch von einem
+            Bremsvorgang der Neutronen.
+          </p>
+        </li>
+        <li>
+          <p><u>Absorbtion</u></p>
+          <p>Absorbtion ist wenn der Atomkern das Neutron einfängt, es gilt:</p>
+          $$ \ce{^1_0n^0 + ^A_ZK -> ^{A+1}_ZK} $$
+          <p>
+            Da der Kern ein Neutron eingefangen hat ist er radioaktiv. Er sendet
+            $\gamma$-Strahlung aus.
+          </p>
+        </li>
+      </ol>
+      <h2>Moderator, Moderation</h2>
+      <p>
+        Stoffe die die Streuung begünstigen hei&beta;en Moderatoren, sie machen
+        Moderation. Sie bremsen also schnelle Neutronen auf langsame Neutronen
+        ab. <br />
+        Oft werden folgende Stoffe verwendet: schweres Wasser, Wasser,
+        Beryllium, Grafit.
+      </p>
+      <h2>Neutronen einfangen</h2>
+      <p>
+        Stoffe die Neutronen einfangen sind einerseits in den Reaktorstäben
+        enthalten; wo sie erwünscht sind, und auch in den Spaltprodukten hier
+        bezeichnet man sie als Reaktorgifte. <br />
+        Wenn der Reaktor gebaut wird müssen jedoch Stoffe eingesetzt werden die
+        keine Tendenz haben Neutronen einzufangen diese hei&beta;en
+        Strukturmaterialien. <br />
+        Sie haben ebenfalls einen Einfluss auf den Vermehrungsfaktor. Gibt es
+        mehr Reaktorgifte so sinkt der Vermehrungsfaktor $k < 1$ gibt es weniger
+        so steigt der Vermehrungsfaktor $k > 1$
+      </p>
+      <h2>Kernbrennstoffe</h2>
+      <p>
+        Geeignete Kernbrennstoffe müssen aus schweren Kernen bestehen, wobei :
+        $A > 200$. Hierfür eignet sich technisch bis jetzt nur $\ce{^235U}$.
+      </p>
+      <h3>Bemerkung</h3>
+      <p>
+        Der Name Kernbrennstoffe kommt daher dass in anderen Kraftwerken oft
+        etwas verbrannt wird. Das ist jedoch beim Kernkraftwerk nicht der Fall.
+      </p>
+      <h2>Gewinnung von U-235</h2>
+      <p>Das Natürlich vorkommende Uran besteht aus:</p>
+      <ul>
+        <li>
+          <p>0,7%: $\ce{^{235}U}$</p>
+          <p>Das $\ce{^{235}U}$ ist das gewollte spaltbare Uran</p>
+        </li>
+        <li>
+          <p>99,3%: $\ce{^{238}U}$</p>
+          <p>
+            Das $\ce{^{238}U}$ ist das ungewollte nicht gro&beta;technisch
+            spaltbare Uran
+          </p>
+        </li>
+      </ul>
+      <p>
+        Diese Mischung an Uran ist gleichmä&beta;ig über alle Kontinente
+        verteilt, jedoch in sehr geringen Mengen. Was Uran sehr teuer macht und
+        durch die geringen Mengen an Uran in 1t Erz, etwa 7g, noch teurer. Die
+        geringen Mengen und die kosten sind gro&beta;e Faktoren bei den neuen
+        Kernkraftwerken. Es ist nicht sicher gestellt op genug und
+        kostengünstiges Uran zu betrieb vorhanden ist.
+      </p>
+      <h2>Brennelement, Brennstoff, Brennstab</h2>
+      <p>
+        In einem Reaktor sind Brennstäbe eingebaut. Sie sind lange rohrförmige
+        Stäbe. In diesen laufen die Spaltreaktion statt. Man füllt sie mit
+        Pellets oder Brennstofftabletten auf. Diese bestehen aus
+        Urandioxidpulver was in Tabletten gepresst wurde. Dabei muss beachtet
+        werden, dass zwischen dem Brennstoff genügend Platz vorhanden damit
+        entstehende Gase genügend Platz haben. <br />
+        In einem Reaktor werden mehrere dieser Brennstäbe mit einem
+        Abstandshalter zusammengefasst. Das fertige Produkt bezeichnet man als
+        Brennelement.
+        <br />
+        Ein Brennstoff dürfen nicht in Kontakt geraten, deshalb werden sie in
+        Tabletten gepresst und in dem Brennstab eingeschlossen. Ein Kontakt von
+        Brennstoff und Kühlmittel nennt man Kontamination.
+      </p>
+      <h3>Bemerkung</h3>
+      <p>
+        Bei einem Unfall könnte man pulverförmiges Urandioxid nicht so leicht
+        bergen als Tabletten von Urandioxid.
+      </p>
+      <h2>Leichtwasserreaktoren, LWR</h2>
+      <p>
+        Ein Leichtwasserreaktor ist eine Art von Reaktor. Zu dieser Art gehören
+        Siedewasserreaktor und Druckwasserreaktor. <br />
+      </p>
+      <h3>Aufbau</h3>
+      <p>
+        Ein Leichtwasserreaktor besteht aus einem Reaktorgefä&beta;, einem
+        Brennelement, leichtem Wasser und Regelstäbe.
+      </p>
+      <h3>Funktionsweise</h3>
+      <p>
+        Im Reaktorgefä&beta; befindet sich Wasser, im Wasser ist das
+        Brennelement. Das Wasser fungiert hierbei als Kühlmittel und als
+        Moderator. Die Regelstäbe können rein und raus bewegt werden um die
+        Spaltgeschwindigkeit zu regulieren. Sind die Regelstäbe näher an den
+        Brennstäben so geschehen weniger Zerfälle pro Zeiteinheit, sind sie
+        weiter entfernt so steigt die Anzahl an Zerfällen.
+      </p>
+      <h2>Regelstäbe</h2>
+      <p>
+        Ein Regelstab hat zur Aufgabe den Vermehrungsfaktor $k$ zu regulieren.
+        Regelstäbe bestehen aus Stoffen die die Eigenschaft haben Neutronen
+        einzufangen, somit verändern sie kontrolliert die Spaltgeschwindigkeit.
+      </p>
+
+      <h2>Selbststabilisierung</h2>
+      <p>
+        Leichtwasserreaktor sind selbst stabilisierend, das Bedeutet, dass eine
+        unkontrollierbare Kettenreaktion wie bei einer Atombombe physikalisch
+        unmöglich ist.
+        <br />
+        Steigt die Spaltaktivität schnell an so wird ebenfalls mehr Wärme
+        produziert. Diese flie&beta;t in das Kühlmittel und erwärmt ihn. Das
+        Wasser erhöht also seine Temperatur, seine Dichte nimmt damit ab, und
+        damit auch seine Moderatorwirkung. Dies bewirkt nun, dass die schnellen
+        Neutronen nicht mehr auf thermische Neutronen abgebremst werden können
+        und somit die Reaktion an Geschwindigkeit abnimmt. Die Reaktion kommt
+        zum stoppen.
+      </p>
+      <h2>Siedewasserreaktor, SWR</h2>
+      <h3>Schaltplan</h3>
+      <img src="../img/Kernkraftwerke/swr.png" alt="swr" class="zeichnungen" />
+      <h3>Aufbau</h3>
+      <p>Siedewasserreaktoren besitzen einen Kreislauf.</p>
+      <h3>Funktionsweise</h3>
+      <p>
+        Bei einem Siedewasserreaktor ist der Reaktor zu $\frac{2}{3}$ mit Wasser
+        gefüllt. Das erlaubt dem Wasser, unter der Wärme des Brennelements, zu
+        sieden, daher der Name. Der Wasserdampf wird anschlie&beta;end
+        getrocknet und flie&beta;t dann zu den Turbinen. Nach den Turbinen
+        kondensiert der Wasserdampf wieder zu Wasser, durchgeht einen
+        Kondensator und wird dann wieder in den Reaktor zurückgepumpt.
+      </p>
+      <h3>Schutzma&beta;nahmen</h3>
+      <p>
+        Da das Wasser den stark radioaktiven Reaktor durchläuft ist es ebenfalls
+        stark radioaktiv und muss somit Abgeschirmt werden um Kontamination zu
+        vermeiden. Das Maschinenhaus der Turbinen sowie Pumpen, Reaktor und
+        alles weitere was mit dem Wasser in Kontakt gerät muss Abgeschirmt
+        werden, dass keine Strahlung heraus gelangen kann.
+      </p>
+      <h2>Druckwasserreaktor, DWR</h2>
+      <h3>Schaltplan</h3>
+      <img src="../img/Kernkraftwerke/dwr.png" alt="dwr" class="zeichnungen" />
+      <h3>Aufbau</h3>
+      <p>Druckwasserreaktoren besitzen 2 Kreisläufe.</p>
+      <h3>Funktionsweise</h3>
+      <p>
+        Der Primärkreislauf transportiert die Wärme die im Reaktor entsteht zu
+        einem Dampferzeuger. Das geschieht ohne, dass das Wasser dabei
+        Aggregatzustand ändert; es bleibt flüssig. <br />
+        Im Sekundärkreislauf wird das flüssige Wasser im Dampferzeuger zum
+        sieden gebracht. Der Dampf flie&beta;t, dann zu der Hochdruckturbine und
+        anschlie&beta;end zum Überhitzer und dann zur Niederdruchturbine.
+      </p>
+      <h3>Schutzma&beta;nahmen</h3>
+      <p>
+        Bei dem Druckwasserreaktor gibt es den Vorteil, dass es mehrere
+        Kreisläufe gibt, was bewirkt, dass die Strahlung besser abgeschirmt ist.
+      </p>
+      <h2>Barrierenkonzept</h2>
+      <p>
+        Das Barrierenkonzept ist die Methode die Umwelt von den radioaktiven
+        Stoffen frei zu halten. <br />
+        Verschiedene Barrieren schützten von verschiedenen Arten von
+        Kontamination beispielsweise durch auslaufen des stark radioaktiven
+        Wassers, oder das Durchdringen der Strahlung, sowie der Austritt der
+        Brennstoffe. Es gibt folgende Barrieren von ganz innen nach aussen:
+      </p>
+
+      <ol>
+        <li>
+          <p>
+            Der Brennstoff wird in Brennstofftabletten gepresst. <br />
+            Verhindert den Stoffausbruch.
+          </p>
+        </li>
+        <li>
+          <p>
+            Der Brennstoff wird in Brennstäbe gepackt. <br />
+            Verhindert den Stoffausbruch.
+          </p>
+        </li>
+        <li>
+          <p>
+            Das Brennelement wird in den Reaktordruckbehälter eingebaut. <br />
+            Verhindert den Wasserauslauf.
+          </p>
+        </li>
+        <li>
+          <p>
+            Der Reaktordruckbehälter wird in eine Betonabschirmung eingebaut.
+            <br />
+            Verhindert, dass Strahlen entkommen.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Betonabschirmung wird in ein Sicherheitsbehälter eingebaut.
+            <br />
+            Verhindert den Wasserauslauf.
+          </p>
+        </li>
+        <li>
+          <p>
+            Der Sicherheitsbehälter wird in eine zweite Stahlbetonhülle
+            eingebaut.
+            <br />
+            Verhindert, dass Strahlen entkommen.
+          </p>
+        </li>
+      </ol>
+      <h2>GAU</h2>
+      <p>GAU steht für: Grö&beta;t anzunehmender Unfall.</p>
+      <h2>GAU bei LWR</h2>
+      <p>
+        Der Grö&beta;t anzunehmender Unfall bei einem Leichtwasserreaktor ist
+        die Kernschmelze. Der Brennstoff würde sich so stark aufheizen, bis zum
+        Beispiel einem Rohrbruch im Kühlsystem, dass es zur Kernschmelze käme.
+        Da eine Kettenreaktion ausgeschlossen ist durch die
+        Selbststabilisierung, würde der Reaktor sich so stark erhitzen, dass er
+        sich möglicherweise durch alle Barrieren durchschmelzen würde. Somit
+        gelängen die radioaktiven Spaltprodukte in die Umwelt.
+      </p>
+      <h2>Sicherheitsma&beta;nahmen</h2>
+      <p>
+        Die Sicherheitsma&beta;nahmen sollen die Wahrscheinlichkeit, dass ein
+        GAU vorkommt verringern. Sie sind:
+      </p>
+      <ul>
+        <li>
+          <p><u>Redundanz</u></p>
+          <p>
+            Redundanz bedeutet, dass wichtige System mehrfach vorhanden sind.
+            Dies ist wichtig, fällt nun ein kritisches System aus, kommt es
+            nicht sofort zu GAU.
+          </p>
+        </li>
+        <li>
+          <p><u>Diversität</u></p>
+          <p>
+            Die mehrfach vorhandenen Systeme müssen auch unterschiedliche
+            funktionsweisen haben beispielsweise eine andere Energieversorgung,
+            von Strom auf Kraftstoffe.
+          </p>
+        </li>
+        <li>
+          <p><u>Räumliche Trennung</u></p>
+          <p>
+            Wichtige Systeme sollten ebenfalls in verschieden Räumen vorhanden
+            sein, so dass sie von äu&beta;eren Faktoren geschützt sind
+            beispielsweise Explosionen.
+          </p>
+        </li>
+      </ul>
+      <h2>Entsorgung</h2>
+      <p>
+        Bei der Reaktion im Brennstab, werden auch Reaktorgifte produziert.
+        Deshalb muss vor dem, dass das Ganze Uran gespalten ist schon der
+        Brennstab entsorgt werden. <br />
+        Die bei der Spaltung von Uran entstandenen Stoffe sind stark radioaktiv
+        jedoch haben diese eine kurze Halbwertszeit. Sie werden deshalb in ein
+        sogenanntes Abklingbecken zwischengelagert. Das Abklingbecken ist mit
+        Wassergefüllt.
+      </p>
+      <h2>Wiederaufbereitung</h2>
+      <p>
+        Da Uran nicht wieder erzeugt werden kann und dessen Gewinnung nur teurer
+        wird. Muss das noch brauchbare $\ce{^235U}$ wieder aufbereitet werden.
+        Wiederaufbereitung ist also das brauchbare Uran aus den Brennstäben in
+        neue Brennstäbe zu recyclen.
+      </p>
+      <p>WAA</p>
+      <p>
+        WAA, steht für Wiederaufbereitungsanlage. Sie arbeiten mit dem
+        sogenannten <i>PUREX-Verfahren</i>.
+      </p>
+      <h2>PUREX-Verfahren</h2>
+      <p>
+        PUREX steht für: Plutonium-Uranium-Recovery by Extraction. Das
+        PUREX-Verfahren besteht aus folgenden Schritten:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Die Brennstäbe werden in etwa 5 $cm$ gro&beta;e lange Stücke
+            zerschnitten. Dann werden sie in konzentrierte Salpetersäure gelegt,
+            das löst den Inhalt der Brennstäbe in der Lösung auf.
+          </p>
+        </li>
+        <li>
+          <p>
+            Das Uran und Plutonium werden aus der Lösung getrennt. <br />
+            Die anderen stark radioaktiven Spaltprodukte werden verfestigt, in
+            Glas eingeschmolzen, wiederrum in Edelstahlzylinder eingeschmolzen.
+            <br />
+            Die mittelstarken Spaltprodukte werden in Beton ummantelt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Uran und Plutonium werden anschlie&beta;end von einander getrennt
+            und so aufbereitet, dass es in der Brennelementfertigung
+            weiterverarbeitet werden kann.
+          </p>
+        </li>
+      </ol>
+      <h2>Endlagerung</h2>
+      <p>
+        Die Spaltprodukte mit einer sehr gro&beta;en Halbwertszeit und die stark
+        radioaktiv sind müssen für sehr lange Zeit gelagert werden, man spricht
+        von Endlagerung. <br />
+        Schwach radioaktive oder mittelstarke radioaktive Abfälle werden oft nur
+        in stillgelegten Bergwerken gelagert.
+        <br />
+        Um einen geeigneten Standort zu finden um die stark radioaktiven
+        Spaltprodukte endlagern zu können müssen folgende Bedingungen erfüllt
+        sein:
+      </p>
+      <ul>
+        <li>
+          <p>geologische Stabilität</p>
+        </li>
+        <li>
+          <p>keine Verbindung zum Grundwasser</p>
+        </li>
+        <li>
+          <p>ausreichende Tiefe</p>
+        </li>
+        <li>
+          <p>gute Wärmeleitfähigkeit</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

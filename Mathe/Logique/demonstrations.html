@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Démonstrations</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Démonstrations</h1>
+      <h2>Démonstration</h2>
+      <h3>Définition</h3>
+      <p>
+        Une démonstration mathématique est une suite d'assertions mathématiques,
+        chacune découlant logiquement de la précédente, permettant de passer
+        d'assertions admises comme étant vraies, vers une assertion finale qu'on
+        souhaite démontrer.
+      </p>
+      <h2>Différentes méthodes de démonstrations</h2>
+      <ul>
+        <li>
+          <p><u>Démonstration directe</u></p>
+          <p>
+            Une preuve directe est une succession d'implications commençant par
+            “P” et terminant par “Q”. La plupart des preuves sont directes.
+          </p>
+        </li>
+        <li>
+          <p><u>Démonstration par l'absurde</u></p>
+          <p>
+            On suppose que la conclusion à laquelle on veut aboutir est fausse,
+            et on en déduit une contradiction. Faire une démonstration par
+            l'absurde revient donc à démontrer.
+          </p>
+          $$ (\neg B) \Rightarrow (\neg A) $$
+          <p>pour en déduire que:</p>
+          $$ A \Rightarrow B $$
+        </li>
+        <li>
+          <p><u>Démonstration par hérédité, démonstration par induction </u></p>
+          <p>
+            C'est un type particulier de preuve, utilisé pour démontrer des
+            assertions dépendant d'un nombre entier $n$. Notons ainsi $(A_n)$
+            une assertion dépendant de $n$. Pour démontrer que $(A_n)$ est vraie
+            pour tout $n$, il suffit de montrer que :
+          </p>
+          <ul>
+            <li>
+              <p>$(A_0)$ est vraie</p>
+            </li>
+            <li>
+              <p>$\forall n \geqslant 0, (A_0) \Rightarrow (A_{n+1})$</p>
+            </li>
+          </ul>
+          <h3>Remarque</h3>
+          <p>
+            Dans certains cas, on pourra commencer à $n = 1$ au lieu de $n = 0$.
+          </p>
+        </li>
+        <li>
+          <p><u>Démonstration par contraposée</u></p>
+          <p>
+            Dans une preuve par contraposée, on suppose la négation de la
+            conclusion et on montre la négation de l'hypothèse. <br />
+            Ainsi, montrer “Si P alors Q” par contraposée signifie qu'on part de
+            “non Q” et qu'on arrive à “non P ”.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="converter-code.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+    <link rel="stylesheet" href="converter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <link rel="stylesheet" href="geometry.css" />
+    <script defer src="geometry.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Geometrie Rechemaschinn</h1>
+        <div class="tabs">
+          <div class="tab active" data-target="rectangle">Rectangle</div>
+          <div class="tab" data-target="square">Square</div>
+          <div class="tab" data-target="circle">Circle</div>
+          <div class="tab" data-target="triangle">Triangle</div>
+          <div class="tab" data-target="sphere">Sphere</div>
+          <div class="tab" data-target="cylinder">Cylinder</div>
+          <div class="tab" data-target="pentagon">Pentagon</div>
+          <div class="tab" data-target="ellipse">Ellipse</div>
+        </div>
+        <div id="rectangle" class="content active">
+          <h2>Rectangle</h2>
+          <label for="rect-length">Length:</label>
+          <input type="number" id="rect-length" /><br /><br />
+          <label for="rect-width">Width:</label>
+          <input type="number" id="rect-width" /><br /><br />
+          <button onclick="calculateRectangle()">Calculate</button>
+          <p id="rect-result"></p>
+        </div>
+        <div id="square" class="content">
+          <h2>Square</h2>
+          <label for="square-side">Side:</label>
+          <input type="number" id="square-side" /><br /><br />
+          <button onclick="calculateSquare()">Calculate</button>
+          <p id="square-result"></p>
+        </div>
+        <div id="circle" class="content">
+          <h2>Circle</h2>
+          <label for="circle-radius">Radius:</label>
+          <input type="number" id="circle-radius" /><br /><br />
+          <button onclick="calculateCircle()">Calculate</button>
+          <p id="circle-result"></p>
+        </div>
+        <div id="triangle" class="content">
+          <h2>Triangle</h2>
+          <label for="tri-base">Base:</label>
+          <input type="number" id="tri-base" /><br /><br />
+          <label for="tri-height">Height:</label>
+          <input type="number" id="tri-height" /><br /><br />
+          <button onclick="calculateTriangle()">Calculate</button>
+          <p id="tri-result"></p>
+        </div>
+        <div id="sphere" class="content">
+          <h2>Sphere</h2>
+          <label for="sphere-radius">Radius:</label>
+          <input type="number" id="sphere-radius" /><br /><br />
+          <button onclick="calculateSphere()">Calculate</button>
+          <p id="sphere-result"></p>
+        </div>
+        <div id="cylinder" class="content">
+          <h2>Cylinder</h2>
+          <label for="cylinder-radius">Radius:</label>
+          <input type="number" id="cylinder-radius" /><br /><br />
+          <label for="cylinder-height">Height:</label>
+          <input type="number" id="cylinder-height" /><br /><br />
+          <button onclick="calculateCylinder()">Calculate</button>
+          <p id="cylinder-result"></p>
+        </div>
+        <div id="pentagon" class="content">
+          <h2>Pentagon</h2>
+          <label for="cylinder-radius">Side:</label>
+          <input type="number" id="pentagon-side" /><br /><br />
+
+          <button onclick="calculatePentagon()">Calculate</button>
+          <p id="pentagon-result"></p>
+        </div>
+        <div id="ellipse" class="content">
+          <h2>Ellipse</h2>
+          <label for="ellipse-a">A:</label>
+          <input type="number" id="ellipse-a" /><br /><br />
+          <label for="ellipse-b">B:</label>
+          <input type="number" id="ellipse-b" /><br /><br />
+          <button onclick="calculateEllipse()">Calculate</button>
+          <p id="ellipse-result"></p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

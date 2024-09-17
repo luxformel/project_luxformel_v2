@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>RC - Reihenschaltung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>RC - Reihenschaltung</h1>
+      <h2>Schaltung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Reihenschaltung/rcReihenschaltung.png"
+        alt="RC - Reihenschaltung"
+      />
+      <ol>
+        <li>
+          <p>
+            Durch den Wirkwiderstand \( R \) und die Kapazität \( C \)
+            flie&beta;t der gleiche Strom \( I \).
+          </p>
+        </li>
+        <li>
+          <p>
+            An \( R \) fällt die Spannung \( U_R \) ab. Sie liegt mit dem Strom
+            \( I \) in Phase.
+          </p>
+        </li>
+        <li>
+          <p>
+            An \( X_C \) fällt die Spannung \( U_C \) ab. Sie eilt dem Strom \(
+            I \) um 90\( ^{\circ} \) nach.
+          </p>
+        </li>
+        <li>
+          <p>
+            Deshalb müssen auch die Spannungen \( U_R \) und \( U_C \) um 90\(
+            ^{\circ} \) phasenverschoben sein.
+          </p>
+        </li>
+      </ol>
+      <h2>Spannung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Reihenschaltung/Spannungsdreieck.png"
+        alt="Spannungsdreieck"
+      />
+      $$ U = \sqrt{U_R^2 + U_C^2} $$ $$ \sin(\varphi)=\frac{U_C}{U} $$ $$
+      \cos(\varphi)=\frac{U_R}{U} $$ $$ \tan(\varphi)=\frac{U_C}{U_R} $$
+      <h2>Widerstand</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Reihenschaltung/Widerstandsdreieck.png"
+        alt="Widerstandsdreieck"
+      />
+      $$ Z = \sqrt{R^2 + X_C^2} $$ $$ \sin(\varphi)=\frac{X_C}{Z} $$ $$
+      \cos(\varphi)=\frac{R}{Z} $$ $$ \tan(\varphi)=\frac{X_C}{R} $$
+      <h2>Leistung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Reihenschaltung/Leistungsdreieck.png"
+        alt="Leistungsdreieck"
+      />
+      $$ S = \sqrt{P + Q_C^2} $$ $$ \sin(\varphi)=\frac{Q_C}{S} $$ $$
+      \cos(\varphi)=\frac{P}{S} $$ $$ \tan(\varphi)=\frac{Q_C}{P} $$
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Volumenänderung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Volumenänderung</h1>
+      <h2>Gesetz der Volumenänderung</h2>
+      <h3>Herleitung</h3>
+      <p>Die Volumenänderung $\Delta V$ ist:</p>
+      <ul>
+        <li>
+          <p>direkt proportional zur Temperaturänderung $\Delta \theta$:</p>
+          $$ \Delta V \sim \Delta \theta$$
+        </li>
+        <li>
+          <p>direkt proportional zum Anfangsvolumen $V_0$:</p>
+          $$ \Delta V \sim V_0$$
+        </li>
+      </ul>
+      <p>
+        Die beiden Proportionalitäten lassen sich zusammenschreiben, daher
+        ergibt sich:
+      </p>
+      $$ \Delta V \sim \Delta \theta \cdot V_0$$
+      <p>und</p>
+      $$ \frac{\Delta V}{\Delta \theta \cdot V_0} = konstant$$
+      <p>
+        Die Proportionalitätskonstante drückt die Abhängigkeit der Ausdehnung
+        vom Material aus und wird als Volumenausdehnungskoeffizient $\gamma$
+        bezeichnet. Also erhalten wir:
+      </p>
+      $$ \frac{\Delta V}{\Delta \theta \cdot V_0} = \gamma$$
+      <h3>Formel</h3>
+      $$ \Delta V = \gamma \cdot \Delta \theta \cdot V_0 $$
+      <p>oder</p>
+      $$ V - V_0 = \gamma \cdot \left( \theta - \theta_0 \right) \cdot L_0 $$
+    </div>
+  </body>
+</html>

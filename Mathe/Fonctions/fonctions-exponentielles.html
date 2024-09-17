@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Fonction exponentielle</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Fonction exponentielle</h1>
+      <h3>Théorème</h3>
+      <p>
+        Il existe une unique fonction \( f \) dérivable sur \( \mathbb{R} \)
+        telle que :
+      </p>
+      $$ \forall\ x\ \in \ \mathbb{R}:\ f^{\prime }\left( x\right) =f\left(
+      x\right) \ et\ f\left( 0\right) =1 $$
+      <h3>Définition</h3>
+      <p>
+        La fonction \( f \) dérivable sur \( \mathbb{R} \) telle que \(
+        f^{\prime} = f\ et\ f(0) = 1\) est appelée fonction exponentielle. On la
+        note \( \exp \).
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        La fonction \( f \) définie par \( f(x) = \exp(u(x)) \) est dérivable
+        sur \( I \) et pour tout \( x \in I \):
+      </p>
+      $$f^{\prime }\left( x\right) =u^{\prime }\left( x\right) \cdot \exp \left(
+      u\left( x\right) \right) $$
+      <h3>Théorème</h3>
+      <p>Pour tout réel \( a \) et tout réel \( b \),</p>
+      $$\exp \left( a+b\right) =\exp \left( a\right) \cdot \exp \left( b\right)
+      $$
+      <h3>Démonstration</h3>
+      <p>
+        On fixe le réel \( a\) et on introduit la fonction \( h\) définie sur \(
+        \mathbb{R} \) par:
+      </p>
+      $$h=\frac{\exp \left( x+a\right) }{\exp \left( a\right) } $$
+      <p>
+        La fonction \( h\) est dérivable sur \( \mathbb{R} \) et \( \forall x
+        \in \mathbb{R} \)
+      </p>
+      $$h^{\prime }\left( x\right) = \left( \frac{\exp \left( x+a\right) }{\exp
+      \left( a\right) } \right)^{\prime } $$ $$=\frac{1}{\exp \left( a\right) }
+      \cdot \left( \exp \right)^{\prime } \left( x+a\right) $$ $$=\frac{1}{\exp
+      \left( a\right) } \cdot \left( x+a\right)^{\prime } \cdot \exp \left(
+      x+a\right) $$ $$=\frac{1}{\exp \left( a\right) } \cdot 1\cdot \exp \left(
+      x+a\right) $$ $$=\frac{\exp \left( x+a\right) }{\exp \left( a\right) } $$
+      $$ = h^{\prime}(x)$$
+      <p>
+        De plus: \( h\left( 0\right) =\frac{\exp \left( 0+a\right) }{\exp \left(
+        a\right) } =\frac{\exp \left( a\right) }{\exp \left( a\right) } =1 \)
+        <br />
+        La fonction \( h \) est telle que \( h^{\prime} = h \) et \( h(0) = 1 \)
+        : il s'agit donc de la fonction exponentielle. <br />
+        Ainsi, pour tout réel \( x \) :
+      </p>
+      $$h\left( x\right) =\exp \left( x\right) $$ $$\Leftrightarrow \frac{\exp
+      \left( x+a\right) }{\exp \left( a\right) } =\exp \left( x\right) $$
+      <p>Avec \( \mid \cdot \exp(a) \neq 0 \)</p>
+      $$\Leftrightarrow \exp \left( x+a\right) =\exp \left( x\right) \cdot \exp
+      \left( a\right) $$
+      <p>Pour \( x = b \), on obtient:</p>
+      $$\Leftrightarrow \exp \left( a+b\right) =\exp \left( a\right) \cdot \exp
+      \left( b\right) $$
+      <p>cqfd</p>
+      <h3>Théorème</h3>
+      <p>\( \forall a,\ b \in \mathbb{R} \):</p>
+      $$\exp \left( -a\right) =\frac{1}{\exp \left( a\right) } \ et\ \exp \left(
+      a-b\right) =\frac{\exp \left( a\right) }{\exp \left( b\right) } $$
+      <h3>Démonstration</h3>
+      <p>
+        On sait que: \( \forall a,\ b \in \mathbb{R} \) : \( \exp \left(
+        a+b\right) =\exp \left( a\right) \cdot \exp \left( b\right)\ (1) \)
+        <br />
+        1 Pour \( b = -a \), on obtient :
+      </p>
+      $$\exp \left[ a+\left( -a\right) \right] =\exp \left( a\right) \cdot \exp
+      \left( -a\right) $$ $$\Leftrightarrow \exp \left( 0\right) =\exp \left(
+      a\right) \cdot \exp \left( -a\right)$$ $$ \Leftrightarrow 1=\exp \left(
+      a\right) \cdot \exp \left( -a\right) \ |\cdot \frac{1}{\exp \left(
+      a\right) } ,\ car\ \exp \left( a\right) \neq 0 $$ $$\Leftrightarrow \exp
+      \left( -a\right) =\frac{1}{\exp \left( a\right) } \ \left( 2\right) $$
+      <p>2) On a:</p>
+      $$\exp \left( a-b\right) =\exp \left[ a+\left( -b\right) \right] $$
+      <p>Par (1):</p>
+      $$=\exp \left( a\right) \cdot \exp \left( -b\right) $$
+      <p>Par (2):</p>
+      $$=\exp \left( a\right) \cdot \frac{1}{\exp \left( b\right) } $$
+      $$=\frac{\exp \left( a\right) }{\exp \left( b\right) } $$
+      <p>cqfd</p>
+      <h3>Théorème</h3>
+      <p>\( \forall a \in \mathbb{R} \):</p>
+      $$ \exp \left( \frac{a}{2} \right) =\sqrt{\exp \left( a\right) } $$
+      <h3>Théorème</h3>
+      <p>\( \forall x \in \mathbb{R} \) et \( \forall n \in \mathbb{N} \)</p>
+      $$\exp \left( n\cdot x\right) =\left[ \exp \left( x\right) \right]^{n} $$
+      <h3>Démonstration</h3>
+      <p>
+        Montrons d'abord par récurrence que la formule est vraie pour tout
+        entier naturel \( n \) de \( \mathbb{N} \).
+      </p>
+      $$ \mathscr{P}(x) : \exp \left( n\cdot x\right) =\left[ \exp \left(
+      x\right) \right]^{n} $$
+      <p>
+        Initialisation: <br />
+        \( \mathscr{P}(0) \) est vraie. <br />
+        En effet \( \exp \left( 0\cdot x\right) =\exp \left( 0\right) =1\ \) et
+        \( \left[ \exp \left( x\right) \right]^{0} =1 \) <br />
+        Hérédité: <br />
+        Supposons que l'on ait \( \mathscr{P}(n) \). <br />
+        Alors on aurait:
+      </p>
+      $$ \exp \left[ \left( n+1\right) x\right] =\exp \left( nx+x\right) $$ $$ =
+      \exp \left( nx\right) \cdot \exp \left( x\right) $$
+      <p>par l'hypothèse de récurrence</p>
+      $$ =\exp \left[ \left( x\right) \right]^{n} \cdot \exp \left( x\right) $$
+      $$ =\exp \left[ \left( x\right) \right]^{n+1} $$
+      <p>
+        Donc \( \mathscr{P}(n+1) \) est vraie. <br />
+        Conclusion: <br />
+        \( \forall n \in \mathbb{N} \) : \( \exp \left( nx\right) =\left[ \exp
+        \left( x\right) \right]^{n} \) <br />
+        Par ailleurs,
+      </p>
+      $$\exp \left( -nx\right) =\frac{1}{\exp \left( nx\right) }
+      =\frac{1}{\left[ \exp \left( x\right) \right]^{n} } =\left[ \exp \left(
+      x\right) \right]^{-n} $$
+      <p>
+        La formule est donc vraie pour tout entier relatif. <br />
+        cqfd
+      </p>
+      <h2>Notation</h2>
+      $$ e = \exp(1)$$
+      <p>
+        \( e \) est appelé nombre exponentiel, nombre d'Euler ou constante de
+        Néper.
+      </p>
+      $$ e \simeq 2.71828 $$ $$ \forall x \in \mathbb{R} : \exp (x) = e^x$$
+      <h3>Conventions</h3>
+      $$ e^0 = 1 $$ $$ e^1 = e $$
+      <p>\( \forall a,\ b \in \mathbb{R} \):</p>
+      $$ e^{a+b} = e^a \cdot e^b $$ $$e^{-a} = \frac{1}{e^a} $$ $$e^{a-b} =
+      \frac{e^a}{e^b} $$ $$e^{\frac{a}{2}} = \sqrt{e^a} $$
+      <p>\( \forall x \in \mathbb{R} \) et \( \forall n \in \mathbb{Z} \) :</p>
+      $$\left( e^{x}\right)^{n} =e^{nx}$$
+      <p>\( \forall x \in \mathbb{R} \):</p>
+      $$\left( e^{x}\right)^{\prime} =e^{x}$$
+      <p>
+        Si \( u \) est une fonction dérivable sur un intervalle \( I \), alors
+        \( \forall x \in I \):
+      </p>
+      $$\left( e^{u\left( x\right) }\right)^{\prime } =u^{\prime }\left(
+      x\right) \cdot e^{u\left( x\right) }$$
+      <h2>Variations</h2>
+      <h3>Théorème</h3>
+      <p>\( \forall x \in \mathbb{R} \):</p>
+      $$e^{x}>0$$
+      <h3>Théorème</h3>
+      <p>
+        La fonction exponentielle est strictement croissante sur \( \mathbb{R}
+        \).
+      </p>
+      <h3>Conséquences</h3>
+      <p>\( \forall a, \ b \in \mathbb{R} \):</p>
+      <p>Comme \( \exp \) est strictement croissante sur \( \mathbb{R} \)</p>
+      $$e^{a}=e^{b}\Leftrightarrow a=b$$
+      <p>Comme \( \exp \) est strictement croissante sur \( \mathbb{R} \)</p>
+      $$e^{a} < e^{b} \Leftrightarrow a < b$$
+      <h3>Théorème</h3>
+      $$ \lim_{x\rightarrow +\infty } e^{x}=+\infty $$ $$\lim_{x\rightarrow
+      -\infty } e^{x}=0$$
+      <h3>Démonstration</h3>
+      <p>
+        Démontrons que \( \lim_{x\rightarrow +\infty } e^{x}=+\infty \) en
+        comparant \( e^x \) à \( x \). <br />
+        Pour cela, étudions la fonction différence \( f \) définie sur \(
+        \mathbb{R} \) par:
+      </p>
+      $$ f\left( x\right) =e^{x}-x$$
+      <p>
+        \( f \) est dérivable sur \( \mathbb{R} \) et \( \forall x \in
+        \mathbb{R} \)
+      </p>
+      $$f^{\prime }\left( x\right) =e^{x}-1$$ $$f^{\prime }\left( x\right)
+      >0\Leftrightarrow e^{x}-1>0$$ $$\Leftrightarrow e^{x}>1$$
+      $$\Leftrightarrow e^{x}>e^{0}$$ $$\Leftrightarrow x>0$$
+      <p>Comme \( \exp \) est strictement croissante sur \( \mathbb{R} \)</p>
+      $$f^{\prime }\left( x\right) =0\Leftrightarrow x=0$$
+      <p>On obtient donc le tableau de variations suivant:</p>
+      <img
+        class="zeichnungen"
+        src="/Mathe/img/tdvFonctionExponentielle.png"
+        alt="tableau de variations"
+      />
+      <p>
+        \( f \) sur \( \mathbb{R} \) le nombre 1 comme minimum et \( \forall x
+        \in \mathbb{R} \)
+      </p>
+      $$f\left( x\right) \geqslant 1$$
+      <p>Donc, \( \forall x \in \mathbb{R} \):</p>
+      $$f\left( x\right) >0\Leftrightarrow e^{x}-x>0\ $$ $$\Leftrightarrow
+      e^{x}>x\ $$
+      <p>
+        Or, \( \lim_{x\rightarrow +\infty } e^{x}=+\infty \), donc par le
+        théorème de comparaison, on a:
+      </p>
+      $$\lim_{x\rightarrow +\infty } e^{x}=+\infty $$
+      <p>
+        cqfd <br />
+        Démontrons que \( \lim_{x\rightarrow -\infty } e^{x}=0 \) <br />
+        Posons \( t=-x \Leftrightarrow x = -t \) <br />
+        Si \( x \rightarrow - \infty \), \( t \rightarrow + \infty \) <br />
+        Donc,
+      </p>
+      $$\lim_{x\rightarrow -\infty } e^{x}=\lim_{t\rightarrow +\infty } e^{-t}$$
+      $$=\lim_{t\rightarrow +\infty } \underbrace{\frac{1}{e^{t}} }_{\rightarrow
+      +\infty } $$ $$ =0$$
+      <p>cqfd</p>
+      <h2>Courbe représentative</h2>
+      <h3>Théorème</h3>
+      $$\lim_{x\rightarrow 0} \frac{e^x - 1}{x} =1$$
+      <h3>Démonstration</h3>
+      $$\lim_{x\rightarrow 0} \frac{e^x - 1}{x} = \lim_{x\rightarrow 0}
+      \frac{e^x - e^0}{x - 0}$$ $$ = \lim_{x\rightarrow 0} \frac{\exp(x) -
+      \exp(0)}{x - 0} $$
+      <p>par définition de la dérivabilité de exp en 0</p>
+      $$ = (\exp)^{ \prime } (0)$$ $$ = \exp (0)$$ $$ = 1$$
+      <h2>Croissance comparée</h2>
+      <h3>Théorème</h3>
+      $$ \lim_{x\rightarrow +\infty } \frac{e^x}{x} = +\infty$$ $$
+      \lim_{x\rightarrow -\infty } xe^x = 0$$
+      <h3>Démonstration 1</h3>
+      <p>
+        Démontrons que \( \lim_{x\rightarrow +\infty } \frac{e^x}{x} = +\infty
+        \) en comparant \( e^x \) à \( \frac{x^2}{2} \) <br />
+        Pour cela, étudions la fonction différence \( f \) définie sur \(
+        \mathbb{R} \) par :
+      </p>
+      $$ f(x) = e^x - \frac{x^2}{2} $$
+      <p>
+        \( f \) est dérivable sur \( \mathbb{R} \) et \( \forall x \in
+        \mathbb{R} \) :
+      </p>
+      $$ f^{\prime}(x) = e^x - x $$
+      <p>
+        \( f^{\prime} \) est dérivable sur \( \mathbb{R} \) et \( \forall x \in
+        \mathbb{R} \) :
+      </p>
+      $$ f^{\prime \prime}(x) = \ $$
+      <p>Or:</p>
+      $$ f^{\prime \prime}(x) > 0 \Leftrightarrow e^x - 1 > 0$$
+      $$\Leftrightarrow e^x > 1$$ $$\Leftrightarrow e^x > e^0$$
+      $$\Leftrightarrow x > 0$$
+      <p>
+        Comme la fonction \( \exp \) est strictement croissante sur \(
+        \mathbb{R} \)
+      </p>
+      $$ f^{\prime \prime}(x) = 0 \Leftrightarrow x = 0$$
+      <p>
+        On obtient donc le tableau de variations suivant (pour la fonction \(
+        f^{\prime} \) ):
+      </p>
+      <img
+        src="/Mathe/img/fonction exponentielle/TDV2.png"
+        alt="tableau de variations"
+        class="zeichnungen"
+      />
+      <p>
+        \( f^{\prime} \) admet sur \( \mathbb{R} \) le nombre 1 comme minimum et
+        \( \forall x \in \mathbb{R} \) :
+      </p>
+      $$ f^{\prime}(x) \geqslant 1 $$
+      <p>Donc, \( \forall x \in \mathbb{R} \):</p>
+      $$ f^{\prime}(x) > 0 $$
+      <p>On obtient alors le tableau de variations pour la fonction \( f \)</p>
+      <img
+        src="/Mathe/img/fonction exponentielle/TDV1.png"
+        alt="tableau de variations"
+        class="zeichnungen"
+      />
+      <p>Ainsi, \( \forall x \in \mathbb{R}^*_+ \)</p>
+      $$ f^{\prime}(x) > 1 $$
+      <p>Donc, \( \forall x \in \mathbb{R}^*_+ \)</p>
+      $$ f^{\prime}(x) > 0 \Leftrightarrow e^x - \frac{x^2}{2} > 0$$ $$
+      \Leftrightarrow e^x > \frac{x^2}{2} $$ $$ \Leftrightarrow \frac{e^x}{x} >
+      \frac{x}{2} $$
+      <p>
+        Or, \( \lim_{x\rightarrow +\infty } \frac{x}{2} = +\infty \), donc par
+        le théorème de comparaison, on a :
+      </p>
+      $$ \lim_{x\rightarrow +\infty } \frac{e^x}{x} = +\infty$$
+      <h3>Démonstration 2</h3>
+      <p>Démontrons que:</p>
+      $$ \lim_{x\rightarrow -\infty } xe^x = 0$$
+      <p>
+        Posons \( t = -x \Leftrightarrow x = -t\) <br />
+        Si \( x \rightarrow -\infty \), alors \( t \rightarrow +\infty \) <br />
+        Donc :
+      </p>
+      $$ \lim_{x\rightarrow -\infty } xe^x = \lim_{x\rightarrow -\infty }
+      -te^{-t}$$ $$= \lim_{x\rightarrow -\infty } \frac{-t}{e^t}$$ $$=
+      \lim_{x\rightarrow -\infty } \frac{-1}{\frac{e^t}{t}}$$ $$ = 0$$
+      <h3>Théorème</h3>
+      $$ \lim_{x\rightarrow +\infty } \frac{x}{e^x} = 0$$
+      <h3>Théorème</h3>
+      <p>\( \forall x \in \mathbb{N}^* \):</p>
+      $$ \lim_{x\rightarrow +\infty } \frac{e^x}{x^n} = +\infty$$ $$
+      \lim_{x\rightarrow -\infty } x^ne^x = 0$$
+      <h3>Démonstration 1</h3>
+      <p>Démontrons que:</p>
+      $$ \lim_{x\rightarrow -\infty } x^ne^x = 0$$
+      <p>
+        Posons \( t = \frac{x}{n} \Leftrightarrow x = t \cdot n\) <br />
+        Si \( x \rightarrow +\infty \), alors \( t \rightarrow +\infty \), car
+        \( n \geqslant 1 \) <br />
+        Donc :
+      </p>
+      $$ \lim_{x\rightarrow +\infty } \frac{e^x}{x^n} = \lim_{t\rightarrow
+      +\infty } \frac{e^{nt}}{(nt)^n}$$ $$= \lim_{t\rightarrow +\infty }
+      \frac{(e^{t})^n}{n^n \cdot t^n }$$ $$=\lim_{t\rightarrow +\infty }
+      \underbrace{\frac{1}{n^{n}} }_{>0} \cdot \left(
+      \underbrace{\frac{e^{t}}{t} }_{\rightarrow +\infty } \right)^{n} $$ $$ =
+      +\infty $$
+      <h3>Démonstration 2</h3>
+      <p>
+        Posons $t=-x \Leftrightarrow x = -t$; <br />
+        lorsque $x \rightarrow - \infty$ alors $t \rightarrow + \infty$
+      </p>
+      <ul>
+        <li>
+          <p><u>Si $n$ est pair:</u></p>
+          $$ \lim_{x \rightarrow - \infty} x^n \cdot e^x = \lim_{t \rightarrow +
+          \infty} (-t)^n \cdot e^{-t}$$ $$= \lim_{t \rightarrow + \infty}
+          \frac{t^n}{e^t}$$ $$= \lim_{t \rightarrow + \infty}
+          \frac{1}{\underbrace{\frac{t^n}{e^t}}_{\rightarrow + \infty}}$$ $$ =
+          0$$
+        </li>
+
+        <li>
+          <p><u>Si $n$ est impair:</u></p>
+          $$ \lim_{x \rightarrow - \infty} x^n \cdot e^x = \lim_{t \rightarrow +
+          \infty} (-t)^n \cdot e^{-t}$$ $$= \lim_{t \rightarrow + \infty}
+          \frac{-t^n}{e^t}$$ $$= \lim_{t \rightarrow + \infty}
+          \frac{-1}{\underbrace{\frac{t^n}{e^t}}_{\rightarrow + \infty}}$$ $$ =
+          0$$
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

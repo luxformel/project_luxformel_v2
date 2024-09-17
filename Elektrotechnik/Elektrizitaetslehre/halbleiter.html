@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Halbleiter</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Halbleiter</h1>
+      <h2>Begriffserklärung</h2>
+      <p>
+        Der Begriff Halbleiter bezieht sich auf den spezifischen Widerstand
+        reiner Materialien. Ein Halbleiter leitet den Strom besser als ein
+        Isolator, aber schlechter als ein metallischer Leiter.
+      </p>
+
+      <p>
+        Zur Gruppe der Halbleiter gehören die Elemente Silizium $\ce{Si}$ und
+        Germanium $\ce{Ge}$, aber auch die Verbindungen wie Gallium-Arsenid
+        $\ce{GaAs}$, Indium-Phosphid $\ce{InP}$. <br />
+        Für die Herstellung von Halbleiterbauelementen wird hauptsächlich
+        Silizium $\ce{Si}$ verwendet.
+      </p>
+      <h2>Leitungsvorgänge</h2>
+      <ul>
+        <li>
+          <p>
+            Beträgt die Temperatur $T = 0K$ so befinden sich die Atome im
+            Ruhezustand und die Valenzelektronen sind fest im Kristallaufbau
+            gebunden. Für einen Strom stehen also keine Ladungsträger zur
+            Verfügung. Der Halbleiter verhält sich wie ein Isolator und sein
+            elektrischer Widerstand ist unendlich gro&beta;.
+          </p>
+        </li>
+        <li>
+          <p>
+            Erhöht sich die Temperatur $T > 0K$, so werden aufgrund der
+            Wärmeschwingungen Elektronen von ihren Atomrümpfen losgelöst und
+            damit beweglich. Man bezeichnet sie dann als freie Elektronen.
+            Verlässt ein Elektron eine Paarbindung, so fehlt an dieser Stelle
+            eine negative Ladung und es entsteht eine Elektronenlücke, auch
+            Defektelektron oder Loch genannt. Da dieses Loch eine fehlende
+            negative Ladung in einer Gitterbindung ist, kann es als positiv
+            geladenes Teilchen angesehen werden. <br />
+            Mit zunehmender Temperatur entstehen jeweils paarweise Elektronen
+            und Löcher. Dieser Prozess wird als Paarerzeugung bezeichnet. Trifft
+            ein freies Elektron bei seiner Bewegung auf ein Loch, so kann es in
+            das Loch hineinfallen. Danach ist es wieder gebunden und kann nicht
+            mehr zur Leitung des Stromes beitragen. Dieses
+            <q>Hineinfallen in ein Loch</q> wird als Rekombination bezeichnet.
+          </p>
+          <img
+            src="../img/Halbleiter/leitvorgangHalbleiter.png"
+            alt="leitvorgänge im Halbleiter"
+            class="zeichnungen"
+          />
+        </li>
+        <li>
+          <p>
+            Legt man bei $T > 0K$ eine elektrische Spannung an einen
+            $\ce{Si}$-Kristall, so kann man einen Stromfluss feststellen. Dieser
+            besteht aus zwei Teilen:
+          </p>
+          <ul>
+            <li>
+              <p>
+                dem Elektronenstrom vom Minuspol der Spannungsquelle zum Pluspol
+              </p>
+            </li>
+            <li>
+              <p>
+                dem Löcherstrom vom Pluspol der Spannungsquelle zum Minuspol der
+                nur im $\ce{Si}$-Kristall erfolgt
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Störstellenleitung</h2>
+      <p>
+        Werden dem reinen vierwertigen Silizium geringe Mengen von 3 oder 5
+        wertigen Fremdatomen zugesetzt, so erhält man au&beta;er der
+        Eigenleitung auch die sogenannte Störstellenleitung. Die Fremdatome
+        werden dabei auf die regulären Gitterplätze des Siliziumkristalls
+        eingebaut. Dieses Einbauen von Fremdatomen bezeichnet man als Dotieren.
+        <br />
+        Die Dotierung ist ein komplexer Prozess und wird mit spezialisierten
+        Verfahren durchgeführt wie: Diffusion, Implantation.
+      </p>
+      <h2>N-Halbleiter</h2>
+      <p>
+        Wenn man einen reinen $\ce{Si}$-Kristall gezielt mit 5-wertigen Atomen
+        wie: $\ce{P}$, $\ce{As}$, $\ce{Sb}$ dotiert oder verunreinigt, dann
+        erhält man N-Silizium. Diese Atome sind Elemente der fünften.
+        Hauptgruppe und werden als Donatoren bezeichnet.
+      </p>
+      <img
+        src="../img/Halbleiter/nMaterial.png"
+        alt="n Material"
+        class="zeichnungen"
+      />
+      <p>
+        Das eingebaute Fremdatom hat 5 Valenzelektronen. Zur Bindung an die
+        benachbarten Si-Atome werden aber nur 4 von diesen 5 Valenzelektronen
+        benötigt. Das fünfte Elektron ist nur schwach an das Fremdatom gebunden.
+        Das nicht benötigte Elektron kann mit geringem Energieaufwand abgetrennt
+        werden. Dann wird es zum freien Elektron und kann zum Ladungstransport
+        herangezogen werden.
+      </p>
+      <h2>P-Halbleiter</h2>
+      <p>
+        Wenn man einen reinen $\ce{Si}$-Kristall gezielt mit 3-wertigen Atomen
+        wie: $\ce{B}$, $\ce{Al}$, $\ce{Ga}$, $\ce{In}$ dotiert, dann erhält man
+        P-Silizium. Diese Atome sind Elemente der dritten Hauptgruppe und werden
+        als Akzeptoren bezeichnet.
+      </p>
+      <img
+        src="../img/Halbleiter/pMaterial.png"
+        alt="n Material"
+        class="zeichnungen"
+      />
+      <p>
+        Das eingebaute Fremdatom hat 3 Valenzelektronen. Es kann sich daher an 3
+        $\ce{Si}$-Atome binden. Eine Bindung an einem $\ce{Si}$-Atom bleibt
+        offen. Diese offene Bindung stellt ein Loch oder Defektelektron dar.
+        Dieses Loch kann mit geringem Energieaufwand von einem Elektron eines
+        benachbarten Atoms besetzt werden. Dadurch entsteht eine Bewegung des
+        Loches, die Löcherbewegung, die der Elektronenbewegung entgegengesetzt
+        ist.
+      </p>
+      <h2>PN-Übergang</h2>
+      <p>
+        Der Grenzbereich zwischen einer P-leitenden Zone und einer N-leitenden
+        Zone wird PN- Übergang genannt.
+      </p>
+    </div>
+  </body>
+</html>

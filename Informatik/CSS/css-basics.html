@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="prism-css.js"></script>
+    <script src="prism-copy-button-css.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>CSS Basics</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>CSS Basics</h1>
+      <p>
+        CSS, stands for Cascading Style Sheets. It is used to style websites
+        written in .html files.
+      </p>
+
+      <h2>Comment</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+              /*This is a comment*/
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Styling HTML using CSS selectors</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+              p{
+                color: blue;
+              }
+              .className{
+                color: red;
+              }
+              #idName{
+                color: green;
+              }
+              h1{
+                color: aquamarine;
+              }
+              /*If an element is in some other element*/
+              #idName p{
+                color: blue;
+              }
+              .className h1{
+                color: red;
+              }
+              /*If an element is specifically in some other element*/
+              #idName > p{
+                color: blue;
+              }
+              .className > h1{
+                color: red;
+              }
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Text Edit</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+              p{
+                /*changes Text color form current Text color*/
+                color: blue;
+                /*changes Text color form current Text color in hex code*/
+                color: #ffffff;
+                /*changes font size in pixels*/
+                font-size: 20px;
+                /*changes font size in em*/
+                font-size: 20em;
+                /*changes font size in rem*/
+                font-size: 20rem;
+                /*underlining text*/
+                text-decoration: underline;
+                text-decoration: line-through;
+                /*changing the letter spacing in pixels*/
+                letter-spacing: 2px;
+                /*changing the font style to italic, bold...*/
+                font-style: italic;
+                font-style: bold;
+                /*changing the line height in pixels*/
+                line-height: 16px;
+                /*changing the text to all uppercase, lowercase, capitalized...*/
+                text-transform: uppercase;
+                text-transform: lowercase;
+                text-transform: capitalized;
+                /*add word spacing*/
+                word-spacing: 10px;
+              }
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

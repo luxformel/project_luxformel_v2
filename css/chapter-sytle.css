@@ -1,0 +1,14 @@
+.print-icon {
+  display: inherit;
+}
+
+h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: left;
+  font-family: Arial;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: -0.05rem;
+  color: var(--black);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="converter-code.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+    <link rel="stylesheet" href="converter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Converter</h1>
+        <form name="property_form">
+          <span>
+            <select
+              class="select-property"
+              name="the_menu"
+              size="1"
+              onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)"
+            ></select>
+          </span>
+        </form>
+
+        <div class="converter-side-a">
+          <form name="form_A" onSubmit="return false">
+            <input
+              type="number"
+              class="numbersonly"
+              name="unit_input"
+              maxlength="20"
+              value="0"
+              onKeyUp="CalculateUnit(document.form_A, document.form_B)"
+            />
+            <span>
+              <select
+                name="unit_menu"
+                onChange="CalculateUnit(document.form_A, document.form_B)"
+              ></select>
+            </span>
+          </form>
+        </div>
+        <!-- /converter-side-a -->
+        <!-- /converter-side-a -->
+
+        <div class="converter-side-b">
+          <form name="form_B" onSubmit="return false">
+            <input
+              type="number"
+              class="numbersonly"
+              name="unit_input"
+              maxlength="20"
+              value="0"
+              onkeyup="CalculateUnit(document.form_B, document.form_A)"
+            />
+            <span>
+              <select
+                name="unit_menu"
+                onChange="CalculateUnit(document.form_A, document.form_B)"
+              ></select>
+            </span>
+          </form>
+        </div>
+        <!-- /converter-side-b -->
+        <div class="padding">
+          <p class="coverterLinks">
+            Fir Erklärungen kuckt
+            <a
+              class="converterLinkAnchor"
+              href="/Divers/exotische-umwandlungen.html"
+            >
+              exotische Umwandlungen</a
+            >
+            oder
+            <a class="converterLinkAnchor" href="/Divers/praefixe.html"
+              >Präfixe</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

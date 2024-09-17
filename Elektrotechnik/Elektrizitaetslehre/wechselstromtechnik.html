@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Wechselstromtechnik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Wechselstromtechnik</h1>
+      <h2>Bedingungen einer Wechselgrö&beta;e</h2>
+      <ol>
+        <li><p>Wecheslgrö&beta;en sind periodisch</p></li>
+        <li>
+          <p>
+            Wechselgrö&beta;en haben einen linearen oder arithmetischen
+            Mittelwert gleich Null.
+          </p>
+        </li>
+      </ol>
+      <h2>Erzeugung</h2>
+      <p>
+        In der Praxis werden Wechselspannungen durch Drehung einer
+        Leiterschleife oder Spule in einem Magnetfeld erzeugt. Durch die
+        Drehbewegung des Leiters (der Spule) werden über das
+        <a href="induktionsgesetzHerleitung.html">Induktionsgesetz</a>
+        sinusförmige Spannungen erzeugt.
+      </p>
+      <h2>Arten der Wechselgrö&beta;en</h2>
+      <ol>
+        <li><p>Sinusspannung</p></li>
+        <li><p>Dreieckspannung</p></li>
+        <li><p>Rechteckspannung</p></li>
+        <li><p>Sägezahnspannung</p></li>
+      </ol>
+      <h2>Liniendiagramm einer Wechselspannung</h2>
+      <h3>Anmerkung</h3>
+      <p>
+        Dieses Kapitel ist ähnlich dem Kapitel
+        <a href="../Physik/schwingungen.html"> Schwingungen</a>.
+      </p>
+      <h2>Drehwinkel</h2>
+      <p>
+        Der Drehwinkel \( \alpha \) gibt die Lage der Leiterschleifer oder Spule
+        im Magnetfeld an. <br />
+        \( \alpha \) wird in DEG oder RAD gemessen.
+      </p>
+      <h2>Momentanwert, Augenblickswert</h2>
+      <p>
+        Dies ist der Wert der Wechselspannung zu einem bestimmten Zeitpunkt \(
+        t\ u(t) \)
+      </p>
+      <h3>Einheit</h3>
+      $$ [u(t)] = V $$
+      <h2>Scheitelwert, Amplitude</h2>
+      <p>Die Amplitude \( \hat{u} \) ist der maximale Betrag der Spannung.</p>
+      <h3>Einheit</h3>
+      $$ [\hat{u}] = V $$
+      <h2>Periodendauer</h2>
+      <p>
+        Die Periodendauer \( T\) ist die Zeit, die die Spannung zum Durchlaufen
+        einer ganzen Schwingung braucht.
+      </p>
+      <h3>Einheit</h3>
+      $$ [T] = s $$
+      <h2>Frequenz</h2>
+      <p>Die Frequenz gibt die Anzahl der Perioden pro Sekunde an.</p>
+      $$ f= \frac{1}{T}$$
+      <h3>Einheit</h3>
+      $$\left[ f\right] =Hz$$
+      <h2>Kreisfrequenz</h2>
+      <p>Die Kreisfrequenz gibt die Anzahl der Perioden pro Sekunde an.</p>
+      $$ in\ Radiant:\ RAD $$ $$ \omega =\ 2\pi f$$ $$ in\ Grad:\ DEG$$ $$
+      \omega =\ 360^{\circ } f$$
+      <h3>Einheit</h3>
+      $$[\omega] =\ \frac{rad}{s}$$ $$oder$$ $$[\omega] =\ \frac{deg}{s}$$
+      <h2>Phasenverschiebung</h2>
+      <p>
+        Wechselgrö&beta;en sind dann phasenverschoben, wenn sie ihre
+        Nulldurchgang beziehungsweise Scheitelwert zu unterschiedlichen
+        Zeitpunkten haben.
+      </p>
+      $$[\varphi_{0}] =\ rad $$ $$oder$$ $$[\varphi_{0}] =\ deg $$
+      <h2>Sinusspannungsformel</h2>
+      $$ u\left( t\right) =\hat{u} \cdot \sin \left( \omega t+\varphi_{0}
+      \right) $$
+      <h2>Effektivwert</h2>
+      <p>
+        Der sogenannte Effektivwert (wirksamer Wert) einer Wechselspannung ist
+        der Spannungswert, der in einem ohmschen Widerstand die gleiche
+        Wärmemenge umsetzt wie eine gleich gro&beta;e Gleichspannung.
+      </p>
+      <h3>Formeln</h3>
+      $$ U_{eff}=\frac{\hat{u} }{\sqrt{2} } $$ $$ I_{eff}=\frac{\hat{i}
+      }{\sqrt{2} } $$
+      <h3>RMS</h3>
+      $$ U_{eff}=\sqrt{\frac{1}{T} \cdot \int\limits^{T}_{0} u^{2}\left(
+      t\right) \cdot \mathrm dt} $$ $$ I_{eff}=\sqrt{\frac{1}{T} \cdot
+      \int\limits^{T}_{0} i^{2}\left( t\right) \cdot \mathrm dt} $$
+      <p>
+        Das Verhältnis aus Scheitelwert und Effektivwert nennt man
+        Scheitelfaktor.
+      </p>
+      $$ Scheitelfaktor\ =\ \sqrt{2} $$
+    </div>
+  </body>
+</html>

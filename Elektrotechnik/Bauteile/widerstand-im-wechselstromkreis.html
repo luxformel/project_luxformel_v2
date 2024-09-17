@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Widerstand im Wechselstromkreis</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Widerstand im Wechselstromkreis</h1>
+      <p>Die Gesetze der Gleichstromtechnik gelten auch im Wechselstromkreis</p>
+      <h2>Wirkwiderstand</h2>
+      <p>Ohmsche Widerstände werden auch noch Wirkwiderstände genannt.</p>
+      <h2>Spannung, Strom, Leistung</h2>
+      <p>
+        Wird ein ohmscher Widerstand \( R \) an eine sinusförmige
+        Wechselspannung gelegt, so flie&beta;t in ihm ein sinusförmiger
+        Wechselstrom. Strom und Spannung liegen dabei in Phase, das hei&beta;t
+        beim Nulldurchgang der Spannungskurve hat auch die Stromkurve ihren
+        Nulldurchgang.
+      </p>
+      $$u\left( t\right) =\hat{u} \cdot \sin \left( \omega t\right) $$ $$
+      i\left( t\right) =\hat{i} \cdot \sin \left( \omega t\right) $$
+      <h3>Herleitung Leistung</h3>
+      <p>
+        Die vom Widerstand aufgenommene Wirkleistung kann in jedem Augenblick
+        durch berechnet werden.
+      </p>
+      $$ p\left( t\right) =u\left( t\right) \cdot i\left( t\right) =\hat{u}
+      \cdot \hat{i} \cdot \sin^{2} \left( \omega t\right) $$ $$ mit\ \sin^{2}
+      \left( \omega t\right) =\frac{1}{2} \cdot \left[ 1-\cos \left( 2\omega
+      t\right) \right] $$
+      <p>
+        Siehe
+        <a href="/Mathe/Tableaux/collections-des-formules-trigonometriques.html"
+          >Collection des Formules Trigonométriques</a
+        >.
+      </p>
+      $$ p\left( t\right) =\frac{\hat{u} \cdot \hat{i} }{2} \left[ 1-\cos \left(
+      2\omega t\right) \right] =\frac{\hat{u} \cdot \hat{i} }{\sqrt{2} \cdot
+      \sqrt{2} } \left[ 1-\cos \left( 2\omega t\right) \right] $$ $$
+      \Leftrightarrow p\left( t\right) =U\cdot I\cdot \left[ 1-\cos \left(
+      2\omega t\right) \right] $$
+      <img
+        class="zeichnungen"
+        src="../img/leistungWiderstand.png"
+        alt="Leistungskurve"
+      />
+      <h2>Wirkleistung</h2>
+      <p>
+        Die Leistung ist zu jedem Zeitpunkt positiv, das hei&beta;t der
+        Leistungsfluss verläuft stets vom Generator zum Widerstand. Die
+        Leistungskurve stellt dabei eine Sinuskurve mit der doppelten
+        Grundfrequenz dar.
+      </p>
+      <h3>Definition</h3>
+      <p>
+        Eine Wirkleistung ist eine Leistung, die zwischen \( p_{min}=0 \) und \(
+        p_{min}= \hat{u} \cdot \hat{i} \) hin und her schwingt.
+      </p>
+    </div>
+  </body>
+</html>

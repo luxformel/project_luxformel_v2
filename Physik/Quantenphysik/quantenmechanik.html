@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Quantenmechanik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Quantenmechanik</h1>
+      <h2>Etymologie</h2>
+      <p>
+        Das Word Quantenmechanik setzt sich zusammen aus dem Wort Quantität und
+        Mechanik. <br />
+        In der Quantenmechanik wird, anders wie in dem Alltag, die Energie nicht
+        kontinuierlich sondern in Portionen abgegeben. Diese werden
+        Energiequanten oder Energieportionen genannt.
+      </p>
+      <h2>Photoeffekt, lichtelektrischer Effekt, photoelektrischer Effekt</h2>
+      <p>
+        Der Photoeffekt, behandelt das Freisetzen von Elektronen aus einem
+        Metall, wenn diese von elektromagnetischer Strahlung getroffen wird.
+      </p>
+      <h3>Versuch</h3>
+      <p>
+        Eine negativ geladene Metallplatte wird mit elektromagnetischer
+        Strahlung bestrahlt. Die elektromagnetische Strahlung wird bei dem
+        Versuch von einer Quecksilberdampflampe geliefert. Dieses Licht besteht
+        aus: sichtbarem Licht sowie ultraviolettem Licht. Dabei entlädt sich die
+        Platte. <br />
+        Bei dem Versuch ist die Lichtintensität irrelevant. Bei höherer Frequenz
+        zum Beispiel Licht mit ultraviolettem Licht lösen sich dei Elektronen ab
+        und sie entlädt sich.
+      </p>
+
+      <h3>Schlussfolgerung</h3>
+      <p>
+        Der Photoeffekt ist also abhänging von der Wellenlänge sowie der
+        Frequenz der elektromagnetischen Strahlung, sowie Material. Und es gibt
+        eine Grenzfrequenz $f_G$ und auch eine Grenzwellenlänge $\lambda_G$. Der
+        Photoeffekt ist jedoch nicht von der Lichtintensität abhänging. Die
+        Elektronen werden also abgesto&beta;en in einem Sto&beta;vorgang.
+      </p>
+      <h3>Gültigkeitsbedingungen</h3>
+      <p>Sodass der Photoeffekt eintritt müssen:</p>
+      $$ f \geqslant f_G $$
+      <p>und</p>
+      $$ \lambda \leqslant \lambda_G $$
+      <p>Daher gilt:</p>
+      $$ \lambda_G = \frac{c}{f_G} $$
+      <h2>Photon, Lichtquant</h2>
+      <p>
+        Um den Photoeffekt zu erklären wurde das <i>Photon</i> postuliert.
+        Dieses Teilchen erklärt nun den Sto&beta;vorgang, das die Elektronen
+        absto&beta;t. Es kann als Art: <q>Energiebündel</q>, gesehen werden. Die
+        Energie des Photons $E$ beträgt:
+      </p>
+      $$ E = h \cdot f$$
+      <p>mit</p>
+      $$h,\ Planck-Konstante$$ $$ h,\ 6,626 \cdot 10^{-34} Js $$
+      <p>Siehe <a href="../Divers/naturkonstanten.html">Naturkonstanten</a>.</p>
+      <h2>Prinzip der Gegenfeldmethode</h2>
+      <p>
+        Bei der Gegenfeldmethode wird eine Metallplatte mit Photonen beschossen.
+        Mit einer gewissen Lichtintensität lösen sich durch einen
+        Sto&beta;vorgang zwischen den Photonen und Elektronen die Elektronen ab.
+      </p>
+      <h3>Herleitung</h3>
+      <p>Die Elektronen haben beim Austreten folgende Energie:</p>
+      $$ E_{Photon} = W_A + E_{kin} $$ $$\Leftrightarrow h \cdot f = W_A + U_G
+      \cdot \left| e \right|$$ $$ \Leftrightarrow U_G \cdot \left| e \right| = h
+      \cdot f - W_A$$ $$ \Leftrightarrow U_G \cdot \left| e \right| = h \cdot f
+      - W_A = \frac{1}{2} m \cdot v^2$$
+      <p>Für 2 verschiedene Punkte gilt:</p>
+      $$ U_{G1} \cdot \left| e \right| = h \cdot f_1 - W_A\ (1)$$ $$ U_{G2}
+      \cdot \left| e \right| = h \cdot f_2 - W_A\ (2)$$
+      <p>$(1) - (2)$:</p>
+      $$\left | e \right | \left( U_{G1} - U_{G2} \right) = h \cdot \left( f_1 -
+      f_2 \right) $$ $$ \Leftrightarrow h = \frac{\left | e \right | \left(
+      U_{G1} - U_{G2} \right)}{ f_1 - f_2 } $$
+      <h2>Impuls der Photonen</h2>
+      <h3>Herleitung</h3>
+
+      <p>Laut Relativitätstheorie gilt:</p>
+      $$ p= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}} \cdot v = m \cdot v$$ $$
+      \Leftrightarrow m = \frac{p}{v} \ (1) $$
+      <p>Und</p>
+      $$ E = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}} \cdot c^2 = m \cdot c^2 $$ $$
+      \Leftrightarrow m = \frac{E}{c^2} \ (2) $$
+      <p>$(1) = (2)$:</p>
+      $$\frac{p}{v} = \frac{E}{c^2}$$ $$ p = \frac{E \cdot v}{c^2} $$
+      <p>mit: $E_{Photon} = h \cdot f$</p>
+      $$ p = \frac{h \cdot f \cdot v}{c^2} $$
+      <p>Da $c = v$ und $ \lambda = h \cdot f$</p>
+      $$ p = \frac{h \cdot f}{c} = \frac{\lambda}{c} $$
+      <h3>Formel</h3>
+      $$ p = \frac{\lambda}{c} $$
+      <h2>Welle-Teilchen-Dualismus der Elektronen</h2>
+      <p>
+        Der Welle-Teilchen-Dualismus des Elektrons bedeutet, dass das Elektron
+        sich als Welle sowie auch als Teilchen verhalten kann.
+      </p>
+      <h2>De Broglie-Wellenlänge</h2>
+      <p>Ein Teilchen mit dem Impuls $p$ hat die Wellenlänge $\lambda$:</p>
+      <h3>Formel</h3>
+      $$ \lambda = \frac{h}{p} $$
+      <p>oder auch</p>
+      $$ \lambda = \frac{h}{m \cdot v} $$
+      <h2>De-Broglie-Wellenlänge in der Atomhülle</h2>
+      <p>
+        Bei stehenden Wellen um den Atomkern ist der Bahnumfang ein ganzzahliges
+        Vielfaches der Wellenlänge. Die Aufenthaltswahrscheinlichkeit der
+        Elektronen ist zeitlich konstant.
+      </p>
+      <img
+        src="/Physik/img/Quantenmechanik/stehendeWellenAtom.png"
+        alt="Stehende Wellen im Atom"
+        class="zeichnungen"
+      />
+      <p>
+        Siehe Kapitel: <a href="mechanischeWellen.html">Wellenlehre</a>, um mehr
+        über <i>stehende Wellen</i> zu erfahren.
+      </p>
+      <p>
+        Stehende Wellen entsprechen den möglichen stabilen Zuständen des
+        Elektrons im Atom. Für diese Zustände gilt:
+      </p>
+      $$ 2\pi \cdot r = n \cdot \lambda $$ $$n,\ Quantenzahl$$
+      <p>wobei:</p>
+      $$ \lambda = \frac{h}{p}$$
+      <p>und</p>
+      $$ n \in \mathbb{N} $$
+      <h2>Bohr'sche Quantenbedingung</h2>
+      <h3>Herleitung</h3>
+      <p>Es gilt:</p>
+      $$ 2\pi \cdot r = n \cdot \lambda $$ $$\Leftrightarrow r \cdot p = n \cdot
+      \frac{h}{2\pi} $$
+      <p>mit: $p=m_e \cdot v$</p>
+      $$\Leftrightarrow r \cdot m_e \cdot v = n \cdot \frac{h}{2\pi} $$
+      <h3>Bemerkung</h3>
+      <p>Diese Formel wird oft mit $\hslash$ angegeben</p>
+      $$ r \cdot m_e \cdot v = n \cdot \hslash $$
+      <p>Hierbei bedeutet $\hslash$</p>
+      $$ \hslash = \frac{h}{2\pi}$$
+      <h2>Geschwindigkeit der Elektronen im Bahnradius</h2>
+      <p>
+        Stellt man die Bohr'sche Quantenbedingung um nach der Geschwindigkeit
+        $v$ erhält man:
+      </p>
+      $$ v = n\cdot \frac{h}{2\pi \cdot m_e \cdot r} $$
+      <h2>Ionisationsenergie im Wasserstoffatom</h2>
+      <h3>Herleitung</h3>
+      $$ W = \int_r^{+\infty} \overrightarrow{F} \cdot d \overrightarrow{r}$$ $$
+      = \int_r^{+\infty} \overrightarrow{-F_{el}} \cdot d \overrightarrow{r}$$
+      $$ = \int_r^{+\infty} \frac{1}{4\pi \varepsilon_0} \cdot \frac{e^2}{r^2}
+      \cdot d r$$ $$ = \frac{e^2}{4\pi \varepsilon_0} \cdot \int_r^{+\infty}
+      \frac{1}{r^2} d r$$ $$= \frac{e^2}{4\pi \varepsilon_0} \cdot \left[ -
+      \frac{1}{r^2} \right]_r^{+\infty} $$ $$= \frac{e^2}{4\pi \varepsilon_0}
+      \cdot \left( \frac{1}{r} \right) $$ $$= \frac{1}{4\pi \varepsilon_0} \cdot
+      \frac{e^2}{r} > 0$$
+      <p>
+        Die verrichtete Arbeit bei der Ionisierung ist positiv das Elektron
+        gewinnt also an potentieller Energie
+      </p>
+      <p>Es gilt:</p>
+      $$ E_{potentiell, \infty} = E_{potentiell} + W $$
+      <h2>Gesamtenergie des Elektrons im Wasserstoffatoms</h2>
+      <p>Es gilt:</p>
+      $$ E_{gesamt} = E_{kinetisch} + E_{potentiell}$$
+      <p>Durch Einsetzen erhält man:</p>
+      $$ E_{gesamt} = \frac{1}{2}\cdot m_e \cdot v^2 - \frac{1}{4\pi
+      \varepsilon_0} \cdot \frac{e^2}{r}$$
+      <h2>Bahnradien im Bohr'schen Atommodell</h2>
+      <p>
+        Nach dem $1^{ten}$ Bohrschen Postulat, bewegen sich Elektronen
+        strahlungsfrei auf kreisförmigen Bahnen. <br />
+        Also gilt:
+      </p>
+      $$ F_{el} = F_r $$ $$ \Leftrightarrow \frac{1}{4\pi \varepsilon_0} \cdot
+      \frac{e^2}{r} = \frac{m_e \cdot v^2}{r}\ (1) $$
+      <p>mit Quantenbedingung:</p>
+      $$ v = \frac{h \cdot n}{2 \pi \cdot m_e \cdot r}\ (2) $$
+      <p>$(1)$ in $(2)$</p>
+      $$ \frac{1}{4\pi \varepsilon_0} \cdot \frac{e^2}{r} = \frac{m_e \cdot h^2
+      \cdot n^2}{r^3 \cdot 4 \pi^2 \cdot m_e^2 } $$
+      <p>Da $r \sim n$ schreibt man $r_n$</p>
+      <p>Umstellen:</p>
+      $$ r_n = \frac{ \varepsilon_0 \cdot h^2}{\pi \cdot m_e } \cdot n^2 $$
+      <h3>Formel</h3>
+      $$ r_n = \frac{ \varepsilon_0 \cdot h^2}{\pi \cdot m_e } \cdot n^2 $$
+      <h2>Bohr'scher Radius</h2>
+      <p>
+        Der Bohr'sche Radius ist $n=1 $. Setzt man für $n=1$ die Relevanten
+        Werte ein so erhält man einen Radius für das Wasserstoffatom im
+        Grundzustand:
+      </p>
+      $$ r_1 = 0,529 \cdot 10^{-10}m $$
+      <p>oder</p>
+      $$ r_1 = 0,529 \mathring{A} $$
+      <p>Als Vereinfachung gilt für weitere Elektronenbahnen:</p>
+      $$ r_n = r_1 \cdot n^2 $$
+      <h2>Diskrete Energiezustände</h2>
+      <p>
+        Da sich Elektronen nur auf bestimmten Bahnen bewegen, ergeben sich nur
+        wenige Energiezustände.
+      </p>
+      <h3>Herleitung</h3>
+      <p>Es gilt:</p>
+      $$ E_{gesamt} = \frac{1}{2}\cdot m_e \cdot v^2 - \frac{1}{4\pi
+      \varepsilon_0} \cdot \frac{e^2}{r}$$
+      <p>mit der Quantenbedingung:</p>
+      $$ v = \frac{h \cdot n}{2 \pi \cdot m_e \cdot r}\ (2) $$
+      <p>erhalten wir:</p>
+      $$ E_n = \frac{h^2 \cdot n^2}{8\pi^2 \cdot m_e \cdot r_n^2} - \frac{e^2}{4
+      \pi \cdot \varepsilon_0^2 \cdot r_n} $$
+      <p>mit der Formel der Bahnradien:</p>
+      $$ r_n = \frac{h^2 \cdot \varepsilon_0}{\pi \cdot m_e \cdot e^2} \cdot n^2
+      $$
+      <p>erhalten wir:</p>
+      $$ E_n = \frac{m_e \cdot e^4}{8\varepsilon_0^2 \cdot h^2 \cdot n^2} -
+      \frac{m_e \cdot e^4}{4 \varepsilon_0^2 \cdot h^2 \cdot n^2} $$ $$
+      \Leftrightarrow E_n = -\frac{m_e \cdot e^4}{8\varepsilon_0^2 \cdot h^2}
+      \cdot \frac{1}{n^2}$$
+      <h3>Wert</h3>
+      <p>Setzt man in die Formel ein für $n=1$</p>
+      $$ E_{n=1} = -\frac{m_e \cdot e^4}{8\varepsilon_0^2 \cdot h^2} \cdot
+      \frac{1}{1^2} = -\frac{m_e \cdot e^4}{8\varepsilon_0^2 \cdot h^2} =
+      13,6eV$$
+      <p>Für nachfolgende Elektronenbahnen oder Anregungszustände gilt:</p>
+      $$ E_n = -13,6eV \cdot \frac{1}{n^2} $$
+      <h2>Wasserstoffspektrum</h2>
+      <p>
+        Wenn ein Elektron nun sein Energieniveau ändert kann man folgende Formel
+        verwenden:
+      </p>
+      $$ \Delta E = E_{Ende} - E_{Anfang} $$ $$ = -13,6eV \cdot \left(
+      \frac{1}{n_{Ende}^2} - \frac{1}{n_{Anfang}^2} \right) $$
+    </div>
+  </body>
+</html>

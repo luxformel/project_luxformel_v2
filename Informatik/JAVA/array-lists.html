@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+    <script src="prism-java.js"></script>
+    <script src="prism-java-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Java Array Lists</h1>
+
+      <h2>Import Array List</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+import java.util.ArrayList;  
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Array List</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+ArrayList< String> alList1 = new ArrayList<>(); 
+ArrayList< Integer> alList2 = new ArrayList<>(); 
+ArrayList< Double> alList2 = new ArrayList<>();
+ArrayList< someObject> alList2 = new ArrayList<>();
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>add</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+alList1.add("String"); 
+alList2.add(wholeNumber); 
+alList3.add(decimalNumber);
+ObjectName p = new ObjectName("someObject");
+    alList4.add(p);
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Remplacer un élément d'une liste par un autre</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+alList1.set(index, "newItem");
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Supprimer un élément d'une liste</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+alList1.remove(index);
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Supprimer tous les éléments d'une liste</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+alList1.clear();
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Méthodes importantes</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+//retourner la taille d'une liste
+int nbOfElementsInTheList = alList1.size();
+
+//supprimer le dernier élément d'une liste
+alList1.remove(alList1.size() - 1);
+
+//vérifier si une liste contient un certain élément
+if (alList1.contains(item)) {
+       System.out.println("The list contains item.");
+    }
+
+//retourner un élément
+String elementAtPositionN = alList1.get(N);
+
+//retourne la position de un élément
+//retourne -1 si l'élément ne se trouve pas dans la liste
+int indexOfItem = alList1.indexOf("item");
+
+//vérifier si une liste est vide
+if (alList1.isEmpty()) {
+       System.out.println("The list is empty.");
+    }
+
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>JList</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+int index = < nomDeLaJList>.getSelectedIndex();
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

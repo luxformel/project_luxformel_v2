@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>RC - Parallelschaltung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>RC - Parallelschaltung</h1>
+      <h2>Schaltung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Parrallelschaltung/rcParallelschaltung.png"
+        alt="RC Parallelschaltung"
+      />
+      <ol>
+        <li>
+          <p>
+            Am Wirkwiderstand \( R \) und an der Kapazität \( C \) liegt die
+            gleiche Spannung \( U \) an.
+          </p>
+        </li>
+        <li>
+          <p>
+            Durch \( R \) flie&beta;t der Strom \( I_R \). Er liegt mit \( U \)
+            in Phase.
+          </p>
+        </li>
+        <li>
+          <p>
+            Durch \( X_C \) fließt der Strom \( I_C \). Er eilt \( U \) um 90\(
+            ^{\circ} \) voraus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Deshalb müssen auch die Ströme \( I_R \) und \( I_C \) um 90\(
+            ^{\circ} \) phasenverschoben sein.
+          </p>
+        </li>
+      </ol>
+      <h2>Strom</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Parrallelschaltung/Stromdreieck.png"
+        alt="RC Parallelschaltung"
+      />
+      $$ I = \sqrt{I_R^2 + I_C^2} $$ $$\sin(\varphi) = \frac{I_C}{I} $$
+      $$\cos(\varphi) = \frac{I_R}{I} $$ $$\tan(\varphi) = \frac{I_C}{I_R} $$
+      <h2>Leitwert</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Parrallelschaltung/Leitwertdreieck.png"
+        alt="RC Parallelschaltung"
+      />
+      $$ Y = \sqrt{G^2 + B_C^2} $$ $$\sin(\varphi) = \frac{B_C}{Y} $$
+      $$\cos(\varphi) = \frac{G}{Y} $$ $$\tan(\varphi) = \frac{B_C}{G} $$
+      <h2>Leistung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RC Parrallelschaltung/Leistungsdreieck.png"
+        alt="RC Parallelschaltung"
+      />
+      $$ S = \sqrt{P^2 + Q_C^2} $$ $$\sin(\varphi) = \frac{Q_C}{S} $$
+      $$\cos(\varphi) = \frac{P}{S} $$ $$\tan(\varphi) = \frac{Q_C}{P} $$
+    </div>
+  </body>
+</html>

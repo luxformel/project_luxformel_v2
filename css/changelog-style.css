@@ -1,0 +1,58 @@
+.wrapper {
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+h1 {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: left;
+  font-family: Arial;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: -0.05rem;
+  color: var(--black);
+}
+
+h2 {
+  color: var(--black);
+  padding: 1rem;
+  font-size: 2rem;
+
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--black);
+  margin: 0 2rem;
+}
+
+main {
+  padding: 2rem;
+
+  time {
+    color: var(--black);
+  }
+
+  h3 {
+    color: var(--black);
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+    list-style-type: disc;
+    padding: 15px;
+    color: var(--changelog-main-text-color);
+    line-height: 1.2rem;
+    max-width: 65ch;
+  }
+}

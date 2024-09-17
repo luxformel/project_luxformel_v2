@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Relativitätstheorie</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Relativitäts&shy;theorie</h1>
+      <h2>Relativitäts&shy;prinzip</h2>
+      <h3>Altes Relativitätsprinzip</h3>
+      <p>
+        Jede Bewegung spielt sich in allen Bezugssystemen so ab, als ob diese
+        ruhen würden. Daher ist jede Bewegung relativ, da das jeweilige ruhende
+        Bezugssystem frei gewählt werden kann.
+      </p>
+      <h3>Konsequenz</h3>
+      <p>Es gibt keinen absoluten Ruhezustand.</p>
+      <h2>Inertialsysteme</h2>
+      <p>
+        Inertialsysteme sind räumliche Bezugssysteme, in denen ein kräftefreier
+        Körper in Ruhe oder in geradlinig gleichförmiger Bewegung verharrt.
+      </p>
+      <h2>Grundprinzipien</h2>
+      <h3>Relativitätsprinzip</h3>
+      <p>Naturgesetze haben in allen Inertialsystemen die gleiche Form.</p>
+      <h3>Prinzip der Konstanz der Lichtgeschwindigkeit</h3>
+      <p>
+        Die Lichtgeschwindigkeit ist vom Bewegungszustand der Lichtquelle und
+        des Beobachters unabhängig. Die Lichtgeschwindigkeit im Vakuum beträgt
+        in jedem Inertialsystem: $c_0=299\ 792\ 458\frac{m}{s} $, siehe
+        <a href="../Divers/naturkonstanten.html">Naturkonstanten</a>.
+      </p>
+      <strong>Relativistische Kinematik</strong>
+      <hr />
+      <h2>Zeitdilatation</h2>
+      <h3>Herleitung</h3>
+      <p>
+        Wir unterscheiden zwischen: <i>ruhender Beobachter</i> und
+        <i>bewegter Beobachter</i>
+      </p>
+      <ul>
+        <li>
+          <p>
+            <b><u>ruhender Beobachter</u></b>
+          </p>
+          $$ 2D = c_0 \cdot \Delta t_0 $$ $$\Leftrightarrow D = \frac{1}{2}
+          \cdot c_0 \cdot \Delta t_0 $$
+          <p>und</p>
+          $$\Delta t_0 = \frac{2D}{c_0} $$
+        </li>
+        <li>
+          <p>
+            <b><u>Bewegter Beobachter</u></b>
+          </p>
+          <p><u>Nach Pythagoras</u>:</p>
+          $$ \left( c_0 \frac{\Delta t}{2} \right)^2 = \left( \frac{1}{2} \cdot
+          c_0 \cdot \Delta t_0 \right)^2 + \left( v \frac{\Delta t}{2}
+          \right)^2$$ $$\Leftrightarrow c_0^2 \cdot \Delta t^2 = c_0^2 \cdot
+          \Delta t_0^2 + v^2 \cdot \Delta t^2$$ $$\Leftrightarrow \Delta t^2
+          \left( c_0^2 - v^2 \right) = c_0^2 \cdot \Delta t_0^2$$
+          $$\Leftrightarrow \Delta t^2 = \frac{c_0^2}{c_0^2 - v^2} \cdot \Delta
+          t_0^2$$ $$\Leftrightarrow \Delta t_0^2 = \frac{c_0^2}{c_0^2} -
+          \frac{v^2}{c_0^2} \cdot \Delta t^2$$ $$\Leftrightarrow \Delta t_0^2 =
+          1 - \frac{v^2}{c_0^2} \cdot \Delta t^2$$ $$\Leftrightarrow \Delta t^2
+          = \frac{1}{1 - \frac{v^2}{c_0^2}} \cdot \Delta t_0^2$$
+          $$\Leftrightarrow \Delta t = \frac{\Delta t_0}{\sqrt{1 -
+          \frac{v^2}{c_0^2}}}$$
+          <p>mit $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c_0^2}}}$</p>
+          $$\Delta t =\Delta t_0 \cdot \gamma$$
+          <h3>Beobachtungen</h3>
+          <ol>
+            <li>
+              <p>$\gamma > 1$</p>
+            </li>
+            <li>
+              <p>$\Delta t > \Delta t_0$</p>
+            </li>
+          </ol>
+          <p>$\Delta t$, bewegte Zeit</p>
+          <p>$\Delta t_0$, Eigenzeit, ruhende Zeit</p>
+        </li>
+        <li>
+          <p>
+            <u><b>Zusammenfassung</b></u>
+          </p>
+          <p>
+            Benötigt ein Vorgang in einem dazu ruhenden Bezugssystem die
+            Zeitdauer $\Delta t_0$, so läuft der gleiche Vorgang in einem dazu
+            bewegten Bezugssystem in der Zeit $\Delta t$ ab:
+          </p>
+          $$\Delta t =\Delta t_0 \cdot \gamma = \frac{\Delta t_0}{\sqrt{1 -
+          \frac{v^2}{c_0^2}}} $$
+          <p>mit $v$ als Relativgeschwindigkeit zwischen den Bezugssystemen.</p>
+        </li>
+      </ul>
+      <h2>Längenkontraktion</h2>
+      <p>
+        Hat eine Strecke in einem zu ihr ruhenden System eine Länge $x_0$, so
+        hat die gegen den Beobachter in Längsrichtung bewegte Strecke eine
+        kleinere Länge $x$:
+      </p>
+      $$ x=\frac{x_{0}}{\gamma } =\sqrt{1-\frac{v^{2}}{c^{2}} } \cdot x_{0} $$
+      <h3>Bemerkung</h3>
+      <p>Die im Ruhesystem gemessene Länge hei&beta;t Eigenlänge.</p>
+      <h2>Dynamische Masse</h2>
+      <p>
+        Bewegt sich ein Körper der Ruhemasse $m_0$ mit der Geschwindigkeit $v$,
+        so beträgt seine dynamische Masse $m$:
+      </p>
+      $$ m=m_{0}\cdot \gamma =\frac{m_{0}}{\sqrt{1-\frac{v^{2}}{c^{2}_{0}} } }
+      $$
+      <h2>Masse-Energie-Relation</h2>
+      $$ E = m \cdot c^2$$
+      <p>Jede Massenänderung bedeutet eine Energieänderung und umgekehrt.</p>
+      <h3>Bemerkung</h3>
+      <p>
+        Der Satz von Lavoisier:
+        <q>Rien ne se perd, rien ne se crée, tout se transforme</q>, ist also
+        mit dieser Formel ungültig. <br />
+        Die gesamte Energie eines bewegten Körpers besteht aus seiner
+        Ruheenergie $E_0 = m_0·c^2$ und seiner kinetischen Energie $E_{kin}$:
+      </p>
+      $$ E = m \cdot c^2 = m_0 \cdot c^2 + E_{kin} $$
+      <h2>Massendefekt</h2>
+      <p>
+        Jeder Atomkern ist aus Nukleonen (Protonen und Neutronen) aufgebaut, die
+        durch starke Kernkräfte aneinander gebunden sind. Um ein Nukleon aus dem
+        Atomkern zu entfernen, muss man Arbeit gegen die Kernkräfte verrichten,
+        also Energie aufwenden. Baut man den Atomkern dagegen aus Nukleonen auf,
+        so wird Energie frei, die Kernbindungsenergie. <br />
+        Diese Energieabgabe entspricht wegen der Masse-Energie-Beziehung einer
+        Abnahme der Ruhemasse der zum Atomkern vereinigten Nukleonen um $\Delta
+        m_0$. Die Masse des vereinigten Atomkerns ist stets kleiner als die
+        Summe der Massen der einzelnen Nukleonen. Diese Differenz $\Delta m_0$
+        hei&beta;t Massendefekt. Allgemein gilt für den Massendefekt:
+      </p>
+      $$ \Delta m_0 = \left( Z\cdot m_{0P} + N \cdot m_{0n} \right) -m_{0k} $$
+      $$Z,\ Protonenanzahl $$ $$ N,\ Neutronenanzahl $$ $$m_{0P},\ Ruhemasse\
+      des\ Protons$$ $$m_{0n},\ Ruhemasse\ des\ Neutron $$ $$m_{0k},\
+      Gesamt-Ruhemasse\ des\ Atomkerns$$
+      <p>
+        Die Masse eines Atomkerns ist immer kleiner als die Summer der
+        Nukleonenmassen. Die der Massendifferenz entsprechende Energie ist die
+        Kernbindungsenergie, welche beim Zusammenfügen des Atomkerns aus seinen
+        Nukleonen frei wird.
+      </p>
+    </div>
+  </body>
+</html>

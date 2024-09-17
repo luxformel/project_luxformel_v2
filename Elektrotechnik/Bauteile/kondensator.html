@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kondensator</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Kondensator</h1>
+      <p>
+        Kondensatoren sind Speicher, die elektrische Ladungen und somit
+        elektrische Energie speichern können. Sie werden auch Ladungsspeicher
+        genannt.
+      </p>
+      <h2>Aufbau</h2>
+      <p>
+        Kondensatoren sind prinzipiell aus zwei elektrischen Leitern aufgebaut,
+        zwischen denen sich ein Isolator, auch noch Dielektrikum genannt,
+        befindet. Wird Luft als Isolator benutzt, so spricht man von einem
+        Luftkondensator. Der einfachste Aufbau ist ein sogenannter
+        Plattenkondensator.
+      </p>
+      <h2>Kapazität</h2>
+      <h3>Formel</h3>
+      $$ C=\frac{Q}{U} $$ $$ Q,\ Ladungsmenge$$
+      <h3>Einheit</h3>
+      $$ \left[ C\right] = \frac{As}{V}$$ $$ \left[ C\right] =F$$ $$ F,\ Farad$$
+      <h3>Formel</h3>
+      $$ C_{0}=\epsilon_{0} \cdot \frac{A}{d} $$ $$ C_{0},\ Kapazität\ eines\
+      Luftkondesators$$ $$ \epsilon_{0},\ elektrische\ Feldkonstante$$
+      <h3>Konstante</h3>
+      $$ \epsilon_{0} =8,85\cdot 10^{-12}\frac{As}{Vm} $$
+      <p>
+        \( \epsilon_0 \) ist eine
+        <a href="../Divers/naturkonstanten.html">Naturkonstante.</a>
+      </p>
+      <h3>Formel</h3>
+      $$ C=\epsilon_{r} \cdot \epsilon_{0} \cdot \frac{A}{d} $$
+      <p>
+        Das Produkt \( \epsilon_{r} \cdot \epsilon_{0} \) wird als
+        Dielektrizitätskonstante \( \epsilon \) bezeichnet.
+      </p>
+      $$[ \epsilon ] \rightarrow \ keine\ Einheit $$
+      <h2>Parallelschaltung</h2>
+      $$ C_{ges}=C_{1}+C_{2}+\ldots +C_{n}=\sum^{n}_{i=1} C_{i} $$ $$C_{ges},\
+      Gesamtkapazität $$
+      <h2>Reihenschaltung</h2>
+      $$ \frac{1}{C_{ges}} =\frac{1}{C_{1}} +\frac{1}{C_{2}} +\ldots
+      +\frac{1}{C_{n}} =\sum^{n}_{i=1} \frac{1}{C_{i}} $$ $$C_{ges},\
+      Gesamtkapazität $$
+      <h2>Lade-und Entladevorgang</h2>
+      <h3>Formel</h3>
+      $$ \tau =R\cdot C $$
+      <h3>Einheit</h3>
+      $$ \left[ \tau \right] =s$$
+      <p>
+        Ein Kondensator ist voll geladen oder entladen nach praktisch \( 5 \cdot
+        \tau \).
+      </p>
+      $$ t=5 \cdot \tau$$
+      <h2>Laden</h2>
+      $$ i_{C}=\frac{U_{0}-u_{C}}{R} $$ $$ i_C,\ Ladestrom$$ $$ u_{C}\left(
+      t\right) =U_{0}\cdot \left( 1-e^{\frac{-t}{\tau } }\right) $$ $$ e,\
+      Eulerkonstante $$ $$e \simeq 2,71828 $$ $$ u_C(t),\ Momentanwert\ der\
+      Kondensatorspannung $$ $$ i_{C}\left( t\right) =I_{0}\cdot
+      e^{\frac{-t}{\tau } }$$ $$ I_{0},\ Anfangsstromstärke$$
+      <h2>Entladen</h2>
+      $$ u_{C}\left( t\right) =U_{0}\cdot e^{\frac{-t}{\tau } }$$ $$ u_C(t),\
+      Momentanwert\ der\ Kondensatorspannung $$ $$ i_{C}\left( t\right)
+      =-I_{0}\cdot e^{\frac{-t}{\tau } }$$ $$ I_{0}=\frac{U_{0}}{R} $$ $$
+      I_{0},\ Anfangsstromstärke$$
+      <h2>Energie</h2>
+      $$ W=\frac{1}{2} \cdot Q\cdot U_{C}$$ $$ Q,\ gespeicherte\ Ladungsmenge $$
+      $$ W=\frac{1}{2} \cdot C\cdot U^{2}_{C}$$ $$U_C,\ Kondensatorspannung $$
+    </div>
+  </body>
+</html>

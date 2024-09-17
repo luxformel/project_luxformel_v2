@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Elektrische Stromkreis</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Elektrische Stromkreis</h1>
+      <h2>Spannungsquellen</h2>
+      <h3>Definition</h3>
+      <p>
+        Als Spannungsquelle wird ein aktiver Zweipol bezeichnet, der zwischen
+        seinen Anschlusspunkten eine elektrische Spannung liefert.
+      </p>
+      <h2>Elektrische Spannung</h2>
+      <h3>Definition</h3>
+      <p>
+        Als Spannung $U$ bezeichnet man die Fähigkeit einer elektrischen Quelle,
+        in einem Stromkreis einen Strom $I$ aufrechtzuerhalten.
+      </p>
+      <h2>Elektrischer Strom</h2>
+      <h3>Definition</h3>
+      <p>
+        Die elektrische Stromstärke $I$, Symbol , ist ein Maß für die
+        elektrische Ladung $Q$, die pro Sekunde durch einen Leiterquerschnitt
+        hindurchfließt.
+      </p>
+      <h2>Elektrischer Leiter</h2>
+      <h3>Definition</h3>
+      <p>
+        Ein elektrischer Leiter ist ein Stoff oder Körper der den elektrischen
+        Strom durchlässt.
+      </p>
+      <h2>Isolator</h2>
+      <h3>Definition</h3>
+      <p>
+        Ein Isolator ist ein Stoff oder Körper der den elektrischen Strom nicht
+        oder nur extrem schlecht durchlässt.
+      </p>
+      <h2>Elektrische Ladung</h2>
+      <h3>Definition</h3>
+      <p>
+        Die elektrische Ladung $Q$ ist die Anzahl der elementar Ladungen $q_e$.
+      </p>
+      <h2>Stromkreis-Bedingung</h2>
+      <p>Ein Strom kann nur fließen wenn der Stromkreis geschlossen ist.</p>
+      <h2>Wirkungen des elektrischen Stroms</h2>
+      <ul>
+        <li>
+          <p><u>Wärmewirkung</u></p>
+          <p>Fließt ein Strom $I$ durch einen Leiter so erwärmt sich dieser.</p>
+        </li>
+        <li>
+          <p><u>Magnetwirkung</u></p>
+          <p>
+            Fließt ein Strom $I$ durch einen Leiter so bildet sich ein magnet
+            Feld.
+          </p>
+        </li>
+        <li>
+          <p><u>Lichtwirkung</u></p>
+          <p>
+            Unter bestimmten Bedingungen kann das Fließen eines elektrischen
+            Stroms Licht hervorrufen.
+          </p>
+        </li>
+        <li>
+          <p><u>Chemiewirkung</u></p>
+          <p>
+            Der elektrische Strom $I$ kann eine chemische Wirkung auf
+            verschiedene Stoffe bewirken.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Ohm'sche Gesetz</h2>
+      <h3>Definition</h3>
+      <p>
+        Ein elektrischer Leiter folgt dem ohm'schen Gesetz wenn die am Leiter
+        anliegende elektrische Spannung $U$ direkt proportional ist zur
+        elektrischen Stromstärke $I$, die durch den Leiter fließt:
+      </p>
+      <h3>Formel</h3>
+      $$ R=\frac{U}{I} = konstant $$ $$R,\ Widerstand$$
+      <h3>Einheit</h3>
+      $$\left[ R\right] =\Omega $$
+      <h2>Elektrischer Widerstand</h2>
+      <h3>Definition</h3>
+      <p>
+        Der elektrische Widerstand $R$ eines Leiters ist der Quotient zwischen
+        der elektrischen Spannung $U$ am Leiter und der Stromstärke $I$, die
+        durch den Leiter fließt:
+      </p>
+      $$ R = \frac{U}{I} $$
+      <p>oder</p>
+      $$ U = R \cdot I $$
+      <h3>Einheit</h3>
+      $$ [R] = \frac{V}{A} $$ $$ [R] = \Omega $$ $$ R,\ Ohm $$
+      <h2>Leiterwiderstand</h2>
+      <h3>Definition</h3>
+      <p>
+        Ein Leiter aus einem leitfähigem Material der Länge $l$ und des
+        Querschnitts $A$, wirkt bei ansetzen eines Stroms als geringer
+        Widerstand. <br />
+        Dieses Phänomen wird als Leiterwiderstand bezeichnet.
+      </p>
+      <h3>Proportionalitäten</h3>
+      $$ R \sim l $$ $$ R \sim \rho $$ $$ R \sim \frac{1}{A} $$
+      <h3>Formel</h3>
+      $$ R = \frac{\rho \cdot l}{A} $$ $$R,\ Widerstand$$ $$\rho,\ spezifischer\
+      Widerstand$$ $$A,\ Querschnitt$$
+      <h3>Einheiten</h3>
+      $$ \left[ \rho \right] = \frac{\Omega \cdot mm^2}{m} $$ $$ \left[ l
+      \right] = m $$ $$ \left[ A \right] = mm^2$$
+      <h2>Widerstand-Temperatur-Gesetz</h2>
+      <p>
+        Man kann experimentell nachweisen, dass sich der Widerstand annähernd
+        linear mit der Temperatur erhöht. Es gelten folgende Gesetzmäßigkeiten:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Die Änderung des elektrischen Widerstandes $\Delta R = R − R_0$ ist
+            direkt proportional zur Temperaturänderung $\Delta \theta = \theta -
+            \theta_0$: $\Delta R \sim \Delta \theta$
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Änderung des elektrischen Widerstandes $\Delta R$ ist
+            proportional zum Anfangswiderstand $R_0$: $\Delta R \sim R_0$
+          </p>
+        </li>
+      </ul>
+      <p>
+        Diese zwei Proportionalitäten können zu einer zusammengefasst werden:
+      </p>
+      $$ \Delta R \sim R_0 \cdot \Delta \theta $$
+      <p>
+        Durch Einführung der Proportionalitätskonstante $\alpha$, welche als
+        Temperaturkoeffizient bezeichnet, erhalten wir:
+      </p>
+      $$ \Delta R = \alpha \cdot R_0 \cdot \Delta \theta $$ $$ \Leftrightarrow R
+      - R_0 = \alpha \cdot R_0 \cdot \Delta \theta $$ $$ \Leftrightarrow R = R_0
+      + \alpha \cdot R_0 \cdot \Delta \theta $$ $$ \Leftrightarrow R = R_0
+      \left( 1+ \alpha \cdot \Delta \theta \right) $$ $$ \Leftrightarrow R = R_0
+      \cdot \left[ 1+ \alpha \cdot \left( \theta - \theta_0 \right) \right] $$
+      <h3>Formel</h3>
+      $$ R = R_0 \cdot \left[ 1+ \alpha \cdot \left( \theta - \theta_0 \right)
+      \right] $$
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="converter-code.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+    <link rel="stylesheet" href="converter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <script src="elementer.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Periode System léieren</h1>
+        <p>Kënnt Dir de maximale Score kréien?</p>
+        <p id="computer-guess"></p>
+        <div class="label-container">
+          <p>Score: <label class="info" for="text" id="score">0</label></p>
+          <p>
+            Match: <label class="info" for="text" id="counter">0</label>/
+            <label for="text" id="max-score">?</label>
+          </p>
+        </div>
+
+        <input type="text" id="input-symbol" placeholder="Symbol" />
+        <input type="text" id="input-name" placeholder="Numm" />
+        <input type="text" id="input-atomic-number" placeholder="Ordungszahl" />
+        <select id="difficulty">
+          <option value="easy">Einfach</option>
+          <option value="hard">Schwéier</option>
+          <option value="ultra">Ultra</option>
+        </select>
+        <label for="text" id="evaluation" style=""></label>
+        <button id="start-button" onclick="startButtonPressed()">
+          Spill ufänken
+        </button>
+        <button id="guess-button" onclick="checkGuess()">Iwwerpréiwen</button>
+
+        <div id="feedback"></div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

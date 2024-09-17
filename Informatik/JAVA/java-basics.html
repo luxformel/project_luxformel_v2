@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+    <script src="prism-java.js"></script>
+    <script src="prism-java-button.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Java Basics</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>Java Basics</h1>
+      <h2>Générer un nombre aléatoire entier</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+int randomNumber = (int)(Math.random() * (max-min+1)) + min;  
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Générer un nombre aléatoire réel</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+double randomNumber = Math.random() * (max - min) + min;
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Comparer deux chaînes de caractères</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+String test = "comparedString";
+    if (test.equals(comparedString)) {
+        return true;
+    }else{
+        return false;
+    }
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Buttons</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+//Désactiver un bouton : 
+        myButton.setEnabled(false);
+//Activer un bouton :
+        myButton.setEnabled(true);
+//Rendre un bouton invisible :
+        myButton.setVisible(false);
+//Rendre un bouton visible :
+        myButton.setVisible(true);
+//Modifier le texte afficher sur un bouton :
+        myButton.setText("Do something");
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Label</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+//Afficher une chaîne de caractères dans un libellé :
+        myLabel1.setText("Your name is " + name + ".");
+//Afficher un nombre (entier ou réel) dans un libellé :
+        myLabel2.setText(String.valueOf(number));
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Text Field</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+//Placer le contenu d'un champ de texte dans une variable :
+        String var1 = myTextField1.getText();
+//Lorsque le champ de texte contient un nombre entier :
+        int var2 = Integer.valueOf(myTextField2.getText());
+//Lorsque le champ de texte contient un nombre réel :
+        double var3 = Double.valueOf(myTextField3.getText());
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Vérifier qu'aucun des champs de texte n'est pas vide</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+if (!myTextField1.getText().equals("") && !myTextField2.getText().equals("") &&
+    !myTextField3.getText().equals("")) {
+        String var1 = myTextField1.getText();
+        int var2 = Integer.valueOf(myTextField2.getText());
+        double var3 = Double.valueOf(myTextField3.getText());
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+      <h2>Progress bar</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+// number de 0 à 100;
+    myProgressBar.setValue(Integer.valueOf(number));
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Request focus</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+textField.requestFocus();
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Trier une liste de nombres en ordre croissant</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public void sort(){
+
+//on place à la position i l'élément le plus petit parmi les éléments 
+//à partir de on place à la position i l'élément le plus petit parmi les
+//éléments à partir de la position la position i
+     for(int i=0; i < alNumbers.size()-1; i++){
+
+//la variable posMin contiendra la position de l'élément le plus petit
+          int posMin = i;
+          for(int j=i+1; j < alNumbers.size(); j++){
+               if(alNumbers.get(j) < alNumbers.get(posMin)){
+          }    }    posMin = j;
+
+//on échange les éléments aux position i et posMin si l'élément le 
+//plus petit n'est pas déjà à la position i
+          if(i != posMin){
+               Integer temp = alNumbers.get(posMin);
+               alNumbers.set(posMin, alNumbers.get(i));
+               alNumbers.set(i, temp);
+          } 
+    } 
+}            
+</code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Trier une liste de nombres en ordre décroissant</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+public void sort(){
+
+//on place à la position i l'élément le plus petit parmi les éléments 
+//à partir de on place à la position i l'élément le plus petit parmi les
+//éléments à partir de la position la position i
+     for(int i=0; i < alNumbers.size()-1; i++){
+
+//la variable posMin contiendra la position de l'élément le plus petit
+          int posMin = i;
+          for(int j=i+1; j < alNumbers.size(); j++){
+               if(alNames.get(j).getNumber().compareTo(alNumbers.get(posMin).getNumber()) < 0){
+          }    }    posMin = j;
+
+//on échange les éléments aux position i et posMin si l'élément le 
+//plus petit n'est pas déjà à la position i
+          if(i != posMin){
+               Integer temp = alNumbers.get(posMin);
+               alNumbers.set(posMin, alNumbers.get(i));
+               alNumbers.set(i, temp);
+          } 
+    } 
+}            
+</code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Mouse Events</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+//Retournent les coordonnées x ou y du point auquel se trouvait 
+//le curseur de la souris lorsque l'événement a été déclenché.
+mouseButton = evt.getX();
+mouseButton = evt.geY();
+//
+Retourne le point où se trouvait le curseur de 
+//la souris lorsque l'événement a été déclenché.
+mouseButton = evt.getButton();
+//Cette méthode ne fonctionne pas pour l'événement mouseDragged!
+mouseButton = evt.getPoint();
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Import Timer</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+import javax.swing.Timer;
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Initialiser le Timer</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+// 1 = période de la répétition en millisecondes
+timer = new Timer(1, myButton.getActionListeners()[0]);
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Timer</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-java">
+//démarrer le timer
+timer.start();
+//arrêter le timer
+timer.stop();
+//définir un délai pour le timer
+timer.setDelay(delaySlider.getValue());
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

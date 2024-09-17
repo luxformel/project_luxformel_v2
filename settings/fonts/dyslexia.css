@@ -1,0 +1,22 @@
+@font-face {
+  font-family: dyslexic;
+  src: url(/fonts/dyslexic/OpenDyslexic-Regular.woff);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+  font-family: dyslexic !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  line-height: 3rem !important;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kapitel</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>RLC - Reihenschaltung</h1>
+      <h2>Schaltung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RLC Reihenschaltung/Schaltung.png"
+        alt="RLC Reihenschaltung"
+      />
+      <ol>
+        <li>
+          <p>
+            Bei einer RLC-Reihenschaltung wird der Strom \( I \) als
+            Bezugsgrö&beta;e gewählt.
+          </p>
+        </li>
+        <li>
+          <p>Die Spannung \( U_R \) liegt mit dem Strom \( I \) in Phase.</p>
+        </li>
+        <li>
+          <p>
+            Die Spannung \( U_L \) eilt dem Strom \( I \) um 90\( ^\circ \) vor.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Spannung \( U_C \) eilt dem Strom \( I \) um 90\( ^\circ \)
+            nach.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Phasenverschiebung zwischen \( U_L \) und \( U_C \) beträgt
+            180\( ^\circ \), das hei&beta;t, die beiden Spannungen sind
+            entgegengesetzt gerichtet.
+          </p>
+        </li>
+      </ol>
+      <h2>Spannung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RLC Reihenschaltung/Spannungsdreieck.png"
+        alt="RLC Spannungsdreieck"
+      />
+      $$ U = \sqrt{U_R^2 + (U_L - U_C)^2} $$ $$ \sin(\varphi) = \frac{U_L -
+      U_C}{U} $$ $$ \cos(\varphi) = \frac{U_R}{U} $$ $$ \tan(\varphi) =
+      \frac{U_L - U_C}{U_C} $$
+      <h2>Widerstand</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RLC Reihenschaltung/Widerstandsdreieck.png"
+        alt="RLC Widerstandsdreieck"
+      />
+      $$ Z = \sqrt{R^2 + (X_L - X_C)^2} $$ $$ \sin(\varphi) = \frac{X_L -
+      X_C}{Z} $$ $$ \cos(\varphi) = \frac{R}{Z} $$ $$ \tan(\varphi) = \frac{X_L
+      - X_C}{R} $$
+      <h2>Leistung</h2>
+      <img
+        class="zeichnungen"
+        src="../img/RLC Reihenschaltung/Leistungsdreieck.png"
+        alt="RLC Leistungsdreieck"
+      />
+      $$ S = \sqrt{P^2 + (Q_L - Q_C)^2} $$ $$ \sin(\varphi) = \frac{Q_L -
+      Q_C}{S} $$ $$ \cos(\varphi) = \frac{P}{S} $$ $$ \tan(\varphi) = \frac{Q_L
+      - Q_C}{P} $$
+    </div>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Festigkeitslehre</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Festigkeitslehre</h1>
+      <h2>Beanspruchung auf Zug</h2>
+      <p>
+        Im Werkstück entstehen Zugspannungen $\sigma_z$, welche senkrecht zum
+        beanspruchten Querschnitt stehen. Solche Spannungen nennt man
+        Normalspannungen.
+      </p>
+      <h3>Formel</h3>
+      $$ \sigma_z = \frac{F}{S} $$
+      <h2>Beanspruchung auf Druck</h2>
+      <p>
+        Bei der Druckbeanspruchung entstehen mi Werkstück Druckspannungen
+        $\sigma_{d}$ welche wie die Zugspannungen senkrecht zum beanspruchten
+        Querschnitt stehen. Druckspannungen sind also auch Normalspannungen.
+      </p>
+      <h3>Formel</h3>
+      $$ \sigma_d = \frac{F}{S} $$
+      <h2>Beanspruchung auf Abscherung</h2>
+      <p>
+        Hier entstehen mi Werkstück Scherspannungen $\tau_a$. Sie liegen inder
+        Querschnittsfläche und man bezeichnet sie als Schubspannungen.
+      </p>
+      <h3>Formel</h3>
+      $$ \tau_a = \frac{F}{S} $$
+      <h2>Beanspruchung auf Biegung</h2>
+      <p>
+        Bei der Biegebeanspruchung entstehen im Werkstück Normalspannungen
+        welche als Zugspannungen oder Druckspannungen auftreten. In den
+        Randfasern des Werkstücks sind die Spannungen am größten. Eine Faser ist
+        spannungslos, man bezeichnet sie als neutrale Faser.
+      </p>
+      <h3>Formel</h3>
+      $$ \sigma_{bmax} = \frac{M_v}{l}$$
+      <h2>Beanspruchung auf Verdrehung, Torsion</h2>
+      <p>
+        Die bei der Beanspruchung auf Verdrehung entstehenden Torsionsspannungen
+        sind Schubspannungen. Die Randfasern werden am stärksten beansprucht
+        während die Wellenachse spannungslos ist.
+      </p>
+      <h3>Formel</h3>
+      $$ \tau_{tmax} = \frac{M_tr}{l_p}$$
+      <h3>Konvetion</h3>
+      <p>
+        $\sigma$ steht für Normalspannungen diese sind senkrecht zum Schnitt und
+        $\tau$ (Tau) für Schubspannungen diese sind parallel zum Schnitt.
+      </p>
+      <h2>Zugspannungen</h2>
+      <p>
+        Der dargestellte Stab ist im Gleichgewicht unter Einwirkung der
+        äu&beta;eren Kräfte. Denken wir uns den Stab an einer beliebigen Stelle
+        durchgeschnitten. Um das Gleichgewicht zu erhalten muss an der
+        Schnittfläche die innere Kraft $F_N$ wirken. Da diese Kraft mit der
+        äußeren Kraft $F$ mi Gleichgewicht ist muss sie senkrecht zur
+        Schnittfläche stehen. Man bezeichnet sie deshalb als Normalkraft.
+      </p>
+      <p>
+        Die Kraft $F_N$ wirkt gleichmäßig auf alle Flächenteilchen des
+        Querschnittes. Wir können ein Ma&beta; für die Beanspruchung des
+        Werkstoffes erhalten wenn wir die Kraft $F_N$ durch den Querschnitt
+        teilen. Diese Grö&beta;e nennt man Spannung. Da die verursachende Kraft
+        eine Normalkraft ist erhalten wir eine Normalspannung. Die Zugspannung
+        ist also eine Normalspannung da sie senkrecht zum beanspruchten
+        Querschnitt steht.
+      </p>
+      <h3>Formeln</h3>
+      $$ Spannung = \frac{innere\ Kraft}{Querschnitt} $$ $$ \sigma_z =
+      \frac{F_N}{S} $$
+      <p>da $F_N = F$:</p>
+      $$ \sigma_z = \frac{F}{S} $$
+      <h3>Einheiten</h3>
+      $$ [F] = N $$ $$ [S] = mm^2 $$ $$oder\ [S] = m^2 $$ $$[\sigma_z] =
+      \frac{N}{mm^2}$$ $$oder\ [\sigma_z] = \frac{N}{m^2} = Pa$$
+      <h2>Gefährdeter Querschnitt</h2>
+      <p>
+        Bei der Dimensionierung von Maschinenteilen müssen die Ma&beta;e so
+        berechnet werden, dass eine bestimmte Spannung, die zulässige Spannung
+        nicht überschritten wird.
+      </p>
+      <table>
+        <tr>
+          <th>
+            <p>Beschreibung</p>
+          </th>
+          <th><p>Formel</p></th>
+        </tr>
+        <tr>
+          <td>
+            <p>zulässige Zugspannung</p>
+          </td>
+          <td>
+            <p>$\sigma_{z,\ zul} = \frac{F}{S}$</p>
+          </td>
+        </tr>
+        <tr>
+          <td><p>erforderlicher Querschnitt</p></td>
+          <td>
+            <p>$S_{erf} = \frac{F}{\sigma_{z,\ zul}}$</p>
+          </td>
+        </tr>
+        <tr>
+          <td><p>vorhandene Spannung</p></td>
+          <td><p>$\sigma_{z,\ vorha} = \frac{F}{S}$</p></td>
+        </tr>
+        <tr>
+          <td>
+            <p>maximale Belastung</p>
+          </td>
+          <td><p>$F_{max} = S \cdot \sigma_{z,\ zul}$</p></td>
+        </tr>
+      </table>
+      <p>
+        Bei Berechnungen muss der Querschnitt der durch die Kraft $F$ belastet
+        wird richtig erkannt werden. Es ist immer der kleinstmögliche
+        Querschnitt.
+      </p>
+      <h2>Zugversuch</h2>
+      <p>
+        Beim Zugversuch wird ein zylindrischer Probestab einer langsam
+        steigenden Belastung ausgesetzt. Der unbelastete Stab hat einen
+        Querschnitt $S_0$ und eine Messstrecke $l_0$ ist durch zwei Markierungen
+        auf dem Stab festgelegt.
+      </p>
+      <p>
+        Bezeichnen wir die Länge unter Belastung mit $l$ so beträgt die
+        Längenzunahme $\Delta l = l - l_0$. <br />
+        Bezieht man die Längenzunahme auf die Messstrecke so erhält man die
+        Dehnung.
+      </p>
+      <h3>Formel</h3>
+      $$ Dehnung = \frac{Längenzunahme}{Me&beta;strecke} $$ $$\varepsilon =
+      \frac{\Delta l}{l_0}$$
+      <h3>Einheit</h3>
+      $$ [l] = mm^2$$ $$ [\varepsilon] \rightarrow keine\ Einheit$$
+
+      <h3>Bemerkung</h3>
+      <p>Die Dehnung $\varepsilon$ wird oft in % angegeben.</p>
+      <p>
+        Durch den Zugversuch wird der Stab dünner. Wir erhalten also folgende
+        grö&beta;en:
+      </p>
+      $$ d_0,\ Stabdurchmesser\ ohne\ Belastung $$ $$ d,\ Stabdurchmesser\
+      unter\ Belastung $$ $$ \Delta d,\ Änderung\ des\ Stabdurchmesser $$
+      <h3>Formel</h3>
+      $$ \varepsilon_q = \frac{\Delta d}{d_0} $$
+      <h3>Bemerkung</h3>
+      <p>Beide Grö&beta;en werden normalerweise in $mm$ angegeben.</p>
+      $$ [\varepsilon_q] \rightarrow keine\ Einheit$$
+      <p>
+        Den Zusammenhang zwischen der Zugspannung $\sigma_z$ und der Dehnung
+        $\varepsilon$ kann man in einem Diagramm darstellen : dem
+        <i>Spannungs Dehnungs Diagramm</i>.
+      </p>
+      <img
+        src="../img/Festigkeitslehre/spannungs dehungs diagramm.png"
+        alt="spannungs dehungs diagramm"
+        class="zeichnungen"
+      />
+      <h3>Wichtige Grö&beta;en</h3>
+      <ul>
+        <li>
+          <p><u>Proportionalitätsgrenze</u> $\sigma_P$</p>
+          <p>
+            Bis zu dieser Grenze verlauft die Spannungs-Dehnungskurve linear.
+            Die Spannung ist direkt proportional zur Dehnung.
+          </p>
+        </li>
+        <li>
+          <p><u>Elastizitatsgrenze</u> $\sigma_E$</p>
+          <p>
+            Wird der Probestab nicht über die Spannung $\sigma_E$ hinaus
+            beansprucht, so verhält sich der Stab elastisch, das hei&beta;t nach
+            Abklingen der Belastung ist keine bleibende Verformung zu erkennen.
+          </p>
+        </li>
+        <li>
+          <p><u>Streckgrenze</u> $R_e$</p>
+          <p>
+            Ist die Streckgrenze erreicht, so beginnt der Werkstoff zu
+            flie&beta;en, das hei&beta;t die Spannung fällt leicht ab und die
+            Dehnung nimmt bei praktisch konstanter Spannung stark zu. Diese
+            Streckgrenze ist nur bei weichen Stahlen ausgepragt, bei andern
+            Werkstoffen ist sic nicht vorhanden.
+          </p>
+        </li>
+        <li>
+          <p><u>Zugfestigkeit</u> $R_m$</p>
+          <p>
+            Nach dem Flie&beta;en erholt sich der Werkstoff wieder und die
+            Spannung steigt mit zunehmender Dehnung bis zu ihrem Höchstwert
+            $R_m$. Danach nimmt die Spannung bei zunehmender Dehnung ab, bis der
+            Bruch des Probestabes erfolgt. In diesem Bereich tritt eine starke
+            Einschnürung auf.
+          </p>
+        </li>
+      </ul>
+      <h2>Gesetz von Hooke</h2>
+      $$ \frac{\sigma}{\varepsilon} = konstant = \tan(\alpha) $$
+    </div>
+  </body>
+</html>

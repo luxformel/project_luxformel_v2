@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Zahnradtriebe</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Zahnradtriebe</h1>
+      <h2>Grundvoraussetzung</h2>
+      <p>
+        Zwei Zahnräder die ineinandergreifen, müssen den gleichen Modul haben.
+      </p>
+      <h2>Formelzeichen</h2>
+      $$z,\ Zähnezahl$$ $$d,\ Teilkreisdurchmesser\ (gemessen\ in\ Mitte\ der\
+      Zähne)$$ $$n, \ Drehzahl $$ $$m, \ Modul $$ $$ p, \ Teilung $$ $$h, \
+      Zahnhöhe $$ $$h_f ,\ Zahnfu\beta höhe $$ $$d_{a}, \ Kopfkreisdurchmesser;\
+      Au\beta endurchmesser $$ $$a, \ Achsenabstand $$ $$c, \ Kopfspiel $$
+      $$h_{a}, \ Zahnkopfhöhe $$ $$ d_{f}, \ Fu\beta kreisdurchmesser $$ $$b, \
+      Zahnbreite $$
+      <h2>Formeln</h2>
+      <h3>Modul</h3>
+      $$m=\frac{d}{z} $$
+      <h3>Bemerkung</h3>
+      <p>Der Modul wird auch <q>Diametral Pitch</q> genannt</p>
+      <h3>Teilkreisdurchmesser</h3>
+      $$d=m\ \cdot \ z $$
+      <h3>Kopfkreisdurchmesser</h3>
+      $$d_{a}=d\ +\ 2\ \ \cdot \ m $$
+      <h3>Achsenabstand</h3>
+      $$ a=\frac{d_{1}\ +\ d_{2}}{2} $$
+      <h2>Übersetzungsverhältnis</h2>
+      $$i, \ Übersetzungsverhältnis $$ $$i=\frac{n_{1}}{n_{2}}
+      =\frac{d_{2}}{d_{1}} =\frac{z_{2}}{z_{1}} =\frac{M_{2}}{M_{1}} $$
+      <h3>Gesamtübersetzungsverhältnis:</h3>
+      $$i_{ges}=\prod^{m}_{n=1} i_{n} $$ $$m, \ Anzahl\ an\ Übersetzungen $$
+      <h2>Doppelte Übersetzung</h2>
+      <h3>Formel</h3>
+      $$i_{14}=\frac{n_{1}}{n_{4}} =\frac{z_{2}\cdot z_{4}}{z_{1}\cdot z_{3}} $$
+    </div>
+  </body>
+</html>

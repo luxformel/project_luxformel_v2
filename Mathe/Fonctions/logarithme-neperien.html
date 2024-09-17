@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Fonction logarithme népérien</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Fonction logarithme népérien</h1>
+      <h3>Définition</h3>
+      <p>
+        Soit $f$ une fonction définie sur $\mathbb{R}$ par $y = f(x)$. La
+        réciproque de cette fonction est la relation qui fait correspondre à
+        chaque $y$ obtenu par $f$, le ou les $x$ dont $y$ est l'image.
+      </p>
+      <h3>Remarques</h3>
+      <ul>
+        <li>
+          <p>
+            La réciproque d'une fonction est une relation, mais n'est pas
+            toujours une fonction comme chaque antécédent admet au plus une seul
+            image.
+          </p>
+        </li>
+        <li>
+          <p>
+            Les courbes d'une fonction $f$ et de sa réciproque sont toujours
+            symétriques par rapport à la première bissectrices des axes du
+            repère orthonormé.
+          </p>
+        </li>
+      </ul>
+      <h3>Propriété</h3>
+      <p>
+        Soit $f$ une fonction telle que sa réciproque soit également une
+        fonction notée $g$.
+      </p>
+      <p>Alors $\forall x \in D_g $:</p>
+      $$ f \circ g(x)=x $$
+      <p>et $\forall x \in D_f $:</p>
+      $$ g \circ f(x) =x $$
+      <h2>Fonction réciproque</h2>
+      <h3>Définition</h3>
+      <p>La fonction logarithme népérien, notée $\ln$, est définie par:</p>
+      $$ \ln :]0;+\infty [\ \rightarrow \mathbb{R}$$ $$ x \rightarrow y = \ln(x)
+      $$
+      <p>où $\ln(x)$ est le nombre dont l'exponentielle est $x$.</p>
+      <h3>Propriété</h3>
+      <ol>
+        <li>
+          <p>
+            par définition <br />
+            $\forall x > 0,\ e^{\ln(x)} = x$
+          </p>
+        </li>
+        <li>
+          <p>$\forall x \in \mathbb{R},\ \ln(e^x) = x$</p>
+        </li>
+        <li>
+          <p>$\ln(e) = 1$</p>
+        </li>
+        <li>
+          <p>$\ln(1) = 0$</p>
+        </li>
+      </ol>
+      <h3>Théorème</h3>
+      <p>$\forall a \in \mathbb{R^*_+}$ et $\forall b \in \mathbb{R}$</p>
+      $$ \ln(a) = b \Leftrightarrow a = e^b$$
+      <h3>Démonstration</h3>
+      <p>
+        Si $\ln(a) = b$, alors $e^b = e^{\ln(a)} = a$ <br />Réciproquement, si
+        $a = e^b$, alors $\ln(a) = \ln(e^b) = b$.
+      </p>
+      <h3>Propriété</h3>
+      <p>La fonction $\ln$ est strictement croissante sur $\mathbb{R^*}$.</p>
+      <h3>Démonstration</h3>
+      <p>
+        Considérons deux nombres strictement positifs $u$ et $v$ tels que $u <
+        v$, soit encore $e^{\ln(u)} < e^{\ln(v)}$. La fonction exp est
+        strictement croissante sur $\mathbb{R}$, donc nécessairement, $\ln(u) <
+        \ln(v)$ : La fonction $\ln$ est strictement croissante sur $]0;
+        +\infty[$.
+      </p>
+      <h3>Propriété</h3>
+      <p>$\forall a,b \in ]0;+ \infty[$</p>
+      $$ \ln(a) = \ln(b) \Leftrightarrow a = b $$
+      <p>et</p>
+      $$ \ln(a) < \ln(b) \Leftrightarrow a < b $$
+      <h3>Théorème</h3>
+      <p>$\forall a,b \in \mathbb{R^*_+}$</p>
+      $$ \ln(ab) = \ln(a) + \ln(b)$$
+      <h3>Démonstration</h3>
+      <p>$\forall a,b \in \mathbb{R^*_+}$</p>
+      $$ \ln(ab) = \ln(a) + \ln(b) $$
+      <p>
+        Comme la fontion exponentielle est strictement croissante sur
+        $\mathbb{R}$:
+      </p>
+      $$ \Leftrightarrow e^{\ln(ab)} = e^{\ln(a) +\ln(b)}$$ $$ \Leftrightarrow
+      ab = e^{\ln(a)} \cdot e^{\ln(b)} $$ $$ \Leftrightarrow ab = e^{\ln(a)}
+      \cdot e^{\ln(b)} $$$$ \Leftrightarrow ab = a \cdot b $$
+      <h3>Théorème</h3>
+      <p>$\forall a,b \in \mathbb{R^*_+}$</p>
+      $$ \ln(\frac{a}{b}) = \ln(a) - \ln(b)$$ $$ \ln(\frac{1}{b}) = - \ln(b)$$
+      <h3>Démonstration</h3>
+      <p>On sait que:</p>
+      $$ \forall x,y \in \mathbb{R^*_+}:$$ $$ \ln(xy) = \ln(x) + \ln(y)\ (1) $$
+      <ul>
+        <li>
+          <p>Pour $x=\frac{a}{b}$ et $y=b$, $(1)$ s'écrit:</p>
+          $$ \ln(\frac{a}{b} \cdot b) = \ln(\frac{a}{b}) + \ln(b)$$ $$
+          \Leftrightarrow \ln(a) = \ln(\frac{a}{b}) + \ln(b) $$ $$
+          \Leftrightarrow \ln(\frac{a}{b}) = \ln(a) - \ln(b)\ (2) $$
+        </li>
+        <li>
+          <p>Pour $a=1$, $(2)$ s'écrit:</p>
+          $$ \ln(\frac{1}{b}) = \ln(1) - \ln(b) = -\ln(b)$$
+        </li>
+      </ul>
+      <h3>Théorème</h3>
+      <p>
+        Pour tout entier $p > 1$ et tous réels $a_1 > 0$, $a_2 > 0$, ... , $a_p
+        > 0$
+      </p>
+      $$ \ln(a_1 \cdot a_2 \cdot ... \cdot a_p) = \ln(a_1) + \ln(a_2) + ... +
+      \ln(a_p)$$
+      <h3>Démonstration</h3>
+      <p>
+        Montrons par récurrence que la formule est vraie pour tout entier $p
+        \geqslant 1$
+      </p>
+      $$ \mathscr{P}(p): \ln(a_1 \cdot a_2 \cdot ... \cdot a_p) = \ln(a_1) +
+      \ln(a_2) + ... + \ln(a_p) $$
+      <ul>
+        <li>
+          <p>
+            <u>Initialisation:</u> $\mathscr{P}(1)$ est vraie <br />
+            En effet, $\ln(a_1) = \ln(a_1)$
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Hérédité:</u> Supposons que l'on ait $\mathscr{P}(p)$ <br />
+            Alors on aurait,
+          </p>
+          $$ \ln(a_1 \cdot a_2 \cdot ... \cdot a_p \cdot a_{p+1}) $$ $$ =
+          \ln(a_1 \cdot a_2 \cdot ... \cdot a_p) + \ln(a_{p+1}) $$ $$ = \ln(a_1)
+          + \ln(a_2) + ... \ln(a_p) + \ln(a_{p+1}) $$
+          <p>
+            par l'hypothèse de récurrence <br />
+            Donc $\mathscr{P}(p+1)$ est vraie
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Conclusion:</u> Pour tout entier $p \geqslant 1$ et tous réel
+            $a_1 > 0$, $a_2 > 0$, ... , $a_p > 0$:
+          </p>
+          $$ \ln(a_1 \cdot a_2 \cdot ... \cdot a_p) = \ln(a_1) + \ln(a_2) + ...
+          + \ln(a_p)$$
+        </li>
+      </ul>
+      <h3>Théorème</h3>
+      <p>$ \forall a \in \mathbb{R^*_+}$ et $\forall p \in \mathbb{Z}$</p>
+      $$ \ln(a^p) = p \cdot \ln(a)$$
+      <h3>Démonstration</h3>
+      <p>
+        On sait que: <br />
+        Pour tout entier $p \geqslant 1$ et tous réels $a_1 > 0$, $a_2 > 0$, ...
+        , $a_p > 0$:
+      </p>
+      $$ \ln(a_1 \cdot a_2 \cdot ... \cdot a_p) = \ln(a_1) + \ln(a_2) + ... +
+      \ln(a_p)\ (1) $$
+
+      <ul>
+        <li>
+          <p>
+            si $p \geqslant 1$: Lorsque $a_1 = a_2 = ... = a_p = a$, alors $(1)$
+            permet de conclure que
+          </p>
+          $$ \ln(a^p) = p \ln(a)\ (2) $$
+        </li>
+        <li>
+          <p>$p \leqslant -1 $:</p>
+          $$ \ln(a^p) = \ln(\frac{1}{a^{-p}}) $$ $$= -\ln(a^{-p}) $$ $$= -(-p
+          \ln(a)) $$
+          <p>par $(2)$, car $-p \geqslant 1$</p>
+          $$ = p \ln(a) $$
+        </li>
+        <li>
+          <p>
+            si $p=0$: $\ln(a^p) = \ln(1) = 0$ et $p \ln(a) = 0.$ <br />
+            D'où le résultat.
+          </p>
+        </li>
+      </ul>
+      <h3>Théorème</h3>
+      <p>$\forall a > 0$</p>
+      $$ \ln(\sqrt{a}) = \frac{1}{2} \ln(a) $$
+      <h3>Démonstration</h3>
+      <p>$\forall a \in \mathbb{R^*_+}$:</p>
+      $$ \ln(a) = \ln(\sqrt{a} \cdot \sqrt{a})$$ $$\Leftrightarrow \ln(a) =
+      \ln(\sqrt{a}) + \ln(\sqrt{a})$$ $$\Leftrightarrow \ln(a) = 2 \ln(\sqrt{a})
+      $$ $$\Leftrightarrow \ln(\sqrt{a}) = \frac{1}{2} \ln(a) $$
+      <h2>Limites</h2>
+      <h3>Théorème</h3>
+      <ol>
+        <li>
+          <p>$\lim_{x \rightarrow + \infty} \ln(x) = + \infty$</p>
+        </li>
+        <li>
+          <p>$\lim_{x \rightarrow 0^+} \ln(x) = - \infty$</p>
+        </li>
+      </ol>
+      <h3>Théorème</h3>
+      $$ \lim_{x \rightarrow 1} \frac{\ln(x)}{x-1} = 1 $$
+      <h3>Démonstration</h3>
+      $$ \lim_{x \rightarrow 1} \frac{\ln(x)}{x-1} = \lim_{x \rightarrow 1}
+      \frac{\ln(x) - \ln(1)}{x-1}$$ $$ = (\ln)^{\prime}(1) $$ $$ =1 $$
+      <h2>Dérivée</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction $\ln$ est dérivable sur $\mathbb{R^*_+}$ et $\forall x \in
+        \mathbb{R^*_+}$ :
+      </p>
+      $$ (\ln)^{\prime} (x) = \frac{1}{x} $$
+      <h3>Démonstration</h3>
+      <p>
+        Soit $a \in \mathbb{R^*_+}$ <br />
+        Nous devons démontrer que:
+      </p>
+      $$ \lim_{x \rightarrow a} \frac{\ln(x) - \ln(a)}{x-a} = \frac{1}{a} $$
+      <p>Posons:</p>
+      $$y= \ln(a) \Leftrightarrow x = e^y$$
+      <p>et</p>
+      $$ b = \ln(a) \Leftrightarrow a = e^b$$
+      <p>
+        Si $x \rightarrow a$, alors $y \rightarrow \ln(a) = b$, car $\ln$ est
+        continue sur $\mathbb{R^*_+}$ <br />
+        On a donc:
+      </p>
+      $$ \lim_{x \rightarrow a} \frac{\ln(x) - \ln(a)}{x-a} = \lim_{y
+      \rightarrow b} \frac{y-b}{e^y - e^b}$$ $$= \lim_{y \rightarrow b}
+      \frac{1}{\frac{y-b}{e^y - e^b}}$$ $$ =\frac{1}{(\exp)^{\prime}(b)} $$ $$
+      =\frac{1}{e^b} $$ $$ =\frac{1}{a} $$
+      <p>
+        Comme ceci est vrai pour tout $a > 0$, la fonction $\ln$ est dérivable
+        sur $\mathbb{R^*_+}$ et $\forall x \in \mathbb{R^*_+}$ :
+      </p>
+      $$ (\ln)^{\prime}(x) = \frac{1}{x} $$
+      <h3>Conséquence</h3>
+      <p>
+        Si $u$ est une fonction dérivable et strictement positive sur un
+        intervalle $I$, alors la fonction $f$ définie par:
+      </p>
+      $$ f(x) = \ln[u(x)] $$
+      <p>est dérivable sur $I$ et $\forall x \in I$ :</p>
+      $$ f^{\prime}(x) = \frac{u^(x)}{u(x)} $$
+      <h2>Croissance comparée de $\ln(x)$ et $x^n$</h2>
+      <h3>Théorème</h3>
+      <ol>
+        <li>
+          <p>$\lim_{x \rightarrow + \infty} = \frac{\ln(x)}{x} = 0$</p>
+        </li>
+        <li>
+          <p>$\lim_{x \rightarrow 0^+} = x \ln(x) = 0$</p>
+        </li>
+      </ol>
+      <h3>Démonstration</h3>
+      <ol>
+        <li>
+          <p>
+            Posons $y= \ln(x) \Leftrightarrow x = e^y$ <br />
+            Si $x \rightarrow + \infty$, alors $y \rightarrow + \infty$ <br />
+            Donc:
+          </p>
+          $$ \lim_{x \rightarrow + \infty} \frac{\ln(x)}{x} = \lim_{y
+          \rightarrow + \infty} \frac{y}{e^y} $$ $$= \lim_{y \rightarrow +
+          \infty} \underbrace{\frac{1}{\frac{y}{e^y}}}_{\rightarrow + \infty} $$
+          $$ =0$$
+        </li>
+        <li>
+          <p>
+            Posons $y= \ln(x) \Leftrightarrow x = e^y$ <br />
+            Si $x \rightarrow 0^+$, alors $y \rightarrow - \infty$ <br />
+            Donc:
+          </p>
+          $$ \lim_{x \rightarrow 0^+} x \ln(x) = \lim_{y \rightarrow - \infty}
+          e^y \cdot y $$ $$= \lim_{y \rightarrow - \infty} y e^y $$ $$ =0$$
+        </li>
+      </ol>
+      <h3>Théorème</h3>
+      $$ \lim_{x \rightarrow + \infty} \frac{x}{\ln(x)} = + \infty $$
+      <h3>Remarques</h3>
+      <ol>
+        <li>
+          <p>On dit qu'à l'infini et en 0 $x$ l'emporte sur $\ln(x)$.</p>
+        </li>
+        <li>
+          <p>
+            Vu que $\lim_{x \rightarrow + \infty} \frac{\ln(x)}{x} = 0$,
+            $\mathscr{C}_{\ln}$ n'admet pas d'asymptote oblique en $+ \infty$.
+          </p>
+        </li>
+      </ol>
+      <h3>Théorème</h3>
+      <p>$\forall n \in \mathbb{N^*}$:</p>
+      <ol>
+        <li>
+          <p>$\lim_{x \rightarrow + \infty} \frac{\ln(x)}{x^n} = 0$</p>
+        </li>
+        <li>
+          <p>$\lim_{x \rightarrow + \infty} x^n{\ln(x)} = + \infty$</p>
+        </li>
+        <li>
+          <p>$\lim_{x \rightarrow 0^+} x^n \ln(x) = 0$</p>
+        </li>
+      </ol>
+      <h3>Remarque</h3>
+      <p>
+        On dit qu'à l'infini et en 0, n'importe quelle puissance de $x$
+        l'emporte sur $\ln(x)$.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Zahlensysteme der Informatik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Zahlensysteme der Informatik</h1>
+
+      <ul>
+        <li>
+          <p>
+            <u>Natürliche Zahl:</u>
+          </p>
+          <p>
+            Die Darstellung einer natürlichen Zahl $z$, mit einer dazugehörigen
+            Basis $B$, wird durch folgende Summe definiert.
+          </p>
+          $$ z = \sum^{n}_{i=0} z_{i}\cdot B^{i} $$
+          <p>wobei:</p>
+          $$ z = z_{n}\cdot z_{n-1}\cdot ...z_{1}\cdot z_{0}\ \left( z_{i}\in
+          \left\{ 0,...,B-1\right\} \right) $$
+        </li>
+        <li>
+          <p>
+            <u>Gebrochene Zahl:</u>
+          </p>
+          <p>
+            Die Darstellung einer gebrochene Zahl $z$, mit einer dazugehörigen
+            Basis $B$, wird durch folgende Summe definiert.
+          </p>
+          $$ z = \sum^{n}_{i=0} z_{i}\cdot B^{i} $$
+        </li>
+      </ul>
+      <h2>Relevante Zahlensysteme</h2>
+      <p>
+        Es gibt einige häufig benutzte Zahlensysteme in der Informatik, die hier
+        nach aufsteigender Basis geordnet sind:
+      </p>
+      <ul>
+        <li>
+          <p>Binärsystem, Dualsystem</p>
+          $$ B=2$$
+        </li>
+        <li>
+          <p>Oktalsystem</p>
+          $$ B=8$$
+        </li>
+        <li>
+          <p>Dezimalsystem</p>
+          $$ B=10$$
+        </li>
+        <li>
+          <p>Hexadezimalsystem</p>
+          $$ B=16$$
+        </li>
+      </ul>
+      <p>
+        Das jedoch allerwichtigste Zahlensystem in der Informatik ist das
+        Binärsystem.
+      </p>
+      <h2>Basiswechsel</h2>
+      <p>Ein Basiswechsel ist das Wechseln der Basis einer Zahl.</p>
+      <h2>Dezimalzahlen in Binärzahlen: Algorithmus</h2>
+      <p>
+        Um Dezimalzahlen in Binärzahlen umzuwandeln braucht es einem Algorithmus
+        der wie folgt vorgeht:
+      </p>
+      <ol>
+        <li>
+          <p>Die Zahl wird durch die Basis 2 geteilt.</p>
+        </li>
+        <li>
+          <p>Der Rest wird gespeichert, entweder 0 oder 1.</p>
+        </li>
+        <li>
+          <p>
+            Dieser Prozess wird mit dem Resultat aus Schritt 1 solange
+            wiederholt bis der Rest 1 ist.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Binärzahl ist nun die Zusammensetzung der Reste zu einer Zahl
+            von der letzten Division bis zur ersten.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Besteht eine Zahl auch noch oder nur aus einem gebrochenen Anteil, muss
+        ein anderer Algorithmus verwendet werden.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Der gebrochener Anteil der Zahl wird mit die Basis 2 multipliziert.
+          </p>
+        </li>
+        <li>
+          <p>
+            Das Resultat wird umgeschrieben in die Form ganzzahliger Anteil des
+            Resultates addiert mit dem gebrochenen Anteil des Resultates.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dieser Prozess wird mit dem gebrochenen Anteil des Resultats aus
+            Schritt 1 solange wiederholt bis sich eine Wiederholung zeigt oder
+            das Resultat 0,0 + 0 ergibt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Die Binärzahl ist nun die Zusammensetzung der ganzzahligen Anteile
+            der Resultate zu einer Zahl; von der letzten Multiplikation bis zur
+            ersten.
+          </p>
+        </li>
+      </ol>
+      <h3>Allgemein</h3>
+      <p>Dieser Algorithmus ausgeschrieben ergibt:</p>
+      <ul>
+        <li>
+          <p>Für den ganzzahligen Anteil:</p>
+          <img
+            src="../img/Zahlensysteme/ganzzahligerAnteilDualzahlen.png"
+            alt="ganzzahligerAnteilDualzahlen"
+            class="zeichnungen"
+          />
+          <p>Wobei:</p>
+          $$ Z,\ Zu\ umwandelnde\ Zahl$$ $$ S,\ Resultat $$ $$ B,\ Basis\ in\
+          die\ umgewandelt\ wird $$ $$C,\ Rest\ der\ Division$$
+        </li>
+        <li>
+          <p>Für den gebrochenen Anteil:</p>
+          <img
+            src="../img/Zahlensysteme/gebrochenerAnteilDualzahlen.png"
+            alt="ganzzahligerAnteilDualzahlen"
+            class="zeichnungen"
+          />
+          <p>Wobei:</p>
+          $$ Z,\ Zu\ umwandelnde\ Zahl$$ $$ S,\ Resultat $$ $$ B,\ Basis\ in\
+          die\ umgewandelt\ wird $$ $$C,\ Rest\ der\ Division$$
+        </li>
+      </ul>
+      <h2>Zweierkomplement</h2>
+      <p>Das Zweierkomplement wird wie folgt berechnet:</p>
+      <ol>
+        <li>
+          <p>
+            Als erstes werden die Bits der gegebene Binärzahl invertiert. <br />
+            Aus 1 wird 0 und aus 0 wird 1.
+          </p>
+        </li>
+        <li>
+          <p>
+            Dem Resultat wird 1 hinzuaddiert. <br />
+            Ein möglicher Überlauf wird verworfen.
+          </p>
+        </li>
+      </ol>
+      <h2>Negative Binärzahlen</h2>
+      <p>
+        Das Zweierkomplement kann in verschieden Systemen als negative Binärzahl
+        angesehen werden.
+      </p>
+      <h2>Addition, Subtraktion, Multiplikation, Division</h2>
+      <p>
+        Bei der Subtraktion wird das Zweierkomplement der Zahl addiert.
+        <br />
+        Addition, Multiplikation und Division haben analoge Vorgänge zu den
+        Dezimalzahlen.
+      </p>
+      <h2>Zahlenbereiche für ganze Binärzahlen</h2>
+      <p>
+        Siehe:
+        <a href="../Tabellen/zahlenbereiche-der-binaerzahlen.html"
+          >Zahlenbereiche der Binärzahlen Tabelle</a
+        >
+      </p>
+      <!-- <h2>IEEE754-Fließkommazahlen</h2> -->
+    </div>
+  </body>
+</html>

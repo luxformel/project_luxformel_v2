@@ -1,0 +1,65 @@
+/* everything that changes when applying this theme */
+
+:root {
+  --base-font-size: 16px;
+
+  --white: #030303;
+  --black: #cfcccc;
+  --hero: rgba(255, 136, 0, 0.549);
+  --index-border-color: hsla(0, 26%, 82%, 0.712);
+  --index-card-color: rgb(24, 23, 23);
+  --accent-color: hsl(41, 100%, 50%);
+  --background-color: rgb(26, 26, 26);
+
+  --footer-bg-color: rgb(224, 98, 14);
+  --footer-text-color: #000000;
+
+  --nav-bg-color: rgb(232, 106, 21);
+
+  --off-white: #c95a00;
+  --darker-off-white: #e65e04;
+
+  --dark-grey-shade: #d8d8d8;
+
+  --splash-text-color: #e6e6e6;
+
+  --chapter-index-link-color: #ffffff;
+
+  --default-link-color: blue;
+  --default-link-color-hover: rgb(118, 0, 254);
+  --archive-link-color: blue;
+
+  --changelog-main-text-color: #b6b6b6;
+
+  --th-bg-color: #fa7000;
+  --td-bg-color: #eb912a;
+  --tr-bg-color: #bd5f204f;
+
+  --side-nav-bg: rgba(66, 66, 66, 0.445);
+  --side-nav-link: rgb(219, 219, 219);
+}
+@font-face {
+  src: url(/fonts/Arimo-VariableFont_wght.ttf);
+  font-family: arimo;
+}
+
+#splash-text {
+  font-family: arimo !important;
+}
+
+.MTH-TEX {
+  color: #fff !important;
+}
+
+nav a {
+  color: black !important;
+}
+nav a:hover {
+  color: white !important;
+}
+
+h1,
+h2,
+h3 {
+  color: #fa7000 !important;
+}

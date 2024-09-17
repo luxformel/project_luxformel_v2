@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Converter</title>
+  </head>
+  <body>
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <h1>Diviseuren Sichen</h1>
+        <form action="">
+          <input
+            class="number-input"
+            type="number"
+            name="zuel"
+            id="divZuel"
+            placeholder="Schreift Är Zuel"
+          />
+          <div class="q100">
+            <button class="btn" type="button" onclick="getDiv()">
+              Diviseure Sichen
+            </button>
+          </div>
+          <textarea
+            id="output"
+            class="output-textarea"
+            placeholder="Lëscht vu Resultater"
+            readonly
+          ></textarea>
+        </form>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

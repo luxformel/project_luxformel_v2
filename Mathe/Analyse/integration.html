@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Intégration</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Intégration</h1>
+      <h2>Notation</h2>
+      <h3>Définition</h3>
+      <p>
+        $f$ est une fonction continue et positive sur un intervalle $[a ; b]$.
+        On appelle intégrale de $f$ sur $[a ; b]$ le nombre qui exprime l'aire,
+        en unités d'aire notée: u.a., du domaine $\mathscr{D}$ délimité par la
+        courbe $\mathscr{C}f$ de $f$, l'axe des abscisses et les droites
+        d'équations $x = a$ et $x = b$. <br />
+        On note:
+      </p>
+      $$ \int^{b}_{a} f\left( x\right) dx = A(\mathscr{D}) $$
+      <h3>Remarques</h3>
+      <ol>
+        <li>
+          <p>Dans la notation $ \int^{b}_{a} f\left( x\right) dx $</p>
+          <ul>
+            <li>
+              <p>$a$ et $b$ sont les bornes de l 'intégrale</p>
+            </li>
+            <li>
+              <p>
+                la variable x est dite « muette », autrement dit, elle
+                n'intervient pas dans le résultat et on peut noter
+                indifféremment :
+              </p>
+              $$ \int^b_a f(x)dx = \int^b_a f(t)dt$$
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            $ \int^b_a f(x)dx$ se lit «somme de $a$ à $b$ de $f(x)dx$» ou
+            «intégrale de $a$ à $b$ de $f(x)dx$»
+          </p>
+        </li>
+      </ol>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f$ une fonction continue et positive sur un intervalle $[a; b]$.
+        La fonction $\Phi$ définie sur $[a ; b]$ par
+      </p>
+      $$ \Phi(x) = \int^x_a f(t)dt $$
+      <p>est dérivable sur $[a; b]$ et $\Phi^{\prime} = f$.</p>
+      <h2>Primitives d'une fonction continue</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $f$ une fonction continue sur un intervalle $I$. On appelle
+        primitive de $f$ sur $I$ toute fonction $F$ dérivable sur $I$ telle que
+        $F^{\prime} = f$.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f$ une fonction continue sur un intervalle $I$ et soit $\Phi$ une
+        primitive de $f$ sur $I$. Alors $f$ admet une infinité de primitives sur
+        $I$ qui sont toutes de la forme:
+      </p>
+      $$ F(x) = \Phi + C $$
+      <p>avec $C \in \mathbb{R}$</p>
+      <h3>Conséquences</h3>
+      <ol>
+        <li>
+          <p>
+            <u
+              >Calcul de l'intégrale d'une fonction $f$ continue et positive sur
+              $[a ; b]$</u
+            >
+          </p>
+          <p>Nous savons que la fonction $\Phi$ définie par</p>
+          $$ \Phi(x) = \int^x_a f(t)dt$$
+          <p>est une primitive de $f$ sur $[a ; b]$.</p>
+          <p>
+            On peut calculer l'intégrale $\int^a_b f(t)dt$ , si on connaît une
+            primitive quelconque $F$ de $f$. <br />
+            En effet, il existe une constante $C$ telle que pour tout $x\in
+            [a;b] : F(x) = \Phi(x) + C$ <br />
+            Ansi:
+          </p>
+          $$ F(a) = \Phi(a) + C $$ $$\Leftrightarrow F(a) = \int^a_a f(t)dt +
+          C$$ $$\Leftrightarrow F(a) = 0+ C$$ $$\Leftrightarrow F(a) = C$$
+          <p>De plus:</p>
+          $$ F(a) = \Phi(b) + C $$ $$\Leftrightarrow \Phi(b) = F(b) - C$$
+          $$\Leftrightarrow \Phi(b) = F(b) - F(a)$$
+          <p>Donc:</p>
+          $$ \int^b_af(t)dt = F(b) - F(a) $$
+        </li>
+        <li>
+          <p><u>Primitive avec condition initiale</u></p>
+          <p>
+            Si $f$ admet des primitives sur $I$, alors pour tout nombre $x_0$ de
+            $I$ et tout nombre $y_0$, il existe une primitive et une seule $F$
+            de $f$ qui vérifie la condition initiale $F(x_0) = y_0$.
+          </p>
+        </li>
+      </ol>
+      <h3>Théorème</h3>
+      <p>
+        Toute fonction continue sur un intervalle $I$ admet des primitives sur
+        $I$.
+      </p>
+      <h2>Calculs de primitives</h2>
+      <h3>Tableau</h3>
+      <p>
+        Voici le
+        <a href="tableauDesPrimitivesDeFonctions.html"
+          >tableau des primitives de fonctions</a
+        >.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Si $F$ et $G$ sont des primitives respectivement des fonctions $f$ et
+        $g$ sur un intervalle $I$ et si $k$ est un nombre réel, alors
+      </p>
+      <ol>
+        <li>
+          <p>$F + G$ est une primitive de $f + g$ sur $I$</p>
+        </li>
+        <li>
+          <p>$kF$ est une primitive de $kf$ sur $I$.</p>
+        </li>
+      </ol>
+      <h2>Intégrale d'une fonction continue</h2>
+      <p>
+        Soient $f$ une fonction continue sur un intervalle $I$, $F$ une
+        primitive de $f$ sur $I$ et $a$ et $b$ deux réels quelconques de $I$.
+      </p>
+      <b>L'intégrale de $f$ entre $a$ et $b$ est le nombre :</b>
+      $$ \int^{b}_{a} f\left( t\right) dt=\left[ F\left( t\right)
+      \right]^{b}_{a} =F\left( b\right) -F\left( a\right) $$
+      <h3>Théorème</h3>
+      <p>
+        Soient $f$ et $g$ deux fonctions continues sur un intervalle $I$, soit
+        $\alpha \in \mathbb{R}$ et soient $a,b \in I$ :
+      </p>
+      <ol>
+        <li>
+          $$ \int^{b}_{a} \left[ f\left( x\right) +g\left( x\right) \right]
+          dx=\int^{b}_{a} f\left( x\right) dx+\int^{b}_{a} g\left( x\right) dx
+          $$
+        </li>
+        <li>
+          $$ \int^{b}_{a} \alpha \cdot f\left( x\right) dx=\alpha \int^{b}_{a}
+          f\left( x\right) dx $$
+        </li>
+      </ol>
+      <h2>Relation de Chasles</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f$ une fonction continue sur un intervalle $I$. Pour tous réels
+        $a$, $b$ et $c$ de $I$, on a :
+      </p>
+      $$ \int^{b}_{a} f\left( x\right) dx+\int^{b}_{c} f\left( x\right)
+      dx=\int^{c}_{a} f\left( x\right) dx $$
+      <h3>Théorème de positivité</h3>
+      <p>
+        Soit $f$ une fonction continue sur un intervalle $I$ et soient $a,b \in
+        I$ tels que $a \leqslant b$ :
+      </p>
+      <ol>
+        <li>
+          <p>Si $f$ est positive sur $I$, alors:</p>
+          $$ \int^{b}_{a} f\left( x\right) dx\geqslant 0 $$
+        </li>
+        <li>
+          <p>Si $f$ est négative sur $I$, alors:</p>
+          $$ \int^{b}_{a} f\left( x\right) dx\leqslant 0 $$
+        </li>
+      </ol>
+      <h3>Théorème d'ordre</h3>
+      <p>
+        Soient $f$ et $g$ deux fonctions continues sur un intervalle $I$ et
+        soient $a,b \in I$ tels que $a \leqslant b$. Si $f \leqslant g$ sur $I$,
+        alors:
+      </p>
+      $$ \int^{b}_{a} f\left( x\right) dx\leqslant \int^{b}_{a} g\left( x\right)
+      dx $$
+      <h2>Intégration par parties</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soient $u$ et $v$ deux fonctions définies et dérivables sur un
+        intervalle $I$ et $a,b \in I$:
+      </p>
+      $$ \int^{b}_{a} u\left( x\right) v^{\prime }\left( x\right) dx=\left[
+      u\left( x\right) v\left( x\right) \right]^{b}_{a} -\int^{b}_{a} u^{\prime
+      }\left( x\right) v\left( x\right) dx $$
+      <h3>Démonstration</h3>
+      <p>$\forall x \in I$</p>
+      $$ \left( u\left( x\right) v\left( x\right) \right)^{\prime } =u^{\prime
+      }\left( x\right) v\left( x\right) +u\left( x\right) v^{\prime }\left(
+      x\right) $$ $$ \Leftrightarrow u\left( x\right) v^{\prime }\left( x\right)
+      =(u\left( x\right) v\left( x\right) )^{\prime }-u^{\prime }\left( x\right)
+      v\left( x\right) $$
+
+      <p>donc</p>
+      $$ \Leftrightarrow \int^{b}_{a} u\left( x\right) v^{\prime }\left(
+      x\right) dx=\int^{b}_{a} [(u\left( x\right) v\left( x\right) )^{\prime
+      }-u^{\prime }\left( x\right) v\left( x\right) ]dx $$ $$ \Leftrightarrow
+      \int^{b}_{a} u\left( x\right) v^{\prime }\left( x\right) dx=\int^{b}_{a}
+      \left[ u\left( x\right) v\left( x\right) \right]^{\prime } dx-\int^{b}_{a}
+      u^{\prime }\left( x\right) v\left( x\right) dx $$ $$ \Leftrightarrow
+      \int^{b}_{a} u\left( x\right) v^{\prime }\left( x\right) dx=\left[ u\left(
+      x\right) v\left( x\right) \right]^{b}_{a} -\int^{b}_{a} u^{\prime }\left(
+      x\right) v\left( x\right) dx$$
+      <h2>Calcul d'aires</h2>
+      <p>Définition:</p>
+      <p>
+        $f$ est une fonction continue et négative sur un intervalle $[a ; b]$.
+        On appelle intégrale de $f$ sur $[a ; b]$ l'opposé de l'aire, en unités
+        d'aire notée : u.a., du domaine $\mathscr{D}$ délimité par la courbe
+        $\mathscr{C}_f$ de $f$, l'axe des abscisses et les droites d'équations
+        $x = a$ et $x = b$. <br />
+        On note:
+      </p>
+      $$ \int^{b}_{a} f\left( x\right) dx=-A\left( \mathscr{D} \right) $$
+      <h3>Théorème</h3>
+      <p>
+        Si $\mathscr{C}_f$ est au-dessus de $\mathscr{C}_g$ sur $[a ; b]$, alors
+        du domaine $\mathscr{D}$ délimité par $\mathscr{C}_f$ et $\mathscr{C}_g$
+        sur $[a ; b]$ est donnée par:
+      </p>
+      $$ A\left( \mathscr{D} \right) =\int^{b}_{a} \left( f\left( x\right)
+      -g\left( x\right) \right) dx $$
+    </div>
+  </body>
+</html>

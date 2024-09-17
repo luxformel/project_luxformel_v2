@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Stehende Wellen</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Stehende Wellen</h1>
+      <h2>Reflexion von Transversalwellen</h2>
+      <p>
+        Eine Transversalwelle wird am freien Ende ohne Phasensprung, am festen
+        Ende mit einem Phasensprung von $\pi$ reflektiert. Der Wellenberg kehrt
+        am freien Ende als Wellenberg und am festen Ende als Wellental zurück.
+      </p>
+      <img
+        src="/Physik/img/Stehende Wellen/relexionVonWellenKuerz.png"
+        class="zeichnungen"
+        alt="Reflexion von Wellen"
+      />
+      <h2>Entstehung von stehenden Wellen</h2>
+      <p>
+        Treffen zwei Wellen aufeinander welche eine Phasendifferenz von $\pi$
+        aufweisen, löschen sich diese bei der Überlagerung aus (destruktive
+        Interferenz), Dies geschieht an den Schwingungsknoten. <br />
+        Treffen zwei Wellen aufeinander welche phasengleich sind, so verstärken
+        sie sich bei der Überlagerung (konstruktive Interferenz). Dies geschieht
+        an den Schwingungsbäuchen. <br />
+        Eine stehende Welle entsteht durch Überlagerung zweier gegenläufiger
+        Wellen (die ankommende und die reflektierte) gleicher Frequenz und
+        gleicher Amplitude. In den Schwingungsbäuchen ist die Energie der Welle
+        gespeichert.
+      </p>
+
+      <img
+        src="/Physik/img/Stehende Wellen/relfexionVonWellen.png"
+        class="zeichnungen"
+        alt="reflexion von Wellen"
+      />
+      <h2>Eigenschwingungen</h2>
+      <p>
+        Am festen Ende eines Wellenträgers bildet sich ein Schwingungsknoten.
+        <br />
+        Am freien Ende eines Wellenträgers bildet sich ein Schwingungsbauch.
+        <br />Der Abstand zwischen zwei Schwingungsknoten beträgt
+        $\frac{\lambda}{2}$.
+      </p>
+
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>frei-frei</p></th>
+            <th><p>fest-frei</p></th>
+            <th><p>fest-fest</p></th>
+          </tr>
+          <tr>
+            <td>
+              <p>$n=0$ (Grundschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/frei-frei-0.png"
+                style="max-width: 15rem"
+                alt="frei-frei-0"
+              />
+              <p>$L=\frac{\lambda_0}{2}$ und $f_0=f_0$</p>
+            </td>
+            <td>
+              <p>$n=0$ (Grundschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/fest-frei-0.png"
+                style="max-width: 15rem"
+                alt="fest-frei-0"
+              />
+              <p>$L=\frac{1}{2} \cdot \lambda_1$ und $f_0=f_0$</p>
+            </td>
+            <td>
+              <p>$n=0$ (Grundschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/fest-frei-0.png"
+                style="max-width: 15rem"
+                alt="fest-frei-0"
+              />
+              <p>$L=\frac{1}{2} \cdot \lambda_1$ und $f_0=f_0$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>$n=1$ (1. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/frei-frei-1.png"
+                style="max-width: 15rem"
+                alt="frei-frei-1"
+              />
+              <p>$L=2 \cdot \frac{\lambda_1}{2}$ und $f_1= 2 \cdot f_0$</p>
+            </td>
+            <td>
+              <p>$n=1$ (1. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/fest-frei-1.png"
+                style="max-width: 15rem"
+                alt="fest-frei-1"
+              />
+              <p>$L=\frac{3}{4} \cdot \lambda_1$ und $f_1=3 \cdot f_0$</p>
+            </td>
+            <td>
+              <p>$n=1$ (1. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/fest-frei-1.png"
+                style="max-width: 15rem"
+                alt="fest-frei-1"
+              />
+              <p>$L=\frac{2}{2} \cdot \lambda_1$ und $f_2= 1 \cdot f_0$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>$n=2$ (2. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/frei-frei-2.png"
+                style="max-width: 15rem"
+                alt="frei-frei-2"
+              />
+              <p>$L=3 \cdot \frac{\lambda_2}{2}$ und $f_2= 3 \cdot f_0$</p>
+            </td>
+            <td>
+              <p>$n=2$ (2. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/fest-frei-2.png"
+                style="max-width: 15rem"
+                alt="fest-frei-2"
+              />
+              <p>$L=\frac{5}{4} \cdot \lambda_1$ und $f_1=5 \cdot f_0$</p>
+            </td>
+            <td>
+              <p>$n=2$ (2. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/fest-frei-2.png"
+                style="max-width: 15rem"
+                alt="fest-frei-2"
+              />
+              <p>$L=\frac{3}{2} \cdot \lambda_1$ und $f_2= 3 \cdot f_0$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><u>Verallgemeinerung:</u></p>
+              $$ L= \left( n+1 \right) \frac{\lambda_n}{2} $$ $$ \lambda_n =
+              \frac{2L}{\left( n+1 \right)} $$ $$ \left( n \in \mathbb{N}
+              \right) $$
+            </td>
+            <td>
+              <p><u>Verallgemeinerung:</u></p>
+              $$ L= \left( 2n+1 \right) \frac{\lambda_n}{4} $$ $$ \lambda_n =
+              \frac{4L}{\left( 2n+1 \right)} $$ $$ \left( n \in \mathbb{N}
+              \right) $$
+            </td>
+            <td>
+              <p><u>Verallgemeinerung:</u></p>
+              $$ L= \left( n+1 \right) \frac{\lambda_n}{2} $$ $$ \lambda_n =
+              \frac{2L}{\left( n+1 \right)} $$ $$ \left( n \in \mathbb{N}
+              \right) $$
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>Eigenfrequenzen eines Seils (fest-fest)</h2>
+      <p>
+        Mit dem Ausdruck für die Phasengeschwindigkeit einer Transversalwelle
+        entlang eines Seils, welches an beiden Enden befestigt ist ergibt sich
+        fur die Eigenfrequenzen eines elastischen Seils, welches an beiden Enden
+        befestigt ist:
+      </p>
+      $$ f_n = \frac{n+1}{2L} \cdot \sqrt{\frac{F}{\mu}} $$
+      <p>mit: $n \in \mathbb{N}$</p>
+
+      <h2>Eigenschwingungen</h2>
+      <p>
+        Es gilt: <br />
+        Am geschlossenen Rohrende bildet sich ein Schwingungsknoten. Am offenen
+        Rohrende bildet sich ein Schwingungsbauch.
+      </p>
+
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th><p>offen-offen</p></th>
+            <th><p>offen-geschlossen</p></th>
+          </tr>
+          <tr>
+            <td>
+              <p>$n=0$ (Grundschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/offen-offen-0.png"
+                style="max-width: 20rem"
+                alt="offen-offen-0"
+              />
+              <p>$L=\frac{\lambda_0}{2}$ und $f_0 = f_0$</p>
+            </td>
+            <td>
+              <p>$n=0$ (Grundschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/offen-geschlossen-0.png"
+                style="max-width: 20rem"
+                alt="offen-geschlossen-0"
+              />
+              <p>$L=\frac{1}{2} \cdot \lambda_1$ und $f_0 = f_0$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>$n=1$ (1. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/offen-offen-1.png"
+                style="max-width: 20rem"
+                alt="offen-offen-1"
+              />
+              <p>$L=2 \cdot \frac{\lambda_1}{2}$ und $f_1 = 2 \cdot f_0$</p>
+            </td>
+            <td>
+              <p>$n=1$ (1. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/offen-geschlossen-1.png"
+                style="max-width: 20rem"
+                alt="offen-geschlossen-1"
+              />
+              <p>$L=\frac{3}{4} \cdot \lambda_1$ und $f_0 = 3 \cdot f_0$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>$n=2$ (2. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/offen-offen-2.png"
+                style="max-width: 20rem"
+                alt="offen-offen-2"
+              />
+              <p>$L=3 \cdot \frac{\lambda_2}{2}$ und $f_2 = 3 \cdot f_0$</p>
+            </td>
+            <td>
+              <p>$n=2$ (2. Oberschwingung)</p>
+              <img
+                src="/Physik/img/Stehende Wellen/offen-geschlossen-2.png"
+                style="max-width: 20rem"
+                alt="offen-geschlossen-2"
+              />
+              <p>$L=\frac{5}{4} \cdot \lambda_2$ und $f_2 = 5 \cdot f_0$</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><u>Verallgemeinerung:</u></p>
+              $$ L = \left( n+1 \right) \frac{\lambda_n}{2} $$ $$ \lambda_n =
+              \frac{2L}{\left( n+1 \right)} $$ $$ n \in \mathbb{N} $$
+            </td>
+            <td>
+              <p><u>Verallgemeinerung:</u></p>
+              $$ L = \left( 2n+1 \right) \frac{\lambda_n}{4} $$ $$ \lambda_n =
+              \frac{4L}{\left( 2n+1 \right)} $$ $$ n \in \mathbb{N} $$
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

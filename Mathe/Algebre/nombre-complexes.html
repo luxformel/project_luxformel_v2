@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Nombres Complexes</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Nombres Complexes</h1>
+      <h2>Cardan</h2>
+      <p>
+        Cette méthode permet d'obtenir des formules, appelées formules de
+        Cardan, donnant en fonction de \( p \) et \( q \) les solutions de
+        l'équation :
+      </p>
+      $$ x^{3}+pz+q=0$$
+      <p>Conditions d'existence:</p>
+      $$ 4p^{3}+27q^{2}\geqslant 0$$
+      <h3>Formule de Cardan</h3>
+      $$x=\sqrt[3]{-\frac{q}{2} +\sqrt{\frac{p^{3}}{27} +\frac{q^{2}}{4} } \ }
+      +\sqrt[3]{-\frac{q}{2} -\sqrt{\frac{p^{3}}{27} +\frac{q^{2}}{4} } } $$
+      <h2>Définition du nombre complexe</h2>
+      $$ i\ =\ \sqrt{-1} $$
+      <h2>Définition de l'ensemble des nombres complexes</h2>
+      <h3>Théorème</h3>
+      <p>
+        Il existe un ensemble, noté \( \mathbb{C} \), d'éléments appelés nombres
+        complexes, tel que:
+      </p>
+      <ol>
+        <li>
+          <p>
+            \( \mathbb{C} \) contient l'ensemble \( \mathbb{C} \) des nombres
+            réels.
+          </p>
+        </li>
+        <li>
+          <p>\( \mathbb{C} \) contient un élément i tel que: \( i^{2}=1 \)</p>
+        </li>
+        <li>
+          <p>
+            \( \mathbb{C} \) est muni d'une addition et d'une multiplication qui
+            suivent des règles de calcul analogues à celles de \( \mathbb{C} \).
+          </p>
+        </li>
+        <li>
+          <p>
+            Chaque élément z de \( \mathbb{C} \) s'écrit de manière unique sous
+            la forme:
+            <br />
+            \( z=a\ +\ bi\ \left( avec\ a,\ b\in \mathbb{R} \right) \)
+          </p>
+        </li>
+      </ol>
+      <h3>Remarque:</h3>
+      <p>
+        Une relation d'ordre n'existe pas sur \( \mathbb{C} \). On ne peut donc
+        pas des nombres complexes, ni parler de nombres complexes positifs ni
+        négatifs puisque on ne peut pas les comparer à 0.
+      </p>
+      <h3>Définition:</h3>
+      <ol>
+        <li>
+          <p>
+            L'écriture \(z=a\ +\ bi \) est appelée la <u>forme algébrique</u> du
+            nombre complexe \( z \)
+          </p>
+        </li>
+        <li>
+          <p>
+            Soit \( z=a\ +\ bi \) <br />
+            Le nombre réel \( a \) est appelé la <u>partie réelle</u> du nombre
+            complexe \( z \) <br />
+            Le nombre réel \( b \) est appelé la <u>partie imaginaire</u> du
+            nombre complexe \( z \)
+          </p>
+        </li>
+        <li>
+          <p>
+            Si \( z=a \), alors z est un <u>nombre réel</u> <br />
+            Si \( z=b \), alors z est un <u>imaginaire pur</u>
+          </p>
+        </li>
+      </ol>
+      <h3>Conséquences</h3>
+      <ol>
+        <li><p>\( a = Re(z); b = Im(z) : z = a + bi = Re(z) + Im(z)i \)</p></li>
+        <li>
+          <p>
+            \( z \) est un réel \( \Leftrightarrow \ z=a \Leftrightarrow Im(z)=0
+            \)
+          </p>
+        </li>
+        <li>
+          <p>
+            \( z \) est un imaginaire pur \( \Leftrightarrow \ z=bi
+            \Leftrightarrow Re(z)=0 \)
+          </p>
+        </li>
+      </ol>
+      <h2>Égalité dans \( \mathbb{C} \)</h2>
+      <h3>Définition:</h3>
+      <p>Si \( z = a + bi \) et \( z' = a' + b'i \), alors:</p>
+      $$ z=z^{\prime }\Leftrightarrow \begin{cases}a=a^{\prime }&\\ b=b^{\prime
+      }&\end{cases} \Leftrightarrow \begin{cases}Re\left( z\right) =Re\left(
+      z^{\prime }\right) &\\ Im\left( z\right) =Im\left( z^{\prime }\right)
+      &\end{cases} $$
+      <h2>Nombres complexes conjuguées</h2>
+      <h3>Définition:</h3>
+      <p>
+        Soit \( z = a + bi \). On appelle <u>nombre complexe conjugué</u> de \(
+        z \) le nombre complexe \( \bar{z} =a - bi \)
+      </p>
+      <h3>Remarques:</h3>
+      <ol>
+        <li>
+          <p>
+            \( \bar{\bar{z} } =z \) \( \Leftrightarrow \) \(
+            \overline{\overline{\left( a+bi\right) } } = \overline{\left(
+            a-bi\right) } = z \)
+          </p>
+        </li>
+        <li>
+          <p>
+            Relation fondamentale <br />
+            \( z\ \cdot \ \overline{z} =\left( a+bi\right) \left( a-bi\right)
+            =a^{2}+b^{2} \)
+          </p>
+        </li>
+      </ol>
+      <h3>Factorisation de deux carrées:</h3>
+      <p>\( a^{2}+b^{2}=\left( a+bi\right) \left( a-bi\right) \)</p>
+      <h2>Opérations sur les nombres conjugués</h2>
+      <h3>Théorème</h3>
+      $$ \overline{z\ +\ z^{\prime }} =\ \overline{z} \ +\overline{z^{\prime }}
+      $$
+      <h3>Démonstration</h3>
+      <p>Soit \( z = a + bi \) et \( z' = a' + b'i \)</p>
+      $$\overline{z\ +\ z^{\prime }} $$ $$=\overline{\left( a+bi\right) +\left(
+      a^{\prime }+b^{\prime }i\right) } $$ $$=\overline{\left( a+a^{\prime
+      }\right) +\left( b+b^{\prime }\right) i} $$ $$=\left( a+a^{\prime }\right)
+      -\left( b+b^{\prime }\right)$$ $$ =\ a+a^{\prime }-bi-b^{\prime }i $$ $$
+      =\left( a-bi\right) +\left( a^{\prime }-b^{\prime }i\right) $$ $$
+      =\overline{z} \ +\ \overline{z^{\prime }} $$
+      <p>cqfd.</p>
+      <h3>Théorème</h3>
+      $$\overline{z\ \cdot \ z^{\prime }} =\overline{z} \ \cdot \
+      \overline{z^{\prime }} $$
+      <h3>Démonstration</h3>
+      <p>Soit \( z = a + bi \) et \( z' = a' + b'i \)</p>
+      <p>D'une part:</p>
+      $$\overline{z\ \cdot \ z^{\prime }} $$ $$=\overline{\left( a+bi\right)
+      \left( a^{\prime }+b^{\prime }i\right) } $$ $$=\overline{aa^{\prime
+      }+ab^{\prime }i+a^{\prime }bi-bb^{\prime }} $$ $$=\left( aa^{\prime
+      }-bb^{\prime }\right) -\left( ab^{\prime }+a^{\prime }b\right)i $$
+
+      <p>D'autre part:</p>
+      $$\overline{z} \ \cdot \ \overline{z^{\prime }}$$ $$ =\overline{\left(
+      a+bi\right) } \ \cdot \ \overline{\left( a^{\prime }+b^{\prime }i\right) }
+      $$ $$ =\left( a-bi\right) \ \cdot \ \left( a^{\prime }-b^{\prime }i\right)
+      $$ $$=aa^{\prime }-ab^{\prime }i-a^{\prime }bi-bb^{\prime } $$ $$=\left(
+      aa^{\prime }-bb^{\prime }\right) -\left( ab^{\prime }+a^{\prime }b\right)i
+      $$
+      <p>Donc,</p>
+      $$\overline{z\ \cdot \ z^{\prime }} =\overline{z} \ \cdot \
+      \overline{z^{\prime }} $$
+      <p>cqfd.</p>
+      <h2>Module</h2>
+      <h3>Definition</h3>
+      <p>
+        Soit \( \left( O,\overrightarrow{u} ,\overrightarrow{v} \right) \) un
+        repère orthonormé du plan et soit \( M \) le point d'affixe \( z=a+bi
+        \). <br />
+        On appelle le module complexes \( z=a+bi \) la norme de vecteur \(
+        \overrightarrow{OM} \) <br />
+        donc,
+      </p>
+      $$\left| z\right| =\| \overrightarrow{OM} \| =OM$$
+      <h3>Propriété</h3>
+      <p>
+        Soit \( z=a+bi \), alors le module de \(z\), noté \(|z|\) est donné par
+      </p>
+      $$\left| z\right| =\sqrt{a^{2}+b^{2}} $$
+      <h3>Remarque</h3>
+      $$\left| z\right|^{2} =\bar{z} z$$
+      <h2>Argument</h2>
+      <p>
+        Soit \( \left( O,\overrightarrow{u} ,\overrightarrow{v} \right) \) un
+        repère orthonormal direct du plan et soit \( z\in \mathbb{C}^* \) et
+        soit \( M(z) \) et soit \( \theta \) une mesure de l'angle orienté \(
+        \left( \overrightarrow{u} ;\overrightarrow{OM} \right) \) <br />
+        On appelle argument de \( z \), le nombre
+      </p>
+      $$ \arg \left( z\right) =\theta \ +\ k2\pi \ |\ k\in \mathbb{Z}$$ $$\arg
+      \left( z\right) =\theta\ mod(2 \pi) $$
+      <h3>Remarque</h3>
+      <p>Vu la définition, \( z=0 \) n'a pas d'argument</p>
+      <h2>Forme trigonométrique</h2>
+      <h3>Théorème</h3>
+      <p>
+        Tout nombre complexe peut s'écrire sous la forme suivante, dite forme
+        trigonométrique:
+      </p>
+      $$z=r\left( cos\left( \theta \right) +i\sin \left( \theta \right) \right)
+      $$ $$où\ r=\left| z\right| >0\ et\ \theta =\arg \left( z\right) \
+      mod\left( 2\pi \right)$$
+      <h3>Démonstration</h3>
+      <p>Soit \( z\in \mathbb{C}^* \), alors</p>
+      $$ \cos \left( \theta \right) =\frac{côté\ adjacent}{hypoténuse}
+      =\frac{a}{r} $$ $$ \Rightarrow a=r\cdot \cos \left( \theta \right) $$ $$
+      \sin \left( \theta \right) =\frac{cote\ oppose}{hypoténuse} =\frac{b}{r}
+      $$ $$ \Rightarrow b=r\cdot \sin \left( \theta \right)$$
+      <p>donc,</p>
+      $$ z=a+bi$$ $$=r\cos \left( \theta \right) +r\left[ \sin \left( \theta
+      \right) \right] i$$ $$ =r\cos \left( \theta \right) +i\sin \left( \theta
+      \right) ,\ avec\ r=\left| z\right| \ et\ \theta =\arg \left( z\right) $$
+      <h3>Remarque</h3>
+      <p>
+        Forme abrégée de la forme trigonométrique est \( z=r \cdot cis(\theta)
+        \)
+      </p>
+      <h2>Égalité des deux nombre complexes trigonométrique</h2>
+      <p>
+        Soit \( z=r\left[ \cos \left( \theta \right) +i\sin \left( \theta
+        \right) \right] \) et \( z^{\prime }=r^{\prime }\left[ \cos \left(
+        \theta^{\prime } \right) +i\sin \left( \theta^{\prime } \right) \right]
+        \)
+      </p>
+      $$z=z^{\prime }$$ $$ \Leftrightarrow r=r^{\prime }\ et\ \ \theta
+      =\theta^{\prime } \ mod\left( 2\pi \right) $$
+      <h2>Modules et argument d'un produit</h2>
+      <h3>Théorème</h3>
+      <p>
+        Quels que soient les nombres complexes non nuls \( z \) et \( z^{\prime}
+        \)
+      </p>
+      $$\left| z\cdot z^{\prime }\right| =\left| z\right| \cdot \left| z^{\prime
+      }\right| $$ $$\arg \left( z\cdot z^{\prime }\right) =\arg \left( z\right)
+      +\arg \left( z^{\prime }\right) $$
+      <h3>Démonstration 1</h3>
+      <p>
+        Pour tout \( z \in \mathbb{C} \) : \( \left| z\right|^{2} =zz^{\prime }
+        \)
+      </p>
+      $$\left| z\cdot z^{\prime }\right|^{2} =\left( z\cdot z^{\prime }\right)
+      \cdot \overline{\left( z\cdot z^{\prime }\right) } $$ $$=z\cdot \cdot
+      \bar{z} \cdot z^{\prime }\cdot \bar{z}^{\prime } $$ $$=\left| z\right|^{2}
+      +\left| z^{\prime }\right|^{2} $$
+      <p>
+        Comme \( \left| z\cdot z^{\prime }\right| \) et \( \left| z\right| \cdot
+        \left| z^{\prime }\right| \) sont des nombres réels positifs, on a que:
+      </p>
+      $$\left| z\cdot z^{\prime }\right| = \left| z\right| \cdot \left|
+      z^{\prime }\right| $$
+      <p>cqfd</p>
+      <h3>Démonstration 2</h3>
+      <p>
+        Soit \( z=r\left[ \cos \left( \theta \right) +i\sin \left( \theta
+        \right) \right] \), avec \( r=\left| z\right| \ \) et \( \theta =\arg
+        \left( z\right) \) <br />
+        \( z^{\prime }=r^{\prime }\left[ \cos \left( \theta^{\prime } \right)
+        +i\sin \left( \theta^{\prime } \right) \right] \), avec \( r^{\prime
+        }=\left| z^{\prime }\right| \ \) et \( \theta^{\prime } =\arg \left(
+        z^{\prime }\right) \) <br />
+        alors,
+      </p>
+      $$z\cdot z^{\prime }=r\left[ \cos \left( \theta \right) +i\sin \left(
+      \theta \right) \right] \cdot r^{\prime }\left[ \cos \left( \theta^{\prime
+      } \right) +i\sin \left( \theta^{\prime } \right) \right] $$ $$=r\cdot
+      r^{\prime }\left[ \cos \left( \theta \right) \cos \left( \theta^{\prime }
+      \right) +i\cos \left( \theta \right) \sin \left( \theta^{\prime } \right)
+      +i\sin \left( \theta \right) \cos \left( \theta^{\prime } \right)
+      +i^{2}\sin \left( \theta \right) \sin \left( \theta^{\prime } \right)
+      \right] $$ $$=r\cdot r^{\prime }\left\{ \left[ \cos \left( \theta \right)
+      \cos \left( \theta^{\prime } \right) -\sin \left( \theta \right) \sin
+      \left( \theta^{\prime } \right) \right] +i\left[ \sin \left(
+      \theta^{\prime } \right) \cos \left( \theta \right) +\cos \left(
+      \theta^{\prime } \right) \sin \left( \theta \right) \right] \right\} $$
+      $$=r\cdot r^{\prime }\left[ \cos \left( \theta +\theta^{\prime } \right)
+      +i\sin \left( \theta +\theta^{\prime } \right) \right] $$
+      <p>
+        Comme \( r\cdot r^{\prime }=\left| z\right| \cdot \left| z^{\prime
+        }\right| >0 \) et que \( \left| z\cdot z^{\prime }\right| =\left|
+        z\right| \cdot \left| z^{\prime }\right| \) on a:
+      </p>
+      $$\arg \left( z\cdot z^{\prime }\right) =\theta +\theta^{\prime } =\arg
+      \left( z\right) +\arg \left( z^{\prime }\right) $$
+      <p>cqfd</p>
+      <h2>Module et argument d'un quotient</h2>
+      <h3>Théorème</h3>
+      <p>
+        Quels que soient les nombres complexes non nuls \( z \) et \( z^{\prime}
+        \)
+      </p>
+      $$\left| \frac{z}{z^{\prime }} \right| =\frac{\left| z\right| }{\left|
+      z^{\prime }\right| } $$ $$\arg \left( \frac{z}{z^{\prime }} \right) =\arg
+      \left( z\right) -\arg \left( z^{\prime }\right) $$
+      <h3>Démonstration 1</h3>
+      $$\left| \frac{z}{z^{\prime }} \right|^{2} =\frac{z}{z^{\prime }} \cdot
+      \overline{\left( \frac{z}{z^{\prime }} \right) } $$ $$=\frac{z}{z^{\prime
+      }} \cdot \frac{\bar{z} }{\bar{z}^{\prime } } $$ $$=\frac{z\cdot \bar{z}
+      }{z^{\prime }\cdot \bar{z^{\prime}} } $$ $$=\frac{\left| z\right|^{2}
+      }{\left| z^{\prime }\right|^{2} } $$ $$=\left( \frac{\left| z\right|
+      }{\left| z^{\prime }\right| } \right)^{2} $$
+      <p>
+        Comme \( \left| \frac{z}{z^{\prime }} \right| \) et \( \frac{\left|
+        z\right| }{\left| z^{\prime }\right| } \) sont des nombres réels
+        positifs, on a que
+      </p>
+      $$\left| \frac{z}{z^{\prime }} \right| =\frac{\left| z\right| }{\left|
+      z^{\prime }\right| } $$
+      <h3>Démonstration 2</h3>
+      <p>
+        Posons \(u=\frac{z}{z^{\prime }} \ \Leftrightarrow \ u\cdot z^{\prime
+        }=z\) <br />
+        Par suite:
+      </p>
+      $$\arg \left( u\cdot z^{\prime }\right) =\arg \left( z\right) $$
+      $$\Leftrightarrow \arg \left( u\right) +\arg \left( z^{\prime }\right)
+      =\arg \left( z\right) $$ $$\Leftrightarrow \arg \left( \frac{z}{z^{\prime
+      }} \right) +\arg \left( z^{\prime }\right) =\arg \left( z\right) $$
+      $$\Leftrightarrow \arg \left( \frac{z}{z^{\prime }} \right) =\arg \left(
+      z\right) -\arg \left( z^{\prime }\right) $$
+      <h3>Conséquences</h3>
+      $$ \left| z^{n}\right| =\left| z\right|^{n} $$ $$\arg \left( z^{n}\right)
+      =n\cdot \arg \left( z\right) $$
+      <h2>Notation polaire</h2>
+      <p>
+        On appelle module du nombre complexe \( z \) le module du vecteur image
+        \( \overrightarrow{OM} \) associé à \( z \). On appelle argument du
+        nombre complexe \( z \) l'angle polaire du vecteur image \(
+        \overrightarrow{OM} \) associé à \( z \) (à \( 2 k \pi \) près) (avec \(
+        k \in \mathbb{Z} \)).
+      </p>
+      $$ \begin{cases}r=\left| z\right| =OM\ avec\ r\geqslant 0&\\ \theta =\arg
+      \left( z\right) =\left( Ox,\ OM\right) +2k\pi &\end{cases} $$
+      <p>On note alors le nombre complexe \( z \) sous la forme polaire</p>
+      $$z=\left[ r;\theta \right] $$
+      <h2>Notation exponentielle</h2>
+      <h3>Définition</h3>
+      <p>
+        Le complexe du module 1 dont un argument est \( \theta \) est noté \(
+        e^{i \theta} \) avec:
+      </p>
+      $$ e^{i\theta }=\cos \left( \theta \right) +i\sin \left( \theta \right) $$
+      <h3>Théorème</h3>
+      <p>
+        Tout nombre complexe \( z \) non nul de module \( r \) et d'argument \(
+        \theta \) s'écrit sous la forme suivante, dite notation exponentielle :
+        \( z = re^{i\theta} \) avec \( r=\left| z\right| \) et \( \theta =\arg
+        \left( z\right) \ mod\left( 2\pi \right) \)
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        \( z \), non nul, a pour forme trigonométrique \( z=r[\cos \left( \theta
+        \right) +i\sin \left( \theta \right) ] \) avec \( r=\left| z\right| \).
+        Comme \( e^{i\theta }=\cos \left( \theta \right) +i\sin \left( \theta
+        \right) \), \( z \) s'écrit donc sous la forme \( z = re^{i\theta}\)
+      </p>
+      <h2>Formules d'Euler</h2>
+      $$\cos \left( \theta \right) =\frac{e^{i\theta }+e^{-i\theta }}{2} $$
+      $$\sin \left( \theta \right) =\frac{e^{i\theta }-e^{-i\theta }}{2i} $$
+      <h3>Généralisation</h3>
+      <p>
+        Pour un nombre complexe quelconque, dont le module est différent de
+        l'unité, le cosinus et sinus de l'argument s'obtiennent comme suit
+      </p>
+      $$ \begin{cases}z=re^{i\theta }\Rightarrow \cos \left( \theta \right)
+      +i\sin \left( \theta \right) =\frac{z}{r} &\\ \bar{z} =re^{-i\theta
+      }\Rightarrow \cos \left( \theta \right) -i\sin \left( \theta \right)
+      =\frac{\bar{z} }{r} &\end{cases} $$
+      <p>On obtient alors,</p>
+      $$\cos \left( \theta \right) =\frac{z+\bar{z} }{2r} $$ $$\sin \left(
+      \theta \right) =\frac{z-\bar{z} }{2ir} $$
+      <h2>Polynôme trigonométrique</h2>
+      <h3>Définition</h3>
+      <p>
+        Un polynôme trigonométrique est un polynôme dont chaque terme est un
+        produit de fonctions sinus et cosinus d'angles quelconques.
+      </p>
+      <h2>Linéarisation</h2>
+      <h3>Définition</h3>
+      <p>
+        Chercher à linéariser revient à remplacer les produits des fonctions
+        sinus et cosinus par des sommes (pondérées par des coefficients réels ou
+        complexes) de fonctions sinus et cosinus dont les angles ont, eux aussi,
+        été modifiés
+      </p>
+      <h2>Formules de Moivre</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit un nombre complexe de module unité \( z=e^{i\theta } \) <br />
+        L'élévation à la puissance \( n\) donne:
+      </p>
+      $$z^{n}=\left( e^{i\theta }\right)^{n} $$ $$ z^{n}=\left[ \cos \left(
+      \theta \right) +i\sin \left( \theta \right) \right]^{n} $$
+      <p>Or</p>
+      $$z^{n}=e^{in\theta }$$ $$z^{n}=\cos \left( n\theta \right) +i\sin \left(
+      n\theta \right) $$
+      <p>D'où la formule de moivre:</p>
+      $$ \cos \left( n\theta \right) +i\sin \left( n\theta \right) =\left[ \cos
+      \left( \theta \right) +i\sin \left( \theta \right) \right]^{n} $$
+      <h3>Remarque</h3>
+      <p>
+        Cette relation reste valable lorsque l'exposant \( n \) est négatif.
+      </p>
+    </div>
+  </body>
+</html>

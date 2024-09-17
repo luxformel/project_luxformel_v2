@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+    <script defer src="/settings/settings.js"></script>
+    <title>Formelsammlung Radioaktivität</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Formelsammlung Radioaktivität</h1>
+      <h2>Bezeichnung eines Atomkerns</h2>
+      $$ \ce{^A_Z K} $$
+      <h2>Masse des Atoms</h2>
+      $$ m_A = A_r \cdot u $$
+      <h2>Anzahl der Atome</h2>
+      $$ N_{Atome} = \frac{m}{m_A} $$
+      <h2>Strahlungsarten</h2>
+      <h3>Alphastrahlung</h3>
+      $$ \ce{^A_Z K_1 -> ^{A-4}_{Z-2}K_2 + ^4_2 \alpha} $$
+      <h3>Betastrahlung</h3>
+      $$ \ce{^A_Z K_1 -> ^A_{Z+1}K_2 + ^0_{-1} \beta + ^0_0 \bar{\nu}}$$ $$
+      \ce{^A_Z K_1 -> ^A_{Z-1}K_2 + ^0_{+1} \beta + ^0_0 \nu} $$
+      <h3>Gammastrahlung</h3>
+      $$\ce{^A_Z K^* -> ^A_Z K + \gamma}$$
+      <h3>Aktivität</h3>
+      $$ A = - \frac{\Delta N}{\Delta t} $$ $$ A = \lambda \cdot N$$
+      <h2>Grundgesetz des radioaktiven Zerfalls</h2>
+      $$N(t) = N_0 \cdot e^{-\lambda t}$$ $$m(t) = m_0 \cdot e^{-\lambda t}$$
+      $$A(t) = A_0 \cdot e^{-\lambda t} $$
+      <h2>Halbwertszeit</h2>
+      $$T_{\frac{1}{2}} = \frac{\ln(2)}{\lambda} $$
+    </div>
+  </body>
+</html>

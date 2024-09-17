@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Puissances et règles de priorité</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Puissances et règles de priorité</h1>
+      <h2>Puissances d'exposant positif</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( a\) un nombre réel et \(n\) un entier naturel non nul. Le nombre
+        \( a\), à la puissance \(n\) (ou exposant \(n\)) est défini par :
+      </p>
+      $$ a^{n}=\underbrace{a\cdot a\cdot a\cdot \ ...\ \cdot a}_{n\ facteurs} $$
+      <h3>Remarque</h3>
+      <p>Par définition on dit que: \( a^{0}=1 \) et \( a^{1}=a \)</p>
+      <h3>Important</h3>
+      <p>\( 0^{0} \), n'existe pas et n'est pas défini</p>
+      <h3>Vocabulaire</h3>
+      <p>
+        \( a^n \) se lit <q>\( a\) exposant \(n\)</q> ou
+        <q>\( a\) puissance \(n\)</q> <br />
+        \( a \) est la base <br />
+        \( n \) est l'exposant
+      </p>
+      <h3>Cas particuliers</h3>
+      <p>
+        \( a^2 \) se lit <q>\( a\) au carré</q> <br />
+        \( a^3 \) se lit <q>\( a\) au cube</q>
+      </p>
+      <h3>Règle de calcul</h3>
+      <p>
+        Pour calculer le produit de puissances de même base, on garde la base et
+        on additionne les exposants:
+      </p>
+      $$ a^{n} \cdot a^{p} = a^{n+p},\ avec\ a \neq 0$$
+      <h3>Règle de calcul</h3>
+      <p>
+        Pour calculer la puissance d'une puissance, on garde la base et on
+        multiplie les exposants :
+      </p>
+      $$ \left( a^{n}\right)^{p} =a^{n\cdot p},\ avec\ a\neq 0$$
+      <h3>Règle de calcul</h3>
+      <p>
+        Pour calculer la puissance d'un produit, on élève chaque facteur de ce
+        produit à cette puissance :
+      </p>
+      $$ \left( a\cdot b\right)^{n} =a^{n}\cdot b^{n},\ avec\ a\neq 0\ et\ b\neq
+      0$$
+      <h3>Règle de calcul</h3>
+      <p>
+        Pour calculer la puissance d'un quotient, on élève le numérateur et le
+        dénominateur à cette puissance :
+      </p>
+      $$ \left( \frac{a}{b} \right)^{n} =\frac{a^{n}}{b^{n}} ,\ avec\ a\neq 0\
+      et\ b\neq 0$$
+      <h3>Règle de calcul</h3>
+      <p>
+        Pour calculer le quotient de puissance de même base, on garde la base et
+        on soustrait l'exposant du numérateur à celui du dénominateur :
+      </p>
+      $$ \frac{a^{n}}{a^{p}} =a^{n-p},\ avec\ a\neq 0\ $$
+      <h2>Puissances à exposant négatifs</h2>
+      <h3>Définition</h3>
+      <p>Soit \( a \) un nombre non nuls et n un nombre.</p>
+      $$ a^{-n}=\frac{1}{a^{n}} \ $$
+      <h3>Règle de priorité</h3>
+      <p>
+        En l'absence de parenthèses, on calcule les puissances avant d'effectuer
+        les autres opérations de calcul.
+      </p>
+      <p>
+        Parathese Exposant Multiplication Division Addition Soustraction. On
+        dit: (PEMDAS)
+      </p>
+      <h2>Notation scientifique</h2>
+      <h3>Définition</h3>
+      <p>
+        Un nombre positif est écrit en notation scientifique quand il est écrit
+        sous la forme de
+      </p>
+      $$a\cdot 10^{n},\ avec\ 0 < a < 10 $$
+      <p>\( n \) est un nombre entier relatif</p>
+      <h3>Exemple</h3>
+      $$ 3,6 \cdot 10^{6} = 3\ 600\ 000 $$
+    </div>
+  </body>
+</html>

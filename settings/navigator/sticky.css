@@ -1,0 +1,12 @@
+/* navigator.css */
+
+nav {
+  position: -webkit-sticky !important; /* For Safari */
+  position: sticky !important;
+  top: 0;
+}
+
+body {
+  margin: 0;
+  padding-top: -50px !important; /* Add padding to the top of the body to prevent content from being hidden behind the navigator */
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Vecteurs</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Vecteurs</h1>
+      <h2>Vecteur</h2>
+      <h3>Définition</h3>
+      <p>
+        Un vecteur \( \overrightarrow{u} \) est caractérisé par sa norme, sa
+        direction et son sens.
+      </p>
+      <h2>Vocabulaire</h2>
+      <p>
+        Soit un vecteur \( \overrightarrow{u} \) tel que \( \overrightarrow{u} =
+        \overrightarrow{AB} \), alors:
+      </p>
+      <ol>
+        <li>
+          <p>
+            \( \overrightarrow{AB} \) est le vecteur d'origine \( A \) et
+            d'extrémité \( B \)
+          </p>
+        </li>
+        <li>
+          <p>
+            La norme du vecteur \( \overrightarrow{AB} \) est la longueur du
+            segment \( [AB] \) <br />
+            On note:
+          </p>
+          $$ \underbrace{\parallel \overrightarrow{AB} \parallel }_{norme\ de\
+          \overrightarrow{AB} } =AB$$
+        </li>
+        <li>
+          <p>
+            La direction du vecteur \( \overrightarrow{AB} \) est celle de la
+            droite \( (AB) \)
+          </p>
+        </li>
+        <li>
+          <p>Le sens du vecteur est celui de \( A \) vers \( B \)</p>
+        </li>
+      </ol>
+
+      <h3>Remarque</h3>
+      <p>
+        Le mot <i>norme</i> est parfois subistué par: amplitude, longueur,
+        magnitude, module, scalaire
+      </p>
+
+      <h2>Norme d'un vecteur</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $\overrightarrow{a}$ un vecteur, tel que <br />
+        $ \overrightarrow{a} = \binom{a_{1}}{a_{2}} $ dans une base $\left( e_1,
+        e_2 \right)$, alors $ \Vert \overrightarrow{a} \Vert = \sqrt{a_1^2 +
+        a_2^2} $
+      </p>
+      <h3>Algébriquement</h3>
+      $$ \Vert \overrightarrow{b} \Vert = \left\Vert \binom{ \lambda
+      a_{1}}{\lambda a_{2}} \right\Vert = \sqrt{\left( \lambda a_1 \right)^2 +
+      \left( \lambda a_2 \right)^2} $$ $$\Leftrightarrow \Vert
+      \overrightarrow{b} \Vert = \sqrt{\left( \lambda^2 a_1^2 \right) + \left(
+      \lambda^2 a_2^2 \right)} $$ $$\Leftrightarrow \Vert \overrightarrow{b}
+      \Vert = \sqrt{ \lambda^2 \left( a_1^2 + a_2^2 \right)} $$
+      $$\Leftrightarrow \Vert \overrightarrow{b} \Vert =\sqrt{\lambda^2} \sqrt{
+      a_1^2 + a_2^2 } $$ $$\Leftrightarrow \Vert \overrightarrow{b} \Vert =
+      \begin{cases}\lambda \left\Vert \overrightarrow{a} \right\Vert &si\
+      \lambda >0\ \Rightarrow \ \left\Vert \overrightarrow{a} \right\Vert
+      =\left| \lambda \right| \left\Vert \overrightarrow{b} \right\Vert \\
+      -\lambda \left\Vert \overrightarrow{a} \right\Vert &si\ \lambda < 0 \end
+      {cases} $$
+
+      <h2>Vecteur nul</h2>
+      <h3>Définition</h3>
+      <p>
+        Le vecteur nul, noté \( \overrightarrow{0} \), est un vecteur dont la
+        norme est nulle \(\parallel \overrightarrow{0} \parallel =0 \) et sa
+        direction et son sens ne sont pas définis. <br />
+        De plus, pour tout point \( M \) du plan :
+      </p>
+      $$ \overrightarrow{MM} = \overrightarrow{0} $$
+
+      <h2>Égalité de deux vecteurs</h2>
+      <h3>Définition</h3>
+      <p>
+        Deux vecteurs \( \overrightarrow{u} \) et \( \overrightarrow{v} \) sont
+        égaux si ils ont la même norme, le même direction et le même sens.
+      </p>
+
+      <h2>Représentant d'un vecteur</h2>
+      <h3>Definition</h3>
+      <p>
+        Soit deux vecteurs $\overrightarrow{u}$ et $\overrightarrow{v}$.
+        $\overrightarrow{u}$ est un vecteur représentant de $\overrightarrow{v}$
+        si et seulement si $\overrightarrow{u}$ est une translation de
+        $\overrightarrow{v}$.
+      </p>
+
+      <h2>Vecteurs opposé</h2>
+      <h3>Définition</h3>
+      <p>
+        Deux vecteurs \( \overrightarrow{u} \) et \( \overrightarrow{v} \) sont
+        opposés si ils ont la même norme et le même direction, mais ils sont de
+        sens opposés. <br />
+        On note:
+      </p>
+      $$ \overrightarrow{u} = -\overrightarrow{v} $$
+      <h3>Remarque</h3>
+      <p>
+        Si \( \overrightarrow{u} \) est un vecteur du plan, la translation,
+        notée \( t \overrightarrow{u} \), est l'application du plan lui-même qui
+        associe à tout point \( M \) tel que \( \overrightarrow{MM} =
+        \overrightarrow{u} \). Le point \( M^{\prime} \) appelé image de \( M \)
+        par \( t \overrightarrow{u} \).
+      </p>
+
+      <h2>Composantes d'un vecteur</h2>
+      <p>
+        Soit $\overrightarrow{u}$ un vecteur défini par: $\overrightarrow{u}
+        \left( u_x, u_y, u_z \right)$, le vecteur a comme composantes:
+      </p>
+      $$\overrightarrow{u} = \left( u_x, u_y, u_z \right)$$
+
+      <h2>Produit scalaire</h2>
+      <h3>Définition</h3>
+      <p>
+        Soient $\overrightarrow{u}$ et $\overrightarrow{v}$ deux vecteurs non
+        nuls du plan. On appelle produit scalaire de $\overrightarrow{u}$ et
+        $\overrightarrow{v}$ le nombre réel noté $\overrightarrow{u} \cdot
+        \overrightarrow{v}$ défini par :
+      </p>
+      $$ \overrightarrow{u} \cdot \overrightarrow{v} = \Vert \overrightarrow{u}
+      \Vert \cdot \Vert \overrightarrow{v} \Vert \cdot \cos \left(
+      \overrightarrow{u}, \overrightarrow{v} \right) $$
+      <h3>Propriété</h3>
+      <p>
+        Deux vecteurs $\overrightarrow{u}$ et $\overrightarrow{v}$ sont
+        orthogonaux si et seulement si:
+      </p>
+      $$ \overrightarrow{u} \cdot \overrightarrow{v} = 0 $$
+      <h3>Démonstration</h3>
+      <p>
+        Si l'un des vecteurs est nul le produit scalaire est nul et la propriété
+        est vraie puisque, par convention, le vecteur nul est orthogonal à tout
+        vecteur du plan. <br />
+        Si les deux vecteurs sont non nuls, leurs normes sont non nulles donc :
+      </p>
+      $$ \overrightarrow{u} \cdot \overrightarrow{v} = 0 $$ $$ \Leftrightarrow
+      \Vert \overrightarrow{u} \Vert \cdot \Vert \overrightarrow{v} \Vert \cdot
+      \cos \left( \overrightarrow{u}, \overrightarrow{v} \right) = 0 $$ $$
+      \Leftrightarrow \cos \left( \overrightarrow{u}, \overrightarrow{v} \right)
+      = 0 $$
+      <p>
+        On obtient donc que $\overrightarrow{u}$ et $\overrightarrow{v}$ sont
+        orthogonaux.
+      </p>
+      <p>cqfd.</p>
+      <h3>Propriété</h3>
+      <p>
+        Pour tous vecteurs $\overrightarrow{u}$, $\overrightarrow{v}$ et
+        $\overrightarrow{w}$ et tout réel $k$:
+      </p>
+      <ul>
+        <li>
+          <p>
+            $\left( k \cdot \overrightarrow{u} \right) \cdot \overrightarrow{v}
+            = k \left( \overrightarrow{u} \cdot \overrightarrow{v} \right)$
+          </p>
+        </li>
+        <li>
+          <p>
+            $\overrightarrow{u} \cdot \left( \overrightarrow{v} +
+            \overrightarrow{w} \right) = \overrightarrow{u} \cdot
+            \overrightarrow{v} + \overrightarrow{u} \cdot \overrightarrow{w} $
+          </p>
+        </li>
+      </ul>
+      <h3>Propriété</h3>
+      <p>
+        Soit $\overrightarrow{u}$ un vecteur du plan. Le carré scalaire de
+        $\overrightarrow{u}$ est le réel positif ou nul:
+      </p>
+      $$ \left( \overrightarrow{u} \right)^2 = \overrightarrow{u} \cdot
+      \overrightarrow{u} = \Vert \overrightarrow{u} \Vert^2 $$
+      <h3>Démonstration</h3>
+      $$ \overrightarrow{u} \cdot \overrightarrow{u} = \Vert \overrightarrow{u}
+      \Vert \cdot \Vert \overrightarrow{u} \Vert \cdot \underbrace{\cos \left(
+      \overrightarrow{u}, \overrightarrow{u} \right)}_{=1} $$ $$ \Leftrightarrow
+      \overrightarrow{u} \cdot \overrightarrow{u} = \Vert \overrightarrow{u}
+      \Vert^2 $$
+      <p>cqfd.</p>
+      <h3>Théorème</h3>
+      <p>Pour tous vecteurs $\overrightarrow{u}$ et $\overrightarrow{v}$:</p>
+      $$ \overrightarrow{u} \cdot \overrightarrow{v} = \frac{1}{2} \cdot \left(
+      \Vert \overrightarrow{u} + \overrightarrow{v} \Vert^2 - \Vert
+      \overrightarrow{u} \Vert^2 - \Vert \overrightarrow{v} \Vert^2 \right) $$
+      <h3>Démonstration</h3>
+      $$ \Vert \overrightarrow{u} + \overrightarrow{v} \Vert^2 =
+      \left(\overrightarrow{u} \right) ^2 + 2 \cdot \left( \overrightarrow{u}
+      \cdot \overrightarrow{v} \right) + \left(\overrightarrow{v}\right) ^2$$ $$
+      = \Vert \overrightarrow{u} \Vert^2 + 2 \cdot \left( \overrightarrow{u}
+      \cdot \overrightarrow{v} \right) + \Vert \overrightarrow{v} \Vert^2 $$
+      <p>Par conséquent:</p>
+      $$ \Vert \overrightarrow{u} + \overrightarrow{v} \Vert^2 = \Vert
+      \overrightarrow{u} \Vert^2 + 2 \cdot \left( \overrightarrow{u} \cdot
+      \overrightarrow{v} \right) + \Vert \overrightarrow{v} \Vert^2 $$ $$
+      \Leftrightarrow \overrightarrow{u} \cdot \overrightarrow{v} = \frac{1}{2}
+      \cdot \left( \Vert \overrightarrow{u} + \overrightarrow{v} \Vert^2 - \Vert
+      \overrightarrow{u} \Vert^2 - \Vert \overrightarrow{v} \Vert^2 \right) $$
+      <p>cqfd.</p>
+
+      <h2>Vecteur dans l'espace vectoriel</h2>
+      <p>
+        Un vecteur peut s'exprimer de manière unique dans une base de l'espace
+        vectoriel.
+      </p>
+      <p>
+        $\overrightarrow{v}$ s'écrit alors comme une combinaison linéaire de
+        $\overrightarrow{e_1}$ et $\overrightarrow{e_2}$.
+      </p>
+      $$ \exists a_1 ,\ a_2 \in \mathbb{R} \mid \overrightarrow{v} = a_1
+      \overrightarrow{e_1} + a_2 \overrightarrow{e_2} $$
+      <p>
+        $a_1$ et $a_2$ sont alors les composantes de $\overrightarrow{v}$ dans
+        la base $\left( \overrightarrow{e_1}, \overrightarrow{e_2} \right)$
+      </p>
+
+      <h2>Produit vectoriel</h2>
+      <h3>Définition</h3>
+      <p>
+        Soient deux vecteurs $\overrightarrow{a}$ et $\overrightarrow{b}$, on
+        définit le produit vectoriel de $\overrightarrow{a}$ par
+        $\overrightarrow{b}$ comme le vecteur:
+      </p>
+      $$ \overrightarrow{i} = \overrightarrow{a} \wedge \overrightarrow{b} =
+      \overrightarrow{a} \times \overrightarrow{b} $$
+      <p>tel que</p>
+      <ol>
+        <li>
+          $$ \overrightarrow{c} \cdot \overrightarrow{a} = 0 $$
+          <p>et</p>
+          $$ \overrightarrow{c} \cdot \overrightarrow{b} = 0 $$
+        </li>
+        <li>
+          $$ \Vert \overrightarrow{c} \Vert =\Vert \overrightarrow{a} \Vert
+          \cdot \Vert \overrightarrow{b} \Vert \cdot \sin \left(
+          \overrightarrow{a} ,\overrightarrow{b} \right) $$
+        </li>
+        <li>
+          $ \left( \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}
+          \right) $ forme un système de coordonnées direct
+        </li>
+      </ol>
+      <h3>Propriétés</h3>
+      <p>
+        $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ sont des
+        vecteurs de $\mathbb{R}^3, \lambda \in \mathbb{R}$
+      </p>
+      <h3>Distributivité</h3>
+      <p>Distributivité par rapport à l'addition vectoriel:</p>
+      <ul>
+        <li>
+          $$ \overrightarrow{a} \times \left( \overrightarrow{b} +
+          \overrightarrow{c} \right) = \overrightarrow{a} \times
+          \overrightarrow{b} + \overrightarrow{a} \times \overrightarrow{c} $$
+        </li>
+        <li>
+          $$\left( \overrightarrow{a} + \overrightarrow{b} \right) \times
+          \overrightarrow{c} = \overrightarrow{a} \times \overrightarrow{c} +
+          \overrightarrow{b} \times \overrightarrow{c} $$
+        </li>
+      </ul>
+      <h3>Asymmétrie</h3>
+      $$ \overrightarrow{a} \times \overrightarrow{b} = - \overrightarrow{b}
+      \times \overrightarrow{a}$$
+      <h3>Multiplication d'un scalaire</h3>
+      $$ \lambda \overrightarrow{a} \times \overrightarrow{b} = \left(\lambda
+      \overrightarrow{a} \right) \times \overrightarrow{b} = \overrightarrow{a}
+      \times \left( \lambda \overrightarrow{b} \right) $$
+
+      <h2>Produit vectoriel nul</h2>
+      <p>Le produit vectoriel est nul si et seulement si:</p>
+      $$ \overrightarrow{a} \times \overrightarrow{b} = \overrightarrow{0} $$ $$
+      \Leftrightarrow \overrightarrow{a} = \overrightarrow{0}\ ou\
+      \overrightarrow{b} = \overrightarrow{0}\ ou\ \sin \left(
+      \overrightarrow{a}, \overrightarrow{b} \right) = 0$$
+      <p>
+        Pour: $\sin \left( \overrightarrow{a}, \overrightarrow{b} \right) = 0$
+      </p>
+      $$ \sin \left( \varphi \right) = 0 $$ $$ \Leftrightarrow \varphi \equiv 0
+      \left[ \pi \right] $$ $$ \exists k \in \mathbb{Z} \mid \varphi = 0 +
+      k\cdot \pi $$
+    </div>
+  </body>
+</html>

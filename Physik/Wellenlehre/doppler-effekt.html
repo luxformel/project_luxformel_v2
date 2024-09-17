@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Arbeit, Energie, Leistung</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Doppler-Effekt</h1>
+      <h2>Bewegter Empfänger</h2>
+
+      <img
+        src="/Physik/img/Dopper Effekt/bewegterEmpfaenger.png"
+        alt="bewegter Empfänger, Doppler Effekt"
+        class="zeichnungen"
+      />
+      <ul>
+        <li>
+          <p><u>Empfänger $E$ nähert sich dem Sender $S$:</u></p>
+          <p>
+            Bewegt sich ein Empfänger mit einer Geschwindigkeit $v_E$ auf den
+            Sender, der eine Welle mit der Frequenz $f$ und der
+            Phasengeschwindigkeit $v_{ph}$ abstrahlt, zu, so erreichen ihn in
+            einer bestimmten Zeit mehr Wellen als wenn er in Ruhe ware. Die
+            Wellenlange $\lambda$ der Schallwellen in der Luft bleibt zwar
+            konstant, jedoch ist die Geschwindigkeit relativ zum Empfänger jetzt
+            $v_{ph} + v_E$. Die Frequenz der vom Empfänger registrierten Wellen
+            wird damit:
+          </p>
+          $$ f_E = \frac{v_{ph} + v_E}{\lambda} $$
+          <p>
+            mit: $f = \frac{v_{ph}}{\lambda} \Leftrightarrow \frac{1}{\lambda} =
+            \frac{f}{v_{ph}}$
+          </p>
+          $$ \Leftrightarrow f_E = f \cdot \frac{v_{ph} + v_E}{v_{ph}}$$
+          $$\Leftrightarrow f_E = f \cdot \underbrace{\left(
+          1+\frac{v_{E}}{v_{ph}} \right) }_{>1} $$
+          <p>
+            Die vom Empfänger registrierte Frequenz $f_E$ ist somit
+            <u>höher</u> als die vom Sender ausgesendete Frequenz $f$.
+          </p>
+        </li>
+        <li>
+          <p><u>Empfänger $E$ entfernt sich dem Sender $S$:</u></p>
+          <p>
+            Bewegt sich ein Empfänger mit einer Geschwindigkeit $v_E$ von dem
+            Sender, der eine Welle mit der Frequenz $f$ und der
+            Phasengeschwindigkeit $v_{ph}$ abstrahlt, weg, so erreichen ihn in
+            einer bestimmten Zeit weniger Wellen als wenn er in Ruhe wäre. Die
+            Wellenlänge $\lambda$ der Schallwellen in der Luft bleibt zwar
+            konstant, jedoch ist die Geschwindigkeit relativ zum Empfänger jetzt
+            $ v_{ph} - v_E $. Die Frequenz der vom Empfänger registrierten
+            Wellen wird damit:
+          </p>
+          $$ f_E^{\prime} = \frac{v_{ph} - v_E}{\lambda} $$
+          <p>
+            mit: $f = \frac{v_{ph}}{\lambda} \Leftrightarrow \frac{1}{\lambda} =
+            \frac{f}{v_{ph}}$
+          </p>
+          $$ \Leftrightarrow f_E^{\prime} = f \cdot \frac{v_{ph} -
+          v_E}{v_{ph}}$$ $$\Leftrightarrow f_E^{\prime} = f \cdot
+          \underbrace{\left( 1-\frac{v_{E}}{v_{ph}} \right) }_{< 1} $$
+          <p>
+            Die vom Empfänger registrierte Frequenz $f_E^{\prime}$, ist somit
+            <u>niedriger</u> als die vom Sender ausgesendete Frequenz $f$.
+          </p>
+        </li>
+      </ul>
+      <h2>Ruhender Sender</h2>
+      <img
+        src="/Physik/img/Dopper Effekt/bewegterSender.png"
+        alt="bewegter Sender, Doppler Effekt"
+        class="zeichnungen"
+      />
+      <ul>
+        <li>
+          <p><u>Sender $S$ nähert sich dem Empfänger $E$</u></p>
+          <p>
+            Nähert sich der Sender $S$, der eine Welle mit einer Frequenz $f$
+            und einer Phasengeschwindigkeit $v_{ph}$ aussendet, dem Empfänger
+            $E$ mit einer Geschwindigkeit $v_s$, so legt er in der Zeit $t$, bei
+            seiner Bewegung von $S_1$ nach $S_5$, die Strecke $v_s \cdot t$
+            zurück. Die Wellen die bei ruhendem Sender die Strecke $v_{ph} \cdot
+            t$ einnehmen, verteilen sich nur noch auf die verkürzte Strecke
+            $v_{ph} \cdot t - v_s \cdot t = \left( v_{ph} - v_s \right) \cdot t
+            $. Daher hat sich die vom Empfänger wahrgenommene Wellenlange
+            $\lambda_E$ verkürzt auf:
+          </p>
+          $$ \frac{\lambda_E}{\lambda} = \frac{\left( v_{ph} - v_S \right) \cdot
+          t}{v_{ph} \cdot t} $$ $$ \Leftrightarrow \lambda_E = \lambda \cdot
+          \frac{v_{ph} - v_S}{v_{ph}} $$ $$ \Leftrightarrow \lambda_E = \lambda
+          \cdot \underbrace{\left( 1 - \frac{v_S}{v_{ph}} \right)}_{< 1} $$
+          <p>
+            Die vom Empfänger wahrgenommene Frequenz $f_E$ ist demnach
+            <u>höher</u> als die ausgesendete Frequenz $f$:
+          </p>
+          $$ f_E = \frac{v_{ph}}{\lambda_E} = \frac{v_{ph}}{\lambda \cdot \left(
+          1 - \frac{v_S}{v_{ph}} \right)} = f \cdot \frac{1}{ 1 -
+          \frac{v_S}{v_{ph}}}$$
+        </li>
+        <li>
+          <p><u>Sender $S$ entfernt sich vom Empfänger $E$ </u></p>
+          <p>
+            Entfernt sich der Sender $S$, der eine Welle mit einer Frequenz $f$
+            und einer Phasengeschwindigkeit $v_{ph}$ aussendet, vom Empfänger
+            $E$ mit einer Geschwindigkeit $v_S$, so legt er in der Zeit $t$, bei
+            seiner Bewegung von $S_1$ nach $S_5$, die Strecke $v_S \cdot t$
+            zurück. Die Wellen die bei ruhendem Sender die Strecke $v_{ph} \cdot
+            t$ einnehmen, verteilen sich nun auf die verlängerte Strecke $v_{ph}
+            \cdot t + v_S \cdot t = \left(v_{ph} + v_S \right) \cdot t $. Daher
+            hat sich die vom Empfänger wahrgenommene Wellenlange $\lambda_E$
+            verlängert auf:
+          </p>
+          $$ \frac{\lambda_E^{\prime}}{\lambda} = \frac{\left( v_{ph} + v_S
+          \right) \cdot t}{v_{ph} \cdot t} $$ $$ \Leftrightarrow
+          \lambda_E^{\prime} = \lambda \cdot \frac{v_{ph} + v_S}{v_{ph}} $$ $$
+          \Leftrightarrow \lambda_E^{\prime} = \lambda \cdot \underbrace{\left(
+          1 + \frac{v_S}{v_{ph}} \right)}_{>1} $$
+          <p>
+            Die vom Empfänger wahrgenommene Frequenz $f_E^{\prime}$ ist demnach
+            <u>niedriger</u> als die ausgesendete Frequenz $f$:
+          </p>
+          $$ f_E = \frac{v_{ph}}{\lambda_E} = \frac{v_{ph}}{\lambda \cdot \left(
+          1 + \frac{v_S}{v_{ph}}\right)} = f \cdot \frac{1}{1 +
+          \frac{v_S}{v_{ph}}}$$
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

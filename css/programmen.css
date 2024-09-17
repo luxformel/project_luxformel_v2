@@ -1,0 +1,129 @@
+/* Container for Content */
+.pro-wrapper {
+  margin: 5rem auto 0; /* Adjusted top margin */
+  padding: 1.5rem; /* Increased padding for more space */
+  max-width: 50rem;
+  background: var(--white);
+  box-shadow: 0 4px 20px var(--dark-grey-shade); /* Stronger shadow for depth */
+  border-radius: 0.75rem; /* Slightly more rounded corners */
+}
+
+/* Main Content Wrapper */
+.pro-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Increased gap for separation */
+  margin: 2rem auto; /* Reduced margin for consistency */
+  max-width: 400px;
+  background: var(--white);
+  border-radius: 0.75rem; /* Enhanced border-radius for modern look */
+  width: 90%;
+  padding: 1.5rem; /* Increased padding */
+  box-shadow: 0 4px 20px var(--dark-grey-shade); /* Stronger shadow for prominence */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Button Styling */
+button {
+  padding: 0.75rem 1.5rem; /* Increased padding for a bolder button */
+  font-size: 1.25rem; /* Increased font size */
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem; /* Slightly larger border-radius */
+  font-weight: bold; /* Bold text for button */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+button:hover {
+  opacity: 0.7; /* Increased opacity on hover for a stronger effect */
+}
+
+/* Headings */
+h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 2.5rem; /* Larger font size for impact */
+  font-weight: bolder; /* Bolder font weight */
+  letter-spacing: -0.05rem;
+  color: var(--black);
+}
+
+/* Paragraph Styling */
+p {
+  line-height: 1.8; /* Increased line-height for readability */
+  font-family: serif;
+  font-size: 1.25rem; /* Larger font size */
+  margin: 0.75rem 0; /* Increased margin for spacing */
+  text-align: justify;
+  color: var(--black);
+}
+
+/* Links */
+.pro-content-wrapper a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.pro-content-wrapper a:hover {
+  color: var(--default-link-color-hover);
+  text-decoration: underline; /* Added underline on hover for emphasis */
+}
+
+/* Form Labels */
+label {
+  font-weight: bolder;
+  color: var(--black);
+  font-size: 1.125rem; /* Larger font size for labels */
+  margin-right: 0.75rem; /* Increased margin for spacing */
+}
+
+/* Inputs and Selects */
+input,
+select {
+  font-size: 1.125rem; /* Larger font size for better readability */
+  padding: 0.75rem; /* Increased padding */
+  border-radius: 0.375rem; /* Slightly larger border-radius */
+  border: 2px solid var(--black); /* Bolder border */
+  color: var(--black);
+  background-color: var(--white);
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px var(--index-border-color); /* Enhanced focus shadow */
+}
+
+/* Select Styling */
+select {
+  padding: 0.75rem; /* Consistent padding */
+  border: 2px solid var(--darker-grey); /* Unified border color */
+  background-color: var(--off-white);
+  background-size: 1.5rem; /* Adjusted background size */
+}
+
+select:hover {
+  border-color: var(--accent-color); /* Highlighted border on hover */
+}
+
+/* Textarea Styling */
+textarea {
+  width: 92%;
+  height: 200px; /* Increased height for better usability */
+  padding: 1rem; /* Increased padding */
+  margin-top: 1.5rem; /* Increased margin */
+  border: 2px solid var(--darker-grey); /* Bolder border */
+  border-radius: 0.375rem; /* Consistent border-radius */
+  resize: vertical;
+  box-shadow: 0 2px 10px var(--dark-grey-shade); /* Added shadow for depth */
+  background-color: var(--white);
+  color: var(--black);
+}

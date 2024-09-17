@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kreisbewegungen</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Kreisbewegungen</h1>
+      <!-- <h3>Definition</h3>
+          <p>
+            Eine Bewegung ist kreisförmig wenn ein Punkt eine kreisförmige Bahn beschreibt.
+          </p> -->
+      <h2>Winkelgeschwindigkeit, Drehfrequenz</h2>
+      <h3>Definition</h3>
+      <p>
+        Die Winkelgeschwindigkeit \( \omega \) ist der Quotient aus dem
+        durchlaufenden Drehwinkel \( \Delta \varphi \) und dem dafür benötigten
+        Zeitintervall \( \Delta t \).
+      </p>
+      $$ \omega = \frac{\Delta \varphi}{\Delta t} $$ $$ [\Delta \varphi] = rad
+      $$ $$ [\omega] = \frac{rad}{s} $$
+      <h3>Anmerkung</h3>
+      <p>Durch die Definition des Bogenma&beta;es oder Radianten erhält man:</p>
+      $$ \Delta \varphi = \frac{\Delta s }{r} $$
+      <h2>Bahngeschwindigkeit</h2>
+      <h3>Herleitung</h3>
+      <p>
+        Die Bahngeschwindigkeit \( v \) entspricht dem Quotienten aus dem
+        zurückgelegten Bogenstück \( \Delta s \) und dem dafür benötigten
+        Zeitintervall \( \Delta t \).
+      </p>
+      $$ v=\frac{\Delta s}{\Delta t} =\frac{r\cdot \Delta \varphi }{\Delta t}
+      =r\cdot \frac{\Delta \varphi }{\Delta t} =r\cdot \omega $$
+      <h3>Definition</h3>
+      <p>
+        Die Bahngeschwindigkeit \( v \) ist das Produkt aus Bahnradius \( r \)
+        und Winkelgeschwindigkeit \( \omega \).
+      </p>
+      $$ v = r \cdot \omega $$
+      <h2>Periodendauer, Umlaufzeit</h2>
+      <p>
+        Die Umlaufzeit oder Periodendauer ist die benötigte Zeit \( T \) für
+        einen Umlauf.
+      </p>
+      $$ T = \frac{t}{n} $$ $$n,\ Anzahl\ an\ Umläufen $$
+      <h3>Einheit</h3>
+      $$ [T] = s $$
+      <h2>Umdrehungsfrequenz, Drehzahl</h2>
+      <p>
+        Die Umdrehungsfrequenz oder Drehzahl \( f \), gibt die Anzahl an
+        Umläufen pro Sekunde an.
+      </p>
+      $$ f = \frac{1}{T} $$
+      <h3>Einheit</h3>
+      $$ [f] = Hz $$ $$Hz,\ Hertz$$
+      <h2>Zentripetalkraft</h2>
+      <p>
+        Die Zentripetalkraft ist die einzig wirkende Kraft, die den Körper auf
+        der Kreisbahn hält. Sie wird bestimmt durch Anwenden des Grundgesetzes
+        der Mechanik.
+      </p>
+      $$ \overrightarrow{F_{r}} =-m\cdot \frac{v^{2}}{r} \cdot
+      \overrightarrow{u_{r}} $$
+      <h3>Herleitung</h3>
+      <p>
+        In der Figur ist eine punktförmige Masse \( m \) die sich mit konstanter
+        Geschwindigkeit \( \overrightarrow{v} \) auf einer Kreisbahn bewegt mit
+        Radius \( r \) und der Positionsänderung \( \overrightarrow{\Delta r} \)
+        in einem kleinen Zeitintervall \( \Delta t \) um den Winkel \( \Delta
+        \Theta \).
+      </p>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Kreisbewegungen/ZentripetalkraftHerleitung.jpg"
+        alt="Zentripetalkraft Herleitung"
+      />
+      <p>
+        Da die Geschwindigkeit \( \overrightarrow{v} \) zu jedem Zeitpunkt die
+        Tangente zur Kreisbahn ist, ist die Resultierende aus \(
+        \overrightarrow{v_1} \) und \( \overrightarrow{v_2} \) zum Kreiszentrum
+        gerichtet. Es gilt:
+      </p>
+      $$ \overrightarrow{v_2} = \overrightarrow{v_1} + \overrightarrow{\Delta
+      v}$$
+      <p>und:</p>
+      $$ v = v_1 = v_2 $$
+      <p>
+        Die Richtung von \( \Delta \overrightarrow{v} \) ist radial und zum
+        Kreiszentrum gerichtet. Sie entspricht die Winkelhalbierenden von \(
+        \Delta \Theta \) im inneren des Kreises. Durch Ähnlichkeit beider
+        Dreiecke kann Thales angewendet werden:
+      </p>
+      $$ \frac{\| \Delta \overrightarrow{r} \| }{r} = \frac{\parallel \Delta
+      \overrightarrow{v} \parallel }{v} $$ $$ \Leftrightarrow \| \Delta
+      \overrightarrow{r} \| =\frac{r}{v} \cdot \parallel \Delta
+      \overrightarrow{v} \parallel \ (1)$$
+      <p>Für Kleinwinkelnäherung:</p>
+      $$ \overset {\large \frown} {AB} = [AB] $$
+      <p>Es gilt also:</p>
+      $$\| \Delta \overrightarrow{r} \| \approx v\cdot \Delta t\ (2)$$
+      <p>\( (1) \) gleich \( (2) \):</p>
+      $$\frac{r}{v} \cdot \parallel \Delta \overrightarrow{v} \parallel \approx
+      v\cdot \Delta t\ $$ $$ \Leftrightarrow \frac{\parallel \Delta
+      \overrightarrow{v} \parallel }{\Delta t} \approx \frac{v^{2}}{r} $$
+      <p>mit der Definition der Beschleunigung:</p>
+      $$ a=\lim_{\Delta t\rightarrow 0} \frac{\Delta \overrightarrow{v} }{\Delta
+      t} $$
+      <p>Einsetzen:</p>
+      $$ a_{r}=\frac{v^{2}}{r} $$
+      <h3>Anmerkung</h3>
+      <p>Die Zentripetalkraft ist immer zu dem Kreiszentrum hin gerichtet.</p>
+      $$ F_{r}=m\cdot \frac{v^{2}}{r} $$
+      <p>Durch einsetzen der Formel der Bahngeschwindigkeit erhalten wir</p>
+      $$ F_{r}=m\cdot \frac{v^{2}}{r} |\ v=\omega \cdot r $$ $$ F_{r}=m\cdot
+      \omega^{2} \cdot r $$
+      <p>Durch einsetzen der Formel der Winkelgeschwindigkeit erhalten wir</p>
+      $$ F_{r}=m\cdot \omega^{2} \cdot r |\omega =\frac{2\pi }{T} $$ $$
+      F_{r}=m\cdot \frac{4\pi^{2} \cdot r}{T^{2}} $$
+    </div>
+  </body>
+</html>

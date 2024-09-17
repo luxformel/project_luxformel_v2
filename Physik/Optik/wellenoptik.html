@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Wellenoptik</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Wellenoptik</h1>
+      <h2>Beugung des Lichts</h2>
+      <p>
+        Als Beugung bezeichnet man allgemein das Eindringen von Wellen in den
+        geometrischen Schattenraum. Beugung tritt in Erscheinung, wenn die
+        Ausdehnung \( l \) von Hindernissen oder Öffnungen sich der Wellenlänge
+        des Lichtes annähert. Bei \( \lambda \simeq l \) ist die Beugung
+        besonders ausgeprägt.
+      </p>
+      <h2>Interferenz des Lichtes</h2>
+      <p>
+        Interferenz tritt auf, wenn zwei oder mehrere Wellen gleicher Frequenz
+        an einem Ort zusammentreffen. Dabei addieren sich ihre Elongationen
+        dieses Phänomen hei&beta;t Superpositionsprinzip. Nach dem
+        Zusammentreffen laufen die Wellen ungestört weiter. Je nach
+        Gangunterschied \( \Delta s \) unterscheidet man zwischen:
+      </p>
+      <ol>
+        <li>
+          <p><u>Konstruktiver Interferenz oder Verstärkung</u></p>
+          <p>
+            Sie tritt auf wenn der Gangunterschied ein geradzahliges Vielfach
+            der halben Wellenlänge ist.
+          </p>
+          $$ \Delta s = 2 k \cdot \frac{\lambda}{2}$$ $$ k \in \mathbb{Z} $$
+        </li>
+        <li>
+          <p><u>Destruktive Interferenz oder Auslöschung</u></p>
+          <p>
+            Sie tritt dann auf, wenn der Gangunterschied ein ungeradzahliges
+            Vielfaches der halben Wellenlänge ist.
+          </p>
+          $$ \Delta s = (2 k + 1) \cdot \frac{\lambda}{2}$$ $$ k \in \mathbb{Z}
+          $$
+        </li>
+      </ol>
+      <h2>Das Huygens'sche Prinzip</h2>
+      <p>
+        Jeder Punkt einer Wellenfront ist Ausgangspunkt von einer neuen
+        kugelförmigen Elementarwelle. Durch Überlagerung oder Superposition
+        sämtlicher Elementarwellen ergibt sich die Wellenfront. <br />
+        Da die Elementarwelle kugelförmig ist, bildet sie ebenfalls eine
+        rücklaufende Welle.
+      </p>
+      <h2>Interferenz des Lichtes am Doppelspalt</h2>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Wellenoptik/Doppelspalt1.png"
+        alt="Doppelspalt"
+      />
+      $$ D,\ Distanz\ Schirm\ Doppelspalt$$ $$g,\ Abstand\ zwischen\ Spalten$$
+      $$\alpha,\ Beugungswinkel $$
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Wellenoptik/Doppelspalt2.png"
+        alt="Doppelspalt"
+      />
+      <p>
+        Zwei Strahlen, die mittig aus den Spalten kämen, formen diese Grafik.
+        Der Gangunterschied zwischen beiden Strahlen ist also hier \( \Delta s
+        \). Wir erhalten die Formel:
+      </p>
+      $$ \Delta s = g \cdot \sin(\alpha) $$
+      <h3>Verallgemeinerung der Formel</h3>
+      <ol>
+        <li>
+          <h3>Bei \( \alpha_1 = 0 \)</h3>
+          <p>
+            Bei \( \alpha = 0 \) liegen beide Strahlen in Phase der
+            Gangunterschied ist: \( \Delta s = 0 \) <br />
+            Wir beobachten ein Helligkeitsmaximum nullter Ordnung \( k = 0 \),
+            auch zentrales Maximum genannt.
+          </p>
+          $$ \Delta s = 0 \cdot \frac{\lambda}{2} $$
+        </li>
+        <li>
+          <h3>\( \alpha_1 > \alpha_2 \)</h3>
+          <p>
+            Wählen wir \( \alpha_2\) so, dass wir einen Gangunterschied von \(
+            \Delta s = \frac{\lambda}{2} \) erhalten, so legt die unterste
+            Elementarwelle genau eine halbe Schwingung mehr als die oberste
+            zurück. Die beiden Elementarwellen sind in Gegenphase zueinander und
+            interferieren destruktiv. Wir beobachten ein Helligkeitsminimum
+            nullter Ordnung \( k = 0 \).
+          </p>
+          $$ \Delta s = 1 \cdot \frac{\lambda}{2} $$
+        </li>
+        <li>
+          <h3>\( \alpha_2 > \alpha_3 \)</h3>
+          <p>
+            Hier liegen beiden Strahlen in Phase der Gangunterschied ist: \(
+            \Delta s = \lambda \) <br />
+            Wir beobachten ein Helligkeitsmaximum erster Ordnung \( k = 1 \)
+          </p>
+          $$ \Delta s = 2 \cdot \frac{\lambda}{2} $$
+        </li>
+        <li>
+          <h3>\( \alpha_3 > \alpha_4 \)</h3>
+          <p>
+            Wählen wir \( \alpha_4\) so, dass wir einen Gangunterschied von \(
+            \Delta s = \frac{3 \lambda}{2} \) erhalten, sind beide
+            Elementarwellen sind in Gegenphase zueinander und interferieren
+            destruktiv. Wir beobachten ein Helligkeitsminimum erster Ordnung \(
+            k = 1 \).
+          </p>
+          $$ \Delta s = 3 \cdot \frac{\lambda}{2} $$
+        </li>
+        <li>
+          <h3>\( \alpha_4 > \alpha_5 \)</h3>
+          <p>
+            Wenn \( \alpha_5 \) einen Gangunterschied von \( \Delta s = \frac{4
+            \lambda}{2} \) entsteht konstruktive Interferenz wir beobachten ein
+            Helligkeitsmaximum zweiter Ordnung \( k = 2 \).
+          </p>
+          $$ \Delta s = 4 \cdot \frac{\lambda}{2} $$
+        </li>
+      </ol>
+      <h3>Schlussfolgerungen</h3>
+      <ol>
+        <li>
+          <p>
+            Beim kontinuierlichen Anstieg des Beugungswinkels wechseln sich
+            helle und dunkle Streifen also regelmä&beta;ig ab.
+          </p>
+        </li>
+        <li>
+          <p>
+            Konstruktive Interferenz entsteht dann, wenn der Gangunterschied
+            beider Elementarwellen ein geradzahliges Vielfache ist.
+          </p>
+          $$ \Delta s = 2 k \cdot \frac{\lambda}{2}$$ $$ k \in \mathbb{Z}$$
+          <p>Es gilt für \( k \in \mathbb{Z} \):</p>
+          $$\Delta s = g \cdot \sin(\alpha_k)\ (1)$$ $$\Delta s = 2 k \cdot
+          \frac{\lambda}{2}\ (2)$$
+          <p>\( (1) \) in \( (2) \):</p>
+          $$ \sin(\alpha_k) \cdot g = 2 k \cdot \frac{\lambda}{2}$$ $$
+          \Leftrightarrow \sin(\alpha_k) = \frac{2k}{g} \cdot
+          \frac{\lambda}{2}$$
+        </li>
+        <li>
+          <p>
+            Destruktive Interferenz entsteht dann, wenn der Gangunterschied
+            beider Elementarwellen ein ungeradzahliges Vielfache ist.
+          </p>
+          $$ \Delta s = (2 k + 1) \cdot \frac{\lambda}{2}$$ $$ k \in
+          \mathbb{Z}$$
+          <p>Es gilt für \( k \in \mathbb{Z} \):</p>
+          $$\Delta s = g \cdot \sin(\alpha_k)\ (1)$$ $$\Delta s = 2 k \cdot
+          \frac{\lambda}{2}\ (2)$$
+          <p>\( (1) \) in \( (2) \):</p>
+          $$ \sin(\alpha_k) \cdot g = (2 k + 1) \cdot \frac{\lambda}{2}$$ $$
+          \Leftrightarrow \sin(\alpha_k) = \frac{2 k + 1}{g} \cdot
+          \frac{\lambda}{2}$$
+        </li>
+      </ol>
+      <h2>Beugung und Interferenz am Einfachspalt</h2>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Wellenoptik/Einfachspalt1.png"
+        alt="Einfachspalt"
+      />
+      $$ D,\ Distanz\ Schirm\ Einfachspalt$$ $$l,\ Abstand\ der\ Öffnung$$
+      $$\alpha,\ Beugungswinkel $$
+      <p>
+        Nach dem Huygens'schen Prinzip sind alle Punkte der Spaltöffnung Zentren
+        für Elementarwellen.
+      </p>
+      <img
+        class="zeichnungen"
+        src="/Physik/img/Wellenoptik/Einfachspalt2.png"
+        alt="Einfachspalt"
+      />
+      <p>Es gilt:</p>
+      $$ \Delta s = \sin(\alpha) \cdot l $$
+      <ol>
+        <li>
+          <p>
+            Bei \( \alpha = 0 \) liegen alle Strahlen in Phase der
+            Gangunterschied ist: \( \Delta s = 0 \) <br />
+            Wir beobachten ein Helligkeitsmaximum nullter Ordnung \( k = 0 \),
+            auch zentrales Maximum genannt.
+          </p>
+          <img
+            src="/Physik/img/Wellenoptik/geradeEinfachspaltWellenoptik.png"
+            alt="Einfachspalt"
+            class="zeichnungen"
+          />
+          <p>Maximum:</p>
+          $$ \Delta s = 0 \cdot \frac{\lambda}{2} $$
+        </li>
+        <li>
+          <p>
+            Bei noch grö&beta;erem Beugungswinkel kann der Gangunterschied
+            zwischen den Randstrahlen $\Delta s = \lambda$ betragen. <br />
+            Strahlen aus dem ersten Teilbündel interferieren destruktiv mit den
+            Strahlen aus dem zweiten Teilbündel, da diese $\frac{\lambda}{2}$
+            von einander entfernt sind. <br />
+            Es bleiben also keine Strahlen die nicht destruktiv interferieren
+            übrig kein Licht erreicht also den Schirm.
+          </p>
+          <img
+            src="/Physik/img/Wellenoptik/2EinfachspaltWellenoptik.png"
+            alt="Einfachspalt"
+            class="zeichnungen"
+          />
+          <p>Minimum:</p>
+          $$ \Delta s = 2 \cdot \frac{\lambda}{2}$$
+        </li>
+        <li>
+          <p>
+            Wird $\alpha$ so gro&beta;, dass der Gangunterschied
+            $\frac{3\lambda}{2}$ beträgt so interferieren nur 2 der 3 Teilbündel
+            destruktiv.Es interferieren also Teilbündel 1 und Teilbündel 2
+            miteinander. Wir erhalten also $\frac{1}{3}$ des Lichtes am Schirm.
+          </p>
+          <img
+            src="/Physik/img/Wellenoptik/3EinfachspaltWellenoptik.png"
+            alt="Einfachspalt"
+            class="zeichnungen"
+          />
+          <p>Maximum:</p>
+          $$ \Delta s = \frac{3\lambda}{2} $$
+        </li>
+        <li>
+          <p>
+            Wird $\alpha$ nun so gro&beta;, dass der Gangunterschied
+            $\frac{4\lambda}{2}$ beträgt so interferieren Teilbündel 1 und 2
+            sowie 3 und 4 destruktiv miteinander. Wir erhalten also kein Licht
+            auf dem Schirm in dieser Konfiguration.
+          </p>
+          <img
+            src="/Physik/img/Wellenoptik/4EinfachspaltWellenoptik.png"
+            alt="Einfachspalt"
+            class="zeichnungen"
+          />
+          <p>Minimum:</p>
+          $$ \Delta s =4 \cdot \frac{\lambda}{2}$$
+        </li>
+        <h3>Schlussfolgerungen</h3>
+        <ol>
+          <li>
+            <p>
+              Beim kontinuierlichen Anstieg des Beugungswinkels wechseln sich
+              helle und dunkle Streifen also regelmä&beta;ig ab.
+            </p>
+          </li>
+          <li>
+            <p>
+              Destruktive Interferenz entsteht dann, wenn der Gangunterschied
+              beider Elementarwellen ein geradzahliges Vielfache ist.
+            </p>
+            $$ \Delta s = 2 k \cdot \frac{\lambda}{2}$$ $$ k \in \mathbb{Z}^*$$
+            <p>Es gilt für \( k \in \mathbb{Z}^* \):</p>
+            $$\Delta s = l \cdot \sin(\alpha_k)\ (1)$$ $$\Delta s = 2 k \cdot
+            \frac{\lambda}{2}\ (2)$$
+            <p>\( (1) \) in \( (2) \):</p>
+            $$ \sin(\alpha_k) \cdot l = 2 k \cdot \frac{\lambda}{2}$$ $$
+            \Leftrightarrow \sin(\alpha_k) = \frac{2k}{l} \cdot
+            \frac{\lambda}{2}$$
+          </li>
+          <li>
+            <p>
+              Konstruktive Interferenz entsteht dann, wenn der Gangunterschied
+              beider Elementarwellen ein ungeradzahliges Vielfache ist.
+            </p>
+            $$ \Delta s = (2 k + 1) \cdot \frac{\lambda}{2}$$ $$ k \in
+            \mathbb{Z}^*$$
+            <p>Es gilt für \( k \in \mathbb{Z}^* \):</p>
+            $$\Delta s = l \cdot \sin(\alpha_k)\ (1)$$ $$\Delta s = 2 k \cdot
+            \frac{\lambda}{2}\ (2)$$
+            <p>\( (1) \) in \( (2) \):</p>
+            $$ \sin(\alpha_k) \cdot l = (2 k + 1) \cdot \frac{\lambda}{2}$$ $$
+            \Leftrightarrow \sin(\alpha_k) = \frac{2 k + 1}{l} \cdot
+            \frac{\lambda}{2}$$
+          </li>
+        </ol>
+      </ol>
+      <h2>Gitterkonstante</h2>
+      <p>
+        Ein Beugungsgitter besteht aus $N$ parallelen Spaltöffnungen, deren
+        Mittelpunkte den gleichen Abstand haben. Dieser Abstand wird
+        Gitterkonstante genannt. <br />
+        Bei einem Gitter wird oft die Anzahl $n$ der Spalte in $\frac{1}{mm}$
+        angegeben. Dann beträgt die Gitterkonstante:
+      </p>
+      <img
+        src="/Physik/img/Wellenoptik/gitterkonstante.png"
+        alt="Einfachspalt"
+        class="zeichnungen"
+      />
+      $$ g = \frac{1}{n} $$
+      <h2>Beugung und Interferenz am Gitter</h2>
+      <p>
+        Bei $\alpha = 0^{\circ}$ ist der Gangunterschied $\Delta s = 0$ alle
+        Elementarwellen sind in Phase. Wir erhalten also konstruktive
+        Interferenz. <br />
+        Auf dem Schirm entsteht ein Hauptmaxima nullter Ordnung $k=0$.
+      </p>
+      <img
+        src="/Physik/img/Wellenoptik/gitter0.png"
+        alt="Einfachspalt"
+        class="zeichnungen"
+      />
+      <p>
+        Ist $\alpha$ so gro&beta;, dass der Gangunterschied $\Delta s = 2k \cdot
+        \frac{\lambda}{2}$ beträgt so sind alle Elementarwellen sind in Phase.
+        Wir erhalten also konstruktive Interferenz.
+      </p>
+      <h3>Schlussfolgerungen</h3>
+      <p>Konstruktive Interferenz bei:</p>
+      $$ \Delta s = 2k \cdot \frac{\lambda}{2} $$ $$\Leftrightarrow g \cdot
+      \sin(\alpha_k) = 2k \cdot \frac{\lambda}{2} $$
+      <p>ergibt:</p>
+      $$ g \cdot \sin(\alpha_k) = \frac{2k}{g} \cdot \frac{\lambda}{2} $$
+      <p>mit $k \in \mathbb{Z}$</p>
+      <h3>Gültigkeitsbedingung</h3>
+      <p>
+        Damit ein Hauptmaximum auf einem endlichen Schirm abgebildet werden kann
+        muss $sin(\alpha_k) < 90^{\circ}$ oder $sin(\alpha_k) < \frac{\pi}{2}$
+        sein:
+      </p>
+      $$ | \sin(\alpha_k) | < 1 $$ $$ \Leftrightarrow |\frac{2k}{g} \cdot
+      \frac{\lambda}{2}| < 1$$ $$ \Leftrightarrow |\frac{k\lambda}{g}| < 1$$ $$
+      \Leftrightarrow |k| < \frac{g}{\lambda}$$
+    </div>
+  </body>
+</html>

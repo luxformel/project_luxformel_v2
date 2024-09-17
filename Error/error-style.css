@@ -1,0 +1,55 @@
+.error-box {
+  background-color: rgba(255, 255, 255, 0.348);
+  border-radius: 0.4rem;
+  max-width: 35rem;
+  margin: auto;
+  padding: 2rem 10rem;
+
+  a {
+    color: blue;
+
+    text-decoration: underline;
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-family: "Garamond", "Georgia";
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  h1 {
+    color: #fefefe;
+
+    text-align: center;
+    text-decoration: underline;
+
+    font-size: 3rem;
+
+    padding: 1rem;
+  }
+
+  p {
+    color: #000000;
+
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Times New Roman", Times, serif;
+    padding: 1rem;
+  }
+}
+
+.home-box {
+  background-color: rgb(211, 211, 223);
+  border-radius: 0.4rem;
+  max-width: 35rem;
+  margin: auto;
+  padding: 2rem 10rem;
+  margin-top: 1rem;
+}
+
+.home-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.8rem 0.5rem blue;
+}

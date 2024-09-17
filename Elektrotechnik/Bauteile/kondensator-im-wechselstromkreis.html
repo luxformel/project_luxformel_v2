@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Kondensator im Wechselstromkreis</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Kondensator im Wechselstromkreis</h1>
+      <p>
+        Das Verhalten eines Kondensators an sinusförmigen Wechselspannungen
+        unterscheidet sich nun wesentlich vom Verhalten an Gleichspannung:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Da ein Wechselstrom ständig seine Richtung ändert, die Elektronen
+            sich also hin und her bewegen, ist ein Kondensator für Wechselströme
+            nicht mehr sperrend, sondern besitzt einen bestimmten
+            Wechselstromwiderstand.
+          </p>
+        </li>
+        <li>
+          <p>
+            Der Kondensator wird im Wechselstromkreis ständig aufgeladen und
+            wieder entladen, es flie&beta;t deshalb auch ständig ein
+            Wechselstrom durch den Kondensator.
+          </p>
+        </li>
+      </ol>
+      <h2>Phasenverschiebung von dem Strom</h2>
+      <h3>Formel</h3>
+      $$ i_{C}\left( t\right) =\hat{i_C}\cdot \sin \left( \omega t+90^{\circ
+      }\right) $$
+      <h3>Herleitung</h3>
+      $$ i_{C}\left( t\right) =\frac{dq}{dt} $$ $$ mit\ q=C\cdot u_{C}\left(
+      t\right) $$ $$\Leftrightarrow i_{C}\left( t\right) =C\cdot
+      \frac{du_{C}\left( t\right) }{dt} $$ $$mit\ u_{C}\left( t\right)
+      =\hat{u_{C}}\cdot \sin \left( \omega t\right) $$ $$\Leftrightarrow
+      i_{C}\left( t\right) =C\cdot \hat{u_C} \cdot \frac{d\left[ \sin \left(
+      \omega t\right) \right] }{dt} $$ $$\Leftrightarrow i_{C}\left( t\right)
+      =\omega \cdot C\cdot \hat{u_C} \cdot \cos \left( \omega t\right) $$ $$
+      mit\ i_{C}=\omega \cdot C\cdot u_{C}\ und\ \cos \left( \omega t\right)
+      =\sin \left( \omega t+90^{\circ }\right) $$ $$\Leftrightarrow i_{C}\left(
+      t\right) =\hat{i_C}\cdot \sin \left( \omega t+90^{\circ }\right) $$ $$
+      \Rightarrow \varphi_{i,u} =90^{\circ }$$
+      <p>
+        Bei einem idealen Kondensator an sinusförmiger Wechselspannung eilt der
+        Strom gegenüber der Spannung um \( 90^{\circ} \) voraus.
+      </p>
+      <h2>Kapazitiver Blindleitwert</h2>
+      <h3>Formel</h3>
+      $$B_{C}=\omega \cdot C$$
+      <h3>Einheit</h3>
+      $$ \left[ B_{C}\right] =\frac{A}{V} =S$$ $$ S,\ Siemens$$
+      <h2>Kapazitiver Blindwiderstand</h2>
+      <h3>Formel</h3>
+      $$X_{C}=\frac{1}{\omega \cdot C} $$
+      <h3>Einheit</h3>
+      $$ \left[ X_{C}\right] =\Omega $$
+      <h2>Ohmsches Gesetz</h2>
+      <h3>Formel</h3>
+      $$ X_{C}=\frac{U_{C}}{I_{C}} $$
+      <h2>Leistungskurve</h2>
+      <img
+        class="zeichnungen"
+        src="../img/leistungKondensator.png"
+        alt="Leistungskurve"
+      />
+      <h2>Kapazitive Blindleistung</h2>
+      <h3>Formel</h3>
+      $$ Q_{C}=U_{C}\cdot I_{C} $$
+      <h3>Einheit</h3>
+      $$ \left[ Q_{C}\right] =Var$$ $$Var,\ Volt-Ampère-reaktiv$$
+      <h3>Bemerkung</h3>
+      <p>
+        Die Blindleistung wird Blindleistung genannt da ihr Mittelwert Null ist.
+        Beispiel: Ein blinder Passagier ist nicht da oder vorgesehen so wie die
+        Leistung hier.
+      </p>
+    </div>
+  </body>
+</html>
