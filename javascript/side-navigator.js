@@ -153,6 +153,9 @@ let sideNavigator = `
     <a href="/Mathe/Theorie des nombres/ensembles-des-nombres.html"
       >Dérivation</a
     >
+    <a href="/Mathe/Linear-Algebra/eigenectors-eigenvalues.html"
+      >Eigenvectors, Eigenvalues</a>
+       
     <a href="/Mathe/Algebre/elements-d-arithmetique.html"
       >Eléments d'arithmétique</a
     >
@@ -162,6 +165,9 @@ let sideNavigator = `
     <a href="/Mathe/Fonctions/logarithme-neperien.html"
       >Fonction exponentielle</a
     >
+    <a href="/Mathe/Linear-Algebra/systems.html"
+            >Systems of Linear Equations</a
+          >
     <a href="/Mathe/Geometrie/theoreme-de-pythagore.html"
       >Fonction logarithme népérien</a
     >
@@ -204,7 +210,7 @@ let sideNavigator = `
     <a href="/Mathe/Tableaux/tableau-des-primitives-de-fonction.html"
       >Vecteurs</a
     >
-    <a href="/Mathe/Geometrie/vecteurs.html">Vécteurs</a>
+    <a href="/Mathe/Geometrie/vecteurs.html">Vecteurs</a>
   </div>
 
   <a href="#Messtechnik" class="submenu-toggle">Messtechnik</a>
@@ -217,6 +223,7 @@ let sideNavigator = `
       >Arbeit, Energie, Leistung</a
     >
     <a href="/Physik/Tabellen/astronomische-daten.html">Astronomische Daten</a>
+    <a href="/Physik/Physique-Experimentale/cinematique.html">Cinématique</a>
     <a href="/Physik/Klassische Mechanik/auftrieb.html">Auftrieb</a>
     <a href="/Physik/Wellenlehre/doppler-effekt.html">Doppler-Effekt</a>
     <a href="/Physik/Klassische Mechanik/druck.html">Druck</a>
@@ -270,7 +277,7 @@ let sideNavigator = `
     >
     <a href="/Physik/Optik/strahlenoptik.html">Strahlenoptik</a>
     <a href="/Physik/Wellenlehre/stehende-wellen.html">Stehende Wellen</a>
-    <a href="/Physik/Thermodynamik/temperatur.html">Temperatur</a>
+    <a href="/Physik/Thermodynamik/temperatur.html">Temperatur</a>    
     <a href="/Physik/Thermodynamik/volumenaenderung.html">Volumenänderung</a>
     <a href="/Physik/Optik/wellenoptik.html">Wellenoptik</a>
   </div>

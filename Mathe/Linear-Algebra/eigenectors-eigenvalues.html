@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Eigenvectors and Eigenvalues</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Eigenvectors and Eigenvalues</h1>
+      <h2>Eigenvector and Eigenvalue</h2>
+      <h3>Definition</h3>
+      <p>
+        Given an $\left( n \cdot m \right)$ matrix $A$ and an $n$-vector
+        $\overrightarrow{r}$, if $\overrightarrow{r^{\prime}} = Ar$ points in
+        the same direction as $\overrightarrow{r}$, i.e.
+        $\overrightarrow{r^{\prime}} = \lambda \overrightarrow{r}$ where
+        $\lambda$ is a real scalar, then $r$ is called an eigenvector of $A$
+        with real eigenvalue. <br />
+        The cases $r = 0$ or $\lambda = 0$ are excluded from this definition.
+      </p>
+      <h2>Trivial Eigenvalues</h2>
+      <h3>Theorem</h3>
+      <p>
+        If the matrix equation $A \overrightarrow{v} = \lambda
+        \overrightarrow{v}$, is inversible we have the trivial solutions:
+      </p>
+      $$ A = \begin{pmatrix} \lambda &0\\ 0&\lambda \end{pmatrix} $$
+      <p>and</p>
+      $$ \overrightarrow{v} = \overrightarrow{0}$$
+      <h3>Proof</h3>
+      $$ A \overrightarrow{v} = \lambda \overrightarrow{v} $$ $$ \Leftrightarrow
+      \left( A - \lambda \mathbb{1} \right) \overrightarrow{v} =
+      \overrightarrow{0}$$
+      <p>If $A$ is reversible:</p>
+      $$ \Leftrightarrow A = \lambda \mathbb{1} \vee \overrightarrow{v} = (A-
+      \lambda \mathbb{1})^{-1}\ \overrightarrow{0} $$ $$ \Leftrightarrow A =
+      \begin{pmatrix} \lambda &0\\ 0&\lambda \end{pmatrix} \vee
+      \overrightarrow{v} = \overrightarrow{0} $$
+      <p class="square">$\square$</p>
+      <h2>Characteristic equation</h2>
+      <p>
+        When solving for non trivial eigenvalues we call the following equation
+        the <u>characteristic equation</u>:
+      </p>
+      $$ \det \left( A - \lambda \mathbb{1} \right) = 0$$
+      <h2>Characteristic polynomial</h2>
+      <p>
+        We call $A - \lambda \mathbb{1}$,
+        <u>the characteristic polynomial of A</u>, when solving for eigenvalues.
+      </p>
+      <h2>Non-trivial Eigenvalues</h2>
+      <h3>Theorem 1</h3>
+      <p>
+        If $(A - \lambda \mathbb{1})$ does not have an inverse,
+        $\overrightarrow{v} \neq 0$.
+      </p>
+      <h3>Theorem 2</h3>
+      <p>
+        For the real scalar $\lambda$ to be an eigenvalue of the matrix $A$ it
+        must be a real root of the characteristic equation:
+      </p>
+      $$ \det \left( A - \lambda \mathbb{1} \right) = 0 $$
+      <h3>Remark</h3>
+      <p>
+        This is a polynomial equation of degree $n$ if $A$ is an $\left( n \cdot
+        n \right)$ matrix.
+      </p>
+      <h2>Multiple of eigenvector solutions</h2>
+      <h3>Theorem</h3>
+      <p>
+        For any solution of eigenvectors $\overrightarrow{v}$ there is a
+        multiple of the eigenvector $\alpha \in \mathbb{R}$ that still satisfies
+        the equation:
+      </p>
+      $$ A \alpha \overrightarrow{v} = \lambda \alpha \overrightarrow{v} $$
+    </div>
+  </body>
+</html>

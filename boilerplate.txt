@@ -29,5 +29,9 @@
 
     <title>Kapitel</title>
   </head>
-  <body></body>
+  <body>
+   <div class="main-wrapper">
+      <h1>Kapitel</h1>
+    </div>
+  </body>
 </html>

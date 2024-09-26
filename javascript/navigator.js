@@ -7,7 +7,7 @@ let navigator = [
                 <a href="/index.html">luxformel</a>
             </li>
             <li class="readme">
-                <a href="/index.html">Read Me</a>
+                <a href="/readme.html">Read Me</a>
             </li>
             <li class="chemie">
                 <a href="/Chemie/index.html" >Chemie</a>

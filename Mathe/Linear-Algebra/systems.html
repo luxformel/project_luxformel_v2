@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Systems of Linear Equations</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Systems of Linear Equations</h1>
+      <h2>System of equations</h2>
+      <p>
+        A system of equations is a collection of finitely many equations
+        involving the same set of variables.
+        <br />The system may not contain any functions or variables with a
+        degree higher then 1.
+      </p>
+      <h2>Solution of the system</h2>
+      <ul>
+        <li>
+          <p>
+            The solution of the system is the intersection of the solution sets
+            of each equation.
+          </p>
+        </li>
+        <li>
+          <p>If some equation has no solution, the system has no solution.</p>
+        </li>
+        <li>
+          <p>
+            It is possible that each equation has a solution but not the system.
+          </p>
+        </li>
+      </ul>
+      <h2>Lines</h2>
+      <p>
+        A line in $\mathbb{R}^{2}$: take $a,b,c \in \mathbb{R}$ with $a,b \neq
+        0$, we obtain for the equation of a line:
+      </p>
+      $$ ax + by = c $$
+      <p>$a,b,c$ are constants and $x,y$ are variables.</p>
+      <h2>Planes</h2>
+      <p>
+        Plane in $\mathbb{R}^{3}$: take $a,b,c,d \in \mathbb{R}$ with $a,b,c
+        \neq 0$, we obtain for the equation of a plane:
+      </p>
+      $$ ax + by + cz = d $$
+      <p>$a,b,c,d$ are constants and $x,y,z$ are variables.</p>
+      <h2>Linear equations</h2>
+      <p>A linear equation has $n$ variables $x_1, ..., x_n$:</p>
+      $$ a_1 x_1 + a_2 x_2 + ... + a_n x_n = b$$
+      <p>
+        $a_1,a_2, ... ,a_n, b$ are constants and $x_1,x_2, ... ,x_n \neq 0$ .
+      </p>
+      <h2>Constant term</h2>
+      <p>
+        The term that doesn't have a variable associated with that term is
+        called a <u>constant term</u>.
+      </p>
+      <h2>Homogeneous linear equation, Homogeneity</h2>
+      <p>
+        If a systems constant term is zero it is refered to as a
+        <u>homogeneous</u> linear equation.
+      </p>
+      <h3>Remark</h3>
+      <p>
+        If the system represents a line, the line passes through the origin of
+        the coordinate system.
+      </p>
+      <!-- $$ \renewcommand\arraystretch{1.25} \left\{ \begin{array}{*{3}{rC}l} 2x &
+      + & y & + & 3z & = & 10 \\ x & + & y & + & z & = & 6 \\ x & + & 3y & + &
+      2z & = & 13 \end{array} \right. $$ -->
+      <h2>Linear system, System of linear equations</h2>
+      <p>
+        A linear system or a system of linear equations with the variables $x_1,
+        ..., x_n$ where $n \in \mathbb{N}$ is:
+      </p>
+      $$\begin{align*} \left\{ \begin{array}{ccccccccccc} a_{1,1}x_{1} & + &
+      a_{1,2}x_{2} & + & \cdots & + & a_{1,n}x_{n} & = & b_{1} \\ a_{2,1}x_{1} &
+      + & a_{2,2}x_{2} & + & \cdots & + & a_{2,n}x_{n} & = & b_{2} \\ \vdots & &
+      \vdots & & \ddots & & \vdots & & \vdots \\ a_{m,1}x_{1} & + & a_{m,2}x_{2}
+      & + & \cdots & + & a_{m,n}x_{n} & = & b_{m} \\ \end{array} \right.
+      \end{align*} $$
+      <p>
+        With $a_{ij}$ for $i=1,...,m$ and $j=1,...,n$ and $b_k$ for $k=1,...,m$
+        are constants.
+      </p>
+      <h2>Solution of a linear system</h2>
+      <p>
+        A solution of the linear system with the variables $x_1, . . . , x_n$ is
+        a sequence of numbers $(s_1, . . . , s_n)$ such that the substitution
+        makes the following equation a true equality:
+      </p>
+      $$ x_1 = s_1;\ x_2 = s_2;\ ... x_n = s_n $$
+      <h3>Remark</h3>
+      <p>
+        The solution is an ordered pair, an ordered triple, or in general an
+        ordered $n$-tuple.
+      </p>
+      <h2>Tuple</h2>
+      <h3>Definition</h3>
+      <p>
+        A tuple is a finite sequence or ordered list of numbers or, mathematical
+        objects, which are called the elements of the tuple.
+      </p>
+
+      <h2>Solution sets for lines</h2>
+      <p>
+        For a linear system with $a,b \neq 0$ as variables the equation
+        represents a line in the real plane $\mathbb{R}^2$. We therefore get 3
+        possible scenarios:
+      </p>
+      <ul>
+        <li>
+          <p>The lines are parallel and distinct: no solution</p>
+          $$ L_1 \| L_2 $$
+        </li>
+        <li>
+          <p>The lines intersect: exactly one exact solution</p>
+          $$ L_1 \cap L_2 $$
+        </li>
+        <li>
+          <p>The lines coincide: infinitely many solutions</p>
+          $$ L_1 = L_2 $$
+        </li>
+      </ul>
+      <img
+        src="../img/linear-equations/lines-solutions.png"
+        alt="linear-equation solutions"
+        class="zeichnungen-big"
+      />
+      <h2>Solution sets for planes</h2>
+      <p>
+        For a linear system with $a,b,c \neq 0$ as variables the equation
+        represents a plane in real space $\mathbb{R}^3$. We therefore get 8
+        possible scenarios:
+      </p>
+      <ul>
+        <li>
+          <p>The planes are parallel: no solution</p>
+          $$ P_1 \| P_2 \| P_3 $$
+        </li>
+        <li>
+          <p>One plane intersects 2 parallel planes: no solution</p>
+          $$ P_1 \cap \left( P_2 \| P_3 \right)$$
+        </li>
+        <li>
+          <p>
+            The planes intersect each other but at no common line $L_s$: no
+            solution
+          </p>
+          $$ P_1 \cap P_2 \cap P_3 \neq L_s $$
+        </li>
+        <li>
+          <p>
+            One plane coincides one other plane and a third is parallel to the
+            them: no solution
+          </p>
+          $$ P_1 \| \left( P_2 = P_3 \right)$$
+        </li>
+        <li>
+          <p>
+            All 3 planes are at angles $\theta , \alpha \neq 0$ to each other
+            and the angle follows no plane, the solution is a point $S_p$: one
+            exact solution
+          </p>
+          $$ P_1 \cap P_2 \cap P_3 = S_p$$
+        </li>
+
+        <li>
+          <p>
+            All 3 planes are at angles $\theta , \alpha \neq 0$ to each other
+            and the angle follows one plane, the solution is a line $L_s$:
+            infinitely many solutions
+          </p>
+          $$ L_s = P_1 \cap P_2 \cap P_3 $$
+        </li>
+        <li>
+          <p>
+            The planes are all coincide, the solution is the entire plane:
+            infinitely many solutions
+          </p>
+          $$ P_1 = P_2 = P_3 $$
+        </li>
+        <li>
+          <p>
+            Two planes coincide and one of them is at an angle $\theta \neq 0$
+            to the planes, the solution is a line: infinitely many solutions
+          </p>
+          $$ (P_1 = P_2) \cap P_3 $$
+        </li>
+      </ul>
+      <img
+        src="../img/linear-equations/planes-solutions.png"
+        alt="linear equations planes solutions"
+        class="zeichnungen-bigger"
+      />
+      <h3>Remark</h3>
+      <p>
+        Every linear system has either zero, one or infinitely many solutions.
+      </p>
+      <h2>Infinitely many solutions</h2>
+      <p>
+        If a solution to a linear equation has infinitely many solutions, the
+        solution is expressed with finitely many parameters to which we can
+        assign arbitrary values in $\mathbb{R}$.
+      </p>
+      <h3>Remark</h3>
+      <p>The parameter is commonly called $t$.</p>
+      <h2>Consistent</h2>
+      <p>
+        A linear equation is consistent if it has at least one solution, the
+        solution set is not empty.
+      </p>
+      <h3>Remark</h3>
+      <p>
+        A homogeneous system is always consistent. It has at least one trivial
+        solution, where all variables are 0.
+      </p>
+      <h2>Inconsistent</h2>
+      <p>
+        A linear equation is inconsistent if it has at no solution, the solution
+        set is empty.
+      </p>
+      <h2>Augmented matrix</h2>
+      <h3>Definition</h3>
+      <p>
+        The augmented matrix is the matrix that is formed by appending the
+        column of constant terms to the end of the matrix formed by the
+        coefficients.
+      </p>
+      <h2>Constructing an augmented matrix</h2>
+      <p>For the following generalised linear equation:</p>
+      $$\begin{align*} \left\{ \begin{array}{ccccccccccc} a_{1,1}x_{1} & + &
+      a_{1,2}x_{2} & + & \cdots & + & a_{1,n}x_{n} & = & b_{1} \\ a_{2,1}x_{1} &
+      + & a_{2,2}x_{2} & + & \cdots & + & a_{2,n}x_{n} & = & b_{2} \\ \vdots & &
+      \vdots & & \ddots & & \vdots & & \vdots \\ a_{m,1}x_{1} & + & a_{m,2}x_{2}
+      & + & \cdots & + & a_{m,n}x_{n} & = & b_{m} \\ \end{array} \right.
+      \end{align*} $$
+      <ul>
+        <li>
+          <p>We associate a row to each equation</p>
+        </li>
+        <li>
+          <p>
+            We associate a column to each variable, in a preserved order for
+            each equation
+          </p>
+        </li>
+        <li>
+          <p>
+            We also consider one additional column to take care of the constant
+            term
+          </p>
+        </li>
+      </ul>
+      <p>After these steps we obtain:</p>
+      $$ \begin{bmatrix}a_{1,1}&a_{1,2}& \cdots &a_{1,n}&b_{1}\\
+      a_{2,1}&a_{2,2}& \cdots &a_{2,n}&b_{2}\\ \vdots & \vdots & \ddots & \vdots
+      & \vdots \\ a_{m,1}&a_{m,2}& \cdots &a_{m,n}&b_{m}\end{bmatrix} $$
+      <h2>Elementary row operations</h2>
+      <p>Elementary row operations are:</p>
+      <ul>
+        <li><p>Multiply a row through by a non zero constant</p></li>
+        <li><p>Interchange two rows</p></li>
+        <li><p>Add a constant times one row to another</p></li>
+      </ul>
+      <h3>Definition</h3>
+      <p>
+        Elementary row operations are the most basic operations done to solve
+        the system.
+      </p>
+      <h2>Row echelon form</h2>
+      <p>
+        For a matrix to be in row echelon form, it needs to satisfy all of the
+        following conditions:
+      </p>
+      <ul>
+        <li>
+          <p>
+            If there are any rows that consist entirely of zeros, then they are
+            grouped together at the bottom of the matrix
+          </p>
+        </li>
+        <li>
+          <p>
+            If a row does not consist entirely of zeros, then the first nonzero
+            number in the row is a 1. We call this a leading 1
+          </p>
+        </li>
+        <li>
+          <p>
+            In any two successive rows that do not consist entirely of zeros,
+            the leading 1 in the lower row occurs farther to the right than the
+            leading 1 in the higher row
+          </p>
+        </li>
+      </ul>
+      <h2>Reduced row echelon form</h2>
+      <p>
+        For a matrix to be in reduced row echelon form, it needs to satisfy all
+        of the conditions to be in row echelon form as well as:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Each column that contains a leading 1 has zeros everywhere else in
+            that column
+          </p>
+        </li>
+      </ul>
+      <h2>Gaussian elimination</h2>
+      <p>
+        The Gaussian elimination is the standard procedure to turn a matrix into
+        row echelon form.
+      </p>
+      <h2>Gaussian elimination procedure</h2>
+      <p>We start with the left most nonzero column $C$:</p>
+      <ul>
+        <li>
+          <p>
+            Swap rows so that the top entry of $C$ is non zero. For this swap we
+            use the first suitable row.
+          </p>
+        </li>
+        <li>
+          <p>
+            Multiply the top row by a non-zero constant and make the top entry
+            of $C$ a 1.
+          </p>
+        </li>
+        <li>
+          <p>
+            Add suitable multiples of the top row to the other rows and make
+            sure that all entries of $C$ apart from the top one are 0.
+          </p>
+        </li>
+      </ul>
+      <p>
+        After this the first row is now completed and we continue to iterate
+        through the remaining submatrix. <br />
+        This process goes on until the all the rows are covered or until all
+        remaining rows consist of zeros.
+      </p>
+      <h2>Gauss-Jordan elimination</h2>
+      <p>
+        The Gauss-Jordan elimination is the standard procedure to turn a matrix
+        into reduced row echelon form.
+      </p>
+      <h2>Gauss-Jordan elimination procedure</h2>
+      <p>We start with the last nonzero row $R$:</p>
+      <ul>
+        <li>
+          <p>Consider the leading 1 of $R$ which is in some column $C$</p>
+        </li>
+        <li>
+          <p>
+            Multiply $R$ by non-zero constants and add it to previous rows and
+            make 0 all other entries of $C$ apart from the leading 1.
+          </p>
+        </li>
+      </ul>
+      <p>
+        After this the first row is now completed and we continue to iterate
+        through the remaining submatrix. <br />
+        This process continues until all entries above all leading 1's are zero.
+      </p>
+      <h2>Associated homogeneous linear system</h2>
+      <p>
+        Every inhomogeneous linear system has an associated homogeneous linear
+        system, where the constant terms are zero.
+      </p>
+      <h2>Superposition principle</h2>
+      <p>
+        For a consistent inhomogeneous linear system: <br />
+        All solutions are obtained by summing to the chosen solution, the
+        solutions of the associated homogeneous linear system.
+      </p>
+      <h3>Proof</h3>
+      <p>Consider the linear system where the i <sup>th</sup> equation is:</p>
+      $$ \sum_{h=1}^{n} a_{ih}x_{h}=b_{i} $$
+      <p>The corresponding homogeneous linear system is:</p>
+      $$ \sum_{h=1}^{n} a_{ih}x_{h}=0 $$
+      <p>
+        Let $(X_1, . . . , X_n)$ be a fixed solution, $(x_1, . . . , x_n)$ any
+        solution, $(y_1, . . . , y_n)$ any solution of the homogeneous system.
+        Then:
+      </p>
+      $$ \sum_{h=1}^{n} a_{ih}\left( x_{h}-X_{h} \right) =\sum_{h=1}^{n}
+      a_{ih}x_{h}-\sum_{h=1}^{n} a_{ih}X_{h} $$ $$ =b_{i}-b_{i} $$ $$ =0 $$
+      <p>
+        so $(x_1−X_1, . . . , x_n−X_n)$ is a solution of the homogeneous system.
+        Conversely,
+      </p>
+      $$ \sum_{h=1}^{n} a_{ih}\left( x_{h}+X_{h} \right) =\sum_{h=1}^{n}
+      a_{ih}x_{h}+\sum_{h=1}^{n} a_{ih}X_{h} $$ $$ =b_{i}+b_{i} $$ $$ =0 $$
+      <p>
+        so summing to $(X_1, . . . , X_n)$ any solution of the homogeneous
+        system gives again a solution.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Number of parameters in the solution</h2>
+      <p>
+        For nonzero solution set, any consistent linear system: <br />
+        The number of parameters in the solution set is the number of free
+        variables.
+      </p>
+      <h2>Number of free variables</h2>
+      <p>
+        The number of free variables is the number of variables minus the number
+        of leading variables.
+      </p>
+      <h2>Number of leading variables</h2>
+      <p>
+        The number of leading variables is the number of non-zero rows in the
+        row echelon form.
+      </p>
+    </div>
+  </body>
+</html>

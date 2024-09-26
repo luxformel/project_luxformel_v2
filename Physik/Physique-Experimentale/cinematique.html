@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Cinématique</title>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <h1>Cinématique</h1>
+      <p>
+        La cinématique consiste à décrire la manière dont un corps se déplace
+        dans l'espace en fonction du temps.
+      </p>
+      <hr />
+      <h2>Point dans l'espace</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $\left( O, \overrightarrow{i}, \overrightarrow{j},
+        \overrightarrow{k}, \right)$ un repère d'espace orthonormé fixé au
+        référentiel $\Gamma$. Le point $M$ dans l'espace peut alors être repéré
+        par le vecteur-position.
+      </p>
+      <img
+        src="../img/Cinematique/Reperage d’un point dans l’espace.png"
+        alt="Repérage d'un point dans l'espace"
+        class="zeichnungen"
+      />
+      $$ \overrightarrow{r} = x \overrightarrow{i} + y \overrightarrow{j} + z
+      \overrightarrow{k} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} $$
+      <h2>Coordonnées cartésiennes</h2>
+      <h3>Définition</h3>
+      <p>$x$, $y$, $z$ sont les coordonnées cartésiennes du point M.</p>
+      <h2>Norme</h2>
+      <h3>Définition</h3>
+      <p>La distance qui sépare $M$ de $O$ est donnée par</p>
+      $$ d = \parallel \overrightarrow{r} \parallel = \sqrt{x^2 + y^2 + z^2} $$
+      <h2>Degrés de liberté</h2>
+      <p>
+        Si l'on veut préciser la position du point $M(x,y,z)$ dans l'espace sans
+        ambiguïté, on est donc obligé de préciser les trois coordonnées
+        cartésiennes de $M$. On dira que le point $M$, libre de se déplacer dans
+        l'espace, possède trois degrés de liberté. D'une manière générale, le
+        nombre de degrés de liberté d'un point correspond au nombre de
+        paramètres qu'on doit préciser pour repérer sa position dans l'espace.
+      </p>
+      <h2>Vecteur-vitesse</h2>
+      <p>
+        Si le point $M$ est en mouvement par rapport au référentiel $\Gamma$,
+        son vecteur position dépend du temps $t$.
+      </p>
+      $$ \overrightarrow{r}(t) = \begin{pmatrix} x(t) \\ y(t) \\ z(t)
+      \end{pmatrix} $$
+      <p>
+        $\overrightarrow{r}(t)$ est la représentation paramétrique de la
+        trajectoire décrite par le point $M$.
+      </p>
+      <img
+        src="../img/Cinematique/Vecteur-vitesse.png"
+        alt="Vecteur-vitesse"
+        class="zeichnungen-big"
+      />
+      <h2>Vecteur-vitesse moyenne</h2>
+      <p>
+        Supposons que pendant l'intervalle de temps $\Delta t$ , le point mobile
+        $M$ avance de la position repérée par le vecteur $\overrightarrow{r}(t)$
+        vers la position $\overrightarrow{r}(t + \Delta t) =
+        \overrightarrow{r}(t) + \Delta \overrightarrow{r}$. Dans ce cas le
+        mouvement effectué par $M$ peut être caractérisé par le vecteur-vitesse
+        moyenne:
+      </p>
+      $$ \overrightarrow{v_m} = \frac{\overrightarrow{r}(t + \Delta t) -
+      \overrightarrow{r}(t)}{\Delta t} $$
+      <h2>Vecteur-vitesse instantanée</h2>
+      <p>
+        Si l'on veut connaître les caractéristiques du mouvement à la date
+        précise $t$, on doit déterminer le vecteur-vitesse instantanée en $M$:
+      </p>
+      $$ \overrightarrow{v} =\overrightarrow{v} \left( x \right) =\lim_{\Delta
+      t\rightarrow 0} \frac{\overrightarrow{r}(t + \Delta t) -
+      \overrightarrow{r}(t)}{\Delta t} = \lim_{\Delta t\rightarrow 0}
+      \frac{\Delta \overrightarrow{r}}{\Delta t} =\frac{d\overrightarrow{r}}{dt}
+      =\dot{\overrightarrow{r}}$$
+      <p>
+        Le vecteur-vitesse correspond à la dérivée du vecteur-position
+        $\overrightarrow{r}$ du point $M$ par rapport au temps. <br />Plus
+        précisément :
+      </p>
+      $$ \overrightarrow{v}(t) = \frac{d\overrightarrow{r}}{dt} =
+      \begin{pmatrix} \frac{dx}{dt} \\ \frac{dy}{dt} \\ \frac{dz}{dt}
+      \end{pmatrix} = \begin{pmatrix} \dot{x} \\ \dot{y} \\ \dot{z}
+      \end{pmatrix}$$
+      <h2>Vecteur-accélération</h2>
+      <p>
+        Lorsqu'au cours du mouvement effectué par le point $M$ son
+        vecteur-vitesse instantané change de direction, de sens ou de norme,
+        nous dirons que le mouvement est accéléré.
+      </p>
+      <img
+        src="../img/Cinematique/Vecteur-acceleration.png"
+        alt="Vecteur-accélération"
+        class="zeichnungen"
+      />
+      <h2>Vecteur-accélération moyenne</h2>
+      <p>Le vecteur-accélération moyenne est donné par:</p>
+      $$ \overrightarrow{a_m} = \frac{\overrightarrow{v}(t + \Delta t) -
+      \overrightarrow{v}(t)}{\Delta t} = \frac{\Delta \overrightarrow{v}}{\Delta
+      t}$$
+      <h2>Vecteur-accélération instantanée</h2>
+      $$ \overrightarrow{a} \left( x \right) =\lim_{\Delta t\rightarrow 0}
+      \frac{\overrightarrow{v}(t + \Delta t) - \overrightarrow{v}(t)}{\Delta t}
+      = \lim_{\Delta t\rightarrow 0} \frac{\Delta \overrightarrow{v}}{\Delta t}
+      =\frac{d\overrightarrow{v}}{dt} =\dot{\overrightarrow{v}}$$
+      <p>
+        Le vecteur-accélération à la date $t$ correspond à la dérivée du
+        vecteur-vitesse $v$ par rapport au temps.
+      </p>
+      $$ \overrightarrow{a}(t) = \frac{d\overrightarrow{v}}{dt} =
+      \begin{pmatrix} \frac{dv_x}{dt} \\ \frac{dv_y}{dt} \\ \frac{dv_z}{dt}
+      \end{pmatrix} = \begin{pmatrix} \dot{v}_x \\ \dot{v}_y \\ \dot{v}_z
+      \end{pmatrix}$$
+      <p>De plus:</p>
+      $$ \overrightarrow{a}(t) = \frac{d \overrightarrow{v}}{dt} = \frac{d}{dt}
+      \left( \frac{d \overrightarrow{r}}{dt} \right) = \frac{d^2
+      \overrightarrow{r} }{dt^2} = \ddot{ \overrightarrow{r} }$$
+      <p>De plus l'accélération est la norme du vecteur-accélération:</p>
+      $$ a = \sqrt{\left( \frac{dv_{x}}{dt} \right)^{2} + \left(
+      \frac{dv_{y}}{dt} \right)^{2} + \left( \frac{dv_{z}}{dt} \right)^{2}} $$
+      $$ \left[ a \right] = \frac{m}{s^2} $$
+      <h2>Mouvement curviligne et vecteur-accélération</h2>
+      <p>
+        Supposons que le point $M$ décrit la trajectoire curviligne $T$. Le
+        mouvement de $M$ est accéléré. Intéressons- nous tout d'abord aux
+        caractéristiques du vecteur-accélération moyenne entre les dates et $t$
+        et $t + \Delta t$ :
+      </p>
+
+      <img
+        src="../img/Cinematique/curviligne.png"
+        alt="curviligne"
+        class="zeichnungen"
+      />
+      $$ \overrightarrow{a_{m}} = \frac{\overrightarrow{v}(t + \Delta t) -
+      \overrightarrow{v}(t)}{\Delta t} = \frac{\Delta \overrightarrow{v}}{\Delta
+      t} $$
+      <p>
+        Dans le cas d'un mouvement curviligne, le vecteur-accélération est
+        toujours orienté vers la concavité de la trajectoire.
+      </p>
+
+      <img
+        src="../img/Cinematique/Frenet.png"
+        alt="Frenet"
+        class="zeichnungen-bigger"
+      />
+      <p>
+        Si le point mobile passe par le point $b$ de la trajectoire curviligne
+        $T$ à la date $t$. On admet que $T$ est située intégralement dans le
+        plan formé par l'axe des $X$ et l'axe des $Y$. Le vecteur-vitesse
+        instantanée $\overrightarrow{v}$ est porté par la tangente à la
+        trajectoire en $b$ et le vecteur-accélération instantanée
+        $\overrightarrow{a}$ est orienté vers la concavité de la trajectoire.
+        Nous allons décomposer le vecteur $\overrightarrow{a}$ dans la base de
+        <i>Frenet</i> formée par les vecteurs unitaires $\overrightarrow{t_u}$
+        et $\overrightarrow{n_u}$:
+      </p>
+      $$ \overrightarrow{a} = a_t \overrightarrow{t_u} + a_n
+      \overrightarrow{n_u} = \overrightarrow{a_t} + \overrightarrow{a_n} $$
+      <p>
+        <u>On définit:</u>
+      </p>
+      <ul>
+        <li>
+          <p>
+            $\overrightarrow{t_u}$, est le vecteur directeur unitaire de la
+            tangente à la trajectoire en $b$
+          </p>
+        </li>
+        <li>
+          <p>
+            $\overrightarrow{n_u}$ est le vecteur directeur unitaire de la
+            normale à la trajectoire en $b$
+          </p>
+        </li>
+        <li>
+          <p>
+            $\overrightarrow{n_u}$ est orienté vers le centre de courbure $c$ de
+            la trajectoire au voisinage du point $b$
+          </p>
+        </li>
+        <li>
+          <p>
+            $\overrightarrow{a_t} = a_t \overrightarrow{t_u}$: composante
+            tangentielle du vecteur-accélération qui décrit la variation de la
+            vitesse par seconde.
+          </p>
+        </li>
+        <li>
+          <p>
+            $\overrightarrow{a_n} = a_n \overrightarrow{n_u}$: composante
+            normale du vecteur-accélération qui décrit la variation de la
+            direction du vecteur-vitesse par seconde
+          </p>
+        </li>
+      </ul>
+      <h2>L'accélération tangentielle et l'accélération normale</h2>
+      <h3>Démonstration</h3>
+      <p>
+        Exprimons le vecteur-vitesse $\overrightarrow{v}$ dans la base de
+        Frenet:
+      </p>
+      $$ \overrightarrow{v} = v \overrightarrow{t_u} $$
+      <p>De plus, le vecteur-accélération peut s'écrire sous forme</p>
+      $$ \overrightarrow{a} = \frac{d \overrightarrow{v}}{dt} = \frac{d}{dt}
+      \left( v \overrightarrow{t_u} \right) = \frac{dv}{dt} \overrightarrow{t_u}
+      + v \frac{d \overrightarrow{t_u} }{dt}$$
+      <p>
+        La base de Frenet représente un outil approprié à l'étude du
+        comportement local d'une trajectoire. Elle est fixée au point mobile qui
+        décrit la trajectoire. Dans le cas où la trajectoire est courbe, les
+        vecteurs unitaires $\overrightarrow{t_u}$ et $\overrightarrow{n_u}$
+        changent continuellement de direction si le point mobile avance le long
+        de la trajectoire. $\overrightarrow{t_u}$ et $\overrightarrow{n_u}$
+        dépendent donc du temps. Leurs dérivées par rapport au temps ne
+        s'annulent pas.
+      </p>
+      <p>Cherchons: $\frac{d \overrightarrow{t_u} }{dt}$</p>
+      <p>
+        Par rapport à la base $\left( \overrightarrow{i}, \overrightarrow{j}
+        \right)$:
+      </p>
+      $$ \overrightarrow{t_u} = \cos \left( \beta \right) \overrightarrow{i} +
+      \sin \left( \beta \right) \overrightarrow{j}$$ $$ \overrightarrow{n_u} =
+      \cos \left( \beta + \frac{\pi}{2} \right) \overrightarrow{i} + \sin \left(
+      \beta + \frac{\pi}{2} \right) \overrightarrow{j}$$ $$ = - \sin \left(
+      \beta \right) \overrightarrow{i} + \cos \left( \beta \right)
+      \overrightarrow{j} $$
+      <p>
+        où $\beta$ désigne l'angle entre l'axe des $X$ et la tangente à la
+        trajectoire en $b$. Comme les vecteurs unitaires et $\overrightarrow{i}$
+        et $\overrightarrow{j}$ sont indépendants du temps, et $\beta$ varie
+        continuellement lorsque le point mobile avance le long de la
+        trajectoire.
+      </p>
+
+      $$ \frac{d \overrightarrow{t_u}}{dt} = - \sin \left( \beta \right) \frac{d
+      \beta}{dt} \overrightarrow{i} + \cos \left( \beta \right) \frac{d
+      \beta}{dt} \overrightarrow{j} = \frac{d \beta}{dt} \overrightarrow{n} $$
+      <p>
+        Ainsi le vecteur $\frac{d \overrightarrow{t_u}}{dt}$ est normal à la
+        tangente à la trajectoire en $b$.
+      </p>
+      <p>
+        Admettons que pendant le laps de temps $dt$ le point mobile avance de
+        $b$ vers $b^{\prime}$. L'arc de cercle infinitésimal s'exprime par:
+      </p>
+
+      $$ \overparen{bb^{\prime}} = \rho \cdot d \beta $$
+      <p>Il suit:</p>
+      $$ \frac{d \beta}{dt} = \frac{1}{\rho} \cdot
+      \frac{\overparen{bb^{\prime}}}{dt} = \frac{v}{\rho} $$
+      <p>et</p>
+      $$ \frac{d \overrightarrow{t_u}}{dt} = \frac{v}{\rho} \overrightarrow{n_u}
+      $$
+      <p>Finalement:</p>
+      $$ \overrightarrow{a} = \frac{dv}{dt} \overrightarrow{t_u} +
+      \frac{v^2}{\rho} \overrightarrow{n_u} $$
+      <p>
+        En comparant à l'équation $\overrightarrow{a} = a_t \overrightarrow{t_u}
+        + a_n \overrightarrow{n_u}$ nous trouvons:
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Taylor expansion</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Taylor expansion</h1>
+      <h2>Taylor series</h2>
+      <h3>Definition</h3>
+      <p>
+        Let $I$ be an interval $f\colon I\rightarrow \mathbb{R}$ an arbitrary
+        differentiable function, then the infinite series:
+      </p>
+      $$ T_f(x) = f(a) + f^{\prime}(a)(x-a) + \frac{f^{\prime \prime}(a)}{2!}
+      (x-a)^2 + ... $$ $$ T_f(x) = \sum_{k=0}^{\infty} \frac{f_{a}^{(k)}}{k!}
+      \left( x-a \right)^{k}$$
+      <p>
+        is the Taylor expansion of $f$ around the point $a$. For $(x-a)$ being
+        small, one can stop the Taylor expansion after a certain n<sup>th</sup>
+        element and obtain thus the approximation of the function $f$ around the
+        point $a$.
+      </p>
+    </div>
+  </body>
+</html>

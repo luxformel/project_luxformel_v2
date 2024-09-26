@@ -226,6 +226,7 @@ var splashTexts = [
   "Thinking fast and slow.",
   "Hello guys I'm under the water",
   "Campus Kirchberg",
+  "Campus Limbertsberg",
   "Campus Belval",
   "we only eat cookies",
   "Solve some quadratic equations",
@@ -608,7 +609,8 @@ var splashTexts = [
   "Where's North form here?",
   "It was <br> The glitter freeze <br> Don't turn here <br> Listen <br> You wouldn't credit <br> Or believe this",
   "Ship him far",
-  "1/610",
+  "Techmology!!",
+  "1/612",
 ];
 function generateRandomText() {
   //console.log(splashTexts);
