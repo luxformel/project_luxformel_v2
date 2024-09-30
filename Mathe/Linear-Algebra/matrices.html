@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Matrices</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Matrices</h1>
+      <h2>Matrix</h2>
+      <p>A matrix is a rectangular array of numbers.</p>
+      <h2>Scalars</h2>
+      <p>Scalars are real numbers that define a numerical quantity.</p>
+      <h2>Entries</h2>
+      <p>
+        The numbers in the array are called the entries in the matrix. Each
+        entry has a <u>row number</u> $m$ and a <u>column number</u> $n$.
+        <br />The entry that occurs in row $i$ and column $j$ of a matrix $A$ is
+        usually denoted by $(A)_{ij}$ or by $a_{ij}$.
+      </p>
+
+      <h2>Matrix size</h2>
+      <p>
+        The matrix size is defined by the number of rows and the number of
+        columns.
+      </p>
+      <h3>Notation</h3>
+      <p>
+        A matrix $A$ with $m$ rows and $n$ columns has a size of $m \cdot n$.
+      </p>
+      $$ A = \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+      a_{21}&a_{22}&\cdots&a_{2n}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix} = \left[ a_{ij} \right]_{m\cdot
+      n} $$
+      <h2>Special case matrices</h2>
+      <ul>
+        <li>
+          <p><u>row vector, row matrix</u>:</p>
+          <p>A row vector only consists of one row:</p>
+          $$ \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\end{pmatrix} $$
+        </li>
+        <li>
+          <p><u>column vector, column matrix</u></p>
+          <p>A column vector only consists of one column</p>
+          $$ \begin{pmatrix}a_{11}\\ a_{21}\\ \vdots\\ a_{1m}\end{pmatrix} $$
+        </li>
+        <li>
+          <p>
+            A matrix with one row and one column can be identified with its only
+            entry:
+          </p>
+          $$ \begin{pmatrix} a_{11} \end{pmatrix} $$
+        </li>
+      </ul>
+      <h2>Square matrix</h2>
+      <p>
+        A square matrix is a matrix with the same number of rows and of columns.
+        A matrix $A$ of size $n \cdot n$ is a square matrix of order $n$.
+      </p>
+      $$ A = \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+      a_{21}&a_{22}&\cdots&a_{2n}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{n1}&a_{n2}&\cdots&a_{nn}\end{pmatrix} $$
+      <h2>Main diagonal</h2>
+      <p>
+        For a square matrix the main diagonal is the diagonal that is made up of
+        the entries in the following order: $a_{11}, a_{22}, ... , a_{nn}$
+      </p>
+      <h3>Remark</h3>
+      <p>The row number equals the column number for the entire diagonal.</p>
+      <h2>Trace</h2>
+      <h3>Definition</h3>
+      <p>
+        The trace is the sum of all entries of the main diagonal in a square
+        matrix.
+      </p>
+      $$ tr(A) = a_{11} + a_{22} + ... + a_{nn}$$
+      <h3>Remark</h3>
+      <p>There is no trace for a non square matrix.</p>
+      <h2>Partitioned matrix</h2>
+      <p>SOME TIME LATER</p>
+      <h2>Equality of matrices</h2>
+      <h3>Theorem</h3>
+      <p>
+        Two matrices are equal if and only if they have the same size and the
+        corresponding entries are equal.
+      </p>
+      <h3>Methods</h3>
+      <p>To prove that two matrices of the same size are equal we can:</p>
+      <ul>
+        <li>
+          <p>prove that corresponding entries are the same</p>
+        </li>
+        <li>
+          <p>prove that corresponding row vectors are the same</p>
+        </li>
+        <li>
+          <p>prove that corresponding column vectors are the same</p>
+        </li>
+        <li>
+          <p>
+            prove that corresponding submatrices are the same, with the same
+            partition
+          </p>
+        </li>
+      </ul>
+      <h2>Sum of matrices</h2>
+      <p>
+        For the matrices $A$ and $B$ the sum $A + B$ is the matrix obtained by
+        adding the entries of $B$ to the corresponding entries of $A$:
+      </p>
+      $$ \left( A + B \right)_{ij} = \left( A \right)_{ij} + \left( B
+      \right)_{ij}$$
+      <h3>Remark</h3>
+      <p>Matrices of different sizes cannot be added.</p>
+      <h2>Difference of matrices</h2>
+      <p>
+        For the matrices $A$ and $B$ the difference $A - B$ is the matrix
+        obtained by subtracting the entries of $B$ to the corresponding entries
+        of $A$:
+      </p>
+      $$ \left( A - B \right)_{ij} = \left( A \right)_{ij} - \left( B
+      \right)_{ij}$$
+      <h3>Remark</h3>
+      <p>Matrices of different sizes cannot be subtracted.</p>
+      <h2>Scalar multiples</h2>
+      <p>
+        The product of a matrix $A$ and a scalar $c$ is denoted by $cA$. The
+        matrix $cA$ is called a scalar multiple of $A$.
+      </p>
+      <h3>Consequence</h3>
+      <p>
+        Substracting a matrix $A$ from a matrix $M$ means adding the scalar
+        multiple $c$ of -1 times the matrix $A$ to $M$.
+      </p>
+      $$ M-A = M + (-1) A $$
+      <h2>Linear combinations of matrices</h2>
+      <p>
+        If $A_1, . . . , A_r$ are matrices of the same size, and if $c_1, . . .
+        , c_r$ are scalars, then an expression of the form:
+      </p>
+      $$ c_1A_1 + c_2A_2 + ... + c_rA_r $$
+      <p>
+        is a linear combination of $A_1, . . . , A_r$ with coefficients $c_1,
+        ... , c_r$.
+      </p>
+      <h2>Conditions for multiplying matrices</h2>
+      <p>
+        For the numbers $r,m,n \in \mathbb{N^*}$: $m>r$ and $n>r$, we can
+        multiply a $m \cdot r$ matrix by a $r \cdot n$ matrix, and the result is
+        an $m \cdot n$ matrix.
+      </p>
+      <h2>Row column rule</h2>
+      <p>Let $A$ and $B$ be 2 matrices:</p>
+      $$A = \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1r}\\
+      a_{21}&a_{22}&\cdots&a_{2r}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{i1}&a_{i2}&\cdots&a_{ir}\\ a_{m1}&a_{m2}&\cdots&a_{mr}\end{pmatrix} $$
+      $$ B= \begin{pmatrix}b_{11}&b_{12}&\cdots&b_{1j}&\cdots&b_{1n}\\
+      b_{21}&b_{22}&\cdots&b_{2j}&\cdots&b_{2n}\\ \vdots&\vdots&\ddots&\vdots &
+      \ddots &\vdots \\ b_{r1}&b_{r2}&\cdots&b_{rj}&\cdots&b_{rn}\end{pmatrix}$$
+      <p>The row column rule for matrix multiplication is:</p>
+      $$ A B = \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1r}\\
+      a_{21}&a_{22}&\cdots&a_{2r}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{i1}&a_{i2}&\cdots&a_{ir}\\ a_{m1}&a_{m2}&\cdots&a_{mr}\end{pmatrix}
+      \begin{pmatrix}b_{11}&b_{12}&\cdots&b_{1j}&\cdots&b_{1n}\\
+      b_{21}&b_{22}&\cdots&b_{2j}&\cdots&b_{2n}\\ \vdots&\vdots&\ddots&\vdots &
+      \ddots &\vdots \\ b_{r1}&b_{r2}&\cdots&b_{rj}&\cdots&b_{rn}\end{pmatrix}$$
+      <p>
+        the entry $(AB)_{ij}$ in row $i$ and column $j$ of $AB$ is given by:
+      </p>
+      $$ \left( AB \right)_{ij} =a_{i1}b_{1j}+a_{i2}b_{2j}+\ldots +a_{ir}b_{rj}
+      $$ $$ = \sum_{h=1}^{r} a_{ih}b_{hj} $$
+      <h3>Remark</h3>
+      <p>
+        The rows of $A$ and the columns of $B$ must have the same length. Here:
+        $r$.
+      </p>
+      <h2>Matrix products and linear combinations</h2>
+      <h3>Theorem</h3>
+      <p>
+        Let $A$ be an $m \cdot n$ matrix, and $x$ an $n \cdot 1$ column vector.
+        The product $Ax$ is a linear combination of the column vectors of $A$,
+        the coefficients being the entries of $x$.
+      </p>
+      $$ A = \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+      a_{21}&a_{22}&\cdots&a_{2n}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix} $$ $$ x = \begin{pmatrix}x_{1}\\
+      x_{2}\\ \vdots\\ x_{n}\end{pmatrix}$$
+      <p>Then:</p>
+      $$ Ax = \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+      a_{21}&a_{22}&\cdots&a_{2n}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix} \begin{pmatrix}x_{1}\\ x_{2}\\
+      \vdots\\ x_{n}\end{pmatrix}$$
+      $$=\begin{pmatrix}a_{11}x_{1}+a_{12}x_{2}+\cdots +a_{1n}x_{n}\\
+      a_{21}x_{1}+a_{22}x_{2}+\cdots +a_{2n}x_{n}\\ \vdots\\
+      a_{m1}x_{1}+a_{m2}x_{2}+\cdots +a_{mn}x_{n}\end{pmatrix}$$ $$=
+      x_{1}\begin{pmatrix}a_{11}\\ a_{21}\\ \vdots\\ a_{m1}\end{pmatrix}
+      +x_{2}\begin{pmatrix}a_{12}\\ a_{22}\\ \vdots\\ a_{m2}\end{pmatrix} + ...
+      + x_n \begin{pmatrix}a_{1n}\\ a_{2n}\\ \vdots\\ a_{mn}\end{pmatrix} $$
+      <h2>Column-row expansion</h2>
+      <p>
+        Let $A$ be an $m \cdot s$ matrix and $B$ an $s \cdot n$ matrix.
+        Considering the $i$<sup>th</sup> column $cA$, $i$ of $A$ and the $i$<sup
+          >th</sup
+        >
+        row $r_{B,i}$ of $B$,
+      </p>
+      $$ AB = c_{A,1} r_{B,1} + c_{A,2} r_{B,2} + ... + c_{A,s} r_{B,s} $$
+      <h2>Matrix form of a linear equation</h2>
+      <p>A linear system:</p>
+      $$\begin{align*} \left\{ \begin{array}{ccccccccccc} a_{11}x_{1} & + &
+      a_{12}x_{2} & + & \cdots & + & a_{1n}x_{n} & = & b_{1} \\ a_{21}x_{1} & +
+      & a_{22}x_{2} & + & \cdots & + & a_{2n}x_{n} & = & b_{2} \\ \vdots & &
+      \vdots & & \ddots & & \vdots & & \vdots \\ a_{m1}x_{1} & + & a_{m2}x_{2} &
+      + & \cdots & + & a_{mn}x_{n} & = & b_{m} \\ \end{array} \right.
+      \end{align*} $$
+      <p>can be expressed as the equality of 2 column matrices:</p>
+      $$ \begin{pmatrix}a_{11}x_{1}+a_{12}x_{2}+\cdots +a_{1n}x_{n}\\
+      a_{21}x_{1}+a_{22}x_{2}+\cdots +a_{2n}x_{n}\\ \vdots\\
+      a_{m1}x_{1}+a_{m2}x_{2}+\cdots +a_{mn}x_{n}\end{pmatrix} =
+      \begin{pmatrix}b_{1}\\ b_{2}\\ \vdots\\ b_{m}\end{pmatrix}$$
+      <p>we can also write:</p>
+      $$ Ax = b $$
+      <p>we get therefore</p>
+      $$ \begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
+      a_{21}&a_{22}&\cdots&a_{2n}\\ \vdots&\vdots&\ddots&\vdots\\
+      a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix} \begin{pmatrix}x_{1}\\ x_{2}\\
+      \vdots\\ x_{n}\end{pmatrix} = \begin{pmatrix}b_{1}\\ b_{2}\\ \vdots\\
+      b_{m}\end{pmatrix}$$
+      <p>
+        We obtain the matrix $A$ wich is called the <u>coefficient matrix</u>.
+        <br />
+        The augmented matrix is $[A,b]$, with $b$ as an additional last column.
+      </p>
+      <h2>Transpose</h2>
+      <p>
+        Let $A$ be an $m \cdot n$ matrix. <br />
+        The transpose of $A$ is the $n \cdot m$ matrix $A^T$ obtained as
+        follows:
+      </p>
+      <ul>
+        <li>
+          <p>
+            the k<sup>th</sup> column of $A^T$ is the k<sup>th</sup> row of $A$
+          </p>
+        </li>
+        <li>
+          <p>
+            equivalently, the k<sup>th</sup> row of $A^T$ is the k<sup>th</sup>
+            column of $A$
+          </p>
+        </li>
+      </ul>
+      <p>
+        We are reversing the indices, $\left( A^T \right)_{ij} = \left( A
+        \right)_{ji}$
+      </p>
+      <h2>Transpose of a square matrix</h2>
+      <p>
+        A square matrix $A$ and its transpose $A^T$ are symmetric with respect
+        to the main diagonal:
+      </p>
+      <ul>
+        <li><p>The entries on the main diagonal are the same</p></li>
+        <li>
+          <p>
+            The entries above the main diagonal get swapped with the entries
+            below the main diagonal
+          </p>
+        </li>
+      </ul>
+      <h2>Properties of the transpose</h2>
+      <p>
+        Provided that the sizes of the matrices are such that the stated
+        operations can be performed:
+      </p>
+      <ul>
+        <li><p>$ \left( A^T \right)^T = A $</p></li>
+        <li><p>$ \left( A + B \right)^T = A^T + B^T $</p></li>
+        <li><p>$ \left( A - B \right)^T = A^T - B^T $</p></li>
+        <li><p>$ \left( kA \right)^T = kA^T $</p></li>
+        <li><p>$ \left( A B \right)^T = B^T A^T $</p></li>
+      </ul>
+      <h3>Generalisations</h3>
+      <ul>
+        <li>
+          <p>
+            The transpose of a sum of any number of matrices is the sum of the
+            transposes.
+          </p>
+        </li>
+        <li>
+          <p>
+            The transpose of a product of any number of matrices is the product
+            of the transposes in the <u>reverse order</u>.
+          </p>
+        </li>
+      </ul>
+      <h2>Algebraic properties</h2>
+      <p>
+        Let $A, B, C$ be matrices, and let $a, b$ be scalars. Assuming that the
+        sizes of the matrices are such that the indicated operations can be
+        performed, we have:
+      </p>
+      <ul>
+        <li>
+          <p><u>Commutative law for matrix addition</u></p>
+          <p>$A+B = B+A$</p>
+        </li>
+        <li>
+          <p><u>Associative law for matrix addition</u></p>
+          <p>$A+(B+C) = (A + B) + C$</p>
+        </li>
+        <li>
+          <p><u>Associative law for matrix multiplication</u></p>
+          <p>$A(BC) = (A B) C$</p>
+        </li>
+        <li>
+          <p><u>Left distributive law</u></p>
+          <p>$A(B+C) = AB + AC$</p>
+        </li>
+        <li>
+          <p><u>Right distributive law</u></p>
+          <p>$(B+C)A = BA + CA$</p>
+        </li>
+      </ul>
+      <p>Other properties are:</p>
+      <ul>
+        <li><p>$A(B-C) = AB -AC$</p></li>
+        <li><p>$(B-C)A = BA-CA$</p></li>
+      </ul>
+      <p>Scalar properties:</p>
+      <ul>
+        <li><p>$a(B+C) = aB + aC$</p></li>
+        <li><p>$a(B-C) = aB - aC$</p></li>
+        <li><p>$(a+b)C = aC + bC$</p></li>
+        <li><p>$a(B-C) = aB - aC$</p></li>
+        <li><p>$a(bC) = (ab)C$</p></li>
+        <li><p>$a(BC) = (aB)C = B(aC)$</p></li>
+      </ul>
+      <h3>Remark</h3>
+      <p>There are three reasons why the matrix product is not commutative:</p>
+      <ol>
+        <li><p>$AB$ may be defined and $BA$ may not</p></li>
+        <li>
+          <p>if $AB$ and $BA$ are defined, they may have different sizes</p>
+        </li>
+        <li>
+          <p>
+            if $AB$ and $BA$ are defined and have the same size, the two
+            products are usually different
+          </p>
+        </li>
+      </ol>
+      <h2>Zero matrices</h2>
+      <h3>Definition</h3>
+      <p>A zero matrix is a matrix where every entries are zero.</p>
+      <h3>Notation</h3>
+      <p>
+        The zero matrix $m \cdot n$ is commonly denoted as: $0_{m \cdot n}$ or
+        0.
+      </p>
+      <h3>Consequences</h3>
+      <ul>
+        <li>
+          <p>The zero matix is the <u>neutral element</u> for addition.</p>
+          $$ A + 0 = 0 + A = 0 $$
+        </li>
+        <li>
+          <p>The zero matrix is the <u>additive inverse</u> of $A$ to $-A$.</p>
+          $$ A + (-A) = (-A) + A = 0 $$
+        </li>
+      </ul>
+      <h3>Remark</h3>
+      <p>There are zero matrices for every possible size.</p>
+      <h2>Operations with zero</h2>
+      <p>
+        Let 0$_{m \cdot n}$ be the zero matrix of size $m \cdot n$ and let $A_{m
+        \cdot n}$ be the matrix of size $m \cdot n$ and let $a$ be a nonzero
+        scalar:
+      </p>
+      <ul>
+        <li>
+          <p><u>Scalar times zero matrix</u>:</p>
+          $$ a \cdot 0_{m \cdot n} = 0_{m \cdot n} $$
+        </li>
+        <li>
+          <p><u>Scalar 0 times matrix</u></p>
+          $$ 0 \cdot A = 0_{m \cdot n} $$
+        </li>
+        <li>
+          <p><u>Multiplying a matrix by a zero matrix</u></p>
+          <p>$\forall m \cdot n$ matrices $A$ and $\forall r \geq 1$</p>
+          $$ 0_{r \cdot m} \cdot A = 0_{r \cdot n} $$ $$ A \cdot 0_{n \cdot r} =
+          0_{m \cdot r} $$
+        </li>
+      </ul>
+      <h2>Zero-product</h2>
+      <p>Let $c$ be a scalar, and let $A$ be a matrix:</p>
+      $$ cA=0\ \Leftrightarrow c=0\ \vee \ A=0 $$
+      <p>or:</p>
+      $$ c\neq 0\ \wedge \ A\neq 0\ \Leftrightarrow cA\neq 0$$
+      <h3>Remark</h3>
+      <p>This property does not hold for matrix multiplication.</p>
+      <h2>Cancellation law for scalar multiplication</h2>
+      <p>For scalar multiplication we have the cancellation laws:</p>
+      <ul>
+        <li>
+          <p>If $cA = cA^{\prime}$ and $c\neq 0$, then $A=A^{\prime}$</p>
+        </li>
+        <li>
+          <p>If $cA = c^{\prime}A$ and $A\neq 0$, then $c=c^{\prime}$</p>
+        </li>
+      </ul>
+      <h3>Remark</h3>
+      <p>This property does not hold for matrix multiplication.</p>
+      <h2>Identity matrix</h2>
+      <p>
+        A square matrix with 1's on the main diagonal and zeros elsewhere is
+        called identity matrix. There are identity matrices of any order. We
+        write $I$ or $I_n$ for the $n \cdot n$ identity matrix.
+      </p>
+      $$ I = \begin{pmatrix}1&0&\cdots&0\\ 0&1&\cdots&0\\
+      \vdots&\vdots&\ddots&\vdots\\ 0&0&\cdots&1\end{pmatrix} $$
+      <h3>Properties</h3>
+      <ul>
+        <li>
+          <p>If A is an $m \cdot n$ matrix, we have:</p>
+          $$ A I_n = A $$ $$ I_m A = A $$
+        </li>
+        <li>
+          <p>
+            Consider $n \cdot n$ matrices. Then $I_n$ is the neutral element of
+            the multiplication:
+          </p>
+          $$ A I_n = I_n A = A $$
+        </li>
+      </ul>
+      <h3>Remark</h3>
+      <p>Sometimes the identity matrix $I$ is also denoted with the symbol:</p>
+      $$ \mathbb{1} $$
+      <h2>Powers of a square matrix</h2>
+      <h3>Definitions</h3>
+      <ul>
+        <li>
+          <p>Let $A$ be a $m \cdot m$ matrix. We define:</p>
+          $$A^0 = I_m $$
+        </li>
+        <li>
+          <p>For every integer $n \geq 1$ we define:</p>
+          $$ A^n \mathrel{\mathop:}= \underbrace{AA\ldots A}_{n\ factors} $$
+        </li>
+      </ul>
+
+      <h3>Theorem</h3>
+      <p>For every integer $r , s \geq 0$</p>
+      $$ A^r A^s = A^{r+s} $$ $$\left( A^r \right)^s = A^{rs} $$
+      <h3>Remark</h3>
+      <p>Powers of a same square matrix commute.</p>
+      <h2>Matrix polynomials</h2>
+      <p>
+        Let $A$ be an $n \cdot n$ matrix and consider the polynomial with $x \in
+        \mathbb{N} $ and $c\in \mathbb{R}$:
+      </p>
+      $$ p(x) = c_0 + c_1x + c_2x^2 +···+ c_mx^m $$
+      <p>We define the matrix polynomial:</p>
+      $$ p(A) = c_0I_n + c_1A + c_2A^2 +···+ c_mA^m $$
+      <h3>Remark</h3>
+      <p>This polynomial is again a matrix of size $n \cdot n$.</p>
+      <h3>Property</h3>
+      <p>
+        Since powers of a square matrix commute, and since a matrix polynomial
+        in $A$ is built up from powers of $A$, any two matrix polynomials in $A$
+        also commute. That is, for any polynomials $p_1$ and $p_2$ we have:
+      </p>
+      $$ p_1(A)p_2(A) = p_2(A)p_1(A) $$
+    </div>
+  </body>
+</html>

@@ -610,7 +610,9 @@ var splashTexts = [
   "It was <br> The glitter freeze <br> Don't turn here <br> Listen <br> You wouldn't credit <br> Or believe this",
   "Ship him far",
   "Techmology!!",
-  "1/612",
+  "I can't believe it!",
+  "Nama Tama!",
+  "1/614",
 ];
 function generateRandomText() {
   //console.log(splashTexts);

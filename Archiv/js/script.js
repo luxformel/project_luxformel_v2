@@ -20,6 +20,7 @@ function checkScreenSize() {
   if (screenWidth > 916) {
     // For larger screens, make sure the sidebar is visible
     sideNav.style.width = "250px";
+    sideNav.style.marginTop = "80px";
     mainContent.style.marginLeft = "250px";
   } else {
     // For smaller screens, hide the sidebar by default

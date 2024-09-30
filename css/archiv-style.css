@@ -1,8 +1,8 @@
 header {
   background-color: var(--nav-bg-color);
-  position: fixed;
+  position: absolute;
   width: 100%;
-  padding: 27px;
+  padding: 27px 0;
   text-align: center;
 }
 h1 {
@@ -27,14 +27,15 @@ h2 {
 /* Side Navigation Styles */
 #side-nav {
   width: 250px; /* Default width for large screens */
-  background-color: var(--nav-bg-color);
+  background-color: var(--darker-off-white);
   padding-top: 20px;
-  position: fixed;
+  margin-top: 20px;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 100%; /* Ensure it covers the full height */
+  height: 90%; /* Ensure it covers the full height */
   overflow-x: hidden;
-  z-index: 950;
+  z-index: 0;
   transition: width 0.3s ease;
   margin-left: -20px;
 }
@@ -72,7 +73,7 @@ h2 {
   background: none;
   border: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   z-index: 1000;
@@ -89,7 +90,6 @@ h2 {
 @media (max-width: 916px) {
   #side-nav {
     width: 0;
-    padding-top: 60px;
   }
 
   #main-content {

@@ -179,9 +179,14 @@ ol {
 ul {
   list-style: disc;
 }
-
+ul > li > ul {
+  list-style: circle;
+}
 ol {
-  list-style-type: decimal;
+  list-style: decimal;
+}
+ol > li > ol {
+  list-style: lower-alpha;
 }
 
 @media (min-width: 768px) {

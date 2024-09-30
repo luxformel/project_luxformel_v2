@@ -39,6 +39,11 @@
   --side-nav-link: rgb(36, 36, 36);
 }
 
+@font-face {
+  font-family: vapor;
+  src: url(/fonts/VerminVibes4.otf);
+}
+
 .MJX-TEX {
   color: rgb(9, 124, 128) !important;
 }
@@ -48,13 +53,13 @@ p {
   font-size: 1.1rem !important;
 }
 
-.splash-text {
+#splash-text {
   text-transform: uppercase;
   word-spacing: 1rem;
   line-height: 3rem !important;
-  font-size: 5rem !important;
-  font-weight: bolder;
-  font-family: "Geo", sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: normal;
+  font-family: vapor !important;
 }
 
 h1,

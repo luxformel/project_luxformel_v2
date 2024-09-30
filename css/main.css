@@ -30,7 +30,8 @@ nav {
   height: 30px;
   background-color: var(--nav-bg-color);
   /* Background color */
-  padding: 10px 10px;
+  padding: 10px 0;
+
   /* Padding around the nav */
   width: 100%;
 
@@ -63,6 +64,7 @@ nav > ul > li > a {
   /* Link color */
   font-size: 1.3rem;
   /* Font size */
+  margin-left: 10px;
 
   .material-icons {
     margin: 0;
@@ -187,7 +189,7 @@ u {
   display: none;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 394px) {
   .readme {
     display: inherit;
   }
@@ -216,21 +218,48 @@ u {
     display: none;
   }
 }
-@media only screen and (min-width: 551px) {
+
+@media only screen and (min-width: 502px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
     display: inherit;
   }
 }
-@media only screen and (min-width: 625px) {
+@media only screen and (min-width: 580px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
+    display: inherit;
+  }
+  .mathe {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 690px) {
+  .readme {
+    display: inherit;
+  }
+  .chemie {
+    display: inherit;
+  }
+  .mathe {
     display: inherit;
   }
   .physik {
     display: inherit;
   }
 }
-@media only screen and (min-width: 753px) {
+@media only screen and (min-width: 848px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
+    display: inherit;
+  }
+  .mathe {
     display: inherit;
   }
   .physik {
@@ -240,8 +269,14 @@ u {
     display: inherit;
   }
 }
-@media only screen and (min-width: 925px) {
+@media only screen and (min-width: 1029px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
+    display: inherit;
+  }
+  .mathe {
     display: inherit;
   }
   .physik {
@@ -254,8 +289,14 @@ u {
     display: inherit;
   }
 }
-@media only screen and (min-width: 1063px) {
+@media only screen and (min-width: 1203px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
+    display: inherit;
+  }
+  .mathe {
     display: inherit;
   }
   .physik {
@@ -271,8 +312,14 @@ u {
     display: inherit;
   }
 }
-@media only screen and (min-width: 1197px) {
+@media only screen and (min-width: 1355px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
+    display: inherit;
+  }
+  .mathe {
     display: inherit;
   }
   .physik {
@@ -291,8 +338,14 @@ u {
     display: inherit;
   }
 }
-@media only screen and (min-width: 1275px) {
+@media only screen and (min-width: 1462px) {
+  .readme {
+    display: inherit;
+  }
   .chemie {
+    display: inherit;
+  }
+  .mathe {
     display: inherit;
   }
   .physik {

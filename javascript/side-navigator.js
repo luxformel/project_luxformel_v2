@@ -132,83 +132,69 @@ let sideNavigator = `
   </div>
 
   <a href="#Mathématiques" class="submenu-toggle">Mathématiques</a>
-  <div class="submenu">
-    <a href="/Mathe/Analyse/continuite.html"
+  <div class="submenu" id="submenu">
+    <a href="/Mathe/Tableaux/collections-des-formules-exponentielles.html"
       >Collection des formules des exponentielles</a
     >
-    <a href="/Mathe/Analyse/derivation.html"
+    <a
+      href="/Mathe/Tableaux/collections-des-formules-des-figures-geometriques.html"
       >Collection des formules des figures géométriques</a
     >
-    <a href="/Mathe/Demonstrations/demonstrations-des-fonctions-derivees.html"
+    <a href="/Mathe/Tableaux/collections-des-formules-trigonometriques.html"
       >Collection des formules de trigonométrie</a
     >
     <a href="/Mathe/Geometrie/conitions-mathematiques-utiles.html"
       >Conditions Mathe utiles</a
     >
-    <a href="/Mathe/Analyse/integration.html">Continuite</a>
+    <a href="/Mathe/Analyse/continuite.html">Continuite</a>
     <a href="/Mathe/Logique/demonstrations.html">Démonstrations</a>
-    <a href="/Mathe/Geometrie/geometrie-dans-l-espace.html"
+    <a href="/Mathe/Demonstrations/demonstrations-des-fonctions-derivees.html"
       >Démonstrations des fonctions dérivées</a
     >
-    <a href="/Mathe/Theorie des nombres/ensembles-des-nombres.html"
-      >Dérivation</a
-    >
+    <a href="/Mathe/Analyse/derivation.html">Dérivation</a>
     <a href="/Mathe/Linear-Algebra/eigenectors-eigenvalues.html"
-      >Eigenvectors, Eigenvalues</a>
-       
+      >Eigenvectors, Eigenvalues</a
+    >
     <a href="/Mathe/Algebre/elements-d-arithmetique.html"
       >Eléments d'arithmétique</a
     >
-    <a href="/Mathe/Fonctions/fonctions-exponentielles.html"
+    <a href="/Mathe/Theorie des nombres/ensembles-des-nombres.html"
       >Ensembles des Nombres</a
     >
-    <a href="/Mathe/Fonctions/logarithme-neperien.html"
+    <a href="/Mathe/Fonctions/fonctions-exponentielles.html"
       >Fonction exponentielle</a
     >
-    <a href="/Mathe/Linear-Algebra/systems.html"
-            >Systems of Linear Equations</a
-          >
-    <a href="/Mathe/Geometrie/theoreme-de-pythagore.html"
+    <a href="/Mathe/Linear-Algebra/systems.html">Systems of Linear Equations</a>
+    <a href="/Mathe/Fonctions/logarithme-neperien.html"
       >Fonction logarithme népérien</a
     >
-    <a href="/Mathe/Geometrie/theoreme-de-thales.html"
+    <a href="/Mathe/Geometrie/geometrie-dans-l-espace.html"
       >Géométrie dans l'espace</a
     >
-    <a
-      href="/Mathe/Tableaux/collections-des-formules-des-figures-geometriques.html"
-      >Limites</a
-    >
-    <a href="/Mathe/Tableaux/collections-des-formules-exponentielles.html"
-      >Logique Élémentaire</a
-    >
-    <a href="/Mathe/Tableaux/collections-des-formules-trigonometriques.html"
-      >Nombres Complexes</a
-    >
-    <a href="/Mathe/Analyse/limites.html">Probabilités</a>
-    <a href="/Mathe/Logique/logique-elementaire.html"
+    <a href="/Mathe/Analyse/limites.html">Limites</a>
+    <a href="/Mathe/Logique/logique-elementaire.html">Logique Élémentaire</a>
+    <a href="/Mathe/Linear-Algebra/matrices.html">Matrices</a>
+    <a href="/Mathe/Algebre/nombre-complexes.html">Nombres Complexes</a>
+    <a href="/Mathe/Probabilite/probabilites.html">Probabilités</a>
+    <a href="/Mathe/Algebre/puissance-et-regle-de-priorote.html"
       >Puissances et règles de priorité</a
     >
-    <a href="/Mathe/Algebre/nombre-complexes.html"
+    <a href="/Mathe/Tableaux/tableau-des-fonctions-derivees.html"
       >Tableau des fonctions dérivées</a
     >
-    <a href="/Mathe/Probabilite/probabilites.html"
+    <a href="/Mathe/Tableaux/tableau-des-primitives-de-fonction.html"
       >Tableau des primitives de fonction</a
     >
-    <a href="/Mathe/Algebre/puissance-et-regle-de-priorote.html"
+    <a href="/Mathe/Geometrie/theoreme-de-pythagore.html"
       >Théorème de Pythagore</a
     >
-    <a href="/Mathe/Geometrie/trigonometrie.html">Théorème de Thalès</a>
+    <a href="/Mathe/Geometrie/theoreme-de-thales.html">Théorème de Thalès</a>
+    <a href="/Mathe/Geometrie/trigonometrie.html">Trigonométrie</a>
     <a href="/Mathe/Geometrie/trigonometrie-dans-un-cerlce.html"
-      >Trigonométrie</a
-    >
-    <a href="/Mathe/Geometrie/trigonometrie-dans-un-triangle-rectangle.html"
       >Trigonomètrie dans un cercle</a
     >
-    <a href="/Mathe/Tableaux/tableau-des-fonctions-derivees.html"
+    <a href="/Mathe/Geometrie/trigonometrie-dans-un-triangle-rectangle.html"
       >Trigonomètrie dans un triangle rectangle</a
-    >
-    <a href="/Mathe/Tableaux/tableau-des-primitives-de-fonction.html"
-      >Vecteurs</a
     >
     <a href="/Mathe/Geometrie/vecteurs.html">Vecteurs</a>
   </div>
@@ -248,36 +234,25 @@ let sideNavigator = `
     >
     <a href="/Physik/Thermodynamik/gasgesetze.html">Gasgesetze</a>
     <a href="/Physik/Astronphysik/gravitation.html">Gravitation</a>
-    <a href="/Physik/Grundlagen/grundlagen-der-physik.html"
-      >Grundlagen der Physik</a
-    >
-    <a href="/Physik/Klassische Mechanik/grundlagen-der-mechanik.html"
-      >Grundlagen Mechanik</a
-    >
-    <a href="/Physik/Klassische Mechanik/hooksches-gesetz.html"
-      >Hook'sches Gesetz</a
-    >
+    <a href="/Physik/Grundlagen/grundlagen-der-physik.html">Grundlagen der Physik</a>
+    <a href="/Physik/Klassische Mechanik/grundlagen-der-mechanik.html">Grundlagen Mechanik</a>
+    <a href="/Physik/Klassische Mechanik/hooksches-gesetz.html">Hook'sches Gesetz</a>
     <a href="/Physik/Klassische Mechanik/impuls.html">Impuls</a>
     <a href="/Physik/Thermodynamik/kalirometrie.html">Kalirometrie</a>
     <a href="/Physik/Klassische Mechanik/kinematik.html">Kinematik</a>
-    <a href="/Physik/Klassische Mechanik/kreisbewegungen.html"
-      >Kreisbewegungen</a
-    >
+    <a href="/Physik/Klassische Mechanik/kreisbewegungen.html">Kreisbewegungen</a>
     <a href="/Physik/Thermodynamik/laengenausdehnung.html">Längenausdehnung</a>
     <a href="/Physik/Wellenlehre/mechanische-wellen.html">Mechanische Wellen</a>
     <a href="/Physik/Quantenphysik/quantenmechanik.html">Quantenmechanik</a>
     <a href="/Physik/Kernphysik/radioaktivitaet.html">Radioaktivität</a>
     <a href="/Physik/Klassische Mechanik/reibung.html">Reibung</a>
-    <a href="/Physik/Relativitaetstheorie/relativitaetstheorie.html"
-      >Relativitätstheorie</a
-    >
+    <a href="/Physik/Relativitaetstheorie/relativitaetstheorie.html">Relativitätstheorie</a>
     <a href="/Physik/Wellenlehre/schwingungen.html">Schwingungen</a>
-    <a href="/Physik/Tabellen/sonnensystem-tabelle.html"
-      >Sonnensystem Tabelle</a
-    >
+    <a href="/Physik/Tabellen/sonnensystem-tabelle.html">Sonnensystem Tabelle</a>
     <a href="/Physik/Optik/strahlenoptik.html">Strahlenoptik</a>
     <a href="/Physik/Wellenlehre/stehende-wellen.html">Stehende Wellen</a>
-    <a href="/Physik/Thermodynamik/temperatur.html">Temperatur</a>    
+    <a href="/Physik/Thermodynamik/temperatur.html">Temperatur</a>
+    <a href="/Physik/Thermodynamik/thermodynamics.html">Thermodynamics</a>
     <a href="/Physik/Thermodynamik/volumenaenderung.html">Volumenänderung</a>
     <a href="/Physik/Optik/wellenoptik.html">Wellenoptik</a>
   </div>
@@ -309,7 +284,6 @@ let sideNavigator = `
   <a href="/Archiv/index.html">Archiv</a>
   <a href="/Programmen/index.html">Programmen</a>
 </div>
-
 
 `;
 
