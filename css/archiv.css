@@ -1,0 +1,139 @@
+/* Header styling */
+header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--off-white);
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 1px 10px var(--transparent-black);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+  font-family: "Roboto Mono", monospace;
+}
+p {
+  font-family: "Roboto Mono", monospace;
+}
+/* Archive Button Styling */
+.archive-button-container {
+  text-align: center; /* Center the button */
+  margin: 30px 0; /* Add space above and below */
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+}
+
+.archive-button {
+  padding: 10px 20px;
+  color: var(--accent-color); /* Primary color for text */
+  background-color: transparent; /* No background color */
+  border: 2px solid var(--accent-color); /* Border in primary color */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.archive-button:hover {
+  background-color: var(
+    --accent-color
+  ); /* Change background to primary color on hover */
+  color: var(--white); /* Change text to white on hover */
+}
+
+/* Exercise Section */
+.exercise-section {
+  width: 80%;
+  max-width: 800px;
+  margin: 8px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Topic-item styling */
+.topic-item {
+  background-color: var(--off-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px var(--transparent-black);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.collapsible {
+  background-color: var(--off-white);
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Caret Styling */
+.caret {
+  fill: var(--default-link-color);
+  transition: transform 0.3s ease, fill 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+/* Change caret direction when content is shown */
+.collapsible.active .caret {
+  transform: rotate(90deg);
+}
+
+/* Content styling */
+.content {
+  padding: 0 20px;
+  display: block; /* Show all content sections initially */
+}
+
+/* Exercise-solution pair styling */
+.exercise-solution {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--darker-off-white);
+}
+
+.exercise-solution:last-child {
+  border-bottom: none;
+}
+
+/* Simplified link styling */
+.solution-link,
+.exercise-link {
+  color: var(--default-link-color); /* Primary color */
+  text-decoration: none;
+  font-weight: bolder;
+  transition: color 0.3s ease;
+  font-family: "Roboto Mono", monospace;
+}
+
+.solution-link:hover,
+.exercise-link:hover {
+  color: var(--accent-color); /* Darker shade for hover */
+}
+
+/* Separator styling */
+.separator {
+  margin: 0 10px;
+  font-weight: bold;
+}

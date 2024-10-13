@@ -14,9 +14,11 @@
   --footer-bg-color: #000;
   --footer-text-color: #fff;
 
+  --transparent-black: rgba(210, 72, 173, 0.575);
+
   --nav-bg-color: rgb(248, 145, 186);
 
-  --off-white: #f9f9f9;
+  --off-white: #faeaef;
   --darker-off-white: #d979c0;
 
   --dark-grey-shade: rgb(205, 141, 176);

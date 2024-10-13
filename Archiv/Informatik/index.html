@@ -1,215 +1,194 @@
 <!DOCTYPE html>
-<html lang="lb">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="/javascript/header.js"></script>
+    <script defer src="/javascript/header.js"></script>
 
     <script defer src="/themes/themes.js"></script>
 
-    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="preload" href="/css/reset.css" as="style" />
+    <link rel="preload" href="/themes/default.css" as="style" />
+
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/archiv.css" />
 
-    <link rel="stylesheet" href="/css/archiv-style.css" />
-    <script src="/Archiv/js/script.js" defer></script>
-    <script defer src="../js/insertSideNav.js"></script>
-
+    <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
 
+    <script defer src="../js/collapser.js"></script>
     <title>Informatik Archiv</title>
   </head>
   <body>
-    <!-- Hamburger Button (move outside the nav) -->
-    <button class="hamburger" onclick="toggleNav()">☰</button>
-
-    <!-- Side Navigation -->
-    <nav id="side-nav"></nav>
-
     <header>
-      <h1>Infor&shy;matik Archiv</h1>
+      <h1>Informatik Archiv</h1>
     </header>
-    <div id="main-content">
-      <!-- Géométrie Section -->
-      <h2>Java Basics</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Java Basics/Java Basics.pdf"
-              target="_blank"
-              class="left-link"
-              >Java Basics</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Droites_Parametriques_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
 
-      <!-- Nombres Complexes Section -->
-      <h2>Dessin et graphisme</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Dessin et graphisme/Bouger une tortue.pdf"
-              target="_blank"
-              class="left-link"
-              >Bouger une tortue</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Dessin et graphisme/Bouger plusieurs tortues.pdf"
-              target="_blank"
-              class="left-link"
-              >Bouger plusieurs tortues</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Dessin et graphisme/Tortues en couleur.pdf"
-              target="_blank"
-              class="left-link"
-              >Tortues en couleur</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-
-      <h2>Classe Timer</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Evenements de la souris/Traceur de lignes 1.pdf"
-              target="_blank"
-              class="left-link"
-              >Traceur de lignes 1</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Evenements de la souris/Traceur de lignes en couleur.pdf"
-              target="_blank"
-              class="left-link"
-              >Traceur de lignes en couleur</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-
-      <h2>Classe Timer</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Classe Timer/Chronometre.pdf"
-              target="_blank"
-              class="left-link"
-              >Chronomètre</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Classe Timer/Moving Ball.pdf"
-              target="_blank"
-              class="left-link"
-              >Moving Ball</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Classe Timer/Moving Balls.pdf"
-              target="_blank"
-              class="left-link"
-              >Moving Balls</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-      <h2>Héritage</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a href="pdf/Heritage/Emojis.pdf" target="_blank" class="left-link"
-              >Emojis</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Droites_Parametriques_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
+    <!-- Archive Button -->
+    <div class="archive-button-container">
+      <a href="/Archiv/index.html" class="archive-button">Zeréck</a>
     </div>
 
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Java Basics</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Java Basics/Java Basics.pdf" class="solution-link"
+              >Java Basics</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Java - Classe Timer</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Classe Timer/Chronometre.pdf" class="solution-link"
+              >Chronometre</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a href="pdf/Classe Timer/Moving Ball.pdf" class="solution-link"
+              >Moving Ball</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a href="pdf/Classe Timer/Moving Balls.pdf" class="solution-link"
+              >Moving Balls</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Java - Dessin et graphisme</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Dessin et graphisme/Bouger plusieurs tortues.pdf"
+              class="solution-link"
+              >Bouger plusieurs tortues</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Dessin et graphisme/Bouger une tortue.pdf"
+              class="solution-link"
+              >Bouger une tortue</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Dessin et graphisme/Tortues en couleur.pdf"
+              class="solution-link"
+              >Tortues en couleur</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Java - Événements de la souris</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Evenements de la souris/Traceur de lignes 1.pdf"
+              class="solution-link"
+              >Traceur de lignes 1</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Evenements de la souris/Traceur de lignes en couleur.pdf"
+              class="solution-link"
+              >Traceur de lignes en couleur</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Java - Héritage</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Heritage/Emojis.pdf" class="solution-link">Emojis</a>
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more topics as needed -->
+    </div>
     <footer></footer>
   </body>
 </html>

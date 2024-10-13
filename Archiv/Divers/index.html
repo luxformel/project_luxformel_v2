@@ -1,48 +1,97 @@
 <!DOCTYPE html>
-<html lang="lb" dir="ltr">
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <script src="../../assets/2LayerDeepInsertChapterHTML.js"></script>
-    <!-- <script defer src="../feedbackPopup.js"></script> -->
-    <script async src="../../Themes JavaScript/2LayerDeepTheme.js"></script>
-    <title>Exercicer</title>
+
+    <script defer src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="preload" href="/css/reset.css" as="style" />
+    <link rel="preload" href="/themes/default.css" as="style" />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/archiv.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
+
+    <script defer src="../js/collapser.js"></script>
+    <title>Divers Archiv</title>
   </head>
   <body>
-    <style>
-      .main-wrapper ol li a:hover,
-      .main-wrapper ul li a:hover {
-        color: blue;
-      }
-    </style>
-    <my-navigator></my-navigator>
-    <div class="main-wrapper">
-      <h1>Archiv</h1>
-      <h2>Dokumenter</h2>
-      <hr />
-      <h2>Mechanik</h2>
-      <ol>
-        <li>
-          <p><u>Arbeit und Leistung</u></p>
-          <ul>
-            <li>
-              <a href="pdf/Arbeit Und Leistung/Arbeit Und Leistung.pdf"
-                >Arbeit und Leistung</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li>
-          <p><u>Festigkeitslehre</u></p>
-          <ul>
-            <li>
-              <a href="pdf/Festigkeitslehre/Festigkeitslehre.pdf"
-                >Festigkeitslehre</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ol>
+    <header>
+      <h1>Divers Archiv</h1>
+    </header>
+
+    <!-- Archive Button -->
+    <div class="archive-button-container">
+      <a href="/Archiv/index.html" class="archive-button">Zeréck</a>
     </div>
+
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Allgemeine Digitaltechnik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Digitaltechnik/Bool'sche Algebra.pdf"
+              class="solution-link"
+              >Bool'sche Algebra</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Digitaltechnik/Digitaltechnik Intro.pdf"
+              class="solution-link"
+              >Digitaltechnik</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Technische Informatik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Technische Informatik/Codes.pdf" class="solution-link"
+              >Codes</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more topics as needed -->
+    </div>
+    <footer></footer>
   </body>
 </html>

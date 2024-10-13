@@ -612,7 +612,12 @@ var splashTexts = [
   "Techmology!!",
   "I can't believe it!",
   "Nama Tama!",
-  "1/614",
+  "Benotzt d'Websäit Dokumentatioun wann ee Feeler ass",
+  "Use the website documentation in case of an error",
+  "Benutzen Sie die Dokumentation der Webseite im Falle eines Fehlers",
+  "Utiliser la documentation du site en cas d'erreur",
+  "Documenta utere website si de errore",
+  "1/619",
 ];
 function generateRandomText() {
   //console.log(splashTexts);

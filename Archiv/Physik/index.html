@@ -1,203 +1,207 @@
 <!DOCTYPE html>
-<html lang="lb">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="/javascript/header.js"></script>
+    <script defer src="/javascript/header.js"></script>
 
     <script defer src="/themes/themes.js"></script>
 
-    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="preload" href="/css/reset.css" as="style" />
+    <link rel="preload" href="/themes/default.css" as="style" />
+
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/archiv.css" />
 
-    <link rel="stylesheet" href="/css/archiv-style.css" />
-    <script src="/Archiv/js/script.js" defer></script>
-    <script defer src="../js/insertSideNav.js"></script>
-
+    <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
 
+    <script defer src="../js/collapser.js"></script>
     <title>Physik Archiv</title>
   </head>
   <body>
-    <!-- Hamburger Button (move outside the nav) -->
-    <button class="hamburger" onclick="toggleNav()">☰</button>
-
-    <!-- Side Navigation -->
-    <nav id="side-nav"></nav>
-
     <header>
       <h1>Physik Archiv</h1>
     </header>
-    <div id="main-content">
-      <!-- Géométrie Section -->
-      <h2>Quantenmechanik</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Quantenmechanik/Quantenmechanik.pdf"
-              target="_blank"
-              class="left-link"
-              >Quantenmechanik</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Droites_Parametriques_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
 
-      <!-- Nombres Complexes Section -->
-      <h2>Radioaktivität</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Radioaktivitaet/Radioaktivitaet.pdf"
-              target="_blank"
-              class="left-link"
-              >Radioaktivität</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-      <!-- Nombres Complexes Section -->
-      <h2>Relativitätstheorie</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Relativitaet/Relativitaet.pdf"
-              target="_blank"
-              class="left-link"
-              >Relativität</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Intégration Section -->
-      <h2>Klassische Physik</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Klassische Physik/Chute libre.pdf"
-              target="_blank"
-              class="left-link"
-              >Chute libre</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Klassische Physik/Stossvorgaenge.pdf"
-              target="_blank"
-              class="left-link"
-              >Stoßvorgänge</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-
-      <h2>Optik</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Strahlenoptik/Strahlenoptik.pdf"
-              target="_blank"
-              class="left-link"
-              >Strahlenoptik</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wellenoptik/Wellenoptik.pdf"
-              target="_blank"
-              class="left-link"
-              >Wellenoptik</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wellenoptik/Duenne Schichten.pdf"
-              target="_blank"
-              class="left-link"
-              >Dünne Schichten</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-      <hr />
-      <h2>Dokumenter</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Sonnensystem/Sonnensystem.pdf"
-              target="_blank"
-              class="left-link"
-              >Sonnensystem</a
-            >
-          </div>
-        </div>
-      </section>
+    <!-- Archive Button -->
+    <div class="archive-button-container">
+      <a href="/Archiv/index.html" class="archive-button">Zeréck</a>
     </div>
 
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Klassische Physik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Klassische Physik/Chute libre.pdf"
+              class="solution-link"
+              >Chute libre</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Klassische Physik/Stossvorgaenge.pdf"
+              class="solution-link"
+              >Stossvorgänge</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Quantenmechanik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Quantenmechanik/Quantenmechanik.pdf"
+              class="solution-link"
+              >Quantenmechanik</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Radioaktivität</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Radioaktivitaet/Radioaktivitaet.pdf"
+              class="solution-link"
+              >Radioaktivität</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Relativität</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Relativitaet/Relativitaet.pdf" class="solution-link"
+              >Relativität</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Optik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Strahlenoptik/Strahlenoptik.pdf" class="solution-link"
+              >Strahlenoptik</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a href="pdf/Wellenoptik/Duenne Schichten.pdf" class="solution-link"
+              >Duenne Schichten</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a href="pdf/Wellenoptik/Wellenoptik.pdf" class="solution-link"
+              >Wellenoptik</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <h2>Dokumenter</h2>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Tabellen</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Sonnensystem/Sonnensystem.pdf" class="solution-link"
+              >Sonnensystem</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more topics as needed -->
+    </div>
     <footer></footer>
   </body>
 </html>

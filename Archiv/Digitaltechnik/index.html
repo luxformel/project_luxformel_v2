@@ -1,95 +1,97 @@
 <!DOCTYPE html>
-<html lang="lb">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="/javascript/header.js"></script>
+    <script defer src="/javascript/header.js"></script>
 
     <script defer src="/themes/themes.js"></script>
 
-    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="preload" href="/css/reset.css" as="style" />
+    <link rel="preload" href="/themes/default.css" as="style" />
+
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/archiv.css" />
 
-    <link rel="stylesheet" href="/css/archiv-style.css" />
-    <script src="/Archiv/js/script.js" defer></script>
-    <script defer src="../js/insertSideNav.js"></script>
-
+    <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
 
+    <script defer src="../js/collapser.js"></script>
     <title>Digitaltechnik Archiv</title>
   </head>
   <body>
-    <!-- Hamburger Button (move outside the nav) -->
-    <button class="hamburger" onclick="toggleNav()">☰</button>
-
-    <!-- Side Navigation -->
-    <nav id="side-nav"></nav>
-
     <header>
-      <h1>Digital&shy;technik Archiv</h1>
+      <h1>Digitaltechnik Archiv</h1>
     </header>
-    <div id="main-content">
-      <!-- Géométrie Section -->
-      <h2>Allgemeine Digitaltechnik</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Digitaltechnik/Bool'sche Algebra.pdf"
-              target="_blank"
-              class="left-link"
-              >Bool'sche Algebra</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Droites_Parametriques_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Digitaltechnik/Digitaltechnik Intro.pdf"
-              target="_blank"
-              class="left-link"
-              >Digitaltechnik</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Droites_Parametriques_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
 
-      <!-- Nombres Complexes Section -->
-      <h2>Organische Chemie</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Technische Informatik/Codes.pdf"
-              target="_blank"
-              class="left-link"
-              >Codes</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
+    <!-- Archive Button -->
+    <div class="archive-button-container">
+      <a href="/Archiv/index.html" class="archive-button">Zeréck</a>
     </div>
 
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Allgemeine Digitaltechnik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Digitaltechnik/Bool'sche Algebra.pdf"
+              class="solution-link"
+              >Bool'sche Algebra</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Digitaltechnik/Digitaltechnik Intro.pdf"
+              class="solution-link"
+              >Digitaltechnik</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Technische Informatik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Technische Informatik/Codes.pdf" class="solution-link"
+              >Codes</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more topics as needed -->
+    </div>
     <footer></footer>
   </body>
 </html>

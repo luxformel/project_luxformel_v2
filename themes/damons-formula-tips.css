@@ -11,6 +11,8 @@
   --accent-color: hsl(41, 100%, 50%);
   --background-color: rgb(26, 26, 26);
 
+  --transparent-black: rgba(165, 165, 165, 0.575);
+
   --footer-bg-color: rgb(224, 98, 14);
   --footer-text-color: #000000;
 

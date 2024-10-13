@@ -1,222 +1,187 @@
 <!DOCTYPE html>
-<html lang="lb">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="/javascript/header.js"></script>
+    <script defer src="/javascript/header.js"></script>
 
     <script defer src="/themes/themes.js"></script>
 
-    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="preload" href="/css/reset.css" as="style" />
+    <link rel="preload" href="/themes/default.css" as="style" />
+
     <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/archiv.css" />
 
-    <link rel="stylesheet" href="/css/archiv-style.css" />
-    <script src="/Archiv/js/script.js" defer></script>
-    <script defer src="../js/insertSideNav.js"></script>
-
+    <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
 
-    <title>Elektro&shy;technik Archiv</title>
+    <script defer src="../js/collapser.js"></script>
+    <title>Elektrotechnik Archiv</title>
   </head>
   <body>
-    <!-- Hamburger Button (move outside the nav) -->
-    <button class="hamburger" onclick="toggleNav()">☰</button>
-
-    <!-- Side Navigation -->
-    <nav id="side-nav"></nav>
-
     <header>
-      <h1>Elektro&shy;technik Archiv</h1>
+      <h1>Elektrotechnik Archiv</h1>
     </header>
-    <div id="main-content">
-      <!-- Géométrie Section -->
-      <h2>Schaltungen</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Schaltungen/RL- und RC-Schaltungen.pdf"
-              target="_blank"
-              class="left-link"
-              >RL- und RC-Schaltungen</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Droites_Parametriques_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Schaltungen/RLC-Schaltungen.pdf"
-              target="_blank"
-              class="left-link"
-              >RLC-Schaltungen</a
-            >
-            <!--   <a
-              href="pdf/Geometrie/Position_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Schaltungen/Gleichrichterschaltung.pdf"
-              target="_blank"
-              class="left-link"
-              >Gleichrichterschaltung</a
-            >
-            <!--  <a
-              href="pdf/Geometrie/Produit_Scalaire_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
 
-      <!-- Nombres Complexes Section -->
-      <h2>Bauteile</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a href="pdf/Dioden/Diode.pdf" target="_blank" class="left-link"
-              >Diode</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complexes_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a href="pdf/Dioden/LED.pdf" target="_blank" class="left-link"
-              >LED</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complex_Numbers_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Transistor/Transistor.pdf"
-              target="_blank"
-              class="left-link"
-              >Transistor</a
-            >
-            <!--  <a
-              href="pdf/Nombres Complexes/Complex_Numbers_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Intégration Section -->
-      <h2>Wechselstromtechnik</h2>
-      <section class="card-container">
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wechselstromtechnik/Addition frequenzgleicher Wechselgroessen.pdf"
-              target="_blank"
-              class="left-link"
-              >Addition frequenzgleicher Wechselgrößen</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wechselstromtechnik/Darstellung und Kenngroessen von Wechselgroessen .pdf"
-              target="_blank"
-              class="left-link"
-              >Darstellung und Kenngrößen von Wechselgrößen</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wechselstromtechnik/Ideale Spule an Wechselspannung.pdf"
-              target="_blank"
-              class="left-link"
-              >Ideale Spule an Wechselspannung</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wechselstromtechnik/Idealer Kondensator im Wechselstromkreis.pdf"
-              target="_blank"
-              class="left-link"
-              >Idealer Kondensator im Wechselstromkreis</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-links">
-            <a
-              href="pdf/Wechselstromtechnik/Ohmscher Widerstand im Wechselstromkreis.pdf"
-              target="_blank"
-              class="left-link"
-              >Ohmscher Widerstand im Wechselstromkreis</a
-            >
-            <!--  <a
-              href="pdf/Integration/Integration_Problems.pdf"
-              target="_blank"
-              class="right-link"
-              >Problems</a
-            > -->
-          </div>
-        </div>
-      </section>
+    <!-- Archive Button -->
+    <div class="archive-button-container">
+      <a href="/Archiv/index.html" class="archive-button">Zeréck</a>
     </div>
 
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Schaltungen</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Schaltungen/Gleichrichterschaltung.pdf"
+              class="solution-link"
+              >Gleichrichterschaltung</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Schaltungen/RL- und RC-Schaltungen.pdf"
+              class="solution-link"
+              >RL- und RC-Schaltungen</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a href="pdf/Schaltungen/RLC-Schaltungen.pdf" class="solution-link"
+              >RLC-Schaltungen</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Dioden</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Dioden/Diode.pdf" class="solution-link">Diode</a>
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a href="pdf/Dioden/LED.pdf" class="solution-link">LED</a>
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Transistoren</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="pdf/Transistor/Transistor.pdf" class="solution-link"
+              >Transistor</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Wechselstromtechnik</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="pdf/Wechselstromtechnik/Addition frequenzgleicher Wechselgroessen.pdf"
+              class="solution-link"
+              >Addition frequenzgleicher Wechselgrößen</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Wechselstromtechnik/Darstellung und Kenngroessen von Wechselgroessen .pdf"
+              class="solution-link"
+              >Darstellung und Kenngrößen von Wechselgrößen</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="pdf/Wechselstromtechnik/Ideale Spule an Wechselspannung.pdf"
+              class="solution-link"
+              >Ideale Spule an Wechselspannung</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+
+          <div class="exercise-solution">
+            <a
+              href="pdf/Wechselstromtechnik/Idealer Kondensator im Wechselstromkreis.pdf"
+              class="solution-link"
+              >Idealer Kondensator im Wechselstromkreis</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+
+          <div class="exercise-solution">
+            <a
+              href="pdf/Wechselstromtechnik/Ohmscher Widerstand im Wechselstromkreis.pdf"
+              class="solution-link"
+              >Ohm'scher Widerstand im Wechselstromkreis</a
+            >
+            <!-- <a href="exercise1.pdf" class="exercise-link">Angabe</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more topics as needed -->
+    </div>
     <footer></footer>
   </body>
 </html>

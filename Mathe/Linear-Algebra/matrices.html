@@ -498,6 +498,62 @@
         also commute. That is, for any polynomials $p_1$ and $p_2$ we have:
       </p>
       $$ p_1(A)p_2(A) = p_2(A)p_1(A) $$
+      <h2>Inverse, Nonsingular, Nondegenerate, Regular</h2>
+      <p>
+        Let $A$ be a square matrix. If there is a square matrix $B$ of the same
+        size such that
+      </p>
+      $$ AB = BA = I $$
+      <p>
+        then $A$ is invertible or nonsingular and $B$ is an inverse of $A$.
+        Else, $A$ is singular.
+      </p>
+      <h3>Condition</h3>
+      <p>
+        For a matrix $A$ to be invertible the determinant of the matrix can not
+        be 0.
+      </p>
+      $$ \det \left( A \right) \neq 0 $$
+      <h3>Remark</h3>
+      <p>If $B$ is an inverse of $A$, then $A$ is an inverse of $B$.</p>
+      <h2>Non-invertible, Singular</h2>
+      <p>
+        A non-invertible or singular matrix is a matrix that can not be
+        inverted.
+      </p>
+      <h2>Unicity of inverses</h2>
+      <h3>Theorem</h3>
+      <p>
+        If a square matrix has an inverse, then the inverse is unique. If $B$
+        and $C$ are inverses of $A$, then $B= C$.
+      </p>
+      <h3>Proof</h3>
+      $$ B= BI= B (AC) $$
+      <p>by Associativity:</p>
+      $$ = (BA)C= IC= C $$
+      <p class="square">$\square$</p>
+      <h2>Inverse and Transpose</h2>
+      <h3>Theorem</h3>
+      <p>
+        If $A$ is an invertible matrix, then $A^T$ is also invertible. We have:
+      </p>
+      $$ \left( A^T \right)^{-1} = \left( A^{-1} \right)^T $$
+      <h3>Proof</h3>
+      <p>Let $A$ be a square matrix and its determinant be non-zero:</p>
+      $$ A^T (A^{-1})^T = (A^{-1}A)^T = I^T = I $$
+      <p class="square">$\square$</p>
+      <h2>Inverse of matrix products</h2>
+      <h3>Theorem</h3>
+      <p>
+        If $A$ and $B$ are invertible matrices of the same size, then $AB$ is
+        invertible. We have:
+      </p>
+      $$ (AB)^{-1} = B^{-1}A^{-1}$$
+      <h3>Proof</h3>
+      <p>Let $A$ and $B$ be invertible matrices:</p>
+      $$(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AA^{-1} = I$$
+      <p class="square">$\square$</p>
+      <h2></h2>
     </div>
   </body>
 </html>
