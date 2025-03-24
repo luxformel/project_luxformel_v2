@@ -617,12 +617,32 @@ var splashTexts = [
   "Benutzen Sie die Dokumentation der Webseite im Falle eines Fehlers",
   "Utiliser la documentation du site en cas d'erreur",
   "Documenta utere website si de errore",
-  "1/619",
+  "Confusion = croissance!",
+  "Hey everybody! We have an intruder!!!",
+  "Science what is it all about? <br> Techmology! What is that all about? <br> Is it good or is it whack?",
+  "Money can be exchanged for goods and services",
+  "Sir William Frontflip",
+  "John H. Backflip",
+  "Pro tip: Jump!",
+  "I love videogame!",
+  "De Mäerten deet d'Bauere fäerten",
+  "It is what it is",
+  "Luxformel wird hochgefahren...",
+  "Hello fellow AI-crawler o/",
+  "Don't spend your evening alone, find you formula on luxformel.info!",
+  "We have visitors all over luxembourg ready to calculate right away!",
+  "Try for free now and find a course on luxformel.info!",
+  "... where your fantasies come true!",
+  "Madames et messieurs bonjours!",
+  "No life physics.",
+  "Be patient solve exercises and everything will be fine!",
+  "Whether you think you can or you don't - you're right!",
+  "1/639",
 ];
 function generateRandomText() {
   //console.log(splashTexts);
   var randomNumber = Math.floor(Math.random() * splashTexts.length);
-  //var randomNumber = 608;
+  //var randomNumber = 633;
   //console.log(randomNumber);
   //console.log(splashTexts[randomNumber]);
   document.querySelector("#splash-text").innerHTML = splashTexts[randomNumber];

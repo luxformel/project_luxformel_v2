@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Differntial Equations</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Differntial Equations</h1>
+      <h2>First Order Linear Differential Equation</h2>
+      <p>A first order linear differntial equation has the following form:</p>
+      $$ \frac{dy}{dx} +P\left( x \right) y=Q\left( x \right) $$
+      <h2>Integrating Factor</h2>
+      $$ \frac{dy}{dx} +P\left( x \right) y=Q\left( x \right) $$
+      <p>multiyplying the expression by the integrating factor $\mu(x)$</p>
+      $$\mu(x) \frac{dy}{dx} + \mu(x) P\left( x \right) y= \mu(x) Q\left( x
+      \right) $$
+      <p>
+        Setting: $\mu^{\prime}(x) := \mu(x) P\left( x \right)$ and finding the
+        integrating factor:
+      </p>
+      $$\mu^{\prime}(x) = \mu(x) P\left( x \right)$$ $$ \Leftrightarrow
+      \frac{\mu^{\prime}(x)}{\mu(x)} = P\left( x \right) $$ $$ \Leftrightarrow
+      \int \frac{\mu^{\prime}(x)}{\mu(x)} dx = \int P\left( x \right) dx $$ $$
+      \Leftrightarrow \ln \left( \left| \mu(x) \right| \right) = \int P\left( x
+      \right) dx $$ $$ \Rightarrow \mu(x) = e^{ \int P\left( x \right) dx} $$
+    </div>
+  </body>
+</html>

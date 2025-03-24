@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Électrostatique</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Électrostatique</h1>
+      <h2>Loi de Coulomb</h2>
+      <p>
+        Considérons deux charges électriques ponctuelles $q_1$ et $q_2$ séparées
+        par une distance $r$. Pour fixer les idées nous admettons que $q_1 > 0$
+        et $q_1 < 0$ . Suivant Coulomb les deux charges ponctuelles s'attirent
+        mutuellement par des forces $\overrightarrow{F_1}$ et
+        $\overrightarrow{F_2}$ dirigées suivant la droite qui relie $q_1$ et
+        $q_2$. Les deux forces d'interaction qui obéissent au principe de
+        l'action et de la réaction $\overrightarrow{F_1} = -
+        \overrightarrow{F_2}$ ont une norme commune $F = F_1 = F_2$ telle que
+      </p>
+      $$ F \sim q_1 \cdot q_2 $$
+      <p>et que</p>
+      $$ F \sim \frac{1}{r^2} $$
+      <p>On obtient donc:</p>
+      $$ F \sim \frac{q_1 \cdot q_2}{r^2} $$
+      <p>Introduisons le facteur de proportionnalité $k$:</p>
+      $$ F = k \cdot \frac{q_1 \cdot q_2}{r^2} $$
+      <p>et vectoriellement:</p>
+      $$\overrightarrow{F_1} = - \overrightarrow{F_2} = F
+      \frac{\overrightarrow{r}}{r} = k \cdot \frac{q_1 \cdot q_2}{r^2}
+      \frac{\overrightarrow{r}}{r} $$
+      <h2>Champ électrique</h2>
+      <p>
+        Plaçons la charge ponctuelle $ Q > 0$ en l'origine $O$ d'un repère
+        d'espace vide. La charge $Q$ modifie les propriétés physiques de
+        l'espace. En effet, si nous plaçons une charge témoin ponctuelle $q_0 >
+        0$ en un point repéré par le vecteur-position $\overrightarrow{r}$,
+        $q_0$ est libre en l'absence de $Q$ ; par contre, en présence de la
+        charge $Q$ , la charge témoin subit la force de Coulomb:
+      </p>
+      $$ \overrightarrow{F} \left( \ \overrightarrow{r} \ \right) = \frac{1}{4
+      \pi \varepsilon_0} \frac{Q q_0}{r^2} \frac{\overrightarrow{r}}{r} $$
+      <img
+        src="../img/Electrostatique/champ-electrique.png"
+        alt="champ-electrique"
+        class="zeichnungen"
+      />
+      <p>
+        Pour décrire les propriétés de l'espace modifiées par la charge $Q$ ,
+        nous associons à tout point de l'espace un champ électrique caractérisé
+        par le vecteur:
+      </p>
+      $$ \overrightarrow{E} \left( \ \overrightarrow{r} \ \right) = \lim_{q_0
+      \rightarrow 0} \frac{\overrightarrow{F} \left( \ \overrightarrow{r} \
+      \right)}{q_0} = \frac{1}{4 \pi \varepsilon_0} \frac{Q}{r^2}
+      \frac{\overrightarrow{r}}{r} $$
+      <h3>Remarque</h3>
+      <p>
+        Dans la définition du champ électrique nous exigeons $q \rightarrow 0$
+        pour garantir que la charge témoin ne perturbe pas substantiellement le
+        champ électrique créé par la charge source $Q$.
+      </p>
+      <h3>Unité</h3>
+      $$ \left[ E \right] = \frac{\left[ F \right]}{\left[ q_0 \right]} =
+      \frac{N}{C} $$
+      <p>ou bien:</p>
+      $$ \left[ E \right] = \frac{V}{m} $$
+      <h2>
+        Champ électrique créé par une distribution de charges ponctuelles
+        discrètes
+      </h2>
+      <p>Considérons la distribution de $n$ charges ponctuelles discrètes.</p>
+
+      <img
+        src="../img/Electrostatique/charges-discretes.png"
+        alt="charges-discretes"
+        class="zeichnungen-big"
+      />
+
+      <p>
+        Cette accumulation de charges est source d'un champ électrique qui
+        existe en tout point de l'espace. Pour déterminer les caractéristiques
+        de ce champ électrique au point repéré par le vecteur-position
+        $\overrightarrow{r}$ , nous plaçons en ce point la charge témoin $q_0$
+        et appliquons le principe de superposition pour déterminer la force
+        électrique résultante agissant sur $q_0$:
+      </p>
+      $$ \overrightarrow{F} \left( \ \overrightarrow{r} \ \right) =
+      \sum_{i=1}^{n} \overrightarrow{F_i} \left( \ \overrightarrow{r} \ \right)
+      $$
+      <p>avec</p>
+      $$ \overrightarrow{F_i} \left( \ \overrightarrow{r} \ \right) = \frac{1}{4
+      \pi \varepsilon_0} \frac{Q_{i}q_{0}}{\| \overrightarrow{r} -
+      \overrightarrow{r_i} \|^{2}} \frac{\overrightarrow{r} -
+      \overrightarrow{r_i} }{\| \overrightarrow{r} - \overrightarrow{r_i} \|} $$
+      <p>ainsi</p>
+      $$ \overrightarrow{E} \left( \ \overrightarrow{r} \ \right) =
+      \frac{\overrightarrow{F} \left( \ \overrightarrow{r} \ \right)}{q_0} =
+      \sum_{i=1}^n \frac{1}{4 \pi \varepsilon_0} \frac{Q_{i}}{\|
+      \overrightarrow{r} - \overrightarrow{r_i} \|^{2}} \frac{\overrightarrow{r}
+      - \overrightarrow{r_i} }{\| \overrightarrow{r} - \overrightarrow{r_i}
+      \|}$$
+      <p>et</p>
+      $$ \overrightarrow{E} \left( \ \overrightarrow{r} \ \right) =
+      \sum_{i=1}^{n} \overrightarrow{E_i} \left( \ \overrightarrow{r} \ \right)
+      $$
+      <p>
+        À l'image des forces électriques, les champs électriques obéissent eux
+        aussi à un principe de superposition.
+      </p>
+      <h2>Champ électrique créé par une distribution de charge continue</h2>
+      <p>
+        Pour déterminer le champ électrique créé par le nuage chargé au point
+        repéré par le vecteur-position $\overrightarrow{r}$ , nous décomposons
+        la distribution de charge continue en des éléments de volume $d \tau$
+        infinitésimaux, assimilables à des charges ponctuelles.
+      </p>
+
+      <img
+        src="../img/Electrostatique/distribution-de-charge.png"
+        alt="distribution-de-charge"
+        class="zeichnungen-big"
+      />
+
+      <p>
+        La contribution de la charge infinitésimale $\rho \left( \
+        \overrightarrow{r^{\prime}} \ \right)$ à l'endroit
+        $\overrightarrow{r^{\prime}}$ au champ électrique en
+        $\overrightarrow{r}$ est donnée par:
+      </p>
+      $$ d \overrightarrow{E^{\prime}} \left( \ \overrightarrow{r} \ \right) =
+      \frac{1}{4 \pi \varepsilon_0} \frac{ \rho \left( \
+      \overrightarrow{r^{\prime}} \ \right) d \tau}{\| \overrightarrow{r} -
+      \overrightarrow{r_i} \|^{2}} \frac{\overrightarrow{r} -
+      \overrightarrow{r_i} }{\| \overrightarrow{r} - \overrightarrow{r_i} \|} $$
+
+      <p>
+        Le champ électrique total en $\overrightarrow{r}$ est obtenu en
+        appliquant le principe de superposition : nous intégrons les
+        contributions des différents éléments de volume qui forment la
+        distribution de charge :
+      </p>
+      $$ \overrightarrow{E} \left( \ \overrightarrow{r} \ \right)
+      =\underset{\begin{gathered} \text{distribution} \newline \text{de charge}
+      \end{gathered}}{\iiint} d \overrightarrow{E} \left( \ \overrightarrow{r} \
+      \right) $$
+    </div>
+  </body>
+</html>

@@ -174,19 +174,24 @@ tr:nth-child(odd) > td {
 ul,
 ol {
   margin-left: 2rem;
+  color: var(--black);
 }
 
 ul {
   list-style: disc;
+  color: var(--black);
 }
 ul > li > ul {
   list-style: circle;
+  color: var(--black);
 }
 ol {
   list-style: decimal;
+  color: var(--black);
 }
 ol > li > ol {
   list-style: lower-alpha;
+  color: var(--black);
 }
 
 @media (min-width: 768px) {
@@ -254,6 +259,17 @@ ol > li > ol {
 }
 
 /*images*/
+.zeichnungen-small {
+  max-width: 15rem;
+  max-height: 15rem;
+
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
 .zeichnungen {
   max-width: 20rem;
   max-height: 20rem;

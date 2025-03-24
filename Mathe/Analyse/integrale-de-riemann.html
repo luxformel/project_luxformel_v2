@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Intégrale de Riemann</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Intégrale de Riemann</h1>
+      <h2>Fonctions en escalier</h2>
+      <h3>Définition</h3>
+      <p>
+        Une subdivision de $ [a,b] $ est une famille finie $\sigma =
+        (x_0,x_1,···,x_n)$ de points de $ [a,b] $ telle que $a = x_0 < x_1 <···<
+        x_n = b $. Le nombre $ \delta ( \sigma ) = \max_{i \in \{0,1,···,n−1 \}
+        } (x_{i+1} − x_i)$ est appelé pas de la subdivision.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Une fonction $f : [a,b] \rightarrow \mathbb{R}$ est une fonction en
+        escalier s'il existe une subdivision $\sigma = (x_0,x_1,···,x_n)$ de
+        [a,b] telle que $f$ est constante sur les intervalles $]x_i,x_{i+1}[$
+        pour tout $i \in \{0,1,···,n−1 \}$. On dira alors que la subdivision
+        $\sigma$ est adaptée à $f$.
+      </p>
+      <h2>Intégrale des fonction en escalier</h2>
+      <h3>Proposition</h3>
+      <p>
+        Soit \( f : [a,b] \to \mathbb{R} \) une fonction en escalier, soit \(
+        \sigma = (x_0, x_1, \ldots, x_n) \) une subdivision de \( [a,b] \)
+        adaptée à \( f \), et pour tout \( i \in \{0, \ldots, n-1\} \) soit \(
+        m_i \) la valeur de \( f \) sur \( ]x_i, x_{i+1}[ \). Alors la somme
+      </p>
+      \[ I(f, \sigma) = \sum_{i=0}^{n-1} m_i(x_{i+1} - x_i) \]
+      <p>ne dépend pas du choix de la subdivision \( \sigma \).</p>
+      <h3>Démonstration</h3>
+      <p>
+        Si \( \sigma \) et \( \sigma' \) sont deux subdivisions de \( I \)
+        adaptées à \( f \), on peut construire une troisième subdivision \(
+        \sigma'' \) obtenue en prenant tous les points de \( \sigma \) et de \(
+        \sigma' \). Comme la somme \( I(f) \) ne change pas lorsqu’on ajoute des
+        points où \( f \) est constante, on en déduit que \( I(f) \) ne dépend
+        pas de la subdivision.
+      </p>
+      <p class="square">$\square$</p>
+
+      <h3>Définition</h3>
+      <p>
+        On dira que \( I(f, \sigma) \) est l'intégrale de la fonction en
+        escalier $f$ sur l'intervalle $I$, et on notera, pour n'importe quelle
+        subdivision adaptée \( \sigma \) :
+      </p>
+      \[ I(f, \sigma) = \int_a^b f(t) \, dt. \]
+      <h3>Remarque</h3>
+      <p>
+        Si \( f \) est positive, son intégrale sur \( I \) est l'aire du domaine
+        compris sous son graphe et au-dessus de l'axe \( Ox \).
+      </p>
+      <h2>Propriété de l'intégrale des fonctions en escalier</h2>
+      <h3>Proposition</h3>
+      <p>
+        Soient \( f \) et \( g \) des fonctions en escalier sur un intervalle \(
+        I = [a, b] \), avec \( a < b \). Alors :
+      </p>
+      <ol>
+        <li>
+          <p>\( f + g \) est encore une fonction en escalier, et</p>
+          \[ \int_a^b (f+g)(t) \, dt = \int_a^b f(t) \, dt + \int_a^b g(t) \,
+          dt. \]
+        </li>
+        <li>
+          <p>
+            Pour tout \( \lambda \in \mathbb{R} \), \( \lambda f \) est une
+            fonction en escalier, et
+          </p>
+          \[ \int_a^b (\lambda f)(t) \, dt = \lambda \int_a^b f(t) \, dt. \]
+        </li>
+        <li>
+          <p>Si \( f \leq g \), alors</p>
+          \[ \int_a^b f(t) \, dt \leq \int_a^b g(t) \, dt. \]
+        </li>
+        <li>
+          <p>Pour tout \( c \in ]a, b[ \),</p>
+          \[ \int_a^c f(t) \, dt + \int_c^b f(t) \, dt = \int_a^b f(t) \, dt. \]
+        </li>
+        <li>
+          <p>
+            Si \( f \) et \( g \) sont égales sauf en un nombre fini de points,
+            alors leurs intégrales sont égales.
+          </p>
+        </li>
+      </ol>
+      <h3>Démonstration</h3>
+      <p>
+        On prend une subdivision $\sigma$ qui est adaptée à la fois à $f$ et à
+        $g$, soit \( \sigma = (x_0, x_1, \cdots, x_n) \) et on note $f_i$ et
+        $g_i$ les valeurs respectives de $f$ et de $g$ sur $]x_i, x_{i+1}[$.
+        Pour le premier point on voit que $f + g$ est en escalier (et $\sigma$
+        est adaptée à $f + g$) et par définition de l'intégrale d'une fonction
+        en escalier :
+      </p>
+      $$ \int_a^b (f + g)(t)dt = \sum_{i=0}^{n-1} (x_{i+1} - x_i)(f_i + g_i)$$
+      $$ = \sum_{i=0}^{n-1} (x_{i+1} - x_i)f_i + \sum_{i=0}^{n-1} (x_{i+1} -
+      x_i)g_i$$ $$ = \int_a^b f(t)dt + \int_a^b g(t)dt. $$
+
+      <p>
+        Pour $3.$ , on prend à nouveau une subdivision $\sigma = (x_0, x_1,
+        \cdots, x_n)$ adaptée à la fois à $f$ et à $g$, et on note encore $f_i$
+        et $g_i$ les valeurs respectives de $f$ et de $g$ sur $]x_i, x_{i+1}[$.
+        On remarque que $f_i \geq g_i$ pour tout $i$, si bien que
+      </p>
+
+      \[ \int_a^b f(t)dt = \sum_{i=0}^{n-1} (x_{i+1} - x_i)f_i \] \[ \geq
+      \sum_{i=0}^{n-1} (x_{i+1} - x_i)g_i\] \[= \int_a^b g(t)dt. \]
+
+      <p>
+        Le point $4.$ suit de la définition de l'intégrale, en prenant une
+        subdivision adaptée à $f$ pour laquelle $c$ est un point de subdivision.
+        <br />
+        Enfin le point $5.$ suit aussi de la définition de l'intégrale, puisque
+        changer la valeur d'une fonction en escalier en un point ne change pas
+        son intégrale.
+      </p>
+
+      <p class="square">$\square$</p>
+
+      <h2>Définition de l'intégrale au sens de Riemann</h2>
+
+      <h3>Définition</h3>
+      <p>
+        On dit que $f$ est intégrable au sens de Riemann sur $[a,b]$ si $I_m(f)
+        = I_M(f)$. Dans ce cas, on note:
+      </p>
+      \[ \int_{a}^{b} f(t) dt = I_m(f). \]
+      <p>On utilisera la caractérisation suivante des fonctions intégrables.</p>
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : [a,b] \to \mathbb{R}$. $f$ est intégrable si et seulement si
+        pour tout $\varepsilon > 0$, il existe $g \in e(f)$ et $h \in E(f)$
+        telles que:
+      </p>
+      \[ \int_{a}^{b} h(t) dt - \int_{a}^{b} g(t) dt \leq \varepsilon. \]
+      <h3>Démonstration</h3>
+      <p>
+        Supposons d'abord que $f$ est intégrable, et soit $I = \int_{a}^{b} f(t)
+        dt$. Choisissons $\varepsilon > 0$. On sait que:
+      </p>
+      \[ \sup_{g \in e(f)} \int_{a}^{b} g(t) dt = I, \]
+      <p>et on en déduit qu'il existe une fonction $g \in e(f)$ telle que</p>
+      \[ I - \int_{a}^{b} g(t) dt \leq \varepsilon/2. \]
+      <p>De même, il existe $h \in E(f)$ telle que:</p>
+      \[ \int_{a}^{b} h(t) dt - I \leq \varepsilon/2. \]
+      <p>On voit alors en ajoutant les deux inégalités que</p>
+      \[ \int_{a}^{b} h(t) dt - \int_{a}^{b} g(t) dt \leq \varepsilon. \]
+      <p>
+        Supposons maintenant que pour tout $\varepsilon > 0$, il existe $g \in
+        e(f)$ et $h \in E(f)$ telles que:
+      </p>
+      \[ \int_{a}^{b} h(t) dt - \int_{a}^{b} g(t) dt \leq \varepsilon. \]
+      <p>On remarque que si $\bar{g} \in e(f)$, alors:</p>
+      \[ \int_{a}^{b} \bar{g}(t) dt \leq \int_{a}^{b} h(t) dt, \]
+      <p>
+        car pour tout $t \in [a,b]$ on a $\bar{g}(t) \leq f(t) \leq h(t)$. On en
+        déduit que:
+      </p>
+      \[ \int_a^b g(t) dt \leq \sup_{\bar{g} \in E(f)} \int_a^b \bar{g}(t) dt
+      \leq \int_a^b h(t) dt. \]
+      <p>Le même argument appliqué à $h$ montre que:</p>
+      \[ \int_a^b g(t) dt \leq \inf_{h \in E(f)} \int_a^b h(t) dt \leq \int_a^b
+      h(t) dt. \]
+      <p>Ainsi, comme</p>
+      \[ \int_a^b h(t) dt - \int_a^b g(t) dt \leq \epsilon \]
+      <p>on voit que:</p>
+      \[ \inf_{h \in E(f)} \int_a^b h(t) dt - \sup_{\bar{g} \in E(f)} \int_a^b
+      \bar{g}(t) dt \leq \epsilon \]
+      <p>Comme ceci s'applique pour tout $\epsilon > 0$, on en déduit que:</p>
+      \[ \inf_{h \in E(f)} \int_a^b h(t) dt = \sup_{\bar{g} \in E(f)} \int_a^b
+      \bar{g}(t) dt \]
+      <p>et donc $f$ est intégrable.</p>
+      <p class="square">$\square$</p>
+
+      <h2>Intégrabilité des fonctions continues</h2>
+      <h3>Théorème</h3>
+      <p>
+        Toute fonction continue sur $[a,b]$ est intégrable au sens de Riemann.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Une fonction $f : [a,b] \to \mathbb{R}$ est uniformément continue si
+        pour tout $\epsilon > 0$, il existe $\alpha > 0$ telle que pour tout
+        $x,y \in [a,b]$, si $|y - x| \leq \alpha$, alors $|f(y) - f(x)| \leq
+        \epsilon$.
+      </p>
+      <h2>Principales propriétés</h2>
+      <h2>Sommes de Riemann</h2>
+    </div>
+  </body>
+</html>

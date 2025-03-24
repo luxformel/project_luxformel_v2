@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Error calculation</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Error calculation</h1>
+      <h2>Systematic uncertainties</h2>
+      <p>
+        Systematic uncertainties do influence under the same measurement
+        conditions all measurements in a similar way. Systematic uncertainties
+        are not reducible by repeated measurements.
+      </p>
+      <img
+        src="../img/Error calculation/Systematic uncertainties.png"
+        alt="Systematic uncertainties"
+        class="zeichnungen-small"
+      />
+      <h2>Statistical uncertainties</h2>
+      <p>
+        Statistical uncertainties do manifest themselves through random
+        fluctuations around an average value. Statistical uncertainties are
+        reducible by repeated measurements.
+      </p>
+      <img
+        src="../img/Error calculation/Statistical uncertainties.png"
+        alt="Statistical uncertainties"
+        class="zeichnungen-small"
+      />
+      <h2>Empirical mean</h2>
+      <p>The empirical mean of $n$ values $z_i$ of a sample is:</p>
+      $$ \bar{z} =\frac{1}{n} \sum_{i} z_{i} $$
+      <p>
+        The empirical mean is best estimate for true value $\left< z \right>$
+        which remains unknown.
+      </p>
+      <h2>Empirical standard deviation</h2>
+      <p>
+        The empirical standard deviation is the best estimate for true standard
+        deviation $\sigma_z$. It is a measurement of the dispersion of
+        individual measurements around the mean : the smaller the value of
+        $\sigma_z$ , the closer the measurements are to the mean measurement of
+        sample quality
+      </p>
+      $$ s_{z}=\sqrt{\frac{\sum_{i}^{} \left( \bar{z} -z_{i} \right)^{2}}{n-1}}
+      \simeq \sigma_z $$
+      <h2>Gaussian density, Normal density</h2>
+      <p>
+        Gaussian probability density with expectation $\mu$ and standard
+        deviation $\sigma$:
+      </p>
+      $$ f\left( z \right) =\frac{1}{\sqrt{2\pi} \sigma} e^{-\frac{\left( z-\mu
+      \right)^{2}}{2\sigma^{2}}} $$
+      <p>
+        The expectation $\mu$ corresponds to the true value, the mean $\left< z
+        \right >$.
+      </p>
+      <h2>Gaussian curve</h2>
+      <img src="" alt="" />
+      <h2>Interpretation of standard deviation</h2>
+      <p><u>Standard deviation</u>:</p>
+      <ul>
+        <li>
+          <p>
+            68,3% of individual values are in the interval $\left< z \right >
+            \pm \sigma_z $
+          </p>
+        </li>
+        <li>
+          <p>
+            95,5% of individual values are in the interval $\left< z \right >
+            \pm 2 \sigma_z $
+          </p>
+        </li>
+        <li>
+          <p>
+            99,7% of individual values are in the interval $\left< z \right >
+            \pm 3 \sigma_z $
+          </p>
+        </li>
+      </ul>
+      <p><u>Standard error</u>:</p>
+      <ul>
+        <li>
+          <p>
+            With a probability 68,3% the true value is in the interval $\left< z
+            \right > \pm \sigma_{\left< z \right >} $
+          </p>
+        </li>
+        <li>
+          <p>
+            With a probability 95,5% the true value is in the interval $\left< z
+            \right > \pm 2 \sigma_{\left< z \right >} $
+          </p>
+        </li>
+        <li>
+          <p>
+            With a probability 99,7% the true value is in the interval $\left< z
+            \right > \pm 3 \sigma_{\left< z \right >} $
+          </p>
+        </li>
+      </ul>
+      <img
+        src="../img/Error calculation/normal distribution.png"
+        alt="normal distribution"
+        class="zeichnungen-bigger"
+      />
+      $$ R = f \left( a, b, c, \cdots ,n \right) $$ $$ \Delta R=\left(
+      \frac{\partial R}{\partial a} \Delta a \right) + \left( \frac{\partial
+      R}{\partial b} \Delta b \right) + \cdots + \left( \frac{\partial
+      R}{\partial n} \Delta n \right) $$ $$ \Delta R=\sqrt{\left( \frac{\partial
+      R}{\partial a} \Delta a \right)^{2} + \left( \frac{\partial R}{\partial b}
+      \Delta b \right)^{2} + \cdots + \left( \frac{\partial R}{\partial n}
+      \Delta n \right)^{2} } $$
+    </div>
+  </body>
+</html>

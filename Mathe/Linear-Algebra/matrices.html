@@ -101,8 +101,8 @@
       $$ tr(A) = a_{11} + a_{22} + ... + a_{nn}$$
       <h3>Remark</h3>
       <p>There is no trace for a non square matrix.</p>
-      <h2>Partitioned matrix</h2>
-      <p>SOME TIME LATER</p>
+      <!-- <h2>Partitioned matrix</h2>
+      <p>SOME TIME LATER</p> -->
       <h2>Equality of matrices</h2>
       <h3>Theorem</h3>
       <p>
@@ -553,7 +553,113 @@
       <p>Let $A$ and $B$ be invertible matrices:</p>
       $$(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AA^{-1} = I$$
       <p class="square">$\square$</p>
-      <h2></h2>
+      <h2>Negative powers of invertible matrices</h2>
+      <p>
+        Suppose that $A$ is invertible, $A$ is a square matrix and $n \in
+        \mathbb{Z}$:
+      </p>
+      <ul>
+        <li><p>We define</p></li>
+        $$ A^{-n} := \left( A^{-1} \right)^{n} = \underbrace{A^{-1} A^{-1}
+        \ldots A^{-1}}_{n factors} $$
+        <li><p>All powers of $A$ are invertible.</p></li>
+        <li>
+          <p>
+            For any scalar $c \neq 0$ the matrix $cA$ is invertible and the
+            inverse is $\frac{1}{c} A^{-1}$
+          </p>
+        </li>
+      </ul>
+      <h2>Inverting elementary row operations</h2>
+      <p>Every elementary row operation has an inverse which are:</p>
+      <ul>
+        <li>
+          <p>
+            Multiply a row by a nonzero constant $c$. <br />
+            Multiply the same row by $\frac{1}{c}$.
+          </p>
+        </li>
+        <li>
+          <p>
+            Interchange two rows. <br />
+            Interchange the same two rows.
+          </p>
+        </li>
+        <li>
+          <p>
+            Add $cr_i$ to $r_j$ $(i \neq j)$. <br />
+            Add $−cr_i$ to $r_j$.
+          </p>
+        </li>
+      </ul>
+      <p>
+        If a matrix $B$ is obtained from a matrix $A$ by performing a sequence
+        of elementary row operations, then there is a sequence of elementary row
+        operations, which when applied to $B$ gives $A$.
+      </p>
+      <h2>Row equivalence</h2>
+      <p>
+        Two matrices are row equivalent if one can be obtained from the other by
+        elementary row operations. It is an equivalence relation:
+      </p>
+      <ol>
+        <li>
+          <p><u>reflexive</u>: $A$ is row equivalent to $A$</p>
+        </li>
+        <li>
+          <p>
+            <u>symmetric</u>: if $A$ is row equivalent to $B$, then $B$ is row
+            equivalent to $A$
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>transitive</u>: if $A$ is row equivalent to $B$ and $B$ is row
+            equivalent to $C$, then $A$ is row equivalent to $C$
+          </p>
+        </li>
+      </ol>
+      <h3>Theorem</h3>
+      <p>
+        Two matrices are row equivalent if and only if they have the same
+        reduced row echelon form.
+      </p>
+      <h2>Elementary matrix</h2>
+      <h3>Definition</h3>
+      <p>
+        A square matrix is called an elementary matrix if it can be obtained
+        from the identity matrix by performing one elementary row operation.
+      </p>
+      <h2>
+        Elementary row operation as the multiplication by an elementary matrix
+      </h2>
+      <h3>Theroem</h3>
+      <p>
+        If the elementary matrix $E$ results from a certain elementary row
+        operation on the identity matrix $I$ , performing this elementary row
+        operation on a matrix $A$ gives $EA$.
+      </p>
+      <!-- <h3>Proof</h3>
+      <p>
+        There are at most two non-zero entries in the $i$<sup>th</sup> row of
+        $E$.
+      </p>
+      $$ EA_{ij}= e_{ih}a_{hj} + e_{ih^{\prime}}a_{h^{\prime}j} $$ -->
+      <h2>Invertiblity of elementary matrices</h2>
+      <h3>Theorem</h3>
+      <p>
+        Every elementary matrix is invertible. The inverse is the elementary
+        matrix corresponding to the inverse elementary row operation.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Consider $E$ , $E^{\prime}$ elementary matrices of the same size
+        corresponding to inverse row operations. We have:
+      </p>
+      $$ E^{\prime} E= I$$
+      <p>because:</p>
+      $$ E^{\prime} \left( EI \right) = I$$
+      <p class="square">$\square$</p>
     </div>
   </body>
 </html>
