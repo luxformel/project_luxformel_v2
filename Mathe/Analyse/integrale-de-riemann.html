@@ -216,8 +216,246 @@
         $x,y \in [a,b]$, si $|y - x| \leq \alpha$, alors $|f(y) - f(x)| \leq
         \epsilon$.
       </p>
+      <h3>Théorème</h3>
+      <p>
+        Toute fonction continue sur un intervalle de la forme $[a,b]$ est
+        uniformément continue sur $[a,b]$.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit $f : [a,b] \to \mathbb{R}$ continue, avec $a < b$, elle est donc
+        uniformément continue. Soit $\omega > 0$. On applique l'uniforme
+        continuité de $f$ avec la valeur $\omega' = \frac{\omega}{|b-a|}$, on
+        trouve qu'il existe $\varepsilon > 0$ telle que :
+      </p>
+      <p>$\forall x, y \in [a,b]$</p>
+      $$ |y - x| < \varepsilon \Rightarrow |f(y) - f(x)| < \omega' =
+      \frac{\omega}{|b-a|} $$
+      <p>
+        On prend maintenant une subdivision $a = x_0 < x_1 < \cdots < x_n = b$
+        de $[a,b]$ telle que pour tout $i$, $x_{i+1} - x_i < \varepsilon$, et on
+        définit des fonctions $g, h : [a,b] \to \mathbb{R}$ par :
+      </p>
+      <p>Pour $t \in [x_i, x_{i+1}[$</p>
+      \[g(t) = \min_{[x_i,x_{i+1}]} f, \quad h(t) = \max_{[x_i,x_{i+1}]} f \]
+      <p>
+        pour tout $i \in \{0,1,\dots,n-1\}$. Par construction, $g \leq f \leq
+        h$. On voit alors que pour tout $i \in \{0,1,\dots,n-1\}$,
+      </p>
+      \[ \max_{[x_i,x_{i+1}]} f - \min_{[x_i,x_{i+1}]} f < \frac{\omega}{|b-a|}
+      \]
+      <p>et il suit par la définition des fonctions en escalier que:</p>
+      \[ \int_a^b h(t)\,dt - \int_a^b g(t)\,dt < \frac{\omega}{|b-a|}
+      \sum_{i=0}^{n-1}(x_{i+1} - x_i) = \omega \]
+      <p>Ainsi $f$ est intégrable.</p>
+      <p class="square">$\square$</p>
+      <h3>Corollaire</h3>
+      <p>Toute fonction continue par morceaux est intégrable.</p>
+      <h3>Démonstration</h3>
+      <p>
+        Si une fonction est continue par morceaux sur $[a,b]$, elle est
+        intégrable sur chacun des intervalles où elle est continue, et donc
+        intégrable sur $[a,b]$ d'après la définition de l'intégrabilité.
+      </p>
+      <p class="square">$\square$</p>
       <h2>Principales propriétés</h2>
+      <h3>Propositions</h3>
+      <p>
+        Soient $f, g : [a,b] \to \mathbb{R}$ des fonctions intégrables, avec $a
+        < b$. Alors :
+      </p>
+      <ul>
+        <li>
+          <p>$f + g$ est encore intégrable, et</p>
+          $$ \int_a^b (f+g)(t)\,dt = \int_a^b f(t)\,dt + \int_a^b g(t)\,dt $$
+        </li>
+        <li>
+          <p>
+            Pour tout $\theta \in \mathbb{R}$, $\theta f$ est intégrable, et
+          </p>
+          $$ \int_a^b (\theta f)(t)\,dt = \theta \int_a^b f(t)\,dt$$
+        </li>
+        <li>
+          <p>Si $f = g$, alors</p>
+          $$ \int_a^b f(t)\,dt = \int_a^b g(t)\,dt $$
+        </li>
+        <li>
+          <p>Pour tout $c \in\, ]a,b[$,</p>
+          $$ \int_a^c f(t)\,dt + \int_c^b f(t)\,dt = \int_a^b f(t)\,dt $$
+        </li>
+        <li>
+          <p>
+            Si $f$ et $g$ sont égales sauf en un nombre fini de points, alors
+            leurs intégrales sont égales.
+          </p>
+        </li>
+      </ul>
+      <h3>Proposition</h3>
+      <p>
+        Soient $f, g : [a,b] \to \mathbb{R}$ deux fonctions intégrables, donc
+        bornées. Alors la fonction produit $fg$ est intégrable.
+      </p>
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : [a,b] \to \mathbb{R}$ intégrable, $a < b$. Supposons qu'il
+        existe des réels $m, M$ tels que pour tout $t \in [a,b]$, $m \leq f(t)
+        \leq M$. Alors :
+      </p>
+      $$m \leq \frac{1}{b - a} \int_a^b f(t)\,dt \leq M $$
+      <h3>Démonstration</h3>
+      <p>
+        On note que la fonction constante égale à $m$ est une fonction en
+        escalier qui minore $f$, elle est donc dans $e(f)$ et donc, par
+        définition de l'intégrale de $f$, son intégrale est plus petite que
+        celle de $f$. On a donc:
+      </p>
+      $$ m(b - a) \leq \int_a^b f(t)\,dt $$
+      <p>
+        De même, la fonction constante égale à $M$ est une fonction en escalier
+        qui majore $f$, elle est donc dans $E(f)$, et on a:
+      </p>
+      $$ \int_a^b f(t)\,dt \leq M(b - a) $$
+      <p>D'où:</p>
+      $$ m \leq \frac{1}{b - a} \int_a^b f(t)\,dt \leq M$$
+      <p class="square">$\square$</p>
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : [a,b] \to \mathbb{R}$ continue, $a < b$. Alors il existe $c
+        \in [a,b]$ tel que :
+      </p>
+      $$f(c) = \frac{1}{b - a} \int_a^b f(t)\,dt$$
+      <h3>Démonstration</h3>
+      <p>
+        Soient $m = \min_{[a,b]} f$ et $M = \max_{[a,b]} f$. D'après la
+        proposition précédente :
+      </p>
+      $$m \leq \frac{1}{b - a} \int_a^b f(t)\,dt \leq M $$
+      <p>
+        Soient $x_m$ et $x_M$ des points de $[a,b]$ tels que $f(x_m) = m$ et
+        $f(x_M) = M$. Comme $f$ est continue, d'après le théorème des valeurs
+        intermédiaires, il existe un point $c$ entre $a$ et $b$ tel que:
+      </p>
+      $$ f(c) = \frac{1}{b - a} \int_a^b f(t)\,dt $$
+      <p>d'où le résultat.</p>
+      <p class="square">$\square$</p>
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : [a,b] \to \mathbb{R}$ intégrable, $a < b$. Alors $|f|$ est
+        intégrable sur $[a,b]$, et
+      </p>
+      $$ \left| \int_a^b f(t)\,dt \right| \leq \int_a^b |f(t)|\,dt $$
+      <h3>Démonstration</h3>
+      <p>
+        Soient $f^- (t) = \max(0, -f(t))$, $f^+ (t) = \max(0, f(t))$. Alors
+        $f^-$ et $f^+$ sont à valeurs positives, $f = f^+ - f^-$, et $|f| = f^+
+        + f^-$. On dit que $f^-$ et $f^+$ sont les parties négative et positive
+        de $f$. <br />
+        Choisissons $\omega > 0$. Soient $g$ et $h$ des fonctions en escalier
+        sur $[a,b]$ telles que $g \leq f \leq h$ et que
+      </p>
+      $$ \int_a^b h(t)\,dt - \int_a^b g(t)\,dt < \omega$$
+      <p>
+        Soient $g^-$ et $g^+$ les parties négative et positive de $g$, et de
+        même pour $h$. Alors $g^-, g^+, h^-, h^+$ sont des fonctions en escalier
+        positives telles que
+      </p>
+      $$ g^+ \leq f^+ \leq h^+,\quad h^- \leq f^- \leq g^- $$
+      <p>De plus on a:</p>
+      $$ \int_a^b (h^+ - g^+)(t)\,dt \leq \int_a^b (h - g)(t)\,dt < \omega $$
+      <p>et de même</p>
+      $$ \int_a^b (g^- - h^-)(t)\,dt < \omega $$
+      <p>
+        Donc $f^-$ et $f^+$ sont intégrables sur $[a,b]$, et il en est donc de
+        même de $|f| = f^- + f^+$. Comme $-|f| \leq f \leq |f|$, on a en
+        intégrant :
+      </p>
+      $$ - \int_a^b |f(t)|\,dt \leq \int_a^b f(t)\,dt \leq \int_a^b |f(t)|\,dt
+      $$
+      <p>d'où</p>
+      $$ \left| \int_a^b f(t)\,dt \right| \leq \int_a^b |f(t)|\,dt $$
+      <p class="square">$\square$</p>
       <h2>Sommes de Riemann</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $a < b$. Une subdivision pointée de $[a,b]$ est un couple
+        $(\varepsilon, t)$, où:
+      </p>
+      $$ \varepsilon = (x_0 = a, x_1, \dots, x_n = b) $$
+      <p>
+        est une subdivision de $[a,b]$, et $t = (t_0, t_1, \dots, t_{n-1})$ est
+        tel que pour tout $i \in \{0, \dots, n-1\}$, on a $t_i \in [x_i,
+        x_{i+1}]$.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        La somme de Riemann de la fonction $f : [a,b] \to \mathbb{R}$ associée à
+        la subdivision pointée $(\varepsilon, t)$ est :
+      </p>
+      $$ S(f, (\varepsilon, t)) = \sum_{i=0}^{n-1} f(t_i)(x_{i+1} - x_i) $$
+      <p>
+        On utilise souvent des subdivisions régulières de $[a, b]$, c'est-à-dire
+        que
+      </p>
+      $$ x_0 = a, \quad x_1 = a + \frac{b - a}{n}, \quad x_2 = a + \frac{2(b -
+      a)}{n}, \quad \dots, \quad x_n = b. $$
+      <p>
+        De même, on utilise souvent l'un des trois choix naturels possibles:
+      </p>
+      <ul>
+        <li><p>soit $t_i = x_i$</p></li>
+        <li><p>soit $t_i = x_{i+1}$</p></li>
+        <li><p>soit $t_i = \dfrac{x_i + x_{i+1}}{2}$</p></li>
+      </ul>
+      <p>Pour le premier choix par exemple, on obtient:</p>
+      $$ S(f, (\omega, t)) = \frac{b - a}{n} \left( f(a) + f\left(a + \frac{b -
+      a}{n} \right) + f\left(a + \frac{2(b - a)}{n} \right) + \dots + f\left(a +
+      \frac{(n-1)(b - a)}{n} \right) \right) $$
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : [a, b] \to \mathbb{R}$ une fonction continue ou continue par
+        morceaux, avec $a < b$. Pour tout $\varepsilon > 0$, il existe $\theta >
+        0$ tel que si $(\omega, t)$ est une subdivision pointée de $[a, b]$ dont
+        tous les intervalles sont de longueur au plus $\theta$, alors
+      </p>
+      $$ \left| \int_a^b f(t) \, dt - S(f, (\omega, t)) \right| < \varepsilon $$
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : [a, b] \to \mathbb{R}$ une fonction monotone. Alors $f$ est
+        intégrable sur $[a, b]$. De plus, les sommes de Riemann
+      </p>
+      $$ S_n = \frac{b - a}{n} \left( f(a) + f\left(a + \frac{b - a}{n} \right)
+      + f\left(a + \frac{2(b - a)}{n} \right) + \dots + f\left(a + \frac{(n-1)(b
+      - a)}{n} \right) \right) $$
+      <p>et</p>
+      $$ \overline{S}_n = \frac{b - a}{n} \left( f\left(a + \frac{b - a}{n}
+      \right) + f\left(a + \frac{2(b - a)}{n} \right) + \dots + f\left(a +
+      \frac{(n-1)(b - a)}{n} \right) + f(b) \right) $$
+      <p>convergent vers $\int_a^b f(t)\,dt$ quand $n \to \infty$.</p>
+      <h3>Démonstration</h3>
+      <p>
+        On suppose $f$ croissante et on note $g_n$ et $h_n$ les fonctions
+        définies par:
+      </p>
+      $$ g_n(t) = f\left(a + i \frac{b - a}{n} \right), \quad h_n(t) = f\left(a
+      + (i+1) \frac{b - a}{n} \right) $$
+      <p>
+        lorsque $t \in \left[a + i \frac{b - a}{n}, \, a + (i+1) \frac{b - a}{n}
+        \right[$
+      </p>
+      <p>
+        Ce sont des fonctions en escalier et, comme $f$ est croissante, on a
+        $g_n \leq f \leq h_n$. On note que:
+      </p>
+      $$ \int_a^b (h_n - g_n)(t) \, dt = \sum_{i=0}^{n-1} \frac{b - a}{n}
+      \left(f\left(a + (i+1)\frac{b - a}{n} \right) - f\left(a + i\frac{b -
+      a}{n} \right) \right) $$ $$ = \frac{b - a}{n}(f(b) - f(a)) $$
+      <p>Or</p>
+      $$ \lim_{n \to \infty} \frac{b - a}{n}(f(b) - f(a)) = 0 $$
+      <p>
+        et on en déduit que $f$ est intégrable et que son intégrale est la
+        limite des suites de terme général $S_n$ et $\overline{S}_n$.
+      </p>
+      <p class="square">$\square$</p>
     </div>
   </body>
 </html>

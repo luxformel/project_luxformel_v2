@@ -64,21 +64,216 @@
       $$\lim_{x\rightarrow a} \frac{f\left( x \right) -f\left( a \right)}{x- a}
       =\lim_{x\rightarrow a} \frac{mx+p - \left( ma + p \right)}{x- a}$$
       $$=\lim_{x\rightarrow a} \frac{mx+p - ma - p }{x- a}$$
-      $$=\lim_{x\rightarrow a} \frac{m x - ma }{x- a}$$ $$ = a$$
-      $$=\lim_{x\rightarrow a} \frac{m \left( x - a \right)}{x- a}$$ $$ = a$$
+      $$=\lim_{x\rightarrow a} \frac{m x - ma }{x- a}$$ $$=\lim_{x\rightarrow a}
+      \frac{m \left( x - a \right)}{x- a}$$ $$ = a$$
       <p>cqfd.</p>
+
+      <!-- Carré -->
       <h2>Dérivée de la fonction carré</h2>
       <h3>Théorème</h3>
       <p>
-        La fonction carré $f$ définie sur $D_f = \mathbb{R}$ par $f(x) = x^2$
-        est dérivable sur $D_{f^{\prime}}$ :
+        La fonction carré $f$ définie sur $D_f = \mathbb{R}$ par $f(x)=x^2$ est
+        dérivable sur $\mathbb{R}$ et
       </p>
-      $$ f^{\prime}(x) = 2x $$
+      $$f'(x)=2x.$$
+      <h3>Démonstration</h3>
+      $$ \lim_{x\to a} \frac{x^2-a^2}{x-a} =\lim_{x\to a} \frac{(x-a)(x+a)}{x-a}
+      =\lim_{x\to a}(x+a) =2a. $$
+      <p>cqfd.</p>
+
+      <!-- Inverse -->
       <h2>Dérivée de la fonction inverse</h2>
-      <h2>Dérivée de la fonction racine carré</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction inverse $f$ définie sur $D_f=\mathbb{R}\setminus\{0\}$ par
+        $f(x)=\frac1x$ est dérivable sur $D_f$ et
+      </p>
+      $$f'(x)=-\frac1{x^2}.$$
+      <h3>Démonstration</h3>
+      $$ \lim_{x\to a} \frac{\frac1x-\frac1a}{x-a} =\lim_{x\to a}
+      \frac{a-x}{ax(x-a)} =\lim_{x\to a} \biggl(-\frac1{ax}\biggr)
+      =-\frac1{a^2}. $$
+      <p>cqfd.</p>
+
+      <!-- Racine carrée -->
+      <h2>Dérivée de la fonction racine carrée</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction racine carrée $f$ définie sur $D_f=\mathbb{R}_+$ par
+        $f(x)=\sqrt{x}$ est dérivable sur $\mathbb{R}_+^*$ et
+      </p>
+      $$f'(x)=\frac1{2\sqrt{x}}.$$
+      <h3>Démonstration</h3>
+      $$ \lim_{x\to a} \frac{\sqrt{x}-\sqrt{a}}{x-a} =\lim_{x\to a}
+      \frac{(\sqrt{x}-\sqrt{a})(\sqrt{x}+\sqrt{a})}{(x-a)(\sqrt{x}+\sqrt{a})} $$
+      $$=\lim_{x\to a} \frac{x-a}{(x-a)(\sqrt{x}+\sqrt{a})}$$ $$ =\lim_{x\to a}
+      \frac1{\sqrt{x}+\sqrt{a}}$$ $$ =\frac1{2\sqrt{a}}. $$
+      <p>cqfd.</p>
+
+      <!-- Sinus -->
       <h2>Dérivée de la fonction sinus</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction sinus $f$ définie sur $D_f=\mathbb{R}$ par $f(x)=\sin(x)$
+        est dérivable sur $\mathbb{R}$ et
+      </p>
+      $$f'(x)=\cos(x).$$
+      <h3>Démonstration</h3>
+      $$ \lim_{h\to0} \frac{\sin(a+h)-\sin(a)}{h} =\lim_{h\to0}
+      \frac{\sin(a)\cos(h)+\cos(a)\sin(h)-\sin(a)}{h} $$
+      $$=\sin(a)\underbrace{\lim_{h\to0}\frac{\cos(h)-1}{h}}_{0}+\cos(a)\underbrace{\lim_{h\to0}\frac{\sin(h)}{h}}_{1}
+      $$ $$=\cos(a). $$
+      <p>cqfd.</p>
+
+      <!-- Cosinus -->
       <h2>Dérivée de la fonction cosinus</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction cosinus $f$ définie sur $D_f=\mathbb{R}$ par $f(x)=\cos(x)$
+        est dérivable sur $\mathbb{R}$ et
+      </p>
+      $$f'(x)=-\sin(x).$$
+      <h3>Démonstration</h3>
+      $$ \lim_{h\to0} \frac{\cos(a+h)-\cos(a)}{h} =\lim_{h\to0}
+      \frac{\cos(a)\cos(h)-\sin(a)\sin(h)-\cos(a)}{h} $$ $$ =\cos(a) \cdot
+      \underbrace{\lim_{h\to0}\frac{\cos(h)-1}{h}}_{0}-\sin(a) \cdot
+      \underbrace{\lim_{h\to0}\frac{\sin(h)}{h}}_{1} $$ $$=-\sin(a). $$
+      <p>cqfd.</p>
+
+      <!-- Tangente -->
       <h2>Dérivée de la fonction tangente</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction tangente $f$ définie sur
+        $\mathbb{R}\setminus\{\tfrac{\pi}{2}+k\pi\}$ par $f(x)=\tan(x)$ est
+        dérivable sur son domaine et
+      </p>
+      $$f'(x)=\frac{1}{\cos^2(x)}.$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{\tan(a+h)-\tan(a)}{h} $$ $$
+      =\lim_{h\to0}\frac{\frac{\sin(a+h)}{\cos(a+h)}-\frac{\sin(a)}{\cos(a)}}{h}.$$
+      <p>Regroupons en un seul quotient:</p>
+      $$
+      =\lim_{h\to0}\frac{\sin(a+h)\cos(a)-\sin(a)\cos(a+h)}{h\,\cos(a+h)\cos(a)}.
+      $$
+      <p>Or, par l'identité trigonométrique:</p>
+      $$ \sin(a+h)\cos(a)-\sin(a)\cos(a+h)=\sin(h). $$
+      <p>D'où</p>
+      $$ f'(a)=\lim_{h\to0}\frac{\sin(h)}{h}\cdot\frac{1}{\cos(a+h)\cos(a)} $$
+      $$=1\cdot\frac{1}{\cos^2(a)}$$ $$=\frac{1}{\cos^2(a)}. $$
+      <p>cqfd.</p>
+
+      <!-- Exponentielle -->
+      <h2>Dérivée de la fonction exponentielle</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction $f(x)=e^x$ définie sur $\mathbb{R}$ est dérivable sur
+        $\mathbb{R}$ et
+      </p>
+      $$f'(x)=e^x.$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{e^{a+h}-e^a}{h}
+      =\lim_{h\to0}\frac{e^a(e^h-1)}{h} =e^a\lim_{h\to0}\frac{e^h-1}{h}
+      =e^a\cdot1 =e^a. $$
+      <p>cqfd.</p>
+
+      <!-- a^x -->
+      <h2>Dérivée de la fonction exponentielle de base $a$</h2>
+      <h3>Théorème</h3>
+      <p>
+        Pour $a>0$, la fonction $f(x)=a^x$ définie sur $\mathbb{R}$ est
+        dérivable sur $\mathbb{R}$ et
+      </p>
+      $$f'(x)=a^x\ln(a).$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{a^{a+h}-a^a}{h} $$
+      $$=\lim_{h\to0}\frac{a^a(a^h-1)}{h} $$ $$
+      =a^a\lim_{h\to0}\frac{a^h-1}{h}$$ $$ =a^a\ln(a). $$
+      <p>cqfd.</p>
+
+      <!-- Logarithme -->
+      <h2>Dérivée de la fonction logarithme népérien</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction $f(x)=\ln(x)$ définie sur $\mathbb{R}_+^*$ est dérivable sur
+        $\mathbb{R}_+^*$ et
+      </p>
+      $$f'(x)=\frac{1}{x}.$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{\ln(a+h)-\ln(a)}{h} $$
+      $$=\lim_{h\to0}\frac{1}{h}\ln\Bigl(1+\frac{h}{a}\Bigr) $$
+      $$=\lim_{h\to0}\frac{1}{h}\cdot\frac{h}{a}\underbrace{\frac{\ln(1+\frac{h}{a})}{\frac{h}{a}}}_{\to1}$$
+      $$ =\frac{1}{a} $$
+      <p>cqfd.</p>
+
+      <!-- Logarithme base a -->
+      <h2>Dérivée de la fonction logarithme en base a</h2>
+      <h3>Théorème</h3>
+      <p>
+        La fonction \(f(x)=\log_a(x)\), définie sur $\mathbb{R}_+^*$ pour \(a>0,
+        a\neq1\), est dérivable sur $\mathbb{R}_+^*$ et
+      </p>
+      $$ f'(x)=\frac{1}{x\ln(a)}. $$
+      <h3>Démonstration</h3>
+      $$ f'(a) =\lim_{h\to0}\frac{\log_a(a+h)-\log_a(a)}{h} $$
+      $$=\lim_{h\to0}\frac{1}{h}
+      \left(\frac{\ln(a+h)}{\ln(a)}-\frac{\ln(a)}{\ln(a)}\right) $$
+      $$=\frac{1}{\ln(a)}\lim_{h\to0}\frac{\ln\bigl(a+h\bigr)-\ln(a)}{h}$$ $$
+      =\frac{1}{\ln(a)}\cdot\frac{1}{a}$$ $$ =\frac{1}{a\,\ln(a)}. $$
+      <p>cqfd.</p>
+
+      <!-- Hyperbolic -->
+      <h2>Dérivée de sinus hyperboliques</h2>
+
+      <!-- sinh -->
+      <h3>Théorème</h3>
+      <p>
+        La fonction $f(x)=\sinh(x)$ définie sur $\mathbb{R}$ est dérivable sur
+        $\mathbb{R}$ et
+      </p>
+      $$f'(x)=\cosh(x).$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{\sinh(a+h)-\sinh(a)}{h}$$ $$
+      =\lim_{h\to0}\frac{\sinh(a)\cosh(h)+\cosh(a)\sinh(h)-\sinh(a)}{h} $$ $$
+      =\sinh(a)\underbrace{\lim_{h\to0}\frac{\cosh(h)-1}{h}}_{0}
+      +\cosh(a)\underbrace{\lim_{h\to0}\frac{\sinh(h)}{h}}_{1}$$ $$ =\cosh(a).
+      $$
+      <p>cqfd.</p>
+      <h2>Dérivée de cosinus hyperboliques</h2>
+      <!-- cosh -->
+      <h3>Théorème</h3>
+      <p>
+        La fonction $f(x)=\cosh(x)$ définie sur $\mathbb{R}$ est dérivable sur
+        $\mathbb{R}$ et
+      </p>
+      $$f'(x)=\sinh(x).$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{\cosh(a+h)-\cosh(a)}{h} $$ $$
+      =\lim_{h\to0}\frac{\cosh(a)\cosh(h)+\sinh(a)\sinh(h)-\cosh(a)}{h} $$ $$
+      =\cosh(a)\underbrace{\lim_{h\to0}\frac{\cosh(h)-1}{h}}_{0}
+      +\sinh(a)\underbrace{\lim_{h\to0}\frac{\sinh(h)}{h}}_{1}$$ $$ =\sinh(a).
+      $$
+      <p>cqfd.</p>
+
+      <!-- tanh -->
+      <h3>Théorème</h3>
+      <p>
+        La fonction $f(x)=\tanh(x)=\dfrac{\sinh(x)}{\cosh(x)}$ définie sur
+        $\mathbb{R}$ est dérivable sur $\mathbb{R}$ et
+      </p>
+      $$f'(x)=\frac1{\cosh^2(x)}.$$
+      <h3>Démonstration</h3>
+      $$ f'(a)=\lim_{h\to0}\frac{\tanh(a+h)-\tanh(a)}{h} $$ $$
+      =\lim_{h\to0}\frac{\frac{\sinh(a+h)}{\cosh(a+h)}-\frac{\sinh(a)}{\cosh(a)}}{h}
+      $$ $$
+      =\lim_{h\to0}\frac{\sinh(a+h)\,\cosh(a)-\sinh(a)\,\cosh(a+h)}{h\,\cosh(a+h)\cosh(a)}.
+      $$
+      <p>Or, par les formules d'addition :</p>
+      $$ \sinh(a+h)\cosh(a)-\sinh(a)\cosh(a+h)=\sinh(h). $$
+      <p>D'où</p>
+      $$ f'(a)=\lim_{h\to0}\frac{\sinh(h)}{h}\,\frac{1}{\cosh(a+h)\cosh(a)}$$ $$
+      =1\cdot\frac{1}{\cosh^2(a)} $$ $$ =\frac{1}{\cosh^2(a)}. $$
+      <p>cqfd.</p>
     </div>
   </body>
 </html>

@@ -81,6 +81,7 @@ let sideNavigator = `
 
   <a href="#Mathématiques" class="submenu-toggle">Mathématiques</a>
   <div class="submenu" id="submenu">
+    <a href="/Mathe/Calculus/axiom-of-completeness.html">Axiom of completeness</a>
     <a href="/Mathe/Tableaux/collections-des-formules-exponentielles.html">Collection des formules des exponentielles</a>
     <a href="/Mathe/Tableaux/collections-des-formules-des-figures-geometriques.html">Collection des formules des figures géométriques</a>
     <a href="/Mathe/Tableaux/collections-des-formules-trigonometriques.html">Collection des formules de trigonométrie</a>
@@ -94,6 +95,7 @@ let sideNavigator = `
     <a href="/Mathe/Algebre/elements-d-arithmetique.html">Eléments d'arithmétique</a>
     <a href="/Mathe/Theorie des nombres/ensembles-des-nombres.html">Ensembles des Nombres</a>
     <a href="/Mathe/Fonctions/fonctions-exponentielles.html">Fonction exponentielle</a>
+    <a href="/Mathe/Analyse/fonctions-de-plusieurs-variable.html">Fonctions de plusieurs variables</a>
     <a href="/Mathe/Linear-Algebra/systems.html">Systems of Linear Equations</a>
     <a href="/Mathe/Fonctions/logarithme-neperien.html">Fonction logarithme népérien</a>
     <a href="/Mathe/Geometrie/geometrie-dans-l-espace.html">Géométrie dans l'espace</a>
@@ -105,6 +107,7 @@ let sideNavigator = `
     <a href="/Mathe/Algebre/nombre-complexes.html">Nombres Complexes</a>
     <a href="/Mathe/Probabilite/probabilites.html">Probabilités</a>
     <a href="/Mathe/Algebre/puissance-et-regle-de-priorote.html">Puissances et règles de priorité</a>
+    <a href="/Mathe/Calculus/sequences.html">Sequences</a>
     <a href="/Mathe/Tableaux/tableau-des-fonctions-derivees.html">Tableau des fonctions dérivées</a>
     <a href="/Mathe/Tableaux/tableau-des-primitives-de-fonction.html">Tableau des primitives de fonction</a>
     <a href="/Mathe/Geometrie/theoreme-de-pythagore.html">Théorème de Pythagore</a>

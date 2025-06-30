@@ -32,28 +32,39 @@
   <body>
     <div class="main-wrapper">
       <h1>Error calculation</h1>
-      <h2>Systematic uncertainties</h2>
+      <h2>Measurement and Uncertainty</h2>
       <p>
-        Systematic uncertainties do influence under the same measurement
-        conditions all measurements in a similar way. Systematic uncertainties
-        are not reducible by repeated measurements.
+        Measurement is always accompanied by uncertainty. We distinguish between
+        two main types:
       </p>
-      <img
-        src="../img/Error calculation/Systematic uncertainties.png"
-        alt="Systematic uncertainties"
-        class="zeichnungen-small"
-      />
-      <h2>Statistical uncertainties</h2>
-      <p>
-        Statistical uncertainties do manifest themselves through random
-        fluctuations around an average value. Statistical uncertainties are
-        reducible by repeated measurements.
-      </p>
-      <img
-        src="../img/Error calculation/Statistical uncertainties.png"
-        alt="Statistical uncertainties"
-        class="zeichnungen-small"
-      />
+      <ul>
+        <li>
+          <p><u>Systematic uncertainties:</u></p>
+          <p>
+            Systematic uncertainties do influence under the same measurement
+            conditions all measurements in a similar way. Systematic
+            uncertainties are not reducible by repeated measurements.
+          </p>
+          <img
+            src="../img/Error calculation/Systematic uncertainties.png"
+            alt="Systematic uncertainties"
+            class="zeichnungen-small"
+          />
+        </li>
+        <li>
+          <p><u>Statistical uncertainties</u></p>
+          <p>
+            Statistical uncertainties do manifest themselves through random
+            fluctuations around an average value. Statistical uncertainties are
+            reducible by repeated measurements.
+          </p>
+          <img
+            src="../img/Error calculation/Statistical uncertainties.png"
+            alt="Statistical uncertainties"
+            class="zeichnungen-small"
+          />
+        </li>
+      </ul>
       <h2>Empirical mean</h2>
       <p>The empirical mean of $n$ values $z_i$ of a sample is:</p>
       $$ \bar{z} =\frac{1}{n} \sum_{i} z_{i} $$
@@ -71,7 +82,11 @@
       </p>
       $$ s_{z}=\sqrt{\frac{\sum_{i}^{} \left( \bar{z} -z_{i} \right)^{2}}{n-1}}
       \simeq \sigma_z $$
-      <h2>Gaussian density, Normal density</h2>
+
+      <h2>Standard error of the mean</h2>
+      $$ s_{\bar{z}} \approx \frac{s_z}{\sqrt{n}} $$
+
+      <h2>Gaussian probability density</h2>
       <p>
         Gaussian probability density with expectation $\mu$ and standard
         deviation $\sigma$:
@@ -82,8 +97,20 @@
         The expectation $\mu$ corresponds to the true value, the mean $\left< z
         \right >$.
       </p>
-      <h2>Gaussian curve</h2>
-      <img src="" alt="" />
+      <h3>Graph</h3>
+      <p>The gaussian probability density has the following curve:</p>
+      <img
+        src="../img/Error calculation/gauss-curve.png"
+        alt="gauss curve"
+        class="zeichnungen"
+      />
+      <h2>Central limit theorem</h2>
+      <p>
+        The central limit theorem states that if a large number of independent
+        and identically distributed random variables are summed, their
+        normalized sum tends toward a Gaussian distribution, regardless of the
+        original distribution of the variables.
+      </p>
       <h2>Interpretation of standard deviation</h2>
       <p><u>Standard deviation</u>:</p>
       <ul>
@@ -130,15 +157,110 @@
       <img
         src="../img/Error calculation/normal distribution.png"
         alt="normal distribution"
-        class="zeichnungen-bigger"
+        class="zeichnungen-big"
       />
-      $$ R = f \left( a, b, c, \cdots ,n \right) $$ $$ \Delta R=\left(
-      \frac{\partial R}{\partial a} \Delta a \right) + \left( \frac{\partial
-      R}{\partial b} \Delta b \right) + \cdots + \left( \frac{\partial
-      R}{\partial n} \Delta n \right) $$ $$ \Delta R=\sqrt{\left( \frac{\partial
-      R}{\partial a} \Delta a \right)^{2} + \left( \frac{\partial R}{\partial b}
-      \Delta b \right)^{2} + \cdots + \left( \frac{\partial R}{\partial n}
-      \Delta n \right)^{2} } $$
+      <h2>Error propagation</h2>
+      <p>
+        Let $R= R(a, b, \cdots)$ be a physical quantity that cannot be measured
+        directly, but which can be calculated from quantities $a, b, \cdots $
+        measured directly.
+      </p>
+      <h2>Gaussian error propagation law</h2>
+      <h3>Definition</h3>
+      <p>
+        For a function $f ( x_1 , x_2 , \cdots , x_n )$ where each variable
+        $x_i$ has an associated uncertainty $\sigma_{x_i}$, the standard
+        deviation or uncertainty of $f$, denoted as $\sigma_f$, can be
+        approximated using a first-order Taylor expansion. The Gaussian error
+        propagation formula is given by:
+      </p>
+      $$ \sigma_f = \sqrt{ \left( \frac{\partial f}{\partial x_1} \right)^2
+      \sigma_{x_1}^2 + \left( \frac{\partial f}{\partial x_2} \right)^2
+      \sigma_{x_2}^2 + \cdots + \left( \frac{\partial f}{\partial x_n} \right)^2
+      \sigma_{x_n}^2 } $$
+      <h2>Unweighted linear regression</h2>
+      <p>
+        In order to fir a line $y = a + b x$ to minimize the sum of squared
+        deviations between observed and predicted values we use:
+      </p>
+      \[ \sum (y_i - (a + b x_i))^2 \]
+      <h3>Remark</h3>
+      <p>
+        This method is known as least squares regression. It assumes all
+        uncertainties are equal or negligible.
+      </p>
+      <h2>Weighted linear regression</h2>
+      <p>
+        When measurement uncertainties vary between data points, a weighted
+        least squares approach is used:
+      </p>
+      \[ \sum \left( \frac{y_i - (a + b x_i)}{\Delta y_i} \right)^2 \]
+      <p>
+        The weights $1/\Delta y_i^2$ ensure that points with smaller
+        uncertainties contribute more to the fit.
+      </p>
+      <h2>Coefficient of determination $R^2$</h2>
+      <p>
+        The coefficient of determination, often denoted as $R^2$, is a
+        statistical measure that represents the proportion of the variance for a
+        dependent variable that is explained by one or more independent
+        variables in a regression model. It provides an indication of the
+        goodness-of-fit of the model.
+      </p>
+      <h3>Formula</h3>
+      $$ R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} $$
+      <p>
+        where $ y_i $ are the observed values, $ \hat{y}_i $ are the predicted
+        values from the model, and $ \bar{y} $ is the mean of the observed data.
+      </p>
+      <h2>Strength and direction of the coefficient of determination</h2>
+      <p>
+        The correlation coefficient quantifies both the strength and direction,
+        which can be positive or negative, of a linear relationship between an
+        independent variable and a dependent variable.
+      </p>
+      <h2>Range of the coefficient of determination</h2>
+      <p>Range $r$ ranges from -1 to 1:</p>
+      <ul>
+        <li>
+          <p>
+            An $r$ value of -1 indicates a perfect negative linear relationship:
+            as one variable increases, the other decreases proportionally.
+          </p>
+        </li>
+        <li>
+          <p>
+            An $r$ value of 0 suggests no linear relationship between the
+            variables.
+          </p>
+        </li>
+        <li>
+          <p>
+            An $r$ value of 1 indicates a perfect positive linear relationship:
+            as one variable increases, the other increases proportionally.
+          </p>
+        </li>
+      </ul>
+      <img
+        src="../img/Error calculation/Coefficient of determination.png"
+        alt="Coefficient of determination"
+        class="zeichnungen-big"
+      />
+      <h2>Minimum chi-square estimation</h2>
+      <p>
+        The minimum chi-square estimation involves finding parameter values that
+        minimize the chi-square statistic, which measures the discrepancy
+        between observed and expected data under the model.
+      </p>
+      <h3>Formulas</h3>
+      \[ \chi^2 = \sum \left( \frac{y_i - y_{\text{theory}, i}}{\Delta y_i}
+      \right)^2 \]
+      <p>The reduced chi-square is:</p>
+      \[ \chi^2/\text{d.o.f.} = \frac{\chi^2}{\text{degrees of freedom}} \]
+      <p>
+        A value near 1 suggests that the model describes the data within
+        measurement uncertainties.
+      </p>
     </div>
   </body>
 </html>

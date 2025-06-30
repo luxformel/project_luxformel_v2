@@ -120,8 +120,8 @@
       \overrightarrow{r_i} }{\| \overrightarrow{r} - \overrightarrow{r_i} \|} $$
       <p>ainsi</p>
       $$ \overrightarrow{E} \left( \ \overrightarrow{r} \ \right) =
-      \frac{\overrightarrow{F} \left( \ \overrightarrow{r} \ \right)}{q_0} =
-      \sum_{i=1}^n \frac{1}{4 \pi \varepsilon_0} \frac{Q_{i}}{\|
+      \frac{\overrightarrow{F} \left( \ \overrightarrow{r} \ \right)}{q_0} $$ $$
+      = \sum_{i=1}^n \frac{1}{4 \pi \varepsilon_0} \frac{Q_{i}}{\|
       \overrightarrow{r} - \overrightarrow{r_i} \|^{2}} \frac{\overrightarrow{r}
       - \overrightarrow{r_i} }{\| \overrightarrow{r} - \overrightarrow{r_i}
       \|}$$
@@ -146,7 +146,6 @@
         alt="distribution-de-charge"
         class="zeichnungen-big"
       />
-
       <p>
         La contribution de la charge infinitésimale $\rho \left( \
         \overrightarrow{r^{\prime}} \ \right)$ à l'endroit
@@ -169,6 +168,66 @@
       =\underset{\begin{gathered} \text{distribution} \newline \text{de charge}
       \end{gathered}}{\iiint} d \overrightarrow{E} \left( \ \overrightarrow{r} \
       \right) $$
+      <h2>Représentation d'un champ électrique par des vecteurs</h2>
+      <p>
+        Pour visualiser le champ électrique associé à une charge ou une
+        distribution de charges, on peut représenter les vecteurs
+        $\overrightarrow{E}$ en différents points de l'espace. Illustrons la
+        méthode, si la charge-source est la charge ponctuelle $Q>0$.
+      </p>
+      <!-- IMAGE -->
+      <p>
+        Il s'agit d'un champ électrique radial à <u>symétrie sphérique</u> : $E
+        = E(r)$. Les vecteurs $\overrightarrow{E}$ divergent de la charge-source
+        positive $Q$.
+      </p>
+      <h3>Remarque</h3>
+      <p>Si $Q < 0$ , les vecteurs champ électrique convergeraient vers $Q$.</p>
+      <h2>Représentation par des lignes de champ</h2>
+      <h3>Définition</h3>
+      <p>
+        Une ligne de champ électrique est une courbe dans l'espace qui possède
+        la propriété qu'en chacun de ses points la direction du champ électrique
+        correspond à la direction de la tangente à la ligne de champ au point
+        considéré.
+      </p>
+      <img
+        src="../img/Electrostatique/lignes-de-champs.png"
+        class="zeichnungen-big"
+        alt="lignes de champs"
+      />
+      <hr />
+      <p>
+        À toute charge ou répartition de charges correspond un spectre de lignes
+        de champ électrique. Les lignes de champ sont orientées : par convention
+        elles partent des charges positives pour rentrer sur les charges
+        négatives.
+      </p>
+      <h2>Énergie potentielle électrostatique</h2>
+      <p>
+        Considérons la situation à l'instant où la charge $Q_2$ se trouve à la
+        distance $r$ de $Q_1$ . La charge $Q_2$ subit l'action de la force
+        électrique $\overrightarrow{F_él}$ . Si elle se déplace à vitesse
+        constante, l'expérimentateur $\overrightarrow{F_exp} = -
+        \overrightarrow{F_él}$ exerce la force. Pour réduire la distance entre
+        les deux charges à $R$, il doit effectuer le travail:
+      </p>
+      $$ W_{exp} = \int_{\infty}^R \overrightarrow{F_{exp}} \cdot d
+      \overrightarrow{r}$$ $$ = \int^{\infty}_R \overrightarrow{F_{él}} \cdot d
+      \overrightarrow{r}$$ $$ = \frac{Q_1 Q_2}{4 \pi \varepsilon_0}
+      \int^{\infty}_R \frac{1}{r^2} \cdot d r $$ $$ = \frac{1}{4 \pi
+      \varepsilon_0} \frac{Q_1 Q_2}{R} $$
+      <img
+        src="../img/Electrostatique/energie-potentielle-electrostatique.png"
+        class="zeichnungen-bigger"
+        alt="energie-potentielle-electrostatique"
+      />
+      <p>
+        L'énergie potentielle électrostatique emmagasinée dans le champ
+        électrique de la configuration de charges $(Q_1, Q_2)$ vaut ainsi:
+      </p>
+      $$ U = \frac{1}{4 \pi \varepsilon_0} \frac{Q_1 Q_2}{R} $$
+      <!-- <h2>Potentiel électrique</h2> -->
     </div>
   </body>
 </html>

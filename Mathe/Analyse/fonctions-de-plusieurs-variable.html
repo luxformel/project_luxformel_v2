@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Fonctions de plusieurs variables</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Fonctions de plusieurs variables</h1>
+      <h2>Normes sur $\mathbb{R}^n$</h2>
+      <p>
+        On rappelle qu'on dispose sur $\mathbb{R}^n$ de plusieurs normes
+        différentes, en particulier :
+      </p>
+      <ul>
+        <li>
+          <p>
+            la norme $L^1$, définie pour $x = (x_1, \ldots, x_n) \in
+            \mathbb{R}^n$ par
+          </p>
+          \[ \|x\|_1 = \sum_{i=1}^{n} |x_i| \]
+        </li>
+        <li>
+          <p>
+            la norme euclidienne, définie pour $x = (x_1, \ldots, x_n) \in
+            \mathbb{R}^n$ par
+          </p>
+          \[ \|x\|_2 = \sqrt{ \sum_{i=1}^{n} |x_i|^2 } \]
+        </li>
+        <li>
+          <p>
+            la norme $L^\infty$, définie pour $x = (x_1, \ldots, x_n) \in
+            \mathbb{R}^n$ par
+          </p>
+        </li>
+        \[ \|x\|_\infty = \sup_{i = 1, \ldots, n} |x_i| \]
+      </ul>
+      <h2>Fonctions partielle</h2>
+      <p>
+        Soit $f : U \to \mathbb{R}^q$, $U \subset \mathbb{R}^p$. Pour tout $a =
+        (a_1, \ldots, a_p) \in U$, on peut définir la $i$-ème fonction partielle
+        de $f$ en $a$ comme la fonction définie par
+      </p>
+      \[ f_i(x) = f(a_1, \ldots, a_{i-1}, x, a_{i+1}, \ldots, a_p) \]
+      <p>
+        Cette fonction est bien sûr définie pour les $x$ tels que $(a_1, \ldots,
+        a_{i-1}, x, a_{i+1}, \ldots, a_p) \in U$.
+      </p>
+      <h2>Continuité</h2>
+      <h3>Proposition</h3>
+      <p>
+        Soit $f : U \to \mathbb{R}^q$ une fonction continue. Alors les fonctions
+        partielles de $f$ sont continues en tout point de $U$.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit $a = (a_1, \ldots, a_p) \in U$ fixé. Pour tout $i \in \{1, \ldots,
+        p\}$, on définit la $i$-ème fonction partielle de $f$ en $a$ par :
+      </p>
+      \[ f_i(x) = f(a_1, \ldots, a_{i-1}, x, a_{i+1}, \ldots, a_p). \]
+      <p>
+        On souhaite montrer que $f_i$ est continue en $x = a_i$. Comme $f$ est
+        continue en $a$, cela signifie que :
+      </p>
+      \[ \forall \varepsilon > 0, \ \exists \delta > 0 \ \text{tel que si } \|x
+      - a\| < \delta \]
+      <p>alors</p>
+      $$ \|f(x) - f(a)\| < \varepsilon $$
+      <p>
+        Soit $x \in \mathbb{R}$ tel que $|x - a_i| < \delta$, et considérons le
+        point :
+      </p>
+      \[ x^{(i)} = (a_1, \ldots, a_{i-1}, x, a_{i+1}, \ldots, a_p). \]
+      <p>Alors $\|x^{(i)} - a\| = |x - a_i| < \delta$, donc :</p>
+      \[ \|f(x^{(i)}) - f(a)\| < \varepsilon. \]
+      <p>Autrement dit :</p>
+      \[ \|f_i(x) - f_i(a_i)\| = \|f(x^{(i)}) - f(a)\| < \varepsilon, \]
+      <p>ce qui montre que $f_i$ est continue en $x = a_i$.</p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Toute fonction linéaire d'un espace vectoriel de dimension finie dans un
+        autre est continue.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Quitte à choisir une base dans l'espace de départ et dans l'espace
+        d'arrivée, on peut se ramener au cas d'une application linéaire $u :
+        \mathbb{R}^p \to \mathbb{R}^q$. De plus, comme toutes les normes sont
+        équivalentes sur un espace vectoriel de dimension finie, il suffit de
+        montrer la continuité pour la norme $\| \cdot \|_\infty$. <br />
+        On note $M = (m_{j,i})_{j=1,\ldots,q;\ i=1,\ldots,p}$ la matrice de $u$
+        dans les bases canoniques de $\mathbb{R}^p$ et de $\mathbb{R}^q$. Si $x
+        = (x_1, \ldots, x_p) \in \mathbb{R}^p$, alors
+      </p>
+      \[ u(x) = y = (y_1, \ldots, y_q), \quad \text{avec } y_j = \sum_{i=1}^{p}
+      m_{j,i} x_i \quad \text{pour tout } j \in \{1, \ldots, q\} \]
+      <p>
+        Soit $x \in \mathbb{R}^p$. On veut montrer la continuité de $u$ en $x$.
+        Soit $\omega > 0$ et posons $\varepsilon = \omega / (mp)$, où
+      </p>
+      \[ m = \sup \{ |m_{j,i}| \mid j \in \{1, \ldots, q\},\ i \in \{1, \ldots,
+      p\} \} \]
+      <p>
+        Soit $x' \in \mathbb{R}^p$ tel que $\|x' - x\|_\infty < \varepsilon$.
+        Par définition de la norme $\| \cdot \|_\infty$, pour tout $i \in \{1,
+        \ldots, p\}$ :
+      </p>
+      \[ |x'_i - x_i| < \varepsilon. \]
+      <p>
+        On considère $y = u(x)$ et $y' = u(x')$. Pour tout $j \in \{1, \ldots,
+        q\}$, on a :
+      </p>
+      $$ |y'_j - y_j| = \left| \sum_{i=1}^{p} m_{j,i}(x'_i - x_i) \right| $$ $$
+      \leq \sum_{i=1}^{p} |m_{j,i}| \cdot |x'_i - x_i| $$ $$ \leq \sum_{i=1}^{p}
+      m \cdot \|x' - x\|_\infty $$ $$ = mp\varepsilon $$ $$ = \omega $$
+      <p>
+        Donc $\|y' - y\|_\infty < \omega$, ce qui prouve la continuité de $u$ en
+        $x$.
+      </p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>

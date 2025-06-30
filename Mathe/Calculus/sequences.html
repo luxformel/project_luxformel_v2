@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Sequences</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Sequences</h1>
+      <h2>Upper bound</h2>
+      <h3>Definition</h3>
+      <p>
+        $B \in \mathbb{R}$ is an upper bound for $\{ a_n \}^{\infty}_{n=n_0}$ if
+        $a_n \leq B$ for all $n \in \mathbb{R}$.
+      </p>
+      <h2>Lower bound</h2>
+      <h3>Definition</h3>
+      <p>
+        $B \in \mathbb{R}$ is an upper bound for $\{ a_n \}^{\infty}_{n=n_0}$ if
+        $a_n \geq B$ for all $n \in \mathbb{R}$.
+      </p>
+      <h2>Supremum, least upper bound</h2>
+      <h3>Definition</h3>
+      <p>
+        $S \in \mathbb{R}$ is the supremum, for $\{ a_n \}^{\infty}_{n=n_0}$ if
+        $S \leq B$ for all upper bounds $B$.
+      </p>
+      $$ S = \min \{ B \in \mathbb{R} | a_n \leq B, \forall n \in \mathbb{N} \}
+      $$
+      <h2>Infimum, greatest lower bound</h2>
+      <h3>Definition</h3>
+      <p>
+        $I \in \mathbb{R}$ is the infimum, for $\{ a_n \}^{\infty}_{n=n_0}$ if
+        $I \geq B$ for all lower bounds $B$.
+      </p>
+      $$ I = \max \{ B \in \mathbb{R} | a_n \geq B, \forall n \in \mathbb{N} \}
+      $$
+      <h2>Convergent sequences</h2>
+      <h3>Theoreme</h3>
+      <p>Convergent sequences are bounded.</p>
+      <h3>Proof</h3>
+      <p>
+        Let $(s_n)_{n \in \mathbb{N}}$ be a converging sequence, and let $s =
+        \lim_{x\rightarrow \infty} s_n $. <br />
+        Let us take $\varepsilon = 1$ and apply the definition of a limit. We
+        know that there exists $N$ such that $n > N \Rightarrow | s_n - s | < 1
+        $. Now by the triangle inequality $n > N \Rightarrow |s_n| < |s| + 1$
+      </p>
+      $$ |s_n| = |s_n - s + s| \leq |s_n| + |s| \leq 1 + |s| $$
+      <p>
+        We can now define: $M := \max \{ |s|+1, |s_1|, \cdots , |s_N| \}$ <br />
+        This means $|s_n| \leq M$ for all $n \in \mathbb{N}$ and so $(s_n)$ is a
+        bounded sequence.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Monotonic sequences</h2>
+      <ul>
+        <li>
+          <p>
+            A sequence $\{ a_n \}^{\infty}_{n=n_0}$ is called monotone
+            increasing if:
+          </p>
+          $$ a_{n+1} \geq a_n \quad \forall n \geq n_0 $$
+        </li>
+        <li>
+          <p>
+            A sequence $\{ a_n \}^{\infty}_{n=n_0}$ is called monotone
+            decreasing if:
+          </p>
+          $$ a_{n+1} \leq a_n \quad \forall n \geq n_0 $$
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Analysis Basics</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Analysis Basics</h1>
+      <h2>Function</h2>
+      <h3>Definition</h3>
+      <p>
+        Given two sets $A$ and $B$, a function from $A$ to $B$ is a rule or
+        mapping that takes each element $x \in A$ and associates with it a
+        single element of $B$. We write $f : A \rightarrow B$. Given an element
+        $x \in A$, the expression $f(x)$ is used to represent the element of $B$
+        associated with $x$ by $f$. <br />
+        The set $A$ is called the domain of $f$. <br />
+        The range of $f$ is not necessarily equal to $B$ but refers to the
+        subset of $B$ given by $\{y \in B : y = f(x) \quad \text{for some} \quad
+        x \in A \}$.
+      </p>
+      <h2>Dirichlet function</h2>
+      <p>The Dirichlet function is defined as:</p>
+      $$ f\left( x \right) =\begin{cases}1& \text{if} \quad x\in \mathbb{Q} \\
+      0&\text{if} \quad x\notin \mathbb{Q}\end{cases} $$
+      <p>The domain is $\mathbb{R}$.</p>
+      <h2>Absolute value function</h2>
+      <p>The absolute value function is defined as:</p>
+      $$ f\left( x \right) =\begin{cases}x& \text{if} \quad x \geq 0 \\
+      -x&\text{if} \quad x \leq 0\end{cases} $$
+      <p>The domain is $\mathbb{R}$.</p>
+    </div>
+  </body>
+</html>

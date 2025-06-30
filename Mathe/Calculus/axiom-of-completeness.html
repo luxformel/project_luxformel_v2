@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Axion of Completeness</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Axion of completeness</h1>
+      <h2>Axiom of completeness</h2>
+      <p>
+        Every nonempty set of real numbers that is bounded above has a least
+        upper bound.
+      </p>
+      <h2>Upper bound</h2>
+      <h3>Definition</h3>
+      <p>
+        $A$ set $A \subseteq \mathbb{R}$ is bounded above if there exists a
+        number $b \in \mathbb{R}$ such that $a \leq b$ for all $a \in A$. The
+        number $b$ is called an upper bound for $A$.
+      </p>
+      <h2>Lower bound</h2>
+      <h3>Definition</h3>
+      <p>
+        The set $A$ is bounded below if there exists a lower bound $l \in
+        \mathbb{R}$ satisfying $l \leq a$ for every $a \in A$.
+      </p>
+      <h2>Supremum, Least upper bound</h2>
+      <h3>Definition</h3>
+      <p>
+        A real number $s$ is the least upper bound for a set $A \subseteq
+        \mathbb{R}$ if it meets the following two criteria:
+      </p>
+      <ul>
+        <li><p>$s$ is an upper bound for $A$</p></li>
+        <li><p>if $b$ is any upper bound for $A$, then $s\leq b$</p></li>
+      </ul>
+      <h3>Notation</h3>
+      <p>The Supremum $s$ of a subset $A$ is written as:</p>
+      $$ s = \sup \left( A \right) $$
+      <h3>Remark</h3>
+      <p>
+        A less common notation is: $s = \text{lub} \left( A \right)$ <br />
+        Meaning <i>least upper bound</i>.
+      </p>
+      <h3>Corollary</h3>
+      <p>
+        A set can have a lot of upper bounds but it can only have at least one
+        least upper bound.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        If $s_1$ and $s_2$ are both least upper bounds for a set $A$, then we
+        can assert $s_1 \leq s_2$ and $s_2 \leq s_1$. The conclusion is that
+        $s_1 = s_2$ and least upper bounds are unique.
+      </p>
+      <h2>Minimum and Maximum</h2>
+      <h3>Definition</h3>
+      <p>
+        A real number $a_0$ is a maximum of the set A if $a_0$ is an element of
+        $A$ and $a_0 \geq a \quad \forall a \in A$. <br />Similarly, $a$ number
+        $a_1$ is $a$ minimum of $A$ if $a_1 \in A$ and $a_1 \leq a \quad \forall
+        a \in A$.
+      </p>
+      <h3>Lemma</h3>
+      <p>
+        Assume $s \in \mathbb{R}$ is an upper bound for a set $A \subseteq
+        \mathbb{R}$. Then, $s = \sup (A)$ if and only if, for every choice of
+        $\varepsilon > 0$, there exists an element $a \in A$ satisfying $s -
+        \varepsilon < a$.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Firstly, we need to prove that if $ s = \sup(A) $, then for every choice
+        of $ \varepsilon > 0 $, there exists an element $ a \in A $ such that $
+        s - \varepsilon < a $. <br />
+        Secondly, we need to prove that if for every choice of $ \varepsilon > 0
+        $, there exists an element $ a \in A $ satisfying $ s - \varepsilon < a
+        $, then $ s = \sup(A) $.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Assume $ s = \sup(A) $. We need to show that for every $ \varepsilon
+            > 0 $, there exists an element $ a \in A $ such that $ s -
+            \varepsilon < a $.
+          </p>
+
+          <p>
+            Since $ s = \sup(A) $, by definition, $ s $ is the least upper bound
+            of $ A $. This means:
+          </p>
+          <ul>
+            <li>
+              <p>
+                $ s $ is an upper bound for $ A $, i.e., $ a \leq s $ for all $
+                a \in A $.
+              </p>
+            </li>
+            <li>
+              <p>
+                For any $ t < s $, there exists some element $ a_t \in A $ such
+                that $ a_t > t $.
+              </p>
+            </li>
+          </ul>
+          <p>
+            Let $ \varepsilon > 0 $. Consider $ t = s - \varepsilon $. Since $ t
+            < s $, by the property of the supremum, there must exist an element
+            $ a_{\varepsilon} \in A $ such that $ a_{\varepsilon} > t $.
+            Therefore, we have:
+          </p>
+
+          $$ a_{\varepsilon} > s - \varepsilon. $$
+
+          <p>
+            Thus, for every $ \varepsilon > 0 $, there exists an element $
+            a_{\varepsilon} \in A $ such that $ s - \varepsilon <
+            a_{\varepsilon} $.
+          </p>
+        </li>
+        <li>
+          <p>
+            Assume that for every $ \varepsilon > 0 $, there exists an element $
+            a \in A $ satisfying $ s - \varepsilon < a $. We need to show that $
+            s = \sup(A) $.
+          </p>
+
+          <p>
+            First, we show that $ s $ is an upper bound of $ A $. Assume for
+            contradiction that $ s $ is not an upper bound. Then there exists
+            some $ b \in A $ such that $ b > s $, which contradicts the
+            assumption that $ s $ is an upper bound. Hence, $ s $ must be an
+            upper bound.
+          </p>
+
+          <p>
+            Next, we show that $ s $ is the least upper bound. Assume for
+            contradiction that there exists some $ u < s $ which is also an
+            upper bound of $ A $. Choose $ \varepsilon = s - u > 0 $. By
+            assumption, there exists an element $ a_{\varepsilon} \in A $ such
+            that:
+          </p>
+
+          $$ s - \varepsilon < a_{\varepsilon}. $$
+
+          <p>Substituting $ \varepsilon = s - u $, we get:</p>
+
+          $$ s - (s - u) < a_{\varepsilon}, \quad u < a_{\varepsilon}. $$
+
+          <p>
+            This contradicts the assumption that $ u $ is an upper bound of $ A
+            $. Therefore, no such $ u < s $ can be an upper bound, and $ s $
+            must be the least upper bound.
+          </p>
+
+          <p>Thus,</p>
+          $$ s = \sup(A) $$
+        </li>
+      </ol>
+      <p>
+        Combining both parts, we conclude that $ s = \sup(A) $ if and only if
+        for every $ \varepsilon > 0 $, there exists an element $ a \in A $ such
+        that $ s - \varepsilon < a $.
+      </p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>
