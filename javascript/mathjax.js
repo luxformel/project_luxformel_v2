@@ -1,4 +1,5 @@
-MathJax = {
+// MathJax configuration
+window.MathJax = {
   tex: {
     inlineMath: [
       ["$", "$"],
