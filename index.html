@@ -35,6 +35,34 @@
   </head>
 
   <body>
+    <div
+      id="disclaimer-banner"
+      style="
+        background: #ffe0b2;
+        color: #333;
+        padding: 1em;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 2px solid #ffa726;
+      "
+    >
+      ⚠️ Notice: Work is currently being done on the backend of this website.
+      HTTPS is temporarily disabled. Please understand.
+      <button
+        id="dismiss-disclaimer"
+        style="
+          margin-left: 1em;
+          background: #ffa726;
+          border: none;
+          color: #fff;
+          padding: 0.3em 0.8em;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        Dismiss
+      </button>
+    </div>
     <div class="index-wrapper">
       <p id="splash-text"></p>
 
@@ -184,5 +212,17 @@
 
     // Call the function to apply settings on page load
     applySetting();
+
+    // Disclaimer banner logic
+    const disclaimerBanner = document.getElementById("disclaimer-banner");
+    const dismissDisclaimer = document.getElementById("dismiss-disclaimer");
+    // Show the banner unless dismissed in this session
+    if (sessionStorage.getItem("disclaimerDismissed")) {
+      disclaimerBanner.style.display = "none";
+    }
+    dismissDisclaimer.addEventListener("click", function () {
+      disclaimerBanner.style.display = "none";
+      sessionStorage.setItem("disclaimerDismissed", "true");
+    });
   </script>
 </html>
