@@ -694,12 +694,13 @@ var splashTexts = [
   "poulet de lave?",
   "Be a goldfish.",
   "Certified hood classic!",
+  "Stop Killing Games!!!",
   "1/696",
 ];
 function generateRandomText() {
   //console.log(splashTexts);
   var randomNumber = Math.floor(Math.random() * splashTexts.length);
-  //var randomNumber = 665;
+  var randomNumber = 695;
   //console.log(randomNumber);
   //console.log(splashTexts[randomNumber]);
   document.querySelector("#splash-text").innerHTML = splashTexts[randomNumber];

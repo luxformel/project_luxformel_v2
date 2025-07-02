@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Développement en séries de Taylor</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Développement en séries de Taylor</h1>
+      <h2>Formule de Taylor avec reste intégral</h2>
+      <h3>Proposition</h3>
+      <p>
+        Soit $I$ un intervalle, soit $f, g : I \to \mathbb{R}$ deux fonctions de
+        classe $C^1$, et soit $a, b \in I$. Alors :
+      </p>
+      \[ \int_a^b f'(t)g(t)dt = [f(t)g(t)]_a^b - \int_a^b f(t)g'(t)dt \]
+      <p>où</p>
+      \[ [f(t)g(t)]_a^b = f(b)g(b) - f(a)g(a) \]
+      <h3>Démonstration</h3>
+      <p>On note que</p>
+      \[ (f(t)g(t))' = f'(t)g(t) + f(t)g'(t) \]
+      <p>et on intègre entre $a$ et $b$.</p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit $I \subset \mathbb{R}$ un intervalle, et soit $f : I \to
+        \mathbb{R}$ une fonction $n + 1$ fois dérivables. Alors pour tout $a, x
+        \in I$ on a
+      </p>
+      \[ f(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x - a)^k + \int_a^x \frac{(x
+      - t)^n}{n!} f^{(n+1)}(t)dt \]
+      <h3>Démonstration</h3>
+      <p>
+        On va montrer cette formule par récurrence sur $n$. On vérifie d'abord
+        la formule pour $n = 0$, qui s'écrit sous la forme :
+      </p>
+      \[ f(x) = \frac{f(a)}{1} (x - a)^0 + \int_a^x f'(t) dt \]
+      <p>
+        On admet maintenant la formule pour $n$, et on va la montrer pour $n +
+        1$. On a donc :
+      </p>
+      \[ f(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x - a)^k + \int_a^x \frac{(x
+      - t)^n}{n!} f^{n+1}(t) dt \]
+      <p>
+        On intègre par parties le terme intégral, en dérivant le terme
+        $f^{n+1}(t)$ et en intégrant le terme $\frac{(x - t)^n}{n!}$, dont une
+        primitive est $-\frac{(x - t)^{n+1}}{(n + 1)!}$. On a donc
+      </p>
+      $$ \int_a^x \frac{(x - t)^n}{n!} f^{n+1}(t) dt $$ $$ = \left[ -\frac{(x -
+      t)^{n+1}}{(n + 1)!} f^{(n+1)}(t) \right]_a^x + \int_a^x \frac{(x -
+      t)^{n+1}}{(n + 1)!} f^{(n+2)}(t) dt $$
+      <p>On vérifie directement que</p>
+      \[ \left[ -\frac{(x - t)^{n+1}}{(n + 1)!} f^{(n+1)}(t) \right]_a^x =
+      \frac{f^{(n+1)}(a)}{(n + 1)!} \]
+      <p>Le résultat suit.</p>
+      <p class="square">$\square$</p>
+      <h2>Formule de Taylor-Lagrange</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f : I \rightarrow \mathbb{R}$ une fonction de classe $C^{n+1}$, et
+        soit $a, b \in I$ avec $a < b$. Alors il existe $c \in [a, b]$ tel que
+      </p>
+      \[ f(b) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (b - a)^k + \frac{(b -
+      a)^{n+1}}{(n + 1)!} f^{(n+1)}(c) \]
+      <h3>Démonstration</h3>
+      <p>
+        Comme on a déjà vu la formule avec reste intégral, il suffit de montrer
+        qu'il existe $c \in [a, b]$ tel que :
+      </p>
+      \[ \int_a^b \frac{(x - t)^n}{n!} f^{(n+1)}(t) dt = \frac{(b - a)^{n+1}}{(n
+      + 1)!} f^{(n+1)}(c) \]
+      <p>
+        Mais on peut interpréter l'expression de gauche comme un barycentre des
+        valeurs de $f^{(n+1)}(t)$ pour $t$ dans $[a, b]$.
+        <br />
+        Mais
+      </p>
+      \[ \int_a^b \frac{(b - t)^n}{n!} dt = \left[ -\frac{(b - t)^{n+1}}{(n +
+      1)!} \right]_a^b \] \[ = \frac{(b - a)^{n+1}}{(n + 1)!} \]
+      <p>Il suit que</p>
+      \[ \int_a^b \frac{(x - t)^n}{n!} f^{(n+1)}(t) dt = \frac{(b - a)^{n+1}}{(n
+      + 1)!} m \]
+      <p>
+        où $m$ est compris entre le minimum et le maximum des valeurs de $f$ sur
+        $[a, b]$.
+        <br />
+        Comme $f$ est continue, le théorème des valeurs intermédiaires implique
+        que $m = f(c)$, pour un certain $c \in [a, b]$.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Formule de Taylor-Young</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f : I \to \mathbb{R}$ une fonction de classe $C^{n+1}$, et soit $a
+        \in I$. On a alors
+      </p>
+      \[ f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!} (x - a)^k + O((x -
+      a)^{n+1}). \]
+      <h3>Démonstration</h3>
+      <p>
+        Ceci suit directement du théorème de Taylor-Lagrange, puisque $f$ est de
+        classe $C^{n+1}$, donc $f^{(n+1)}$ est continue, et elle est donc bornée
+        au voisinage de $a$.
+      </p>
+      <h2>Intégration de séries de Taylor</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit $I \subset \mathbb{R}$ un intervalle, $a \in I$, et $f : I \to
+        \mathbb{R}$ une fonction de classe $C^{n+1}$, admettant en $a$ le
+        développement en série de Taylor :
+      </p>
+      \[ f(x) = \sum_{k=0}^{n} a_k (x - a)^k + O((x-a)^{n+1}) \]
+      <p>
+        Soit $F$ une primitive de $f$, c'est-à-dire que $F' = f$. Alors $F$
+        admet la série de Taylor suivante en $a$ :
+      </p>
+      \[ F(x) = F(a) + \sum_{k=0}^{n} \frac{a_k}{k+1} (x - a)^{k+1} + O((x -
+      a)^{n+2}). \]
+      <h3>Démonstration</h3>
+      <p>On peut écrire la série de Taylor de $f$ sous la forme</p>
+      \[ f(x) = \sum_{k=0}^{n} a_k (x - a)^k + r_n(x) \]
+      <p>
+        et par définition du $O$ il existe $\alpha > 0$ et $C > 0$ tel que, pour
+        tout $x \in I$ avec $|x - a| \leq \alpha$, $|r_n(x)| \leq C(x -
+        a)^{n+1}$.
+        <br />
+        En intégrant cette égalité, on obtient que
+      </p>
+      \[ F(x) = F(a) + \sum_{k=0}^{n} \frac{a_k}{k+1} (x - a)^{k+1} + r_{n+1}(x)
+      \]
+      <p>avec</p>
+      \[ r_{n+1}(x) = \int_a^x r_n(t) dt \]
+      <p>On a donc</p>
+      \[ |r_{n+1}(x)| \leq \left| \int_a^x C(t - a)^{n+1} dt \right| \leq
+      \frac{C}{n+2} (x - a)^{n+2} \]
+      <p>et le résultat suit.</p>
+      <p class="square">$\square$</p>
+      <h2>Produits de séries de Taylor</h2>
+    </div>
+  </body>
+</html>

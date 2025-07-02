@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Primitives</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Primitives</h1>
+      <h2>Définition et propriétés principales</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( f : [a, b] \to \mathbb{R} \) une fonction intégrable. Une
+        primitive de \( f \) est une fonction de la forme
+      </p>
+      \[ F(x) = \int_{c}^{x} f(t) dt + C \]
+      <p>où \( c \in [a, b] \) et \( C \) est une constante.</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : [a, b] \to \mathbb{R} \) une fonction intégrable. Alors
+        toute primitive de \( f \) est uniformément continue sur \( [a, b] \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Comme \( f \) est intégrable, elle est bornée, et il existe donc une
+        constante \( M \in \mathbb{R} \) telles que, pour tout \( t \in [a, b]
+        \), \( |f(t)| \leq M \). Soit \( F \) une primitive de \( f \). Si \( x,
+        y \in [a, b] \) alors
+      </p>
+      \[|F(y) - F(x)| = \left| \int_{x}^{y} f(t) dt \right| \leq \int_{x}^{y}
+      |f(t)| dt \leq M |y - x| \]
+      <p>
+        Donc pour tout \( \epsilon > 0 \), si on pose \( \alpha = \epsilon / M
+        \), on voit que si \( |y - x| \leq \alpha \), alors \( |F(y) - F(x)|
+        \leq \epsilon \), et \( F \) est donc uniformément continue.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : [a, b] \to \mathbb{R} \) une fonction continue. Alors toute
+        primitive \( F \) de \( f \) est dérivable sur \( [a, b] \), de dérivée
+        égale à \( f \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit \( c \in [a, b] \), on va montrer que \( F \) est dérivable en \( c
+        \) de dérivée \( f(c) \), c'est-à-dire que
+      </p>
+      \[\lim_{x \to c, x \neq c} \frac{F(x) - F(c)}{x - c} = f(c) \]
+      <p>
+        Prenons par exemple \( x > c \). Comme \( f \) est continue, il existe
+        \( y_x \in [c, x] \) tel que
+      </p>
+      \[\int_{c}^{x} f(t) dt = (x - c) f(y_x) \]
+      <p>
+        Lorsque \( x \to c, y_x \to c \), et comme \( f \) est continue, \(
+        f(y_x) \to f(c) \). On en déduit que
+      </p>
+      \[\lim_{x \to c, x \neq c} \frac{1}{x - c} \int_{c}^{x} f(t) dt = f(c) \]
+      <p>ce qui est le résultat annoncé.</p>
+      <p class="square">$\square$</p>
+      <h3>Corollaires</h3>
+      <p>
+        Soit \( I \) un intervalle, et soit \( f : I \to \mathbb{R} \) une
+        fonction continue. Alors :
+      </p>
+      <ul>
+        <li>
+          <p>il existe des primitives de \( f \) sur \( I \)</p>
+        </li>
+        <li>
+          <p>si \( a \in I \), la fonction</p>
+          \[x \mapsto \int_{a}^{x} f(t) dt\]
+          <p>est l'unique primitive de \( f \) qui s'annule en \( a \)</p>
+        </li>
+        <li>
+          <p>
+            si \( F \) est n'importe quelle primitive de \( f \) sur \( I \), on
+            a pour tout \( a, x \in I \)
+          </p>
+          \[\int_{a}^{x} f(t) dt = F(x) - F(a) \]
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>
+        Pour le premier point, il suffit de remarquer que pour tout élément \( a
+        \in I \), la fonction \( F_a : x \mapsto \int_{a}^{x} f(t) dt \) est une
+        primitive de \( f \) sur \( I \). Cette primitive s'annule en \( a \).
+        Si \( F \) est une autre primitive de \( f \) qui s'annule aussi en \( a
+        \), on doit avoir \( (F - F_a)'(t) = 0 \) pour tout \( t \in I \), si
+        bien que \( F - F_a \) est constante sur \( I \), et la valeur de cette
+        constante doit être nulle puisque \( (F - F_a)(a) = 0 - 0 = 0 \).
+        Finalement, le troisième point suit du fait que la différence entre deux
+        primitives de \( f \) est une fonction dont la dérivée est nulle, et
+        deux primitives de \( f \) diffèrent donc par une constante.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Intégration par parties</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soient \( a, b \in \mathbb{R}, a < b \), et soient \( u, v : [a, b] \to
+        \mathbb{R} \) des fonctions de classe \( C^1 \). Alors
+      </p>
+      \[\int_a^b u(t)v'(t)dt = u(b)v(b) - u(a)v(a) - \int_a^b u'(t)v(t)dt \]
+      <h3>Démonstration</h3>
+      <p>On sait que \((uv)' = u'v + uv'\). En intégrant, on voit que</p>
+      \[u(b)v(b) - u(a)v(a) = \int_a^b (u(t)v(t))'dt = \int_a^b u'(t)v(t) +
+      u(t)v'(t)dt \]
+      <p>et le résultat s'en déduit.</p>
+      <p class="square">$\square$</p>
+      <h2>Changement de variables</h2>
+      <h3>Théorèmes</h3>
+      <ul>
+        <li>
+          <p>
+            oient $I$ et $J$ deux intervalles non réduits à un point, et soit
+            $\phi : J \to I$ une fonction de classe $C^1$. Soit $f : I \to
+            \mathbb{R}$ une fonction continue, et soient $a, b \in J$. Alors
+          </p>
+          \[ \int_{\phi(a)}^{\phi(b)} f(x) dx = \int_a^b f(\phi(t)) \phi'(t) dt
+          \]
+        </li>
+        <li>
+          <p>
+            Si maintenant $\phi : J \to I$ est une bijection, et si $a', b' \in
+            I$, alors
+          </p>
+          \[ \int_{a'}^{b'} f(x) dx = \int_{\phi^{-1}(a')}^{\phi^{-1}(b')} (f
+          \circ \phi)(t) \phi'(t) dt \]
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>
+        Le second point est simplement une reformulation du premier dans le cas
+        particulier où $\phi$ est une bijection. Quant au premier point, il suit
+        simplement du fait que $(F \circ \phi)' = \phi'(F' \circ \phi)$,
+        appliqué lorsque $F$ est une primitive de $f$.
+        <br />
+        Dans la pratique, on se passe souvent de la fonction $\phi$, et on note
+        simplement $x = \phi(t)$, où $\phi$ est la fonction de changement de
+        variable. On a alors formellement $dx = \phi'(t) dt$.
+      </p>
+      <h2>Intégration des développements limités</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : I \rightarrow \mathbb{R} \) une fonction de classe \( C^n \)
+        et soit \( a, b \in I \). On a alors la formule exacte suivante :
+      </p>
+      \[f(b) = f(a) + \frac{b - a}{1!} f'(a) + \frac{(b - a)^2}{2!} f^{(2)}(a) +
+      \cdots \] \[ + \frac{(b - a)^{n-1}}{(n - 1)!} f^{(n-1)}(a) + \int_a^b
+      \frac{(b - t)^{n-1}}{(n - 1)!} f^{(n)}(t)dt \]
+      <h3>Démonstration</h3>
+      <p>
+        On fait la preuve par récurrence sur \( n \). Pour \( n = 1 \) la
+        formule s'écrit simplement
+      </p>
+      \[f(b) = f(a) + \int_a^b f'(t)dt \]
+      <p>
+        et on a vu plus haut que c'est bien le cas car \( f \) est une primitive
+        de \( f' \).
+        <br />
+        On suppose maintenant le résultat vrai pour \( n \), et on le montre
+        pour \( n + 1 \) par une intégration par parties sur le dernier terme,
+        qui montre bien que :
+      </p>
+      $$ \int_a^b \frac{(b - t)^{n-1}}{(n - 1)!} f^{(n)}(t)dt = \left[ -\frac{(b
+      - t)^n}{n(n - 1)!} f^{(n)}(t) \right]_a^b + \int_a^b \frac{(b - t)^n}{n!}
+      f^{(n+1)}(t)dt $$ $$ = \frac{(b - a)^n}{n!} f^{(n)}(a) + \int_a^b \frac{(b
+      - t)^n}{n!} f^{(n+1)}(t)dt $$
+      <p>ce qui prouve le résultat.</p>
+      <p class="square">$\square$</p>
+      <h3>Corollaire</h3>
+      <p>Avec les mêmes hypothèses que dans le théorème précédent, on a</p>
+      \[f(b) = f(a) + \frac{b - a}{1!} f'(a) + \frac{(b - a)^2}{2!} f^{(2)}(a) +
+      \cdots + \frac{(b - a)^{n-1}}{(n - 1)!} f^{(n-1)}(a) + (b -
+      a)^{n-1}\epsilon(b) \]
+      <p>avec \(\lim_{t \to a} \epsilon(t) = 0\).</p>
+      <h3>Démonstration</h3>
+      <p>
+        On a vu dans le chapitre précédent que comme la fonction \( t \mapsto
+        \frac{(b - t)^{n-1}}{(n - 1)!} f^{(n)}(t) \) est continue, il existe un
+        \( c \in [a, b] \) tel que
+      </p>
+      \[\int_a^b \frac{(b - t)^{n-1}}{(n - 1)!} f^{(n)}(t)dt = (b - a)\frac{(b -
+      c)^{n-1}}{(n - 1)!} f^{(n)}(c) \]
+      <p>Le résultat s'en déduit.</p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : I \rightarrow \mathbb{R} \) une fonction qui admet en \( a
+        \) le développement limité
+      </p>
+      \[f(t) = a_0 + a_1(t - a) + a_2(t - a)^2 + \cdots \] \[ + a_n(t - a)^n +
+      (t - a)^n\epsilon(t) \]
+      <p>
+        avec \(\lim_{t \to a} \epsilon(t) = 0\). Alors toute primitive \( F \)
+        de \( f \) admet en \( a \) le développement limité :
+      </p>
+      \[F(t) = F(a) + a_0(t - a) + a_1\frac{(t - a)^2}{2} + a_2\frac{(t -
+      a)^3}{3} + \cdots \] \[ + a_n\frac{(t - a)^{n+1}}{n + 1} + (t -
+      a)^{n+1}\epsilon(t) \]
+      <p>avec \(\lim_{t \to a} \epsilon(t) = 0\).</p>
+      <h3>Définition</h3>
+      <p>
+        Une fraction rationnelle est une fonction de la forme \[ f(t) =
+        \frac{P(t)}{Q(t)}, \] où $P$ et $Q$ sont des polynômes. $f$ est alors
+        définie en-dehors des zéros de $Q$, qu'on appelle pôles de $f$.
+      </p>
+      <h2>Décomposition des fractions rationnelles en éléments simples</h2>
+      <h3>Théorème de division euclidienne pour les polynômes</h3>
+      <p>
+        Soit $A, B \in \mathbb{R}[X]$. Il existe un unique couple $(Q, R) \in
+        \mathbb{R}[X]^2$, avec $\deg(R) < \deg(B)$, tel que $A = BQ + R$.
+      </p>
+      <h3>Théorème de décomposition dans $\mathbb{C}[X]$</h3>
+      <p>Soit $B \in \mathbb{C}[X]$ unitaire. Il existe des familles</p>
+      <ul>
+        <li><p>$(a_1, a_2, \cdots, a_p) \in \mathbb{C}^p$</p></li>
+        <li><p>$(n_1, n_2, \cdots, n_p) \in (\mathbb{N}_{>0})^p$</p></li>
+      </ul>
+      <p>telles que</p>
+      $$ B = \prod_{i=1}^p (X - a_i)^{n_i} $$
+      <p>
+        avec les $a_i$ deux à deux distincts. De plus ces familles sont
+        uniquement déterminées à permutation près.
+      </p>
+      <h3>Théorème de décomposition dans $\mathbb{R}[X]$</h3>
+      <p>Soit $B \in \mathbb{R}[X]$ unitaire. Il existe des familles</p>
+      <ul>
+        <li><p>$(a_1, a_2, \cdots, a_p) \in \mathbb{R}^p$</p></li>
+        <li><p>$(n_1, n_2, \cdots, n_p) \in (\mathbb{N}_{>0})^p$</p></li>
+        <li><p>$(b_1, b_2, \cdots, b_q) \in \mathbb{R}^q$</p></li>
+        <li><p>$(c_1, c_2, \cdots, c_q) \in (\mathbb{R}_{>0})^q$</p></li>
+        <li><p>$(m_1, m_2, \cdots, m_q) \in (\mathbb{N}_{>0})^q$</p></li>
+      </ul>
+      <p>telles que</p>
+      $$ B = \left(\prod_{i=1}^p (X - a_i)^{n_i}\right) \left(\prod_{j=1}^q ((X
+      - b_j)^2 + c_j^2)^{m_j}\right)$$
+      <p>
+        avec les $a_i$ deux à deux distincts et les $(b_j, c_j)$ deux à deux
+        distincts. De plus ces familles sont uniquement déterminées à
+        permutation près.
+      </p>
+      <h3>Théorème de Bezout</h3>
+      <p>
+        Soient $B_1, B_2 \in \mathbb{R}[X]$ deux polynômes sans élément
+        irréductible commun, et soit $A \in \mathbb{R}[X]$ avec $\deg(A) <
+        \deg(B_1) + \deg(B_2)$. Il existe alors un unique couple $(A_1, A_2) \in
+        (\mathbb{R}[X])^2$ avec $\deg(A_1) < \deg(B_1)$ et $\deg(A_2) <
+        \deg(B_2)$ tel que $A = A_1 B_2 + A_2 B_1$.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Soit $A,B\in\mathbb{R}[X]$, avec $\deg(A)<\deg(B)$. Écrivons la
+        décomposition de $B$ en éléments irréductibles, sous la forme :
+      </p>
+      \[
+      B=\left(\prod_{i=1}^{p}(X-a_{i})^{n_{i}}\right)\left(\prod_{j=1}^{q}((X-b_{j})^{2}+c_{j}^{2})^{m_{j}}\right)
+      \]
+      <p>
+        avec les $n_{i}$ et les $m_{j}$ strictement positifs et les facteurs
+        deux à deux disjoints.
+        <br />
+        Il existe des familles
+      </p>
+      <ul>
+        <li>
+          <p>
+            $(d_{1,1}, d_{1,2}, \dots, d_{1,n_1}) \in \mathbb{R}^{n_1},
+            (d_{2,1}, d_{2,2}, \dots, d_{2,n_2}) \in \mathbb{R}^{n_2}, \dots,
+            (d_{p,1}, d_{p,2}, \dots, d_{p,n_p}) \in \mathbb{R}^{n_p}$
+          </p>
+        </li>
+        <li>
+          <p>
+            $(e_{1,1}, e_{1,2}, \dots, e_{1,m_1}) \in \mathbb{R}^{m_1},
+            (e_{2,1}, e_{2,2}, \dots, e_{2,m_2}) \in \mathbb{R}^{m_2}, \dots,
+            (e_{q,1}, e_{q,2}, \dots, e_{q,m_q}) \in \mathbb{R}^{m_q},$
+          </p>
+        </li>
+        <li>
+          <p>
+            $(f_{1,1}, f_{1,2}, \dots, f_{1,m_1}) \in (\mathbb{R}_{>0})^{m_1},
+            (f_{2,1}, f_{2,2}, \dots, f_{2,m_2}) \in (\mathbb{R}_{>0})^{m_2},
+            \dots,$
+          </p>
+        </li>
+        <li>
+          <p>
+            $(f_{q,1}, f_{q,2}, \dots, f_{q,m_q}) \in (\mathbb{R}_{>0})^{m_q},$
+          </p>
+        </li>
+      </ul>
+      <p>telles que</p>
+      \[\frac{A}{B} = \sum_{i=1}^p \left( \sum_{k=1}^{n_i} \frac{d_{i,k}}{(X -
+      a_i)^k} \right) + \sum_{j=1}^q \left( \sum_{l=1}^{m_j} \frac{e_{j,l} X +
+      f_{j,l}}{((X - b_j)^2 + c_j^2)^l} \right) \]
+      <p>
+        De plus ces familles sont uniquement déterminées à permutation près.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Pour montrer ce théorème, plusieurs étapes sont nécessaires, toutes
+        assez simples.
+        <br />
+        On décompose d'abord \(B = B_1 B_2\), où \(B_1\) est le produit des
+        éléments irréductibles de degré 1 et \(B_2\) le produit des éléments
+        irréductibles de degré 2.
+        <br />
+        On peut alors appliquer le théorème 6.6, et écrire \(A = A_2 B_1 + A_1
+        B_2\), où \(\deg(A_1) < \deg(B_1)\) et \(\deg(A_2) < \deg(B_2)\). On en
+        déduit que
+      </p>
+      \[\frac{A}{B} = \frac{A_1}{B_1} + \frac{A_2}{B_2}\]
+      <p>
+        où dans les deux fractions le dénominateur est de degré plus grand que
+        le numérateur.
+        <br />
+        Pour la première fraction, on écrit
+      </p>
+      \[B_1 = (X - a_1)^{n_1} \left(\prod_{i=2}^p (X - a_i)^{n_i}\right)\]
+      <p>et on applique à nouveau le théorème de Bezout pour obtenir que</p>
+      \[A_1 = A_{12} (X - a_1)^{n_1} + A_{11} \left(\prod_{i=2}^p (X -
+      a_i)^{n_i}\right) \]
+      <p>
+        avec \(\deg(A_{12}) < \sum_{i=2}^p n_i\) et \(\deg(A_{11}) < n_1\).
+        <br />
+        Ainsi,
+      </p>
+      \[\frac{A_1}{B_1} = \frac{A_{11}}{(X - a_1)^{n_1}} +
+      \frac{A_{12}}{\prod_{i=2}^p (X - a_i)^{n_i}} \]
+      <p>et \(\deg(A_{11}) < n_1\). On peut donc écrire</p>
+      \[A_{11} = \sum_{k=1}^{n_1} d_{1,k} (X - a_1)^{n_1-k} \]
+      <p>et on obtient finalement que</p>
+      \[ \frac{A_{11}}{(X - a_1)^{n_1}} = \sum_{k=1}^{n_1} \frac{d_{1,k}}{(X -
+      a_1)^k} \]
+      <p>
+        En répétant le même argument avec \(a_2, a_3\), et jusqu'à \(a_p\), on
+        obtient finalement que
+      </p>
+      \[ \frac{A_1}{B_1} = \sum_{i=1}^p \left( \sum_{k=1}^{n_i}
+      \frac{d_{i,k}}{(X - a_i)^k} \right) \]
+      <p>Pour ce qui est du second terme, on note que</p>
+      \[ B_2 = \prod_{j=1}^q ((X - b_j)^2 + c_j^2)^{m_j}, \]
+      <p>
+        et on applique à nouveau le
+        <q>théorème de Bezout pour les polynômes</q> pour obtenir que
+      </p>
+      \[ \frac{A_2}{B_2} = \frac{A_{21}}{((X - b_1)^2 + c_1^2)^{m_1}} +
+      \frac{A_{22}}{\prod_{j=2}^q ((X - b_j)^2 + c_j^2)^{m_j}} \]
+      <p>
+        avec \(\deg(A_{21}) < 2m_1\) et \(\deg(A_{22}) < 2\sum_{j=2}^q m_j\).
+        <br />
+        On considère d'abord le premier terme. On applique le
+        <q>théorème de Bezout pour les polynômes</q>, qui indique qu'on peut
+        écrire
+      </p>
+      \[ A_{21} = A'((X - b_1)^2 + c_1^2) + (e_{1,m_1} X + f_{1,m_1}) \]
+      <p>En divisant, on en déduit que</p>
+      \[ \frac{A_{21}}{((X - b_1)^2 + c_1^2)^{m_1}} = \frac{A'}{((X - b_1)^2 +
+      c_1^2)^{m_1-1}} + \frac{e_{1,m_1} X + f_{1,m_1}}{((X - b_1)^2 +
+      c_1^2)^{m_1}} \]
+      <p>
+        avec \(\deg(A') < 2m_1 - 2\). <br />
+        On applique alors \(m_1 - 1\) fois le même argument basé sur le théorème
+        de Bézout aux autres termes, et on obtient que :
+      </p>
+      \[ \frac{A_{21}}{((X - b_1)^2 + c_1^2)^{m_1}} = \sum_{l=1}^{m_1}
+      \frac{e_{1,l} X + f_{1,l}}{((X - b_1)^2 + c_1^2)^l} \]
+      <p>
+        En répétant le même argument pour les autres éléments irréductibles de
+        \(B_2\), on voit finalement que
+      </p>
+      \[ \frac{A_2}{B_2} = \sum_{j=1}^q \left( \sum_{l=1}^{m_j} \frac{e_{j,l} X
+      + f_{j,l}}{((X - b_j)^2 + c_j^2)^l} \right) \]
+      <p>
+        En ajoutant la décomposition obtenue pour \(A_1 / B_1\), on conclut la
+        preuve du théorème
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Décomposition en éléments irréductibles dans $\mathbb{C}$</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit \(A, B \in \mathbb{C}[X]\), avec \(\deg(A) < \deg(B)\). Écrivons la
+        décomposition de \(B\) en éléments irréductibles, sous la forme :
+      </p>
+      \[ B = \prod_{i=1}^p (X - a_i)^{n_i}, \]
+      <p>
+        avec \( n_i \) strictement positifs et les \( a_i \) deux à deux
+        distincts. Il existe des familles \((d_{1,1}, d_{1,2}, \dots, d_{1,n_1})
+        \in \mathbb{C}^{n_1}, (d_{2,1}, d_{2,2}, \dots, d_{2,n_2}) \in
+        \mathbb{C}^{n_2}, \dots, (d_{p,1}, d_{p,2}, \dots, d_{p,n_p}) \in
+        \mathbb{C}^{n_p} \), telles que
+      </p>
+      \[ \frac{A}{B} = \sum_{i=1}^p \left( \sum_{k=1}^{n_i} \frac{d_{i,k}}{(X -
+      a_i)^k} \right). \]
+      <p>
+        De plus ces familles sont uniquement déterminées à permutation près.
+      </p>
+    </div>
+  </body>
+</html>

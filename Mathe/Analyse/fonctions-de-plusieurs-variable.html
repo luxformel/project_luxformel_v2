@@ -144,6 +144,662 @@
         $x$.
       </p>
       <p class="square">$\square$</p>
+      <h2>Dérivée suivant un vecteur</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( x \in U \) et \( v \in \mathbb{R}^p \). Si la limite suivante
+        existe :
+      </p>
+      \[ \lim_{t \to 0, t \ne 0} \frac{f(x + tv) - f(x)}{t} \]
+      <p>
+        alors on dit que \( f \) admet en \( x \) une dérivée suivant le vecteur
+        \( v \), et on note cette dérivée \( \partial_v f(x) \).
+      </p>
+      <h3>Définition</h3>
+      <p>
+        La i-ème dérivée partielle de \( f \) en \( x \in U \), pour \( i \in
+        \{1, 2, \ldots, p\} \), est définie par \[ \frac{\partial f}{\partial
+        x_i} = \partial_{e_i} f. \] On note parfois plus simplement \(
+        \partial_i f \) pour \( \frac{\partial f}{\partial x_i} \). On peut
+        remarquer que les dérivées partielles de \( f \) correspondent
+        exactement aux dérivées des fonctions partielles.
+      </p>
+      <h3>Remarque</h3>
+      <p>
+        Les règles de calcul usuelles pour les dérivées restent valables pour
+        les dérivées par rapport à un vecteur et pour les dérivées partielles.
+        On a par exemple :
+      </p>
+      \[ \partial_v(fg) = f \cdot \partial_v g + (\partial_v f) \cdot g \]
+      <p>
+        en tout point, si \( f, g : U \to \mathbb{R}^q \). La preuve est
+        immédiate si on se ramène à la définition de \( \partial_v f \) comme
+        dérivée en 0 de \( t \mapsto f(x + tv) \).
+      </p>
+      <h2>Différentielle</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R}^q \), avec \( U \subset \mathbb{R}^p \).
+        Soit \( x \in U \). On dit que \( f \) est différentiable en \( x \), de
+        différentielle une application linéaire \( u : \mathbb{R}^p \to
+        \mathbb{R}^q \), s'il existe une fonction \( \varepsilon : U \to
+        \mathbb{R}^q \), continue et nulle en \( x \), telle que pour tout \( y
+        \in U \),
+      </p>
+      \[ f(y) = f(x) + u(y - x) + \| y - x \| \varepsilon(y). \]
+      <p>
+        On note \( d_x f \), ou parfois \( df(x) \), la différentielle de \( f
+        \) en \( x \). On dit que \( f \) est différentiable sur \( U \) si elle
+        est différentiable en tout point de \( U \).
+      </p>
+      <h3>Remarque</h3>
+      <p>
+        Une autre manière d'écrire la définition de la différentielle est sous
+        la forme :
+      </p>
+      \[ f(x + h) = f(x) + d_x f(h) + \| h \| \varepsilon(h),\]
+      <p>avec</p>
+      \[ \lim_{h \to 0} \varepsilon(h) = 0. \]
+      <h3>Démonstration</h3>
+      <p>
+        Si \( u \) et \( v \) sont deux différentielles de \( f \) en \( x \),
+        on doit avoir pour tout \( h \in \mathbb{R}^p \) assez petit : \[
+      </p>
+      \[ f(x+h) = f(x) + u(h) + \|h\| \epsilon(h) \]
+      <p>et</p>
+      \[ f(x+h) = f(x) + v(h) + \|h\| \epsilon'(h), \]
+      <p>donc</p>
+      \[ v(h) - u(h) = \|h\|(\epsilon'(h) - \epsilon(h)), \]
+      <p>
+        avec \( \lim_{h \to 0} (\epsilon'(h) - \epsilon(h)) = 0 \). Comme \( u
+        \) et \( v \) sont linéaires par hypothèse, il suit que \( v - u = 0 \)
+        et donc que \( u = v \).
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Propositions</h3>
+      <p>La différentielle a les propriétés suivantes.</p>
+      <ul>
+        <li>
+          <p>
+            Si \( f, g : U \to \mathbb{R}^q \) sont deux fonctions
+            différentiables, alors \( f+g \) est différentiable, de
+            différentielle \( d(f+g) = df + dg \).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si \( f : U \to \mathbb{R}^q \) est différentiable et \( \lambda \in
+            \mathbb{R} \), alors \( \lambda f \) est différentiable, de
+            différentielle \( d(\lambda f) = \lambda df \).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si \( f = (f_1, \cdots, f_q) \), alors \( f \) est différentiable si
+            et seulement si les \( f_i \) sont toutes différentiables, et on a
+            \( df = (df_1, \cdots, df_q) \).
+          </p>
+        </li>
+      </ul>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R}^q \) une fonction différentiable en \( x
+        \in U \). Alors toutes les dérivées partielles de \( f \) en \( x \)
+        existent, et si \( h = (h_1, \cdots, h_p) \in \mathbb{R}^p \), alors
+      </p>
+      \[ df(x)(h) = \sum_{i=1}^p h_i \frac{\partial f}{\partial x_i}. \]
+      <h2>Jacobienne</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R}^q \) une fonction différentiable en \( x
+        \in U \). Sa matrice jacobienne en \( x \) est la matrice, notée \(
+        J_f(x) \), de l'application linéaire \( d_x f \) dans les bases
+        canoniques de \( \mathbb{R}^p \) et de \( \mathbb{R}^q \).
+      </p>
+      <h3>Proposition</h3>
+      <p>
+        Si \( f = (f_1, \cdots, f_p) \), alors on peut écrire \( J_f(x) \) sous
+        la forme :
+      </p>
+      \[ J_f(x) = \begin{pmatrix} \partial_1 f_1 & \partial_2 f_1 & \cdots &
+      \partial_p f_1 \\ \partial_1 f_2 & \partial_2 f_2 & \cdots & \partial_p
+      f_2 \\ \vdots & \vdots & \ddots & \vdots \\ \partial_1 f_q & \partial_2
+      f_q & \cdots & \partial_p f_q \end{pmatrix}. \]
+      <h3>Définition</h3>
+      <p>
+        Si \( p = q \) et si \( f \) est différentiable en \( x \in U \), on
+        appelle jacobien de \( f \) le déterminant de sa matrice jacobienne. On
+        le note :
+      </p>
+      \[ D(f_1, \cdots, f_p) / D(x_1, \cdots, x_p) = \det(J_f(x)). \]
+      <h2>Fonctions de classe \( C^1 \)</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R}^q \) une fonction qui admet en chaque point
+        des dérivées partielles, et dont les dérivées partielles sont continues
+        en \( x \in U \). Alors \( f \) est différentiable en \( x \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit \( h \in \mathbb{R}^p \) choisi assez petit pour que la boule de
+        centre \( x \) et de rayon \( \|h\|_2 \) soit contenue dans \( U \). On
+        introduit une suite de points qui permet de passer de \( x \) à \( x + h
+        \) comme suit :
+      </p>
+      \[ x_0 = x, \quad x_1 = x_0 + h_1 e_1, \] \[ x_2 = x_1 + h_2 e_2,
+      \cdots,\] \[ x_p = x_{p-1} + h_p e_p = x + h. \]
+      <p>On a alors pour tout \( i \) entre 0 et \( p - 1 \) :</p>
+      \[ f(x_{i+1}) - f(x_i) = \int_0^1 \frac{d}{dt} f(x_i + th_{i+1} e_{i+1})
+      dt \] \[ = \int_0^1 h_{i+1} (\partial_{i+1} f)(x_i + th_{i+1} e_{i+1}) dt.
+      \]
+      <p>
+        Fixons \( \varepsilon > 0 \). Par hypothèse, les \( \partial_i f \) sont
+        continus en \( x \), donc pour tout \( i \) entre 1 et \( p \),
+      </p>
+      \[ \exists \alpha_i > 0, \ \forall y \in U, \ \|y - x\|_2 \leq \alpha_i
+      \Rightarrow \| \partial_i f(y) - \partial_i f(x) \|_2 \leq
+      \frac{\varepsilon}{p}. \]
+      <p>
+        Posons \( \alpha = \inf_i \alpha_i \). Si \( \|h\|_2 \leq \alpha \),
+        tous les \( x_i \) sont dans la boule de centre \( x \) et de rayon \(
+        \alpha \), et on a donc pour tout \( i \) entre 0 et \( p - 1 \) :
+      </p>
+      $$ f(x_{i+1}) - f(x_i) - h_{i+1} (\partial_{i+1} f)(x) = h_{i+1} \int_0^1
+      \left( (\partial_{i+1} f)(x_i + th_{i+1} e_{i+1}) - (\partial_{i+1} f)(x)
+      \right) dt $$ $$\leq |h_{i+1}| \int_0^1 \| (\partial_{i+1} f)(x_i +
+      th_{i+1} e_{i+1}) - (\partial_{i+1} f)(x) \|_2 dt $$ $$ \leq |h_{i+1}|
+      \cdot \frac{\varepsilon}{p} $$
+      <p>En sommant ces inégalités, on obtient que</p>
+      \[ \| f(x + h) - f(x) - \sum_{i=1}^p h_i (\partial_i f)(x) \|_2 \leq
+      \varepsilon \|h\|_2, \]
+      <p>ce qui montre que \( f \) est différentiable en \( x \).</p>
+      <p class="square">$\square$</p>
+      <h3>Définition</h3>
+      <p>
+        Une fonction \( f : U \to \mathbb{R}^q \) est de classe \( C^1 \) si
+        elle admet en tout point des dérivées partielles, et si ses dérivées
+        partielles sont continues.
+      </p>
+      <h2>Différentielle des fonctions composées</h2>
+      <h3>Théorème de la différentielle de la composée</h3>
+      <p>
+        Soient \( f : U \to \mathbb{R}^q \) une fonction différentiable, avec \(
+        U \subset \mathbb{R}^p \), et soit \( g : V \to \mathbb{R}^r \)
+        différentiable, avec \( f(U) \subset V \subset \mathbb{R}^q \). Alors la
+        composée \( g \circ f \) est différentiable, et sa différentielle est
+        donnée par
+      </p>
+      \[ d_x(g \circ f) = (d_{f(x)}g) \circ d_x f. \]
+      <h3>Démonstration</h3>
+      <p>
+        Soit \( x \in U \). Comme \( g \) est différentiable en \( f(x) \), on
+        peut écrire pour \( z \in V \) :
+      </p>
+      \[ g(z) - g(f(x)) - (d_{f(x)}g)(z - f(x)) = \| z - f(x) \| \epsilon(z), \]
+      <p>
+        avec \( \lim_{f(x)} \epsilon = 0 \). <br />
+        On applique ceci avec \( z = f(y) \) pour \( y \in U \), on obtient que
+      </p>
+      \[ g(f(y)) - g(f(x)) - (d_{f(x)}g)(f(y) - f(x)) = \| f(y) - f(x) \|
+      \epsilon'(y), \]
+      <p>
+        Maintenant on sait que \( f \) est aussi différentiable en \( x \), si
+        bien que
+      </p>
+      \[ f(y) - f(x) - (d_x f)(y - x) = \| y - x \| \epsilon''(y), \]
+      <p>
+        avec \( \lim_x \epsilon'' = 0 \). <br />
+        En utilisant la dernière relation dans l'avant-dernière, on trouve que
+      </p>
+      \[ g(f(y)) - g(f(x)) - (d_{f(x)}g)((d_x f)(y - x)) = \| y - x \|
+      \epsilon'''(y), \]
+      <p>
+        avec \( \lim_x \epsilon''' = 0 \). Ceci établit que \( g \circ f \) est
+        différentiable, de différentielle en \( x \) la fonction linéaire
+      </p>
+      \[ d_x(g \circ f) = (d_{f(x)}g) \circ d_x f \]
+      <p class="square">$\square$</p>
+      <h3>Corollaire</h3>
+      <p>
+        Sous les hypothèses du théorème 6.1, les matrices jacobiennes de \( f, g
+        \) et \( g \circ f \) vérifient :
+      </p>
+      \[ J_{g \circ f}(x) = J_g(f(x)) J_f(x) \]
+      <h2>Accroissements finis</h2>
+      <h3>Théorème des accroissements finis</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R} \) différentiable, avec \( U \subset
+        \mathbb{R}^p \) ouvert. Soit \( x \in U \) et soit \( h \in \mathbb{R}^p
+        \) telle que \( [x, x + h] \subset U \). Alors il existe \( h^1, h^2,
+        \cdots, h^p \in [0, h] \) tels que
+      </p>
+      \[f(x + h) - f(x) = \sum_{i=1}^p h_i \partial_i f(x + h^i)\]
+      <h3>Démonstration</h3>
+      <p>On voit d'après le théorème différentielle de la composée que</p>
+      \[\frac{d}{dt} f(x + th) = d_{x+th} f(h)\]
+      <p>Il suit que</p>
+      \[f(x + h) - f(x) = \int_0^1 \sum_{i=1}^p h_i \partial_i f(x + th) dt\] \[
+      = \sum_{i=1}^p \int_0^1 h_i \partial_i f(x + th) dt\]
+      <p>
+        En appliquant le théorème des valeurs intermédiaires à chacune des
+        intégrales, on obtient des valeurs \( t_i \in [0, 1] \) telles que
+      </p>
+      \[\partial_i f(x + t_i h) = \int_0^1 \partial_i f(x + th) dt \]
+      <p>et le résultat suit en posant \( h^i = t_i h \).</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R}^q \) une fonction différentiable dont la
+        différentielle est nulle, avec \( U \) un ouvert connexe de \(
+        \mathbb{R}^p \). Alors \( f \) est constante.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        On considère d'abord le cas \( q = 1 \). Soit \( x \in U \), et soit \(
+        \Omega = f^{-1}(f(x)) \). Comme \( f \) est différentiable, elle est
+        continue, donc \( \Omega \) est fermé. Mais le théorème précédent
+        indique que \( \Omega \) est ouvert. Comme \( U \) est connexe, il suit
+        que \( \Omega = U \) et donc \( U \) est constante. <br />
+        Le cas général suit du cas \( q = 1 \) en considérant les fonctions
+        coordonnées de \( f \).
+      </p>
+      <h2>Dérivées partielles d'ordre supérieur</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R}^q \), avec \( U \subset \mathbb{R}^p \), et
+        soit \( i_1, i_2, \cdots, i_n \in \{1, \cdots, p\} \). La dérivée
+        partielle d'ordre \( n \) par rapport à \( x_{i_1}, \cdots, x_{i_n} \)
+        est définie récurrentement par
+      </p>
+      \[\frac{\partial^n}{\partial x_{i_n} \cdots \partial x_{i_1}} f =
+      \frac{\partial}{\partial x_{i_n}} \left( \frac{\partial^{n-1}}{\partial
+      x_{i_{n-1}} \cdots \partial x_{i_1}} f \right)\]
+      <h3>Remarque</h3>
+      <p>On note parfois simplement</p>
+      \[\partial_{i_1, \cdots , i_l}^n f\]
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : U \rightarrow \mathbb{R}^q \) une fonction telle que les
+        dérivées partielles \(\partial_i \partial_j f\) et \(\partial_j
+        \partial_i f\) existent et sont continues. Alors on a en tout point
+      </p>
+      \[\partial_i \partial_j f = \partial_j \partial_i f\]
+      <h3>Démonstration</h3>
+      <p>
+        On note d'abord qu'il suffit de montrer cette égalité lorsque \( q = 1
+        \), puisque le cas général suit alors. On va donc supposer que c'est le
+        cas.
+        <br />
+        Soit \( x \in U \), et soit \( h_i, h_j \) tels que la boule de centre
+        \( x \) et de rayon \(\max(|h_i|, |h_j|)\) soit contenue dans \( U \).
+        On note \((e_1, \cdots , e_p)\) la base canonique de \( \mathbb{R}^p \).
+        <br />
+        On a
+      </p>
+      $$ f(x + h_i e_i + h_j e_j) - f(x) $$ $$ = (f(x + h_i e_i + h_j e_j) - f(x
+      + h_i e_i)) + (f(x + h_i e_i) - f(x)) $$ $$ = (f(x + h_i e_i + h_j e_j) -
+      f(x + h_j e_j)) + (f(x + h_j e_j) - f(x)) $$
+      <p>En comparant les deux expressions, on voit que :</p>
+      $$ (f(x + h_i e_i + h_j e_j) - f(x + h_j e_j)) - (f(x + h_i e_i) - f(x))
+      $$ $$ = (f(x + h_i e_i + h_j e_j) - f(x + h_i e_i)) - (f(x + h_j e_j) -
+      f(x)) $$
+      <p>
+        On va écrire chacun des deux côtés de cette égalité comme une double
+        intégrale.
+        <br />
+        On note que
+      </p>
+      $$ f(x + h_i e_i + h_j e_j) - f(x + h_j e_j) = \int_{s=0}^{h_i} \partial_i
+      f(x + se_i + h_j e_j) ds $$ $$ f(x + h_i e_i) - f(x) = \int_{s=0}^{h_i}
+      \partial_i f(x + se_i) ds $$
+      <p>donc</p>
+      $$ (f(x + h_i e_i + h_j e_j) - f(x + h_j e_j)) - (f(x + h_i e_i) - f(x))
+      $$ $$ = \int_{s=0}^{h_i} \left(\partial_i f(x + se_i + h_j e_j) -
+      \partial_i f(x + se_i)\right) ds $$ $$= \int_{s=0}^{h_i} \int_{t=0}^{h_j}
+      \partial_j \partial_i f(x + se_i + te_j) dt\, ds $$
+      <p>Quand \( h_i, h_j \to 0 \), cette expression est équivalente à</p>
+      \[(f(x + h_i e_i + h_j e_j) - f(x + h_j e_j)) - (f(x + h_i e_i) - f(x))
+      \sim h_i h_j \partial_j \partial_i f(x)\]
+      <p>De même en échangeant le rôle de \( x_i \) et \( x_j \) on voit que</p>
+      $$ (f(x + h_i e_i + h_j e_j) - f(x + h_i e_i)) - (f(x + h_j e_j) - f(x))
+      $$ $$ = \int_{t=0}^{h_j} \int_{s=0}^{h_i} \partial_i \partial_j f(x + se_i
+      + te_j) ds\, dt $$
+      <p>qui est équivalente quand \( h_i, h_j \to 0 \), à</p>
+      \[(f(x + h_i e_i + h_j e_j) - f(x + h_j e_j)) - (f(x + h_i e_i) - f(x))
+      \sim h_i h_j \partial_i \partial_j f(x)\]
+      <p>Comme les deux expressions sont égales, on obtient le résultat.</p>
+      <p class="square">$\square$</p>
+      <h2>Difféomorphismes de classe \( C^k \)</h2>
+      <h3>Définition</h3>
+      <p>
+        Une fonction \( f : U \rightarrow \mathbb{R}^q \) est de classe \( C^k
+        \) (pour \( k \in \mathbb{N} \)) si toutes les dérivées \( k \)-ièmes de
+        \( f \) existent et sont continues.
+      </p>
+      <h3>Propositions</h3>
+      <ul>
+        <li>
+          <p>
+            Les fonctions de classe \( C^k \) de \( U \) dans \( \mathbb{R}^q
+            \), où \( U \subset \mathbb{R}^p \), forment un espace vectoriel.
+          </p>
+        </li>
+        <li>
+          <p>
+            La composée de deux fonctions de classe \( C^k \) est une fonction
+            de classe \( C^k \).
+          </p>
+        </li>
+        <li>
+          <p>
+            La notion de difféomorphisme ajoute à la notion de fonction de
+            classe \( C^k \) l'existence d'un inverse de même régularité. On
+            note que l'espace de départ et d'arrivée doivent avoir la même
+            dimension.
+          </p>
+        </li>
+      </ul>
+      <h3>Définition</h3>
+      <p>
+        Une fonction \( f : U \rightarrow V \), où \( U, V \) sont des ouverts
+        de \( \mathbb{R}^p \), est un difféomorphisme si elle est de classe \(
+        C^1 \), bijective, et admet un inverse lui-même de classe \( C^1 \). On
+        dit que \( f \) est un difféomorphisme de classe \( C^k \) si \( f \)
+        est un difféomorphisme, \( f \) est de classe \( C^k \), et \( f^{-1} \)
+        est de classe \( C^k \).
+      </p>
+      <h3>Définition</h3>
+      <p>
+        On note qu'une fonction de classe \( C^k \) qui est une bijection n'est
+        pas toujours un difféomorphisme de classe \( C^k \). Par exemple, la
+        fonction \( t \mapsto t^3 \) est une bijection de \( \mathbb{R} \) dans
+        \( \mathbb{R} \) de classe \( C^\infty \), mais son inverse n'est pas
+        dérivable en 0.
+      </p>
+      <h2>Théorème d'inversion locale</h2>
+      <h3>Théorème d'inversion locale</h3>
+      <p>
+        Soit \( f : U \rightarrow \mathbb{R}^p \) une fonction de classe \( C^1
+        \), avec \( U \) un ouvert de \( \mathbb{R}^p \). Soit \( x_0 \in U \)
+        tel que \( d_{x_0} f : \mathbb{R}^p \rightarrow \mathbb{R}^p \) est un
+        isomorphisme. Alors il existe un voisinage \( V \) de \( x_0 \) dans \(
+        U \) et un voisinage \( W \) de \( f(x_0) \) dans \( \mathbb{R}^p \) tel
+        que la restriction de \( f \) à \( V \) est un difféomorphisme de \( V
+        \) sur \( W \). Si \( f \) est de classe \( C^k \), sa restriction à \(
+        V \) est un difféomorphisme de classe \( C^k \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        On va d'abord montrer l'existence d'un inverse. On note qu'il suffit de
+        montrer le résultat si \(d_0 f = \text{Id}\), puisque le cas général
+        s'en déduit en considérant \((d_0 f)^{-1} \circ f\).
+        <br />
+        Comme \(f\) est continue, \(df\) est continue, et il existe donc \(r >
+        0\) tel que pour tout \(x \in B(0,r)\) (la boule ouverte de centre 0 et
+        de rayon \(r\)), \(\|\text{Id} - df\| \leq 1/2\).
+        <br />
+        Soit \(y \in B(0,r/2)\). On définit une fonction \(\phi_y : B(0,r) \to
+        \mathbb{R}^p\) par
+      </p>
+      \[\phi_y(x) = x - f(x) + y \]
+      <p>
+        On note que \(\|d\phi_y\| \leq 1/2\), il suit que \(\phi_y(B(0,r))
+        \subset B(y,r/2) \subset B(0,r)\). On peut donc appliquer à \(\phi_y\)
+        le théorème du point fixe, qui montre qu'il existe un unique \(x \in
+        B(0,r)\) tel que \(\phi_y(x) = x\).
+        <br />
+        Ainsi on a
+      </p>
+      \[x - f(x) + y = x \]
+      <p>
+        si bien que \(f(x) = y\).
+        <br />
+        Réciproquement, tout élément \(x \in B(0,r)\) tel que \(f(x) = y\)
+        correspond à un point fixe de \(\phi_y\), si bien que \(y\) a un unique
+        antécédent \(x\) dans \(B(0,r)\). On peut donc en déduire que \(f\)
+        définit une bijection entre \(V = B(0,r) \cap f^{-1}(B(0,r/2))\). Comme
+        \(f\) est continue, cet ensemble \(V\) est un voisinage de 0 dans
+        \(\mathbb{R}^p\).
+        <br />
+        On va maintenant montrer que \(f^{-1}\) est différentiable, de
+        différentielle \(d_y f^{-1} = (d_{f^{-1}(y)} f)^{-1}\). Soit \(y \in
+        B(0,r/2)\), et soit \(h\) tel que \(y, y + h \in B(0,r/2)\). Posons \(x
+        = f^{-1}(y)\), et \(k = f^{-1}(y + h) - f^{-1}(y)\). On a alors
+      </p>
+      \[f(x + k) - f(x) = (y + h) - y = h \]
+      <p>Comme \( f \) est différentiable, on a</p>
+      \[ h = d_x f(k) + o(k) \]
+      <p>ce qui se traduit par</p>
+      \[ k = (d_x f)^{-1}(h) + o(h) \]
+      <p>
+        et donc \( f^{-1} \) est différentiable, de différentielle \( d_y f^{-1}
+        = (d_{f^{-1}(y)} f)^{-1} \) <br />Finalement, l'application \( y \mapsto
+        d_y f^{-1} \) est continue d'après la formule qui détermine \( d_y
+        f^{-1} \), et \( f^{-1} \) est donc \( C^1 \). Cette même formule montre
+        que si \( f \) est \( C^k \), alors \( f^{-1} \) aussi.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Définition</h3>
+      <p>
+        Soit \( \Omega \subset \mathbb{R}^p \) et \( k > 0 \). Une fonction \( f
+        : \Omega \rightarrow \mathbb{R}^q \) est \( k \)-lipschitzienne si pour
+        tout \( x, y \in \Omega \) on a \( \|f(y) - f(x)\| \leq k\|y - x\| \).
+      </p>
+      <h3>Théorème du point fixe</h3>
+      <p>
+        Soit \( \Omega \subset \mathbb{R}^p \) fermé, et soit \( f : \Omega
+        \rightarrow \Omega \) une fonction \( k \)-lipschitzienne, avec \( k < 1
+        \). Alors \( f \) admet un unique point fixe dans \( \Omega \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit \( x_0 \in \Omega \). On définit une suite \( (x_n)_{n \in
+        \mathbb{N}} \) par récurrence, par \( x_{n+1} = f(x_n) \). Comme \( f \)
+        est \( k \)-lipschitzienne, on a
+      </p>
+      $$ \|x_2 - x_1\| = \|f(x_1) - f(x_0)\| $$ $$ \leq k\|x_1 - x_0\| $$
+      <p>De même,</p>
+      $$ \|x_3 - x_2\| = \|f(x_2) - f(x_1)\| $$ $$ \leq k\|x_2 - x_1\| $$ $$
+      \leq k^2\|x_1 - x_0\| $$
+      <p>
+        et par un argument de récurrence simple, on a pour tout \( n \in
+        \mathbb{N} \):
+      </p>
+      \[\|x_{n+1} - x_n\| \leq k^n\|x_1 - x_0\| \]
+      <p>
+        On va montrer que la suite \((x_n)_{n \in \mathbb{N}}\) est de Cauchy.
+        On note pour ça que pour \(p \geq q\), on a
+      </p>
+      $$ \|x_p - x_q\| = \left\|\sum_{l=q}^{p-1} (x_{l+1} - x_l)\right\| $$ $$
+      \leq \sum_{l=q}^{p-1} \|x_{l+1} - x_l\| $$ $$ \leq \sum_{l=q}^{p-1} k^l
+      \|x_1 - x_0\| $$ $$\leq k^q \|x_1 - x_0\| \frac{1 - k^{p-q}}{1 - k} $$ $$
+      \leq \frac{k^q \|x_1 - x_0\|}{1 - k} $$
+      <p>
+        Comme \(\lim_{n \to \infty} k^n = 0\), il suit que \((x_n)_{n \in
+        \mathbb{N}}\) est de Cauchy, et elle admet donc une limite \(x_\infty\).
+        Comme \(\Omega\) est fermé, \(x_\infty \in \Omega\). <br />
+        On note maintenant que comme \(f\) est continue,
+      </p>
+      \[f(x_\infty) = \lim_{n \to \infty} f(x_n) = \lim_{n \to \infty} x_{n+1} =
+      \lim_{n \to \infty} x_n = x_\infty,\]
+      <p>
+        donc \(x_\infty\) est bien un point fixe de \(f\).
+        <br />
+        Enfin, si \(f\) admet un autre point fixe \(y_\infty\), on a
+      </p>
+      \[\|y_\infty - x_\infty\| = \|f(y_\infty) - f(x_\infty)\| \leq k
+      \|y_\infty - x_\infty\|\]
+      <p>
+        donc \(\|y_\infty - x_\infty\| = 0\), et donc \(y_\infty = x_\infty\)
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Théorème des fonctions implicites</h2>
+      <h3>Théorème des fonctions implicites</h3>
+      <p>
+        Soit \( f : U \rightarrow \mathbb{R} \) une fonction de classe \( C^k
+        \), avec \( 0 \in U \subset \mathbb{R}^{p+1} \), et supposons que \(
+        \partial_{p+1}f \neq 0 \) en 0. Il existe alors un voisinage \( V \) de
+        0 dans \( \mathbb{R}^p \) et une application \( \phi : V \rightarrow
+        \mathbb{R} \) telle que pour tout \( x' = (x_1, \cdots, x_p) \in V \),
+        \( f(x', \phi(x')) = 0 \). De plus \( \phi \) est de classe \( C^k \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        On définit une fonction \( F : \mathbb{R}^{p+1} \rightarrow
+        \mathbb{R}^{p+1} \) en posant pour \( x = (x', x_{p+1}) \) (avec \( x'
+        \in \mathbb{R}^p \)):
+      </p>
+      \[F(x', x_{p+1}) = (x', f(x', x_{p+1})) \]
+      <p>
+        On va montrer que la différentielle de \( F \) en 0, \( d_0F :
+        \mathbb{R}^{p+1} \rightarrow \mathbb{R}^{p+1} \), est inversible. On
+        peut en effet calculer la matrice jacobienne de \( F \) en 0, elle a la
+        forme suivante:
+      </p>
+      \[ J_F(0) = \begin{pmatrix} 1 & 0 & 0 & \cdots & 0 & 0 \\ 0 & 1 & 0 &
+      \cdots & 0 & 0 \\ 0 & 0 & 1 & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots &
+      \ddots & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & 1 & 0 \\ \partial_1f(0) &
+      \partial_2f(0) & \partial_3f(0) & \cdots & \partial_pf(0) &
+      \partial_{p+1}f(0) \end{pmatrix} \]
+      <p>
+        Comme \( \partial_{p+1}f(0) \neq 0 \), le déterminant de la matrice
+        jacobienne est \( \partial_{p+1}f(0) \), qui est non nul par hypothèse,
+        et \( d_0F \) est un isomorphisme.
+        <br />
+        On peut donc appliquer le théorème d'inversion locale, qui montre qu'il
+        existe des voisinages \( U \) et \( W \) de 0 dans \( \mathbb{R}^{p+1}
+        \) et une fonction \( G : W \rightarrow U \) de classe \( C^k \) tels
+        que \( G \) est l'inverse de la restriction \( F|_U \) de \( F \) à \( U
+        \). Ainsi pour tout élément \( z \) de \( W \) on a \( G(z) \in U \) et
+        \( F(G(z)) = z \).
+        <br />
+        En particulier pour \( z = (z', 0) \), avec \( z' \in \mathbb{R}^p \),
+        si \( G(z', 0) = (x', x_{p+1}) \) alors on voit que \( F(x', x_{p+1}) =
+        (z', 0) \) si bien que \( x' = z' \) et \( f(x', x_{p+1}) = 0 \), et
+        donc \( f(z', x_{p+1}) = 0 \). On peut donc écrire: \( G(z', 0) = (z',
+        \phi(z')) \), et on voit alors que \( f(z', \phi(z')) = 0 \) pour tout
+        \( z' \in W \cap \mathbb{R}^p \). <br />
+        Comme \( G \) est de classe \( C^k \), il en est de même pour \( \phi
+        \).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Fonctions de plusieurs variables à valeurs réelles</h2>
+      <h3>Définitions</h3>
+      <p>
+        Soit \( U \subset \mathbb{R}^p \), et soit \( f : U \to \mathbb{R} \).
+        Soit \( x_0 \in U \). On dit que \( f \) admet en \( x_0 \) :
+      </p>
+      <ul>
+        <li>
+          <p>un maximum, si</p>
+          \[ \forall x \in U, f(x) \leq f(x_0) \]
+        </li>
+        <li>
+          <p>un minimum, si</p>
+          \[ \forall x \in U, f(x) \geq f(x_0) \]
+        </li>
+        <li>
+          <p>
+            un extremum, si \( f \) admet en \( x_0 \) un maximum ou un minimum.
+          </p>
+        </li>
+      </ul>
+      <h3>Définition</h3>
+      <p>
+        Dans les mêmes conditions, on dit que \( f \) admet en \( x_0 \) un
+        maximum local (resp. un minimum local, un extremum local) s'il existe un
+        voisinage \( V \) de \( x_0 \) dans \( U \) tel que la restriction de \(
+        f \) à \( V \) admet en \( x_0 \) un maximum respectivement un minimum,
+        un extremum.
+      </p>
+      <h3>Théorème de la formule de Taylor à l'ordre 2</h3>
+      <p>
+        Soit \( U \subset \mathbb{R}^p \) ouvert, et soit \( f : U \to
+        \mathbb{R} \) une fonction de classe \( C^2 \). Pour tout \( x \in U \)
+        et tout \( h \in \mathbb{R}^p \) tel que \( [x, x + h] \subset U \), il
+        existe \( t \in [0, 1] \) tel que :
+      </p>
+      \[ f(x + h) = f(x) + \sum_{i=1}^p h_i \partial_i f(x) + \frac{1}{2}
+      \sum_{i,j=1}^p h_i h_j \partial_{ij}^2 f(x + th) \]
+      <p>ou bien</p>
+      \[ f(x + h) = f(x) + \sum_{i=1}^p h_i \partial_i f(x) + \frac{1}{2}
+      \sum_{i,j=1}^p h_i h_j \partial_{ij}^2 f(x) + \|h\|^2 \epsilon(h) \]
+      <p>avec \(\lim_{h \to 0} \epsilon(h) = 0\).</p>
+      <h3>Démonstration</h3>
+      <p>
+        La première formule suit de l'application de la formule de Taylor
+        usuelle pour les fonctions d'une variable à la fonction \( t \mapsto f(x
+        + th) \). La seconde formule suit de la première.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Matrice Hessienne</h2>
+      <h3>Définition</h3>
+      <p>
+        La matrice hessienne de \( f \) en \( x \), ou simplement hessienne de
+        \( f \) en \( x \), est la matrice \( p \times p \) définie par :
+      </p>
+      \[ Hf(x) = (\partial_{i,j}^2 f(x))_{i,j=1,\cdots,p} \]
+      <h3>Proposition</h3>
+      <p>
+        Supposons que \( f : U \to \mathbb{R} \) est de classe \( C^1 \) et
+        admet un extremum local en \( x \). Alors \( d_x f = 0 \).
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        On considère la fonction \( g : t \mapsto f(x + t\delta) \), où \(\delta
+        = (\partial_1 f(x), \cdots, \partial_p f(x))\). On remarque que, en \( t
+        = 0 \), on a
+      </p>
+      \[g'(0) = d_x f(\delta) = \| \delta \|^2 > 0 \]
+      <p>
+        si bien que \( x \) ne peut pas être un minimum local ou un maximum
+        local.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( f : U \to \mathbb{R} \) de classe \( C^2 \), et soit \( x \in U
+        \) un point tel que \( d_x f = 0 \) et la matrice \( Hf(x) \) est
+        définie négative. Alors \( f \) admet en \( x \) un maximum local. Si \(
+        Hf(x) \) est définie positive, alors \( f \) admet en \( x \) un minimum
+        local. Si \( Hf(x) \) a des valeurs propres positives et d'autres
+        négatives, alors \( x \) n'est pas un extremum local.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Dans les trois cas c'est une conséquence directe de la formule de Taylor
+        à l'ordre 2 ci-dessus, puisque le signe de \( f \) au voisinage de \( x
+        \) est déterminé par son hessien.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Soit \( U \subseteq \mathbb{R}^2 \) ouvert, et soit \( f : U \to
+        \mathbb{R} \) une fonction de classe \( C^2 \). Soit \( x \in U \) tel
+        que \( d_x f = 0 \). Alors :
+      </p>
+      <ul>
+        <li>
+          <p>
+            Si \(\det(Hf(x)) > 0\), alors \( f \) admet en \( x \) un extremum
+            local, qui est un maximum local si \(\text{Tr}(Hf(x)) < 0\) et un
+            minimum local si \(\text{Tr}(Hf(x)) > 0\).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si \(\det(Hf(x)) < 0\), alors \( f \) admet en \( x \) un point
+            critique qui n'est pas un extremum local.
+          </p>
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>
+        C'est une conséquence du théorème précédent, car une matrice \( 2 \times
+        2 \) est définie positive si et seulement si son déterminant et sa trace
+        sont strictement positifs, et définie négative si et seulement si son
+        déterminant est strictement positif et sa trace strictement négative.
+      </p>
+      <p class="square">$\square$</p>
     </div>
   </body>
 </html>

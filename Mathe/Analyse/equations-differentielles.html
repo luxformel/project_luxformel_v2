@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="/javascript/mathjax.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Équations différentielles</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Équations différentielles</h1>
+      <h2></h2>
+      <h3>Définition</h3>
+      <p>
+        Soit \( I \subset \mathbb{R} \) un intervalle, soit \( n \in \mathbb{N},
+        \, n \geq 1 \), et soit \( F : I \times \mathbb{R}^{n+1} \to \mathbb{R}
+        \) une fonction. Soit encore \( f \in C^0(I) \). L'équation
+      </p>
+      \[ F(x, y, Dy, \cdots, D^n y) = f \quad (*) \]
+      <p>
+        est appelée équation différentielle ordinaire d'ordre \( n \). Une
+        solution de (*) est une fonction \( y \in C^n(I) \) telle que (*) soit
+        satisfaite en tout point \( x \in I \).
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Une équation différentielle est dite linéaire si elle peut se mettre
+        sous la forme suivante :
+      </p>
+      \[ y^{(n)} + a_1(x)y^{(n-1)}(x) + \cdots + a_{n-1}(x)y' + a_n(x)y = f(x)
+      \]
+      <h2>Équations différentielles linéaires du premier ordre</h2>
+      <h3>Définition</h3>
+      <p>
+        Une équation différentielle linéaire d'ordre 1 est une équation de la
+        forme
+      </p>
+      \[ y' = a(x)y + b(x) \]
+      <p>
+        où $a$ et $b$ sont deux fonctions définies sur un intervalle $I$ de
+        $\mathbb{R}$. L'équation homogène associée est alors l'équation
+        différentielle :
+      </p>
+      \[ y' = a(x)y (*) \]
+      <h3>Proposition</h3>
+      <p>
+        Soit $a : I \rightarrow \mathbb{R}$, et soit $A$ une primitive de $a$.
+        Les solutions de l'équation (*) sont exactement les fonctions de la
+        forme
+      </p>
+      \[ x \mapsto \lambda \exp(A(x)) \]
+      <p>où $\lambda \in \mathbb{R}$ est une constante.</p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit $\phi : I \rightarrow \mathbb{R}$ définie par $\phi(x) = \lambda
+        \exp(A(x))$, on a alors pour tout $x \in I$
+      </p>
+      \[ \phi'(x) = \lambda A'(x) \exp(A(x)) = \lambda a(x) \exp(A(x)) = a(x)
+      \phi(x) \]
+      <p>
+        si bien que $\phi$ est solution de $(*)$.
+        <br />
+        Réciproquement, soit $\phi : I \rightarrow \mathbb{R}$ une solution de
+        $(*)$, et soit $J \subset I$ un intervalle où $\phi$ ne s'annule pas. On
+        a alors pour tout $x \in J$
+      </p>
+      \[ \frac{\phi'(x)}{\phi(x)} = a(x) \]
+      <p>et donc</p>
+      \[ \log(|\phi(x)|)' = a(x) \]
+      <p>et on obtient en intégrant que</p>
+      \[ \log |\phi(x)| = A(x) + C \]
+      <p>où $C$ est une constante réelle. On en déduit qu'on a bien sur $J$</p>
+      \[ \phi(x) = \lambda \exp(A(x)) \]
+      <p>
+        Il suit en particulier que $\phi$ ne peut pas s'annuler sur l'adhérence
+        de $J$, si bien que $J = I$, et $\phi$ a donc la forme cherchée sur tout
+        $I$.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Corollaire</h3>
+      <p>
+        Si $a(x)$ est égale à une constante $a \in \mathbb{R}$, les solutions de
+        l'équation différentielle homogène
+      </p>
+      \[ y' = ay \]
+      <p>
+        sont les fonctions de la forme $y(x) = \lambda \exp(ax)$, où $\lambda
+        \in \mathbb{R}$.
+      </p>
+      <h2>Solution générale de l'équation</h2>
+      <h3>Lemma</h3>
+      <p>
+        Soit $y_0$ une solution particulière de (6). Une fonction $y : I \to
+        \mathbb{R}$ de classe $C^1$ est solution de (6) si et seulement si $y -
+        y_0$ est solution de (7).
+      </p>
+      <h3>Démonstration</h3>
+      <p>Posons $z = y - y_0$. Alors</p>
+      $$ y' - ay - b = (y_0 + z)' - a(y_0 + z) - b $$ $$ = (y_0' - ay_0 - b) +
+      (z' - az) $$ $$ = z' - az $$
+      <p>et le résultat suit.</p>
+      <p class="square">$\square$</p>
+      <h2>Variation de la constante</h2>
+      <h3>Théorème</h3>
+      <p>
+        On suppose $a, b$ continues. Soit $A$ une primitive de $a$. Alors les
+        solutions de (6) sont les fonctions de la forme
+      </p>
+      \[ y(x) = \lambda(x) \exp(A(x)) \]
+      <p>où $\lambda$ est une primitive de $x \mapsto b(x) \exp(-A(x))$.</p>
+      <h2>Problème de Cauchy</h2>
+      <h3>Théorème du problème de Cauchy</h3>
+      <p>
+        Soit $x_0 \in I$, soient $y_0, y_1 \in \mathbb{R}$ (resp. $\mathbb{C}$).
+        Il existe une unique solution $\phi$ de (8) telle que $\phi(x_0) = y_0$
+        et que $\phi'(x_0) = y_1$.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Soit $a, b$ continues sur $I$, soit $x_0 \in I$, et soit $y_0 \in
+        \mathbb{R}$. Il existe une unique solution $\phi$ de (6) sur $I$ telle
+        que $\phi(x_0) = y_0$.
+      </p>
+      <h2>Équation de Bernoulli</h2>
+      <p>Ce sont les équations de la forme</p>
+      \[ y' = \alpha(x)y + \beta(x)y^n \]
+      <p>où $n > 1$ est entier et $\alpha, \beta$ sont continues.</p>
+      <h3>Solution</h3>
+      <p>
+        Pour résoudre ces équations, on divise par $y^n$ et on pose $z =
+        1/y^{n-1}$. On obtient l'équation équivalente :
+      </p>
+      \[ -\frac{1}{n-1}z' = \alpha(x)z + \beta(x) \]
+      <p>qui est une équation linéaire du premier ordre.</p>
+      <h2>Équation de Riccati</h2>
+      <p>C'est l'équation de la forme</p>
+      \[ y' = \alpha(x)y^2 + \beta(x)y + \gamma(x) \]
+      <h3>Solution</h3>
+      <p>
+        On peut la résoudre dès lors qu'on connaît une solution particulière
+        $y_1$. En effet on peut alors poser $y = z + y_1$, et on obtient
+        l'équation suivante sur $z$:
+      </p>
+      \[ z' = \alpha(x)z^2 + (2\alpha(x)y_1(x) + \beta(x))z \]
+      <p>
+        C'est une équation de Bernoulli, dont on a vu une méthode de résolution.
+      </p>
+      <h2>Solutions de l'équation homogène</h2>
+      <h3>Proposition</h3>
+      <p>
+        L'ensemble des solutions de l'équation homogène (9) forme un espace
+        vectoriel.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        On va montrer que c'est un sous-espace vectoriel de l'espace vectoriel
+        des fonctions continues de $I$ dans $\mathbb{R}$ respectivement
+        $\mathbb{C}$. Il suffit pour cela de remarquer que :
+      </p>
+      <ul>
+        <li><p>la fonction nulle est solution</p></li>
+        <li>
+          <p>
+            si $y_1$ et $y_2$ sont deux solutions, alors $y_1 + y_2$ est une
+            solution
+          </p>
+        </li>
+        <li>
+          <p>
+            si $y$ est une solution et $\lambda \in \mathbb{R}$ respectivement
+            $\lambda \in \mathbb{C}$, alors $\lambda y$ est encore solution
+          </p>
+        </li>
+      </ul>
+      <h2>Wronskien</h2>
+      <h3>Définition</h3>
+
+      <p>
+        Soient $y_1, y_2$ deux solutions sur $I$ de l'équation homogène (9).
+        Leur Wronskien est la fonction définie sur $I$ par le déterminant
+        suivant :
+      </p>
+      \[ W_{y_1,y_2}(x) = \begin{vmatrix} y_1(x) & y_2(x) \\ y_1'(x) & y_2'(x)
+      \end{vmatrix} \]
+      <h3>Proposition</h3>
+      <p>
+        Soient $y_1, y_2$ deux solutions sur $I$ de l'équation homogène (9),
+        soit $x_0 \in I$. On a alors pour tout $x \in I$ :
+      </p>
+      \[ W_{y_1,y_2}(x) = \exp\left(-\int_{x_0}^{x} p(t)dt\right)
+      W_{y_1,y_2}(x_0) \]
+      <h3>Démonstration</h3>
+      <p>On remarque que</p>
+      $$ W'_{y_1,y_2}(x) = \begin{vmatrix} y_1'(x) & y_2'(x) \\ y_1'(x) &
+      y_2'(x) \end{vmatrix} + \begin{vmatrix} y_1(x) & y_2(x) \\ y_1''(x) &
+      y_2''(x) \end{vmatrix}$$ $$ = \begin{vmatrix} y_1(x) & y_2(x) \\
+      -p(x)y_1'(x) - q(x)y_1(x) & -p(x)y_2'(x) - q(x)y_2(x) \end{vmatrix} $$ $$
+      = \begin{vmatrix} y_1(x) & y_2(x) \\ -p(x)y_1'(x) & -p(x)y_2'(x)
+      \end{vmatrix}$$ $$= -p(x) \begin{vmatrix} y_1(x) & y_2(x) \\ y_1'(x) &
+      y_2'(x) \end{vmatrix} $$ $$= -p(x) W_{y_1,y_2}(x)$$
+      <p>
+        On peut maintenant intégrer cette équation différentielle linéaire du
+        premier ordre, et on obtient le résultat.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Corollaire</h3>
+      <p>
+        Le Wronskien de $y_1$ et $y_2$ est soit identiquement nul, soit partout
+        non nul.
+      </p>
+    </div>
+  </body>
+</html>
