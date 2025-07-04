@@ -18,12 +18,12 @@
     <script defer src="/javascript/side-navigator.js"></script>
     <script defer src="/javascript/scroll-button.js"></script>
 
+    <script src="/javascript/mathjax.js"></script>
     <script
       id="MathJax-script"
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
-    <script src="/javascript/mathjax.js"></script>
 
     <script defer src="/settings/settings.js"></script>
 
@@ -231,6 +231,293 @@
         Le Wronskien de $y_1$ et $y_2$ est soit identiquement nul, soit partout
         non nul.
       </p>
+      <h2>Système fondamental de solutions</h2>
+      <h3>Définition</h3>
+      <p>
+        Soient $y_1$ et $y_2$ deux solutions de (9). Elles forment un système
+        fondamental de solutions de l'équation homogène (9) si et seulement si
+        $W_{y_1,y_2} \neq 0$ sur $I$.
+      </p>
+      <h3>Proposition</h3>
+      <p>
+        Supposons que $y_1$ et $y_2$ forment un système fondamental de solutions
+        de l'équation homogène (9). Alors toute solution de cette équation peut
+        s'écrire sous la forme
+      </p>
+      \[ y = c_1y_1 + c_2y_2 \]
+      <p>où $c_1$ et $c_2$ sont deux constantes.</p>
+      <h3>Démonstration</h3>
+      <p>
+        Comme le Wronskien est partout non-nul, on peut résoudre pour tout $x
+        \in I$ l'équation linéaire suivante :
+      </p>
+      \[ \begin{pmatrix} y(x) \\ y'(x) \end{pmatrix} = \begin{pmatrix} y_1(x) &
+      y_2(x) \\ y'_1(x) & y'_2(x) \end{pmatrix} \begin{pmatrix} c_1(x) \\ c_2(x)
+      \end{pmatrix} \]
+      <p>On peut ré-écrire cette relation sous la forme :</p>
+      \[ \begin{pmatrix} y(x) \\ y'(x) \end{pmatrix} = c_1(x) \begin{pmatrix}
+      y_1(x) \\ y'_1(x) \end{pmatrix} + c_2(x) \begin{pmatrix} y_2(x) \\ y'_2(x)
+      \end{pmatrix} \]
+      <p>
+        Pour montrer que $c_1$ et $c_2$ sont constantes, on va dériver cette
+        équation, on obtient que
+      </p>
+      \[ \begin{pmatrix} y'(x) \\ y''(x) \end{pmatrix} = c'_1(x) \begin{pmatrix}
+      y_1(x) \\ y'_1(x) \end{pmatrix} + c'_2(x) \begin{pmatrix} y_2(x) \\
+      y'_2(x) \end{pmatrix} \] \[ + c_1(x) \begin{pmatrix} y'_1(x) \\ y''_1(x)
+      \end{pmatrix} + c_2(x) \begin{pmatrix} y'_2(x) \\ y''_2(x) \end{pmatrix}
+      \]
+      <p>Comme $y$, $y_1$ et $y_2$ sont des solutions de (9), on a :</p>
+      \[ \begin{pmatrix} y'(x) \\ -p(x)y'(x) - q(x)y(x) \end{pmatrix} = c'_1(x)
+      \begin{pmatrix} y_1(x) \\ y'_1(x) \end{pmatrix} + c'_2(x) \begin{pmatrix}
+      y_2(x) \\ y'_2(x) \end{pmatrix} \] \[ + c_1(x) \begin{pmatrix} y'_1(x) \\
+      -p(x)y'_1 - q(x)y_1(x) \end{pmatrix} + c_2(x) \begin{pmatrix} y'_2(x) \\
+      -p(x)y'_2(x) - q(x)y_2(x) \end{pmatrix} \]
+      <p>Mais il suit de la définition de $c_1$ et $c_2$ que</p>
+      \[ \begin{pmatrix} y'(x) \\ -p(x)y'(x) - q(x)y(x) \end{pmatrix} = c_1(x)
+      \begin{pmatrix} y'_1(x) \\ -p(x)y'_1 - q(x)y_1(x) \end{pmatrix} \] \[ +
+      c_2(x) \begin{pmatrix} y'_2(x) \\ -p(x)y'_2(x) - q(x)y_2(x) \end{pmatrix}
+      \]
+      <p>et on en déduit que</p>
+      \[ c'_1(x) \begin{pmatrix} y_1(x) \\ y'_1(x) \end{pmatrix} + c'_2(x)
+      \begin{pmatrix} y_2(x) \\ y'_2(x) \end{pmatrix} = 0 \]
+      <p>Or on sait par l'hypothèse sur le Wronskien que</p>
+      \[ \det \begin{pmatrix} y_1(x) & y_2(x) \\ y'_1(x) & y'_2(x) \end{pmatrix}
+      \neq 0 \]
+      <p>
+        pour tout $x \in I$, et il suit que $c'_1(x) = c'_2(x) = 0$ pour tout $x
+        \in I$. Les fonctions $c_1$ et $c_2$ sont donc constantes, ce qui prouve
+        le résultat.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Remarque</h3>
+      <p>
+        Supposons qu'on connaisse une solution, disons $y_1$, de l'équation
+        homogène (9). On peut alors trouver une seconde solution de la manière
+        suivante. On cherche une solution $y$ sous la forme $y = vy_1$, et on
+        constate que (9) se traduit par une équation différentielle du premier
+        ordre sur $v'$. Si on peut résoudre cette équation différentielle, on
+        peut trouver $v'$ puis ensuite intégrer pour obtenir $v$. Les fonctions
+        $y_1$ et $vy_1$ forment alors un système fondamental de solutions de
+        (9).
+      </p>
+      <h3>Lemma</h3>
+      <p>
+        Soit $y_0$ une solution particulière de l'équation avec second membre
+        (8). Alors les solutions de (8) sont exactement les fonctions de la
+        forme $y = y_0 + z$, où $z$ est une solution de l'équation homogène (9).
+      </p>
+      <h2>Variation des constantes</h2>
+      <h3>Proposition</h3>
+      <p>
+        Soit $(y_1,y_2)$ un système fondamental de solutions de l'équation
+        homogène (9). Pour tout $x \in I$, on note $c_1(x)$ et $c_2(x)$ les
+        nombres tels que
+      </p>
+      \[ \begin{cases}c_{1}(x)y_{1}(x)+c_{2}(x)y_{2}(x)=0 \\
+      c_{1}(x)y_{1}^{\prime}(x)+c_{2}(x)y_{2}^{\prime}(x)=r(x) \end{cases} \]
+      <p>
+        qui existent et sont uniques puisque le Wronskien est non nul. Alors
+        pour tout $x_0 \in I$ la fonction suivante est solution de (8):
+      </p>
+      \[ y_0(x) = \left( \int_{x_0}^x c_1(t)dt \right) y_1(x) + \left(
+      \int_{x_0}^x c_2(t)dt \right) y_2(x) \]
+      <h3>Démonstration</h3>
+      <p>Posons pour simplifier les notations</p>
+      \[ C_1(x) = \int_{x_0}^x c_1(t)dt, \quad C_2(x) = \int_{x_0}^x c_2(t)dt \]
+      <p>Ainsi,</p>
+      \[ y_0(x) = C_1(x)y_1(x) + C_2(x)y_2(x) \]
+      <p>et donc</p>
+      \[ y'_{0}(x) = C'_1(x)y_1(x) + C_1(x)y'_1(x) + C'_2(x)y_2(x) +
+      C_2(x)y'_2(x) \] \[ = c_1(x)y_1(x) + c_2(x)y_2(x) + C_1(x)y'_1(x) +
+      C_2(x)y'_2(x) \] \[ = C_1(x)y'_1(x) + C_2(x)y'_2(x) \]
+      <p>et donc</p>
+      \[ y''_0(x) = c_1(x)y'_1(x) + c_2(x)y'_2(x) + C_1(x)y''_1(x) +
+      C_2(x)y''_2(x) \] \[ = r(x) + C_1(x)y''_1(x) + C_2(x)y''_2(x) \]
+      <p>Il suit que</p>
+      \[ y''_0(x) + p(x)y'_0(x) + q(x)y_0(x) = r(x) + C_1(x)(y''_1(x) +
+      p(x)y'_1(x) + q(x)y_1(x)) \] \[ + C_2(x)(y''_2(x) + p(x)y'_2(x) +
+      q(x)y_2(x)) \] \[ = r(x) \]
+      <p>
+        ce qui montre bien que $y_0$ est solution de l'équation avec second
+        membre (8).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>
+        Equations différentielles linéaires d'ordre 2 à coefficients constants
+      </h2>
+      <h3>Lemma</h3>
+      <ul>
+        <li>
+          <p>
+            Supposons que $s$ est solution du polynôme caractéristique (12).
+            Alors la fonction $x \mapsto e^{sx}$ est solution de (11)
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $s$ est solution double de (12), alors la fonction $x \mapsto
+            xe^{sx}$ est aussi solution de l'équation homogène (11)
+          </p>
+        </li>
+      </ul>
+      <h3>Démonstrations</h3>
+      <ul>
+        <li>
+          <p>
+            Pour le premier point, on note simplement que si $y(x) = e^{sx}$
+            alors
+          </p>
+          \[ ay''(x) + by'(x) + cy(x) = (as^2 + bs + c)e^{sx} \]
+          <p>et le résultat suit.</p>
+        </li>
+        <li>
+          <p>
+            Pour le second point, on calcule de même que si $y(x) = xe^{sx}$
+            alors \] \[ ay''(x) + by'(x) + cy(x) = (a(s^2x + 2s) + b(sx + 1) +
+            cx)e^{sx} \] \[ = ((as^2 + bs + c)x + (2as + b))e^{sx} \]
+          </p>
+
+          <p>
+            Or comme $s$ est solution double de (12), on a $2as + b = 0$, si
+            bien que $y(x) = xe^{sx}$ est encore solution de l'équation
+            homogène.
+          </p>
+        </li>
+      </ul>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>Soit $\Delta = b^2 - 4ac$. Alors :</p>
+      <ul>
+        <li>
+          <p>
+            si $\Delta = 0$, alors l'équation (12) a une unique solution $s$
+            double. Dans ce cas, les solutions de l'équation homogène (11) sont
+            les fonctions de la forme
+          </p>
+          \[ y(x) = (\lambda x + \mu)e^{sx} \]
+          <p>avec $\lambda, \mu \in \mathbb{C}$.</p>
+        </li>
+        <li>
+          <p>
+            sinon, l'équation (12) a deux solutions distinctes $s_1$ et $s_2$,
+            et les solutions de l'équation homogène (11) sont les fonctions de
+            la forme
+          </p>
+          \[ y(x) = \lambda_1 e^{s_1 x} + \lambda_2 e^{s_2 x} \]
+          <p>avec $\lambda_1, \lambda_2 \in \mathbb{C}$.</p>
+        </li>
+      </ul>
+      <h2>Cas des équations à coefficients réels</h2>
+      <h3>Lemmes</h3>
+      <ul>
+        <li>
+          <p>
+            Supposons que $s \in \mathbb{R}$ est solution du polynôme
+            caractéristique (12). Alors la fonction $x \mapsto e^{sx}$ est
+            solution de (11).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $s$ est solution double de (12), alors la fonction $x \mapsto
+            xe^{sx}$ est aussi solution de l'équation homogène (11).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si (12) n'a pas de racine réelle, alors il a deux racines complexes
+            conjuguées de la forme $r \pm i\omega$. Dans ce cas, les fonctions
+            $x \mapsto e^{rx}\cos(\omega x)$ et $x \mapsto e^{rx}\sin(\omega x)$
+            sont solutions de l'équation homogène (11).
+          </p>
+        </li>
+      </ul>
+      <h3>Théorème</h3>
+      <p>
+        On suppose ici $a, b, c \in \mathbb{R}$, et on pose encore $\Delta = b^2
+        - 4ac$. Alors :
+      </p>
+      <ul>
+        <li>
+          <p>
+            si $\Delta = 0$, alors l'équation (12) a une unique solution $s$
+            double. Dans ce cas, les solutions de l'équation homogène (11) sont
+            les fonctions de la forme
+          </p>
+          \[ y(x) = (\lambda x + \mu)e^{sx} \]
+          <p>avec $\lambda, \mu \in \mathbb{R}$.</p>
+        </li>
+        <li>
+          <p>
+            si $\Delta > 0$, l'équation (12) a deux solutions réelles distinctes
+            $s_1$ et $s_2$, et les solutions réelles de l'équation homogène (11)
+            sont les fonctions de la forme
+          </p>
+          \[ y(x) = \lambda_1 e^{s_1 x} + \lambda_2 e^{s_2 x} \]
+          <p>avec $\lambda_1, \lambda_2 \in \mathbb{R}$.</p>
+        </li>
+        <li>
+          <p>
+            si $\Delta < 0$, l'équation (12) a deux solutions complexes
+            conjuguées $s_1$ et $s_2 = \tau \pm i\omega$, et les solutions
+            réelles de l'équation homogène (11) sont les fonctions de la forme
+          </p>
+          \[ y(x) = \lambda e^{\tau x}\cos(\omega x) + \mu e^{\tau x}\sin(\omega
+          x) \]
+          <p>avec $\lambda, \mu \in \mathbb{R}$.</p>
+        </li>
+      </ul>
+      <h2>Equations différentielles linéaires d'ordre supérieur</h2>
+      <h3>Proposition</h3>
+      <p>
+        Les solutions de l'équation homogène associée à (15) forment un espace
+        vectoriel de dimension $n$.
+      </p>
+      <h3>Théorème du problème de Cauchy</h3>
+      <p>
+        Pour tout $x_0 \in I$ et tout $(y_0, y_1, \cdots, y_{n-1}) \in
+        \mathbb{R}^n$ (resp. $\in \mathbb{C}^n$) il existe une unique solution
+        de (15) telle que pour tout $i \in \{0, 1, \cdots, n-1\}$, $y^{(i)}(x_0)
+        = y_i$.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Soient $y_1, y_2, \cdots, y_n$ des solutions de (16) sur l'intervalle
+        $I$. Le Wronskien du système $(y_1, \cdots, y_n)$ est la fonction
+        définie par
+      </p>
+      \[ W_{y_1, \cdots, y_n}(x) = \det \begin{pmatrix} y_1(x) & y_2(x) & \cdots
+      & y_n(x) \\ y_1'(x) & y_2'(x) & \cdots & y_n'(x) \\ \vdots & \vdots &
+      \ddots & \vdots \\ y_1^{(n-1)}(x) & y_2^{(n-1)}(x) & \cdots &
+      y_n^{(n-1)}(x) \end{pmatrix} \]
+      <h3>Proposition</h3>
+      <p>
+        Soit $W_{y_1, \cdots, y_n}(x) = 0$ pour tout $x \in I$, soit $W_{y_1,
+        \cdots, y_n}(x)$ ne s'annule en aucun point de $I$.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Le $n$-uplet $(y_1,\cdots,y_n)$ de solutions de (16) forme un système
+        fondamental de solutions si et seulement si $W_{y_1,\cdots,y_n}(x) \neq
+        0$ pour un $x \in I$.
+      </p>
+      <h3>Propositions</h3>
+      <ul>
+        <li>
+          <p>
+            Soit $(y_1,\cdots,y_n)$ un système fondamental de solutions de (16).
+            Alors toute solution $y$ de (16) sur $I$ s'écrit sous la forme
+          </p>
+          \[ y = c_1y_1 + c_2y_2 + \cdots + c_ny_n \]
+          <p>
+            avec $c_1,c_2,\cdots,c_n \in \mathbb{R}$ (resp. $\in \mathbb{C}$).
+          </p>
+        </li>
+        <li>
+          <p>L'équation (16) admet un système fondamental de solution.</p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

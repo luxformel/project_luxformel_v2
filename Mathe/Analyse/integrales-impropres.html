@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Intégrales impropres</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Intégrales impropres</h1>
+      <h2>Fonction non bornées sur un intervalle borné</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $a,b$ tels que $[a,b[\subset I.$ Supposons que $f$ est integrable
+        sur tous les intervalles de la forme $[a,x],$ pour $x\in[a,b[.$ Si la
+        limite
+      </p>
+      \[\lim_{x\to b^{-}}\int_{a}^{x}f(t)dt\ \]
+      <p>
+        existe et est finie, on dit que l'integrale impropre de $f$ entre $a$ et
+        $b$ est convergente, et on note
+      </p>
+      \[\int_{a}^{b}f(t)dt=\lim_{x\to b^{-}}\int_{a}^{x}f(t)dt\ \]
+      <p>
+        Si la limite n'existe pas ou est infinie, on dit que l'integrale
+        impropre de $f$ entre $a$ et $b$ est divergente.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        Si $\int_{a}^{c}f(t)dt$ et $\int_{c}^{b}f(t)dt$ convergent toutes deux,
+        on dit que l'integrale de $f$ sur $]a,b[$ converge, et on note
+      </p>
+      \[\int_{a}^{b}f(t)dt=\int_{a}^{c}f(t)dt+\int_{c}^{b}f(t)dt\ \]
+      <p>
+        Dans le cas contraire, on dit que l'integrale de $f$ sur $]a,b[$
+        diverge.
+      </p>
+      <h2>Fonctions sur un intervalle non borné</h2>
+      <h3>Définition</h3>
+      <p>
+        Soit $f:[a,\infty[\to\mathbb{R}$ une fonction integrable sur tous les
+        intervalles de la forme $[a,x]$ pour $x>0$. Si
+      </p>
+      \[\lim_{x\to\infty}\int_{a}^{x}f(t)dt\]
+      <p>existe et est finie, on dit que l'integrale impropre</p>
+      \[\int_{a}^{\infty}f(t)dt\]
+      <p>est convergente, et on note</p>
+      \[\int_{a}^{\infty}f(t)dt=\lim_{x\to\infty}\int_{a}^{x}f(t)dt\ \]
+      <p>Dans le cas contraire, on dit que l'integrale est divergente.</p>
+      <h3>Définition</h3>
+      <p>
+        Si $\int_{-\infty}^{c}f(t)dt$ et $\int_{c}^{\infty}f(t)dt$ convergent
+        toutes deux, on dit que l'integrale de $f$ sur $\mathbb{R}$ converge, et
+        on note
+      </p>
+      \[\int_{-\infty}^{\infty}f(t)dt=\int_{-\infty}^{c}f(t)dt+\int_{c}^{\infty}f(t)dt\
+      \]
+      <p>
+        Dans le cas contraire, on dit que l'integrale de $f$ sur $\mathbb{R}$
+        diverge.
+      </p>
+      <h2>Exemples importants</h2>
+      <h3>Théorème</h3>
+      <p>L'integrale impropre</p>
+      \[\int_{0}^{1}\frac{dt}{t^{\alpha}}\]
+      <p>
+        est convergente pour $\alpha < 1 $ et divergente pour $\alpha\geq 1$.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Il suffit de prendre une primitive de $t^{-\alpha}$. Pour $\alpha\neq 1$
+        cette primitive est $t^{1-\alpha}/(1-\alpha)$, qui tend vers $0$ quand
+        $t\to 0^{+}$ pour $\alpha<1$, et vers $-\infty$ quand $\alpha>1$. Pour
+        $\alpha=1$ la primitive est $\log(t)$, qui tend vers $-\infty$ quand
+        $t\to 0^{+}$.
+        <br />
+        On peut bien s\^ur remplacer dans cet enonce la borne superieure
+        d'integration $1$ par n'importe quel nombre dans $]0,\infty[$. De meme
+        on peut etudier la convergence de l'integrale en $a$ de
+        $1/(t-a)^{\alpha}$, le resultat est le meme.
+        <br />
+        On a une situation complementaire pour la convergence de l'integrale sur
+        $[0,\infty[$.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>L'integrale impropre</p>
+      \[\int_{1}^{\infty}\frac{dt}{t^{\alpha}}\]
+      <p>
+        est convergente pour $\alpha > 1$ et divergente pour $\alpha\leq 1$.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Comme pour le théorème précédent, il suffit de considerer une primitive
+        de $t\to t^{-\alpha}$.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Critères de convergence pour les fonctions positives</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f:[a,b[\to\mathbb{R}_{\geq 0}$, integrable sur tout intervalle de
+        la forme $[a,x]$ pour $x\in[a,b[$. Alors l'integrale impropre
+        $\int_{a}^{b}f(t)dt$ est convergente si et seulement si la fonction
+        $x\mapsto\int_{a}^{x}f(t)dt$ est bornée.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Comme $f$ est à valeurs positives, la fonction
+        $x\mapsto\int_{a}^{x}f(t)dt$ est croissante, donc elle admet une limite
+        en $b$ si et seulement si elle est bornée.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Théorème</h3>
+      <p>
+        Soient $f,g:[a,b]\to\mathbb{R}_{\geq 0}$ deux fonctions intégrables sur
+        tout intervalle de la forme $[a,x]$ avec $x\in[a,b[$. Supposons que
+        $0\leq f(t)\leq g(t)$ pour tout $t\in[a,b[$. Alors :
+      </p>
+      <ul>
+        <li>
+          <p>
+            si $\int_{a}^{b}g(t)dt$ converge, il en est de meme pour $f$, et de
+            plus
+          </p>
+          \[\int_{a}^{b}f(t)dt\leq\int_{a}^{b}g(t)dt\ \]
+        </li>
+        <li>
+          <p>si $\int_{a}^{b}f(t)dt$ diverge, il en est de meme pour $g$.</p>
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>On a pour tout $x\in[a,b[$</p>
+      \[\int_{a}^{x}f(t)dt\leq\int_{a}^{x}g(t)dt\ \]
+      <p>
+        Si $\int_{a}^{b}g(t)dt$ converge alors la fonction
+        $x\to\int_{a}^{x}g(t)dt$ est bornée, donc il est en de même pour $f$ et
+        donc $\int_{a}^{b}f(t)dt$ converge. On a pour tout $x\in[a,b[$
+      </p>
+      \[\int_{a}^{x}f(t)dt\leq\int_{a}^{x}g(t)dt\ \]
+      <p>
+        et en passant a la limite $x\to b^{-}$ on obtient l'inegalite entre les
+        integrales de $a$ a $b$.
+        <br />
+        Le second enonce est la contraposee du premier, et lui est donc
+        equivalent.
+        <br />
+        On a un resultat analogue pour les intervalles de la forme $]a,b]$, avec
+        $a$ fini ou $a=-\infty$.
+        <br />
+        On peut donner tout de suite une application pour les fonctions de la
+        forme $\log(t)/t^{\alpha}$.
+      </p>
+      <h3>Théorème</h3>
+      <p>Soit $\alpha>0$. Alors :</p>
+      <ul>
+        <li>
+          <p>
+            $\int_{0}^{1}\frac{\log(t)}{t^{\alpha}}dt$ converge si et seulement
+            si $\alpha < 1$
+          </p>
+        </li>
+        <li>
+          <p>
+            $\int_{1}^{\infty}\frac{\log(t)}{t^{\alpha}}dt$ converge si et
+            seulement si $\alpha > 1$.
+          </p>
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>
+        Pour le premier point, la question de la convergence se pose seulement
+        en $0$. Supposons d'abord que $\alpha < 1 $, et soit
+        $\beta\in]\alpha,1[$. On a vu plus haut que comme $\beta < 1 $,
+        $\int_{0}^{1}\frac{1}{t^{\beta}}dt$ converge. De plus, $\lim_{t\to
+        0}\log(t)t^{\beta-\alpha}=0$. On en déduit qu'il existe $M>0$ tel que
+        pour tout $t\geq M$,
+        $\frac{|\log(t)|}{t^{\alpha}}=\frac{1}{t^{\beta}}\times|\log(t)t^{\beta-\alpha}|
+        \leq\frac{1}{t^{\beta}}$. Le théorème 3.2 assure alors que
+        $\int_{0}^{1}\frac{\log(t)}{t^{\alpha}}dt$ est convergente.
+        <br />
+        De meme, si $\alpha>1$, on prend $\beta\in]1,\alpha[$. On a vu que
+        $\int_{0}^{1}\frac{1}{t^{\beta}}dt$ diverge, et $\lim_{t\to
+        0}\log(t)t^{\beta-\alpha}=\infty$. On en déduit par le même raisonnement
+        que $\int_{0}^{1}\frac{\log(t)}{t^{\alpha}}dt$ est divergente.
+        <br />
+        Pour $\alpha=1$, on fait une integration par partie : pour tout
+        $x\in]0,1[$,
+      </p>
+      \[\int_{x}^{1}\frac{\log(t)}{t}dt=[\log(t)^{2}]^{1}_{x}-\int_{x}^{1}\frac{\log(t)}{t}dt\
+      \]
+      <p>si bien que</p>
+      \[\int_{x}\frac{\log(t)}{t}dt=\frac{1}{2}[\log(t)^{2}]^{1}_{x}=-\frac{\log(x)^{2}}{2}\
+      \]
+      <p>Il suit que $\int_{0}^{1}\frac{\log(t)}{t}dt$ diverge.</p>
+      <p class="square">$\square$</p>
+      <h2>Absolue convergence</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f:[a,b]\to\mathbb{R}$ integrable sur tout intervalle $[a,x]$ pour
+        $x\in[a,b[$. Supposons que $\int_{a}^{b}|f(t)|dt$ est convergente. Alors
+        $\int_{a}^{b}f(t)dt$ est convergente, et
+      </p>
+      \[\left|\int_{a}^{b}f(t)dt\right|\leq\int_{a}^{b}|f(t)|dt\ \]
+      <h3>Démonstration</h3>
+      <p>Pour tout $t\in[a,b[$, on pose</p>
+      \[f_{+}(t)=\max(f(t),0)\ ,\ \ f_{-}(t)=\max(-f(t),0)\ \]
+      <p>
+        On note que $f_{+}$ et $f_{-}$ sont a valeurs positives, que
+        $f=f_{+}-f_{-}$ et que $|f|=f_{+}+f_{-}$. Comme $\int_{a}^{b}|f(t)|dt$
+        converge et que $f_{+}\leq|f|$, $\int_{a}^{b}f_{+}(t)dt$ converge, et de
+        meme pour $f_{-}$. Comme $f=f_{+}-f_{-}$, on montre alors en se ramenant
+        a la definition de la convergence (par la limite quand $x\to b$ de
+        l'integrale entre $a$ et $x$) que $\int_{a}^{b}f(t)dt$ converge.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Définition</h3>
+      <p>
+        Soit $f:[a,b[\to\mathbb{R}$. On dit que $\int_{a}^{b}f(t)dt$ est
+        absolument convergente si $\int_{a}^{b}|f(t)|dt$ est convergente.
+      </p>
+      <h2>Équivalences</h2>
+      <h3>Théorème</h3>
+      <p>
+        Soient $f,g:[a,b[\to\mathbb{R}_{\geq 0}$ deux fonctions a valeurs
+        positives, integrable sur tout intervalle de la forme $[a,x]$ avec
+        $x\in[a,b[$, telles que $f\sim g$ en $b$. Alors $\int_{a}^{b}f(t)dt$
+        converge si et seulement si $\int_{a}^{b}g(t)dt$ converge.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Par definition de l'equivalence en $b$, appliquée pour $\epsilon=1/2$,
+        il existe $c\in[a,b[$ tel que pour tout $t\geq c$ on a
+      </p>
+      \[\frac{f(t)}{2}\leq g(t)\leq\frac{3f(t)}{2}\ \]
+      <p>
+        Supposons que $\int_{a}^{b}f(t)dt$ converge. Alors
+        $\int_{a}^{b}3f(t)/2dt$ converge et, d'apres le théorème 3.2,
+        l'integrale de $g$ sur $[c,b[$ converge, donc l'integrale de $g$ sur
+        $[a,b[$ converge.
+        <br />
+        La réciproque se montre de la même manière.
+      </p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>

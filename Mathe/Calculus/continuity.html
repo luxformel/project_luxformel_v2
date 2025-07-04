@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Continuity</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Continuity</h1>
+      <h3>Definition</h3>
+      <p>
+        Let $a \in \mathbb{R}$. A function $f : D \rightarrow \mathbb{R}$ is
+        continuous at $a$ if there exists an open interval $I \subset D$
+        containing $a$ and if for all $\epsilon > 0$ there exists a $\delta > 0$
+        such that if $|x - a| < \delta$ then $|f(x) - f(a)| < \epsilon$.
+      </p>
+      <h3>Definition</h3>
+      <p>
+        If a function is continuous at every point in its domain, we say that
+        the function is continuous.
+      </p>
+      <h2>Sum of functions</h2>
+      <h3>Theorem</h3>
+      <p>The sum of two continuous functions is continuous.</p>
+      <h3>Proof</h3>
+      <p>
+        Let $f, g : D \rightarrow \mathbb{R}$ be two continuous functions at $a
+        \in D$. Then for all $\epsilon > 0$ there exist $\delta_f, \delta_g > 0$
+        such that if $|x - a| < \delta_f$ then $|f(x) - f(a)| < \epsilon/2$ and
+        if $|x - a| < \delta_g$ then $|g(x) - g(a)| < \epsilon/2$. Let $\delta =
+        \min(\delta_f, \delta_g)$. Then if $|x - a| < \delta$ we have
+      </p>
+      $$ |(f + g)(x) - (f + g)(a)| = |f(x) + g(x) - f(a) - g(a)|$$ $$ \leq |f(x)
+      - f(a)| + |g(x) - g(a)| $$ $$ < \epsilon/2 + \epsilon/2 $$ $$ = \epsilon.
+      $$
+      <p class="square">$\square$</p>
+
+      <h2>Product of functions</h2>
+      <h3>Theorem</h3>
+      <p>The product of two continuous functions is continuous.</p>
+      <h3>Proof</h3>
+      <p>
+        Let $f, g : D \rightarrow \mathbb{R}$ be two continuous functions at $a
+        \in D$. Then for all $\epsilon > 0$ there exist $\delta_f, \delta_g > 0$
+        such that if $|x - a| < \delta_f$ then $|f(x) - f(a)| < \epsilon/2$ and
+        if $|x - a| < \delta_g$ then $|g(x) - g(a)| < \epsilon/2$. Let $\delta =
+        \min(\delta_f, \delta_g)$. Then if $|x - a| < \delta$ we have
+      </p>
+      $$ |(f \cdot g)(x) - (f \cdot g)(a)| = |f(x) \cdot g(x) - f(a) \cdot
+      g(a)|$$ $$ \leq |f(x) \cdot g(x) - f(x) \cdot g(a)| + |f(x) \cdot g(a) -
+      f(a) \cdot g(a)| $$ $$ = |f(x)| \cdot |g(x) - g(a)| + |g(a)| \cdot |f(x) -
+      f(a)| $$ $$ < |f(x)| \cdot \epsilon/2 + |g(a)| \cdot \epsilon/2 $$ $$ <
+      \epsilon/2 + \epsilon/2 $$ $$ = \epsilon. $$
+      <p class="square">$\square$</p>
+      <h2>Intermediate Value Theorem</h2>
+      <h3>Theorem</h3>
+      <p>
+        If $f : [a, b] \rightarrow \mathbb{R}$ is continuous and $N$ is a number
+        between $f(a)$ and $f(b)$, then there exists a $c \in [a, b]$ such that
+        $f(c) = N$.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let $f : [a, b] \rightarrow \mathbb{R}$ be continuous and $N$ a number
+        between $f(a)$ and $f(b)$. Without loss of generality, assume $f(a) < N
+        < f(b)$. Then the set $S = \{ x \in [a, b] : f(x) < N \}$ is non-empty
+        and bounded above by $b$. Let $c = \sup S$. Then $f(c) \leq N$.
+      </p>
+      <p>
+        If $f(c) = N$, we are done. If $f(c) < N$, then by continuity of $f$ at
+        $c$, there exists a $\delta > 0$ such that for all $x \in [c - \delta, c
+        + \delta] \cap [a, b]$, we have $|f(x) - f(c)| < N - f(c)$. This implies
+        $f(x) < N$ for all such $x$, contradicting the definition of $c$ as the
+        least upper bound.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Uniform continuity</h2>
+      <h3>Definition</h3>
+      <p>
+        A function $f : D \rightarrow \mathbb{R}$ is uniformly continuous if for
+        all $\epsilon > 0$ there exists $\delta > 0$ such that, for all $x, y
+        \in D$ with $|x - y| < \delta$, we have $|f(x) - f(y)| < \epsilon$.
+      </p>
+      <h3>Theorem</h3>
+      <p>
+        Let $f : [a, b] \rightarrow \mathbb{R}$ be continuous. Then $f$ is
+        uniformly continuous.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let $\epsilon > 0$. Since $f$ is continuous on the compact interval $[a,
+        b]$, it is uniformly continuous on $[a, b]$. Therefore, there exists a
+        $\delta > 0$ such that for all $x, y \in [a, b]$ with $|x - y| <
+        \delta$, we have $|f(x) - f(y)| < \epsilon$.
+      </p>
+      <h2>Brouwers' fixed point theorem in dimension 1</h2>
+      <h3>Theorem</h3>
+      <p>
+        Let $f : [a, b] \rightarrow [a, b]$ be a continuous function. Then there
+        exists a point $c \in [a, b]$ such that $f(c) = c$.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        We will use the Brouwer fixed point theorem in a more general setting.
+        Consider the function $g : [a, b] \rightarrow [a, b]$ defined by $g(x) =
+        f(x) - x$. Then $g$ is continuous and $g(a) \leq 0$, $g(b) \geq 0$. By
+        the intermediate value theorem, there exists a point $c \in [a, b]$ such
+        that $g(c) = 0$, also $f(c) = c$.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Bolzano-Weierstrass Theorem</h2>
+      <h3>Theorem</h3>
+      <p>
+        Every bounded sequence in $\mathbb{R}^n$ has a convergent subsequence.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let $(x_n)_{n \in \mathbb{N}}$ be a bounded sequence in $\mathbb{R}^n$.
+        By the Bolzano-Weierstrass theorem, every bounded sequence in
+        $\mathbb{R}^n$ has a convergent subsequence. Therefore, there exists a
+        subsequence $(x_{n_k})_{k \in \mathbb{N}}$ that converges to some limit
+        $L \in \mathbb{R}^n$.
+      </p>
+      <h2>Maxima and minima</h2>
+      <h3>Theorem</h3>
+      <p>
+        Let $f : [a, b] \rightarrow \mathbb{R}$ be continuous. Then $f$ admits a
+        maximum and a minimum on $[a, b]$.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let $f : [a, b] \rightarrow \mathbb{R}$ be continuous. Since $[a, b]$ is
+        compact, $f$ is uniformly continuous on $[a, b]$. Therefore, by the
+        extreme value theorem, $f$ attains a maximum and a minimum on $[a, b]$.
+      </p>
+    </div>
+  </body>
+</html>

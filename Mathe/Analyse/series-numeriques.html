@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Séries numériques</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Séries numériques</h1>
+      <h3>Démonstration</h3>
+      <p>
+        Soit $(x_n)_{n\in\mathbb{N}}$ une suite d'éléments de $\mathbb{R}$
+        respectivement $\mathbb{C}$, $\mathbb{R}^n$ ou $\mathbb{C}^n$. On
+        appelle série de terme général $x_n$ la suite des sommes partielles,
+        définies par :
+      </p>
+      \[ S_n = \sum_{k=0}^n x_k \]
+      <p>
+        Dans certains cas on peut faire commencer la somme à 1 au lieu de 0.
+      </p>
+      <h3>Définition</h3>
+      <p>
+        On dit que la série de terme général $x_n$ est convergente
+        respectivement divergente si la suite des sommes partielles
+        $(S_n)_{n\in\mathbb{N}}$ est convergente respectivement divergente. Si
+        elle est convergente, on appelle somme de la série la limite, notée sous
+        la forme :
+      </p>
+      \[ \sum_{k=0}^\infty x_k = \lim_{n\to\infty} S_n \]
+      <h3>Proposition</h3>
+      <p>
+        Soient $(x_n)_{n\in\mathbb{N}}$ et $(y_n)_{n\in\mathbb{N}}$ les termes
+        généraux de deux séries convergentes. Alors la série de terme général
+        $x_n + y_n$ converge, et
+      </p>
+      \[ \sum_{k=0}^\infty (x_k + y_k) = \sum_{k=0}^\infty x_k +
+      \sum_{k=0}^\infty y_k \]
+      <p>
+        Si $\lambda \in \mathbb{R}$ (resp. $\lambda \in \mathbb{C}$) alors la
+        série de terme général $\lambda x_n$ est convergente, et
+      </p>
+      \[ \sum_{k=0}^\infty \lambda x_k = \lambda \sum_{k=0}^\infty x_k \]
+      <h3>Proposition</h3>
+      <p>
+        Une série de terme général $x_{n}$ est convergente si et seulement si
+      </p>
+      \[ \forall\epsilon>0,\exists n\in\mathbb{N},\forall p,q\geq
+      n,\left|\sum_{k=p}^{q}x_{k}\right|\leq\epsilon \]
+      <h2>Séries à terme positif</h2>
+      <h3>Proposition</h3>
+      <p>
+        Soient $x_{n},y_{n}$ les termes généraux de deux séries à termes
+        positifs, tels que $x_{n}\leq y_{n}$ pour tout $n$. Si $\sum_{n}y_{n}$
+        converge alors $\sum_{n}x_{n}$ est convergente. Si $\sum_{n}x_{n}$
+        diverge, alors $\sum_{n}y_{n}$ diverge.
+      </p>
+      <h3>Corollaire</h3>
+      <p>
+        Soient $x_{n}>0$ et $y_{n}>0$ les termes généraux de deux séries. Si
+        $x_{n}/y_{n}\to l\in\mathbb{R}_{>0}$, alors $\sum x_{n}$ converge si et
+        seulement si $\sum y_{n}$ converge.
+      </p>
+      <h3>Proposition</h3>
+      <p>
+        Si $x_{n}\geq 0$ est le terme général d'une série dont les sommes
+        partielles sont majorées par une constante $C>0$, alors cette série est
+        convergente.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Soit $f:[0,\infty[\rightarrow\mathbb{R}_{>0}$ une fonction décroissante
+        pour $t\geq n_{0}$. Alors $\sum_{n=0}^{\infty}f(n)$ est convergente si
+        et seulement si l'intégrale $\int_{0}^{\infty}f(t)dt$ converge.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Comme $f$ est décroissante, on a les inégalités suivantes pour tout $n$:
+      </p>
+      \[ f(k)\geq\int_{k}^{k+1}f(t)dt\geq f(k+1) \]
+      <p>En sommant, on voit que</p>
+      \[ \sum_{k=0}^{n-1}f(k)\geq\int_{0}^{n}f(t)dt\geq\sum_{k=1}^{n}f(k) \]
+      <h3>Proposition</h3>
+      <p>Soit $x_{n}$ le terme général d'une série, $x_{n}>0$.</p>
+      <ul>
+        <li>
+          <p>
+            Si $\lim n^{a}x_{n}$ existe et est finie, pour $a>1$, alors $\sum
+            x_{n}$ converge.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si $\lim n^{a}x_{n}$ existe et est finie et non nulle, pour $a\leq
+            1$, alors $\sum x_{n}$ diverge.
+          </p>
+        </li>
+      </ul>
+      <h2>Critères de convergence</h2>
+      <h3>Proposition</h3>
+      <p>Soit $x_{n}$ le terme général d'une série à termes positifs.</p>
+      <ul>
+        <li>
+          <p>
+            Supposons que $\lim_{n\to\infty}\sqrt[n]{x_{n}}=l < 1$. Alors
+            $\sum_{k}x_{k}$ converge.
+          </p>
+        </li>
+        <li>
+          <p>
+            Supposons que soit $\lim_{n\to\infty}\sqrt[n]{x_{n}}=l>1$, soit
+            $\lim_{n\to\infty}\sqrt[n]{x_{n}}=1^{+}$. Alors $\sum_{k}x_{k}$
+            diverge.
+          </p>
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>
+        Supposons que $\sqrt[n]{x_{n}}\to l < 1$. Alors $\log(x_{n})/n\to
+        L=\log(l) < 0$. Il existe donc $n_{0}\in\mathbb{N}$ tel que pour tout
+        $n\geq n_{0}$, $\log(x_{n})/n\leq L/2$, si bien que
+        $x_{n}\leq\exp(nL/2)=\exp(L/2)^{n}$. Comme $\sum\exp(L/2)^{n}$ converge
+        on voit que $\sum x_{n}$ converge.
+        <br />
+        Supposons maintenant que soit $\lim_{n\to\infty}\sqrt[n]{x_{n}}=l>1$,
+        soit $\lim_{n\to\infty}\sqrt[n]{x_{n}}=1^{+}$. Alors pour $n$ assez
+        grand, $x_{n}\geq 1$, et donc $\sum x_{n}$ diverge.
+      </p>
+      <h3>Proposition</h3>
+      <p>Soit $x_{n}$ le terme général d'une série à termes positifs.</p>
+      <ul>
+        <li>
+          <p>
+            Supposons que $\lim_{n\to\infty}\frac{x_{n+1}}{x_{n}}=l < 1$. Alors
+            $\sum_{k}x_{k}$ converge.
+          </p>
+        </li>
+        <li>
+          <p>
+            Supposons que soit $\lim_{n\to\infty}\frac{x_{n+1}}{x_{n}}=l>1$,
+            soit $\lim_{n\to\infty}\frac{x_{n+1}}{x_{n}}=1^{+}$. Alors
+            $\sum_{k}x_{k}$ diverge.
+          </p>
+        </li>
+      </ul>
+      <h3>Démonstration</h3>
+      <p>
+        Supposons que $\lim\frac{x_{n+1}}{x_{n}}=l < 1$. Alors il existe
+        $\epsilon>0$ et $n_{0}\in\mathbb{N}$ tels que pour tout $n\geq n_{0}$,
+        $\frac{x_{n+1}}{x_{n}}\leq l+\epsilon < 1$. Alors pour tout
+        $k\in\mathbb{N}$, on a $x_{n_{0}+k}\leq x_{n_{0}}(l+\epsilon)^{k}$, d'où
+        la convergence de $\sum x_{n}$ par comparaison avec la série géométrique
+        $\sum(l+\epsilon)^{k}$.
+        <br />
+        Dans le second cas, on note que $x_{n+1}/x_{n}\geq 1$ pour $n$ assez
+        grand, donc $(x_{n})$ ne tend pas vers zéro et donc $\sum x_{n}$
+        diverge.
+      </p>
+      <h2>Séries absolument convergentes</h2>
+      <h3>Démonstration</h3>
+      <p>
+        La série $\sum x_{n}$ est absolument convergente si $\sum|x_{n}|$
+        converge.
+      </p>
+      <h3>Proposition</h3>
+      <p>Toute série absolument convergente est convergente.</p>
+      <h3>Démonstration</h3>
+      <p>Comme $\sum|x_{n}|$ converge elle vérifie le critère de Cauchy:</p>
+      \[ \forall\epsilon>0,\exists n\in\mathbb{N},\forall q\geq p\geq
+      n,\sum_{k=p}^{q}|x_{k}|\leq\epsilon \]
+      <p>On en déduit que</p>
+      \[ \forall\epsilon>0,\exists n\in\mathbb{N},\forall q\geq p\geq
+      n,\left|\sum_{k=p}^{q}x_{k}\right|\leq\epsilon \]
+      <p>
+        et donc $\sum x_{k}$ satisfait le critère de Cauchy et donc converge.
+      </p>
+      <h3>Proposition</h3>
+      <p>
+        La somme de deux séries absolument convergentes est absolument
+        convergente. Si $\sum x_{n}$ est absolument convergente, alors
+        $\sum(\lambda x_{n})$ est absolument convergente pour tout
+        $\lambda\in\mathbb{R}$ respectivement $\mathbb{C}$.
+      </p>
+      <h3>Théorème</h3>
+      <p>
+        Soient $\sum x_{n}$ et $\sum y_{n}$ deux séries absolument convergentes.
+        Pour tout $n\geq 0$, on pose
+      </p>
+      \[ z_{n}=\sum_{k=0}^{n}x_{k}y_{n-k} \]
+      <p>Alors la série $\sum z_{n}$ est absolument convergente, et</p>
+      \[
+      \sum_{m=0}^{\infty}z_{m}=\left(\sum_{k=0}^{\infty}x_{k}\right)\left(\sum_{l=0}^{\infty}y_{l}\right)
+      \]
+      <h3>Démonstration</h3>
+      <p>
+        Montrons d'abord que $\sum z_{n}$ est absolument convergente. On note
+        que pour $n\in\mathbb{N}$,
+      </p>
+      $$ \sum_{m\geq n}|z_{m}| \leq \sum_{m\geq
+      n}\left|\sum_{k+l=m}x_{k}y_{l}\right| $$ $$ \leq \sum_{k+l\geq
+      n}|x_{k}|\cdot|y_{l}| $$
+      <p>
+        On remarque que si $k+l\geq n$ alors $k$ ou $l$ est plus grand que $p$,
+        qu'on définit comme la partie entière de $n/2$. Ainsi
+      </p>
+      $$ \sum_{m\geq n}|z_{m}| \leq \sum_{k\geq p\ \text{ou}\ l\geq
+      p}|x_{k}|\cdot|y_{l}| $$ $$ \leq \left(\sum_{k\geq
+      p}|x_{k}|\right)\left(\sum_{l}|y_{l}|\right) +
+      \left(\sum_{k}|x_{k}|\right)\left(\sum_{l\geq p}|y_{l}|\right) $$
+      <p>Mais</p>
+      $$\lim_{p\rightarrow\infty}\left(\sum_{k\geq
+      p}|x_{k}|\right)=\lim_{p\rightarrow\infty}\left(\sum_{k\geq
+      p}|y_{k}|\right)=0$$
+      <p>
+        le résultat suit. <br />
+        Pour déterminer la somme des $z_{n}$, on note que pour tout
+        $n\in\mathbb{N}$ on a
+      </p>
+      \[
+      \left|\left(\sum_{k=0}^{n}x_{k}\right)\left(\sum_{l=0}^{n}y_{l}\right)-\sum_{m=0}^{n}z_{m}\right|
+      = \left|\sum_{\substack{k\leq n,l\leq n\\k+l>n}}x_{k}y_{l}\right| \]
+      <p>
+        Supposons que $n\geq 2p$. Si $k+l>n$ alors soit $k>p$, soit $l>p$. On a
+        donc :
+      </p>
+      $$ \left|\sum_{\substack{k\leq n,l\leq n\\k+l>n}}x_{k}y_{l}\right| \leq
+      \sum_{\substack{k\leq n,l\leq n\\k+l>n}}|x_{k}|\cdot|y_{l}| $$ $$ \leq
+      \left(\sum_{k=0}^{\infty}|x_{k}|\right)\left(\sum_{l=p+1}^{\infty}|y_{l}|\right)
+      +
+      \left(\sum_{k=p+1}^{\infty}|x_{k}|\right)\left(\sum_{l=0}^{\infty}|y_{l}|\right)
+      $$
+      <p>Mais quand $p\to\infty$,</p>
+      \[ \sum_{l=p+1}^{\infty}|y_{l}|\to 0 \quad \text{et} \quad
+      \sum_{k=p+1}^{\infty}|x_{k}|\to 0 \]
+      <p>et le résultat suit.</p>
+      <p class="square">$\square$</p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit $\sum x_{n}$ une série. On dit que la série $\sum y_{n}$ est un
+        rearrangement de $\sum x_{n}$ s'il existe une bijection
+        $\sigma:\mathbb{N}\to\mathbb{N}$ telle que pour tout $n\in\mathbb{N}$,
+        $y_{n}=x_{\sigma(n)}$.
+      </p>
+      <h3>Proposition</h3>
+      <p>
+        Supposons que $\sum x_{n}$ est absolument convergente et que $\sum
+        y_{n}$ est un rearrangement de $\sum x_{n}$. Alors $\sum y_{n}$
+        converge, et $\sum y_{n}=\sum x_{n}$.
+      </p>
+      <h3>Démonstration</h3>
+      <p>
+        Soit $\epsilon>0$, et soit $n_{0}$ tel que $\sum_{n\geq
+        n_{0}}|x_{n}|\leq\epsilon$. On note $m_{0}=\max_{n\leq n_{0}}\sigma(n)$.
+        On a alors pour $m\geq m_{0}$ :
+      </p>
+      \[ \left|\sum_{k=0}^{m}y_{k}-\sum_{l=0}^{n_{0}}x_{l}\right| =
+      \left|\sum_{k=0}^{m}x_{\sigma(k)}-\sum_{l=0}^{n_{0}}x_{l}\right| \]
+      <p>
+        Mais
+        $\{0,1,\cdots,n_{0}\}\subset\{\sigma(0),\sigma(1),\cdots,\sigma(m)\}$
+        puisque $m\geq m_{0}$, et on en déduit que :
+      </p>
+      $$ \left|\sum_{k=0}^{m}y_{k}-\sum_{l=0}^{n_{0}}x_{l}\right| =
+      \left|\sum_{\substack{l\in\{\sigma(0),\cdots,\sigma(m)\}\\
+      l>n_{0}}}x_{l}\right| $$ $$\leq
+      \sum_{\substack{l\in\{\sigma(0),\cdots,\sigma(m)\}\\ l>n_{0}}}|x_{l}|$$ $$
+      \leq \sum_{l>n_{0}}|x_{l}| $$ $$\leq \epsilon$$
+      <p>
+        Comme $\sum x_{l}$ est absolument convergente, on en déduit le résultat.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Séries semi-convergentes</h2>
+      <h3>Définition</h3>
+      <p>
+        Une série est semi-convergente si elle est convergente mais pas
+        absolument convergente.
+      </p>
+      <h3>Théorème du Critère d'Abel</h3>
+      <p>Soient $(a_{n})$ et $(x_{n})$ deux suites, telles que :</p>
+      <ul>
+        <li><p>$(a_{n})$ est décroissante et tend vers $0$</p></li>
+        <li>
+          <p>
+            $(x_{n})$ est le terme général d'une série dont les sommes
+            partielles $X_{n}=\sum_{k=0}^{n}x_{k}$ sont bornées en valeur
+            absolue par une constante $C>0$
+          </p>
+        </li>
+      </ul>
+      <p>Alors la série $\sum a_{n}x_{n}$ est convergente.</p>
+      <h3>Démonstration</h3>
+      <p>
+        On va utiliser la "transformation d'Abel" et le critère de Cauchy. Soit
+        $p < q$, on a :
+      </p>
+      $$ \left|\sum_{k=p+1}^{q}a_{k}x_{k}\right| =
+      \left|\sum_{k=p+1}^{q}a_{k}(X_{k}-X_{k-1})\right| $$ $$=
+      \left|\sum_{k=p+1}^{q}a_{k}X_{k}-\sum_{l=p}^{q-1}a_{l+1}X_{l}\right| $$
+      $$=
+      \left|\sum_{k=p+1}^{q-1}(a_{k}-a_{k+1})X_{k}+a_{q}X_{q}-a_{p+1}X_{p}\right|$$
+      $$\leq
+      \sum_{k=p+1}^{q-1}(a_{k}-a_{k+1})|X_{k}|+|a_{q}X_{q}|+|a_{p+1}X_{p}| $$ $$
+      \leq C\sum_{k=p+1}^{q-1}(a_{k}-a_{k+1})+|a_{q}X_{q}|+|a_{p+1}X_{p}|$$ $$
+      \leq Ca_{p+1}+|a_{q}X_{q}|+|a_{p+1}X_{p}| $$
+      <p>
+        Comme chacun des termes dans la dernière expression tend vers $0$ quand
+        $p$ et $q$ tendent vers l'infini, on peut conclure par le critère de
+        Cauchy.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Proposition</h3>
+      <p>
+        Soit $(a_{n})$ une suite qui décroît vers $0$. Alors la série
+        $\sum(-1)^{n}a_{n}$ est convergente.
+      </p>
+    </div>
+  </body>
+</html>

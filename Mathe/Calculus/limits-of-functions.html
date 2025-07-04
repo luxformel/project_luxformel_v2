@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Limits of functions</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Limits of functions</h1>
+      <h2>Limits of functions at infinity</h2>
+      <h3>Definition</h3>
+      <p>
+        For a function \( f \), we say that \(\lim_{x \to +\infty} f(x) = L\) if
+        for all \( \epsilon > 0 \) there is a number \( N > 0 \) such that
+        \(|f(x) - L| < \epsilon \) for all \( x > N \).
+      </p>
+      <h3>Definition</h3>
+      <p>
+        For a function \( f \), we say that \(\lim_{x \to -\infty} f(x) = L\) if
+        for all \( \epsilon > 0 \) there is a number \( N < 0 \) such that
+        \(|f(x) - L| < \epsilon \) for all \( x < N \).
+      </p>
+      <h3>Definition</h3>
+      <p>
+        For a function \( f \), we say that \(\lim_{x \to +\infty} f(x) =
+        \infty\) if for all \( M > 0 \) there is a number \( N > 0 \) such that
+        \( f(x) > M \) for all \( x > N \).
+      </p>
+      <h2>Limits of functions at real numbers</h2>
+      <h3>Epsilon delta definition</h3>
+      <p>
+        For a function \( f \), we say that \(\lim_{x \to a} f(x) = L \) if for
+        all \( \varepsilon > 0 \) there is a number \( \delta > 0 \) such that
+        \( |f(x) - L| < \varepsilon \) for all \( x \) with \( 0 < |x - a| <
+        \delta \).
+      </p>
+      <h2>Limits on the right and left of a point</h2>
+      <h3>Definitions</h3>
+      <ul>
+        <li>
+          <p>We say that</p>
+          \[ \lim_{x \to a^-} f(x) = L \]
+          <p>
+            if for all \(\varepsilon > 0\) there exists some \(\delta > 0\) such
+            that if \(a - x < \delta\) for all \(x < a\) then \(|f(x) - L| <
+            \varepsilon\).
+          </p>
+        </li>
+        <li>
+          <p>We say that</p>
+          \[ \lim_{x \to a^+} f(x) = L \]
+          <p>
+            if for all \(\varepsilon > 0\) there exists some \(\delta > 0\) such
+            that if \(x - a < \delta\) for all \(x > a\) then \(|f(x) - L| <
+            \varepsilon\).
+          </p>
+        </li>
+      </ul>
+      <h3>Theorem</h3>
+      <p>
+        A function $f$ admits a limit at a point $a \in \mathbb{R}$ if and only
+        if $f$ admits a left limit and right limit at $a$ and they coincide.
+        That is,
+      </p>
+      \[ \lim_{x \to a} f(x) \Leftrightarrow \lim_{x \to a^-} f(x) = \lim_{x \to
+      a^+} f(x) \]
+      <h2>Sum rule</h2>
+      <h3>Theorem</h3>
+      <p>
+        If $f$ and $g$ are functions such that $\lim_{x \to a} f(x) = L$ and
+        $\lim_{x \to a} g(x) = M$, then
+      </p>
+      \[ \lim_{x \to a} (f(x) + g(x)) = L + M \]
+      <h3>Proof</h3>
+      <p>
+        Let \(\epsilon>0\) and let \(\epsilon_{1}>0\) and \(\epsilon_{2}>0\) be
+        values so that \(\epsilon=\epsilon_{1}+\epsilon_{2}\). Since
+        \(\lim\limits_{x\to a}f(x)\) exists and is equal to \(L\) we know that
+        there exists some \(\delta_{1}>0\) such that
+      </p>
+      \[\text{if }0 < p|x-a|<\delta_{2}\text{ then }|g(x)-M|<\epsilon_{2} \]
+      <p>
+        So if we define \(\delta=\min\{\delta_{1},\delta_{2}\}\), then if
+        \(0<|x-a|<\delta\) we have that \(|x-a|\) is also smaller than both
+        \(\delta_{1}\) and \(\delta_{2}\), so
+      </p>
+      \[|f(x)-L| < \epsilon_{1}\qquad\text{and}\qquad|g(x)-M| < \epsilon_{2} \]
+      <p>We can now apply the triangle inequality to see that</p>
+      $$ |(f+g)(x)-(L+M)| = |f(x)+g(x)-L-M| $$ $$= |(f(x)-L)+(g(x)-M)|$$ $$\leq
+      |f(x)-L|+|g(x)-M|$$ $$< \epsilon_{1}+\epsilon_{2}$$ $$= \epsilon$$
+      <p>
+        So for any \(\epsilon>0\) we have found a value \(\delta>0\) such that
+      </p>
+      \[\text{if }0<|x-a|<\delta\text{ then }|(f+g)(x)-(L+M)|<\epsilon \]
+      <p class="square">$\square$</p>
+      <h2>Product rule</h2>
+      <h3>Theorem</h3>
+      <p>
+        If $f$ and $g$ are functions such that $\lim_{x \to a} f(x) = L$ and
+        $\lim_{x \to a} g(x) = M$, then
+      </p>
+      \[ \lim_{x \to a} (f(x) \cdot g(x)) = L \cdot M \]
+      <h3>Proof</h3>
+      <p>
+        Let \(\epsilon>0\) be given. Since \(\lim_{x \to a} f(x) = L\), we can
+        find a \(\delta_{1}>0\) such that if \(0<|x-a|<\delta_{1}\) then
+        \(|f(x)-L|<\frac{\epsilon}{2(|M|+1)}\). Similarly, since \(\lim_{x \to
+        a} g(x) = M\), we can find a \(\delta_{2}>0\) such that if
+        \(0<|x-a|<\delta_{2}\) then \(|g(x)-M|<\frac{\epsilon}{2(|L|+1)}\).
+      </p>
+      <p>
+        So if we define \(\delta=\min\{\delta_{1},\delta_{2}\}\), then if
+        \(0<|x-a|<\delta\) we have that \(|x-a|\) is also smaller than both
+        \(\delta_{1}\) and \(\delta_{2}\), so
+      </p>
+      \[|f(x)-L| < \frac{\epsilon}{2(|M|+1)}\qquad\text{and}\qquad|g(x)-M| <
+      \frac{\epsilon}{2(|L|+1)}\]
+      <p>We can now apply the product limit theorem to see that</p>
+      $$ |(f \cdot g)(x)-(L \cdot M)| = |f(x) \cdot g(x)-L \cdot M| $$ $$= |f(x)
+      \cdot g(x)-f(x) \cdot M+f(x) \cdot M-L \cdot M| $$ $$= |f(x) \cdot
+      (g(x)-M)+(f(x)-L) \cdot M| $$ $$\leq |f(x)| \cdot |g(x)-M|+|f(x)-L| \cdot
+      |M|$$ $$< (|L|+1) \cdot \frac{\epsilon}{2(|L|+1)}+
+      \frac{\epsilon}{2(|M|+1)} \cdot |M|$$ $$=
+      \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon$$
+      <p>
+        So for any \(\epsilon>0\) we have found a value \(\delta>0\) such that
+      </p>
+      \[\text{if }0<|x-a|<\delta\text{ then }|(f \cdot g)(x)-(L \cdot
+      M)|<\epsilon \]
+      <p class="square">$\square$</p>
+      <h2>Squeeze theorem, sandwich theorem</h2>
+      <h3>Theorem</h3>
+      <p>Let \( f, g \), and \( h \) be functions such that</p>
+      \[ f(x) \leq g(x) \leq h(x) \text{ for all } x \in \mathbb{R} \]
+      <p>if</p>
+      \[ \lim_{x \to a} f(x) = L \text{ and } \lim_{x \to a} h(x) = L \text{
+      then } \lim_{x \to a} g(x) = L \]
+      <h3>Proof</h3>
+      <p>For all \(\epsilon > 0\) there exists \(\delta > 0\) such that</p>
+      \[ \text{if } |x - a| < \delta \text{ then } |f(x) - L| < \epsilon, \text{
+      and} \] \[ \text{if } |x - a| < \delta \text{ then } |h(x) - L| < \epsilon
+      \]
+      <p>
+        Recall that \(|f(x) - L| < \epsilon\) and \(|h(x) - L| < \epsilon\) is
+        equivalent to writing
+      </p>
+      \[ -\epsilon < f(x) - L < \epsilon \quad \text{and} \quad -\epsilon < h(x)
+      - L < \epsilon \]
+      <p>So if \(|x - a| < \delta\) then</p>
+      \[ -\epsilon < f(x) - L \leq g(x) - L \leq h(x) - L < \epsilon \]
+      <p>hence</p>
+      \[ -\epsilon \leq g(x) - L \leq \epsilon \]
+      <p>So \(|g(x) - L| < \epsilon\)</p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>
