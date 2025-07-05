@@ -34,7 +34,7 @@ let navigator = [
                 <a href="/Divers/index.html" >Divers</a>
             </li>
             <li>
-                <a href="https://search.luxformel.info/"> <i class="material-icons search-icon">search</i> </a>
+                <a href="#"> <i class="material-icons search-icon">search</i> </a>
             </li>
             <li>
                 <a onclick="window.print()" href="#"> <i class="material-icons print-icon">print</i> </a>
