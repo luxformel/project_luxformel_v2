@@ -92,6 +92,7 @@ let sideNavigator = `
     <a href="/Mathe/Demonstrations/demonstrations-des-fonctions-derivees.html">Démonstrations des fonctions dérivées</a>
     <a href="/Mathe/Analyse/derivation.html">Dérivation</a>
     <a href="/Mathe/Analyse/developpement-en-series-de-taylor.html">Développement en séries de Taylor</a>
+    <a href="/Mathe/Calculus/differentiation.html">Differentiation</a>
     <a href="/Mathe/Calculus/differential-equations.html">Differential Equations</a>
     <a href="/Mathe/Analyse/equations-differentielles.html">Équations différentielles</a>
     <a href="/Mathe/Linear-Algebra/eigenectors-eigenvalues.html">Eigenvectors, Eigenvalues</a>

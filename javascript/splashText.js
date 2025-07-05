@@ -694,7 +694,7 @@ var splashTexts = [
   "poulet de lave?",
   "Be a goldfish.",
   "Certified hood classic!",
-  "Stop Killing Games!!!",
+  "Stop Killing Games!!! <br> stopkillinggames.com",
   "1/697",
 ];
 function generateRandomText() {

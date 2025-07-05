@@ -332,6 +332,10 @@ ol > li > ol {
   .scrollButton {
     display: none;
   }
+  a {
+    text-decoration: none;
+    color: var(--black);
+  }
 }
 
 /*Responsive design*/

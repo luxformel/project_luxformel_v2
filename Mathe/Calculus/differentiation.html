@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Differentiation</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Differentiation</h1>
+      <h2>Differentiability</h2>
+      <h3>Definition</h3>
+      <p>
+        We say that \( f : D \to \mathbb{R} \) is differentiable at \( x \) if
+        the limit
+      </p>
+      \[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+      <p>
+        exists. We call \( f'(x) \) the derivative of \( f(x) \). If \( f'(x) \)
+        exists for all \( x \in D \) then we say \( f \) is differentiable.
+      </p>
+      <h2>Differentiation and Continuity</h2>
+      <h3>Theorem</h3>
+      <p>
+        If \( f : D \rightarrow \mathbb{R} \) is differentiable at \( a \in D \)
+        then \( f \) is continuous at \( a \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        We want to show that \(\lim_{x \to a}f(x) = f(a)\). But if \( x = a + h
+        \) then this is the same as \(\lim_{h \to 0}f(a+h) = f(a)\). We will
+        show that this is true by proving \(\lim_{h \to 0}(f(a+h) - f(a)) = 0\).
+      </p>
+      \[\lim_{h \to 0}(f(a+h) - f(a)) = \lim_{h \to 0}\frac{f(a+h) - f(a)}{h}
+      \cdot h\] \[= \lim_{h \to 0}\frac{f(a+h) - f(a)}{h} \cdot \lim_{h \to
+      0}h\] \[= f'(a) \cdot 0\] \[= 0\]
+      <p class="square">$\square$</p>
+      <h3>Remarks</h3>
+      <ul>
+        <li>
+          <p>
+            Note that this proof only makes sense when \( f'(a) \) exists, that
+            is, when \( f \) is differentiable.
+          </p>
+        </li>
+        <li><p>The converse to this theorem is not true.</p></li>
+      </ul>
+      <h2>The absolute value function</h2>
+      <h3>Theorem</h3>
+      <p>
+        The function \( f(x) = |x| \) is continuous, but not differentiable.
+      </p>
+      <h3>Proof</h3>
+      <p>At the point \(a=0\) we have</p>
+      \[ \lim_{x\to 0^{-}}|x|=0=\lim_{x\to 0^{+}}|x|\quad\text{ so
+      }\quad\lim_{x\to 0}f(x)=0=f(0) \]
+      <p>
+        So the function is continuous.
+        <br />
+        We will now show that \(f(x)\) is not differentiable. Unsurprisingly,
+        the interesting thing happens when \(x=0\).
+      </p>
+      \[ \lim_{h\to 0}\frac{f(0+h)-f(0)}{h}=\lim_{h\to
+      0}\frac{|h|}{h}=\begin{cases} -1 & \text{if }h < 0\\ 1 & \text{if }h>0
+      \end{cases} \]
+      <p>
+        The expression \(\left.\frac{|h|}{h}\right|\) is not defined when
+        \(h=0\) (but we don't care about this as \(h\) never equals zero in our
+        limit). So
+      </p>
+      \[ \lim_{h\to 0^{-}}\frac{|h|}{h}=-1\qquad\text{ and }\qquad\lim_{h\to
+      0^{+}}\frac{|h|}{h}=1 \]
+      <p>
+        These limits are not equal, so \(\lim_{h\to 0}\frac{|h|}{h}\) does not
+        exist. So \(f(x)=|x|\) is not differentiable when \(x=0\).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Differentiation of common functions</h2>
+      <p>
+        See the proof of many common functions under
+        <a
+          href="/Mathe/Demonstrations/demonstrations-des-fonctions-derivees.html"
+          >démonstration des fonctions dérivées</a
+        >.
+      </p>
+      <h2>Sum rule of differentiation</h2>
+      <h3>Theorem</h3>
+      <p>If \(f\) and \(g\) are differentiable at \(x\) then</p>
+      \[ (f+g)^{\prime}(x) = f^{\prime}(x) + g^{\prime}(x) \]
+      <h3>Proof</h3>
+      <p>
+        We want to show that \((f+g)^{\prime}(x)\) exists and is equal to
+        \(f^{\prime}(x)+g^{\prime}(x)\). Recall that
+      </p>
+      \[ f^{\prime}(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} \]
+      <p>so</p>
+      \[ (f+g)^{\prime}(x) = \lim_{h\to 0}\frac{(f+g)(x+h)-(f+g)(x)}{h} \] \[ =
+      \lim_{h\to 0}\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h} \] \[ = \lim_{h\to
+      0}\frac{(f(x+h)-f(x))+(g(x+h)-g(x))}{h} \] \[ = \lim_{h\to
+      0}\frac{f(x+h)-f(x)}{h} + \frac{g(x+h)-g(x)}{h} \] \[ = \lim_{h\to
+      0}\frac{f(x+h)-f(x)}{h} + \lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \] \[ =
+      f^{\prime}(x) + g^{\prime}(x) \]
+      <h2>Product rule of differentiation</h2>
+      <h3>Theorem</h3>
+      <p>If \( f \) and \( g \) are differentiable at \( x \) then</p>
+      \[ (fg)'(x) = f(x)g'(x) + f'(x)g(x) \]
+      <h3>Proof</h3>
+      <p>
+        As for the sum rule, we want to show that \( (fg)'(x) \) exists and is
+        equal to \( f(x)g'(x) + f'(x)g(x) \). Recall that
+      </p>
+      \[ (fg)'(x) = \lim_{h \to 0} \frac{(fg)(x+h)-(fg)(x)}{h} \] \[ = \lim_{h
+      \to 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} \] \[ = \lim_{h \to 0}
+      \frac{f(x+h)g(x+h)-f(x+h)g(x)+f(x+h)g(x)-f(x)g(x)}{h} \] \[ = \lim_{h \to
+      0} \frac{f(x+h)g(x+h)-f(x+h)g(x)}{h} + \frac{f(x+h)g(x)-f(x)g(x)}{h} \] \[
+      = \lim_{h \to 0} f(x+h)\frac{g(x+h)-g(x)}{h} + \lim_{h \to 0}
+      \frac{f(x+h)-f(x)}{h}g(x) \] \[ = f(x)g'(x) + f'(x)g(x) \]
+      <h2>Chain rule of differentiation</h2>
+      <h3>Theorem</h3>
+      <p>If \( f \) and \( g \) are differentiable then</p>
+      \[ (f \circ g)'(x) = f'(g(x))g'(x) \]
+      <h3>Proof</h3>
+      \[ (f \circ g)'(x) = \lim_{h \to 0} \frac{(f \circ g)(x + h) - (f \circ
+      g)(x)}{h} \] \[ = \lim_{h \to 0} \frac{f(g(x + h)) - f(g(x))}{h} \] \[ =
+      \lim_{h \to 0} \frac{f(g(x + h)) - f(g(x))}{g(x + h) - g(x)} \cdot
+      \frac{g(x + h) - g(x)}{h} \] \[ = \left( \lim_{h \to 0} \frac{f(g(x + h))
+      - f(g(x))}{g(x + h) - g(x)} \right) \left( \lim_{h \to 0} \frac{g(x + h) -
+      g(x)}{h} \right) \] \[ = f'(g(x))g'(x) \]
+      <p>
+        To justify this, we define \( H = g(x + h) - g(x) \), and equivalently
+        \( g(x + h) = g(x) + H \). Note that
+      </p>
+      \[ \lim_{h \to 0} H = \lim_{h \to 0} g(x + h) - g(x) = g(x) - g(x) = 0 \]
+      <p>By making the substitutions we have that</p>
+      \[ \left( \lim_{h \to 0} \frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} \right)
+      g'(x) = \left( \lim_{H \to 0} \frac{f(g(x) + H) - f(g(x))}{H} \right)
+      g'(x) \] \[ = f'(g(x)) g'(x) \]
+      <h2>Quotient rule of differentiation</h2>
+      <h3>Theorem</h3>
+      <p>If \(f\) and \(g\) are differentiable at \(x\), then</p>
+      \[ \left( \frac{f}{g} \right)'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}
+      \]
+      <h3>Proof</h3>
+      <p>TBD</p>
+      <h2>Inverse functions</h2>
+      <h3>Definition</h3>
+      <p>
+        We say that \(g : D_g \rightarrow \mathbb{R}\) is the inverse function
+        of \(f : D_f \rightarrow \mathbb{R}\) if for all \(x \in D_g\)
+      </p>
+      \[ (f \circ g)(x) = x = (g \circ f)(x) \]
+      <p>and if for all \(x \in D_f\) we have</p>
+      \[ (g \circ f)(x) = x \]
+      <h3>Remark</h3>
+      <p>
+        Note that in certain cases we might be interested in functions that are
+        not defined over all of $\mathbb{R}$.
+      </p>
+      <h2>Differentiation of inverse functions</h2>
+      <h3>Proposition</h3>
+      <p>If \( f^{-1} \) is differentiable at \( y \), then</p>
+      \[ (f^{-1})'(y) = \frac{1}{f'(f^{-1}(y))} \]
+      <h3>Proof</h3>
+      <p>
+        By the rule of composing functions, the derivative of \( f^{-1}(f(x)) \)
+        is
+      </p>
+      \[ f'(x)(f^{-1})'(f(x)) \]
+      <p>but because \( f^{-1}(f(x)) = x \) this is also equal to 1. Hence</p>
+      \[ f'(x)(f^{-1})'(f(x)) = 1 \]
+      <p>and so</p>
+      \[ (f^{-1})'(f(x)) = \frac{1}{f'(x)} \]
+      <p>Now setting \( f(x) = y \) we have \( x = f^{-1}(y) \) and so</p>
+      \[ (f^{-1})'(y) = \frac{1}{f'(f^{-1}(y))} \]
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>
