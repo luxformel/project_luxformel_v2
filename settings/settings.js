@@ -79,24 +79,3 @@ function setNoMaxWidthSetting() {
 
 // Initialize the side navigation setting when the page loads
 setNoMaxWidthSetting();
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Check the saved font preference in localStorage
-  const savedFont = localStorage.getItem("font");
-  if (savedFont && savedFont !== "none") {
-    applyFont(savedFont);
-  }
-
-  function applyFont(font) {
-    let linkElement = document.getElementById("font-style");
-    if (linkElement) {
-      linkElement.href = `/settings/fonts/${font}.css`; // Update the href to point to the saved CSS
-    } else {
-      linkElement = document.createElement("link");
-      linkElement.id = "font-style";
-      linkElement.rel = "stylesheet";
-      linkElement.href = `/settings/fonts/${font}.css`; // Add the saved CSS file
-      document.head.appendChild(linkElement);
-    }
-  }
-});

@@ -144,3 +144,86 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+// Add this to your settingsSelector.js or create a new file
+
+function initBrowserThemeSetting() {
+  const browserThemeToggle = document.getElementById(
+    "default-browser-theme-setting"
+  );
+  const themeSelect = document.getElementById("theme-select");
+
+  // Check saved preference or default to false
+  const currentBrowserThemeSetting =
+    localStorage.getItem("useBrowserTheme") === "true";
+
+  // Initialize the toggle
+  browserThemeToggle.checked = currentBrowserThemeSetting;
+
+  // If browser theme is enabled, apply it immediately
+  if (currentBrowserThemeSetting) {
+    applyBrowserTheme();
+    themeSelect.disabled = true;
+  }
+
+  // Toggle event listener
+  browserThemeToggle.addEventListener("change", () => {
+    const useBrowserTheme = browserThemeToggle.checked;
+    localStorage.setItem("useBrowserTheme", useBrowserTheme);
+
+    if (useBrowserTheme) {
+      applyBrowserTheme();
+      themeSelect.disabled = true;
+    } else {
+      // Revert to manually selected theme
+      themeSelect.disabled = false;
+      const savedTheme = localStorage.getItem("theme") || "default";
+      document.getElementById("theme-set").href = `/themes/${savedTheme}.css`;
+    }
+  });
+
+  // Watch for system theme changes if the setting is enabled
+  const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  darkModeMediaQuery.addEventListener("change", (e) => {
+    if (browserThemeToggle.checked) {
+      applyBrowserTheme();
+    }
+  });
+}
+
+function applyBrowserTheme() {
+  const themeLink = document.getElementById("theme-set");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (prefersDark) {
+    themeLink.href = "/themes/dark.css";
+    localStorage.setItem("theme", "dark"); // Keep theme selector in sync
+  } else {
+    themeLink.href = "/themes/default.css";
+    localStorage.setItem("theme", "default"); // Keep theme selector in sync
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  initBrowserThemeSetting();
+
+  // Modify your existing theme selector to handle the browser theme setting
+  const themeSelect = document.getElementById("theme-select");
+  const browserThemeToggle = document.getElementById(
+    "default-browser-theme-setting"
+  );
+
+  // Load saved theme or default
+  const savedTheme = localStorage.getItem("theme") || "default";
+  themeSelect.value = savedTheme;
+
+  themeSelect.addEventListener("change", () => {
+    if (!browserThemeToggle.checked) {
+      // Only change if not using browser theme
+      const theme = themeSelect.value;
+      document.getElementById("theme-set").href = `/themes/${theme}.css`;
+      localStorage.setItem("theme", theme);
+    }
+  });
+});

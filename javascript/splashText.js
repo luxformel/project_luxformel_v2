@@ -695,7 +695,8 @@ var splashTexts = [
   "Be a goldfish.",
   "Certified hood classic!",
   "Stop Killing Games!!! <br> stopkillinggames.com",
-  "1/697",
+  "I have concepts of a plan!",
+  "1/698",
 ];
 function generateRandomText() {
   //console.log(splashTexts);
