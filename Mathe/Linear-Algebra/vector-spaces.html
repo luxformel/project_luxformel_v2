@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Vector Spaces</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Vector Spaces</h1>
+      <h3>Notations</h3>
+      <ul>
+        <li>
+          <p>
+            $\mathbb{F}$ can be used instead of $\mathbb{C}$ or $\mathbb{R}$
+          </p>
+        </li>
+        <li><p>$V$ is the vector space of $\mathbb{F}$.</p></li>
+      </ul>
+      <h3>Remark</h3>
+      <p>
+        The letter $\mathbb{F}$ is used because $\mathbb{R}$ and $\mathbb{C}$
+        are examples of what are called fields.
+      </p>
+      <h2>Lists and length</h2>
+      <h3>Definition</h3>
+      <p>
+        Suppose $n$ is a nonnegative integer. A list of length $n$ is an ordered
+        collection of $n$-elements, of some mathematical objects, is separated
+        by commas and surrounded by parentheses. A list of length $n$-looks like
+        this:
+      </p>
+      $$ (x_1, \cdots , x_n) $$
+      <h3>Definition</h3>
+      <p>
+        Two lists are equal if and only if they have the same length and the
+        same elements in the same order.
+      </p>
+
+      <!-- <p>TO BE CONTINUED!!!!!!!</p> -->
+
+      <h2>Addition and scalar multiplication</h2>
+      <h3>Definition</h3>
+      <ul>
+        <li>
+          <p>
+            An addition on a set \( V \) is a function that assigns an element
+            \( u + v \in V \) to each pair of elements \( u, v \in V \).
+          </p>
+        </li>
+        <li>
+          <p>
+            Scalar multiplication on a set \( V \) is a function that assigns an
+            element \( \lambda v \in V \) to each \( \lambda \in F \) and each
+            \( v \in V \).
+          </p>
+        </li>
+      </ul>
+      <h2>Vector space</h2>
+      <h3>Definition</h3>
+      <p>
+        A vector space is a set \( V \) along with an addition on \( V \) and a
+        scalar multiplication on \( V \) such that the following properties
+        hold:
+      </p>
+      <ul>
+        <li>
+          <p><u>Commutativity</u></p>
+          \[u + v = v + u \text{ for all } u, v \in V \]
+        </li>
+        <li>
+          <p><u>Associativity</u></p>
+          $$ (u + v) + w = u + (v + w) $$
+          <p>and</p>
+          $$ (ab)v = a(bv) \quad \forall u, v, w \in V $$
+          <p>and all \( a, b \in F \)</p>
+        </li>
+        <li>
+          <p>
+            <u>Additive identity</u> <br />
+            there exists an element \( 0 \in V \) such that \( v + 0 = v \text{
+            for all } v \in V \)
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>additive inverse</u> <br />
+            for every \( v \in V \), there exists \( w \in V \) such that \( v +
+            w = 0 \)
+          </p>
+        </li>
+        <li>
+          <p><u>Multiplicative identity</u></p>
+          \[1v = v \quad \forall v \in V \]
+        </li>
+        <li>
+          <p><u>Distributive properties</u></p>
+          $$ a(u + v) = au + av $$
+          <p>and</p>
+          $$ (a + b)v = av + bv \quad \forall a, b \in F \ \text{ and } \forall
+          u, v \in V. $$
+        </li>
+      </ul>
+      <h2>Points and vectors</h2>
+      <h3>Definition</h3>
+      <p>Elements of a vector space are called points or vectors.</p>
+      <h2>Real vector space and complex vector space</h2>
+      <h3>Definitions</h3>
+      <ul>
+        <li>
+          <p>A vector space over $\mathbb{R}$ is called a real vector space.</p>
+        </li>
+        <li>
+          <p>
+            A vector space over $\mathbb{C}$ is called a complex vector space.
+          </p>
+        </li>
+      </ul>
+      <h2>Set of functions</h2>
+      <h3>Notation</h3>
+      <p>
+        If \( S \) is a set, then \( \mathbb{F}^S \) denotes the set of
+        functions from \( S \) to \( \mathbb{F} \).
+      </p>
+      <ul>
+        <li>
+          <p>
+            For \( f, g \in \mathbb{F}^S \), the sum \( f + g \in \mathbb{F}^S
+            \) is the function defined by
+          </p>
+          \[ (f + g)(x) = f(x) + g(x) \]
+          <p>for all \( x \in S \)</p>
+        </li>
+        <li>
+          <p>
+            For \( \lambda \in \mathbb{F} \) and \( f \in \mathbb{F}^S \), the
+            product \( \lambda f \in \mathbb{F}^S \) is the function defined by
+          </p>
+          \[ (\lambda f)(x) = \lambda f(x) \]
+          <p>for all \( x \in S \).</p>
+        </li>
+      </ul>
+      <h2>Additive identity</h2>
+      <h3>Theorem</h3>
+      <p>A vector space has a unique additive identity.</p>
+      <h3>Proof</h3>
+      <p>
+        Suppose 0 and 0' are both additive identities for some vector space $V$.
+        Then
+      </p>
+      <p class="square">$\square$</p>
+
+      <h2>Additive inverse</h2>
+      <h3>Theorem</h3>
+      <p>Every element in a vector space has a unique additive inverse.</p>
+      <h3>Proof</h3>
+      <p class="square">$\square$</p>
+
+      <h3>Notation</h3>
+      <p>Let $v,W \in V$, then</p>
+      <ul>
+        <li><p>$-v$ denotes the additive inverse of $v$</p></li>
+        <li><p>$w-v$ is defined to be $w + (-w)$</p></li>
+      </ul>
+      <h2>Numbers and vectors</h2>
+      <h3>Theorem</h3>
+      <p>$0v = 0$ every $v \in V$.</p>
+      <h3>Proof</h3>
+      $$ 0v = (0+0)v = 0v + 0v $$
+      <p>
+        Adding the additive inverse of $0v$ to both sides of the equation above
+        gives $0v = 0$, as desired.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Theorem</h3>
+      <p>$a0 = 0$ for every $a \in \mathbb{F}$.</p>
+      <h3>Proof</h3>
+      $$a0 = a (0+0) = a0 + a0 $$
+      <p>
+        Adding the additive inverse of $a0$ to both sides of the equation above
+        gives $0 = a0$, as desired.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Theorem</h3>
+      <p>$(-1)v = -v$ for every $v \in V$.</p>
+      <h3>Proof</h3>
+      $$ v + (-1)v = 1v + (-1)v = (1+(-1))v = 0v = 0$$
+      <p>
+        This equation says that $(-1)v$, when added to $v$, gives 0. Thus
+        $(-1)v$ is the additive inverse of $v$, as desired.
+      </p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>

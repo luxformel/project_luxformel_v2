@@ -35,6 +35,7 @@ main {
 
   time {
     color: var(--black);
+    margin-left: 1.8rem;
   }
 
   h3 {

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Foundations of Set Theory</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Foundations of Set Theory</h1>
+      <h2>Sets</h2>
+      <h3>Definition</h3>
+      <p>
+        A set is a well-defined collection of distinct objects, called elements
+        or members, considered as a single entity.
+      </p>
+      <h3>Notation</h3>
+      <p>
+        Sets are usually denoted with capital letters or are written out as
+        their elements in curly braces.
+      </p>
+      <h2>Containment to sets</h2>
+      <h3>Notation</h3>
+      <p>
+        If an element $x$ is contained in a set $A$ it is denoted using the
+        greek letter epsilon in the following way:
+      </p>
+      $$ x \in A $$
+      <h2>Equality of sets</h2>
+      <h3>Axiom of extension</h3>
+      <p>Two sets are equal if and only if they have the same elements.</p>
+      <h3>Notation</h3>
+      <p>For two sets $A$ and $B$ if they are equal we write:</p>
+      $$ A = B $$
+      <p>or if they are not equal</p>
+      $$ A \neq B $$
+      <h3>Remark</h3>
+      <p>Equality of two sets is symmetric as:</p>
+      $$ A = B \quad \text{is the same as} \quad B=A$$
+      <h2>Inclusion in sets</h2>
+      <h3>Definition</h3>
+      <p>
+        A set $A$ can be included in a distinct set $B$ if and only if the all
+        the elements of the set $A$ are also included in $B$.
+      </p>
+      <h3>Notation</h3>
+      <ul>
+        <li>
+          <p>We denote inclusion of $A$ in $B$ by writing:</p>
+          $$ A \subset B $$
+          <p>similarly</p>
+          $$ B \supset A $$
+        </li>
+        <li>
+          <p>
+            Furthermore if $A$ and $B$ are subsets but may equal we can write:
+          </p>
+          $$ A \subseteq B $$
+          <p>similarly</p>
+          $$ B \supseteq A $$
+        </li>
+      </ul>
+      <h3>Remark</h3>
+      <p>
+        Both $A$ is included in $B$ and $A$ is a subset of $B$ are equal and
+        mean the same thing.
+      </p>
+      <h3>Properties</h3>
+      <ul>
+        <li>
+          <p><u>Reflexive</u></p>
+          <p>
+            A sole set $A$ by definition is reflexive, it is included in itself.
+          </p>
+        </li>
+        <li>
+          <p><u>Proper</u></p>
+          <p>Both $A$ and $B$ are proper sets if and only if:</p>
+          $$ A \subset B $$
+          <p>and</p>
+          $$ A \neq B $$
+        </li>
+        <li>
+          <p><u>Transitive</u></p>
+          <p>The sets $A$, $B$ and $C$ are transitive if and only if:</p>
+          $$ A \subset B \quad \text{and} \quad B \subset C$$ $$ \iff A \subset
+          C $$
+        </li>
+        <li>
+          <p><u>Antisymmetric</u></p>
+          <p>If $A$ and $B$ are sets such that:</p>
+          $$ A \subset B \quad \text{and} \quad A \supset B $$ $$ \iff A = B $$
+          <p>By extension they must also have the same elements.</p>
+        </li>
+      </ul>
+      <h3>Axiom of pairing</h3>
+      <p>For any two sets there exists a set that they both included in.</p>
+      <h2>Logical operators, Logical connectives</h2>
+      <p>Some logical operators are:</p>
+      <div class="xScrollable">
+        <table>
+          <tr>
+            <th>
+              <p>Name</p>
+            </th>
+            <th>
+              <p>Symbol</p>
+            </th>
+          </tr>
+          <tr>
+            <td><p>and</p></td>
+            <td><p>$\land$</p></td>
+          </tr>
+          <tr>
+            <td><p>or</p></td>
+            <td><p>$\lor$</p></td>
+          </tr>
+          <tr>
+            <td><p>not</p></td>
+            <td><p>$\neg$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                if then, <br />
+                implies
+              </p>
+            </td>
+            <td><p>$\implies$</p></td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                if and only if, <br />
+                there exists
+              </p>
+            </td>
+            <td><p>$\iff$</p></td>
+          </tr>
+          <tr>
+            <td><p>for some</p></td>
+            <td><p>$\exists$</p></td>
+          </tr>
+          <tr>
+            <td><p>for all</p></td>
+            <td><p>$\forall$</p></td>
+          </tr>
+        </table>
+      </div>
+      <h3>Remark</h3>
+      <p>The Negation or not operator can also be written as:</p>
+      $$ \text{not}(S(x)) $$
+      <h2>Sentences</h2>
+      <h3>Definition</h3>
+      <p>
+        A sentence is a logical statement with no free variables, meaning its
+        truth value can be determined as either true or false. Sentences are
+        built from set-theoretic expressions using logical connectives and
+        quantifiers.
+      </p>
+      <h3>Axiom of specification</h3>
+      <p>
+        To every set $A$ and to every condition $S(x)$ there corresponds a set
+        $B$ whose elements are exactly those elements $x$ of $A$ for which
+        $S(x)$ holds.
+      </p>
+      $$ B = \{ x \in A : S(x) \} $$
+      <h2>Universe</h2>
+      <p>
+        A universe is the set defined as having included within it every
+        possible element there exists.
+      </p>
+      <h2>The empty set</h2>
+      <h3>Definition</h3>
+      <p>
+        The empty set is defined as the set which contains no elements of any
+        kind.
+      </p>
+      <h3>Notation</h3>
+      <p>The empty set is commonly denoted in the following ways:</p>
+      $$ \emptyset \quad \text{or} \quad \varnothing \quad \text{or} \quad \left
+      \{ \right \} $$
+      <h3>Property</h3>
+      <p>The empty set by definition is included in every set.</p>
+
+      <h2>Pairs, Singeltons etc.</h2>
+
+      <h2>Unions</h2>
+      <h3>Axiom of unions</h3>
+      <p>
+        For every collection of sets $C$ there exists a set $U$ that contains
+        all the elements $x$ that belong to at least one set of the given
+        collection.
+      </p>
+      $$ U = \{ x : x \in X, \, \forall X \in C \} $$
+      <h3>Notation</h3>
+      <p>A union of two sets $A$ and $B$ can be denoted as follows:</p>
+      $$ A \cup B $$
+      <h3>Definition</h3>
+      <p>
+        The union over a collection of sets indexed by \( n \) is the set of all
+        elements that belong to at least one of the sets in the collection.
+        Formally, if \( \{A_n\}_{n \in \mathbb{N}} \) is a sequence of sets,
+        then the union over \( n \in \mathbb{N} \) is written as:
+      </p>
+      $$ \bigcup_{n \in \mathbb{N}} A_n = \{ x : \exists n \in \mathbb{N},\ x
+      \in A_n \} $$
+      <h2>Unions of pairs</h2>
+      <h3>Properties</h3>
+      <p>Unions of pairs have the following properties:</p>
+      <ol>
+        <li>
+          <p><u>Identity</u></p>
+          <p>$ A \cup \varnothing = A $</p>
+        </li>
+        <li>
+          <p><u>Commutativity</u></p>
+          <p>$ A \cup B = B \cup A $</p>
+        </li>
+        <li>
+          <p><u>Associativity</u></p>
+          <p>
+            $A \cup \left( B \cup C \right) = \left( A \cup B \right) \cup C $
+          </p>
+        </li>
+        <li>
+          <p><u>Idempotence</u></p>
+          <p>$ A \cup A = A $</p>
+        </li>
+        <li>
+          <p><u>Subset Characterization</u></p>
+          <p>$ A \subset B \iff A \cup B = B $</p>
+        </li>
+      </ol>
+      <h3>Proofs</h3>
+      <ol>
+        <li>
+          <p>Identity: \( A \cup \varnothing = A \)</p>
+          <p>
+            Let \( x \in A \cup \varnothing \). Then \( x \in A \) or \( x \in
+            \varnothing \). But \( \varnothing \) has no elements, so \( x \in A
+            \). Thus, \( A \cup \varnothing \subseteq A \). Conversely, any \( x
+            \in A \) is also in \( A \cup \varnothing \). Hence:
+          </p>
+          $$ A \cup \varnothing = A $$
+        </li>
+        <li>
+          <p>Commutativity: \( A \cup B = B \cup A \)</p>
+          <p>
+            Let \( x \in A \cup B \). Then \( x \in A \) or \( x \in B \), so \(
+            x \in B \cup A \). Similarly, any \( x \in B \cup A \) implies \( x
+            \in A \cup B \). Therefore:
+          </p>
+          $$ A \cup B = B \cup A $$
+        </li>
+        <li>
+          <p>Associativity: \( A \cup (B \cup C) = (A \cup B) \cup C \)</p>
+          <p>
+            Let \( x \in A \cup (B \cup C) \). Then \( x \in A \), or \( x \in B
+            \cup C \), meaning \( x \in B \) or \( x \in C \). In all cases, \(
+            x \in (A \cup B) \cup C \). The reverse direction follows similarly.
+          </p>
+          $$ A \cup (B \cup C) = (A \cup B) \cup C $$
+        </li>
+        <li>
+          <p>Idemportence: \( A \cup A = A \)</p>
+          <p>Let \( x \in A \cup A \). Then clearly \( x \in A \), so:</p>
+          $$ A \cup A = A $$
+        </li>
+        <li>
+          <p>Subset Characterization: \( A \subseteq B \iff A \cup B = B \)</p>
+          <ul>
+            <li>
+              <p>
+                If \( A \subseteq B \), then every element of \( A \) is already
+                in \( B \), so \( A \cup B = B \).
+              </p>
+            </li>
+            <li>
+              <p>
+                If \( A \cup B = B \), then any \( x \in A \) must be in \( B
+                \), so \( A \subseteq B \).
+              </p>
+            </li>
+          </ul>
+          $$ A \subseteq B \iff A \cup B = B $$
+        </li>
+      </ol>
+      <p class="square">$\square$</p>
+      <!-- <h2>Intersection</h2> -->
+    </div>
+  </body>
+</html>

@@ -98,13 +98,14 @@ let sideNavigator = `
     <a href="/Mathe/Linear-Algebra/eigenectors-eigenvalues.html">Eigenvectors, Eigenvalues</a>
     <a href="/Mathe/Algebre/elements-d-arithmetique.html">Eléments d'arithmétique</a>
     <a href="/Mathe/Theorie-des-nombres/ensembles-des-nombres.html">Ensembles des Nombres</a>
+    <a href="/Mathe/Logic/foundations-of-set-theory.html">Foundations of Set Theory</a>
     <a href="/Mathe/Fonctions/fonctions-exponentielles.html">Fonction exponentielle</a>
     <a href="/Mathe/Analyse/fonctions-de-plusieurs-variable.html">Fonctions de plusieurs variables</a>
     <a href="/Mathe/Linear-Algebra/systems.html">Systems of Linear Equations</a>
     <a href="/Mathe/Fonctions/logarithme-neperien.html">Fonction logarithme népérien</a>
     <a href="/Mathe/Geometrie/geometrie-dans-l-espace.html">Géométrie dans l'espace</a>
     <a href="/Mathe/Analyse/integrale-de-riemann.html" >Intégrale de Riemann</a>
-     <a href="/Mathe/Analyse/integrales-impropres.html">Intégrales impropres</a>
+    <a href="/Mathe/Analyse/integrales-impropres.html">Intégrales impropres</a>
     <a href="/Mathe/Analyse/integration.html"> Intégration</a>
     <a href="/Mathe/Analyse/limites.html">Limites</a>
     <a href="/Mathe/Calculus/limits-of-functions.html">Limits of functions</a>
@@ -124,6 +125,7 @@ let sideNavigator = `
     <a href="/Mathe/Geometrie/trigonometrie-dans-un-cerlce.html">Trigonomètrie dans un cercle</a>
     <a href="/Mathe/Geometrie/trigonometrie-dans-un-triangle-rectangle.html">Trigonomètrie dans un triangle rectangle</a>
     <a href="/Mathe/Geometrie/vecteurs.html">Vecteurs</a>
+    <a href="/Mathe/Linear-Algebra/vector-spaces.html">Vector spaces</a>
   </div>
 
   <a href="#Messtechnik" class="submenu-toggle">Messtechnik</a>

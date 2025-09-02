@@ -694,14 +694,23 @@ var splashTexts = [
   "poulet de lave?",
   "Be a goldfish.",
   "Certified hood classic!",
-  "Stop Killing Games!!! <br> stopkillinggames.com",
   "I have concepts of a plan!",
-  "1/698",
+  "These boots are made for walkin' <br> And that's just what they'll do",
+  "She's a professor, make you work hard <br> Make you learn hard <br> Wish you never ever met her at all",
+  "one of my bedbugs ate my formula",
+  "Call me Zimen!",
+  "change da world my final message. <br>Goodb ye",
+  "Become CRAZY!!!!!",
+  "I call them steamed hams",
+  "We hold these truths self evident!",
+  "brøther, I cräve the forbidden lämp",
+  "Sichformel!!",
+  "1/707",
 ];
 function generateRandomText() {
   //console.log(splashTexts);
   var randomNumber = Math.floor(Math.random() * splashTexts.length);
-  var randomNumber = 695;
+  //var randomNumber = 695;
   //console.log(randomNumber);
   //console.log(splashTexts[randomNumber]);
   document.querySelector("#splash-text").innerHTML = splashTexts[randomNumber];

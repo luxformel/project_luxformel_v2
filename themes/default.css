@@ -1,7 +1,7 @@
 :root {
   --base-font-size: 16px;
   --white: #fff;
-  --black: #000;
+  --black: #000000;
   --hero: rgba(117, 117, 117, 0.549);
   --index-border-color: hsla(250, 100%, 50%, 0.129);
   --index-card-color: rgb(228, 228, 228);

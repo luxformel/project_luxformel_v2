@@ -1,0 +1,104 @@
+:root {
+  --base-font-size: 16px;
+  --white: #021b4b;
+  --black: #e0dede;
+
+  /* Pride Theme Colors - Softer Palette */
+  --pride-red: #ff6b6b;
+  --pride-orange: #ffd093;
+  --pride-yellow: #ffe66d;
+  --pride-green: #7bc99d;
+  --pride-blue: #7ba5dd;
+  --pride-purple: #b39ddb;
+
+  /* Trans Flag Colors */
+  --trans-blue: #55cdfc;
+  --trans-pink: #f7a8b8;
+  --trans-white: #fff;
+
+  /* UI Elements */
+  --hero: #e553db;
+  --index-border-color: rgba(34, 34, 195, 0.294);
+  --index-card-color: #d6026fc1;
+  --accent-color: rgb(0, 179, 255);
+  --background-color: #42007c;
+  --transparent-black: rgba(0, 0, 0, 0.4);
+
+  /* Navigation and Footer */
+  --nav-bg-color: linear-gradient(
+    to right,
+    rgba(255, 107, 107, 1),
+    rgba(255, 208, 147, 1),
+    rgba(255, 230, 109, 1),
+    rgba(123, 201, 157, 1),
+    rgba(123, 165, 221, 1),
+    rgba(179, 157, 219, 1)
+  );
+  --footer-bg-color: linear-gradient(
+    to bottom,
+    var(--trans-blue) 0%,
+    var(--trans-blue) 18%,
+    var(--trans-pink) 22%,
+    var(--trans-pink) 38%,
+    var(--trans-white) 42%,
+    var(--trans-white) 58%,
+    var(--trans-pink) 62%,
+    var(--trans-pink) 78%,
+    var(--trans-blue) 82%,
+    var(--trans-blue) 100%
+  );
+  --footer-text-color: #000;
+
+  /* Text and Links */
+  --off-white: #393838a0;
+  --darker-off-white: #3d3d3d;
+  --dark-grey-shade: #777;
+  --splash-text-color: rgb(255, 255, 255);
+  --chapter-index-link-color: #d203bd;
+  --default-link-color: blue;
+  --default-link-color-hover: rgb(253, 0, 228);
+  --archive-link-color: var(--pride-blue);
+  --changelog-main-text-color: var(--pride-purple);
+
+  /* Table Styles */
+  --th-bg-color: rgba(255, 107, 107, 0.2);
+  --td-bg-color: rgba(146, 146, 146, 0.1);
+  --tr-bg-color: rgba(123, 201, 157, 0.1);
+
+  /* Side Navigation */
+  /* --side-nav-bg: linear-gradient(
+    to top,
+    rgba(255, 107, 107, 0.7),
+    rgba(255, 208, 147, 0.7),
+    rgba(255, 230, 109, 0.7),
+    rgba(123, 201, 157, 0.7),
+    rgba(123, 165, 221, 0.7),
+    rgba(179, 157, 219, 0.7)
+  ); */
+  --side-nav-bg: rgba(78, 60, 142, 0.126);
+  --side-nav-link: rgb(214, 212, 212);
+}
+
+nav {
+  background: var(--nav-bg-color);
+}
+nav a {
+  color: rgb(0, 0, 0) !important;
+  text-shadow: 1px 1px 2px rgb(196, 196, 196);
+}
+.material-icons {
+  color: rgb(0, 0, 0) !important;
+}
+
+footer {
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  position: relative;
+  z-index: 1;
+}
+
+.side-navigator {
+  background: var(--side-nav-bg);
+  /* text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  color: rgb(255, 255, 255); */
+}
