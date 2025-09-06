@@ -48,7 +48,6 @@ function activateSideNavSetting(name) {
     `/settings/sideNavigator/${name}.css`
   );
   localStorage.setItem("sideNavSetting", name); // Save the setting to localStorage
-  console.log("localStorage:", localStorage.getItem("sideNavSetting"));
 }
 
 function setSideNavSetting() {
@@ -69,7 +68,6 @@ function activateNoMaxWidth(name) {
     `/settings/noMaxWidth/${name}.css`
   );
   localStorage.setItem("maxWidthSetting", name); // Save the setting to localStorage
-  console.log("localStorage:", localStorage.getItem("maxWidthSetting"));
 }
 
 function setNoMaxWidthSetting() {

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Finite-Dimensional Vector Spaces</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Finite-Dimensional Vector Spaces</h1>
+      <h2>Linear combinations</h2>
+      <h3>Definition</h3>
+      <p>
+        Let \( V \) be a vector space over a field \( \mathbb{F} \). A linear
+        combination of vectors \( v_1, v_2, \ldots, v_n \in V \) is an
+        expression of the form:
+      </p>
+      <p>\[ c_1 v_1 + c_2 v_2 + \ldots + c_n v_n \]</p>
+      <p>
+        where \( c_1, c_2, \ldots, c_n \in \mathbb{F} \) are scalars. The set of
+        all linear combinations of a given set of vectors is called the span of
+        those vectors.
+      </p>
+      <h2>Span</h2>
+      <h3>Definition</h3>
+      <p>
+        The span of a set of vectors \( v_1, v_2, \ldots, v_n \in V \) is the
+        set of all linear combinations of those vectors.
+      </p>
+      <h3>Notation</h3>
+      <p>
+        The span of the vectors \( v_1, v_2, \ldots, v_n \) is denoted by \(
+        \text{span}(v_1, v_2, \ldots, v_n) \).
+      </p>
+      <h3>Theorem</h3>
+      <p>
+        The span of a list of vectors in \( V \) is the smallest subspace of \(
+        V \) containing all the vectors in the list.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( W \) be the span of the vectors \( v_1, v_2, \ldots, v_n \). By
+        definition, \( W \) is the set of all linear combinations of these
+        vectors. Since \( W \) is formed by taking linear combinations of the
+        vectors in the list, it is a subspace of \( V \).
+        <br />
+        Now, suppose there exists a subspace \( U \) of \( V \) that contains
+        all the vectors \( v_1, v_2, \ldots, v_n \). Since \( U \) is a
+        subspace, it must also contain all linear combinations of these vectors.
+        Therefore, we have \( W \subseteq U \).
+        <br />
+        Since \( U \) was an arbitrary subspace containing the vectors in the
+        list, we conclude that \( W \) is the smallest subspace of \( V \)
+        containing all the vectors in the list.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Finite-Dimensional Vector Spaces</h2>
+      <h3>Definition</h3>
+      <p>
+        A vector space is called finite-dimensional if some list of vectors in
+        it spans the space.
+      </p>
+      <h2>Polynomial</h2>
+      <h3>Definition</h3>
+      <p>
+        The space of polynomials with coefficients in a field \( \mathbb{F} \)
+        is denoted by \( \mathcal{P}(\mathbb{F}) \). A polynomial \( p(x) \in
+        \mathcal{P}(\mathbb{F}) \) is an expression of the form:
+      </p>
+      <p>\[ p(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0 \]</p>
+      <p>
+        where \( a_i \in \mathbb{F} \) for all \( i \) and \( n \) is a
+        non-negative integer.
+      </p>
+      <h2>Degree of a polynomial</h2>
+      <h3>Definition</h3>
+      <p>
+        The degree of a polynomial \( p(x) \in \mathcal{P}(\mathbb{F}) \) is the
+        highest power of \( x \) that appears in the polynomial with a non-zero
+        coefficient. Formally, if
+      </p>
+      <p>\[ p(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0 \]</p>
+      <p>
+        where \( a_n \neq 0 \), then the degree of \( p(x) \) is \( n \),
+        denoted by \( \deg(p) = n \).
+      </p>
+      <h3>Remark</h3>
+      <p>
+        The polynomial that is identically 0 is said to have degree $-\infty$.
+      </p>
+      <h2>Space of polynomials</h2>
+      <h3>Definition</h3>
+      <p>
+        For a nonnegative integer \( m \), \( \mathcal{P}_m(\mathbb{F}) \)
+        denotes the set of all polynomials with coefficients in \( \mathbb{F} \)
+        and degree at most \( m \).
+      </p>
+      <h2>Infinite-dimensional vector space</h2>
+      <h3>Definition</h3>
+      <p>
+        A vector space is called infinite-dimensional if it is not
+        finite-dimensional.
+      </p>
+      <h2>Linearly independence</h2>
+      <h3>Definition</h3>
+      <p>
+        A set of vectors \( v_1, v_2, \ldots, v_n \in V \) is said to be
+        linearly independent if the only linear combination of these vectors
+        that equals the zero vector is the trivial combination where all
+        coefficients are zero. Formally, if
+      </p>
+      \[ c_1 v_1 + c_2 v_2 + \ldots + c_n v_n = 0 \]
+      <p>
+        implies \( c_1 = c_2 = \ldots = c_n = 0 \), then the vectors are
+        linearly independent.
+      </p>
+      <h3>Remark</h3>
+      <p>The empty list $()$ is also declared to be linearly independent.</p>
+      <h2>Linearly dependent</h2>
+      <h3>Definition</h3>
+      <p>
+        A set of vectors \( v_1, v_2, \ldots, v_n \in V \) is said to be
+        linearly dependent if there exist coefficients \( c_1, c_2, \ldots, c_n
+        \in \mathbb{F} \), not all zero, such that
+      </p>
+      \[ c_1 v_1 + c_2 v_2 + \ldots + c_n v_n = 0 \]
+      <p>
+        In other words, at least one of the vectors can be expressed as a linear
+        combination of the others.
+      </p>
+      <h3>Linear dependence lemma</h3>
+      <p>
+        Suppose \( v_1, \ldots, v_m \) is a linearly dependent list in \( V \).
+        Then there exists \( j \in \{1, 2, \ldots, m\} \) such that the
+        following hold:
+      </p>
+      <ol>
+        <li><p>\( v_j \in \operatorname{span}(v_1, \ldots, v_{j-1}) \)</p></li>
+        <li>
+          <p>
+            if the \( j^{\text{th}} \) term is removed from \( v_1, \ldots, v_m
+            \), the span of the remaining list equals \(\operatorname{span}(v_1,
+            \ldots, v_m)\).
+          </p>
+        </li>
+      </ol>
+      <h3>Proof</h3>
+      <p>
+        We will prove the linear dependence lemma by showing that if \( v_1,
+        \ldots, v_m \) is a linearly dependent list in \( V \), then the two
+        conditions stated in the lemma must hold for some \( j \in \{1, 2,
+        \ldots, m\} \).
+      </p>
+      <p>
+        Since \( v_1, \ldots, v_m \) is linearly dependent, there exist
+        coefficients \( c_1, c_2, \ldots, c_m \in \mathbb{F} \), not all zero,
+        such that
+      </p>
+      \[ c_1 v_1 + c_2 v_2 + \ldots + c_m v_m = 0 \]
+      <p>
+        Without loss of generality, assume \( c_j \neq 0 \) for some \( j \in
+        \{1, 2, \ldots, m\} \). We can then express \( v_j \) as a linear
+        combination of the other vectors:
+      </p>
+      \[ v_j = -\frac{c_1}{c_j} v_1 - \frac{c_2}{c_j} v_2 - \ldots -
+      \frac{c_{j-1}}{c_j} v_{j-1} - \frac{c_{j+1}}{c_j} v_{j+1} - \ldots -
+      \frac{c_m}{c_j} v_m \]
+      <p>
+        This shows that \( v_j \) can be expressed as a linear combination of
+        the vectors \( v_1, \ldots, v_{j-1}, v_{j+1}, \ldots, v_m \), which
+        proves the first condition of the lemma.
+      </p>
+      <p>
+        To prove the second condition, we note that removing \( v_j \) from the
+        list does not change the span of the remaining vectors, since \( v_j \)
+        can be expressed as a linear combination of them. Therefore, we have
+      </p>
+      \[ \operatorname{span}(v_1, \ldots, v_{j-1}, v_{j+1}, \ldots, v_m) =
+      \operatorname{span}(v_1, \ldots, v_m) \]
+      <p>This completes the proof of the linear dependence lemma.</p>
+      <p class="square">$\square$</p>
+      <h2>Length of linearly independent list and length of spanning list</h2>
+      <h3>Theorem</h3>
+      <p>
+        In a finite-dimensional vector space, the length of every linearly
+        independent list of vectors is less than or equal to the length of every
+        spanning list of vectors.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( v_1, v_2, \ldots, v_k \) be a linearly independent list of
+        vectors in a finite-dimensional vector space \( V \), and let \( u_1,
+        u_2, \ldots, u_m \) be a spanning list of vectors in \( V \). We want to
+        show that \( k \leq m \).
+      </p>
+      <p>
+        Since \( u_1, u_2, \ldots, u_m \) is a spanning list, every vector in \(
+        V \) can be expressed as a linear combination of the \( u_i \)'s. In
+        particular, the vectors \( v_1, v_2, \ldots, v_k \) can be expressed as
+        linear combinations of the \( u_i \)'s:
+      </p>
+      \[ v_j = a_{j1} u_1 + a_{j2} u_2 + \ldots + a_{jm} u_m \]
+      <p>
+        for some coefficients \( a_{ji} \in \mathbb{F} \). We can form the
+        following matrix \( A \) whose columns are the vectors \( u_1, u_2,
+        \ldots, u_m \) and whose rows correspond to the coefficients \( a_{ji}
+        \):
+      </p>
+      \[ A = \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1m} \\ a_{21} &
+      a_{22} & \cdots & a_{2m} \\ \vdots & \vdots & \ddots & \vdots \\ a_{k1} &
+      a_{k2} & \cdots & a_{km} \end{pmatrix} \]
+      <p>
+        Since the vectors \( v_1, v_2, \ldots, v_k \) are linearly independent,
+        the rows of the matrix \( A \) must be linearly independent as well.
+      </p>
+      <p>
+        However, in a finite-dimensional vector space, the maximum number of
+        linearly independent vectors or the dimension is equal to the number of
+        columns in the matrix \( A \). Therefore, we must have \( k \leq m \),
+        which completes the proof.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Finite-dimensional subspaces</h2>
+      <h3>Theorem</h3>
+      <p>
+        Every subspace of a finite-dimensional vector space is
+        finite-dimensional.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( W \) be a subspace of a finite-dimensional vector space \( V \).
+        Since \( V \) is finite-dimensional, there exists a finite basis \( \{
+        v_1, v_2, \ldots, v_k \} \) for \( V \). We claim that the set \( \{
+        v_1, v_2, \ldots, v_k \} \) spans \( W \).
+      </p>
+      <p>
+        To see this, let \( w \in W \). Since \( W \) is a subspace, we can
+        express \( w \) as a linear combination of the basis vectors of \( V \):
+      </p>
+      \[ w = a_1 v_1 + a_2 v_2 + \ldots + a_k v_k \]
+      <p>
+        for some coefficients \( a_i \in \mathbb{F} \). However, since \( w \in
+        W \) and \( W \) is closed under linear combinations, it follows that
+        each \( v_i \) must also be expressible in terms of the basis vectors of
+        \( W \). Thus, we can find a finite set of vectors in \( W \) that spans
+        \( W \).
+      </p>
+      <p>
+        Therefore, \( W \) is finite-dimensional, which completes the proof.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Basis</h2>
+      <h3>Definition</h3>
+      <p>
+        A basis of \( V \) is a list of vectors in \( V \) that is linearly
+        independent and spans \( V \).
+      </p>
+      <h3>Theorem</h3>
+      <p>
+        A list \( v_1, \ldots, v_n \) of vectors in \( V \) is a basis of \( V
+        \) if and only if every \( v \in V \) can be expressed as a linear
+        combination of the \( v_i \)'s.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        $(\Rightarrow)$ Suppose \( v_1, \ldots, v_n \) is a basis of \( V \).
+        Then by definition, the \( v_i \)'s are linearly independent and span \(
+        V \). Therefore, every \( v \in V \) can be expressed as a linear
+        combination of the \( v_i \)'s.
+      </p>
+      <p>
+        $(\Leftarrow)$ Conversely, suppose every \( v \in V \) can be expressed
+        as a linear combination of the \( v_i \)'s. We need to show that the \(
+        v_i \)'s are linearly independent. Assume for the sake of contradiction
+        that they are not linearly independent. Then there exists a non-trivial
+        linear combination of the \( v_i \)'s that equals zero:
+      </p>
+      \[ c_1 v_1 + c_2 v_2 + \ldots + c_n v_n = 0 \]
+      <p>
+        for some coefficients \( c_i \in \mathbb{F} \), not all zero. But then
+        we could express one of the \( v_i \)'s as a linear combination of the
+        others, contradicting the assumption that the \( v_i \)'s span \( V \).
+      </p>
+      <p>
+        Therefore, the \( v_i \)'s must be linearly independent, and we conclude
+        that \( v_1, \ldots, v_n \) is a basis of \( V \).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Spanning list contains a basis</h2>
+      <h3>Theorem</h3>
+      <p>
+        Every spanning list in a vector space can be reduced to a basis of the
+        vector space.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( v_1, v_2, \ldots, v_n \) be a spanning list in a vector space \(
+        V \). We will show that we can reduce this list to a basis for \( V \).
+      </p>
+      <p>
+        First, we can apply the process of Gaussian elimination to the vectors
+        \( v_1, v_2, \ldots, v_n \) to obtain a set of linearly independent
+        vectors \( u_1, u_2, \ldots, u_k \) (where \( k \leq n \)) that still
+        spans \( V \). This is possible because the original vectors span \( V
+        \), and we can remove any linear dependencies among them.
+      </p>
+      <p>
+        Next, we claim that the set \( \{ u_1, u_2, \ldots, u_k \} \) is a basis
+        for \( V \). To see this, we need to show that it is linearly
+        independent and spans \( V \).
+      </p>
+      <p>
+        Since we obtained \( u_1, u_2, \ldots, u_k \) from \( v_1, v_2, \ldots,
+        v_n \) through a process that removes linear dependencies, it follows
+        that the \( u_i \)'s are linearly independent.
+      </p>
+      <p>
+        Furthermore, because the \( v_i \)'s span \( V \), any vector \( v \in V
+        \) can be expressed as a linear combination of the \( v_i \)'s:
+      </p>
+      \[ v = a_1 v_1 + a_2 v_2 + \ldots + a_n v_n \]
+      <p>
+        Since the \( u_i \)'s are obtained from the \( v_i \)'s, we can also
+        express \( v \) as a linear combination of the \( u_i \)'s:
+      </p>
+      \[ v = b_1 u_1 + b_2 u_2 + \ldots + b_k u_k \]
+      <p>
+        for some coefficients \( b_i \in \mathbb{F} \). This shows that the \(
+        u_i \)'s span \( V \).
+      </p>
+      <p>
+        Therefore, we conclude that \( \{ u_1, u_2, \ldots, u_k \} \) is a basis
+        for \( V \), and we have successfully reduced the spanning list \( v_1,
+        v_2, \ldots, v_n \) to a basis.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Basis of finite-dimensional vector space</h2>
+      <h3>Theorem</h3>
+      <p>Every finite-dimensional vector space has a basis.</p>
+      <h3>Proof</h3>
+      <p>
+        Let \( V \) be a finite-dimensional vector space. By definition, this
+        means that there exists a finite spanning list \( v_1, v_2, \ldots, v_n
+        \) of vectors in \( V \). We will show that we can reduce this spanning
+        list to a basis for \( V \).
+      </p>
+      <p>
+        By the previous theorem, we know that every spanning list can be reduced
+        to a basis. Therefore, we can apply this result to our spanning list \(
+        v_1, v_2, \ldots, v_n \) to obtain a basis \( u_1, u_2, \ldots, u_k \)
+        for \( V \).
+      </p>
+      <p>
+        Thus, we conclude that every finite-dimensional vector space has a
+        basis.
+      </p>
+      <p class="square">$\square$</p>
+
+      <h2>Linearly independent list extends to a basis</h2>
+      <h3>Theorem</h3>
+      <p>
+        Every linearly independent list of vectors in a finite-dimensional
+        vector space can be extended to a basis of the vector space.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( V \) be a finite-dimensional vector space, and let \( \{ v_1,
+        v_2, \ldots, v_k \} \) be a linearly independent list of vectors in \( V
+        \). Since \( V \) is finite-dimensional, it has a basis \( \{ u_1, u_2,
+        \ldots, u_n \} \) with \( n \) vectors.
+      </p>
+      <p>
+        We can extend the list \( \{ v_1, v_2, \ldots, v_k \} \) to a basis of
+        \( V \) by adding vectors from the basis \( \{ u_1, u_2, \ldots, u_n \}
+        \) that are not in the span of \( \{ v_1, v_2, \ldots, v_k \} \).
+      </p>
+      <p>
+        Specifically, we can take a vector \( u_i \) from the basis \( \{ u_1,
+        u_2, \ldots, u_n \} \) that is not in the span of \( \{ v_1, v_2,
+        \ldots, v_k \} \) and add it to our list. This new list \( \{ v_1, v_2,
+        \ldots, v_k, u_i \} \) will still be linearly independent, as the
+        addition of \( u_i \) does not introduce any linear dependencies.
+      </p>
+      <p>
+        We can repeat this process until we have added enough vectors to form a
+        basis for \( V \). Since \( V \) is finite-dimensional, this process
+        must terminate, and we will obtain a basis for \( V \) that extends the
+        original linearly independent list \( \{ v_1, v_2, \ldots, v_k \} \).
+      </p>
+      <p>
+        Therefore, we conclude that every linearly independent list of vectors
+        in a finite-dimensional vector space can be extended to a basis of the
+        vector space.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>
+        Every subspace of \( V \) is part of a direct sum equal to \( V \)
+      </h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( V \) is finite-dimensional and \( U \) is a subspace of \( V
+        \). Then there is a subspace \( W \) of \( V \) such that \( V = U
+        \oplus W \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( V \) be a finite-dimensional vector space and \( U \) be a
+        subspace of \( V \). Since \( V \) is finite-dimensional, we can choose
+        a basis \( \{ u_1, u_2, \ldots, u_k \} \) for \( U \) and extend it to a
+        basis \( \{ u_1, u_2, \ldots, u_k, v_1, v_2, \ldots, v_m \} \) for \( V
+        \).
+      </p>
+      <p>
+        We claim that \( V = U \oplus W \), where \( W = \text{span}\{ v_1, v_2,
+        \ldots, v_m \} \). To show this, we need to verify two things:
+      </p>
+      <ol>
+        <li>
+          <p>
+            \( V = U + W \): Any vector \( v \in V \) can be expressed as a
+            linear combination of the basis vectors, so we can write \[ v = a_1
+            u_1 + a_2 u_2 + \ldots + a_k u_k + b_1 v_1 + b_2 v_2 + \ldots + b_m
+            v_m \] for some scalars \( a_i \) and \( b_j \). This shows that \(
+            V \) is the sum of \( U \) and \( W \).
+          </p>
+        </li>
+        <li>
+          <p>
+            \( U \cap W = \{ 0 \} \): If a vector \( x \) is in both \( U \) and
+            \( W \), it can be expressed as a linear combination of the basis
+            vectors for \( U \) and \( W \). However, since the basis vectors
+            for \( W \) are not in \( U \), the only vector that can be in both
+            subspaces is the zero vector. Thus, \( U \cap W = \{ 0 \} \).
+          </p>
+        </li>
+      </ol>
+      <p>
+        Since both conditions are satisfied, we conclude that \( V = U \oplus W
+        \).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Basis length does not depend on basis</h2>
+      <h3>Theorem</h3>
+      <p>
+        Any two bases of a finite-dimensional vector space have the same length.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( \{ u_1, u_2, \ldots, u_n \} \) be a basis for the
+        finite-dimensional vector space \( V \), and let \( \{ v_1, v_2, \ldots,
+        v_m \} \) be another basis for \( V \). We need to show that \( n = m
+        \).
+      </p>
+      <p>
+        Since \( \{ v_1, v_2, \ldots, v_m \} \) is a basis for \( V \), it is
+        linearly independent and spans \( V \). Therefore, each vector \( u_i \)
+        can be expressed as a linear combination of the vectors \( v_j \):
+      </p>
+      \[ u_i = a_{i1} v_1 + a_{i2} v_2 + \ldots + a_{im} v_m \]
+      <p>
+        for some scalars \( a_{ij} \). This means that the set \( \{ u_1, u_2,
+        \ldots, u_n \} \) is also linearly dependent on the set \( \{ v_1, v_2,
+        \ldots, v_m \} \).
+      </p>
+      <p>
+        Conversely, since \( \{ u_1, u_2, \ldots, u_n \} \) is a basis for \( V
+        \), each vector \( v_j \) can be expressed as a linear combination of
+        the vectors \( u_i \):
+      </p>
+      \[ v_j = b_{j1} u_1 + b_{j2} u_2 + \ldots + b_{jn} u_n \]
+      <p>
+        for some scalars \( b_{ji} \). This means that the set \( \{ v_1, v_2,
+        \ldots, v_m \} \) is also linearly dependent on the set \( \{ u_1, u_2,
+        \ldots, u_n \} \).
+      </p>
+      <p>
+        Since both sets are linearly dependent on each other, we conclude that
+        they must have the same number of vectors, \( n = m \).
+      </p>
+      <p class="square">$\square$</p>
+
+      <h2>Dimension</h2>
+      <h3>Definition</h3>
+      <p>
+        The dimension of a vector space \( V \) is defined as the length of any
+        basis of \( V \).
+      </p>
+      <h3>Notation</h3>
+      <p>
+        The dimension of a vector space \( V \) is denoted by \( \dim(V) \).
+      </p>
+      <h2>Dimension of a subspace</h2>
+      <h3>Theorem</h3>
+      <p>
+        If \( V \) is finite-dimensional and \( U \) is a subspace of \( V \),
+        then \( \dim(U) \leq \dim(V) \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( \{ u_1, u_2, \ldots, u_k \} \) be a basis for the subspace \( U
+        \) and extend it to a basis \( \{ u_1, u_2, \ldots, u_k, v_1, v_2,
+        \ldots, v_m \} \) for \( V \). Since the basis for \( U \) has \( k \)
+        vectors and the basis for \( V \) has \( k + m \) vectors, we have
+      </p>
+      \[ \dim(U) = k \leq k + m = \dim(V). \]
+      <p class="square">$\square$</p>
+      <h2>Linearly independent list of the right length is a basis</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( V \) is finite-dimensional. Then every linearly independent
+        list of vectors in \( V \) with length \( \dim(V) \) is a basis of \( V
+        \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( \{ v_1, v_2, \ldots, v_n \} \) be a linearly independent list of
+        vectors in \( V \) with length \( n = \dim(V) \). We need to show that
+        this list is a basis for \( V \).
+      </p>
+      <p>
+        Since \( n = \dim(V) \), any basis for \( V \) must also have \( n \)
+        vectors. We can extend the list \( \{ v_1, v_2, \ldots, v_n \} \) to a
+        basis for \( V \) by adding vectors from \( V \) that are not in the
+        span of the \( v_i \)'s.
+      </p>
+      <p>
+        However, since \( \{ v_1, v_2, \ldots, v_n \} \) is linearly
+        independent, it cannot be expressed as a linear combination of any other
+        vectors in \( V \). Therefore, the only way to extend this list to a
+        basis is to include all \( n \) vectors.
+      </p>
+      <p>
+        Thus, we conclude that \( \{ v_1, v_2, \ldots, v_n \} \) is a basis for
+        \( V \).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Spanning list of the right length is a basis</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( V \) is finite-dimensional. Then every spanning list of
+        vectors in \( V \) with length \( \dim V \) is a basis of \( V \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( \{ v_1, v_2, \ldots, v_n \} \) be a spanning list of vectors in
+        \( V \) with length \( n = \dim(V) \). We need to show that this list is
+        a basis for \( V \).
+      </p>
+      <p>
+        Since \( n = \dim(V) \), any basis for \( V \) must also have \( n \)
+        vectors. We can extend the list \( \{ v_1, v_2, \ldots, v_n \} \) to a
+        basis for \( V \) by adding vectors from \( V \) that are not in the
+        span of the \( v_i \)'s.
+      </p>
+      <p>
+        However, since \( \{ v_1, v_2, \ldots, v_n \} \) is spanning, it must be
+        able to express any vector in \( V \) as a linear combination of the \(
+        v_i \)'s. Therefore, the only way to extend this list to a basis is to
+        include all \( n \) vectors.
+      </p>
+      <p>
+        Thus, we conclude that \( \{ v_1, v_2, \ldots, v_n \} \) is a basis for
+        \( V \).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Dimension of a sum</h2>
+      <h3>Theorem</h3>
+      <p>
+        If \( U \) and \( W \) are finite-dimensional subspaces of a vector
+        space \( V \), then
+      </p>
+      \[ \dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W). \]
+      <h3>Proof</h3>
+      <p>
+        Let \( \{ u_1, u_2, \ldots, u_k \} \) be a basis for \( U \) and \( \{
+        w_1, w_2, \ldots, w_m \} \) be a basis for \( W \). Then \( \{ u_1, u_2,
+        \ldots, u_k, w_1, w_2, \ldots, w_m \} \) spans \( U + W \).
+      </p>
+      <p>
+        To show that this set is linearly independent, we need to consider the
+        intersection \( U \cap W \). Let \( \{ z_1, z_2, \ldots, z_p \} \) be a
+        basis for \( U \cap W \). Then we can express the dimensions as follows:
+      </p>
+      \[ \dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W). \]
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>

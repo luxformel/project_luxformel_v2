@@ -54,9 +54,9 @@ var splashTexts = [
   "cosinusoid",
   "hacovercosin",
   "Bonjoo&shy;ouuuuuur",
-  "guer net seriö dat doten!",
-  "124 Kapitelen",
-  "1,74 GB",
+  "Guer net seriö dat doten!",
+  "156 Kapitelen",
+  "1,81 GB",
   "we do not brew coffee - Error : 418",
   "server is a teapot",
   "please convert me",
@@ -75,6 +75,7 @@ var splashTexts = [
   "N'Owend",
   "Ciao",
   "Salve",
+  "Salvete",
   "Konnichiwa",
   "Anyoung haseyo",
   "Anyoung",
@@ -705,7 +706,11 @@ var splashTexts = [
   "We hold these truths self evident!",
   "brøther, I cräve the forbidden lämp",
   "Sichformel!!",
-  "1/707",
+  "Empire of the sun",
+  "bumsdeg!",
+  "RNG life",
+  "W luxformel!",
+  "1/712",
 ];
 function generateRandomText() {
   //console.log(splashTexts);

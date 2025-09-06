@@ -61,8 +61,72 @@
         same elements in the same order.
       </p>
 
-      <!-- <p>TO BE CONTINUED!!!!!!!</p> -->
+      <h2>Field $\mathbb{F}^n$</h2>
+      <h3>Definition</h3>
+      <p>
+        $\mathbb{F}^n$ is the set of all lists of length $n$ of elements of
+        $\mathbb{F}:
+      </p>
+      \[ \mathbb{F}^n = \{(x_1, \ldots, x_n) : x_j \in \mathbb{F} \text{ for } j
+      = 1, \ldots, n\} \]
+      <p>
+        For \((x_1, \ldots, x_n) \in \mathbb{F}^n\) and \(j \in \{1, \ldots,
+        n\}\), we say that \(x_j\) is the \(j^{\text{th}}\) coordinate of
+        \((x_1, \ldots, x_n)\)
+      </p>
 
+      <h2>Addition in $\mathbb{F}$</h2>
+      <h3>Definition</h3>
+      <p>
+        Addition in \( \mathbb{F}^n \) is defined by adding corresponding
+        coordinates:
+      </p>
+      \[ (x_1, \ldots, x_n) + (y_1, \ldots, y_n) = (x_1 + y_1, \ldots, x_n +
+      y_n) \]
+
+      <h2>Commutativity of addition in \(\mathbb{F}^n\)</h2>
+      <h3></h3>
+      <p>If $x,y \in \mathbb{F}^n $, then $x + y = y + x$.</p>
+      <h3>Proof</h3>
+      <p>
+        Suppose \( x = (x_1, \ldots, x_n) \) and \( y = (y_1, \ldots, y_n) \).
+        Then
+      </p>
+      \[ x + y = (x_1, \ldots, x_n) + (y_1, \ldots, y_n) \] \[ = (x_1 + y_1,
+      \ldots, x_n + y_n) \] \[ = (y_1 + x_1, \ldots, y_n + x_n) \] \[ = (y_1,
+      \ldots, y_n) + (x_1, \ldots, x_n) \] \[ = y + x, \]
+      <p>
+        where the second and fourth equalities above hold because of the
+        definition of addition in \( \mathbb{F}^n \) and the third equality
+        holds because of the usual commutativity of addition in \( \mathbb{F}
+        \).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Zero</h2>
+      <h3>Definition</h3>
+      <p>Let 0 denote the list of length $n$-whose coordinates are all 0:</p>
+      $$ 0 = (0, \ldots, 0) $$
+      <h2>Additive inverse in \( \mathbb{F}^n \)</h2>
+      <h3>Definition</h3>
+      <p>
+        For \( x \in \mathbb{F}^n \), the additive inverse of \( x \), denoted
+        \(-x\), is the vector \(-x \in \mathbb{F}^n\) such that
+      </p>
+      \[x + (-x) = 0\]
+
+      <h2>Definition scalar multiplication in \( \mathbb{F}^n \)</h2>
+      <h3>Definition</h3>
+      <p>
+        The product of a number \( \lambda \) and a vector in \( \mathbb{F}^n \)
+        is computed by multiplying each coordinate of the vector by \( \lambda
+        \):
+      </p>
+
+      \[ \lambda(x_1, \ldots, x_n) = (\lambda x_1, \ldots, \lambda x_n) \]
+      <p>
+        here \( \lambda \in \mathbb{F} \) and \( (x_1, \ldots, x_n) \in
+        \mathbb{F}^n \).
+      </p>
       <h2>Addition and scalar multiplication</h2>
       <h3>Definition</h3>
       <ul>
@@ -97,7 +161,7 @@
           $$ (u + v) + w = u + (v + w) $$
           <p>and</p>
           $$ (ab)v = a(bv) \quad \forall u, v, w \in V $$
-          <p>and all \( a, b \in F \)</p>
+          <p>and all \( a, b \in \mathbb{F}\)</p>
         </li>
         <li>
           <p>
@@ -121,8 +185,8 @@
           <p><u>Distributive properties</u></p>
           $$ a(u + v) = au + av $$
           <p>and</p>
-          $$ (a + b)v = av + bv \quad \forall a, b \in F \ \text{ and } \forall
-          u, v \in V. $$
+          $$ (a + b)v = av + bv \quad \forall a, b \in \mathbb{F} \ \text{ and }
+          \forall u, v \in V. $$
         </li>
       </ul>
       <h2>Points and vectors</h2>
@@ -164,7 +228,7 @@
           <p>for all \( x \in S \).</p>
         </li>
       </ul>
-      <h2>Additive identity</h2>
+      <h2>Unique additive identity</h2>
       <h3>Theorem</h3>
       <p>A vector space has a unique additive identity.</p>
       <h3>Proof</h3>
@@ -174,10 +238,17 @@
       </p>
       <p class="square">$\square$</p>
 
-      <h2>Additive inverse</h2>
+      <h2>Unique additive inverse</h2>
       <h3>Theorem</h3>
       <p>Every element in a vector space has a unique additive inverse.</p>
       <h3>Proof</h3>
+      <p>
+        Suppose \( v \) and \( w \) are both additive inverses of some element
+        \( u \in V \). Then: \( v + u = 0 \) and \( w + u = 0 \)
+        <br />
+        Adding the additive inverse of \( v + u \) to both sides of the equation
+        above gives \( 0 = w - v \), as desired.
+      </p>
       <p class="square">$\square$</p>
 
       <h3>Notation</h3>
@@ -212,6 +283,128 @@
       <p>
         This equation says that $(-1)v$, when added to $v$, gives 0. Thus
         $(-1)v$ is the additive inverse of $v$, as desired.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Subspaces</h2>
+      <h3>Definition</h3>
+      <p>A subset \( W \) of a vector space \( V \) is called a subspace if:</p>
+      <ul>
+        <li><p>It contains the zero vector.</p></li>
+        <li><p>It is closed under vector addition.</p></li>
+        <li><p>It is closed under scalar multiplication.</p></li>
+      </ul>
+      <h2>Sum of subsets</h2>
+      <h3>Definition</h3>
+      <p>
+        Let \( U \) and \( W \) be subsets of a vector space \( V \). The sum of
+        \( U \) and \( W \), denoted \( U + W \), is the set defined by:
+      </p>
+      \[ U + W = \{ u + w \mid u \in U, w \in W \} \]
+      <h2>Sum of subspaces is the smallest containing subspace</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( U_1, \ldots, U_m \) are subspaces of \( V \). Then \( U_1 +
+        \cdots + U_m \) is the smallest subspace of \( V \) containing \( U_1,
+        \ldots, U_m \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \( W \) be the smallest subspace of \( V \) containing \( U_1,
+        \ldots, U_m \). We need to show that \( W \) is contained in \( U_1 +
+        \cdots + U_m \).
+        <br />
+        Since \( W \) is a subspace, it is closed under addition and scalar
+        multiplication. Therefore, if \( w \in W \), then for any \( u_i \in U_i
+        \) and \( \lambda \in \mathbb{F} \), we have \( w + u_i \in W \) and \(
+        \lambda w \in W \).
+        <br />
+        Now, consider any element \( z \in U_1 + \cdots + U_m \). By definition,
+        \( z \) can be written as \( z = u_1 + \cdots + u_m \) for some \( u_i
+        \in U_i \). Since each \( U_i \) is contained in \( W \), it follows
+        that \( z \in W \).
+        <br />
+        Thus, we have shown that \( W \subseteq U_1 + \cdots + U_m \), which
+        proves the theorem.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Direct Sum</h2>
+      <h3>Definition</h3>
+      <p>Suppose \( U_1, \ldots, U_m \) are subspaces of \( V \).</p>
+      <ul>
+        <li>
+          <p>
+            The sum \( U_1 + \cdots + U_m \) is called a direct sum if each
+            element of \( U_1 + \cdots + U_m \) can be written in only one way
+            as a sum \( u_1 + \cdots + u_m \), where each \( u_j \) is in \( U_j
+            \).
+          </p>
+        </li>
+        <li>
+          <p>
+            If \( U_1 + \cdots + U_m \) is a direct sum, then \( U_1 \oplus
+            \cdots \oplus U_m \) denotes \( U_1 + \cdots + U_m \), with the
+            \(\oplus\) notation serving as an indication that this is a direct
+            sum.
+          </p>
+        </li>
+      </ul>
+      <h2>Condition for a direct sum</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( U_1, \ldots, U_m \) are subspaces of \( V \). Then \( U_1 +
+        \cdots + U_m \) is a direct sum if and only if the intersection \( U_i
+        \cap U_j = \{0\} \) for all \( i \neq j \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Suppose \( U_1, \ldots, U_m \) are subspaces of \( V \). We will show
+        that \( U_1 + \cdots + U_m \) is a direct sum if and only if the
+        intersection \( U_i \cap U_j = \{0\} \) for all \( i \neq j \).
+        <br />
+        (\( \Rightarrow \)) Assume \( U_1 + \cdots + U_m \) is a direct sum. Let
+        \( v \in U_i \cap U_j \) for some \( i \neq j \). Then we can write \[ v
+        = u_i + \cdots + u_m \] for some \( u_k \in U_k \). However, since \( v
+        \in U_i \) and \( v \in U_j \), this representation is not unique,
+        contradicting the assumption that the sum is direct. Thus, we must have
+        \( v = 0 \), proving that \( U_i \cap U_j = \{0\} \).
+        <br />
+        (\( \Leftarrow \)) Now assume \( U_i \cap U_j = \{0\} \) for all \( i
+        \neq j \). Let \( v \in U_1 + \cdots + U_m \). Then we can write \[ v =
+        u_1 + \cdots + u_m \] for some \( u_k \in U_k \). Suppose there is
+        another representation \[ v = w_1 + \cdots + w_m \] for some \( w_k \in
+        U_k \). Then we have \[ u_1 + \cdots + u_m = w_1 + \cdots + w_m. \]
+        Rearranging gives \[ (u_1 - w_1) + \cdots + (u_m - w_m) = 0. \] Since
+        the \( U_i \) are pairwise disjoint, it follows that each \( u_k - w_k =
+        0 \), proving the uniqueness of the representation. Thus, \( U_1 +
+        \cdots + U_m \) is a direct sum.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Direct sum of two subspaces</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( U \) and \( W \) are subspaces of \( V \). Then \( U \oplus W
+        \) is a direct sum if and only if \( U \cap W = \{0\} \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Suppose \( U \) and \( W \) are subspaces of \( V \). We will show that
+        \( U \oplus W \) is a direct sum if and only if \( U \cap W = \{0\} \).
+        <br />
+        (\( \Rightarrow \)) Assume \( U \oplus W \) is a direct sum. Let \( v
+        \in U \cap W \). Then we can write \[ v = u + w \] for some \( u \in U
+        \) and \( w \in W \). However, since \( v \in U \) and \( v \in W \),
+        this representation is not unique, contradicting the assumption that the
+        sum is direct. Thus, we must have \( v = 0 \), proving that \( U \cap W
+        = \{0\} \).
+        <br />
+        (\( \Leftarrow \)) Now assume \( U \cap W = \{0\} \). Let \( v \in U
+        \oplus W \). Then we can write \[ v = u + w \] for some \( u \in U \)
+        and \( w \in W \). Suppose there is another representation \[ v = w_1 +
+        w_2 \] for some \( w_k \in W \). Then we have \[ u + w = w_1 + w_2. \]
+        Rearranging gives \[ (u - w_1) + (w - w_2) = 0. \] Since \( U \cap W =
+        \{0\} \), it follows that each \( u - w_1 = 0 \) and \( w - w_2 = 0 \),
+        proving the uniqueness of the representation. Thus, \( U \oplus W \) is
+        a direct sum.
       </p>
       <p class="square">$\square$</p>
     </div>

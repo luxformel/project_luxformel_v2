@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Linear Maps</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Linear Maps</h1>
+      <h2>Linear Map</h2>
+      <h3>Definition</h3>
+      <p>
+        A linear map from \(V\) to \(W\) is a function \(T: V \to W\) with the
+        following properties:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>additivity</u>: \(T(u + v) = T(u) + T(v)\) for all \(u, v \in V\)
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>homogeneity</u>: \(T(c \cdot v) = c \cdot T(v)\) for all \(v \in
+            V\) and all scalars \(c\)
+          </p>
+        </li>
+      </ul>
+      <h3>Notation</h3>
+      <p>
+        The set of all linear maps from \(V\) to \(W\) is denoted \(
+        \mathcal{L}(V; W)\).
+      </p>
+      <h2>Linear maps and basis of domain</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \(v_1, \ldots, v_n\) is a basis of \(V\) and \(w_1, \ldots, w_n
+        \in W\). Then there exists a unique linear map \(T: V \to W\) such that
+      </p>
+      <p>\(T(v_i) = w_i\) for all \(i = 1, \ldots, n\).</p>
+      <h3>Proof</h3>
+      <p>
+        Since \(\{v_1, \ldots, v_n\}\) is a basis for \(V\), every \(v \in V\)
+        can be written uniquely as
+      </p>
+      \[ v = c_1 v_1 + c_2 v_2 + \cdots + c_n v_n, \]
+      <p>
+        where \(c_1, c_2, \ldots, c_n\) are scalars. Define \(T: V \to W\) by
+      </p>
+      \[ T(v) = c_1 w_1 + c_2 w_2 + \cdots + c_n w_n. \]
+      <p>
+        This is well-defined due to the uniqueness of the representation. We
+        verify that \(T\) is linear:
+      </p>
+
+      <ul>
+        <li>
+          <p>
+            Let \(v, u \in V\), with \(v = \sum_{i=1}^n c_i v_i\) and \(u =
+            \sum_{i=1}^n d_i v_i\). Then
+          </p>
+          \[ v + u = \sum_{i=1}^n (c_i + d_i) v_i, \]
+          <p>so</p>
+          \[ T(v + u) = \sum_{i=1}^n (c_i + d_i) w_i = \sum_{i=1}^n c_i w_i +
+          \sum_{i=1}^n d_i w_i = T(v) + T(u). \]
+        </li>
+        <li>
+          <p>For any scalar \(a\),</p>
+          \[ a v = \sum_{i=1}^n (a c_i) v_i, \] so \[ T(a v) = \sum_{i=1}^n (a
+          c_i) w_i = a \sum_{i=1}^n c_i w_i = a T(v). \]
+        </li>
+      </ul>
+      <p>Thus, \(T\) is linear. Moreover, for each basis vector \(v_j\),</p>
+      \[ v_j = 0 \cdot v_1 + \cdots + 1 \cdot v_j + \cdots + 0 \cdot v_n, \]
+      <p>so</p>
+      \[ T(v_j) = 0 \cdot w_1 + \cdots + 1 \cdot w_j + \cdots + 0 \cdot w_n =
+      w_j. \]
+      <p>Therefore, \(T\) satisfies \(T(v_i) = w_i\) for all \(i\).</p>
+
+      <p>
+        Suppose \(T: V \to W\) is a linear map such that \(T(v_i) = w_i\) for
+        all \(i\). For any \(v \in V\), write
+      </p>
+
+      \[ v = \sum_{i=1}^n c_i v_i. \]
+      <p>Then by linearity of \(T\),</p>
+      \[ T(v) = T\left( \sum_{i=1}^n c_i v_i \right) = \sum_{i=1}^n c_i T(v_i) =
+      \sum_{i=1}^n c_i w_i. \]
+      <p>
+        This shows that \(T(v)\) is completely determined by the values \(T(v_i)
+        = w_i\). Hence, \(T\) is unique.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Addition and scalar multiplication on \( \mathcal{L}(V; W)\)</h2>
+      <h3>Definition</h3>
+      <p>
+        Let \(T_1, T_2 \in \mathcal{L}(V; W)\) and \(c \in \mathbb{F}\). We
+        define addition and scalar multiplication on \( \mathcal{L}(V; W)\) as
+        follows:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>Addition</u>: \((T_1 + T_2)(v) = T_1(v) + T_2(v)\) for all \(v
+            \in V\).
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Scalar multiplication</u>: \((c \cdot T)(v) = c \cdot T(v)\) for
+            all \(v \in V\).
+          </p>
+        </li>
+      </ul>
+      <h2>Vector space \( \mathcal{L}(V; W)\)</h2>
+      <h3>Theorem</h3>
+      <p>
+        The set \( \mathcal{L}(V; W)\) is a vector space over the field \(
+        \mathbb{F}\).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        To show that \( \mathcal{L}(V; W)\) is a vector space, we need to verify
+        the following properties:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>Closure under addition</u>: Let \(T_1, T_2 \in \mathcal{L}(V;
+            W)\). Then \((T_1 + T_2)(v) = T_1(v) + T_2(v)\) is a linear map, so
+            \(T_1 + T_2 \in \mathcal{L}(V; W)\).
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Closure under scalar multiplication</u>: Let \(T \in
+            \mathcal{L}(V; W)\) and \(c \in \mathbb{F}\). Then \((c \cdot T)(v)
+            = c \cdot T(v)\) is a linear map, so \(c \cdot T \in \mathcal{L}(V;
+            W)\).
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Existence of zero vector</u>: The zero map \(0: V \to W\) defined
+            by \(0(v) = 0\) for all \(v \in V\) is in \( \mathcal{L}(V; W)\).
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Existence of additive inverses</u>: For each \(T \in
+            \mathcal{L}(V; W)\), the map \(-T\) defined by \((-T)(v) = -T(v)\)
+            is in \( \mathcal{L}(V; W)\).
+          </p>
+        </li>
+      </ul>
+      <p>
+        Since all vector space axioms are satisfied, we conclude that \(
+        \mathcal{L}(V; W)\) is a vector space over the field \( \mathbb{F}\).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Product of Linear Maps</h2>
+      <h3>Definition</h3>
+      <p>
+        Let \(T_1: V \to W\) and \(T_2: W \to U\) be linear maps. The product of
+        \(T_1\) and \(T_2\), denoted \(T_2 \circ T_1\), is defined by
+      </p>
+      \[ (T_2 \circ T_1)(v) = T_2(T_1(v)) \]
+      <p>for all \(v \in V\).</p>
+    </div>
+  </body>
+</html>

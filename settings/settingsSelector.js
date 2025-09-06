@@ -17,7 +17,6 @@ function initThemeSelector() {
   });
   navSettingSelect.value = currentNavSetting;
   activateNavSetting(currentNavSetting);
-  console.log(currentNavSetting);
 }
 
 initThemeSelector();
@@ -44,7 +43,6 @@ function initSideNavToggle() {
     const newSetting = sideNavToggle.checked ? "on" : "off";
     activateSideNavSetting(newSetting);
     localStorage.setItem("sideNavSetting", newSetting);
-    console.log(newSetting); // Log the new setting instead of the old one
   });
 }
 
@@ -75,7 +73,6 @@ function initNoMaxWidthToggle() {
     const newWidthSetting = noMaxWidthToggle.checked ? "on" : "off";
     activateNoMaxWidthSetting(newWidthSetting);
     localStorage.setItem("maxWidthSetting", newWidthSetting);
-    console.log(newWidthSetting); // Log the new setting instead of the old one
   });
 }
 
@@ -98,7 +95,6 @@ function noSplashTextsToggle() {
   // Add event listener to update localStorage when checkbox is toggled
   checkbox.addEventListener("change", function () {
     localStorage.setItem("showSplashText", checkbox.checked);
-    console.log("showSplashText: " + localStorage.getItem("showSplashText"));
   });
 }
 noSplashTextsToggle();
