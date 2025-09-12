@@ -191,6 +191,40 @@
       </p>
       \[ (T_2 \circ T_1)(v) = T_2(T_1(v)) \]
       <p>for all \(v \in V\).</p>
+      <h2>Algebraic properties of products of linear maps</h2>
+      <ul>
+        <li>
+          <p>
+            <u>associativity</u>
+          </p>
+          $$ (T_3 \cdot T_2) \cdot T_1 = T_3 \cdot (T_2 \cdot T_1) $$
+          <p>
+            Whenever \(T_1\), \(T_2\), and \(T_3\) are linear maps such that the
+            products make sense.
+          </p>
+        </li>
+        <li>
+          <p><u>identity</u></p>
+          $$ T \cdot I = T \cdot I = T $$
+          <p>Whenever \(T \in \mathcal{L}(V; W)\).</p>
+        </li>
+        <li>
+          <p><u>distributive properties</u></p>
+          $$ (S_1 + S_2) T = S_1 T + S_2 T \quad \text{and} \quad S (T_1 + T_2)
+          = S T_1 + S T_2 $$
+          <p>
+            Whenever \(T, T_1, T_2 \in \mathcal{L}(U; V)\) and \(S, S_1, S_2 \in
+            \mathcal{L}(V; W)\).
+          </p>
+        </li>
+      </ul>
+      <h2>Linear maps take 0 to 0</h2>
+      <h3>Theorem</h3>
+      <p>Suppose $T$ is a linear map from $V$ to $W$. Then $T(0) = 0$.</p>
+      <h3>Proof</h3>
+      <p>Let $v \in V$. Then by linearity, we have:</p>
+      \[ T(0) = T(0 \cdot v) = 0 \cdot T(v) = 0. \]
+      <p class="square">$\square$</p>
     </div>
   </body>
 </html>

@@ -114,6 +114,7 @@ let sideNavigator = `
     <a href="/Mathe/Logique/logique-elementaire.html">Logique Élémentaire</a>
     <a href="/Mathe/Linear-Algebra/matrices.html">Matrices</a>
     <a href="/Mathe/Algebre/nombre-complexes.html">Nombres Complexes</a>
+    <a href="/Mathe/Linear-Algebra/null-spaces-and-ranges.html">Null Spaces and Ranges</a>
     <a href="/Mathe/Analyse/primitives.html">Primitives</a>
     <a href="/Mathe/Probabilite/probabilites.html">Probabilités</a>
     <a href="/Mathe/Algebre/puissance-et-regle-de-priorote.html">Puissances et règles de priorité</a>
@@ -190,6 +191,7 @@ let sideNavigator = `
 
   <a href="/Archiv/index.html">Archiv</a>
   <a href="/Programmen/index.html">Programmen</a>
+  <a href="https://biblio.luxformel.info">Bibliothéik</a>
 </div>
 
 `;

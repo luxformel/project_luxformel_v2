@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Null Spaces and Ranges</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Null Spaces and Ranges</h1>
+      <h2>Null Space and Injectivity</h2>
+      <h3>Definition</h3>
+      <p>
+        For \(T \in \mathcal{L}(V;W)\), the null space of \(T\), denoted
+        \(\text{null } T\), is the subset of \(V\) consisting of those vectors
+        that \(T\) maps to \(0\):
+      </p>
+      $$ \text{null } T = \{ v \in V \mid T(v) = 0 \} $$
+      <h2>Null space is a subspace</h2>
+      <h3>Theorem</h3>
+      <p>
+        The null space of a linear transformation is a subspace of the domain.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \(T \in \mathcal{L}(V;W)\) and let \(v_1, v_2 \in \text{null } T\).
+        Then \(T(v_1) = 0\) and \(T(v_2) = 0\). We need to show that \(v_1 + v_2
+        \in \text{null } T\) and \(\alpha v_1 \in \text{null } T\) for all
+        \(\alpha \in \mathbb{F}\).
+      </p>
+      <p>First, consider \(T(v_1 + v_2)\):</p>
+      $$ T(v_1 + v_2) = T(v_1) + T(v_2) = 0 + 0 = 0 $$
+      <p>Thus, \(v_1 + v_2 \in \text{null } T\).</p>
+      <p>Now, consider \(T(\alpha v_1)\):</p>
+      $$ T(\alpha v_1) = \alpha T(v_1) = \alpha \cdot 0 = 0 $$
+      <p>Thus, \(\alpha v_1 \in \text{null } T\).</p>
+      <p>
+        Since \(\text{null } T\) is closed under addition and scalar
+        multiplication, it is a subspace of \(V\).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Injective</h2>
+      <h3>Definition</h3>
+      <p>
+        A function \(T: V \to W\) is called injective if \(T(u) = T(v)\) implies
+        \(u = v\).
+      </p>
+      <h2></h2>
+      <h3>Theorem</h3>
+      <p>
+        Let \(T \in \mathcal{L}(V;W)\). Then \(T\) is injective if and only if
+        \(\text{null } T = \{0\}\).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Suppose \(T\) is injective. Then \(T(v) = 0\) implies \(v = 0\), so
+        \(\text{null } T \subseteq \{0\}\). Conversely, suppose \(\text{null } T
+        = \{0\}\). Then \(T(v) = T(w)\) implies \(T(v) - T(w) = 0\), so \(T(v -
+        w) = 0\), and thus \(v - w = 0\) or \(v = w\). Therefore, \(T\) is
+        injective.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Range</h2>
+      <h3>Definition</h3>
+      <p>
+        For $T$ a function from $V$ to $W$, the range of $T$ is the subset of
+        $W$ consisting of those vectors that are of the form $Tv$ for some $v
+        \in V$:
+      </p>
+      $$ \text{range } T = \{ Tv \mid v \in V \} $$
+      <h3>Theorem</h3>
+      <p>
+        If \(T \in \mathcal{L}(V;W)\), then \(\text{range } T\) is a subspace of
+        \(W\).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \(T \in \mathcal{L}(V;W)\) and let \(w_1, w_2 \in \text{range } T\).
+        Then there exist \(v_1, v_2 \in V\) such that \(T(v_1) = w_1\) and
+        \(T(v_2) = w_2\). We need to show that \(w_1 + w_2 \in \text{range } T\)
+        and \(\alpha w_1 \in \text{range } T\) for all \(\alpha \in
+        \mathbb{F}\).
+      </p>
+      <p>First, consider \(T(v_1 + v_2)\):</p>
+      $$ T(v_1 + v_2) = T(v_1) + T(v_2) = w_1 + w_2 $$
+      <p>Thus, \(w_1 + w_2 \in \text{range } T\).</p>
+      <p>Now, consider \(T(\alpha v_1)\):</p>
+      $$ T(\alpha v_1) = \alpha T(v_1) = \alpha w_1 $$
+      <p>Thus, \(\alpha w_1 \in \text{range } T\).</p>
+      <p>
+        Since \(\text{range } T\) is closed under addition and scalar
+        multiplication, it is a subspace of \(W\).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Surjective</h2>
+      <h3>Definition</h3>
+      <p>
+        A function \(T: V \to W\) is called surjective if for every \(w \in W\),
+        there exists a \(v \in V\) such that \(T(v) = w\) or in other words if
+        its range equals \(W\).
+      </p>
+      <h2>Fundamental Theorem of Linear Maps</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V;W)$. Then
+        $\text{range } T$ is finite-dimensional and
+      </p>
+      $$ \text{dim}(\text{range } T) = \text{dim}(V) - \text{dim}(\text{null }
+      T) $$
+      <h3>Proof</h3>
+      <p>
+        Let \( \{ e_1, e_2, \ldots, e_n \} \) be a basis for \( V \). Then \(
+        T(e_1), T(e_2), \ldots, T(e_n) \) span \( \text{range } T \).
+      </p>
+      <p>
+        The dimension of the range is given by the number of linearly
+        independent vectors in \( \{ T(e_1), T(e_2), \ldots, T(e_n) \} \). By
+        the rank-nullity theorem, we have:
+      </p>
+      $$ \text{dim}(\text{range } T) + \text{dim}(\text{null } T) =
+      \text{dim}(V) $$
+      <p>Rearranging gives:</p>
+      $$ \text{dim}(\text{range } T) = \text{dim}(V) - \text{dim}(\text{null }
+      T) $$
+      <p class="square">$\square$</p>
+      <h2>Maps and dimensional space</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose $V$ and $W$ are finite-dimensional vector spaces such that
+        $\text{dim } V > \text{dim } W$. Then no linear map from $V$ to $W$ is
+        <u>injective</u>.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Suppose \(T: V \to W\) is a linear map. Since \(\text{dim } V >
+        \text{dim } W\), by the rank-nullity theorem, we have:
+      </p>
+      $$ \text{dim}(\text{range } T) + \text{dim}(\text{null } T) =
+      \text{dim}(V) $$
+      <p>
+        Since \(\text{dim } V > \text{dim } W\), it follows that
+        \(\text{dim}(\text{range } T) < \text{dim } W\). Therefore, the kernel
+        of \(T\) must be non-trivial, implying that \(T\) is not injective.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \(V\) and \(W\) are finite-dimensional vector spaces such that
+        \(\text{dim } V < \text{dim } W\). Then no linear map from \(V\) to
+        \(W\) is <u>surjective</u>.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Suppose \(T: V \to W\) is a linear map. Since \(\text{dim } V <
+        \text{dim } W\), by the rank-nullity theorem, we have:
+      </p>
+      $$ \text{dim}(\text{range } T) + \text{dim}(\text{null } T) =
+      \text{dim}(V) $$
+      <p>
+        Since \(\text{dim } V < \text{dim } W\), it follows that
+        \(\text{dim}(\text{range } T) < \text{dim } W\). Therefore, the kernel
+        of \(T\) must be non-trivial, implying that \(T\) is not injective.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Homogeneous system of linear equations</h2>
+      <h3>Definition</h3>
+      <p>
+        A homogeneous system of linear equations is a system of equations of the
+        form \(Ax = 0\), where \(A\) is a matrix and \(x\) is a vector of
+        variables. The system is called homogeneous because all of the constant
+        terms are zero.
+      </p>
+      <h3>Theorem</h3>
+      <p>
+        A homogeneous system of linear equations with more variables than
+        equations has nonzero solutions.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Consider the homogeneous system of linear equations represented by the
+        matrix equation \(Ax = 0\), where \(A\) is an \(m \times n\) matrix with
+        \(m < n\). The null space of \(A\) is defined as:
+      </p>
+      $$ \text{null } A = \{ x \in \mathbb{R}^n \mid Ax = 0 \} $$
+      <p>
+        Since there are more variables than equations, the rank-nullity theorem
+        implies:
+      </p>
+      $$ \text{dim}(\text{null } A) = n - \text{dim}(\text{range } A) $$
+      <p>
+        Given that \(m < n\), it follows that \(\text{dim}(\text{range } A) <
+        n\), which implies \(\text{dim}(\text{null } A) > 0\). Therefore, the
+        null space contains nonzero vectors, indicating the existence of
+        nontrivial solutions to the homogeneous system.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Inhomogeneous system of linear equations</h2>
+      <h3>Definition</h3>
+      <p>
+        An inhomogeneous system of linear equations is a system of equations of
+        the form \(Ax = b\), where \(A\) is a matrix, \(x\) is a vector of
+        variables, and \(b\) is a nonzero vector. The system is called
+        inhomogeneous because the constant terms are not all zero.
+      </p>
+      <h3>Theorem</h3>
+      <p>
+        An inhomogeneous system of linear equations with more equations than
+        variables has no solution for some choice of the constant terms.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Consider the inhomogeneous system of linear equations represented by the
+        matrix equation \(Ax = b\), where \(A\) is an \(m \times n\) matrix with
+        \(m > n\). The null space of \(A\) is defined as:
+      </p>
+      $$ \text{null } A = \{ x \in \mathbb{R}^n \mid Ax = 0 \} $$
+      <p>
+        Since there are more equations than variables, the rank-nullity theorem
+        implies:
+      </p>
+      $$ \text{dim}(\text{null } A) = n - \text{dim}(\text{range } A) $$
+      <p>
+        Given that \(m > n\), it follows that \(\text{dim}(\text{range } A) <
+        n\), which implies \(\text{dim}(\text{null } A) > 0\). Therefore, the
+        null space contains nonzero vectors, indicating the existence of
+        nontrivial solutions to the homogeneous system.
+      </p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>
