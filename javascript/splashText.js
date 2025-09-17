@@ -710,7 +710,14 @@ var splashTexts = [
   "bumsdeg!",
   "RNG life",
   "W luxformel!",
-  "1/712",
+  "You already know!",
+  "Luxformel: putting the mula in formula",
+  "French might be the language of love, but only Lëtzebuergesch is the language of dat ass!",
+  "Programmed by John Luxformel!",
+  "o7",
+  "DEATH BY RODENT",
+  "The real formula was the friends we made along the way",
+  "1/719",
 ];
 function generateRandomText() {
   //console.log(splashTexts);
