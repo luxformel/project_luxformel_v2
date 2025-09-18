@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Invertibility and Isomorphic Vector Spaces</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Invertibility and Isomorphic Vector Spaces</h1>
+      <h2>Invertible</h2>
+      <h3>Definition</h3>
+      <p>
+        A linear map $T \in \mathcal{L}(V;W)$ is called invertible if there
+        exists a linear map $S \in \mathcal{L}(W;V)$ such that $ST$ equals the
+        identity map on $V$ and $TS$ equals the identity map on $W$.
+      </p>
+      <h2>Inverse</h2>
+      <h3>Definition</h3>
+      <p>
+        A linear map $S \in \mathcal{L}(W;V)$ satisfying $ST = I$ and $TS = I$
+        is called an inverse of $T$.
+      </p>
+      <h3>Remark</h3>
+      <p>
+        Note that the first $I$ is the identity map on $V$ and the second $I$ is
+        the identity map on $W$
+      </p>
+      <h2>Inverse is unique</h2>
+      <h3>Definition</h3>
+      <p>An invertible linear map has a unique inverse.</p>
+      <h3>Proof</h3>
+      <p>
+        Suppose $S_1$ and $S_2$ are both inverses of $T$. Then
+        <br />
+        $S_1 = S_1I = S_1(TS_2) = (S_1T)S_2 = IS_2 = S_2$
+      </p>
+      <p class="square">$\square$</p>
+      <h2></h2>
+      <h3>Notation</h3>
+      <p>
+        If $T$ is invertible, then its inverse is denoted by $T^{-1}$. In other
+        words, if $T \in \mathcal{L}(V, W)$ is invertible, then $T^{-1}$ is the
+        unique element of $\mathcal{L}(W, V)$ such that $T^{-1}T = I$ and
+        $TT^{-1} = I$.
+      </p>
+      <h2>Invertibility is equivalent to injectivity and surjectivity</h2>
+      <h3>Theorem</h3>
+      <p>
+        A linear map is invertible if and only if it is injective and
+        surjective.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Suppose $T \in \mathcal{L}(V,W)$. We need to show that $T$ is invertible
+        if and only if it is injective and surjective. <br />
+        First suppose $T$ is invertible. To show that $T$ is injective, suppose
+        $u, v \in V$ and $Tu = Tv$. Then
+      </p>
+      \[ u = T^{-1}(Tu) = T^{-1}(Tv) = v \]
+      <p>
+        so $u = v$. Hence $T$ is injective. <br />
+        We are still assuming that $T$ is invertible. Now we want to prove that
+        $T$ is surjective. To do this, let $w \in W$. Then $w = T(T^{-1}w)$,
+        which shows that $w$ is in the range of $T$. Thus range $T = W$. Hence
+        $T$ is surjective, completing this direction of the proof. <br />
+        Now suppose $T$ is injective and surjective. We want to prove that $T$
+        is invertible. For each $w \in W$, define $Sw$ to be the unique element
+        of $V$ such that $T(Sw) = w$ (the existence and uniqueness of such an
+        element follow from the surjectivity and injectivity of $T$). Clearly $T
+        \circ S$ equals the identity map on $W$. <br />
+        To prove that $S \circ T$ equals the identity map on $V$, let $v \in V$.
+        Then
+      </p>
+      \[ T\big( (S \circ T)v \big) = (T \circ S)(Tv) = I(Tv) = Tv \]
+      <p>
+        This equation implies that $(S \circ T)v = v$ (because $T$ is
+        injective). Thus $S \circ T$ equals the identity map on $V$. <br />
+        To complete the proof, we need to show that $S$ is linear. To do this,
+        suppose $w_1, w_2 \in W$. Then
+      </p>
+      \[ T(Sw_1 + Sw_2) = T(Sw_1) + T(Sw_2) = w_1 + w_2 \]
+      <p>
+        Thus $Sw_1 + Sw_2$ is the unique element of $V$ that $T$ maps to $w_1 +
+        w_2$. By the definition of $S$, this implies that
+      </p>
+      \[ S(w_1 + w_2) = Sw_1 + Sw_2 \]
+      <p>
+        Hence $S$ satisfies the additive property required for linearity. <br />
+        The proof of homogeneity is similar. Specifically, if $w \in W$ and
+        $\lambda \in \mathbb{F}$, then
+      </p>
+      \[ T(\lambda Sw) = \lambda T(Sw) = \lambda w \]
+      <p>
+        Thus $\lambda Sw$ is the unique element of $V$ that $T$ maps to $\lambda
+        w$. By the definition of $S$, this implies that
+      </p>
+      \[ S(\lambda w) = \lambda Sw \]
+      <p>Hence $S$ is linear, as desired.</p>
+      <p class="square">$\square$</p>
+      <h2>Isomorphisms</h2>
+      <h3>Definition</h3>
+      <p>An isomorphism is an invertible linear map.</p>
+      <h2>Isomorphic</h2>
+      <h3>Definition</h3>
+      <p>
+        Two vector spaces are called isomorphic if there is an isomorphism from
+        one vector space onto the other one.
+      </p>
+      <h2>Dimension shows whether vector spaces are isomorphic</h2>
+      <h3>Theorem</h3>
+      <p>
+        Two finite-dimensional vector spaces over $\mathbb{F}$ are isomorphic if
+        and only if they have the same dimension.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        ($\Rightarrow$) Suppose \(V \cong W\), i.e., there exists a linear
+        isomorphism \(T: V \to W\). Since \(T\) is bijective, it maps a basis of
+        \(V\) to a basis of \(W\). Hence the number of basis vectors is the
+        same:
+      </p>
+      \[ \dim V = \dim W \]
+      <p>
+        ($\Leftarrow$) Suppose \(\dim V = \dim W = n\). Let \(\{v_1, \dots,
+        v_n\}\) be a basis of \(V\) and \(\{w_1, \dots, w_n\}\) be a basis of
+        \(W\). Define a linear map \(T: V \to W\) by
+      </p>
+      \[ T\Bigg(\sum_{i=1}^n \alpha_i v_i \Bigg) = \sum_{i=1}^n \alpha_i w_i \]
+      <p>
+        for scalars \(\alpha_1, \dots, \alpha_n \in \mathbb{F}\). <br />
+        This map is well-defined and linear. Moreover, \(T\) is injective
+        because the kernel is \(\{0\}\) (the linear combination \(\sum \alpha_i
+        v_i = 0\) implies all \(\alpha_i = 0\)). It is surjective because any
+        \(w \in W\) can be written as a linear combination of the basis
+        \(\{w_i\}\). Hence \(T\) is a bijective linear map, and \(V \cong W\).
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Matrix Representation Isomorphism</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \(v_1, \dots, v_n\) is a basis of \(V\) and \(w_1, \dots, w_m\)
+        is a basis of \(W\). Then \(M\) is an isomorphism between \( \mathcal{L}
+        (V,W)\) and \(\mathbb{F}^{m,n}\).
+      </p>
+      <!-- <h3>Proof</h3> -->
+      <h2>Dimension of \( \mathcal{L} (V,W)\)</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \(V\) and \(W\) are finite-dimensional. Then \( \mathcal{L}
+        (V,W)\) is finite- dimensional and
+      </p>
+      $$ \dim L(V,W) = ( \dim V ) \cdot ( \dim W ) $$
+      <!-- <h3>Proof</h3> -->
+      <h2>Matrix of a vector</h2>
+      <h3>Definition</h3>
+      <p>
+        Suppose \( v \in V \) and \( v_1, \ldots, v_n \) is a basis of \( V \).
+        The matrix of \( v \) with respect to this basis is the \( n \)-by-1
+        matrix
+      </p>
+      \[ M(v) = \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix} \]
+      <p>where \( c_1, \ldots, c_n \) are the scalars such that</p>
+      \[ v = c_1 v_1 + \cdots + c_n v_n \]
+      <h2>Column of a Linear Map's Matrix</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( T \in \mathcal{L}(V, W) \) and \( v_1, \ldots, v_n \) is a
+        basis of \( V \) and \( w_1, \ldots, w_m \) is a basis of \( W \). Let
+        \( 1 \leq k \leq n \). Then the \( k^{\text{th}} \) column of \( M(T)
+        \), which is denoted by \( M(T)_{\cdot,k} \), equals \( M(v_k) \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        The desired result follows immediately from the definitions of \( M(T)
+        \) and \( M(v_k) \). <br />
+        The next result shows how the notions of the matrix of a linear map, the
+        matrix of a vector, and matrix multiplication fit together.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Linear maps act like matrix multiplication</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( T \in \mathcal{L}(V, W) \) and \( v \in V \). Suppose \( v_1,
+        \ldots, v_n \) is a basis of \( V \) and \( w_1, \ldots, w_m \) is a
+        basis of \( W \). Then
+      </p>
+      \[ M(Tv) = M(T)M(v) \]
+      <!-- <h3>Proof</h3> -->
+      <h2>Operator</h2>
+      <h3>Definition</h3>
+      <ul>
+        <li>
+          <p>
+            A linear map from a vector space to itself is called an operator.
+          </p>
+        </li>
+        <li>
+          <p>
+            The notation $\mathcal{L}(V)$ denotes the set of all operators on
+            $V$. In other words, $\mathcal{L}(V) = \mathcal{L}(V,V)$.
+          </p>
+        </li>
+      </ul>
+      <h2>Injectivity is equivalent to surjectivity in finite dimensions</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Then the
+        following are equivalent:
+      </p>
+      <ol>
+        <li><p>$T$ is invertible</p></li>
+        <li><p>$T$ is injective</p></li>
+        <li><p>$T$ is surjective</p></li>
+      </ol>
+      <!-- <h3>Proof</h3> -->
+    </div>
+  </body>
+</html>

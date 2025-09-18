@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Matrices and Linear Maps</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Matrices and Linear Maps</h1>
+      <h2>Matrix</h2>
+      <h3>Definition</h3>
+      <p>
+        Let $m$ and $n$ denote positive integers. An $m$-by-$n$ matrix $A$ is a
+        rectangular array of elements of $\mathbb{F}$ with $m$ rows and $n$
+        columns:
+      </p>
+      \[ A = \begin{pmatrix} A_{1,1} & \cdots & A_{1,n} \\ \vdots & & \vdots \\
+      A_{m,1} & \cdots & A_{m,n} \end{pmatrix} \]
+      <h3>Notation</h3>
+      <p>
+        The notation $A_{j,k}$ denotes the entry in row $j$, column $k$ of $A$.
+        In other words, the first index refers to the row number and the second
+        index refers to the column number.
+      </p>
+      <h2>Matrix of a linear maps</h2>
+      <h3>Definition</h3>
+      <p>
+        Suppose \( T \in \mathcal{L}(V, W) \) and \( v_1, \ldots, v_n \) is a
+        basis of \( V \) and \( w_1, \ldots, w_m \) is a basis of \( W \). The
+        matrix of \( T \) with respect to these bases is the \( m \)-by-\( n \)
+        matrix \( M(T) \) whose entries \( A_{j,k} \) are defined by
+      </p>
+      \[ Tv_k = A_{1,k}w_1 + \cdots + A_{m,k}w_m \]
+      <h3>Notation</h3>
+      <p>If the bases are not clear from the context, then the notation</p>
+      \[ M(T, (v_1, \ldots, v_n), (w_1, \ldots, w_m)) \]
+      <p>is used.</p>
+      <h2>Matrix addition</h2>
+      <h3>Definition</h3>
+      <p>
+        The sum of two matrices of the same size is the matrix obtained by
+        adding corresponding entries in the matrices:
+      </p>
+      \[ \begin{pmatrix} A_{1,1} & \cdots & A_{1,n} \\ \vdots & \ddots & \vdots
+      \\ A_{m,1} & \cdots & A_{m,n} \end{pmatrix} + \begin{pmatrix} C_{1,1} &
+      \cdots & C_{1,n} \\ \vdots & \ddots & \vdots \\ C_{m,1} & \cdots & C_{m,n}
+      \end{pmatrix} \] \[ = \begin{pmatrix} A_{1,1} + C_{1,1} & \cdots & A_{1,n}
+      + C_{1,n} \\ \vdots & \ddots & \vdots \\ A_{m,1} + C_{m,1} & \cdots &
+      A_{m,n} + C_{m,n} \end{pmatrix} \]
+      <p>In other words, $(A + C)_{j,k} = A_{j,k} + C_{j,k}$.</p>
+      <h2>Matrix sum of linear maps</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( S, T \in \mathcal{L}(V, W) \). Then \( M(S + T) = M(S) + M(T)
+        \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \(S,T\in\mathcal{L}(V,W)\) and write the matrix of a linear map with
+        respect to the bases \(\mathcal{B},\mathcal{C}\) column-wise: the
+        \(j\)-th column of \(M(S)\) is the coordinate vector
+        \([S(v_j)]_{\mathcal{C}}\), and similarly the \(j\)-th column of
+        \(M(T)\) is \([T(v_j)]_{\mathcal{C}}\).
+        <br />
+        For each basis vector \(v_j\) of \(V\) we have by linearity of \(S\) and
+        \(T\) that
+      </p>
+      \[ (S+T)(v_j)=S(v_j)+T(v_j) \]
+      <p>Taking coordinates with respect to \(\mathcal{C}\) gives</p>
+      \[ [(S+T)(v_j)]_{\mathcal{C}}=[S(v_j)+T(v_j)]_{\mathcal{C}}
+      =[S(v_j)]_{\mathcal{C}}+[T(v_j)]_{\mathcal{C}} \]
+      <p>
+        Therefore the \(j\)-th column of \(M(S+T)\) equals the sum of the
+        \(j\)-th columns of \(M(S)\) and \(M(T)\). Since this holds for every
+        \(j=1,\dots,n\), the two matrices are equal:
+      </p>
+      \[ M(S+T)=M(S)+M(T) \]
+      <p class="square">$\square$</p>
+      <h2>Scalar multiplication of a matrix</h2>
+      <h3>Definition</h3>
+      <p>
+        The product of a scalar and a matrix is the matrix obtained by
+        multiplying each entry in the matrix by the scalar:
+      </p>
+      \[ \lambda \begin{pmatrix} A_{1,1} & \cdots & A_{1,n} \\ \vdots & \ddots &
+      \vdots \\ A_{m,1} & \cdots & A_{m,n} \end{pmatrix} = \begin{pmatrix}
+      \lambda A_{1,1} & \cdots & \lambda A_{1,n} \\ \vdots & \ddots & \vdots \\
+      \lambda A_{m,1} & \cdots & \lambda A_{m,n} \end{pmatrix} \]
+      <p>In other words, $(\lambda A)_{j,k} = \lambda A_{j,k}$.</p>
+      <h2>Matrix of a scalar times a linear map</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( \lambda \in \mathbb{F} \) and \( T \in \mathcal{L}(V;W) \).
+        Then \( M(\lambda T) = \lambda M(T) \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        Let \(T\in\mathcal{L}(V,W)\) and \(\lambda\in \mathbb{F} \). By
+        definition the \(j\)-th column of \(M(T)\) is the coordinate vector
+        \([T(v_j)]_{\mathcal{C}}\). For each basis vector \(v_j\) we have
+      </p>
+      \[ (\lambda T)(v_j)=\lambda\bigl(T(v_j)\bigr) \]
+      <p>Taking coordinates with respect to \(\mathcal{C}\) yields</p>
+      \[ [(\lambda T)(v_j)]_{\mathcal{C}}=[\lambda T(v_j)]_{\mathcal{C}}
+      =\lambda [T(v_j)]_{\mathcal{C}} \]
+      <p>
+        since scalar multiplication commutes with taking coordinates. Thus the
+        \(j\)-th column of \(M(\lambda T)\) is \(\lambda\) times the \(j\)-th
+        column of \(M(T)\). As this holds for every \(j=1,\dots,n\), we conclude
+      </p>
+      \[ M(\lambda T)=\lambda M(T) \]
+      <p class="square">$\square$</p>
+      <h2>Matrix spaces</h2>
+      <h3>Notation</h3>
+      <p>
+        For $m$ and $n$ positive integers, the set of all $m$-by-$n$ matrices
+        with entries in $\mathbb{F}$ is denoted by $\mathbb{F}^{m,n}$.
+      </p>
+      <h2>Dimensionality of $\mathbb{F}^{m,n}$</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose $m$ and $n$ are positive integers. With addition and scalar
+        multiplication defined as above, $\mathbb{F}^{m,n}$ is a vector space
+        with dimension $mn$.
+      </p>
+      <h3>Proof</h3>
+      <p>
+        The verification that $\mathbb{F}^{m,n}$ is a vector space is left to
+        the reader. Note that the additive identity of $\mathbb{F}^{m,n}$ is the
+        $m$-by-$n$ matrix whose entries all equal 0. <br />
+        The reader should also verify that the list of $m$-by-$n$ matrices that
+        have 0 in all entries except for a 1 in one entry is a basis of
+        $\mathbb{F}^{m,n}$. There are $mn$ such matrices, so the dimension of
+        $\mathbb{F}^{m,n}$ equals $mn$.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Matrix multiplication</h2>
+      <h3>Definition</h3>
+      <p>
+        Suppose \( A \) is an \( m \)-by-\( n \) matrix and \( C \) is an \( n
+        \)-by-\( p \) matrix. Then \( AC \) is defined to be the \( m \)-by-\( p
+        \) matrix whose entry in row \( j \), column \( k \), is given by the
+        following equation:
+      </p>
+      \[ (AC)_{j,k} = \sum_{r=1}^n A_{j,r} C_{r,k} \]
+      <p>
+        In other words, the entry in row \( j \), column \( k \), of \( AC \) is
+        computed by taking row \( j \) of \( A \) and column \( k \) of \( C \),
+        multiplying together corresponding entries, and then summing.
+      </p>
+      <h2>Matrix of the product of linear maps</h2>
+      <h3>Theorem</h3>
+      <p>
+        If \( T \in \mathcal{L}(U;V) \) and \( S \in \mathcal{L}(V;W) \), then
+        \( M(ST) = M(S)M(T) \).
+      </p>
+      <h3>Proof</h3>
+      <p>
+        For each \(j=1,\dots,p\) the \(j\)-th column of
+        \(M_{\mathcal{A},\mathcal{B}}(T)\) is the coordinate vector
+        \([T(u_j)]_{\mathcal{B}}\in \mathbb{F}^n\). Applying \(S\) to \(T(u_j)\)
+        and taking coordinates with respect to \(\mathcal{C}\) gives
+      </p>
+      \[ [\,S(T(u_j))\,]_{\mathcal{C}} =
+      [\,S\,]_{\mathcal{B},\mathcal{C}}\,[T(u_j)]_{\mathcal{B}} \]
+      <p>
+        because the matrix \(M_{\mathcal{B},\mathcal{C}}(S)\) sends the
+        coordinate vector of any \(v\in V\) (relative to \(\mathcal{B}\)) to the
+        coordinate vector of \(S(v)\) (relative to \(\mathcal{C}\)). But
+        \([S(T(u_j))]_{\mathcal{C}}\) is exactly the \(j\)-th column of
+        \(M_{\mathcal{A},\mathcal{C}}(ST)\). Therefore the \(j\)-th column of
+        \(M_{\mathcal{A},\mathcal{C}}(ST)\) equals the \(j\)-th column of
+        \(M_{\mathcal{B},\mathcal{C}}(S)\,M_{\mathcal{A},\mathcal{B}}(T)\).
+        Since this holds for every \(j\), the matrices are equal:
+      </p>
+      \[
+      M_{\mathcal{A},\mathcal{C}}(ST)=M_{\mathcal{B},\mathcal{C}}(S)\,M_{\mathcal{A},\mathcal{B}}(T)
+      \]
+      <p>
+        For completeness, an equivalent entry-wise argument: if
+        \(M_{\mathcal{A},\mathcal{B}}(T)=(t_{kj})\) (with \(1\le k\le n,\,1\le
+        j\le p\)) and \(M_{\mathcal{B},\mathcal{C}}(S)=(s_{ik})\) (with \(1\le
+        i\le m,\,1\le k\le n\)), then the \((i,j)\)-entry of the product is
+        \(\sum_{k=1}^n s_{ik}t_{kj}\). This equals the \(i\)-th coordinate
+        (relative to \(\mathcal{C}\)) of \(S(T(u_j))\), i.e. the \((i,j)\)-entry
+        of \(M_{\mathcal{A},\mathcal{C}}(ST)\). Thus the two matrices have the
+        same entries and are equal.
+      </p>
+      <p class="square">$\square$</p>
+      <h3>Notation</h3>
+      <p>Suppose $A$ is an $m$-by-$n$ matrix.</p>
+      <ul>
+        <li>
+          <p>
+            If $1 \leq j \leq m$, then $A_{j,\cdot}$ denotes the 1-by-$n$ matrix
+            consisting of row $j$ of $A$.
+          </p>
+        </li>
+        <li>
+          <p>
+            If $1 \leq k \leq n$, then $A_{\cdot,k}$ denotes the $m$-by-1 matrix
+            consisting of column $k$ of $A$.
+          </p>
+        </li>
+      </ul>
+      <h2>Entry of matrix product equals row times column</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( A \) is an \( m \)-by-\( n \) matrix and \( C \) is an \( n
+        \)-by-\( p \) matrix. Then
+      </p>
+      \[ (AC)_{j,k} = A_{j,\cdot} C_{\cdot,k} \]
+      <p>for \( 1 \leq j \leq m \) and \( 1 \leq k \leq p \).</p>
+      <h3>Proof</h3>
+      <p>Write the matrices in entry form:</p>
+      \[ A=(A_{j,i})_{1\le j\le m,\;1\le i\le n},\qquad C=(C_{i,k})_{1\le i\le
+      n,\;1\le k\le p} \]
+      <p>
+        By the definition of matrix multiplication, the $(j,k)$-entry of $AC$ is
+        the sum of products of corresponding entries in the $j$-th row of $A$
+        and the $k$-th column of $C$:
+      </p>
+      \[ (AC)_{j,k}=\sum_{i=1}^{n} A_{j,i}\,C_{i,k} \]
+      <p>
+        Interpreting $A_{j,\cdot}$ as the row vector $(A_{j,1},\dots,A_{j,n})$
+        and $C_{\cdot,k}$ as the column vector $(C_{1,k},\dots,C_{n,k})^{T}$,
+        their matrix or dot product equals the same sum:
+      </p>
+      \[ A_{j,\cdot}\,C_{\cdot,k} = (A_{j,1},\dots,A_{j,n})
+      \begin{pmatrix}C_{1,k}\\[4pt]\vdots\\[4pt]C_{n,k}\end{pmatrix}
+      =\sum_{i=1}^{n} A_{j,i}\,C_{i,k} \]
+      <p>
+        Thus for every $1\le j\le m$ and $1\le k\le p$ we have
+        $(AC)_{j,k}=A_{j,\cdot}\,C_{\cdot,k}$, as required.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Column of matrix product equals matrix times column</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( A \) is an \( m \)-by-\( n \) matrix and \( C \) is an \( n
+        \)-by-\( p \) matrix. Then
+      </p>
+      \[ (AC)_{\cdot,k} = A C_{\cdot,k} \]
+      <p>for \( 1 \leq k \leq p \).</p>
+      <h3>Proof</h3>
+      <p>Let $C_{\cdot,k}$ denote the $k$-th column of $C$,</p>
+      \[ C_{\cdot,k} = \begin{pmatrix} C_{1,k}\\ C_{2,k}\\ \vdots\\ C_{n,k}
+      \end{pmatrix}\in \mathbb{F}^n \]
+      <p>
+        By the definition of matrix multiplication, the $j$-th entry of
+        $(AC)_{\cdot,k}$ is
+      </p>
+      \[ (AC)_{j,k} = \sum_{i=1}^n A_{j,i}\,C_{i,k},\qquad 1\le j\le m \]
+      <p>
+        On the other hand, the $j$-th entry of the product $A\,C_{\cdot,k}$ is
+      </p>
+      \[ \bigl(A\,C_{\cdot,k}\bigr)_j = \sum_{i=1}^n A_{j,i}\,(C_{\cdot,k})_i =
+      \sum_{i=1}^n A_{j,i}\,C_{i,k} \]
+      <p>
+        Thus for each $j$, the $j$-th entry of $(AC)_{\cdot,k}$ equals the
+        $j$-th entry of $A\,C_{\cdot,k}$. Therefore
+      </p>
+      \[ (AC)_{\cdot,k} = A\,C_{\cdot,k} \]
+      <p class="square">$\square$</p>
+      <h2>Linear combination of columns</h2>
+      <h3>Theorem</h3>
+      <p>
+        Suppose \( A \) is an \( m \)-by-\( n \) matrix and \( c =
+        \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix} \) is an \( n \)-by-1
+        matrix. Then
+      </p>
+      \[ Ac = c_1A_{\cdot,1} + \cdots + c_nA_{\cdot,n} \]
+      <p>
+        In other words, \( Ac \) is a linear combination of the columns of \( A
+        \), with the scalars that multiply the columns coming from \( c \).
+      </p>
+      <h3>Proof</h3>
+      <p>Write \(A\) in terms of its columns:</p>
+      \[ A=\bigl[A_{\cdot,1}\ \ A_{\cdot,2}\ \ \cdots\ \ A_{\cdot,n}\bigr] \]
+      <p>
+        where each \(A_{\cdot,i}\) is the \(i\)-th column of \(A\) (an
+        \(m\times1\) vector). Multiplying \(A\) by \(c\) yields the matrix
+        product
+      </p>
+      \[ A c = \bigl[A_{\cdot,1}\ \ A_{\cdot,2}\ \ \cdots\ \ A_{\cdot,n}\bigr]
+      \begin{pmatrix}c_1\\[4pt]\vdots\\[4pt]c_n\end{pmatrix} \]
+      <p>
+        By the rules of block (or column) multiplication this equals the linear
+        combination of the columns of \(A\) with coefficients \(c_i\):
+      </p>
+      \[ A c = c_1 A_{\cdot,1} + c_2 A_{\cdot,2} + \cdots + c_n A_{\cdot,n} \]
+      <p>
+        Equivalently, checking entries: for each \(1\le j\le m\) the \(j\)-th
+        entry of \(Ac\) is
+      </p>
+      \[ (Ac)_j = \sum_{i=1}^n A_{j,i}\,c_i \]
+      <p>while the \(j\)-th entry of the right-hand side is</p>
+      \[ \bigl(c_1 A_{\cdot,1} + \cdots + c_n A_{\cdot,n}\bigr)_j = \sum_{i=1}^n
+      c_i A_{j,i} \]
+      <p>which is the same sum. Hence the two sides are equal.</p>
+      <p class="square">$\square$</p>
+    </div>
+  </body>
+</html>

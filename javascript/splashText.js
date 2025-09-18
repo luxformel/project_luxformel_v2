@@ -55,8 +55,8 @@ var splashTexts = [
   "hacovercosin",
   "Bonjoo&shy;ouuuuuur",
   "Guer net seriö dat doten!",
-  "156 Kapitelen",
-  "1,81 GB",
+  "161 Kapitelen",
+  "1,83 GB",
   "we do not brew coffee - Error : 418",
   "server is a teapot",
   "please convert me",
@@ -720,11 +720,8 @@ var splashTexts = [
   "1/719",
 ];
 function generateRandomText() {
-  //console.log(splashTexts);
   var randomNumber = Math.floor(Math.random() * splashTexts.length);
   //var randomNumber = 695;
-  //console.log(randomNumber);
-  //console.log(splashTexts[randomNumber]);
   document.querySelector("#splash-text").innerHTML = splashTexts[randomNumber];
 }
 generateRandomText();

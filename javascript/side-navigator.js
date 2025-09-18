@@ -24,7 +24,6 @@ let sideNavigator = `
     <a href="/Chemie/Tabellen/redoxtabelle.html">Redoxtabelle</a>
     <a href="/Chemie/Tabellen/spezifische-verbrennungswaermen.html">Spezifische Verbrennungswärmen</a>
   </div>
-
   <a href="#Divers" class="submenu-toggle">Divers</a>
   <div class="submenu">
     <a href="/Divers/alphabet.html">Alphabet</a>
@@ -40,7 +39,6 @@ let sideNavigator = `
     <a href="/Divers/widerstands-ringe.html">Widerstands Ringe</a>
     <a href="/Divers/zahl-prefixe.html">Zahl Prefixe</a>
   </div>
-
   <a href="#Elektrotechnik" class="submenu-toggle">Elektrotechnik</a>
   <div class="submenu">
     <a href="/Elektrotechnik/Bauteile/elektrische-widerstand.html">Elektrische Widerstand</a>
@@ -63,7 +61,6 @@ let sideNavigator = `
     <a href="/Elektrotechnik/Schaltungen/rc-parallelschaltung.html">RC - Parallelschaltung</a>
     <a href="/Elektrotechnik/Schaltungen/rc-reihenschaltung.html">RC - Reihenschaltung</a>
   </div>
-
   <a href="#Informatik" class="submenu-toggle">Informatik</a>
   <div class="submenu">
     <a href="/Informatik/CSS/css-basics.html">CSS Basics</a>
@@ -78,7 +75,6 @@ let sideNavigator = `
     <a href="/Informatik/Tabellen/vorsilben.html">Vorsilben</a>
     <a href="/Informatik/Tabellen/zahlenbereiche-der-binaerzahlen.html">Zahlenbereiche der Binärzahlen</a>
   </div>
-
   <a href="#Mathématiques" class="submenu-toggle">Mathématiques</a>
   <div class="submenu" id="submenu">
     <a href="/Mathe/Calculus/axiom-of-completeness.html">Axiom of completeness</a>
@@ -108,11 +104,13 @@ let sideNavigator = `
     <a href="/Mathe/Analyse/integrale-de-riemann.html" >Intégrale de Riemann</a>
     <a href="/Mathe/Analyse/integrales-impropres.html">Intégrales impropres</a>
     <a href="/Mathe/Analyse/integration.html"> Intégration</a>
+    <a href="/Mathe/Linear-Algebra/invertibility-and-isomorphic-vector-spaces.html">Invertibility and Isomorphic Vector Spaces</a>
     <a href="/Mathe/Analyse/limites.html">Limites</a>
     <a href="/Mathe/Calculus/limits-of-functions.html">Limits of functions</a>
     <a href="/Mathe/Linear-Algebra/linear-maps.html">Linear Maps</a>
     <a href="/Mathe/Logique/logique-elementaire.html">Logique Élémentaire</a>
     <a href="/Mathe/Linear-Algebra/matrices.html">Matrices</a>
+    <a href="/Mathe/Linear-Algebra/matrices-and-linear-maps.html">Matrices and Linear Maps</a>
     <a href="/Mathe/Algebre/nombre-complexes.html">Nombres Complexes</a>
     <a href="/Mathe/Linear-Algebra/null-spaces-and-ranges.html">Null Spaces and Ranges</a>
     <a href="/Mathe/Analyse/primitives.html">Primitives</a>
@@ -130,7 +128,6 @@ let sideNavigator = `
     <a href="/Mathe/Geometrie/vecteurs.html">Vecteurs</a>
     <a href="/Mathe/Linear-Algebra/vector-spaces.html">Vector spaces</a>
   </div>
-
   <a href="#Messtechnik" class="submenu-toggle">Messtechnik</a>
   <div class="submenu">
     <a href="/Messtechnik/Grundlagen/messtechnik.html">Messtechnik</a>
