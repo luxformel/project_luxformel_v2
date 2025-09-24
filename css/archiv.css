@@ -44,6 +44,24 @@ p {
   color: var(--white); /* Change text to white on hover */
 }
 
+/* Biblio Link Styling */
+.biblio-link-container {
+  padding: 1.6rem 0;
+}
+.biblio-link-container p {
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+.biblio-link {
+  color: var(--default-link-color); /* Primary color for text */
+  text-decoration: underline;
+}
+
+.biblio-link:hover {
+  color: var(--accent-color);
+}
+
 /* Exercise Section */
 .exercise-section {
   width: 80%;

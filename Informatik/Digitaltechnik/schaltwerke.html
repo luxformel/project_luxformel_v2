@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Schaltwerke</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Schaltwerke</h1>
+      <h2>Grundidee der Schaltwerke</h2>
+      <p>
+        Schaltwerke unterscheiden sich von Schaltnetzen durch Rückkopplungen.
+        Während Schaltnetze nur kombinatorische Logik abbilden, besitzen
+        Schaltwerke einen internen Zustand, der über die Zeit erhalten bleiben
+        kann. Mit Serielle Verarbeitung werden Informationen nacheinander
+        verarbeitet, nicht parallel.
+        <br />
+        Schaltwerke bilden die Grundlage für sequenzielle Logik und sind
+        essenziell für Speicher, Zähler und Steuerwerke.
+      </p>
+      <h2>Zustandsgraphen</h2>
+      <p>Ein Zustandsgraph ist ein gerichteter Graph mit:</p>
+      <ul>
+        <li>
+          <p><u>Knoten:</u> Repräsentieren Zustände des Systems.</p>
+        </li>
+        <li>
+          <p>
+            <u>Kanten:</u> Zeigen Zustandsübergänge an, ausgelöst durch
+            Eingaben.
+          </p>
+        </li>
+      </ul>
+      <h2>Race Conditions</h2>
+      <p>
+        Race Conditions entstehen, wenn mehrere Signale gleichzeitig umschalten
+        und der Endzustand undefiniert wird. Dies kann zu metastabilen Zuständen
+        führen, die das Systemverhalten unvorhersehbar machen.
+      </p>
+      <h2>Vermeidung von Race Conditions</h2>
+      <p>
+        Durch Einführung zusätzlicher Zustände und eines Taktsignals können Race
+        Conditions vermieden werden. Der Takt synchronisiert alle
+        Zustandsübergänge, sodass sich nur ein Signal pro Taktperiode ändert.
+        Änderung des Hamming-Abstand 1. <br />
+        Diese Methode führt zu synchronen Schaltwerken, die deterministisches
+        Verhalten garantieren.
+      </p>
+      <h2>Taktsignale, Clock und Flankensteuerung</h2>
+      <p>
+        Das Taktsignal oder auch Clock genannt steuert den Zeitpunkt von
+        Zustandsänderungen:
+      </p>
+      <ul>
+        <li>
+          <p><u>Steigende Flanke:</u> $(0 \rightarrow 1)$ positive Flanke</p>
+        </li>
+        <li>
+          <p><u>Fallende Flanke:</u> $(1 \rightarrow 0)$ negative Flanke</p>
+        </li>
+      </ul>
+      <p>
+        Flankensteuerung ist robuster als Pegelsteuerung, da sie nur auf kurze
+        Übergangszeitfenster reagiert.
+      </p>
+      <h2>Flipflops</h2>
+      <p>
+        Flipflops sind bistabile Multivibratoren, die einen Bit-Zustand
+        speichern.
+      </p>
+      <h3>Bemerkung</h3>
+      <p>Die Erfindung geht auf Eccles und Jordan im Jahre 1918 zurück.</p>
+      <h2>SR-Flipflop, Set Reset-Flipflop</h2>
+      <p>
+        Das SR-Flipflop besitzt zwei Eingänge: S setzt den Ausgang Q auf 1, R
+        setzt ihn auf 0. Der Zustand S=R=1 ist meist verboten, da er zu einem
+        undefinierten Verhalten führen kann. Die charakteristische Gleichung
+        lautet: \( Q' = S + \overline{R} \cdot Q \).
+      </p>
+      <h2>D-Flipflop, Delay-Flipflop</h2>
+      <p>
+        Das D-Flipflop vereinfacht die Handhabung, indem es nur einen
+        Dateneingang D besitzt. Bei der aktiven Taktflanke wird der Wert von D
+        übernommen und am Ausgang Q gespeichert. Es umgeht das Problem des
+        verbotenen Zustands des SR-Flipflops.
+      </p>
+      <h2>JK-Flipflop, Jump Kill-Flipflop</h2>
+      <p>
+        Das JK-Flipflop ist eine Weiterentwicklung, die die Vorteile von SR- und
+        T-Flipflops kombiniert. J verhält sich wie S, K wie R. Der entscheidende
+        Vorteil liegt im Verhalten bei J=K=1: In diesem Fall toggelt der Ausgang
+        Q bei jedem Takt, das heißt, es wechselt in den jeweils anderen Zustand.
+        Damit ist der bei SR-Flipflops problematische Eingangszustand hier
+        sinnvoll genutzt.
+      </p>
+      <h2>T-Flipflop, Toggle-Flipflop</h2>
+      <p>
+        Ein T-Flipflop kehrt seinen Zustand immer dann um, wenn der T-Eingang
+        aktiv ist T=1 und eine aktive Taktflanke auftritt. Es kann einfach aus
+        einem JK-Flipflop realisiert werden, indem J und K miteinander verbunden
+        werden also J=K=T.
+      </p>
+      <h2>Taktflankengesteuertes SR-Flipflop</h2>
+      <p>
+        Diese Variante reagiert nur, wenn das Taktsignal C aktiv ist. Es zeigt
+        das Phänomen der Laufzeitverzögerung, oder auch Propagation Delay
+        genannt, zwischen der Eingangsänderung und der sichtbaren Reaktion am
+        Ausgang.
+      </p>
+      <h2>Anwendungen von Flipflops</h2>
+      <p>Diese sind:</p>
+      <ul>
+        <li>
+          <p><u>Zähler:</u></p>
+          <p>
+            Durch das Hintereinanderschalten oder Kaskadieren von Flipflops
+            entstehen Zähler. Jede Zählerstufe teilt die Frequenz des
+            ankommenden Taktsignals durch zwei. Ein 4-Bit-Zähler, realisiert mit
+            T-Flipflops oder JK-Flipflops im Toggle-Modus, kann somit von 0
+            (binär 0000) bis 15 (binär 1111) zählen. Zähler sind unverzichtbar
+            in nahezu jedem digitalen System, z.B. für Adressierung,
+            Takttteilung oder Zeitmessung.
+          </p>
+        </li>
+        <li>
+          <p><u>Schieberegister:</u></p>
+          <p>
+            In einem Schieberegister sind Flipflops in Reihe geschaltet. Bei
+            jedem Taktimpuls wird der Wert eines Flipflops in das nächste
+            weitergeschoben. Ein Linksshift entspricht einer Multiplikation der
+            gespeicherten Binärzahl mit 2, ein Rechtsshift einer Division durch
+            2 Ganzzahldivision. Schieberegister werden für die Umwandlung
+            zwischen parallelen und seriellen Datenformaten, zur Erzeugung von
+            Pseudozufallsfolgen und in vielen Kommunikationsprotokollen
+            eingesetzt.
+          </p>
+        </li>
+        <li>
+          <p><u>Serieller Addierer</u></p>
+          <p>
+            Ein serieller Addierer führt die Addition zweier Binärzahlen Bit für
+            Bit durch, beginnend mit dem niederwertigsten Bit genauer das least
+            significant Bit, LSB gennat. Er verwendet einen Volladdierer, der
+            die beiden Eingabebits und ein Übertragsbit, Carry-In, addiert und
+            ein Summenbit sowie ein neues Übertragsbit, Carry-Out, erzeugt.
+            Dieses Carry-Out wird in einem Flipflop zwischengespeichert und
+            dient im nächsten Taktzyklus als Carry-In für die Addition der
+            nächsten höherwertigen Bits. Dieses Verhalten lässt sich
+            hervorragend durch einen Mealy-Automaten modellieren, bei dem der
+            Zustand dem aktuellen Übertragsbit entspricht und die Ausgabe,
+            Summenbit genannt, sowohl vom Zustand als auch von der aktuellen
+            Eingabe abhängt.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

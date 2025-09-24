@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Schaltnetze</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Schaltnetze</h1>
+      <h2>Serielle Gatterschaltung, UND-Verknüpfung</h2>
+      <p>
+        Die serielle Schaltung realisiert die logische Konjunktion: \( Y = A
+        \land B \). Der Stromkreis ist nur geschlossen, wenn beide Schalter A
+        und B aktiviert sind. Diese Grundform findet sich in
+        Sicherheitsschaltungen, wo zwei unabhängige Bestätigungen benötigt
+        werden.
+      </p>
+      <img
+        src="../img/Schaltnetze/konjuktion.png"
+        alt="konjuktion"
+        class="zeichnungen-small"
+      />
+      <h2>Parallele Gatterschaltung, ODER-Verknüpfung</h2>
+      <p>
+        Die parallele Schaltung realisiert die logische Disjunktion: \( Y = A
+        \lor B \). Hier reicht die Aktivierung eines beliebigen Schalters aus,
+        um den Stromkreis zu schließen.
+      </p>
+      <img
+        src="../img/Schaltnetze/disjunktion.png"
+        alt="disjuktion"
+        class="zeichnungen-small"
+      />
+      <h2>Physikalische Realisierung der Transistoren</h2>
+      <p>
+        Transistoren sind die fundamentalen Bauelemente der Digitaltechnik. Als
+        Halbleiterbauelemente können sie durch Anlegen einer Steuerspannung
+        zwischen Basis und Emitter den Stromfluss zwischen Kollektor und Emitter
+        schalten.
+      </p>
+      <h2>Funktionsweise von Transistoren</h2>
+      <p>
+        Bei einem NPN-Transistor fließt ein Basisstrom, der einen größeren
+        Kollektorstrom ermöglicht. Diese Stromverstärkung ermöglicht die
+        Kaskadierung von Logikgattern. Die Miniaturisierung führte zu
+        integrierten Schaltkreisen, ICs genannt, mit milliardenfacher
+        Transistordichte.
+      </p>
+      <img
+        src="../img/Schaltnetze/transistor.png"
+        alt="transistor"
+        class="zeichnungen-small"
+      />
+      <p>
+        Mehr über Transistoren ist
+        <a href="/Elektrotechnik/Bauteile/transistor.html">hier</a> zu finden.
+      </p>
+      <h2>Inverter, NOT-Gatter</h2>
+      <p>
+        Realisiert die Negation: \( Y = \overline{A} \). Ein High-Pegel am
+        Eingang schaltet den Transistor durch, sodass der Ausgang auf Low
+        gezogen wird. Bei Low-Eingang sperrt der Transistor, der Ausgang wird
+        über den Pull-Up-Widerstand high.
+      </p>
+      <img
+        src="../img/Schaltnetze/inverter.png"
+        alt="inverter"
+        class="zeichnungen-small"
+      />
+      <h2>AND-Gatter</h2>
+      <p>
+        Kombiniert mehrere Transistoren in Serie: Nur wenn alle Eingänge high
+        sind, können alle Transistoren leiten und der Ausgang wird low (bei
+        NAND) oder high, bei AND mit nachgeschaltetem Inverter.
+      </p>
+      <img
+        src="../img/Schaltnetze/and.png"
+        alt="and"
+        class="zeichnungen-small"
+      />
+      <h2>OR-Gatter</h2>
+      <p>
+        Transistoren parallel geschaltet: Ein einziger high-Eingang reicht aus,
+        um den Ausgangszustand zu ändern. Die ODER-Funktion wird oft durch NOR
+        mit nachgeschaltetem Inverter realisiert.
+      </p>
+      <img src="../img/Schaltnetze/or.png" alt="or" class="zeichnungen-small" />
+      <h2>Schaltsymbole</h2>
+      <p>
+        Inzwischen hat sich (bei uns) die
+        <abbr
+          title="International Electrotechnical
+        Commission"
+          >IEC</abbr
+        >
+        (International Electronical Commission) Norm durchgesetzt. Die
+        Schaltsymbole sehen wie folgt aus:
+      </p>
+      <img
+        src="../img/Schaltnetze/iec-schaltsymbole.png"
+        alt="iec-schaltsymbole"
+        class="zeichnungen-big"
+      />
+      <h2>Dekodierer</h2>
+      <p>
+        Wandelt einen binären Code in eine Aktivierung einer bestimmten
+        Ausgangsleitung um. Ein n-zu-$2^n$-Dekodierer hat $n$ Eingänge und $2^n$
+        Ausgänge. Anwendungen: Speicher-Adressdecodierung,
+        7-Segment-Ansteuerung, Steuerlogik.
+      </p>
+      <h2>Multiplexer, MUX</h2>
+      <p>
+        Wählt eines von mehreren Eingangssignalen basierend auf einem Steuercode
+        aus. Funktionell ein schaltbarer Weichensteller. Ein 2:1-MUX realisiert:
+        \( Y = (\overline{S} \cdot D_0) + (S \cdot D_1) \). Anwendungen:
+        Datenauswahl, parallele-zu-seriell-Wandlung, Logikimplementierung.
+      </p>
+      <h2>Komparator</h2>
+      <p>
+        Vergleicht zwei Binärzahlen bitweise unter Berücksichtigung von
+        Übertragsinformation. Der mehrstufige Aufbau ermöglicht den Vergleich
+        beliebig langer Zahlen. Die Übertragsfunktion lautet:
+      </p>
+      \[ U_{i+1} = A_i \cdot \overline{B_i} + U_i \cdot (A_i + \overline{B_i})
+      \]
+      <p>
+        Diese Logik entscheidet, ob bis zur aktuellen Stelle $A$ größer als $B$
+        ist.
+      </p>
+      <img
+        src="../img/Schaltnetze/komparator-schaltglied.png"
+        alt="komparator-schaltglied"
+        class="zeichnungen"
+      />
+
+      <h2>Addierwerke</h2>
+      <p>Es gibt zwei Addierwerke:</p>
+      <ul>
+        <li>
+          <p><u>Halbaddierer</u></p>
+          <p>
+            Addiert zwei Bits ohne Übertragseingang: Summe = \( A \oplus B \),
+            Übertrag = \( A \cdot B \)
+          </p>
+          <img
+            src="../img/Schaltnetze/halbaddierer-schaltglied.png"
+            alt="halbaddierer-schaltglied"
+            class="zeichnungen"
+          />
+        </li>
+        <li>
+          <p><u>Volladdierer</u></p>
+          <p>
+            Addiert zwei Bits mit Übertragseingang: Summe = \( A \oplus B \oplus
+            C_{in} \), Übertrag = \( A \cdot B + C_{in} \cdot (A \oplus B) \)
+          </p>
+          <img
+            src="../img/Schaltnetze/volladdierer-schaltglied.png"
+            alt="volladdierer-schaltglied"
+            class="zeichnungen"
+          />
+        </li>
+      </ul>
+      <h3>Bemerkung</h3>
+      <p>
+        Durch kaskadierte Volladdierer entstehen $n$-Bit-Addierwerke für
+        arithmetische Operationen in Prozessoren.
+      </p>
+      <h2>Race Conditions</h2>
+      <p>
+        Durch unterschiedliche Signallaufzeiten in verschiedenen Pfaden einer
+        Schaltung können kurzzeitige Fehlzustände, Glitches genannt, auftreten.
+        Diese Race Conditions entstehen, wenn Signale asynchron durch die Logik
+        propagieren.
+      </p>
+      <h2>Gegenmaßnahmen Race Conditions</h2>
+      <p>
+        Um Race Conditions zu vermeiden können folgende Gegenmaßnahmen
+        unternommen werden:
+      </p>
+      <ul>
+        <li><p>Synchronisation durch Taktung</p></li>
+        <li><p>Hazard-Abdeckung in booleschen Funktionen</p></li>
+        <li><p>Pipelinierung kritischer Pfade</p></li>
+        <li><p>Verwendung von synchronen Schaltwerken</p></li>
+      </ul>
+    </div>
+  </body>
+</html>

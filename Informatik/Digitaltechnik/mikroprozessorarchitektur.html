@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Mikroprozessorarchitektur</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Mikroprozessor&shy;architektur</h1>
+      <h2>Schaltwerke in der Mikroprozessorarchitektur</h2>
+      <p>
+        Schaltwerke werden zur Realisierung von Grundoperationen in Prozessoren
+        eingesetzt. Im Gegensatz zu Schaltnetzen besitzen Schaltwerke einen
+        internen Zustand, was sie für sequentielle Operationen besonders
+        geeignet macht.
+      </p>
+      <h2>Steuerwerk und Operationswerk</h2>
+      <p>
+        Die Trennung zwischen Steuerwerk oder Control Unit, und Operationswerk,
+        Data Path genannt, ist ein fundamentales Designprinzip in der
+        Prozessorarchitektur.
+      </p>
+      <h2>Operationswerk, Data Path</h2>
+      <p>
+        Führt arithmetische und logische Operationen aus es besteht aus ALU,
+        Registerbank und Datenpfaden und operiert unter direkter Anweisung des
+        Steuerwerks.
+      </p>
+      <h2>Steuerwerk, Control Unit</h2>
+      <p>
+        Koordiniert die Ausführung von Befehlen und Interpretiert Befehle und
+        generiert Steuersignale. Kann hartverdrahtet oder mikroprogrammiert
+        sein.
+      </p>
+      <h2>Aufbau eines Steuerwerks</h2>
+      <p>
+        Das Steuerwerk verwendet einen ROM, Read-Only Memory genannt, in dem
+        Mikrobefehle gespeichert sind.
+      </p>
+      <h2>Mikroprogrammierung</h2>
+      <p>
+        Mikroprogrammierung ist eine Abstraktionsebene unterhalb des
+        Maschinenbefehlsniveaus. Jeder Maschinenbefehl wird durch eine Folge von
+        Mikrobefehlen implementiert.
+      </p>
+      <h2>Aufbau eines Mikrobefehls:</h2>
+      <ul>
+        <li>
+          <p><u>Steueranteil:</u> Steuersignale für das Operationswerk</p>
+        </li>
+        <li>
+          <p><u>Folgeadresse:</u> Nächster auszuführender Mikrobefehl</p>
+        </li>
+        <li>
+          <p><u>Bedingungsfeld:</u> Bestimmt Sprungverhalten</p>
+        </li>
+      </ul>
+      <h2>Von-Neumann-Architektur</h2>
+      <p>
+        Die universelle Rechenmaschine basiert auf dem
+        Von-Neumann-Architekturmodell, das folgende Kernprinzipien definiert:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>Einheitlicher Speicher:</u> Programme und Daten werden im
+            gleichen Speicher abgelegt
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Sequenzielle Abarbeitung:</u> Befehle werden nacheinander
+            ausgeführt
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Zentrale Verarbeitungseinheit:</u> CPU bestehend aus ALU und
+            Steuerwerk
+          </p>
+        </li>
+      </ul>
+      <h2>Aufarbeitung eines Befehls</h2>
+      <ol>
+        <li>
+          <p><u>FETCH:</u></p>
+          <p>
+            Der nächste Befehl wird mittels PC vom Hauptspeicher über den
+            Datenbus in das Befehlsregister eingelesen. PC wird inkrementiert.
+          </p>
+        </li>
+        <li>
+          <p><u>DECODE:</u></p>
+          <p>
+            Das Bitmuster des Befehls wird im Instruktionsdecoder der CU
+            interpretiert. Je nach Befehl werden benötigte Operanden aus dem
+            Hauptspeicher angefordert.
+          </p>
+        </li>
+        <li>
+          <p><u>EXECUTE:</u></p>
+          <p>
+            ALU wird mit Berechnung beauftragt. Operanden stehen in Registern
+            bereit.
+          </p>
+        </li>
+        <li>
+          <p><u>WRITE:</u></p>
+          <p>
+            Ergebnis der Operation, falls es sich um einen arithmetisch und
+            logischen Befehl handelt, wird an die richtige Stelle im
+            Hauptspeicher zurückgeschrieben. Bei Sprungbefehlen der PC
+            entsprechend angepasst.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

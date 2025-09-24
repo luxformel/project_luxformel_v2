@@ -33,7 +33,7 @@ let sideNavigator = `
     <a href="/Divers/naturkonstanten.html">Naturkonstanten</a>
     <a href="/Divers/praefixe.html">Präfixe</a>
     <a href="/Divers/si-basisgroessen.html">S.I. - Basisgrößen</a>
-    <a href="/Divers/theorie-praktikum.html">Praktikum Theorie</a>/Chemie/
+    <a href="/Divers/theorie-praktikum.html">Praktikum Theorie</a>
     <a href="/Divers/tonintervalle.html">Tonintervalle</a>
     <a href="/Divers/wasserdichte.html">Wasserdichte Tabelle</a>
     <a href="/Divers/widerstands-ringe.html">Widerstands Ringe</a>
@@ -41,39 +41,44 @@ let sideNavigator = `
   </div>
   <a href="#Elektrotechnik" class="submenu-toggle">Elektrotechnik</a>
   <div class="submenu">
+    <a href="/Elektrotechnik/Grundlagen/basisformeln.html">Basisformeln</a>
+    <a href="/Elektrotechnik/Elektrizitaetslehre/elektrische-feld.html">Elektrisches Feld</a>
+    <a href="/Elektrotechnik/Elektrizitaetslehre/elektrische-stromkreis.html">Elektrische Stromkreis</a>
     <a href="/Elektrotechnik/Bauteile/elektrische-widerstand.html">Elektrische Widerstand</a>
+    <a href="/Elektrotechnik/Schaltungen/filterschaltungen.html">Filterschaltungen</a>
+    <a href="/Elektrotechnik/Elektrizitaetslehre/halbleiter.html">Halbleiter</a>
     <a href="/Elektrotechnik/Bauteile/halbleiterdiode.html">Halbleiterdiode</a>
     <a href="/Elektrotechnik/Bauteile/kondensator.html">Kondensator</a>
     <a href="/Elektrotechnik/Bauteile/kondensator-im-wechselstromkreis.html">Kondensator im Wechselstromkreis</a>
-    <a href="/Elektrotechnik/Bauteile/transistor.html">Transistor</a>
-    <a href="/Elektrotechnik/Bauteile/transformator.html">Transformator</a>
-    <a href="/Elektrotechnik/Elektrizitaetslehre/elektrische-feld.html">Elektrisches Feld</a>
-    <a href="/Elektrotechnik/Elektrizitaetslehre/elektrische-stromkreis.html">Elektrische Stromkreis</a>
-    <a href="/Elektrotechnik/Elektrizitaetslehre/halbleiter.html">Halbleiter</a>
     <a href="/Elektrotechnik/Elektrizitaetslehre/magnetische-feld.html">Magnetische Feld</a>
     <a href="/Elektrotechnik/Elektrizitaetslehre/ohmsches-gesetz.html">Ohmsches Gesetz</a>
-    <a href="/Elektrotechnik/Elektrizitaetslehre/wechselstromtechnik.html">Wechselstromtechnik</a>
-    <a href="/Elektrotechnik/Grundlagen/basisformeln.html">Basisformeln</a>
-    <a href="/Elektrotechnik/Schaltungen/filterschaltungen.html">Filterschaltungen</a>
+    <a href="/Elektrotechnik/Schaltungen/rc-parallelschaltung.html">RC - Parallelschaltung</a>
+    <a href="/Elektrotechnik/Schaltungen/rc-reihenschaltung.html">RC - Reihenschaltung</a>
     <a href="/Elektrotechnik/Schaltungen/rl-parallelschaltung.html">RL - Parallelschaltung</a>
     <a href="/Elektrotechnik/Schaltungen/rlc-parallelschaltung.html">RLC - Parallelschaltung</a>
     <a href="/Elektrotechnik/Schaltungen/rlc-reihenschaltung.html">RLC - Reihenschaltung</a>
-    <a href="/Elektrotechnik/Schaltungen/rc-parallelschaltung.html">RC - Parallelschaltung</a>
-    <a href="/Elektrotechnik/Schaltungen/rc-reihenschaltung.html">RC - Reihenschaltung</a>
+    <a href="/Elektrotechnik/Bauteile/transformator.html">Transformator</a>
+    <a href="/Elektrotechnik/Bauteile/transistor.html">Transistor</a>
+    <a href="/Elektrotechnik/Elektrizitaetslehre/wechselstromtechnik.html">Wechselstromtechnik</a>
   </div>
   <a href="#Informatik" class="submenu-toggle">Informatik</a>
   <div class="submenu">
     <a href="/Informatik/CSS/css-basics.html">CSS Basics</a>
     <a href="/Informatik/Digitaltechnik/codes.html">Codes</a>
     <a href="/Informatik/Digitaltechnik/digitaltechnik-grundlagen.html">Grundlagen der Digitaltechnik</a>
-    <a href="/Informatik/Digitaltechnik/zahlensysteme-der-informatik.html">Zahlensysteme der Informatik</a>
+    <a href="/Informatik/Digitaltechnik/grundlagen-der-informationstheorie.html">Grundlagen der Informationstheorie</a>
     <a href="/Informatik/HTML/bascis-html.html">HTML Basics</a>
     <a href="/Informatik/JAVA/array-lists.html">Java Array Lists</a>
     <a href="/Informatik/JAVA/java-basics.html">Java Basics</a>
     <a href="/Informatik/JAVA/problemes-types.html">Java problèmes types</a>
     <a href="/Informatik/LaTeX/latex-basics.html">LATEX Basics</a>
+    <a href="/Informatik/Digitaltechnik/mikroprozessorarchitektur.html">Mikroprozessor&shy;architektur</a>
+    <a href="/Informatik/Digitaltechnik/minimierung-und-schaltungsentwurf.html">Minimierung und Schaltungsentwurf</a>
+    <a href="/Informatik/Digitaltechnik/schaltnetze.html">Schaltnetze</a>
+    <a href="/Informatik/Digitaltechnik/schaltwerke.html">Schaltwerke</a>
     <a href="/Informatik/Tabellen/vorsilben.html">Vorsilben</a>
     <a href="/Informatik/Tabellen/zahlenbereiche-der-binaerzahlen.html">Zahlenbereiche der Binärzahlen</a>
+    <a href="/Informatik/Digitaltechnik/zahlensysteme-der-informatik.html">Zahlensysteme der Informatik</a>
   </div>
   <a href="#Mathématiques" class="submenu-toggle">Mathématiques</a>
   <div class="submenu" id="submenu">

@@ -32,6 +32,28 @@
   <body>
     <div class="main-wrapper">
       <h1>Differentiation</h1>
+      <h2>Derivative</h2>
+      <h3>Definition</h3>
+      <p>
+        The derivative quantifies the sensitivity to change of a function's
+        output with respect to its input.
+      </p>
+      <h3>Notations</h3>
+      <ul>
+        <li>
+          <p>
+            For a given function we denote the derivative of a function $f(x)$
+            to be \( f'(x) \), which is referred to as prime notation.
+          </p>
+        </li>
+        <li>
+          <p>
+            For a given function $f$, the derivative $f'$ is often denoted by:
+          </p>
+          $$ \frac{d}{dx} f(x) \quad \text{or} \quad \frac{d f(x)}{dx} $$
+          <p>This notation is called Leibniz notation.</p>
+        </li>
+      </ul>
       <h2>Differentiability</h2>
       <h3>Definition</h3>
       <p>
@@ -69,7 +91,7 @@
         </li>
         <li><p>The converse to this theorem is not true.</p></li>
       </ul>
-      <h2>The absolute value function</h2>
+      <h2>Absolute value function</h2>
       <h3>Theorem</h3>
       <p>
         The function \( f(x) = |x| \) is continuous, but not differentiable.
@@ -99,6 +121,21 @@
         exist. So \(f(x)=|x|\) is not differentiable when \(x=0\).
       </p>
       <p class="square">$\square$</p>
+      <h2>Higher derivatives</h2>
+      <h3>Definition</h3>
+      <p>
+        Deriving a function $n$ times is called taking the $n$-th derivative.
+      </p>
+      <h3>Notation</h3>
+      <p>As for the prime notation we denote higher derivatives:</p>
+      $$ f'''^{...}(x) \quad \text{or} \quad f^{(n)}(x) $$
+      <p>As for the Leibnizian notation we write:</p>
+      $$ \frac{d^n f(x)}{dx^n} $$
+      <h3>Remark</h3>
+      <p>
+        For some functions it may not be possible or useless to take the
+        derivative more than a few times.
+      </p>
       <h2>Differentiation of common functions</h2>
       <p>
         See the proof of many common functions under
@@ -124,6 +161,8 @@
       0}\frac{f(x+h)-f(x)}{h} + \frac{g(x+h)-g(x)}{h} \] \[ = \lim_{h\to
       0}\frac{f(x+h)-f(x)}{h} + \lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \] \[ =
       f^{\prime}(x) + g^{\prime}(x) \]
+      <p class="square">$\square$</p>
+
       <h2>Product rule of differentiation</h2>
       <h3>Theorem</h3>
       <p>If \( f \) and \( g \) are differentiable at \( x \) then</p>
@@ -139,6 +178,8 @@
       0} \frac{f(x+h)g(x+h)-f(x+h)g(x)}{h} + \frac{f(x+h)g(x)-f(x)g(x)}{h} \] \[
       = \lim_{h \to 0} f(x+h)\frac{g(x+h)-g(x)}{h} + \lim_{h \to 0}
       \frac{f(x+h)-f(x)}{h}g(x) \] \[ = f(x)g'(x) + f'(x)g(x) \]
+      <p class="square">$\square$</p>
+
       <h2>Chain rule of differentiation</h2>
       <h3>Theorem</h3>
       <p>If \( f \) and \( g \) are differentiable then</p>
@@ -159,13 +200,21 @@
       \[ \left( \lim_{h \to 0} \frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} \right)
       g'(x) = \left( \lim_{H \to 0} \frac{f(g(x) + H) - f(g(x))}{H} \right)
       g'(x) \] \[ = f'(g(x)) g'(x) \]
+      <p class="square">$\square$</p>
+
       <h2>Quotient rule of differentiation</h2>
       <h3>Theorem</h3>
       <p>If \(f\) and \(g\) are differentiable at \(x\), then</p>
       \[ \left( \frac{f}{g} \right)'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}
       \]
       <h3>Proof</h3>
-      <p>TBD</p>
+      <p>Since \( f/g = f \cdot (1/g) \) we have</p>
+      \[\left( \frac{f}{g} \right)' (a) = \left( f \cdot \frac{1}{g} \right)'
+      (a)\] \[= f'(a) \cdot \left( \frac{1}{g} \right) (a) + f(a) \cdot \left(
+      \frac{1}{g} \right)' (a)\] \[= \frac{f'(a)}{g(a)} +
+      \frac{f(a)(-g'(a))}{[g(a)]^2}\] \[= \frac{f'(a) \cdot g(a) - f(a) \cdot
+      g'(a)}{[g(a)]^2} \]
+      <p class="square">$\square$</p>
       <h2>Inverse functions</h2>
       <h3>Definition</h3>
       <p>
