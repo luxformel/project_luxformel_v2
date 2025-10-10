@@ -43,30 +43,42 @@
       <p>
         Die Trennung zwischen Steuerwerk oder Control Unit, und Operationswerk,
         Data Path genannt, ist ein fundamentales Designprinzip in der
-        Prozessorarchitektur.
+        Prozessorarchitektur. Diese Aufteilung ermöglicht eine klare Trennung
+        von Kontrollfluss und Datenverarbeitung.
       </p>
       <h2>Operationswerk, Data Path</h2>
       <p>
         Führt arithmetische und logische Operationen aus es besteht aus ALU,
         Registerbank und Datenpfaden und operiert unter direkter Anweisung des
-        Steuerwerks.
+        Steuerwerks. Das Operationswerk ist für die Ausführung der eigentlichen
+        Berechnungen zuständig und empfängt Steuersignale vom Steuerwerk.
       </p>
       <h2>Steuerwerk, Control Unit</h2>
       <p>
         Koordiniert die Ausführung von Befehlen und Interpretiert Befehle und
         generiert Steuersignale. Kann hartverdrahtet oder mikroprogrammiert
-        sein.
+        sein. Das Steuerwerk muss die Abarbeitung der Befehle bewältigen und
+        verwendet dazu Mikroprogramme.
       </p>
       <h2>Aufbau eines Steuerwerks</h2>
       <p>
         Das Steuerwerk verwendet einen ROM, Read-Only Memory genannt, in dem
-        Mikrobefehle gespeichert sind.
+        Mikrobefehle gespeichert sind. Es verarbeitet Statussignale vom
+        Operationswerk und generiert darauf basierend Steuersignale sowie die
+        Folgeadresse für den nächsten Mikrobefehl.
+      </p>
+      <h2>Erweiterter Aufbau eines Steuerwerks</h2>
+      <p>
+        Moderne Steuerwerke enthalten oft einen Befehlszähler oder Program
+        Counter, der automatisch hochzählt, sowie Mechanismen zur Manipulation
+        des Folgebefehls; Sprunganweisungen für Schleifen.
       </p>
       <h2>Mikroprogrammierung</h2>
       <p>
         Mikroprogrammierung ist eine Abstraktionsebene unterhalb des
         Maschinenbefehlsniveaus. Jeder Maschinenbefehl wird durch eine Folge von
-        Mikrobefehlen implementiert.
+        Mikrobefehlen implementiert. Diese Technik ermöglicht eine flexiblere
+        Steuerung der Hardware.
       </p>
       <h2>Aufbau eines Mikrobefehls:</h2>
       <ul>
@@ -80,6 +92,15 @@
           <p><u>Bedingungsfeld:</u> Bestimmt Sprungverhalten</p>
         </li>
       </ul>
+      <p>
+        Wobei: 00: kein Sprung, 01: bedingter Sprung, 10: unbedingter Sprung
+      </p>
+      <h2>Universelle Rechenmaschine</h2>
+      <p>
+        Ein Computer ist eine universelle Rechenmaschine, da er durch Programme
+        beliebige Algorithmen ausführen kann. Diese Fähigkeit basiert auf dem
+        Von-Neumann-Architekturmodell.
+      </p>
       <h2>Von-Neumann-Architektur</h2>
       <p>
         Die universelle Rechenmaschine basiert auf dem
@@ -102,6 +123,53 @@
           <p>
             <u>Zentrale Verarbeitungseinheit:</u> CPU bestehend aus ALU und
             Steuerwerk
+          </p>
+        </li>
+      </ul>
+      <h2>Prinzipieller Aufbau eines Computers</h2>
+      <p>Ein Computer besteht aus folgenden Hauptkomponenten:</p>
+      <ul>
+        <li>
+          <p><u>Zentraleinheit:</u> CPU - Central Processing Unit</p>
+        </li>
+        <li>
+          <p><u>Rechenwerk:</u> ALU - Arithmetic Logic Unit</p>
+        </li>
+        <li>
+          <p><u>Steuerwerk:</u> CU - Control Unit</p>
+        </li>
+        <li>
+          <p><u>Speicherwerk:</u> Memory</p>
+        </li>
+        <li>
+          <p><u>Eingabe-Ausgabewerk:</u> I/O Unit - Input/Output Unit</p>
+        </li>
+        <li>
+          <p><u>Bussystem</u> zur Verbindung aller Komponenten</p>
+        </li>
+      </ul>
+      <h2>Datenspeicher in der CPU</h2>
+      <p>
+        Die CPU enthält verschiedene Register für die temporäre
+        Datenspeicherung:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>Befehlsregister (Program Counter, PC)</u> - Speichert die Adresse
+            des nächsten auszuführenden Befehls
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Ergebnisregister (Akkumulator)</u> - Speichert das Ergebnis von
+            Berechnungen
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Allgemeine Register (GPR)</u> - General Purpose Register für
+            verschiedene Zwecke
           </p>
         </li>
       </ul>
@@ -139,6 +207,49 @@
           </p>
         </li>
       </ol>
+      <h2>Übersetzungsebenen von Programmen</h2>
+      <p>
+        Programme durchlaufen mehrere Übersetzungsebenen, bevor sie auf der
+        Hardware ausgeführt werden:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>Hochsprachenprogramme</u> (z.B. C++, Java) werden mittels
+            Compiler übersetzt
+          </p>
+        </li>
+        <li>
+          <p><u>Compiler</u> werden in Assembler geschrieben</p>
+        </li>
+        <li>
+          <p><u>Assemblersprache</u> wird in Maschinencode übersetzt</p>
+        </li>
+        <li>
+          <p>
+            <u>Maschinenprogramme</u> werden durch Mikroprogramme implementiert
+          </p>
+        </li>
+      </ul>
+      <h2>Datentransfer im Computer</h2>
+      <p>
+        Der Datentransfer zwischen den Komponenten erfolgt über verschiedene
+        Busse:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <u>Datenbus:</u> Überträgt Daten zwischen CPU, Speicher und
+            Peripherie
+          </p>
+        </li>
+        <li>
+          <p><u>Adressbus:</u> Überträgt Speicheradressen</p>
+        </li>
+        <li>
+          <p><u>Steuerbus:</u> Überträgt Steuersignale für die Koordination</p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

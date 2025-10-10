@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundlagen der Informationstheorie</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --light-color: #ecf0f1;
+        --dark-color: #34495e;
+        --text-color: #333;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+
+      .main-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+
+      h1 {
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--secondary-color);
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        color: var(--secondary-color);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        color: var(--dark-color);
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+      }
+
+      p {
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      ul,
+      ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      u {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--accent-color);
+      }
+
+      .square {
+        text-align: right;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        color: var(--accent-color);
+      }
+
+      .definition-box,
+      .theorem-box,
+      .example-box {
+        background-color: var(--light-color);
+        border-left: 4px solid var(--secondary-color);
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      }
+
+      .theorem-box {
+        border-left-color: var(--accent-color);
+      }
+
+      .example-box {
+        border-left-color: #2ecc71;
+      }
+
+      .interactive-element {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: var(--border-radius);
+        padding: 15px;
+        margin: 20px 0;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .interactive-element:hover {
+        background-color: #e9ecef;
+        transform: translateY(-2px);
+      }
+
+      .interactive-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .interactive-content {
+        display: none;
+        margin-top: 10px;
+      }
+
+      .code-example {
+        background-color: #2d3748;
+        color: #e2e8f0;
+        padding: 15px;
+        border-radius: var(--border-radius);
+        font-family: "Courier New", monospace;
+        margin: 15px 0;
+        overflow-x: auto;
+      }
+
+      .table-container {
+        overflow-x: auto;
+        margin: 20px 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: var(--secondary-color);
+        color: white;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
+
+      .nav-link {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: bold;
+        transition: var(--transition);
+      }
+
+      .nav-link:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .main-wrapper {
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Grundlagen der Informations&shy;theorie</h1>
+
+      <div class="definition-box">
+        <h2>Information</h2>
+        <h3>Definition</h3>
+        <p>
+          Information ist eine räumliche oder zeitliche Abfolge physikalischer
+          Signale, die mit bestimmten Häufigkeiten oder Wahrscheinlichkeiten
+          auftritt. Sie lässt sich als Folge von Bits, meistens in 0 und 1
+          angegeben, darstellen und kann unter drei hermeneutischen Ebenen
+          betrachtet werden:
+        </p>
+        <ul>
+          <li>
+            <p><u>Syntax:</u> die formale Struktur und Darstellung</p>
+          </li>
+          <li>
+            <p><u>Semantik:</u> die Bedeutung der Information</p>
+          </li>
+          <li>
+            <p><u>Pragmatik:</u> die Wirkung oder der Nutzen im Kontext</p>
+          </li>
+        </ul>
+      </div>
+
+      <h2>Informationsgehalt</h2>
+      <p>
+        Der Informationsgehalt \( I \) eines Ereignisses mit
+        Eintrittswahrscheinlichkeit \( p \) ist definiert als:
+      </p>
+      <p>\[ I = -\log_2 p \quad \text{[Bit]} \]</p>
+      <p>
+        Diese logarithmische Maßzahl erfüllt drei wesentliche Eigenschaften:
+      </p>
+      <ol>
+        <li>
+          <p><u>Additivität:</u></p>
+          <p>
+            Bei unabhängigen Ereignissen addieren sich die Informationsgehalte
+          </p>
+        </li>
+        <li>
+          <p><u>Stetigkeit:</u></p>
+          <p>
+            Kleine Änderungen in \( p \) führen zu kleinen Änderungen in \( I \)
+          </p>
+        </li>
+        <li>
+          <p><u>Normierung:</u></p>
+          <p>
+            Ein Bit entspricht der Information eines gleichwahrscheinlichen
+            Ja/Nein-Entscheids
+          </p>
+        </li>
+      </ol>
+
+      <div class="interactive-element" onclick="toggleContent('info-content')">
+        <div class="interactive-title">
+          <span>Beispiel: Informationsgehalt berechnen</span>
+          <span>▼</span>
+        </div>
+        <div class="interactive-content" id="info-content">
+          <p>Für ein Ereignis mit Wahrscheinlichkeit p = 0.25:</p>
+          <p>
+            \[ I = -\log_2(0.25) = -\log_2\left(\frac{1}{4}\right) = \log_2(4) =
+            2 \text{ Bit} \]
+          </p>
+          <p>Das bedeutet, dass dieses Ereignis 2 Bit an Information trägt.</p>
+        </div>
+      </div>
+
+      <h2>Entropie</h2>
+      <div class="definition-box">
+        <h3>Definition</h3>
+        <p>
+          Die Entropie $H$ einer diskreten Quelle $Q$ wird definiert als der
+          Erwartungswert des Informationsgehalts ihrer Zeichen:
+        </p>
+        \[ H(Q) = \sum_{s \in Q} p(s) \cdot \log_2\left(\frac{1}{p(s)}\right) \]
+        <p>
+          Wobei: \( p(s) \) die Wahrscheinlichkeit des Auftretens des Symbols \(
+          s \). Die Basis 2 des Logarithmus gibt die Einheit "Bit" pro Zeichen.
+          Für \( p(s) = 0 \) wird der Beitrag als 0 definiert.
+        </p>
+      </div>
+
+      <h2>Bedeutung der Entropie</h2>
+      <p>
+        Die Entropie quantifiziert die mittlere Unsicherheit über die nächste
+        Nachricht einer Quelle. Sie ist maximal, wenn alle Zeichen
+        gleichwahrscheinlich sind, und minimal (null), wenn ein Zeichen sicher
+        eintritt.
+      </p>
+
+      <div
+        class="interactive-element"
+        onclick="toggleContent('entropy-content')"
+      >
+        <div class="interactive-title">
+          <span>Beispiel: Entropie berechnen</span>
+          <span>▼</span>
+        </div>
+        <div class="interactive-content" id="entropy-content">
+          <p>Für eine Quelle mit zwei Symbolen A und B:</p>
+          <ul>
+            <li>p(A) = 0.7</li>
+            <li>p(B) = 0.3</li>
+          </ul>
+          <p>\[ H = -[0.7 \cdot \log_2(0.7) + 0.3 \cdot \log_2(0.3)] \]</p>
+          <p>\[ H \approx -[0.7 \cdot (-0.5146) + 0.3 \cdot (-1.7370)] \]</p>
+          <p>\[ H \approx -[-0.3602 - 0.5211] = 0.8813 \text{ Bit/Symbol} \]</p>
+        </div>
+      </div>
+
+      <h2>Kompressionsprinzip</h2>
+      <p>
+        Die Entropie stellt eine fundamentale untere Schranke für die
+        verlustlose Kompression dar: Kein Code kann im Mittel weniger als \( H
+        \) Bit pro Zeichen benötigen. Effiziente Kompressionsverfahren weisen
+        häufigen Zeichen kurze Codewörter und seltenen Zeichen längere
+        Codewörter zu.
+      </p>
+
+      <h2>Shannon-Fano Kodierung</h2>
+      <p>
+        Die Shannon-Fano-Kodierung ist ein verlustloser Kompressionsalgorithmus.
+        Das Ziel der Shannon-Fano-Kodierung ist die Zuordnung von optimalen
+        Präfixcodes zu Symbolen basierend auf ihren
+        Auftrittswahrscheinlichkeiten. Häufig auftretende Symbole erhalten kurze
+        Codes, seltene Symbole längere Codes.
+      </p>
+
+      <div class="example-box">
+        <h3>Beispiel: Shannon-Fano-Kodierung</h3>
+        <p>Gegeben seien Symbole mit folgenden Wahrscheinlichkeiten:</p>
+        <div class="table-container">
+          <table>
+            <tr>
+              <th>Symbol</th>
+              <th>Wahrscheinlichkeit</th>
+              <th>Code</th>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>0.4</td>
+              <td>00</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>0.3</td>
+              <td>01</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>0.2</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>0.1</td>
+              <td>11</td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          Die durchschnittliche Codewortlänge beträgt: 0.4×2 + 0.3×2 + 0.2×2 +
+          0.1×2 = 2.0 Bit/Symbol
+        </p>
+      </div>
+
+      <h2>Huffman-Kodierung</h2>
+      <p>
+        Die Huffman-Kodierung ist ein verlustloser Kompressionsalgorithmus. Das
+        Ziel der Huffman-Kodierung ist die Zuordnung von optimalen Präfixcodes
+        zu Symbolen basierend auf ihren Auftrittswahrscheinlichkeiten. Häufige
+        Symbole erhalten kurze Bitfolgen, seltene Symbole längere Bitfolgen,
+        wodurch die durchschnittliche Codelänge minimiert wird.
+      </p>
+
+      <div class="theorem-box">
+        <h2>Optimalität des Huffman-Verfahren</h2>
+        <h3>Theorem</h3>
+        <p>
+          Der Huffman-Algorithmus erzeugt einen optimalen Präfixcode, das heißt
+          einen Code mit minimaler durchschnittlicher Codewortlänge.
+        </p>
+        <h3>Beweis</h3>
+        <p>
+          Für zwei Symbole erzeugt der Huffman-Algorithmus zwei Codewörter der
+          Länge 1 (z.B. '0' und '1'). Dies ist offensichtlich optimal, da
+          kürzere Codewörter nicht möglich sind. <br />
+          Annahme: Der Huffman-Algorithmus erzeugt für jedes Alphabet mit $k$
+          Symbolen ($k \leq n$) einen optimalen Präfixcode.
+          <br />
+          Seien $a_x$ und $a_y$ die beiden Symbole mit den kleinsten
+          Wahrscheinlichkeiten. Der Huffman-Algorithmus kombiniert diese zu
+          einem neuen Symbol $z$ mit $p_z = p_x + p_y$. Wir erhalten ein
+          reduziertes Alphabet mit $n$ Symbolen. <br />
+          Nach Induktionsvoraussetzung erzeugt der Huffman-Algorithmus für das
+          reduzierte Alphabet mit $n$ Symbolen einen optimalen Präfixcode $C'$.
+          <br />
+          Aus $C'$ konstruieren wir $C$, indem wir das Codewort für $z$ durch
+          zwei Codewörter ersetzen:
+        </p>
+        $$c_x = c_z \parallel 0 \quad \text{und} \quad c_y = c_z \parallel 1$$
+        <p>Die durchschnittliche Länge ändert sich um:</p>
+        $$ L(C) = L(C') + p_x + p_y $$
+        <h3>Lemma 1</h3>
+        <p>
+          In jedem optimalen Präfixcode für das ursprüngliche Alphabet haben die
+          beiden Symbole mit kleinsten Wahrscheinlichkeiten Codewörter maximaler
+          Länge, und diese können so modifiziert werden, dass sie
+          Geschwisterknoten im Codebaum sind.
+        </p>
+        <h3>Lemma 2</h3>
+        <p>
+          Wenn wir in $C^*$ die beiden Symbole mit kleinsten
+          Wahrscheinlichkeiten zu einem Symbol zusammenfassen, erhalten wir
+          einen Code $C^{*'}$ für das reduzierte Alphabet mit:
+        </p>
+        $$ L(C^{*'}) = L(C^*) - p_x - p_y $$
+        <p>Da $C'$ optimal für das reduzierte Alphabet ist:</p>
+        $$ L(C') \leq L(C^{*'}) = L(C^*) - p_x - p_y $$
+        <p>Daraus folgt:</p>
+        $$ L(C) = L(C') + p_x + p_y \leq L(C^*) $$
+        <p>
+          Also kann $C^*$ nicht besser sein als $C$. <br />
+          Da der Huffman-Algorithmus einen Code erzeugt, der mindestens so gut
+          ist wie jeder andere Präfixcode, ist er optimal.
+        </p>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Struktureigenschaft optimaler Codes</h2>
+      <div class="theorem-box">
+        <h3>Lemma</h3>
+        <p>
+          Es gibt einen optimalen Präfixcode, in dem die beiden Symbole mit den
+          geringsten Wahrscheinlichkeiten $s_{n-1}$ und $s_n$ denselben
+          Vaterknoten haben und die längsten Codewörter besitzen.
+        </p>
+        <h3>Beweis</h3>
+        <p>
+          Sei $T$ ein optimaler Codebaum für $Q$. In $T$ gibt es mindestens zwei
+          Blätter auf der tiefsten Ebene. Seien $s_i$ und $s_j$ zwei Blätter auf
+          der tiefsten Ebene, die denselben Vaterknoten haben. Wir vertauschen
+          $s_n$ mit $s_j$ und erhalten einen neuen Baum $T'$.
+        </p>
+        \[ \begin{aligned} Z(T') - Z(T) &= p(s_n)k(s_j) + p(s_j)k(s_n) -
+        p(s_j)k(s_j) - p(s_n)k(s_n) \\ &= (p(s_n) - p(s_j))(k(s_j) - k(s_n))
+        \end{aligned} \]
+        <p>
+          Da $p(s_n) \leq p(s_j)$ (weil $s_n$ die kleinste Wahrscheinlichkeit
+          hat), gilt $p(s_n) - p(s_j) \leq 0$. Da $s_j$ auf der tiefsten Ebene
+          liegt und $s_n$ irgendein Blatt ist, gilt $k(s_j) \geq k(s_n)$, also
+          $k(s_j) - k(s_n) \geq 0$ <br />
+          Somit:
+        </p>
+        $$(p(s_n) - p(s_j))(k(s_j) - k(s_n)) \leq 0$$
+        <p>
+          $Z(T') \leq Z(T)$, also ist $T'$ mindestens so gut wie $T$. Durch
+          iterative Anwendung können wir $s_{n-1}$ und $s_n$ an die tiefste
+          Stelle mit gemeinsamem Vater bringen.
+        </p>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Optimale Codeverfahren</h2>
+      <ul>
+        <li>
+          <p><u>Shannon-Fano-Codierung:</u></p>
+          <p>
+            Top-down-Verfahren mit schrittweiser Teilung der
+            Wahrscheinlichkeiten
+          </p>
+        </li>
+        <li>
+          <p><u>Huffman-Codierung:</u></p>
+          <p>
+            Bottom-up-Verfahren durch wiederholtes Zusammenfassen der
+            unwahrscheinlichsten Symbole
+          </p>
+        </li>
+      </ul>
+      <p>
+        Der Huffman-Code erzeugt immer einen optimalen präfixfreien Code und
+        erreicht eine mittlere Codewortlänge \( L \), die die Entropiegrenze
+        erfüllt: \( H \leq L < H + 1 \).
+      </p>
+
+      <h2>Quellencodierungssatz, Shannons erster Hauptsatz</h2>
+      <p>
+        Der Quellencodierungssatz besagt, dass eine Quelle mit Entropie \( H \)
+        verlustlos mit durchschnittlich \( H \) Bits pro Zeichen kodiert werden
+        kann, wenn Blockkodierung verwendet wird.
+      </p>
+
+      <h2>Effizienz und Quellenkodierungssatz</h2>
+      <p>
+        Die Effizienz eines Codes $T$ ist definiert als $\text{EFF}(T) =
+        H(Q)/Z(T)$. Ein Code heißt ideal bei $\text{EFF}(T) = 1$ und kompakt
+        oder optimal, wenn keine andere Präfixcodierung eine kürzere mittlere
+        Länge $Z(T)$ erreicht. Der fundamentale Quellenkodierungssatz von
+        Shannon besagt, dass durch Blockcodierung (Kodierung mehrerer Zeichen
+        zusammen) die Effizienz beliebig nahe an 1 gebracht werden kann:
+        $\lim_{r \to \infty} \text{EFF}(T^r) = 1$.
+      </p>
+
+      <div class="nav-links">
+        <a href="#" class="nav-link">← Vorheriges Thema</a>
+        <a href="#" class="nav-link">Nächstes Thema →</a>
+      </div>
+    </div>
+
+    <script>
+      // Funktion zum Ein- und Ausblenden der interaktiven Elemente
+      function toggleContent(id) {
+        const content = document.getElementById(id);
+        const arrow =
+          content.previousElementSibling.querySelector("span:last-child");
+
+        if (content.style.display === "block") {
+          content.style.display = "none";
+          arrow.textContent = "▼";
+        } else {
+          content.style.display = "block";
+          arrow.textContent = "▲";
+        }
+      }
+
+      // MathJax Konfiguration
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+  </body>
+</html>

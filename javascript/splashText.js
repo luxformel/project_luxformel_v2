@@ -55,7 +55,7 @@ var splashTexts = [
   "hacovercosin",
   "Bonjoo&shy;ouuuuuur",
   "Guer net seriö dat doten!",
-  "167 Kapitelen",
+  "166 Kapitelen",
   "1,83 GB",
   "we do not brew coffee - Error : 418",
   "server is a teapot",
@@ -719,7 +719,11 @@ var splashTexts = [
   "Computers made of meat!",
   "Larrifarri...",
   "Hmmmmmmmm",
-  "1/721",
+  "Vive de Grand-Duc!",
+  "Vive d'Grand-Duchesse!",
+  "6EQUJ5 - WOW!",
+  "Directed by Alan Smithee!",
+  "1/725",
 ];
 function generateRandomText() {
   var randomNumber = Math.floor(Math.random() * splashTexts.length);

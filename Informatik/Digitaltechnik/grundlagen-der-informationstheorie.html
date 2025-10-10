@@ -31,7 +31,220 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <h1>Grundlagen der Informationstheorie</h1>
+      <h1>Grundlagen der Informations&shy;theorie</h1>
+      <h2>Information</h2>
+      <h3>Definition</h3>
+      <p>
+        Information ist eine räumliche oder zeitliche Abfolge physikalischer
+        Signale, die mit bestimmten Häufigkeiten oder Wahrscheinlichkeiten
+        auftritt. Sie lässt sich als Folge von Bits, meistens in 0 und 1
+        angegeben, darstellen und kann unter drei hermeneutischen Ebenen
+        betrachtet werden:
+      </p>
+      <ul>
+        <li>
+          <p><u>Syntax:</u> die formale Struktur und Darstellung</p>
+        </li>
+        <li>
+          <p><u>Semantik:</u> die Bedeutung der Information</p>
+        </li>
+        <li>
+          <p><u>Pragmatik:</u> die Wirkung oder der Nutzen im Kontext</p>
+        </li>
+      </ul>
+      <h2>Informationsgehalt</h2>
+      <p>
+        Der Informationsgehalt \( I \) eines Ereignisses mit
+        Eintrittswahrscheinlichkeit \( p \) ist definiert als:
+      </p>
+      <p>\[ I = -\log_2 p \quad \text{[Bit]} \]</p>
+      <p>
+        Diese logarithmische Maßzahl erfüllt drei wesentliche Eigenschaften:
+      </p>
+      <ol>
+        <li>
+          <p><u>Additivität:</u></p>
+          <p>
+            Bei unabhängigen Ereignissen addieren sich die Informationsgehalte
+          </p>
+        </li>
+        <li>
+          <p><u>Stetigkeit:</u></p>
+          <p>
+            Kleine Änderungen in \( p \) führen zu kleinen Änderungen in \( I \)
+          </p>
+        </li>
+        <li>
+          <p><u>Normierung:</u></p>
+          <p>
+            Ein Bit entspricht der Information eines gleichwahrscheinlichen
+            Ja/Nein-Entscheids
+          </p>
+        </li>
+      </ol>
+      <h2>Entropie</h2>
+      <h3>Definition</h3>
+      <p>
+        Die Entropie $H$ einer diskreten Quelle $Q$ wird definiert als der
+        Erwartungswert des Informationsgehalts ihrer Zeichen:
+      </p>
+      \[ H(Q) = \sum_{s \in Q} p(s) \cdot \log_2\left(\frac{1}{p(s)}\right) \]
+      <p>
+        Wobei: \( p(s) \) die Wahrscheinlichkeit des Auftretens des Symbols \( s
+        \). Die Basis 2 des Logarithmus gibt die Einheit "Bit" pro Zeichen. Für
+        \( p(s) = 0 \) wird der Beitrag als 0 definiert.
+      </p>
+      <h2>Bedeutung der Entropie</h2>
+      <p>
+        Die Entropie quantifiziert die mittlere Unsicherheit über die nächste
+        Nachricht einer Quelle. Sie ist maximal, wenn alle Zeichen
+        gleichwahrscheinlich sind, und minimal (null), wenn ein Zeichen sicher
+        eintritt.
+      </p>
+      <h2>Kompressionsprinzip</h2>
+      <p>
+        Die Entropie stellt eine fundamentale untere Schranke für die
+        verlustlose Kompression dar: Kein Code kann im Mittel weniger als \( H
+        \) Bit pro Zeichen benötigen. Effiziente Kompressionsverfahren weisen
+        häufigen Zeichen kurze Codewörter und seltenen Zeichen längere
+        Codewörter zu.
+      </p>
+      <h2>Shannon-Fano Kodierung</h2>
+      <p>
+        Die Shannon-Fano-Kodierung ist ein verlustloser Kompressionsalgorithmus.
+        Das Ziel der Shannon-Fano-Kodierung ist die Zuordnung von optimalen
+        Präfixcodes zu Symbolen basierend auf ihren
+        Auftrittswahrscheinlichkeiten. Häufig auftretende Symbole erhalten kurze
+        Codes, seltene Symbole längere Codes.
+      </p>
+      <h2>Huffman-Kodierung</h2>
+      <p>
+        Die Huffman-Kodierung ist ein verlustloser Kompressionsalgorithmus. Das
+        Ziel der Huffman-Kodierung ist die Zuordnung von optimalen Präfixcodes
+        zu Symbolen basierend auf ihren Auftrittswahrscheinlichkeiten. Häufige
+        Symbole erhalten kurze Bitfolgen, seltene Symbole längere Bitfolgen,
+        wodurch die durchschnittliche Codelänge minimiert wird.
+      </p>
+      <h2>Optimalität des Huffman-Verfahren</h2>
+      <h3>Theorem</h3>
+      <p>
+        Der Huffman-Algorithmus erzeugt einen optimalen Präfixcode, das heißt
+        einen Code mit minimaler durchschnittlicher Codewortlänge.
+      </p>
+      <h3>Beweis</h3>
+      <p>
+        Für zwei Symbole erzeugt der Huffman-Algorithmus zwei Codewörter der
+        Länge 1 (z.B. '0' und '1'). Dies ist offensichtlich optimal, da kürzere
+        Codewörter nicht möglich sind. <br />
+        Annahme: Der Huffman-Algorithmus erzeugt für jedes Alphabet mit $k$
+        Symbolen ($k \leq n$) einen optimalen Präfixcode.
+        <br />
+        Seien $a_x$ und $a_y$ die beiden Symbole mit den kleinsten
+        Wahrscheinlichkeiten. Der Huffman-Algorithmus kombiniert diese zu einem
+        neuen Symbol $z$ mit $p_z = p_x + p_y$. Wir erhalten ein reduziertes
+        Alphabet mit $n$ Symbolen. <br />
+        Nach Induktionsvoraussetzung erzeugt der Huffman-Algorithmus für das
+        reduzierte Alphabet mit $n$ Symbolen einen optimalen Präfixcode $C'$.
+        <br />
+        Aus $C'$ konstruieren wir $C$, indem wir das Codewort für $z$ durch zwei
+        Codewörter ersetzen:
+      </p>
+      $$c_x = c_z \parallel 0 \quad \text{und} \quad c_y = c_z \parallel 1$$
+      <p>Die durchschnittliche Länge ändert sich um:</p>
+      $$ L(C) = L(C') + p_x + p_y $$
+      <h3>Lemma 1</h3>
+      <p>
+        In jedem optimalen Präfixcode für das ursprüngliche Alphabet haben die
+        beiden Symbole mit kleinsten Wahrscheinlichkeiten Codewörter maximaler
+        Länge, und diese können so modifiziert werden, dass sie
+        Geschwisterknoten im Codebaum sind.
+      </p>
+      <h3>Lemma 2</h3>
+      <p>
+        Wenn wir in $C^*$ die beiden Symbole mit kleinsten Wahrscheinlichkeiten
+        zu einem Symbol zusammenfassen, erhalten wir einen Code $C^{*'}$ für das
+        reduzierte Alphabet mit:
+      </p>
+      $$ L(C^{*'}) = L(C^*) - p_x - p_y $$
+      <p>Da $C'$ optimal für das reduzierte Alphabet ist:</p>
+      $$ L(C') \leq L(C^{*'}) = L(C^*) - p_x - p_y $$
+      <p>Daraus folgt:</p>
+      $$ L(C) = L(C') + p_x + p_y \leq L(C^*) $$
+      <p>
+        Also kann $C^*$ nicht besser sein als $C$. <br />
+        Da der Huffman-Algorithmus einen Code erzeugt, der mindestens so gut ist
+        wie jeder andere Präfixcode, ist er optimal.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Struktureigenschaft optimaler Codes</h2>
+      <h3>Lemma</h3>
+      <p>
+        Es gibt einen optimalen Präfixcode, in dem die beiden Symbole mit den
+        geringsten Wahrscheinlichkeiten $s_{n-1}$ und $s_n$ denselben
+        Vaterknoten haben und die längsten Codewörter besitzen.
+      </p>
+      <h3>Beweis</h3>
+      <p>
+        Sei $T$ ein optimaler Codebaum für $Q$. In $T$ gibt es mindestens zwei
+        Blätter auf der tiefsten Ebene. Seien $s_i$ und $s_j$ zwei Blätter auf
+        der tiefsten Ebene, die denselben Vaterknoten haben. Wir vertauschen
+        $s_n$ mit $s_j$ und erhalten einen neuen Baum $T'$.
+      </p>
+      \[ \begin{aligned} Z(T') - Z(T) &= p(s_n)k(s_j) + p(s_j)k(s_n) -
+      p(s_j)k(s_j) - p(s_n)k(s_n) \\ &= (p(s_n) - p(s_j))(k(s_j) - k(s_n))
+      \end{aligned} \]
+      <p>
+        Da $p(s_n) \leq p(s_j)$ (weil $s_n$ die kleinste Wahrscheinlichkeit
+        hat), gilt $p(s_n) - p(s_j) \leq 0$. Da $s_j$ auf der tiefsten Ebene
+        liegt und $s_n$ irgendein Blatt ist, gilt $k(s_j) \geq k(s_n)$, also
+        $k(s_j) - k(s_n) \geq 0$ <br />
+        Somit:
+      </p>
+      $$(p(s_n) - p(s_j))(k(s_j) - k(s_n)) \leq 0$$
+      <p>
+        $Z(T') \leq Z(T)$, also ist $T'$ mindestens so gut wie $T$. Durch
+        iterative Anwendung können wir $s_{n-1}$ und $s_n$ an die tiefste Stelle
+        mit gemeinsamem Vater bringen.
+      </p>
+      <p class="square">$\square$</p>
+      <h2>Optimale Codeverfahren</h2>
+      <ul>
+        <li>
+          <p><u>Shannon-Fano-Codierung:</u></p>
+          <p>
+            Top-down-Verfahren mit schrittweiser Teilung der
+            Wahrscheinlichkeiten
+          </p>
+        </li>
+        <li>
+          <p><u>Huffman-Codierung:</u></p>
+          <p>
+            Bottom-up-Verfahren durch wiederholtes Zusammenfassen der
+            unwahrscheinlichsten Symbole
+          </p>
+        </li>
+      </ul>
+      <p>
+        Der Huffman-Code erzeugt immer einen optimalen präfixfreien Code und
+        erreicht eine mittlere Codewortlänge \( L \), die die Entropiegrenze
+        erfüllt: \( H \leq L < H + 1 \).
+      </p>
+      <h2>Quellencodierungssatz, Shannons erster Hauptsatz</h2>
+      <p>
+        Der Quellencodierungssatz besagt, dass eine Quelle mit Entropie \( H \)
+        verlustlos mit durchschnittlich \( H \) Bits pro Zeichen kodiert werden
+        kann, wenn Blockkodierung verwendet wird.
+      </p>
+      <h2>Effizienz und Quellenkodierungssatz</h2>
+      <p>
+        Die Effizienz eines Codes $T$ ist definiert als $\text{EFF}(T) =
+        H(Q)/Z(T)$. Ein Code heißt ideal bei $\text{EFF}(T) = 1$ und kompakt
+        oder optimal, wenn keine andere Präfixcodierung eine kürzere mittlere
+        Länge $Z(T)$ erreicht. Der fundamentale Quellenkodierungssatz von
+        Shannon besagt, dass durch Blockcodierung (Kodierung mehrerer Zeichen
+        zusammen) die Effizienz beliebig nahe an 1 gebracht werden kann:
+        $\lim_{r \to \infty} \text{EFF}(T^r) = 1$.
+      </p>
     </div>
   </body>
 </html>

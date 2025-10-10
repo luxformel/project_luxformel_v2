@@ -103,6 +103,7 @@ let sideNavigator = `
     <a href="/Mathe/Logic/foundations-of-set-theory.html">Foundations of Set Theory</a>
     <a href="/Mathe/Fonctions/fonctions-exponentielles.html">Fonction exponentielle</a>
     <a href="/Mathe/Analyse/fonctions-de-plusieurs-variable.html">Fonctions de plusieurs variables</a>
+    <a href="/Mathe/Calculus/functions.html">Functions</a>
     <a href="/Mathe/Linear-Algebra/systems.html">Systems of Linear Equations</a>
     <a href="/Mathe/Fonctions/logarithme-neperien.html">Fonction logarithme népérien</a>
     <a href="/Mathe/Geometrie/geometrie-dans-l-espace.html">Géométrie dans l'espace</a>

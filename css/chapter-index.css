@@ -58,7 +58,9 @@ ol,
 ul {
   margin-left: 2rem;
 }
-
+li {
+  margin-left: 1.4rem;
+}
 ol > li {
   list-style: decimal;
 }

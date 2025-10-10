@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Functions</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Functions</h1>
+
+      <h2>Function Notation</h2>
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          Functions are typically denoted by letters such as $f$, $g$, or $h$.
+          If $f$ is a function and $x$ is an element of its domain, then $f(x)$
+          denotes the output value corresponding to the input $x$. The notation
+          $f: A \to B$ indicates that $f$ is a function with domain $A$ and
+          codomain $B$.
+        </p>
+      </div>
+
+      <h2>Function</h2>
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          A function is a collection of pairs of numbers with the following
+          property: if $(a, b)$ and $(a, c)$ are both in the collection, then $b
+          = c$; in other words, the collection must not contain two different
+          pairs with the same first element.
+        </p>
+      </div>
+
+      <h2>Domain of a Function</h2>
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          If $f$ is a function, the domain of $f$ is the set of all $a$ for
+          which there is some $b$ such that $(a, b)$ is in $f$. If $a$ is in the
+          domain of $f$, it follows from the definition of a function that there
+          is, in fact, a unique number $b$ such that $(a, b)$ is in $f$. This
+          unique $b$ is denoted by $f(a)$.
+        </p>
+      </div>
+      <h3>Notation</h3>
+      <p>The domain of a function $f$ is denoted by $\operatorname{dom}(f)$.</p>
+
+      <h2>Range of a Function</h2>
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          The range of a function $f$ is the set of all values $f(x)$ where $x$
+          is in the domain of $f$. In other words, if $f: A \to B$ is a
+          function, then the range is the set $\{f(x) : x \in A\}$.
+        </p>
+      </div>
+      <h3>Notation</h3>
+      <p>
+        The range of a function $f$ is denoted by $\operatorname{range}(f)$.
+      </p>
+
+      <h2>Function Uniqueness</h2>
+      <div class="theorem-box">
+        <h3>Theorem</h3>
+        <p>
+          If $f$ is a function and $a$ is in the domain of $f$, then there
+          exists exactly one $b$ such that $f(a) = b$.
+        </p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            By the definition of a function, for each $a$ in the domain, there
+            exists at least one $b$ such that $(a, b)$ is in $f$. Suppose for
+            contradiction that there exist two different values $b_1$ and $b_2$
+            such that both $(a, b_1)$ and $(a, b_2)$ are in $f$. This would
+            violate the defining property of a function, which requires that if
+            $(a, b)$ and $(a, c)$ are both in the function, then $b = c$.
+            Therefore, there must be exactly one $b$ for each $a$ in the domain.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Injective Functions, One-to-One Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          A function $f: A \to B$ is called injective if different inputs always
+          produce different outputs. Formally, $f$ is injective if for all $a_1,
+          a_2 \in A$, $f(a_1) = f(a_2)$ implies $a_1 = a_2$.
+        </p>
+      </div>
+
+      <h2>Surjective Functions, Onto Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          A function $f: A \to B$ is called surjective if every element in the
+          codomain $B$ is the image of at least one element in the domain $A$.
+          Formally, $f$ is surjective if for every $b \in B$, there exists an $a
+          \in A$ such that $f(a) = b$.
+        </p>
+      </div>
+
+      <h2>Bijective Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          A function $f: A \to B$ is called bijective if it is both injective
+          and surjective. Bijective functions establish a perfect one-to-one
+          correspondence between the elements of the domain and codomain.
+        </p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Theorem</h3>
+        <p>
+          A function $f: A \to B$ is bijective if and only if there exists a
+          function $f^{-1}: B \to A$ such that $f^{-1} \circ f = \text{id}_A$
+          and $f \circ f^{-1} = \text{id}_B$, where $\text{id}_A$ and
+          $\text{id}_B$ are the identity functions on $A$ and $B$ respectively.
+        </p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            ($\Rightarrow$) Suppose $f$ is bijective. Then for each $b \in B$,
+            there exists a unique $a \in A$ such that $f(a) = b$. Define
+            $f^{-1}(b) = a$. This is well-defined because $f$ is surjective (so
+            such an $a$ exists) and injective (so it's unique). Then
+            $f^{-1}(f(a)) = a$ for all $a \in A$ and $f(f^{-1}(b)) = b$ for all
+            $b \in B$.
+          </p>
+          <p>
+            ($\Leftarrow$) Suppose $f$ has an inverse $f^{-1}$. To show $f$ is
+            injective, assume $f(a_1) = f(a_2)$. Then $f^{-1}(f(a_1)) =
+            f^{-1}(f(a_2))$, so $a_1 = a_2$. To show $f$ is surjective, for any
+            $b \in B$, let $a = f^{-1}(b)$. Then $f(a) = f(f^{-1}(b)) = b$, so
+            $b$ is in the range of $f$.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Inverse Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          If $f: A \to B$ is a bijective function, then it has an inverse
+          function $f^{-1}: B \to A$ defined by $f^{-1}(b) = a$ if and only if
+          $f(a) = b$. The inverse function reverses the action of the original
+          function.
+        </p>
+      </div>
+
+      <h2>Pigeonhole Principle</h2>
+      <div class="theorem-box">
+        <h3>Theorems</h3>
+        <p>
+          If $A$ and $B$ are finite sets and $f: A \to B$ is a function, then:
+        </p>
+        <ol>
+          <li><p>If $|A| > |B|$, then $f$ is not injective.</p></li>
+          <li><p>If $|A| < |B|$, then $f$ is not surjective.</p></li>
+        </ol>
+        <div class="proof-box">
+          <h3>Proofs</h3>
+          <ol>
+            <li>
+              <p>
+                If $|A| > |B|$, then by the pigeonhole principle, at least two
+                elements of $A$ must map to the same element of $B$, so $f$
+                cannot be injective.
+              </p>
+            </li>
+            <li>
+              <p>
+                If $|A| < |B|$, then there are more elements in $B$ than in $A$,
+                so it's impossible for every element of $B$ to be the image of
+                some element of $A$. Therefore, $f$ cannot be surjective.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Composition of Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          If $f: A \to B$ and $g: B \to C$ are functions, then the composition
+          $g \circ f$ is a function from $A$ to $C$ defined by $(g \circ f)(x) =
+          g(f(x))$ for all $x \in A$.
+        </p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Associativity of Composition Theorem</h3>
+        <p>
+          If $f: A \to B$, $g: B \to C$, and $h: C \to D$ are functions, then
+          $(h \circ g) \circ f = h \circ (g \circ f)$.
+        </p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            For any $a \in A$, we have: $$((h \circ g) \circ f)(a) = (h \circ
+            g)(f(a)) = h(g(f(a)))$$ and $$(h \circ (g \circ f))(a) = h((g \circ
+            f)(a)) = h(g(f(a)))$$ Since both compositions give the same result
+            for every $a \in A$, the functions are equal.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Image of Intersection and Union</h2>
+      <div class="theorem-box">
+        <h3>Theorems</h3>
+        <p>Let $f: A \to B$ be a function, and let $X, Y \subseteq A$. Then:</p>
+        <ol>
+          <li><p>$f(X \cup Y) = f(X) \cup f(Y)$</p></li>
+          <li><p>$f(X \cap Y) \subseteq f(X) \cap f(Y)$</p></li>
+        </ol>
+        <p>Equality holds in 2. if $f$ is injective.</p>
+        <div class="proof-box">
+          <h3>Proofs</h3>
+          <ol>
+            <li>
+              <p>
+                ($\subseteq$) If $b \in f(X \cup Y)$, then $b = f(a)$ for some
+                $a \in X \cup Y$. So $a \in X$ or $a \in Y$, which means $b \in
+                f(X)$ or $b \in f(Y)$, so $b \in f(X) \cup f(Y)$.
+              </p>
+              <p>
+                ($\supseteq$) If $b \in f(X) \cup f(Y)$, then $b \in f(X)$ or $b
+                \in f(Y)$. So there exists $a \in X$ or $a \in Y$ such that $b =
+                f(a)$. Thus $a \in X \cup Y$, so $b \in f(X \cup Y)$.
+              </p>
+            </li>
+            <li>
+              <p>
+                If $b \in f(X \cap Y)$, then $b = f(a)$ for some $a \in X \cap
+                Y$. So $a \in X$ and $a \in Y$, which means $b \in f(X)$ and $b
+                \in f(Y)$, so $b \in f(X) \cap f(Y)$.
+              </p>
+              <p>
+                For the equality when $f$ is injective: If $b \in f(X) \cap
+                f(Y)$, then $b \in f(X)$ and $b \in f(Y)$. So there exist $a_1
+                \in X$ and $a_2 \in Y$ such that $f(a_1) = b$ and $f(a_2) = b$.
+                Since $f$ is injective, $a_1 = a_2$, so $a_1 \in X \cap Y$, and
+                thus $b \in f(X \cap Y)$.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Left and Right Inverses Theorems</h3>
+        <p>Let $f: A \to B$ be a function.</p>
+        <ol>
+          <li>
+            <p>
+              There exists $g: B \to A$ such that $g \circ f = I_A$ if and only
+              if $f$ is injective.
+            </p>
+          </li>
+          <li>
+            <p>
+              There exists $h: B \to A$ such that $f \circ h = I_B$ if and only
+              if $f$ is surjective.
+            </p>
+          </li>
+        </ol>
+        <div class="proof-box">
+          <h3>Proofs</h3>
+          <ol>
+            <li>
+              <p>
+                ($\Rightarrow$) If $g \circ f = I_A$ and $f(x) = f(y)$, then $x
+                = g(f(x)) = g(f(y)) = y$, so $f$ is injective.
+              </p>
+              <p>
+                ($\Leftarrow$) If $f$ is injective, for each $b$ in the range of
+                $f$, there's a unique $a$ with $f(a) = b$. Define $g(b) = a$.
+                For $b$ not in the range, define $g(b)$ arbitrarily.
+              </p>
+            </li>
+            <li>
+              <p>
+                ($\Rightarrow$) If $f \circ h = I_B$, then for any $b \in B$, $a
+                = h(b)$ satisfies $f(a) = f(h(b)) = b$, so $f$ is surjective.
+              </p>
+              <p>
+                ($\Leftarrow$) If $f$ is surjective, for each $b \in B$, choose
+                $a_b \in A$ with $f(a_b) = b$. Define $h(b) = a_b$. Then
+                $f(h(b)) = f(a_b) = b$ for all $b \in B$.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>A function $f: \mathbb{R} \to \mathbb{R}$ is:</p>
+        <ul>
+          <li><p>even if $f(-x) = f(x)$ for all $x \in \mathbb{R}$</p></li>
+          <li><p>odd if $f(-x) = -f(x)$ for all $x \in \mathbb{R}$</p></li>
+        </ul>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Properties</h3>
+        <ol>
+          <li>
+            <p>
+              The only function that is both even and odd is the zero function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Every function can be uniquely written as the sum of an even and
+              an odd function.
+            </p>
+          </li>
+        </ol>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            (1) If $f$ is both even and odd, then $f(x) = f(-x) = -f(x)$, so
+            $2f(x) = 0$, hence $f(x) = 0$.
+          </p>
+          <p>
+            (2) For any function $f$, define: $$E(x) = \frac{f(x) + f(-x)}{2},
+            \quad O(x) = \frac{f(x) - f(-x)}{2}$$ Then $E$ is even, $O$ is odd,
+            and $f = E + O$. For uniqueness, if $f = E_1 + O_1 = E_2 + O_2$ with
+            $E_1, E_2$ even and $O_1, O_2$ odd, then $E_1 - E_2 = O_2 - O_1$ is
+            both even and odd, hence zero.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Polynomial Functions</h2>
+
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          A polynomial is a function of the form: $$f(x) = a_nx^n +
+          a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ where $a_0, a_1, \ldots, a_n$
+          are constants and $a_n \neq 0$. The number $n$ is called the degree of
+          the polynomial.
+        </p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Polynomial Division Theorem</h3>
+        <p>
+          For any polynomial $f$ and number $a$, there exist a polynomial $g$
+          and a number $b$ such that: $$f(x) = (x - a)g(x) + b$$
+        </p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$. We can
+            perform polynomial long division of $f(x)$ by $(x - a)$ to obtain
+            quotient $g(x)$ and remainder $b$.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Factor Theorem</h3>
+        <p>If $f(a) = 0$, then $f(x) = (x - a)g(x)$ for some polynomial $g$.</p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            By polynomial division, $f(x) = (x - a)g(x) + b$. Then $0 = f(a) =
+            (a - a)g(a) + b = b$, so $f(x) = (x - a)g(x)$.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Number of Roots Theorem</h3>
+        <p>A degree $n$ polynomial has at most $n$ roots.</p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            We proceed by induction. For $n = 0$, a nonzero constant polynomial
+            has no roots. Assume the theorem holds for degree $n-1$. If a degree
+            $n$ polynomial $f$ has a root $a$, then $f(x) = (x - a)g(x)$ where
+            $g$ has degree $n-1$. By induction, $g$ has at most $n-1$ roots, so
+            $f$ has at most $n$ roots.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Characteristic Functions</h2>
+
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          For a set $A \subseteq \mathbb{R}$, the characteristic function $C_A:
+          \mathbb{R} \to \{0,1\}$ is defined by: $$C_A(x) = \begin{cases} 1 &
+          \text{if } x \in A \\ 0 & \text{if } x \notin A \end{cases}$$
+        </p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Properties of Characteristic Functions Theorem</h3>
+        <p>For sets $A, B \subseteq \mathbb{R}$:</p>
+        <ol>
+          <li><p>$C_{A \cap B}(x) = C_A(x) \cdot C_B(x)$</p></li>
+          <li><p>$C_{A \cup B}(x) = C_A(x) + C_B(x) - C_A(x)C_B(x)$</p></li>
+          <li><p>$C_{\mathbb{R} \setminus A}(x) = 1 - C_A(x)$</p></li>
+        </ol>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Characterization of Characteristic Functions Theorem</h3>
+        <p>
+          A function $f: \mathbb{R} \to \mathbb{R}$ satisfies $f = f^2$ if and
+          only if $f = C_A$ for some set $A \subseteq \mathbb{R}$.
+        </p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            ($\Leftarrow$) If $f = C_A$, then $f(x)^2 = C_A(x)^2 = C_A(x) =
+            f(x)$ since $C_A(x) \in \{0,1\}$.
+          </p>
+          <p>
+            ($\Rightarrow$) If $f = f^2$, then for each $x$, $f(x) = f(x)^2$, so
+            $f(x) \in \{0,1\}$. Let $A = \{x \in \mathbb{R} : f(x) = 1\}$. Then
+            $f = C_A$.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Fixed Points and Iteration</h2>
+
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          A fixed point of a function $f$ is a value $x$ such that $f(x) = x$.
+        </p>
+      </div>
+
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          A function $f$ is idempotent if $f \circ f = f$, i.e., $f(f(x)) =
+          f(x)$ for all $x$.
+        </p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Properties of Idempotent Functions</h3>
+        <p>If $f$ is idempotent, then:</p>
+        <ol>
+          <li><p>Every element in the range of $f$ is a fixed point.</p></li>
+          <li><p>For any $x$, $f(x)$ is a fixed point.</p></li>
+        </ol>
+        <div class="proof-box">
+          <h3>Proofs</h3>
+          <ol>
+            <li>
+              <p>
+                If $y = f(x)$ is in the range, then $f(y) = f(f(x)) = f(x) = y$.
+              </p>
+            </li>
+            <li>
+              <p>
+                $f(f(x)) = f(x)$ by idempotence, so $f(x)$ is a fixed point.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Functional Equations</h2>
+
+      <div class="theorem-box">
+        <h3>Cauchy's Functional Equation Theorem</h3>
+        <p>
+          If $f: \mathbb{R} \to \mathbb{R}$ satisfies $f(x + y) = f(x) + f(y)$
+          for all $x, y \in \mathbb{R}$, and $f$ is continuous, then $f(x) = cx$
+          for some constant $c$.
+        </p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>First, $f(0) = f(0 + 0) = f(0) + f(0)$, so $f(0) = 0$.</p>
+          <p>For natural numbers $n$, $f(nx) = nf(x)$ by induction.</p>
+          <p>
+            For rational numbers $\frac{p}{q}$, $f(\frac{p}{q}) =
+            \frac{p}{q}f(1)$.
+          </p>
+          <p>By continuity, $f(x) = xf(1)$ for all $x \in \mathbb{R}$.</p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <div class="theorem-box">
+        <h3>Additive and Multiplicative Functions Theorem</h3>
+        <p>If $f: \mathbb{R} \to \mathbb{R}$ satisfies:</p>
+        <ol>
+          <li><p>$f(x + y) = f(x) + f(y)$ for all $x, y$</p></li>
+          <li><p>$f(xy) = f(x)f(y)$ for all $x, y$</p></li>
+          <li><p>$f$ is not identically zero</p></li>
+        </ol>
+        <p>Then $f(x) = x$ for all $x \in \mathbb{R}$.</p>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            First, $f(1) = f(1 \cdot 1) = f(1)^2$, so $f(1) = 0$ or $1$. If
+            $f(1) = 0$, then $f(x) = f(x \cdot 1) = f(x)f(1) = 0$ for all $x$,
+            contradicting (3). So $f(1) = 1$.
+          </p>
+          <p>
+            For rational $r = \frac{p}{q}$, $f(r) = r$ by the additive property.
+          </p>
+          <p>
+            If $x > 0$, then $x = y^2$ for some $y$, so $f(x) = f(y)^2 \geq 0$.
+          </p>
+          <p>
+            If $x > y$, then $f(x) - f(y) = f(x - y) > 0$ (since $x - y > 0$ and
+            $f$ is not identically zero), so $f$ is strictly increasing.
+          </p>
+          <p>
+            Since $f$ agrees with the identity on rationals and is increasing,
+            $f(x) = x$ for all $x \in \mathbb{R}$.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Max, Min, and Absolute Value</h2>
+
+      <div class="theorem-box">
+        <h3>Max-Min Formula Theorem</h3>
+        <p>For any functions $f, g: \mathbb{R} \to \mathbb{R}$:</p>
+        <ol>
+          <li>$\max(f, g)(x) = \frac{f(x) + g(x) + |f(x) - g(x)|}{2}$</li>
+          <li>$\min(f, g)(x) = \frac{f(x) + g(x) - |f(x) - g(x)|}{2}$</li>
+          <li>$f(x) = \max(f, 0)(x) + \min(f, 0)(x)$</li>
+        </ol>
+        <div class="proof-box">
+          <h3>Proof</h3>
+          <p>
+            For any real numbers $a, b$: $$\max(a, b) = \frac{a + b + |a -
+            b|}{2}$$ $$\min(a, b) = \frac{a + b - |a - b|}{2}$$ Applying these
+            pointwise gives (1) and (2). For (3), note that $\max(f, 0) +
+            \min(f, 0) = f$.
+          </p>
+        </div>
+        <p class="square">$\square$</p>
+      </div>
+
+      <h2>Domain Determination</h2>
+
+      <div class="theorem-box">
+        <h3>Domain of Composite Functions Theorem</h3>
+        <p>
+          For functions $f: A \to B$ and $g: B \to C$, the domain of $g \circ f$
+          is: $$\{x \in A : f(x) \in \text{domain of } g\}$$
+        </p>
+      </div>
+      <h3>Proof</h3>
+      <p>
+        The proof follows from the definition of function composition and the
+        requirement that the output of $f$ must lie in the domain of $g$ for
+        $g(f(x))$ to be defined.
+      </p>
+      <p class="square">$\square$</p>
+
+      <div class="theorem-box">
+        <h3>Domain of Algebraic Expressions Theorem</h3>
+        <p>The domain of an expression is the set of all $x$ for which:</p>
+        <ol>
+          <li><p>Denominators are nonzero</p></li>
+          <li><p>Arguments of square roots are nonnegative</p></li>
+          <li><p>Arguments of logarithms are positive</p></li>
+          <li><p>etc.</p></li>
+        </ol>
+      </div>
+      <h3>Proof</h3>
+      <p>
+        The proof follows from the definitions of the functions involved and the
+        restrictions on their domains.
+      </p>
+      <p class="square">$\square$</p>
+
+      <h2>Addition of Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          If $f$ and $g$ are functions with the same domain, then their sum $f +
+          g$ is defined by $(f + g)(x) = f(x) + g(x)$ for all $x$ in the domain.
+        </p>
+      </div>
+
+      <h2>Multiplication of Functions</h2>
+      <h3>Definition</h3>
+
+      <div class="definition-box">
+        <p>
+          If $f$ and $g$ are functions with the same domain, then their product
+          $f \cdot g$ is defined by $(f \cdot g)(x) = f(x) \cdot g(x)$ for all
+          $x$ in the domain.
+        </p>
+      </div>
+
+      <h2>Scalar Multiplication</h2>
+      <h3>Definition</h3>
+      <div class="definition-box">
+        <p>
+          If $f$ is a function and $c$ is a constant (scalar), then the scalar
+          multiple $c \cdot f$ is defined by $(c \cdot f)(x) = c \cdot f(x)$ for
+          all $x$ in the domain of $f$.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
