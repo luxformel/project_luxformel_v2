@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="/Informatik/okaida.css" />
     <link rel="stylesheet" href="/Informatik/button-prism.css" />
+
     <script src="prism-latex.js"></script>
     <script src="prism-latex-button.js"></script>
 
@@ -30,8 +31,87 @@
   <body>
     <div class="main-wrapper">
       <p id="printWatermark"></p>
-      <h1>LATEX Basics</h1>
-      <p>Latex is a markup language used to create scientific documentation.</p>
+      <h1>LaTeX Basics</h1>
+      <p>LaTeX is a markup language used to create scientific documentation.</p>
+
+      <h2>Document Structure</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Basic document structure
+\documentclass{article} % Defines document type
+\usepackage{amsmath}    % For advanced math features
+\usepackage{graphicx}   % For including images
+
+\title{Document Title}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This is the introduction.
+
+\subsection{Subsection}
+This is a subsection.
+
+\end{document}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Text Formatting</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Text formatting commands
+\textbf{Bold Text}      % Bold formatting
+\textit{Italic Text}    % Italic formatting
+\underline{Underlined}  % Underlined text
+\emph{Emphasized}      % Emphasized text (usually italic)
+
+% Special text environments
+\begin{verbatim}
+Verbatim text exactly as typed
+\end{verbatim}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Lists</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Bullet point list
+\begin{itemize}
+  \item First item
+  \item Second item
+  \item Third item
+\end{itemize}
+
+% Numbered list
+\begin{enumerate}
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+% Description list
+\begin{description}
+  \item[Term] Description of term
+  \item[Another] Another description
+\end{description}
+            </code>
+          </pre>
+        </div>
+      </div>
+
       <h2>Comment</h2>
       <div class="code-container">
         <div class="code-wrapper">
@@ -39,9 +119,10 @@
             <code id="code" class="language-latex">
 % This is a comment
             </code>
-        </pre>
+          </pre>
         </div>
       </div>
+
       <h2>Basic Notation</h2>
       <div class="code-container">
         <div class="code-wrapper">
@@ -76,9 +157,8 @@
 \sqrt[n]{}
 %percent
 \%
-%
             </code>
-        </pre>
+          </pre>
         </div>
       </div>
 
@@ -120,9 +200,10 @@
 % ensemble des voudrons
 \mathbb{V}
             </code>
-        </pre>
+          </pre>
         </div>
       </div>
+
       <h2>Quantifiers</h2>
       <div class="code-container">
         <div class="code-wrapper">
@@ -135,7 +216,7 @@
 %does not exist
 \nexists
             </code>
-        </pre>
+          </pre>
         </div>
       </div>
 
@@ -145,9 +226,9 @@
           <pre>
             <code id="code" class="language-latex">
 % Empty set
-\varnothingset
+\varnothing
             </code>
-        </pre>
+          </pre>
         </div>
       </div>
 
@@ -163,7 +244,316 @@
 %difference
 \setminus
             </code>
-        </pre>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Figures and Tables</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Figure environment
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{image.png}
+  \caption{Figure caption}
+  \label{fig:example}
+\end{figure}
+
+% Table environment
+\begin{table}[h]
+  \centering
+  \caption{Table caption}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Header 1 & Header 2 & Header 3 \\
+    \hline
+    Data 1 & Data 2 & Data 3 \\
+    \hline
+  \end{tabular}
+  \label{tab:example}
+\end{table}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Mathematical Environments</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Numbered equation
+\begin{equation}
+  E = mc^2
+  \label{eq:emc}
+\end{equation}
+
+% Aligned equations
+\begin{align}
+  a &= b + c \\
+  d &= e + f + g \\
+  h &= i + j
+\end{align}
+
+% Inline math: $E = mc^2$
+% Display math: \[ E = mc^2 \]
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>References and Citations</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Cross-references
+See Figure~\ref{fig:example} and Table~\ref{tab:example}.
+Equation~\ref{eq:emc} shows the mass-energy equivalence.
+
+% Citations
+This was proven by Einstein~\cite{einstein1905}.
+
+% Bibliography (in preamble)
+\usepackage{natbib}
+\bibliographystyle{plain}
+
+% Bibliography entries
+\begin{thebibliography}{9}
+\bibitem{einstein1905}
+  A. Einstein,
+  \emph{On the Electrodynamics of Moving Bodies},
+  Annalen der Physik, 1905.
+\end{thebibliography}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Useful Packages</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Essential packages
+\usepackage{amsmath}      % Advanced math typesetting
+\usepackage{graphicx}     % Including graphics
+\usepackage{hyperref}     % Hyperlinks and PDF metadata
+\usepackage{geometry}     % Page layout control
+\usepackage{url}          % URL typesetting
+
+% Additional useful packages
+\usepackage{amsfonts}     % Additional math fonts
+\usepackage{amssymb}      % Math symbols
+\usepackage{xcolor}       % Color support
+\usepackage{listings}     % Code listings
+\usepackage{tabularx}     % Extended table features
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Footnotes and Margin Notes</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Footnotes
+This is some text with a footnote\footnote{This is the footnote text.}.
+
+% Margin notes
+This text has a margin note\marginpar{Note in the margin}.
+            </code>
+          </pre>
+        </div>
+      </div>
+      <h2>Footnotes and Margin Notes</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Logical symbols
+\forall         % Universal quantifier
+\exists, \exist % Existential quantifier
+\in, \isin      % Element of
+\notin          % Not element of
+\complement     % Complement
+
+% Set operations
+\subset         % Subset
+\emptyset, \empty % Empty set
+\mid            % Such that or divides
+
+% Logical operators
+\land           % Logical AND
+\lor            % Logical OR
+\neg, \not      % Logical NOT
+
+% Arrows and implications
+\mapsto         % Maps to
+\to             % Right arrow
+\gets           % Left arrow
+\leftrightarrow % Left-right arrow
+\implies        % Implies
+\iff            % If and only if
+\therefore      % Therefore
+\because        % Because
+
+% Set notation examples
+\{x \mid x < \tfrac{1}{2}\}
+\set{x \mid x < 5}
+            </code>
+          </pre>
+        </div>
+      </div>
+      <h2>LaTeX Mathematical Symbols Cheat Sheet</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% LaTeX Mathematical Symbols Reference
+% Common symbols and their LaTeX commands
+
+% Quantifiers
+∀   \forall        % For all
+∃   \exists        % There exists
+∄   \nexists       % There does not exist
+
+% Set Theory
+∈   \in            % Element of
+∉   \notin         % Not element of
+∅   \emptyset      % Empty set
+∅   \varnothing    % Alternative empty set
+⊂   \subset        % Subset
+∁   \complement    % Complement
+
+% Logic Operators
+∧   \land          % Logical and
+∨   \lor           % Logical or
+¬   \neg           % Logical not
+¬   \not           % Alternative not
+
+% Arrows and Implications
+→   \to            % Right arrow
+→   \implies       % Implies
+←   \gets          % Left arrow
+↔   \leftrightarrow % Left-right arrow
+↔   \iff           % If and only if
+↦   \mapsto        % Maps to
+
+% Set Notation Examples
+\[ \{x \mid x < \tfrac{1}{2}\} \]          % Set with mid bar
+\set{x \mid x < \tfrac{1}{2}}             % Alternative set notation
+\{x \mid x < 5\}                          % Simple set
+\set{x \leq 5}                            % Alternative simple set
+
+            </code>
+          </pre>
+        </div>
+      </div>
+      <h2>LaTeX Dirac Bra-Ket Notation</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% Dirac Bra-Ket Notation for Quantum Mechanics
+% Requires \usepackage{braket} in preamble
+
+% Basic Bra-Ket Notation
+(|          \bra{\phi}              % Bra vector
+|)          \ket{\psi}              % Ket vector
+( | )       \braket{\phi | \psi}    % Bra-ket inner product
+
+% Scaled Bra-Ket Notation
+( |     \Bra{\phi}                  % Scaled bra vector
+| )     \Ket{\psi}                  % Scaled ket vector
+
+% Matrix Elements and Expectation Values
+( \phi | A | \psi )                 % Matrix element
+\bra{\phi} A \ket{\psi}             % Alternative matrix element
+\braket{\phi | A | \psi}            % Expectation value notation
+
+% Complex Bra-Ket Example
+( \phi | \frac{\partial^2}{\partial t^2} | \psi )   % Operator between states
+\Braket{ \phi | \frac{\partial^2}{\partial t^2} | \psi } % Scaled version
+
+% Note: The braket package provides proper spacing and scaling
+% for quantum mechanical notation in LaTeX
+            </code>
+          </pre>
+        </div>
+      </div>
+      <h2>LaTeX Relation Symbols</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-latex">
+% LaTeX Relation Symbols and Operators
+% Mathematical relation symbols and their LaTeX commands
+
+% Equality and Equivalence
+=           % Equals
+\equiv      % Equivalent
+\fallingdotseq % Falling dots equal
+\eqcirc     % Equal with circle
+\eqcolon    % Equal colon (or \minuscolon)
+\eqqcolon   % Equal colon colon (or \equalscolon)
+\eqsim      % Equal similar
+\Eguiv      % Equivalent (typo corrected: should be \equiv)
+
+% Inequality Relations
+<           % Less than
+>           % Greater than
+\ll         % Much less than
+\gg         % Much greater than
+\lessapprox % Less approximately
+\lesseqgtr  % Less equal greater
+\lesseqqgtr % Less equal equal greater
+\lessgtr    % Less greater
+\lesssim    % Less similar
+\ggg        % Much much greater than
+\gggtr      % Much greater than (alternative)
+
+% Subset and Superset Relations
+\subset     % Subset (or \sub)
+\subseteq   % Subset or equal (or \sube)
+\Subset     % Double subset
+\supset     % Superset
+\supseteq   % Superset or equal (or \supe)
+\Supset     % Double superset
+\sqsubset   % Square subset
+\sqsupset   % Square superset
+
+% Order Relations
+\prec       % Precedes
+\precapprox % Precedes approximately
+\preccurlyeq % Precedes curly equal
+\preceq     % Precedes or equal
+\precsim    % Precedes similar
+\succ       % Succeeds
+\succapprox % Succeeds approximately
+\succcurlyeq % Succeeds curly equal
+\succeq     % Succeeds or equal
+\succsim    % Succeeds similar
+
+% Other Relations
+\approx     % Approximately equal
+\thickapprox % Thick approximately equal
+\parallel   % Parallel
+\perp       % Perpendicular
+\pitchfork  % Pitchfork
+\models     % Models
+\vDash      % Double vertical bar equals
+\Vdash      % Double vertical bar dash
+\vdash      % Vertical bar dash
+\asymp      % Asymptotically equal
+\bowtie     % Bowtie
+\Join       % Join
+
+            </code>
+          </pre>
         </div>
       </div>
     </div>

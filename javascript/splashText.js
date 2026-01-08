@@ -55,7 +55,7 @@ var splashTexts = [
   "hacovercosin",
   "Bonjoo&shy;ouuuuuur",
   "Guer net seriö dat doten!",
-  "166 Kapitelen",
+  "167 Kapitelen",
   "1,83 GB",
   "we do not brew coffee - Error : 418",
   "server is a teapot",
@@ -723,7 +723,17 @@ var splashTexts = [
   "Vive d'Grand-Duchesse!",
   "6EQUJ5 - WOW!",
   "Directed by Alan Smithee!",
-  "1/725",
+  "'cuz its rabbit season <br> i live and breath it",
+  "Our formula,<br> In the middle of our,<br> Our formula,<br> in the middle of our, ...",
+  "Initiating: Alpha wave production!",
+  "Data Warehouse, Data Lake, Lake House",
+  "Analog Studying Centre",
+  "530$ en fomations?!",
+  "Will somebody please think of the formula?!",
+  "Welcome to medical monday!",
+  "Where is the element of suprise on the periodic table?",
+  "Made in horzine!",
+  "1/735",
 ];
 function generateRandomText() {
   var randomNumber = Math.floor(Math.random() * splashTexts.length);

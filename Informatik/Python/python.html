@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+
+    <script src="prism-python-button.js"></script>
+    <script src="prism-python.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Python — Full Course</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Python — Complete Course</h1>
+
+      <p>
+        This course starts at the very beginning and progresses through
+        intermediate and advanced topics. Each module has examples and exercises
+        linked from this page.
+      </p>
+
+      <h2>Course Outline</h2>
+      <ol>
+        <li><a href="./01-introduction.html">Introduction &amp; Setup</a></li>
+        <li><a href="./02-basics.html">Basics: Syntax, Variables, Types</a></li>
+        <li>
+          <a href="./03-control-flow.html"
+            >Control Flow: Conditionals &amp; Loops</a
+          >
+        </li>
+        <li>
+          <a href="./04-data-structures.html"
+            >Data Structures: Lists, Tuples, Sets, Dicts</a
+          >
+        </li>
+        <li>
+          <a href="./05-functions.html">Functions, Scope &amp; Lambdas</a>
+        </li>
+        <li><a href="./06-modules-packages.html">Modules &amp; Packages</a></li>
+        <li><a href="./07-oop.html">Object-Oriented Programming</a></li>
+        <li>
+          <a href="./08-files-exceptions.html">File I/O &amp; Exceptions</a>
+        </li>
+        <li><a href="./09-stdlib-pip.html">Standard Library &amp; pip</a></li>
+        <li>
+          <a href="./10-testing-debugging.html"
+            >Testing, Debugging &amp; Logging</a
+          >
+        </li>
+        <li><a href="./11-advanced.html">Advanced Topics</a></li>
+        <li>
+          <a href="./12-projects.html">Projects &amp; Guided Exercises</a>
+        </li>
+      </ol>
+
+      <h2>Resources</h2>
+      <ul>
+        <li>
+          Examples: <a href="./examples/">`Informatik/Python/examples/`</a>
+        </li>
+        <li>
+          Exercises: <a href="./exercises/">`Informatik/Python/exercises/`</a>
+        </li>
+      </ul>
+
+      <h2>Quick Start Example</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-python">
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    print(greet("world"))
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Introduction to Python</h2>
+      <p>
+        Python is a versatile, high-level programming language known for its
+        simplicity and readability. It is widely used in web development, data
+        analysis, artificial intelligence, scientific computing, and more.
+      </p>
+
+      <h2>Core Concepts</h2>
+
+      <h3>1. Syntax and Variables</h3>
+      <p>
+        Python uses indentation to define blocks of code. Variables are
+        dynamically typed, meaning you don't need to declare their type
+        explicitly.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Variables and Printing
+name = "Alice"
+age = 25
+print(f"Name: {name}, Age: {age}")
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>2. Control Flow</h3>
+      <p>
+        Python supports conditional statements and loops to control the flow of
+        execution.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: If-Else and Loops
+number = 10
+if number > 0:
+    print("Positive number")
+else:
+    print("Non-positive number")
+
+for i in range(5):
+    print(i)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>3. Data Structures</h3>
+      <p>
+        Python provides built-in data structures like lists, tuples, sets, and
+        dictionaries to store and manipulate data.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Lists and Dictionaries
+fruits = ["apple", "banana", "cherry"]
+prices = {"apple": 1.2, "banana": 0.5, "cherry": 2.5}
+
+print(fruits)
+print(prices["apple"])
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>4. Functions</h3>
+      <p>
+        Functions in Python are defined using the <code>def</code> keyword. They
+        help in organizing code into reusable blocks.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Functions
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>5. Object-Oriented Programming (OOP)</h3>
+      <p>Python supports OOP principles like classes and inheritance.</p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Classes and Objects
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hi, I'm {self.name} and I'm {self.age} years old."
+
+person = Person("Alice", 25)
+print(person.greet())
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>6. File Handling</h3>
+      <p>Python makes it easy to work with files using built-in functions.</p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Reading and Writing Files
+with open("example.txt", "w") as file:
+    file.write("Hello, World!")
+
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>7. Error Handling</h3>
+      <p>
+        Python uses <code>try</code> and <code>except</code> blocks to handle
+        exceptions gracefully.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Exception Handling
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>8. Modules and Libraries</h3>
+      <p>
+        Python has a rich ecosystem of modules and libraries. You can import
+        built-in modules or install third-party libraries using
+        <code>pip</code>.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Using Modules
+import math
+
+print(math.sqrt(16))
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>9. Advanced Topics</h3>
+      <p>
+        Python also supports advanced features like decorators, generators, and
+        context managers.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Generators
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+for num in fibonacci(5):
+    print(num)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>10. Decorators</h3>
+      <p>
+        Decorators are a powerful feature in Python that allow you to modify the
+        behavior of a function or class. They are often used for logging,
+        enforcing access control, instrumentation, and more.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Using a Decorator
+def decorator(func):
+    def wrapper():
+        print("Before the function call")
+        func()
+        print("After the function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>11. Context Managers</h3>
+      <p>
+        Context managers are used to manage resources, such as files or network
+        connections, ensuring they are properly cleaned up after use. The
+        <code>with</code> statement is commonly used for this purpose.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Using a Context Manager
+with open("example.txt", "w") as file:
+    file.write("Hello, World!")
+
+# The file is automatically closed after the block
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>12. Generators</h3>
+      <p>
+        Generators are a special type of iterator in Python that allow you to
+        yield values one at a time, making them memory-efficient for large
+        datasets.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Generator Function
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+for number in countdown(5):
+    print(number)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>13. Regular Expressions</h3>
+      <p>
+        Regular expressions (regex) are a powerful tool for pattern matching and
+        text processing. Python provides the <code>re</code> module for working
+        with regex.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Using Regular Expressions
+import re
+
+pattern = r"\b[A-Za-z]+\b"
+text = "Python is amazing!"
+
+matches = re.findall(pattern, text)
+print(matches)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>14. Working with APIs</h3>
+      <p>
+        Python makes it easy to interact with APIs using libraries like
+        <code>requests</code>. You can send HTTP requests and handle responses
+        efficiently.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Fetching Data from an API
+import requests
+
+response = requests.get("https://api.github.com")
+if response.status_code == 200:
+    print(response.json())
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>15. Working with Databases</h3>
+      <p>
+        Python provides libraries like <code>sqlite3</code> for working with
+        databases. You can execute SQL queries to interact with the database.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: SQLite Database
+import sqlite3
+
+connection = sqlite3.connect("example.db")
+cursor = connection.cursor()
+
+cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER, name TEXT)")
+cursor.execute("INSERT INTO users (id, name) VALUES (?, ?)", (1, "Alice"))
+
+connection.commit()
+connection.close()
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>16. Concurrency and Parallelism</h3>
+      <p>
+        Python supports concurrency and parallelism using modules like
+        <code>threading</code> and <code>multiprocessing</code>. These are
+        useful for running tasks simultaneously.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Using Threads
+import threading
+
+def print_numbers():
+    for i in range(5):
+        print(i)
+
+thread = threading.Thread(target=print_numbers)
+thread.start()
+thread.join()
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h3>17. Data Visualization</h3>
+      <p>
+        Python has powerful libraries like <code>matplotlib</code> and
+        <code>seaborn</code> for creating visualizations.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code class="language-python">
+# Example: Plotting with Matplotlib
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 9, 16, 25]
+
+plt.plot(x, y)
+plt.title("Line Graph")
+plt.show()
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

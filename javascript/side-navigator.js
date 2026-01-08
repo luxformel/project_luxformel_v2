@@ -63,17 +63,21 @@ let sideNavigator = `
   </div>
   <a href="#Informatik" class="submenu-toggle">Informatik</a>
   <div class="submenu">
-    <a href="/Informatik/CSS/css-basics.html">CSS Basics</a>
+    <a href="/Informatik/Cloud/cloud-computing.html">Cloud Computing</a>
+    <a href="/Informatik/web-development/css.html">CSS</a>
     <a href="/Informatik/Digitaltechnik/codes.html">Codes</a>
+    <a href="/Informatik/Databases/data-warehouse.html">Data Warehouse</a>
     <a href="/Informatik/Digitaltechnik/digitaltechnik-grundlagen.html">Grundlagen der Digitaltechnik</a>
     <a href="/Informatik/Digitaltechnik/grundlagen-der-informationstheorie.html">Grundlagen der Informationstheorie</a>
-    <a href="/Informatik/HTML/bascis-html.html">HTML Basics</a>
+    <a href="/Informatik/web-development/html.html">HTML</a>
     <a href="/Informatik/JAVA/array-lists.html">Java Array Lists</a>
     <a href="/Informatik/JAVA/java-basics.html">Java Basics</a>
     <a href="/Informatik/JAVA/problemes-types.html">Java problèmes types</a>
     <a href="/Informatik/LaTeX/latex-basics.html">LATEX Basics</a>
+    <a href="/Informatik/Deep-Learning/natural-language-processing.html">Natural Language Processing</a>
     <a href="/Informatik/Digitaltechnik/mikroprozessorarchitektur.html">Mikroprozessor&shy;architektur</a>
     <a href="/Informatik/Digitaltechnik/minimierung-und-schaltungsentwurf.html">Minimierung und Schaltungsentwurf</a>
+    <a href="/Informatik/Python/python.html">Python</a>
     <a href="/Informatik/Digitaltechnik/schaltnetze.html">Schaltnetze</a>
     <a href="/Informatik/Digitaltechnik/schaltwerke.html">Schaltwerke</a>
     <a href="/Informatik/Tabellen/vorsilben.html">Vorsilben</a>
@@ -137,6 +141,7 @@ let sideNavigator = `
   <a href="#Messtechnik" class="submenu-toggle">Messtechnik</a>
   <div class="submenu">
     <a href="/Messtechnik/Grundlagen/messtechnik.html">Messtechnik</a>
+    <a href="/Messtechnik/Laboratory/error-calculation.html">Error calculation</a>
   </div>
   <a href="#Physik" class="submenu-toggle">Physik</a>
   <div class="submenu">

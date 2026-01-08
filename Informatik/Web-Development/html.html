@@ -25,12 +25,12 @@
 
     <script defer src="/settings/settings.js"></script>
 
-    <title>HTML Basics</title>
+    <title>HTML</title>
   </head>
   <body>
     <div class="main-wrapper">
       <p id="printWatermark"></p>
-      <h1>HTML Basics</h1>
+      <h1>HTML</h1>
       <p>
         HTML, stands for HyperText Markup Language. We use it to mark up
         different content in our website in order for the browser to understand
@@ -198,7 +198,165 @@
         </pre>
         </div>
       </div>
-      <!-- here it stops-->
+      <h2>Images</h2>
+      <p>
+        Images enrich content and must include an <code>alt</code> attribute for
+        accessibility.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+              <code id="code" class="language-html">
+  &lt;!-- Basic image tag --&gt;
+  &lt;img src="/img/example.jpg" alt="Description of image"/&gt;
+  &lt;!-- Responsive image with srcset --&gt;
+  &lt;img src="/img/example-small.jpg"
+       srcset="/img/example-small.jpg 480w, /img/example.jpg 1024w"
+       sizes="(max-width: 600px) 480px, 1024px"
+       alt="Example responsive image"/&gt;
+              </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Tables</h2>
+      <p>
+        Use tables for tabular data. Add a caption and use header cells where
+        appropriate.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+              <code id="code" class="language-html">
+  &lt;table&gt;
+    &lt;caption&gt;Monthly sales (EUR)&lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;Month&lt;/th&gt;&lt;th&gt;Sales&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;January&lt;/td&gt;&lt;td&gt;1.200&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;February&lt;/td&gt;&lt;td&gt;1.450&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+              </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Forms</h2>
+      <p>
+        Forms collect user input. Always pair inputs with
+        <code>&lt;label&gt;</code> for usability.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+              <code id="code" class="language-html">
+  &lt;form action="/subscribe" method="post"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required/&gt;
+    &lt;label for="plan"&gt;Plan:&lt;/label&gt;
+    &lt;select id="plan" name="plan"&gt;
+      &lt;option value="free"&gt;Free&lt;/option&gt;
+      &lt;option value="pro"&gt;Pro&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button type="submit"&gt;Subscribe&lt;/button&gt;
+  &lt;/form&gt;
+              </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Media: Audio &amp; Video</h2>
+      <p>
+        Use native tags to embed audio and video with controls and fallback
+        content.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+              <code id="code" class="language-html">
+  &lt;audio controls&gt;
+    &lt;source src="/media/song.mp3" type="audio/mpeg"&gt;
+    Your browser does not support audio.
+  &lt;/audio&gt;
+
+  &lt;video controls width="640"&gt;
+    &lt;source src="/media/video.mp4" type="video/mp4"&gt;
+    &lt;p&gt;Fallback: download the video &lt;a href="/media/video.mp4"&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/video&gt;
+              </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Meta tags &amp; SEO</h2>
+      <p>
+        Meta tags help with search engines and social sharing. Put them in the
+        <code>&lt;head&gt;</code>.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+              <code id="code" class="language-html">
+  &lt;meta name="description" content="Short description for search results" /&gt;
+  &lt;meta name="robots" content="index, follow" /&gt;
+  &lt;meta property="og:title" content="Page title for social" /&gt;
+              </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Accessibility</h2>
+      <p>
+        Accessible sites reach more users. Use semantic elements,
+        <code>alt</code>, proper labels and ARIA when necessary.
+      </p>
+      <ul>
+        <li>
+          <p>Provide meaningful <code>alt</code> text for images.</p>
+        </li>
+        <li>
+          <p>Use <code>&lt;label&gt;</code> with form controls.</p>
+        </li>
+        <li>
+          <p>Ensure sufficient color contrast in CSS (see `/css/main.css`).</p>
+        </li>
+      </ul>
+
+      <h2>Complete example</h2>
+      <p>Small example combining several elements into a simple page:</p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+              <code id="code" class="language-html">
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"/&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt;
+    &lt;meta name="description" content="Tiny example page"/&gt;
+    &lt;title&gt;Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;&lt;h1&gt;Welcome&lt;/h1&gt;&lt;/header&gt;
+    &lt;main&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Picture&lt;/h2&gt;
+        &lt;img src="/img/example.jpg" alt="Landscape"/&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Subscribe&lt;/h2&gt;
+        &lt;form&gt;&lt;label&gt;Email&lt;input type="email"/&gt;&lt;/label&gt;&lt;/form&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;© Luxformel&lt;/footer&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+              </code>
+          </pre>
+        </div>
+      </div>
     </div>
   </body>
 </html>

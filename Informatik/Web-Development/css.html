@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="prism-css.js"></script>
+    <script src="prism-copy-button-css.js"></script>
+
+    <link rel="stylesheet" href="/Informatik/okaida.css" />
+    <link rel="stylesheet" href="/Informatik/button-prism.css" />
+    <script src="/javascript/mathjax.js"></script>
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>CSS</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <p id="printWatermark"></p>
+      <h1>CSS</h1>
+      <p>
+        CSS, stands for Cascading Style Sheets. It is used to style websites
+        written in .html files.
+      </p>
+
+      <h2>Comment</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+/* this is a comment */
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Styling HTML using CSS selectors</h2>
+
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+p{
+  color: blue;
+}
+.className{
+  color: red;
+}
+#idName{
+  color: green;
+}
+h1{
+  color: aquamarine;
+}
+/*If an element is in some other element*/
+#idName p{
+  color: blue;
+}
+.className h1{
+  color: red;
+}
+/*If an element is specifically in some other element*/
+#idName > p{
+   color: blue;
+}
+.className > h1{
+  color: red;
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Text Edit</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+p{ 
+  /*changes Text color form current Text color*/ 
+  color: blue;
+  /*changes Text color form current Text color in hex code*/ 
+  color: #ffffff; 
+  /*changes font size in pixels*/ 
+  font-size: 20px;
+  /*changes font size in em*/ 
+  font-size: 20em; 
+  /*changes font size in rem*/ 
+  font-size: 20rem; 
+  /*underlining text*/ 
+  text-decoration: underline; 
+  text-decoration: line-through; 
+  /*changing the letter spacing in pixels*/ 
+  letter-spacing: 2px; 
+  /*changing the font style to italic, bold...*/ 
+  font-style: italic; font-style: bold;
+  /*changing the line height in pixels*/ 
+  line-height: 16px;
+  /*changing the text to all uppercase, lowercase, capitalized...*/
+  text-transform: uppercase; text-transform: lowercase;
+  text-transform: capitalized; 
+  /*add word spacing*/
+  word-spacing: 10px; 
+}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <h2>Box Model</h2>
+      <p>
+        The CSS box model describes the rectangular boxes that are generated for
+        elements in the document tree and consists of: content, padding, border
+        and margin.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+.box{
+  width: 200px; /* content width */
+  padding: 10px; /* inside space */
+  border: 2px solid #333; /* border */
+  margin: 20px; /* outside space */
+  box-sizing: border-box; /* include padding and border in width */
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Layout, display</h2>
+      <p>
+        Use <code>display</code> to control element layout: <code>block</code>,
+        <code>inline</code>, <code>inline-block</code>, <code>none</code>.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+          <code id="code" class="language-css">
+.hidden{ display: none; }
+          </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Flexbox</h2>
+      <p>
+        Flexbox makes it easy to align items in one dimension (row or column).
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+.flex-container{
+  display: flex; /* establishes flex context */
+  flex-direction: row; /* row or column */
+  justify-content: center; /* main-axis alignment */
+  align-items: center; /* cross-axis alignment */
+  gap: 10px; /* space between items */
+}
+.flex-item{
+  flex: 1; /* grow/shrink */
+  min-width: 100px;
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>CSS Grid</h2>
+      <p>Grid provides a two-dimensional layout system for rows and columns.</p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* column sizes */
+  grid-gap: 10px; /* space between cells */
+}
+.grid-item{
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Backgrounds and Borders</h2>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+body{  
+  background-color: #fafafa;  
+  background-image: linear-gradient(45deg, #fff, #eee);  
+  background-size: cover;  background-repeat: no-repeat;
+}
+.rounded{  
+  border-radius: 8px; 
+/* rounded corners */  
+  border: 2px dashed #0077cc;
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Transitions and Animations</h2>
+      <p>
+        Transitions allow smooth changes between property values. Keyframe
+        animations define more complex sequences.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+.button{
+  background: #0077cc;
+  color: #fff;
+  padding: 8px 12px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.button:hover{
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+.fade{
+  animation: fadeIn 0.6s ease both;
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Responsive Design and Media Queries</h2>
+      <p>Use media queries to apply styles for different viewport sizes.</p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+/* Mobile first */
+.container{ width: 100%; }
+
+@media (min-width: 768px){
+  .container{ width: 750px; }
+}
+
+@media (min-width: 1024px){
+  .container{ width: 960px; }
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>CSS Variables, Custom Properties</h2>
+      <p>Define reusable values with custom properties.</p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+:root{
+  --primary: #0077cc;
+  --accent: #ffcc00;
+  --radius: 6px;
+}
+.card{
+  background: var(--primary);
+  border-radius: var(--radius);
+  color: white;
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Specificity and Cascade</h2>
+      <p>
+        Specificity determines which rule wins. Order matters (later rules
+        override earlier ones when specificity is equal).
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+/* specificity: element < class < id */
+p{ 
+  color: black; 
+}
+.important p{ 
+  color: red; 
+}
+#main p{ 
+  color: green; 
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+
+      <h2>Pseudo-classes and Pseudo-elements</h2>
+      <p>
+        Use pseudo-classes like <code>:hover</code>, <code>:focus</code> and
+        pseudo-elements like <code>::before</code>, <code>::after</code>.
+      </p>
+      <div class="code-container">
+        <div class="code-wrapper">
+          <pre>
+            <code id="code" class="language-css">
+a:hover{ text-decoration: underline; }
+input:focus{ outline: 2px solid #0077cc; }
+.item::before{
+  content: "• ";
+  color: var(--accent);
+}
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

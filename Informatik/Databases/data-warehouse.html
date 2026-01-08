@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Data Warehouse</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Data Warehouse</h1>
+      <h2>Data formats</h2>
+      <ul>
+        <li>
+          <p><u>Structured</u></p>
+          <p>
+            Highly organized and fits into a predefined model or schema. It
+            typically includes data in tables with rows and columns, such as
+            relational databases. Structured data is easily queryable and
+            suitable for analysis using SQL or other structured query languages.
+          </p>
+        </li>
+        <li>
+          <p><u>Semi-structured</u></p>
+          <p>
+            Contains some structure but doesn't conform to a rigid schema. It
+            might contain tags, metadata, or other markers that provide some
+            level of organization. Examples include JSON, XML, and NoSQL
+            databases. Although it doesn't adhere to a strict schema, it has
+            some level of self-describing structure.
+          </p>
+        </li>
+        <li>
+          <p><u>Unstructured</u></p>
+          <p>
+            Lacks a predefined data model or organization. It is raw and doesn't
+            fit neatly into databases or spreadsheets. Examples include text
+            documents, images, videos, social media posts, emails, and audio
+            files. Analyzing unstructured data often involves techniques like
+            natural language processing or machine learning.
+          </p>
+        </li>
+      </ul>
+      <h2>Data Warehouse</h2>
+      <h3>Definition</h3>
+      <p>
+        A data warehouse is a centralized repository that stores large volumes
+        of structured and integrated data from multiple sources. It is designed
+        to support business intelligence, reporting, and data analysis by
+        providing a consolidated view of organizational data.
+      </p>
+      <h2>Build approach FEELT TABELL</h2>
+      <h2>Operation Data Store or ODS</h2>
+      <p>
+        Designed to integrate and consolidate data from various operational
+        systems in near real-time. ODS focuses on transactional data and serves
+        as an interim repository for data before it gets loaded into the data
+        warehouse.
+      </p>
+      <h2>Enterprise Data Warehouse or EDW:</h2>
+      <p>
+        A comprehensive and centralized repository that integrates data from
+        various sources across an entire organization. It serves as the single
+        source of truth for business intelligence and decision-making.
+      </p>
+      <h2>Data Mart</h2>
+      <p>
+        A smaller, more department- specific subset of an Enterprise Data
+        Warehouse. It's designed to serve the needs of a particular business
+        unit, department, or user group. Data marts are optimized for specific
+        business functions or departments, allowing for faster query performance
+        and analysis.
+      </p>
+      <h2>Preparation of a data warehouse</h2>
+      <ul>
+        <li>
+          <p><u>Data Integration</u></p>
+          <p>
+            Process of bringing together data from multiple sources and
+            transforming it into a single, consistent format.
+          </p>
+        </li>
+        <li>
+          <p><u>Data Modeling</u></p>
+          <p>
+            Design the structure of the data warehouse. This includes defining
+            the entities, attributes, and relationships between the entities.
+          </p>
+        </li>
+        <li>
+          <p><u>Data Loading</u></p>
+          <p>
+            Identify and correct errors and inconsistencies in the data. This is
+            an important step in the data warehousing process, as it ensures
+            that the data is accurate and reliable.
+          </p>
+        </li>
+      </ul>
+      <h2>Storage and analysis of a data warehouse</h2>
+      <ul>
+        <li>
+          <p><u>Data Loading</u></p>
+          <p>
+            Populate the data warehouse with data from the source systems. This
+            can be done on a batch or real-time basis.
+          </p>
+        </li>
+        <li>
+          <p><u>Metadata</u></p>
+          <p>
+            Describe the structure of the data warehouse, the data types, and
+            the relationships between the entities.
+          </p>
+        </li>
+        <li>
+          <p><u>Data Access and Reporting</u></p>
+          <p>
+            Data access and reporting tools allow users to query the data
+            warehouse and generate reports. These tools are typically used by
+            business analysts, data scientists, and other decision-makers.
+          </p>
+        </li>
+      </ul>
+      <h2>Fact table</h2>
+      <p>
+        A Fact table in a data warehousing data model consists of one or more
+        numeric facts of importance for a business.
+      </p>
+      <h3>Remark</h3>
+      <p>Facts must be consistent with the granularity.</p>
+      <h2>Types of facts</h2>
+      <ul>
+        <li>
+          <p><u>Additive</u></p>
+          <p>
+            Can be summed up through all of the dimensions in the fact table.
+          </p>
+        </li>
+        <li>
+          <p><u>Semi-Additive</u></p>
+          <p>
+            Can be summed up for some of the dimensions in the fact table, but
+            not the others.
+          </p>
+        </li>
+        <li>
+          <p><u>Non-Additive</u></p>
+          <p>
+            Cannot be summed up for any of the dimensions present in the fact
+            table.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
