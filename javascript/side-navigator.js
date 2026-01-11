@@ -63,6 +63,7 @@ let sideNavigator = `
   </div>
   <a href="#Informatik" class="submenu-toggle">Informatik</a>
   <div class="submenu">
+    <a href="/Informatik/Machine-Learning/advanced-machine-learning-algorithms.html">Advanced Machine Learning Algorithms</a>
     <a href="/Informatik/Cloud/cloud-computing.html">Cloud Computing</a>
     <a href="/Informatik/web-development/css.html">CSS</a>
     <a href="/Informatik/Digitaltechnik/codes.html">Codes</a>
@@ -74,7 +75,6 @@ let sideNavigator = `
     <a href="/Informatik/JAVA/java-basics.html">Java Basics</a>
     <a href="/Informatik/JAVA/problemes-types.html">Java problèmes types</a>
     <a href="/Informatik/LaTeX/latex-basics.html">LATEX Basics</a>
-    <a href="/Informatik/Deep-Learning/natural-language-processing.html">Natural Language Processing</a>
     <a href="/Informatik/Digitaltechnik/mikroprozessorarchitektur.html">Mikroprozessor&shy;architektur</a>
     <a href="/Informatik/Digitaltechnik/minimierung-und-schaltungsentwurf.html">Minimierung und Schaltungsentwurf</a>
     <a href="/Informatik/Python/python.html">Python</a>

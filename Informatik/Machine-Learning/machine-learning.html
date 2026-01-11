@@ -32,6 +32,505 @@
   <body>
     <div class="main-wrapper">
       <h1>Machine Learning</h1>
+      <h2>Algorithm</h2>
+      <h3>Definition</h3>
+      <p>
+        An algorithm is a step-by-step set of instructions or rules used to
+        solve a problem or perform a task.
+      </p>
+      <h2>Machine Learning</h2>
+      <h3>Definition</h3>
+      <p>
+        Machine learning is a subset of artificial intelligence that enables
+        computers to learn and make decisions from data without being explicitly
+        programmed.
+      </p>
+      <h2>Labeled Data</h2>
+      <h3>Definition</h3>
+      <p>
+        Labeled data is data that has been tagged or annotated with the correct
+        output or classification.
+      </p>
+      <h2>Unlabeled Data</h2>
+      <h3>Definition</h3>
+      <p>
+        Unlabeled data is data that has not been tagged or annotated with the
+        correct output or classification.
+      </p>
+      <h2>Machine Learning Types</h2>
+      <ul>
+        <li>
+          <p><u>Supervised Learning</u></p>
+          <p>Using labeled data to train algorithms.</p>
+        </li>
+        <li>
+          <p><u>Unsupervised Learning</u></p>
+          <p>Using unlabeled data to discover structures or groupings.</p>
+        </li>
+        <li>
+          <p><u>Reinforcement Learning</u></p>
+          <p>Learning by interaction with an environment, based on rewards.</p>
+        </li>
+      </ul>
+      <h2>Clustering</h2>
+      <h3>Definition</h3>
+      <p>
+        Clustering is the process of grouping similar data points together based
+        on their features. This method is a method of supervised learning.
+      </p>
+      <h2>Classification</h2>
+      <h3>Definition</h3>
+      <p>
+        Classification is the process of assigning data points to predefined
+        categories. This method is a method of supervised learning.
+      </p>
+      <h2>Regression</h2>
+      <h3>Definition</h3>
+      <p>
+        Regression is the process of predicting continuous values from input
+        data. This method is a method of unsupervised learning.
+      </p>
+      <h2>Reinforcement Learning</h2>
+      <h3>Definition</h3>
+      <p>
+        Reinforcement learning is a method of machine learning where an agent
+        learns to make decisions by interacting with an environment and
+        receiving rewards or penalties.
+      </p>
+      <h2>Clustering Algorithms</h2>
+      <ul>
+        <li>
+          <p><u>K-Means</u></p>
+          <p>
+            A clustering algorithm that partitions data into K distinct clusters
+            based on feature similarity.
+          </p>
+        </li>
+        <li>
+          <p><u>Mean Shift</u></p>
+          <p>
+            A clustering algorithm that iteratively shifts data points towards
+            the mode of the data distribution.
+          </p>
+        </li>
+        <li>
+          <p><u>K-Medoids</u></p>
+          <p>
+            A clustering algorithm that partitions data into K distinct clusters
+            based on feature similarity, using actual data points as cluster
+            centers.
+          </p>
+        </li>
+      </ul>
+      <h2>Regression Algorithms</h2>
+      <ul>
+        <li>
+          <p><u>Decision Tree</u></p>
+          <p>
+            A supervised learning algorithm that splits data into branches to
+            make predictions.
+          </p>
+        </li>
+        <li>
+          <p><u>Linear Regression</u></p>
+          <p>
+            A supervised learning algorithm that models the relationship between
+            a dependent variable and one or more independent variables.
+          </p>
+        </li>
+        <li>
+          <p><u>Logistic Regression</u></p>
+          <p>
+            A supervised learning algorithm used for binary classification
+            problems.
+          </p>
+        </li>
+      </ul>
+      <h2>Classification Algorithms</h2>
+      <ul>
+        <li>
+          <p><u>Naive Bayes</u></p>
+          <p>
+            A supervised learning algorithm based on Bayes' theorem, assuming
+            independence between features.
+          </p>
+        </li>
+        <li>
+          <p><u>SVM</u></p>
+          <p>
+            A supervised learning algorithm that finds the optimal hyperplane to
+            separate data points into different classes.
+          </p>
+        </li>
+        <li>
+          <p><u>K-Nearest Neighbors</u></p>
+          <p>
+            A supervised learning algorithm that classifies data points based on
+            the majority class of their k nearest neighbors.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Simple linear regression</h2>
+      <p>
+        Simple linear regression is a statistical method that models the
+        relationship between a dependent variable and a single independent
+        variable by fitting a linear equation to observed data. The equation of
+        simple linear regression is typically represented as:
+      </p>
+      $$ y = mx + b $$
+      <h2>Multiple linear regression</h2>
+      <p>
+        Multiple linear regression is a statistical technique that models the
+        relationship between a dependent variable and two or more independent
+        variables by fitting a linear equation to observed data. The equation of
+        multiple linear regression is typically represented as:
+      </p>
+      $$ y = b_0 + b_1x_1 + b_2x_2 + ... + b_nx_n $$
+      <p>
+        There also exists a matrix representation of the multiple linear
+        regression equation:
+      </p>
+      $$ \begin{bmatrix} y_1 \\ \vdots \\ y_n \end{bmatrix} = \begin{bmatrix} 1
+      & a_{1,1} & \cdots & a_{1,p} \\ \vdots & \vdots & \ddots & \vdots \\ 1 &
+      a_{n,1} & \cdots & a_{n,p} \end{bmatrix} + \begin{bmatrix} \theta_0 \\
+      \vdots \\ \theta_p \end{bmatrix} $$
+      <h2>Logistic regression</h2>
+      <h3>Definition</h3>
+      <p>
+        Logistic regression is a statistical method used for binary
+        classification problems. It models the probability of a binary outcome
+        based on one or more independent variables.
+      </p>
+      <h2>Sigmoid Function</h2>
+      <p>
+        The logistic regression model uses the sigmoid function to map any real
+        value into a probability between 0 and 1:
+      </p>
+      $$ \sigma(z) = \frac{1}{1 + e^{-z}} $$
+      <h2>Correlation matrix</h2>
+      <h3>Definition</h3>
+      <p>
+        A correlation matrix is a table showing correlation coefficients between
+        variables. Each cell in the table shows the correlation between two
+        variables.
+      </p>
+      <h2>Evaluation metrics of Machine Learning</h2>
+      <ul>
+        <li>
+          <p><u>Clustering</u></p>
+          <p>
+            Common metrics include silhouette score and Calinski-Harabasz index.
+          </p>
+        </li>
+        <li>
+          <p><u>Classification</u></p>
+          <p>
+            Common metrics include accuracy, precision, recall, and F1-score.
+          </p>
+        </li>
+        <li>
+          <p><u>Regression</u></p>
+          <p>
+            Common metrics include Mean Squared Error or MSE, Root Mean Squared
+            Error or RMSE, and R-squared.
+          </p>
+        </li>
+      </ul>
+      <h2>Clustering</h2>
+      <h3>Definition</h3>
+      <p>
+        Clustering is the task of grouping a set of objects in such a way that
+        objects in the same group, called a cluster, are more similar to each
+        other than to those in other groups.
+      </p>
+      <h2>Dimensionality reduction</h2>
+      <h3>Definition</h3>
+      <p>
+        Dimensionality reduction is the process of reducing the number of random
+        variables under consideration by obtaining a set of principal variables.
+      </p>
+      <h2>Dimensionality Reduction Algorithms</h2>
+      <ul>
+        <li>
+          <p><u>Principle Component Analysis, PCA</u></p>
+          <p>
+            A dimensionality reduction technique that transforms data into a new
+            coordinate system, where the first component captures the maximum
+            variance in the data.
+          </p>
+        </li>
+        <li>
+          <p><u>Feature Selection</u></p>
+          <p>
+            A dimensionality reduction technique that selects a subset of the
+            original features based on their relevance to the target variable.
+          </p>
+        </li>
+        <li>
+          <p><u>Linear Discriminant Analysis, LDA</u></p>
+          <p>
+            A dimensionality reduction technique that projects data onto a new
+            coordinate system, maximizing the separation between classes.
+          </p>
+        </li>
+      </ul>
+      <h2>K-means clustering</h2>
+
+      <ul>
+        <li>
+          <p><u>Cluster</u></p>
+          <p>
+            Collection of data points grouped together based on similarity. It
+            represents a subset of the dataset that shares common
+            characteristics.
+          </p>
+        </li>
+        <li>
+          <p><u>Centroid:</u></p>
+          <p>
+            The representative point of a cluster is called a centroid. It is
+            the center of the samples that belong to the cluster and works as a
+            prototype of the cluster. Finding the appropriate centroids that
+            partition samples in a good manner is the goal of the K-means
+            algorithm.
+          </p>
+        </li>
+      </ul>
+
+      <img
+        src="../img/Machine-Learning/k-means-clustering.png"
+        alt="k-means-clustering."
+        class="zeichnungen"
+      />
+
+      <h3>Definition</h3>
+      <p>
+        K-means clustering is an unsupervised machine learning algorithm that
+        partitions a dataset into k distinct, non-overlapping clusters based on
+        the similarity of data points. It uses unlabeled data to identify
+        patterns.
+      </p>
+      <h2>K-Means Algorithm</h2>
+      <ol>
+        <li>
+          <p>
+            Select the number of clusters $k$ and randomly initialize $k$
+            centroids.
+          </p>
+        </li>
+        <li>
+          <p>
+            Assign each data point to the nearest centroid, forming $k$
+            clusters.
+          </p>
+        </li>
+        <li>
+          <p>
+            Update the centroids by calculating the mean of all data points in
+            each cluster.
+          </p>
+        </li>
+        <li><p>Repeat steps 2 and 3 until convergence.</p></li>
+      </ol>
+      <h3>Remark</h3>
+      <p>
+        K-Means uses Euclidean distance $d$ to measure the similarity between
+        data points and centroids.
+      </p>
+      $$ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$
+      <h2>K-Means Optimisation with elbow method</h2>
+      <p>
+        The elbow method is a heuristic used to determine the optimal number of
+        clusters $k$ in K-Means clustering. It involves plotting the sum of
+        squared errors or SSE against the number of clusters and identifying the
+        <q>elbow</q> point where the rate of decrease sharply changes.
+      </p>
+      $$ \text{WCCS } = \sum_{i=1}^{k} \sum_{x \in C_i} ||x - \mu_i||^2 $$
+      <h2>K-nearest neighbors, KNN</h2>
+      <h3>Definition</h3>
+      <p>
+        K-nearest neighbors is a non-parametric method used for classification
+        and regression. In both cases, the input consists of the $k$ closest
+        training examples in the feature space. It uses labeled data to identify
+        patterns.
+      </p>
+      <h2>K Nearest Neighbors Application</h2>
+      <p>
+        To classify a new data point into one of the two existing categories, we
+        use the KNN algorithm. Based on the spatial proximity of points, KNN
+        assigns to the new point the category that contain the most of nearest
+        neighbours .
+      </p>
+      <h2>K Nearest Neighbors Algorithm</h2>
+      <ol>
+        <li>
+          <p>Choose the number of neighbors $k$.</p>
+        </li>
+        <li>
+          <p>
+            Calculate the distance between the new data point and all training
+            data points.
+          </p>
+        </li>
+        <li>
+          <p>
+            Identify the $k$ nearest neighbors based on the calculated
+            distances.
+          </p>
+        </li>
+        <li>
+          <p>
+            For classification, assign the most common class among the $k$
+            neighbors to the new data point. For regression, calculate the mean
+            value of the $k$ neighbors and assign it to the new data point.
+          </p>
+        </li>
+      </ol>
+      <h3>Remark</h3>
+      <p>
+        The most commonly used algorithms for KNN use the following distance
+        metrics:
+      </p>
+      <ul>
+        <li>
+          <p>Euclidean Distance: $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$</p>
+        </li>
+        <li><p>Manhattan Distance: $d = |x_2 - x_1| + |y_2 - y_1|$</p></li>
+        <li>
+          <p>Minkowski Distance: $d = (|x_2 - x_1|^p + |y_2 - y_1|^p)^{1/p}$</p>
+        </li>
+        <li>
+          <p>
+            Cosine similarity: $ \cos(\theta) = \frac{\vec{A} \cdot
+            \vec{B}}{||\vec{A}|| \cdot ||\vec{B}||} $
+          </p>
+        </li>
+      </ul>
+      <h2>Elements of a Confusion Matrix</h2>
+      <ul>
+        <li>
+          <p><u>True Positive, $TP$</u></p>
+          <p>
+            The number of instances where the model correctly predicted the
+            positive class.
+          </p>
+        </li>
+        <li>
+          <p><u>False Positive, $FP$</u></p>
+          <p>
+            The number of instances where the model incorrectly predicted the
+            positive class
+          </p>
+        </li>
+        <li>
+          <p><u>True Negative, $TN$</u></p>
+          <p>
+            The number of instances where the model correctly predicted the
+            negative class.
+          </p>
+        </li>
+        <li>
+          <p><u>False Negative, $FN$</u></p>
+          <p>
+            The number of instances where the model incorrectly predicted the
+            negative class.
+          </p>
+        </li>
+      </ul>
+      <h2>Confusion Matrix</h2>
+      <h3>Definition</h3>
+      <p>
+        A confusion matrix is a table used to evaluate the performance of a
+        classification model. It shows the counts of correct and incorrect
+        predictions for each class.
+      </p>
+      <img
+        src="../img/Machine-Learning/confusion-matrix.png"
+        alt="confusion-matrix"
+        class="zeichnungen"
+      />
+      <h2>Classification metrics</h2>
+      <ul>
+        <li>
+          <p><u>Accuracy</u></p>
+          <p>
+            The proportion of true results, both true positives and true
+            negatives, among the total number of cases examined.
+          </p>
+          $$ \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN} $$
+        </li>
+        <li>
+          <p>
+            <u>Precision</u>
+          </p>
+          <p>
+            The proportion of true positive results in the predicted positive
+            cases.
+          </p>
+          $$ \text{Precision} = \frac{TP}{TP + FP} $$
+        </li>
+        <li>
+          <p><u>Recall, Sensitivity</u></p>
+          <p>
+            The proportion of true positive results in the actual positive
+            cases.
+          </p>
+          $$ \text{Recall} = \frac{TP}{TP + FN} $$
+        </li>
+        <li>
+          <p><u>F1-Score</u></p>
+          <p>
+            The harmonic mean of precision and recall, providing a single metric
+            that balances both concerns.
+          </p>
+          $$ \text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot
+          \text{Recall}}{\text{Precision} + \text{Recall}} $$
+          <p>or expressed in only classification terms:</p>
+          $$ \text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot
+          \text{Recall}}{\text{Precision} + \text{Recall}} $$ $$ = 2 \cdot
+          \frac{\frac{TP}{TP + FP} \cdot \frac{TP}{TP + FN}}{\frac{TP}{TP + FP}
+          + \frac{TP}{TP + FN}} $$ $$ = 2 \cdot \frac{\frac{TP}{TP + FP} \cdot
+          \frac{TP}{TP + FN}}{\frac{TP}{TP + FP} \cdot \frac{TP + FN}{TP + FN} +
+          \frac{TP}{TP + FN} \cdot \frac{TP + FP}{TP + FP}} $$ $$ = 2 \cdot
+          \frac{TP^2}{TP^2 + TP \cdot FP + TP \cdot FN + FP \cdot FN} $$ $$ =
+          \frac{2 \cdot TP^2}{2 \cdot TP^2 + TP \cdot FP + TP \cdot FN + FP
+          \cdot FN} $$
+        </li>
+      </ul>
+      <h2>Regression metrics</h2>
+      <ul>
+        <li>
+          <p><u>Mean Squared Error, MSE</u></p>
+          <p>
+            The average of the squared differences between the predicted values
+            and the actual values.
+          </p>
+          $$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $$
+        </li>
+        <li>
+          <p><u>Mean Absolute Error, MAE</u></p>
+          <p>
+            The average of the absolute differences between the predicted values
+            and the actual values.
+          </p>
+          $$ \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i| $$
+        </li>
+        <li>
+          <p><u>Root Mean Squared Error, RMSE</u></p>
+          <p>The square root of the mean squared error.</p>
+          $$ \text{RMSE} = \sqrt{\text{MSE}} $$
+        </li>
+        <li>
+          <p><u>R Square, R2</u></p>
+          <p>
+            The proportion of the variance in the dependent variable that is
+            predictable from the independent variables.
+          </p>
+          $$ R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}
+          (y_i - \bar{y})^2} $$
+        </li>
+      </ul>
     </div>
   </body>
 </html>

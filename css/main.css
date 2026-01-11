@@ -20,6 +20,7 @@ nav {
   background-color: var(--nav-bg-color);
   padding: 10px 0;
   width: 100%;
+  box-shadow: 0 1px 2px var(--transparent-black);
   a:hover {
     color: var(--accent-color);
   }
@@ -91,6 +92,7 @@ footer {
   padding: 2rem;
   margin-top: auto;
   z-index: 800;
+  box-shadow: 0 1px 2px var(--transparent-black);
   & p {
     color: var(--footer-text-color) !important;
     font-family: "Roboto Mono", monospace;

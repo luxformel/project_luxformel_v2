@@ -32,6 +32,296 @@
   <body>
     <div class="main-wrapper">
       <h1>Cloud Computing</h1>
+
+      <h3>
+        <abbr title="National Institute of Standards and Technology">NIST</abbr>
+        Definition
+      </h3>
+      <p>
+        Cloud computing is a model for enabling ubiquitous, convenient, and
+        on-demand network access to a shared pool of configurable computing
+        resources—such as networks, servers, storage, applications, and
+        services— that can be rapidly provisioned and released with minimal
+        management effort or service provider interaction. This model shifts IT
+        from a capital- intensive investment to a flexible, service-oriented
+        approach.
+      </p>
+
+      <h2>Characteristics of the Cloud</h2>
+      <ul>
+        <li>
+          <p><u>On-demand self-service</u></p>
+          <p>
+            Consumers can independently provision computing resources such as
+            virtual machines, storage, or network capacity whenever needed.
+            Provisioning is automated and does not require direct interaction
+            with the cloud provider, enabling faster deployment and
+            experimentation.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Broad network access</u></p>
+          <p>
+            Cloud services are available over the network and accessed through
+            standard protocols. This promotes use across heterogeneous client
+            platforms, including mobile devices, laptops, workstations, and thin
+            clients, supporting modern distributed and remote work environments.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Resource pooling</u></p>
+          <p>
+            The provider pools computing resources to serve multiple consumers
+            using a multi-tenant model. Physical and virtual resources are
+            dynamically assigned and reassigned according to demand. Customers
+            generally do not know the exact physical location of resources, but
+            may specify location at a regional or data-center level. Pooled
+            resources include CPU, memory, storage, and network bandwidth.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Rapid elasticity</u></p>
+          <p>
+            Capabilities can be elastically scaled up or down, often
+            automatically, in response to workload demand. To consumers,
+            available resources may appear unlimited, allowing applications to
+            handle sudden spikes in traffic without manual intervention.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Measured service</u></p>
+          <p>
+            Cloud systems automatically monitor, control, and optimize resource
+            usage through metering mechanisms. Usage is measured at an
+            appropriate level (e.g., storage used, compute hours, network
+            traffic), enabling pay-per-use, chargeback, or showback models with
+            transparency for both provider and consumer.
+          </p>
+        </li>
+      </ul>
+
+      <h2>As-a-Service Models</h2>
+      <p>
+        As-a-Service refers to delivering IT capabilities as managed services
+        over the cloud. Instead of owning and maintaining infrastructure or
+        software, organizations consume services provided and operated by third
+        parties. The three primary service models differ in how responsibility
+        is shared between provider and consumer: Infrastructure as a Service
+        (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).
+      </p>
+
+      <h2>Platform as a Service (PaaS)</h2>
+      <p>
+        PaaS provides a complete development and deployment environment in the
+        cloud, abstracting infrastructure concerns such as servers, operating
+        systems, and middleware.
+        <br />
+        Development teams can build, test, deploy, and scale applications
+        without managing the underlying infrastructure, allowing them to focus
+        on code, application logic, and innovation.
+        <br />
+        PaaS often acts as an internal platform offering APIs, development
+        tools, managed databases, CI/CD pipelines, documentation, and support
+        services, forming a key pillar of digital and organizational
+        transformation.
+      </p>
+
+      <h2>Infrastructure as a Service (IaaS)</h2>
+      <ul>
+        <li>
+          <p>
+            IaaS delivers virtualized computing resources that replace
+            traditional on-premises hardware.
+          </p>
+        </li>
+        <li>
+          <p>
+            The cloud provider manages physical infrastructure such as servers,
+            storage, networking, and data centers.
+          </p>
+        </li>
+        <li>
+          <p>
+            Organizations retain control over operating systems, middleware,
+            applications, and configurations.
+          </p>
+        </li>
+        <li>
+          <p>
+            Resources are managed through APIs or web-based dashboards, enabling
+            automation and infrastructure-as-code practices.
+          </p>
+        </li>
+        <li>
+          <p>
+            IaaS is the most flexible cloud service model and is well suited for
+            workloads requiring customization, migration of legacy systems, or
+            granular control over infrastructure.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Software as a Service (SaaS)</h2>
+      <p>
+        SaaS delivers fully functional applications over the internet,
+        eliminating the need to install, manage, or maintain software locally.
+        <br />
+        The provider is responsible for updates, patches, security, and
+        availability, while customers focus solely on usage.
+        <br />
+        SaaS applications typically use a multi-tenant architecture to isolate
+        customer data and are commonly offered through subscription or
+        usage-based pricing models.
+      </p>
+
+      <h2>Private Cloud</h2>
+      <p>
+        A private cloud provides cloud services exclusively to a single
+        organization, either on-premises or hosted by a third party.
+        <br />
+        It is often chosen by organizations that cannot use public clouds due
+        to:
+      </p>
+      <ul>
+        <li><p>Strict security policies</p></li>
+        <li><p>Regulatory or compliance requirements</p></li>
+        <li><p>Data sovereignty or latency constraints</p></li>
+      </ul>
+
+      <h2>Private Cloud Aspects</h2>
+      <ul>
+        <li>
+          <p><u>Security</u></p>
+          <p>
+            Data and applications remain within the organization's control,
+            making private clouds suitable for sensitive or regulated workloads.
+          </p>
+        </li>
+        <li>
+          <p><u>Control and customization</u></p>
+          <p>
+            Infrastructure can be tailored to specific enterprise standards,
+            performance requirements, and security policies.
+          </p>
+        </li>
+        <li>
+          <p><u>Cost considerations</u></p>
+          <p>
+            While operational costs may be lower long-term, private clouds
+            require significant upfront capital investment and ongoing
+            maintenance.
+          </p>
+        </li>
+        <li>
+          <p><u>Scalability limitations</u></p>
+          <p>
+            Scaling resources requires planning and procurement, making
+            elasticity more limited than in public clouds.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Public Cloud</h2>
+      <p>
+        A public cloud is owned and operated by a third-party provider and
+        delivers shared computing resources to multiple customers over the
+        internet. Resources are provisioned automatically through self-service
+        portals and APIs, enabling rapid deployment and global scalability.
+      </p>
+
+      <h2>Public Cloud Aspects</h2>
+      <ul>
+        <li>
+          <p><u>Scalability and elasticity</u></p>
+          <p>
+            Near-unlimited resources allow organizations to scale workloads
+            dynamically based on demand.
+          </p>
+        </li>
+        <li>
+          <p><u>Cost efficiency</u></p>
+          <p>
+            Low upfront costs and pay-as-you-go pricing reduce capital
+            expenditure.
+          </p>
+        </li>
+        <li>
+          <p><u>Shared responsibility</u></p>
+          <p>
+            Providers manage infrastructure security, while customers remain
+            responsible for data, applications, and access control.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Hybrid Cloud</h2>
+      <p>
+        A hybrid cloud combines private and public cloud environments, allowing
+        workloads and data to move between them as business needs change.
+        <br />
+        This model supports flexibility, cost optimization, regulatory
+        compliance, and gradual cloud migration while maintaining a unified
+        operational model.
+      </p>
+
+      <h2>6 Rs of Cloud Migration</h2>
+      <ul>
+        <li>
+          <p><u>Rehosting</u></p>
+          <p>
+            Also known as lift-and-shift, this approach migrates applications
+            with minimal or no code changes. It is fast but does not fully
+            leverage cloud-native capabilities.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Replatforming</u></p>
+          <p>
+            Introduces limited optimizations to better utilize cloud services
+            while keeping the core architecture unchanged.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Repurchasing</u></p>
+          <p>
+            Replaces existing applications with cloud-native SaaS alternatives,
+            often improving efficiency but increasing vendor dependency.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Refactoring / Re-architecting</u></p>
+          <p>
+            Redesigns applications to be cloud-native, often using
+            microservices, containers, and managed services. This approach
+            delivers the greatest long-term benefits but requires significant
+            time and expertise.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Retiring</u></p>
+          <p>
+            Decommissions applications that no longer provide business value,
+            reducing complexity and operational costs.
+          </p>
+        </li>
+
+        <li>
+          <p><u>Retaining</u></p>
+          <p>
+            Keeps certain workloads on existing infrastructure due to security,
+            compliance, latency, or cost considerations, commonly used during
+            long-term hybrid cloud strategies.
+          </p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

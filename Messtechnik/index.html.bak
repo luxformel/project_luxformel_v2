@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Messtechnik</title>
+  </head>
+  <body>
+    <div class="chapter-index-wrapper">
+      <h1>Messtechnik</h1>
+      <h2>Grundlagen</h2>
+      <ol>
+        <li>
+          <a href="Grundlagen/messtechnik.html" class="index-link"
+            >Messtechnik</a
+          >
+        </li>
+      </ol>
+      <h2>Laboratory</h2>
+      <ol>
+        <li>
+          <a href="Laboratory/error-calculation.html" class="index-link"
+            >Error calculation</a
+          >
+        </li>
+      </ol>
+    </div>
+    <footer></footer>
+  </body>
+</html>

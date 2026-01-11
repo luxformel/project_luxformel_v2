@@ -14,7 +14,7 @@
   flex-direction: column;
   gap: 1.5rem; /* Increased gap for separation */
   margin: 2rem auto; /* Reduced margin for consistency */
-  max-width: 400px;
+  max-width: 40rem;
   background: var(--white);
   border-radius: 0.75rem; /* Enhanced border-radius for modern look */
   width: 90%;
@@ -38,18 +38,6 @@ button {
 }
 button:hover {
   opacity: 0.7; /* Increased opacity on hover for a stronger effect */
-}
-
-/* Headings */
-h1 {
-  text-decoration: underline;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Arial", sans-serif;
-  font-size: 2.5rem; /* Larger font size for impact */
-  font-weight: bolder; /* Bolder font weight */
-  letter-spacing: -0.05rem;
-  color: var(--black);
 }
 
 /* Paragraph Styling */
@@ -126,4 +114,21 @@ textarea {
   box-shadow: 0 2px 10px var(--dark-grey-shade); /* Added shadow for depth */
   background-color: var(--white);
   color: var(--black);
+}
+
+/* Matrix grid */
+.matrix {
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+/* Matrix cells */
+.matrix input {
+  width: 3.5rem; /* fixed square size */
+  height: 3.5rem;
+  padding: 0;
+  text-align: center;
+  font-size: 1.1rem;
 }

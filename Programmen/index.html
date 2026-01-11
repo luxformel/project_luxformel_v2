@@ -12,78 +12,130 @@
     <link rel="stylesheet" href="/css/reset.css" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <link rel="stylesheet" href="/css/sub-index.css" />
+    <link rel="stylesheet" href="/css/programmen-index.css" />
     <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
-
+    <script defer src="/javascript/collapser.js"></script>
     <script defer src="/settings/settings.js"></script>
-
     <title>Programmen</title>
   </head>
   <body>
-    <div class="chapter-index-wrapper">
-      <h1>Programmen</h1>
-      <ol class="orederedListIndex">
-        <li>
-          <a href="Converter/index.html" class="index-link">Converter</a>
-        </li>
-        <li>
-          <a href="Zoufalls Zuel/index.html" class="index-link"
-            >Zoufalls Zuel</a
-          >
-        </li>
-        <li>
-          <a href="Diviseure Fannen/index.html" class="index-link"
-            >Diviseuren vun enger Zuel</a
-          >
-        </li>
-        <li>
-          <a href="Zoufalls Zuel/index.html" class="index-link"
-            >Zoufalls Zuel</a
-          >
-        </li>
-        <li>
-          <a href="Rechemaschinn/index.html" class="index-link"
-            >Rechemaschinn</a
-          >
-        </li>
+    <header><h1>Programmen</h1></header>
+    <section class="tool-launcher">
+      <div class="tool-filters">
+        <button class="filter active" data-filter="all">Alles</button>
+        <button class="filter" data-filter="math">Mathé</button>
+        <button class="filter" data-filter="geometry">Geometrie</button>
+        <button class="filter" data-filter="calculus">Analys</button>
+        <button class="filter" data-filter="learning">Léieren</button>
+        <button class="filter" data-filter="utilities">Geschier</button>
+      </div>
 
-        <!-- <li>
-          <a href="fonctionsDuDeuxiemeDegree.html" class="index-link"
-            >Fonctions du deuxieme degree</a
-          >
-        </li> -->
-        <!--   <li>
-          <a href="wessenschaflter.html" class="index-link"
-            >Wichteg dichteg Wëssenschaftler</a
-          >
-        </li> -->
-        <li>
-          <a href="Geometrie Rechemaschinn/index.html" class="index-link"
-            >Geometrie Rechemaschinn</a
-          >
-        </li>
-        <li>
-          <a href="GCD/index.html" class="index-link">GCD Fannen</a>
-        </li>
-        <li>
-          <a href="Derivee/index.html" class="index-link">Dérivéeë Rechnen</a>
-        </li>
-        <!-- <li>
-          <a href="equatiouneLeisen.html" class="index-link"
-            >Equatioune Léisen</a
-          >
-        </li> -->
-        <li>
-          <a href="Elementer/index.html" class="index-link"
-            >Elementer léieren</a
-          >
-        </li>
-        <li>
-          <a href="Texter/index.html" class="index-link">Text Lieser</a>
-        </li>
-      </ol>
-    </div>
+      <div class="tool-grid">
+        <a class="tool-card math" href="Rechemaschinn/index.html">
+          <h3>Rechemaschinn</h3>
+          <p>Vereinfacht Rechemaschinn</p>
+        </a>
+
+        <a class="tool-card math" href="Converter/index.html">
+          <h3>Konvertéierer</h3>
+          <p>Konvertéiert</p>
+        </a>
+
+        <a class="tool-card math" href="GCD/index.html">
+          <h3>GCD Rechemaschinn</h3>
+          <p>Gréist méigelechen Diviseur fannen</p>
+        </a>
+
+        <a class="tool-card math" href="Matricen/index.html">
+          <h3>Matrice Rechemaschinn</h3>
+          <p>Determinaten, Transposéieren, Inversen,...</p>
+        </a>
+
+        <a class="tool-card math" href="Diviseure-Fannen/index.html">
+          <h3>Diviseuren Fannen</h3>
+          <p>Fënnt all d'Diviseuren</p>
+        </a>
+
+        <a class="tool-card math" href="Zoufalls-Zuel/index.html">
+          <h3>Zoufallszuel</h3>
+          <p>Generéiert eng zoufälleg Zuel</p>
+        </a>
+
+        <a class="tool-card geometry" href="Geometrie-Rechemaschinn/index.html">
+          <h3>Geometresch Forme Rechemaschinn</h3>
+          <p>Rechent Flächen a Volumen</p>
+        </a>
+
+        <a class="tool-card calculus" href="Derivee/index.html">
+          <h3>Derivéë Rechemaschinn</h3>
+          <p>Rechent vill Derivéëen</p>
+        </a>
+
+        <a class="tool-card learning" href="Elementer/index.html">
+          <h3>Periodensystem Spill</h3>
+          <p>Léiert d'Elementer vum Periodensystem</p>
+        </a>
+
+        <a class="tool-card utilities" href="Texter/index.html">
+          <h3>Texter Liesen</h3>
+          <p>Text-to-speech</p>
+        </a>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filters = document.querySelector(".tool-filters");
+        const cards = document.querySelectorAll(".tool-grid .tool-card");
+
+        // set initial aria-pressed
+        filters
+          .querySelectorAll(".filter")
+          .forEach((b) =>
+            b.setAttribute(
+              "aria-pressed",
+              b.classList.contains("active") ? "true" : "false"
+            )
+          );
+
+        // event delegation for clicks
+        filters.addEventListener("click", (e) => {
+          const btn = e.target.closest(".filter");
+          if (!btn) return;
+          const filter = btn.dataset.filter;
+
+          filters.querySelectorAll(".filter").forEach((b) => {
+            const isActive = b === btn;
+            b.classList.toggle("active", isActive);
+            b.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          cards.forEach((card) => {
+            const show = filter === "all" || card.classList.contains(filter);
+            card.classList.toggle("hidden", !show);
+            card.setAttribute("aria-hidden", show ? "false" : "true");
+          });
+        });
+
+        // keyboard support (Enter / Space)
+        filters.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            const btn = e.target.closest(".filter");
+            if (btn) {
+              e.preventDefault();
+              btn.click();
+            }
+          }
+        });
+
+        // apply initial filter
+        const initial =
+          filters.querySelector(".filter.active") ||
+          filters.querySelector(".filter");
+        if (initial) initial.click();
+      });
+    </script>
     <footer></footer>
   </body>
 </html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Informatik</title>
+  </head>
+  <body>
+    <div class="chapter-index-wrapper">
+      <h1>Informatik</h1>
+      <!-- <h2>Artificial Intelligence</h2>
+      <ol>
+        <li>
+          <a href="artificialIntelligence.html" class="index-link"
+            >Artificial Intelligence</a
+          >
+        </li>
+      </ol> -->
+      <h2>Cloud</h2>
+      <ol>
+        <li>
+          <a href="Cloud/cloud-computing.html" class="index-link"
+            >Cloud Computing</a
+          >
+        </li>
+      </ol>
+      <h2>Databases</h2>
+      <ol>
+        <li>
+          <a href="Databases/data-warehouse.html" class="index-link"
+            >Data Warehouse</a
+          >
+        </li>
+      </ol>
+      <h2>Deep Learning</h2>
+      <ol>
+        <li>
+          <a
+            href="Deep-Learning/natural-language-processing.html"
+            class="index-link"
+            >Natural Language Processing</a
+          >
+        </li>
+      </ol>
+      <h2>Digitaltechnik</h2>
+      <ol>
+        <li>
+          <a href="Digitaltechnik/codes.html" class="index-link">Codes</a>
+        </li>
+        <li>
+          <a
+            href="Digitaltechnik/digitaltechnik-grundlagen.html"
+            class="index-link"
+            >Grundlagen der Digitaltechnik</a
+          >
+        </li>
+        <li>
+          <a
+            href="Digitaltechnik/grundlagen-der-informationstheorie.html"
+            class="index-link"
+            >Grundlagen der Informations&shy;theorie</a
+          >
+        </li>
+        <li>
+          <a
+            href="Digitaltechnik/mikroprozessorarchitektur.html"
+            class="index-link"
+            >Mikroprozessor&shy;architektur</a
+          >
+        </li>
+        <li>
+          <a
+            href="Digitaltechnik/minimierung-und-schaltungsentwurf.html"
+            class="index-link"
+            >Minimierung und Schaltungs&shy;entwurf</a
+          >
+        </li>
+        <li>
+          <a href="Digitaltechnik/schaltnetze.html" class="index-link"
+            >Schaltnetze</a
+          >
+        </li>
+        <li>
+          <a href="Digitaltechnik/schaltwerke.html" class="index-link"
+            >Schaltwerke</a
+          >
+        </li>
+        <li>
+          <a
+            href="Digitaltechnik/zahlensysteme-der-informatik.html"
+            class="index-link"
+            >Zahlensysteme der Informatik</a
+          >
+        </li>
+      </ol>
+      <h2>Java</h2>
+      <ol>
+        <li>
+          <a href="JAVA/java-basics.html" class="index-link">Java Basics</a>
+        </li>
+        <li>
+          <a href="JAVA/problemes-types.html" class="index-link"
+            >Java problèmes types</a
+          >
+        </li>
+
+        <li>
+          <a href="JAVA/array-lists.html" class="index-link"
+            >Java Array Lists</a
+          >
+        </li>
+      </ol>
+
+      <h2>LaTeX</h2>
+      <ol>
+        <li>
+          <a href="LaTeX/latex-basics.html" class="index-link">LATEX Basics</a>
+        </li>
+      </ol>
+
+      <h2>Machine Learning</h2>
+      <ol>
+        <li>
+          <a href="Machine-Learning/machine-learning.html" class="index-link"
+            >Machine Learning</a
+          >
+        </li>
+      </ol>
+
+      <!-- <h2>Python</h2>
+      <ol>
+        <li>
+          <a href="Python/python.html" class="index-link">Python</a>
+        </li>
+      </ol> -->
+
+      <h2>Web Developement</h2>
+      <ol>
+        <li>
+          <a href="web-development/css.html" class="index-link">CSS</a>
+        </li>
+        <li>
+          <a href="web-development/html.html" class="index-link">HTML</a>
+        </li>
+      </ol>
+
+      <hr />
+      <h2>Tabellen</h2>
+      <ul>
+        <li>
+          <a href="Tabellen/vorsilben.html" class="index-link">Vorsilben</a>
+        </li>
+        <li>
+          <a
+            href="Tabellen/zahlenbereiche-der-binaerzahlen.html"
+            class="index-link"
+            >Zahlenbereiche der Binärzahlen</a
+          >
+        </li>
+      </ul>
+    </div>
+    <footer></footer>
+  </body>
+</html>

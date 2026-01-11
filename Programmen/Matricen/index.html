@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="lb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script defer src="converter-code.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <link rel="stylesheet" href="/css/programmen.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+    <script defer src="/settings/settings.js"></script>
+  </head>
+
+  <body>
+    <header><h1>Matrice Rechemaschinn</h1></header>
+
+    <div class="pro-wrapper">
+      <div class="pro-content-wrapper">
+        <div class="controls">
+          Rows <input type="number" id="rows" value="2" min="1" /> Columns
+          <input type="number" id="cols" value="2" min="1" />
+          <button onclick="createMatrices()">Create Matrices</button>
+        </div>
+
+        <div class="matrices">
+          <div>
+            <h2>Matrix A</h2>
+            <div id="matrixA"></div>
+          </div>
+
+          <div>
+            <h2>Matrix B</h2>
+            <div id="matrixB"></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button onclick="detA()">det(A)</button>
+          <button onclick="transposeA()">Aᵀ</button>
+          <button onclick="inverseA()">A⁻¹</button>
+          <button onclick="traceA()">tr(A)</button>
+          <button onclick="rankA()">rank(A)</button>
+          <button onclick="rrefA()">RREF(A)</button>
+          <button onclick="addAB()">A + B</button>
+          <button onclick="multiplyAB()">A · B</button>
+        </div>
+
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script src="matrix.js"></script>
+    <footer></footer>
+  </body>
+</html>

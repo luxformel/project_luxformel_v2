@@ -23,9 +23,9 @@
     <title>Diviseuren Sichen</title>
   </head>
   <body>
+    <header><h1>Diviseuren Sichen</h1></header>
     <div class="pro-wrapper">
       <div class="pro-content-wrapper">
-        <h1>Diviseuren Sichen</h1>
         <form action="">
           <input
             class="number-input"
@@ -48,6 +48,42 @@
         </form>
       </div>
     </div>
+    <script>
+      function getDiv() {
+        const input = document.getElementById("divZuel").value;
+        const output = document.getElementById("output");
+
+        output.value = "";
+
+        const n = parseInt(input, 10);
+
+        if (isNaN(n)) {
+          output.value = "W.e.g. eng ganz Zuel aginn.";
+          return;
+        }
+
+        if (n === 0) {
+          output.value = "0 huet onendlech vill Diviseuren.";
+          return;
+        }
+
+        const absN = Math.abs(n);
+        let divisors = [];
+
+        for (let i = 1; i <= Math.sqrt(absN); i++) {
+          if (absN % i === 0) {
+            divisors.push(i, -i);
+
+            if (i !== absN / i) {
+              divisors.push(absN / i, -(absN / i));
+            }
+          }
+        }
+
+        divisors.sort((a, b) => a - b);
+        output.value = divisors.join(", ");
+      }
+    </script>
     <footer></footer>
   </body>
 </html>

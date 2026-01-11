@@ -25,10 +25,14 @@
     <title>Text Lieser</title>
   </head>
   <body>
+    <header><h1>Text Lieser</h1></header>
     <div class="pro-wrapper">
       <div class="pro-content-wrapper">
-        <h1>Text Lieser</h1>
-        <select id="language" onchange="populateVoiceList()">
+        <select
+          id="language"
+          onchange="populateVoiceList()"
+          title="Language selection"
+        >
           <option value="">Wielt Är Sprooch aus</option>
           <option value="de">Deutsch</option>
           <option value="en">English</option>
@@ -40,7 +44,7 @@
           <!-- <option value="lb">Lëtzebuergesch</option> -->
           <!-- Add more options as needed -->
         </select>
-        <select id="voice">
+        <select id="voice" title="Voice selection">
           <!-- Voices will be dynamically added via JavaScript -->
         </select>
         <textarea id="textToSpeak" placeholder="Text..."></textarea>

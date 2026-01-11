@@ -139,6 +139,8 @@ var splashTexts = [
   "verben.lu",
   "schreifmaschinn.lu",
   "spellchecker.lu",
+  "orthotrainer.lu",
+  "sproochmaschinn.lu",
   "Léiwe Kleeschen",
   "Gudde Kleeschen",
   "Last christmas",
@@ -733,7 +735,8 @@ var splashTexts = [
   "Welcome to medical monday!",
   "Where is the element of suprise on the periodic table?",
   "Made in horzine!",
-  "1/735",
+  "You may not rest there are monsters nearby!",
+  "1/738",
 ];
 function generateRandomText() {
   var randomNumber = Math.floor(Math.random() * splashTexts.length);

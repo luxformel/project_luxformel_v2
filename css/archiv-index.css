@@ -62,6 +62,7 @@
     padding: 1rem;
     text-align: center;
 
+    -webkit-user-select: none;
     user-select: none;
   }
 }

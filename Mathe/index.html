@@ -12,375 +12,512 @@
     <link rel="stylesheet" href="/css/reset.css" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <link rel="stylesheet" href="/css/sub-index.css" />
     <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
-
+    <script defer src="/javascript/collapser.js"></script>
     <script defer src="/settings/settings.js"></script>
 
-    <title>Mathématiques</title>
+    <title>Mathe</title>
   </head>
   <body>
-    <div class="chapter-index-wrapper">
-      <h1>Mathématiques</h1>
-
-      <h2>Algèbre</h2>
-      <ol>
-        <li>
-          <a href="Algebre/elements-d-arithmetique.html" class="index-link">
-            Eléments d'arithmétique
-          </a>
-        </li>
-        <li>
-          <a href="Algebre/nombre-complexes.html" class="index-link"
-            >Nombres Complexes</a
+    <header>
+      <h1>Mathe Index</h1>
+    </header>
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Algèbre</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a
-            href="Algebre/puissance-et-regle-de-priorote.html"
-            class="index-link"
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Algebre/elements-d-arithmetique.html" class="solution-link"
+              >1. Eléments d'arithmétique</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Algebre/nombre-complexes.html" class="solution-link"
+              >2. Nombres complexes</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Algebre/puissance-et-regle-de-priorote.html"
+              class="solution-link"
+              >3. Puissance et règle de priorité</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Analyse</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-            Puissances et règles de priorité
-          </a>
-        </li>
-      </ol>
-
-      <h2>Analyse</h2>
-      <ol>
-        <li>
-          <a href="Analyse/continuite.html" class="index-link"> Continuité </a>
-        </li>
-        <li>
-          <a href="Analyse/derivation.html" class="index-link">Dérivation</a>
-        </li>
-        <li>
-          <a
-            href="Analyse/developpement-en-series-de-taylor.html"
-            class="index-link"
-            >Développement en séries de Taylor</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Analyse/continuite.html" class="solution-link"
+              >1. Continuité</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/derivation.html" class="solution-link"
+              >2. Dérivation</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Analyse/developpement-en-series-de-taylor.html"
+              class="solution-link"
+              >3. Développement en série de Taylor</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Analyse/equations-differentielles.html"
+              class="solution-link"
+              >4. Équations différentielles</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Analyse/fonctions-de-plusieurs-variable.html"
+              class="solution-link"
+              >5. Fonctions de plusieurs variables</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/integrale-de-riemann.html" class="solution-link"
+              >6. Intégrale de Riemann</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/integrales-impropres.html" class="solution-link"
+              >7. Intégrale impropres</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/integration.html" class="solution-link"
+              >8. Intégration</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/limites.html" class="solution-link">9. Limites</a>
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/primitives.html" class="solution-link"
+              >10. Primitives</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Analyse/series-numeriques.html" class="solution-link"
+              >11. Séries numériques</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Calculus</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Analyse/equations-differentielles.html" class="index-link"
-            >Équations différentielles</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Calculus/analysis-basics.html" class="solution-link"
+              >1. Analysis Basics</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/axiom-of-completeness.html" class="solution-link"
+              >2. Axiom of Completeness</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/differential-equations.html" class="solution-link"
+              >3. Differential Equations</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/differentiation.html" class="solution-link"
+              >4. Differentiation</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/functions.html" class="solution-link"
+              >5. Functions</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/limits-of-functions.html" class="solution-link"
+              >6. Limits of Functions</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/sequences.html" class="solution-link"
+              >7. Sequences</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Calculus/taylor-expansion.html" class="solution-link"
+              >8. Taylor expansion</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Démonstrations</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a
-            href="Analyse/fonctions-de-plusieurs-variable.html"
-            class="index-link"
-            >Fonctions de plusieurs variables</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Demonstrations/demonstrations-des-fonctions-derivees.html"
+              class="solution-link"
+              >Démonstrations des fonctions dérivées</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Fonctions</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Analyse/integration.html" class="index-link">Intégration</a>
-        </li>
-        <li>
-          <a href="Analyse/integrale-de-riemann.html" class="index-link">
-            Intégrale de Riemann</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Fonctions/fonctions-exponentielles.html"
+              class="solution-link"
+              >1. Fonctions exponentielles</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Fonctions/logarithme-neperien.html" class="solution-link"
+              >2. Fonction logarithme népérien</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Géométrie</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Analyse/integrales-impropres.html" class="index-link">
-            Intégrales impropres</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Geometrie/conitions-mathematiques-utiles.html"
+              class="solution-link"
+              >1. Conditions mathématiques utiles</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Geometrie/geometrie-dans-l-espace.html"
+              class="solution-link"
+              >2. Géométrie dans l'espace</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Geometrie/theoreme-de-pythagore.html" class="solution-link"
+              >3. Théorème de Pythagore</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Geometrie/theoreme-de-thales.html" class="solution-link"
+              >4. Théorème de Thalès</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Geometrie/trigonometrie-dans-un-cerlce.html"
+              class="solution-link"
+              >5. Trigonométrie dans un cercle</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Geometrie/trigonometrie-dans-un-triangle-rectangle.html"
+              class="solution-link"
+              >6. Trigonométrie dans un triangle rectangle</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Geometrie/trigonometrie.html" class="solution-link"
+              >7. Trigonométrie</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Geometrie/vecteurs.html" class="solution-link"
+              >8. Vecteurs</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Linear Algebra</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Analyse/limites.html" class="index-link">Limites</a>
-        </li>
-        <li>
-          <a href="Analyse/primitives.html" class="index-link">Primitives</a>
-        </li>
-        <li>
-          <a href="Analyse/series-numeriques.html" class="index-link"
-            >Séries numériques</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Linear-Algebra/eigenectors-eigenvalues.html"
+              class="solution-link"
+              >1. Eigenvectors and Eigenvalues</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Linear-Algebra/finite-dimensional-vector-spaces.html"
+              class="solution-link"
+              >2. Finite-dimensional vector spaces</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Linear-Algebra/invertibility-and-isomorphic-vector-spaces.html"
+              class="solution-link"
+              >3. Invertibility and isomorphic vector spaces</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Linear-Algebra/linear-maps.html" class="solution-link"
+              >4. Linear maps</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Linear-Algebra/matrices-and-linear-maps.html"
+              class="solution-link"
+              >5. Matrices and linear maps</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Linear-Algebra/matrices.html" class="solution-link"
+              >6. Matrices</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Linear-Algebra/null-spaces-and-ranges.html"
+              class="solution-link"
+              >7. Null spaces and ranges</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Linear-Algebra/systems.html" class="solution-link"
+              >8. Systems</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Linear-Algebra/vector-spaces.html" class="solution-link"
+              >9. Vector spaces</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Logic</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
-
-      <h2>Calculus</h2>
-      <ol>
-        <li>
-          <a href="Calculus/axiom-of-completeness.html" class="index-link"
-            >Axiom of completeness</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Logic/foundations-of-set-theory.html" class="solution-link"
+              >Foundations of set theory</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Logique</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Calculus/continuity.html" class="index-link">Continuity</a>
-        </li>
-        <li>
-          <a href="Calculus/differentiation.html" class="index-link"
-            >Differentiation</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Logique/demonstrations.html" class="solution-link"
+              >1. Démonstrations</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Logique/logique-elementaire.html" class="solution-link"
+              >2. Logique élémentaire</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Probabilité</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Calculus/differential-equations.html" class="index-link"
-            >Differential equations</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Probabilite/probabilites.html" class="solution-link"
+              >Probabilités</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Théorie des nombres</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-        <li>
-          <a href="Calculus/functions.html" class="index-link">Functions</a>
-        </li>
-        <li>
-          <a href="Calculus/limits-of-functions.html" class="index-link"
-            >Limits of functions</a
-          >
-        </li>
-        <li>
-          <a href="Calculus/sequences.html" class="index-link">Sequences</a>
-        </li>
-        <li>
-          <a href="Calculus/taylor-expansion.html" class="index-link"
-            >Taylor expansion</a
-          >
-        </li>
-      </ol>
-
-      <h2>Démonstrations</h2>
-      <ol>
-        <li>
-          <a
-            href="Demonstrations/demonstrations-des-fonctions-derivees.html"
-            class="index-link"
-            >Démonstrations des fonctions dérivées</a
-          >
-        </li>
-      </ol>
-
-      <h2>Fonctions</h2>
-      <ol>
-        <li>
-          <a href="Fonctions/fonctions-exponentielles.html" class="index-link">
-            Fonction exponentielle
-          </a>
-        </li>
-        <li>
-          <a href="Fonctions/logarithme-neperien.html" class="index-link"
-            >Fonction logarithme népérien</a
-          >
-        </li>
-      </ol>
-
-      <h2>Géométrie</h2>
-      <ol>
-        <li>
-          <a
-            href="Geometrie/conitions-mathematiques-utiles.html"
-            class="index-link"
-          >
-            Conditions Mathématiques utiles
-          </a>
-        </li>
-        <li>
-          <a href="Geometrie/geometrie-dans-l-espace.html" class="index-link">
-            Géométrie dans l'espace
-          </a>
-        </li>
-        <li>
-          <a href="Geometrie/theoreme-de-thales.html" class="index-link">
-            Théorème de Thalès
-          </a>
-        </li>
-        <li>
-          <a href="Geometrie/theoreme-de-pythagore.html" class="index-link">
-            Théorème de Pythagore
-          </a>
-        </li>
-        <li>
-          <a href="Geometrie/trigonometrie.html" class="index-link"
-            >Trigonométrie</a
-          >
-        </li>
-        <li>
-          <a
-            href="Geometrie/trigonometrie-dans-un-cerlce.html"
-            class="index-link"
-          >
-            Trigonomètrie dans un cercle
-          </a>
-        </li>
-        <li>
-          <a
-            href="Geometrie/trigonometrie-dans-un-triangle-rectangle.html"
-            class="index-link"
-          >
-            Trigonomètrie dans un triangle rectangle
-          </a>
-        </li>
-        <li>
-          <a href="Geometrie/vecteurs.html" class="index-link">Vecteurs</a>
-        </li>
-      </ol>
-
-      <h2>Linear Algebra</h2>
-      <ol>
-        <li>
-          <a
-            href="Linear-Algebra/eigenectors-eigenvalues.html"
-            class="index-link"
-            >Eigenvectors, Eigenvalues</a
-          >
-        </li>
-        <li>
-          <a
-            href="Linear-Algebra/finite-dimensional-vector-spaces.html"
-            class="index-link"
-            >Finite-Dimensional Vector Spaces</a
-          >
-        </li>
-        <li>
-          <a
-            href="Linear-Algebra/invertibility-and-isomorphic-vector-spaces.html"
-            class="index-link"
-            >Invertibility and Isomorphic Vector Spaces</a
-          >
-        </li>
-        <li>
-          <a href="Linear-Algebra/systems.html" class="index-link"
-            >Systems of Linear Equations</a
-          >
-        </li>
-        <li>
-          <a href="Linear-Algebra/linear-maps.html" class="index-link"
-            >Linear Maps</a
-          >
-        </li>
-        <li>
-          <a href="Linear-Algebra/matrices.html" class="index-link">Matrices</a>
-        </li>
-        <li>
-          <a
-            href="Linear-Algebra/matrices-and-linear-maps.html"
-            class="index-link"
-            >Matrices and Linear Maps</a
-          >
-        </li>
-        <li>
-          <a
-            href="Linear-Algebra/null-spaces-and-ranges.html"
-            class="index-link"
-            >Null Spaces and Ranges</a
-          >
-        </li>
-        <li>
-          <a href="Linear-Algebra/vector-spaces.html" class="index-link"
-            >Vector Spaces</a
-          >
-        </li>
-      </ol>
-
-      <h2>Logic</h2>
-
-      <ol>
-        <li>
-          <a href="Logic/foundations-of-set-theory.html" class="index-link"
-            >Foundations of Set Theory</a
-          >
-        </li>
-      </ol>
-
-      <h2>Logique</h2>
-      <ol>
-        <li>
-          <a href="Logique/demonstrations.html" class="index-link">
-            Démonstrations</a
-          >
-        </li>
-        <li>
-          <a href="Logique/logique-elementaire.html" class="index-link">
-            Logique Élémentaire
-          </a>
-        </li>
-      </ol>
-
-      <h2>Probabilité</h2>
-      <ol>
-        <li>
-          <a href="Probabilite/probabilites.html" class="index-link"
-            >Probabilités</a
-          >
-        </li>
-      </ol>
-
-      <h2>Théorie des nombres</h2>
-      <ol>
-        <li>
-          <a
-            href="Theorie-des-nombres/ensembles-des-nombres.html"
-            class="index-link"
-          >
-            Ensembles des Nombres
-          </a>
-        </li>
-      </ol>
-
-      <!-- <hr />
-      <h2>Maths for Physicists</h2>
-      <ol>
-        <li>
-          <a
-            href="Maths-for-Physicists/vectors-and-scalars.html"
-            class="index-link"
-            >Vectors and Scalars</a
-          >
-        </li>
-      </ol> -->
-
-      <hr />
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Theorie-des-nombres/ensembles-des-nombres.html"
+              class="solution-link"
+              >Ensembles des nombres</a
+            >
+          </div>
+        </div>
+      </div>
       <h2>Tableaux</h2>
-      <ul>
-        <li>
-          <a
-            href="Tableaux/collections-des-formules-exponentielles.html"
-            class="index-link"
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Tableaux</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-            Collection des formules des exponentielles
-          </a>
-        </li>
-        <li>
-          <a
-            href="Tableaux/collections-des-formules-des-figures-geometriques.html"
-            class="index-link"
-          >
-            Collection des formules des figures géométriques
-          </a>
-        </li>
-        <li>
-          <a
-            href="Tableaux/collections-des-formules-trigonometriques.html"
-            class="index-link"
-          >
-            Collection des formules de trigonométrie
-          </a>
-        </li>
-        <li>
-          <a
-            href="Tableaux/tableau-des-fonctions-derivees.html"
-            class="index-link"
-            >Tableau des fonctions dérivées</a
-          >
-        </li>
-        <li>
-          <a
-            href="Tableaux/tableau-des-primitives-de-fonction.html"
-            class="index-link"
-            >Tableau des primitives de fonction</a
-          >
-        </li>
-      </ul>
-      <!-- <hr />
-      <h2>Divers</h2>
-
-      <ol>
-        <li>
-          <a
-            href="Demonstrations/demonstrations-des-fonctions-derivees.html"
-            class="index-link"
-            >Démonstrations des fonctions dérivées</a
-          >
-        </li>
-      </ol> -->
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Tableaux/collections-des-formules-des-figures-geometriques.html"
+              class="solution-link"
+              >&#9642; Collections des formules des figures géométriques</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Tableaux/collections-des-formules-exponentielles.html"
+              class="solution-link"
+              >&#9642; Collections des formules exponentielles</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Tableaux/collections-des-formules-trigonometriques.html"
+              class="solution-link"
+              >&#9642; Collections des formules des trigonométriques</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Tableaux/tableau-des-fonctions-derivees.html"
+              class="solution-link"
+              >&#9642; Tableau des fonctions dérivées</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Tableaux/tableau-des-primitives-de-fonction.html"
+              class="solution-link"
+              >&#9642; Tableau des primitives de fonction</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <footer></footer>
   </body>

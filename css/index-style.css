@@ -5,6 +5,7 @@
   padding: 1rem;
   max-width: 50rem;
 }
+
 #splash-text {
   color: var(--splash-text-color);
   font-family: "Silkscreen", cursive;
@@ -14,9 +15,11 @@
   margin: 2rem 0;
   line-height: 2.5rem;
 }
+
 .splashScreenText:hover {
   animation: rotate 1s ease 5s 69 alternate;
 }
+
 @keyframes rotate {
   0% {
     color: crimson;
@@ -46,6 +49,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px var(--transparent-black);
 }
 .hero h1 {
   color: var(--black);
@@ -101,6 +106,7 @@ a {
   font-weight: bold;
   padding: 1rem;
   text-align: center;
+  -webkit-user-select: none;
   user-select: none;
 }
 .chapter-grid,

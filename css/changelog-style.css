@@ -1,8 +1,9 @@
 .wrapper {
   padding: 1rem;
   margin: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
 }
-
 h1 {
   padding: 1rem;
   margin-bottom: 0.5rem;

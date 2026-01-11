@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lb">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,167 +12,286 @@
     <link rel="stylesheet" href="/css/reset.css" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <link rel="stylesheet" href="/css/sub-index.css" />
     <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
-
+    <script defer src="/javascript/collapser.js"></script>
     <script defer src="/settings/settings.js"></script>
 
     <title>Informatik</title>
   </head>
   <body>
-    <div class="chapter-index-wrapper">
-      <h1>Informatik</h1>
-      <!-- <h2>Artificial Intelligence</h2>
-      <ol>
-        <li>
-          <a href="artificialIntelligence.html" class="index-link"
-            >Artificial Intelligence</a
+    <header>
+      <h1>Informatik Index</h1>
+    </header>
+    <div class="exercise-section">
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Cloud</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol> -->
-      <h2>Cloud</h2>
-      <ol>
-        <li>
-          <a href="Cloud/cloud-computing.html" class="index-link"
-            >Cloud Computing</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Cloud/cloud-computing.html" class="solution-link"
+              >Cloud Computing</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Databases</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
-      <h2>Databases</h2>
-      <ol>
-        <li>
-          <a href="Databases/data-warehouse.html" class="index-link"
-            >Data Warehouse</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Databases/data-warehouse.html" class="solution-link"
+              >Data Warehouse</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Deep Learning</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
-      <h2>Deep Learning</h2>
-      <ol>
-        <li>
-          <a
-            href="Deep-Learning/natural-language-processing.html"
-            class="index-link"
-            >Natural Language Processing</a
-          >
-        </li>
-      </ol>
-      <h2>Digitaltechnik</h2>
-      <ol>
-        <li>
-          <a href="Digitaltechnik/codes.html" class="index-link">Codes</a>
-        </li>
-        <li>
-          <a
-            href="Digitaltechnik/digitaltechnik-grundlagen.html"
-            class="index-link"
-            >Grundlagen der Digitaltechnik</a
-          >
-        </li>
-        <li>
-          <a
-            href="Digitaltechnik/grundlagen-der-informationstheorie.html"
-            class="index-link"
-            >Grundlagen der Informations&shy;theorie</a
-          >
-        </li>
-        <li>
-          <a
-            href="Digitaltechnik/mikroprozessorarchitektur.html"
-            class="index-link"
-            >Mikroprozessor&shy;architektur</a
-          >
-        </li>
-        <li>
-          <a
-            href="Digitaltechnik/minimierung-und-schaltungsentwurf.html"
-            class="index-link"
-            >Minimierung und Schaltungs&shy;entwurf</a
-          >
-        </li>
-        <li>
-          <a href="Digitaltechnik/schaltnetze.html" class="index-link"
-            >Schaltnetze</a
-          >
-        </li>
-        <li>
-          <a href="Digitaltechnik/schaltwerke.html" class="index-link"
-            >Schaltwerke</a
-          >
-        </li>
-        <li>
-          <a
-            href="Digitaltechnik/zahlensysteme-der-informatik.html"
-            class="index-link"
-            >Zahlensysteme der Informatik</a
-          >
-        </li>
-      </ol>
-      <h2>Java</h2>
-      <ol>
-        <li>
-          <a href="JAVA/java-basics.html" class="index-link">Java Basics</a>
-        </li>
-        <li>
-          <a href="JAVA/problemes-types.html" class="index-link"
-            >Java problèmes types</a
-          >
-        </li>
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Deep-Learning/natural-language-processing.html"
+              class="solution-link"
+              >Natural Language Processing</a
+            >
+          </div>
+        </div>
+      </div>
+          <a href="/Informatik/Deep-Learning/natural-language-processing.html">Natural Language Processing</a> -->
 
-        <li>
-          <a href="JAVA/array-lists.html" class="index-link"
-            >Java Array Lists</a
+      <div class="topic-item" lang="de">
+        <button class="collapsible">
+          <p>Digital&shy;techink</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Digitaltechnik/codes.html" class="solution-link"
+              >1. Codes</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Digitaltechnik/digitaltechnik-grundlagen.html"
+              class="solution-link"
+              >2. Digitaltechnik Grundlagen</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Digitaltechnik/grundlagen-der-informationstheorie.html"
+              class="solution-link"
+              >3. Grundlagen der Informationstheorie</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Digitaltechnik/mikroprozessorarchitektur.html"
+              class="solution-link"
+              >4. Mikroprozessor&shy;architektur</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Digitaltechnik/minimierung-und-schaltungsentwurf.html"
+              class="solution-link"
+              >5. Minimierung und Schaltungsentwurf</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Digitaltechnik/schaltnetze.html" class="solution-link"
+              >6. Schaltnetze</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="Digitaltechnik/schaltwerke.html" class="solution-link"
+              >7. Schaltwerke</a
+            >
+          </div>
 
-      <h2>LaTeX</h2>
-      <ol>
-        <li>
-          <a href="LaTeX/latex-basics.html" class="index-link">LATEX Basics</a>
-        </li>
-      </ol>
-
-      <h2>Machine Learning</h2>
-      <ol>
-        <li>
-          <a href="Machine-Learning/machine-learning.html" class="index-link"
-            >Machine Learning</a
+          <div class="exercise-solution">
+            <a
+              href="Digitaltechnik/zahlensysteme-der-informatik.html"
+              class="solution-link"
+              >8. Zahlensysteme der Informatik</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Java</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
-
-      <!-- <h2>Python</h2>
-      <ol>
-        <li>
-          <a href="Python/python.html" class="index-link">Python</a>
-        </li>
-      </ol> -->
-
-      <h2>Web Developement</h2>
-      <ol>
-        <li>
-          <a href="web-development/css.html" class="index-link">CSS</a>
-        </li>
-        <li>
-          <a href="web-development/html.html" class="index-link">HTML</a>
-        </li>
-      </ol>
-
-      <hr />
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="JAVA/array-lists.html" class="solution-link"
+              >1. Java Array Lists</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="JAVA/java-basics.html" class="solution-link"
+              >2. Java Basics</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a href="JAVA/problemes-types.html" class="solution-link"
+              >3. Java problèmes types</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>LaTeX</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="LaTeX/latex-basics.html" class="solution-link"
+              >LaTeX Basics</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Machine Learning</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a
+              href="Machine-Learning/advanced-machine-learning-algorithms.html"
+              class="solution-link"
+              >1. Advanced Machine Learning Algorithms</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Machine-Learning/machine-learning.html"
+              class="solution-link"
+              >2. Machine Learning</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="topic-item" lang="en">
+        <button class="collapsible">
+          <p>Web Development</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Web-Development/css.html" class="solution-link">CSS</a>
+          </div>
+          <div class="exercise-solution">
+            <a href="Web-Development/html.html" class="solution-link">HTML</a>
+          </div>
+        </div>
+      </div>
       <h2>Tabellen</h2>
-      <ul>
-        <li>
-          <a href="Tabellen/vorsilben.html" class="index-link">Vorsilben</a>
-        </li>
-        <li>
-          <a
-            href="Tabellen/zahlenbereiche-der-binaerzahlen.html"
-            class="index-link"
-            >Zahlenbereiche der Binärzahlen</a
+      <div class="topic-item" lang="de">
+        <button class="collapsible">
+          <p>Tabellen</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ul>
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Tabellen/vorsilben.html" class="solution-link"
+              >&#9642; Vorsilben</a
+            >
+          </div>
+          <div class="exercise-solution">
+            <a
+              href="Tabellen/zahlenbereiche-der-binaerzahlen.html"
+              class="solution-link"
+              >&#9642; Zahlenbereiche der Binärzahlen</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <footer></footer>
   </body>

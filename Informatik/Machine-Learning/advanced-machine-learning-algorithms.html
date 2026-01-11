@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Advanced Machine Learning Algorithms</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Advanced Machine Learning Algorithms</h1>
+      <h2>Performance Evaluation</h2>
+      <h3>Definition</h3>
+      <p>
+        Performance evaluation is the process of assessing the effectiveness and
+        accuracy of a machine learning model on a given dataset.
+      </p>
+      <h2>Performance Evaluation Methods</h2>
+      <ul>
+        <li>
+          <p><u>Evaluation Metrics:</u></p>
+          <p>
+            Evaluation metrics are ways to measure how well a machine learning
+            model is performing. They help us understand if the model is making
+            accurate predictions or if improvements are needed.
+          </p>
+        </li>
+        <li>
+          <p><u>Cross-Validation:</u></p>
+          <p>
+            A technique to test how well a model will work on new data by
+            dividing the data into several parts. The model is trained on some
+            parts and tested on the remaining parts, and this is repeated
+            several times.
+          </p>
+        </li>
+        <li>
+          <p><u>Hyperparameter Tuning:</u></p>
+          <p>
+            Hyperparameter Tuning is the process of selecting the best set of
+            hyperparameters for a machine learning model. They control how the
+            model is trained and can significantly affect its performance.
+          </p>
+        </li>
+        <li>
+          <p><u>Overfitting and Underfitting:</u></p>
+          <p>
+            Overfitting occurs when a model learns the training data too well,
+            capturing noise and details that do not generalize to new data.
+            <br />
+            Underfitting occurs when a model is too simple to capture the
+            underlying patterns in the data.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Linearity-based Models</h2>
+      <h3>Objective</h3>
+      <p>
+        Linearity-based models assume that the relationship between input
+        variables (features) and the output (target) can be represented as a
+        linear equation.
+      </p>
+      <h3>Algorithms</h3>
+      <ul>
+        <li><p>Linear Regression</p></li>
+        <li><p>Logistic Regression</p></li>
+        <li><p>Ridge and Lasso Regression</p></li>
+        <li><p>Support Vector Machines or SVM with Linear Kernels</p></li>
+      </ul>
+      <h3>Advantages</h3>
+      <ul>
+        <li><p>Simple and fast to train.</p></li>
+        <li><p>Easy to interpret.</p></li>
+        <li>
+          <p>
+            Works well for problems where the relationship between variables is
+            approximately linear.
+          </p>
+        </li>
+      </ul>
+      <h3>Limitations</h3>
+      <ul>
+        <li>May not perform well on complex, non-linear problems.</li>
+      </ul>
+
+      <h2>Distance-based Models</h2>
+      <h3>Objective</h3>
+      <p>
+        These algorithms rely on measuring the "distance" between points in
+        feature space to classify or predict new instances.
+      </p>
+      <h3>Algorithms</h3>
+      <ul>
+        <li><p>K-Nearest Neighbors, KNN</p></li>
+        <li><p>K-Means§</p></li>
+        <li><p>DBSCAN</p></li>
+      </ul>
+      <h3>Advantages</h3>
+      <ul>
+        <li><p>Simple and effective for smaller datasets.</p></li>
+        <li>
+          <p>
+            KNN can be very accurate for datasets with well-defined class
+            boundaries.
+          </p>
+        </li>
+        <li><p>K-Means works well with spherical clusters.</p></li>
+      </ul>
+      <h3>Limitations</h3>
+      <ul>
+        <li>
+          <p>
+            KNN can be slow on large datasets due to the need to compute
+            distances to all points.
+          </p>
+        </li>
+        <li>
+          <p>
+            K-Means requires a predefined number of clusters and struggles with
+            clusters of different shapes and sizes.
+          </p>
+        </li>
+        <li>
+          <p>DBSCAN may not perform well with clusters of varying densities.</p>
+        </li>
+      </ul>
+
+      <h2>Probabilistic-based Models</h2>
+      <h3>Objective</h3>
+      <p>
+        These models aim to predict the likelihood of different outcomes. They
+        are especially useful when data is noisy or uncertain and can be applied
+        to both classification and regression problems.
+      </p>
+      <h3>Algorithms</h3>
+      <ul>
+        <li><p>>Naïve Bayes</p></li>
+        <li><p>Bayesian Networks</p></li>
+        <li><p>Hidden Markov Models, HMM</p></li>
+      </ul>
+      <h3>Advantages</h3>
+      <ul>
+        <li><p>Simple and computationally efficient.</p></li>
+        <li><p>Can handle uncertainty and incomplete data.</p></li>
+        <li><p>Probabilistic interpretations make them interpretable.</p></li>
+      </ul>
+      <h3>Limitations</h3>
+      <ul>
+        <li>
+          <p>
+            The "naïvety" assumption (features are independent) can be a
+            limitation if features are not independent.
+          </p>
+        </li>
+        <li>
+          <p>Requires more data to avoid overfitting in complex problems.</p>
+        </li>
+      </ul>
+
+      <h2>Tree-based Models</h2>
+
+      <p>
+        These models use a tree-like structure to represent decisions and their
+        possible consequences. They split the data into branches based on
+        feature values, with the goal of making more accurate predictions with
+        each split.
+      </p>
+      <h3>Algorithms:</h3>
+      <ul>
+        <li><p>Decision Tree</p></li>
+        <li><p>Random Forest</p></li>
+        <li><p>Gradient Boosting Machines, GBM</p></li>
+        <li><p>AdaBoost</p></li>
+      </ul>
+
+      <h3>Advantages</h3>
+      <ul>
+        <li><p>Handles both numerical and categorical data well.</p></li>
+        <li>
+          <p>Effective for both regression and classification tasks.</p>
+        </li>
+        <li>
+          <p>Models are interpretable, especially decision trees.</p>
+        </li>
+      </ul>
+      <h3>Limitations</h3>
+      <ul>
+        <li>
+          <p>Prone to overfitting, especially with deep trees.</p>
+        </li>
+        <li><p>Can be computationally expensive for large datasets.</p></li>
+      </ul>
+      <h2>Naïve Bayes</h2>
+      <h3>Definition</h3>
+      <p>
+        Naïve Bayes is a classification algorithm based on Bayes' theorem, which
+        assumes that features are conditionally independent given the class.
+      </p>
+      $$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
+      <h3>Remark</h3>
+      <p>
+        Naïve Bayes assumes that the presence or absence of features is
+        independent of each other given the class. That is why it is called
+        <q>Naïve</q>.
+      </p>
+      <h2>Likelihood in Naïve Bayes</h2>
+      <p>
+        In Naïve Bayes algorithm, "likelihood" refers to the probability of
+        observing a particular feature value given a class label. It quantifies
+        how likely it is to see a specific feature value when we know the class
+        of the data point.
+      </p>
+      <h2>Decision Tree</h2>
+      <p>
+        Decision Tree is a Supervised learning algorithm that can be used for
+        both classification and Regression problems, but mostly it is preferred
+        for solving Classification problems. It is a tree-structured classifier,
+        where internal nodes represent the features of a dataset, branches
+        represent the decision rules, and each leaf node represents the outcome.
+      </p>
+      <h3>Definition</h3>
+      <p>
+        A Decision Tree is a flowchart-like structure where each internal node
+        represents a test on a feature, each branch represents the outcome of
+        the test, and each leaf node represents a class label, decision taken
+        after computing all features.
+      </p>
+      <h3>Vocabulary</h3>
+      <ul>
+        <li>
+          <p><u>Root Node:</u></p>
+          <p>
+            The initial node at the beginning of a decision tree, where the
+            entire population or dataset starts dividing based on various
+            features or conditions.
+          </p>
+        </li>
+        <li>
+          <p><u>Splitting:</u></p>
+          <p>
+            Splitting is the process of dividing the decision node/root node
+            into sub-nodes according to the given conditions.
+          </p>
+        </li>
+        <li>
+          <p><u>Decision Nodes:</u></p>
+          <p>
+            Nodes resulting from the splitting of root nodes are known as
+            decision nodes. These nodes represent intermediate decisions or
+            conditions within the tree.
+          </p>
+        </li>
+        <li>
+          <p><u>Leaf Nodes:</u></p>
+          <p>
+            Nodes where further splitting is not possible, often indicating the
+            final classification or outcome. Leaf nodes are also referred to as
+            terminal nodes.
+          </p>
+        </li>
+        <li>
+          <p><u>Branch or Sub-Tree:</u></p>
+          <p>
+            A subsection of the entire decision tree is referred to as a branch
+            or sub-tree. It represents a specific path of decisions and outcomes
+            within the tree.
+          </p>
+        </li>
+      </ul>
+      <h2>Decision Tree Algorithm</h2>
+      <p>The algorithm to build a decision tree is as follows:</p>
+      <ol>
+        <li><p>Start with the root node and all training data.</p></li>
+        <li>
+          <p>
+            For each node, select the best feature to split on based on a
+            criterion.
+          </p>
+        </li>
+        <li>
+          <p>Split the data into subsets based on the selected feature.</p>
+        </li>
+        <li>
+          <p>
+            Create child nodes for each subset and repeat the process
+            recursively until a stopping condition is met.
+          </p>
+        </li>
+      </ol>
+      <h2>Attribute Selection Measure, ASM</h2>
+      <h3>Definition</h3>
+      <p>
+        Attribute Selection Measure is a method used to determine the best
+        feature to split on at each node in a decision tree. It evaluates the
+        quality of a split based on how well it separates the data into distinct
+        classes.
+      </p>
+      <h2>Information Gain</h2>
+      <h3>Definition</h3>
+      <p>
+        Information gain is a measure used to determine which feature should be
+        used to split the data at each internal node of the decision tree. It is
+        calculated using entropy.
+      </p>
+      <h3>Formula</h3>
+      $$\text{IG}(T, A) = \text{Entropy}(T) - \sum_{v \in \text{Values}(A)}
+      \frac{|T_v|}{|T|} \cdot \text{Entropy}(T_v)$$
+      <p>
+        where $T$ is the set of training instances, $A$ is the attribute being
+        evaluated, $T_v$ is the subset of $T$ where attribute $A$ has value $v$,
+        and $\text{Values}(A)$ is the set of all possible values for attribute
+        $A$.
+      </p>
+
+      <h2>Entropy</h2>
+      <h3>Definition</h3>
+      <p>
+        Entropy is a metric to measure the impurity in a given attribute. It
+        specifies randomness in data. In a decision tree, the goal is to
+        decrease the entropy of the dataset by creating more pure subsets of
+        data. Since entropy is a measure of impurity, by decreasing the entropy,
+        we are increasing the purity of the data.
+      </p>
+      $$ \text{Entropy}(S) = - \sum_{i=1}^{c} p_i \cdot \log_2(p_i) $$
+      <p>
+        where $p_i$ is the proportion of instances in class $i$ and $c$ is the
+        total number of classes.
+      </p>
+
+      <h2>Gini Impurity</h2>
+      <h3>Definition</h3>
+      <p>
+        Gini impurity is a measure of how often a randomly chosen element from
+        the dataset would be incorrectly labeled if it was randomly labeled
+        according to the distribution of labels in the dataset.
+      </p>
+      $$ \text{Gini}(S) = 1 - \sum_{i=1}^{c} p_i^2 $$
+      <p>
+        where $p_i$ is the proportion of instances in class $i$ and $c$ is the
+        total number of classes.
+      </p>
+      <h2>Random Forest</h2>
+      <h3>Definition</h3>
+      <p>
+        Random Forest is an ensemble learning method that constructs multiple
+        decision trees during training and outputs the mode of the classes, for
+        classification, or mean prediction, for regression, of the individual
+        trees.
+      </p>
+      <h2>Random Forest Algorithm</h2>
+      <p>The algorithm to build a random forest is as follows:</p>
+      <ol>
+        <li>
+          <p>From the training dataset, create multiple bootstrap samples.</p>
+        </li>
+        <li>
+          <p>
+            For each bootstrap sample, train a decision tree using a random
+            subset of features at each split.
+          </p>
+        </li>
+        <li>
+          <p>
+            Repeat the process to create a large number of trees (the forest).
+          </p>
+        </li>
+        <li>
+          <p>
+            For classification, aggregate the predictions of all trees by
+            majority vote; for regression, average the predictions.
+          </p>
+        </li>
+      </ol>
+      <h2>Neural Networks</h2>
+      <h3>Definition</h3>
+      <p>
+        Neural networks are a class of machine learning models inspired by the
+        structure and function of the human brain. They consist of
+        interconnected nodes, neurons, organized in layers, where each
+        connection has a weight that is adjusted during training to minimize
+        prediction errors.
+      </p>
+      <h2>Neural Networks Techniques</h2>
+      <ul>
+        <li><p>Feedforward Neural Networks</p></li>
+        <li><p>Convolutional Neural Networks, CNN</p></li>
+        <li><p>Recurrent Neural Networks, RNN</p></li>
+        <li><p>Long Short-Term Memory Networks, LSTM</p></li>
+      </ul>
+      <h2>Artificial Neural Networks, ANN</h2>
+      <p>
+        Artificial Neural Networks are computational models inspired by the
+        human brain's neural networks. They consist of layers of nodes, called
+        neurons, which are interconnected and work together to process
+        information and make predictions or decisions based on input data.
+      </p>
+      <h2>Artificial Neural Networks Architecture</h2>
+      <p>
+        The architecture of an Artificial Neural Network typically consists of
+        three main types of layers: input layer, hidden layers, and output
+        layer. Each layer is made up of neurons that are connected to neurons in
+        the adjacent layers through weighted connections.
+      </p>
+      <h3>Vocabulary</h3>
+      <ul>
+        <li>
+          <p><u>Weights:</u></p>
+          <p>
+            Each connection between neurons has a weight, indicating how strong
+            the connection is. If the weight is close to zero, changing the
+            input won't affect the output much. Negative weights mean that
+            increasing the input will decrease the output.
+          </p>
+        </li>
+        <li>
+          <p><u>Activation Function:</u></p>
+          <p>
+            Each neuron in the hidden and output layers applies a function to
+            the sum of its inputs multiplied by their weights. This function is
+            called an activation function. Choosing the right activation
+            function is important and affects how the network learns.
+          </p>
+        </li>
+        <li>
+          <p><u>Deep Network:</u></p>
+          <p>
+            A neural network with two or more hidden layers is called a deep
+            neural network.
+          </p>
+        </li>
+      </ul>
+      <h2>Deepl Learning</h2>
+      <h3>Definition</h3>
+      <p>
+        Deep Learning is a subset of machine learning that focuses on using
+        neural networks with many layers, deep neural networks, to model complex
+        patterns in data. It has been particularly successful in areas such as
+        image and speech recognition, natural language processing, and game
+        playing.
+      </p>
+      <h2>Feature Engineering</h2>
+      <h3>Definition</h3>
+      <p>
+        Feature engineering is the process of using domain knowledge to extract
+        or create features from raw data that can improve the performance of
+        machine learning models.
+      </p>
+      <h2>Feature Engineering Techniques</h2>
+      <ul>
+        <li>
+          <p><u>Handling Missing Data</u></p>
+          <p>
+            the values or data that is not stored or not present, for some
+            variables in the given dataset
+          </p>
+        </li>
+        <li>
+          <p><u>Outlier Detection</u></p>
+          <p>
+            Outliers are data points that differ significantly from other
+            observations. They can occur due to variability in the data or
+            measurement errors.
+          </p>
+        </li>
+        <li>
+          <p><u>Scaling and Normalization</u></p>
+          <p>
+            Scaling and normalization are techniques used to adjust the range of
+            numerical features in a dataset. This ensures that all features
+            contribute equally to the model's learning process.
+          </p>
+        </li>
+        <li>
+          <p><u>Encoding Categorical Data</u></p>
+          <p>
+            Encoding categorical data involves converting categorical variables
+            into numerical representations that can be used by machine learning
+            algorithms.
+          </p>
+        </li>
+      </ul>
+      <h2>Scaling</h2>
+      <h3>Definition</h3>
+      <p>
+        Scaling is the process of transforming features to a specific range,
+        often $[0, 1]$ or $[-1, 1]$. This is important because many machine
+        learning algorithms are sensitive to the scale of the input data.
+      </p>
+      <h2>Normalisation</h2>
+      <h3>Definition</h3>
+      <p>
+        Normalisation is the process of transforming features to a specific
+        range, often $[0, 1]$ or $[-1, 1]$. This is important because many
+        machine learning algorithms are sensitive to the scale of the input
+        data.
+      </p>
+      <h2>Z-score Normalization, Standardization</h2>
+      <h3>Definition</h3>
+      <p>
+        Z-score normalization transforms features to have a mean of 0 and a
+        standard deviation of 1. This is achieved by subtracting the mean and
+        dividing by the standard deviation for each feature.
+      </p>
+      <h3>Formula</h3>
+      $$ z = \frac{(x - \mu)}{\sigma} $$
+      <h2>Min-Max scaling</h2>
+      <h3>Definition</h3>
+      <p>
+        Min-Max scaling transforms features to a fixed range, typically $[0,
+        1]$. It is calculated by subtracting the minimum value and dividing by
+        the range for each feature.
+      </p>
+      <h3>Formula</h3>
+      $$ x' = \frac{x - x_{min}}{x_{max} - x_{min}} $$
+      <h2>Hyperparameters</h2>
+      <h3>Definition</h3>
+      <p>
+        Hyperparameters are parameters that are set before training a machine
+        learning model. They control the behavior of the learning algorithm and
+        can significantly impact the model's performance.
+      </p>
+      <h2>Learning Rate</h2>
+      <h3>Definition</h3>
+      <p>
+        The learning rate is a hyperparameter that controls how much to change
+        the model in response to the estimated error each time the model weights
+        are updated.
+      </p>
+      <h2>Regularisation</h2>
+      <h3>Definition</h3>
+      <p>
+        Regularisation is a technique used to prevent overfitting in machine
+        learning models. It adds a penalty term to the loss function, which
+        discourages the model from learning overly complex patterns.
+      </p>
+      <h2>Hyperparameter Tuning Techniques</h2>
+      <ul>
+        <li>
+          <p><u>Manual Search:</u></p>
+          <p>
+            Selecting hyperparameters based on intuition or experience,
+            typically used for simple models or when hyperparameter space is
+            small.
+          </p>
+        </li>
+        <li>
+          <p><u>Grid Search:</u></p>
+          <p>
+            Exhaustively tests all possible combinations of hyperparameters
+            within specified ranges.
+          </p>
+        </li>
+        <li>
+          <p><u>Random Search:</u></p>
+          <p>
+            Randomly selects combinations of hyperparameters and tests them.
+          </p>
+        </li>
+        <li>
+          <p><u>Cross-Validation:</u></p>
+          <p>
+            A technique where the dataset is split into multiple parts or folds.
+            The model is trained on some parts and tested on the remaining part,
+            and this is repeated multiple times.
+          </p>
+        </li>
+        <li>
+          <p><u>K-Fold Cross-Validation:</u></p>
+          <p>
+            The dataset is divided into K subsets or folds. The model is trained
+            on K-1 folds and tested on the remaining fold. This process is
+            repeated K times, each time using a different fold as the test set.
+          </p>
+        </li>
+      </ul>
+      <h3>Definition</h3>
+      <p>
+        Hyperparameter tuning techniques are methods used to find the optimal
+        values for hyperparameters in machine learning models. These techniques
+        help improve model performance by systematically adjusting the model's
+        parameters.
+      </p>
+    </div>
+  </body>
+</html>

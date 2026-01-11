@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/footer.js"></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Elektrotechnik</title>
+  </head>
+  <body>
+    <div class="chapter-index-wrapper">
+      <h1>Elektrotechnik</h1>
+      <h2>Grundlagen</h2>
+      <ol class="orederedListIndex">
+        <li>
+          <a href="Grundlagen/basisformeln.html" class="index-link"
+            >Basisformeln</a
+          >
+        </li>
+      </ol>
+      <h2>Elektrizitätslehre</h2>
+      <ol class="orederedListIndex">
+        <li>
+          <a href="Elektrizitaetslehre/elektrische-feld.html" class="index-link"
+            >Elektrisches Feld</a
+          >
+        </li>
+        <li>
+          <a
+            href="Elektrizitaetslehre/elektrische-stromkreis.html"
+            class="index-link"
+            >Elektrische Stromkreis</a
+          >
+        </li>
+
+        <li>
+          <a href="Elektrizitaetslehre/halbleiter.html" class="index-link"
+            >Halbleiter</a
+          >
+        </li>
+        <!-- <li>
+          <a href="Elektrizitaetslehre/induktionsgesetzHerleitung.html" class="index-link"
+            >Induktionsgesetz</a
+          >
+        </li> -->
+        <li>
+          <a href="Elektrizitaetslehre/magnetische-feld.html" class="index-link"
+            >Magnetische Feld</a
+          >
+        </li>
+        <li>
+          <a href="Elektrizitaetslehre/ohmsches-gesetz.html" class="index-link"
+            >Ohmsches Gesetz</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="Elektrizitaetslehre/wechselstromtechnik.html"
+            class="index-link"
+            >Wechselstromtechnik</a
+          >
+        </li>
+      </ol>
+      <h2>Schaltungen</h2>
+      <ol>
+        <li>
+          <a href="Schaltungen/rl-parallelschaltung.html" class="index-link"
+            >RL - Parallelschaltung</a
+          >
+        </li>
+        <li>
+          <a href="Schaltungen/rc-reihenschaltung.html" class="index-link"
+            >RC - Reihenschaltung</a
+          >
+        </li>
+        <li>
+          <a href="Schaltungen/rc-parallelschaltung.html" class="index-link"
+            >RC - Parallelschaltung</a
+          >
+        </li>
+        <li>
+          <a href="Schaltungen/rlc-reihenschaltung.html" class="index-link"
+            >RLC - Reihenschaltung</a
+          >
+        </li>
+        <li>
+          <a href="Schaltungen/rlc-parallelschaltung.html" class="index-link"
+            >RLC - Parallelschaltung</a
+          >
+        </li>
+        <li>
+          <a href="Schaltungen/filterschaltungen.html" class="index-link"
+            >Filterschaltungen</a
+          >
+        </li>
+      </ol>
+      <h2>Bauteile</h2>
+      <ol>
+        <li>
+          <a href="Bauteile/elektrische-widerstand.html" class="index-link"
+            >Elektrische Widerstand</a
+          >
+        </li>
+        <li>
+          <a href="Bauteile/halbleiterdiode.html" class="index-link"
+            >Halbleiterdiode</a
+          >
+        </li>
+        <li>
+          <a href="Bauteile/kondensator.html" class="index-link">Kondensator</a>
+        </li>
+        <li>
+          <a
+            href="Bauteile/widerstand-im-wechselstromkreis.html"
+            class="index-link"
+            >Widerstand im Wechselstromkreis</a
+          >
+        </li>
+        <li>
+          <a
+            href="Bauteile/kondensator-im-wechselstromkreis.html"
+            class="index-link"
+            >Kondensator im Wechselstromkreis</a
+          >
+        </li>
+        <li>
+          <a href="Bauteile/transformator.html" class="index-link"
+            >Transformator</a
+          >
+        </li>
+        <li>
+          <a href="Bauteile/transistor.html" class="index-link">Transistor</a>
+        </li>
+      </ol>
+    </div>
+    <footer></footer>
+  </body>
+</html>

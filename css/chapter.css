@@ -226,6 +226,7 @@ ol > li > ol {
   flex-direction: column;
   display: block;
   z-index: 0;
+  box-shadow: 0 1px 2px var(--transparent-black);
 }
 
 .side-navigator a {
@@ -242,6 +243,7 @@ ol > li > ol {
   background-color: var(--accent-color);
   opacity: 0.5;
   color: var(--white);
+  border-radius: 6px;
 }
 
 .submenu {

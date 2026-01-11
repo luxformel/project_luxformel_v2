@@ -32,6 +32,32 @@
   <body>
     <div class="main-wrapper">
       <h1>Data Warehouse</h1>
+      <h2>Schema</h2>
+      <p>
+        A schema defines the structure of data, including fields or columns,
+        constraints, and the relationships between them. It serves as a
+        blueprint for organizing data, outlining how information is arranged and
+        connected within a system. In the context of databases or data models, a
+        schema establishes the rules and format for storing and accessing data.
+      </p>
+      <h2>Data Type</h2>
+      <p>
+        A data type specifies the nature of data, such as simple types like
+        number, string, date, or float, and complex types like array, struct, or
+        map. It defines the kind of values that can be stored in a field,
+        determining how data is processed and interpreted. Data types are
+        fundamental for ensuring data integrity and enabling appropriate
+        operations on stored information.
+      </p>
+      <h2>Metadata</h2>
+      <p>
+        Metadata provides additional information about data, including
+        descriptions, functional fields, and authorship details. It includes
+        technical information such as when data was created, last modified, and
+        the context in which it exists. Metadata acts as a dictionary or guide,
+        offering crucial details that help users understand and manage the
+        primary data effectively.
+      </p>
       <h2>Data formats</h2>
       <ul>
         <li>
@@ -72,6 +98,102 @@
         to support business intelligence, reporting, and data analysis by
         providing a consolidated view of organizational data.
       </p>
+
+      <h2>Bottom-Up Approach to Building a Data Warehouse</h2>
+      <p>
+        The Bottom-up approach is a method for constructing a data warehouse
+        that starts with individual, department-specific data marts and
+        integrates them into a comprehensive enterprise-wide data warehouse.
+      </p>
+      <h3>Definition</h3>
+      <p>
+        The Bottom-up approach begins by identifying and developing small,
+        targeted data marts that serve the immediate needs of specific business
+        units or departments. These data marts are built incrementally and can
+        be integrated later into a larger, more comprehensive Enterprise Data
+        Warehouse or EDW.
+      </p>
+      <h3>Instructions</h3>
+      <ol>
+        <li>
+          <p><u>Start Small</u></p>
+          <p>
+            Begin by analyzing the data requirements of individual business
+            units or departments.
+          </p>
+        </li>
+        <li>
+          <p><u>Develop Targeted Marts:</u></p>
+          <p>
+            Create Data Marts that are specific to a single area of the
+            organization. This allows for quick delivery of insights and "quick
+            wins" for specific teams.
+          </p>
+        </li>
+        <li>
+          <p><u>Implement Incrementally:</u></p>
+          <p>
+            Build and deploy these data marts one at a time, focusing on
+            immediate needs.
+          </p>
+        </li>
+        <li>
+          <p><u>Integrate Over Time:</u></p>
+          <p>
+            As more data marts are created, they can be gradually integrated to
+            form a larger, more holistic data warehouse. This approach allows
+            for faster implementation and is more agile, as changes can be made
+            to individual marts without disrupting the entire system.
+          </p>
+        </li>
+      </ol>
+      <h2>Top-Down Approach to Building a Data Warehouse</h2>
+      <p>
+        The Top-down approach is a strategic methodology for building a data
+        warehouse that starts with a comprehensive, enterprise-wide view and
+        then develops smaller, integrated components.
+      </p>
+      <h3>Definition</h3>
+      <p>
+        The Top-down approach begins with a strategic and comprehensive
+        methodology that considers the entire organization's data requirements.
+        It involves building a centralized Enterprise Data Warehouse or EDW
+        first, which then serves as the foundation for developing various data
+        marts for different departments.
+      </p>
+      <h3>Instructions</h3>
+      <ol>
+        <li>
+          <p><u>Strategic Planning:</u></p>
+          <p>
+            Begin with a strategic plan that considers the data needs of the
+            entire organization.
+          </p>
+        </li>
+        <li>
+          <p><u>Build the Core:</u></p>
+          <p>
+            Design and build a centralized Enterprise Data Warehouse or EDW that
+            provides a holistic view of the company's data.
+          </p>
+        </li>
+        <li>
+          <p><u>Develop Marts:</u></p>
+          <p>
+            Create data marts from the central EDW to serve the specific needs
+            of different departments.
+          </p>
+        </li>
+        <li>
+          <p><u>Ensure Consistency:</u></p>
+          <p>
+            This approach ensures data consistency across the organization by
+            centralizing the data model and integration processes. While it
+            provides a comprehensive view, it can be more rigid and
+            time-consuming to implement.
+          </p>
+        </li>
+      </ol>
       <h2>Build approach FEELT TABELL</h2>
       <h2>Operation Data Store or ODS</h2>
       <p>
@@ -171,6 +293,557 @@
           <p>
             Cannot be summed up for any of the dimensions present in the fact
             table.
+          </p>
+        </li>
+      </ul>
+      <h2>Features of a fact table</h2>
+      <p>
+        The level of detail available in a given fact table as well as to the
+        level of detail provided by a star schema. <br />
+        It is usually given as the number of records per key within the table.
+        In short, the grain of the fact table is the grain of the star schema.
+        <br />In a Data Warehouse, dimensions represents all points of interest
+        for business and an entry point for fact tables. <br />
+        And once in your model and can be reused multiple times with different
+        fact tables. <br />
+        Consider a model containing multiple fact tables, representing different
+        data marts. Now look for a dimension that is common to these facts
+        tables.
+        <br />
+        Factless table captures the many-to-many relationship between dimensions
+        but contains no numeric or text facts. <br />
+        They are often used to record events or coverage information.
+      </p>
+      <h2>Normalisation</h2>
+      <p>
+        Normalization is a process in database design that organizes data into
+        separate tables to minimize redundancy and improve data integrity.
+        <br />
+        The purpose of normalization is to ensures that each piece of data is
+        stored in only one place, reducing the risk of inconsistencies.
+      </p>
+      <h2>Denormalisation</h2>
+      <p>
+        Denormalization involves combining related data from multiple tables
+        into a single table to improve query performance. <br />
+        The purpose of denormalization is to speeds up queries by reducing the
+        need for joins.
+      </p>
+      <h2>Star schema</h2>
+      <p>
+        Star schema is a data warehouse schema where there is only one “fact
+        table” and many denormalized dimension tables. <br />
+        Fact table contains primary keys from all the dimension tables and other
+        numeric columns columns of additive, numeric facts.
+      </p>
+      <h2>Grain of a star schema</h2>
+      <p>
+        In Data warehousing, grain refers to the level of detail available in a
+        given fact table as well as to the level of detail provided by a star
+        schema. <br />
+        It is usually given as the number of records per key within the table.
+        In general, the grain of the fact table is the grain of the star schema.
+      </p>
+      <h2>Snowflake schema</h2>
+      <p>
+        Snowflake schema contain normalized dimension tables in a tree like
+        structure with many nesting levels. <br />
+        Snowflake schema is easier to maintain but queries require more joins
+        because of nested levels.
+      </p>
+
+      <h2>Data Warehouse Processing Architecture</h2>
+      <ul>
+        <li>
+          <p>
+            The scalability of the solution should be demonstrated by the
+            ability to process a huge volume of data and stream it to different
+            destinations, at high speed, in various formats. The data stream
+            should be processed and presented in the required format, at the
+            right time and location, with the minimum impact to the existing
+            infrastructure.
+          </p>
+        </li>
+        <li>
+          <p>
+            The architecture should be extensible; new functionality can be
+            implemented in an existing service without regression or alteration.
+            Newer technologies, such as artificial intelligence, can be
+            implemented in an existing service by extending the service's APIs.
+          </p>
+        </li>
+        <li>
+          <p>
+            Data security is a critical aspect of the data governance strategy.
+            Data security controls at the source include establishing data
+            access controls and data encryption. Data security controls at the
+            perimeter include data security policies and monitoring access to
+            the data.
+          </p>
+        </li>
+        <li>
+          <p>
+            It should be simple and straightforward, and users should be able to
+            work with the data in an efficient and effective manner.
+          </p>
+        </li>
+      </ul>
+      <h2>Data Lake</h2>
+      <p>
+        A data lake is a central repository that stores large volumes of raw and
+        unprocessed data from various sources. It typically uses a flat
+        architecture, storing data in its native format, such as CSV, JSON, or
+        Parquet. <br />
+        Data lakes offer scalability and flexibility, allowing organizations to
+        collect and store vast amounts of data for future processing and
+        analysis.
+      </p>
+      <h2>Data Lake use cases</h2>
+      <ul>
+        <li>
+          <p><u>Data exploration and analytics</u></p>
+          <p>
+            Data scientists and analysts can explore and analyze diverse
+            datasets within the data lake. This supports ad-hoc queries, data
+            discovery, and the extraction of valuable insights.
+          </p>
+        </li>
+        <li>
+          <p><u>Big Data processing</u></p>
+          <p>
+            Well-suited for processing big data workloads, including large-scale
+            batch processing and parallel data processing. This is essential for
+            applications in industries like finance, healthcare, and e-commerce.
+          </p>
+        </li>
+        <li>
+          <p><u>Machine Learning and AI</u></p>
+          <p>
+            Provide a rich source of data for training machine learning models
+            and implementing artificial intelligence applications. The diverse
+            and voluminous data in the lake can be used to improve model
+            accuracy and robustness.
+          </p>
+        </li>
+        <li>
+          <p><u>Log and Event data</u></p>
+          <p>
+            Store logs, events, and other streaming data. This is crucial for
+            monitoring system performance, tracking user activities, and
+            troubleshooting issues.
+          </p>
+        </li>
+        <li>
+          <p><u>IoT Storage</u></p>
+          <p>
+            Internet of Things or IoT devices generate vast amounts of data.
+            Data lakes are ideal for storing and analyzing this data to gain
+            insights into device behavior, predict maintenance needs, and
+            optimize operations.
+          </p>
+        </li>
+      </ul>
+
+      <h2>Datalakehouse</h2>
+      <p>
+        Datalakehouse, also known as a unified analytics platform, is an
+        evolution of the datalake concept. <br />
+        It combines the strengths of a datalake with the capabilities of a data
+        warehouse. <br />
+        A datalakehouse provides a unified and structured view of data by
+        introducing schema enforcement and indexing on top of the raw data
+        stored in the datalake. <br />
+        It enables organizations to perform both batch and real-time analytics
+        on the same platform, offering a more streamlined and efficient data
+        processing and analysis experience.
+      </p>
+      <h2>Data LakeHouse use cases</h2>
+      <ul>
+        <li>
+          <p><u>Analyze data near of real-time</u></p>
+          <p>
+            Can accommodate streaming data alongside batch processing. This is
+            beneficial for applications such as fraud detection, IoT analytics,
+            and monitoring.
+          </p>
+        </li>
+        <li>
+          <p><u>Unified analytics</u></p>
+          <p>
+            Allow organizations to perform unified analytics by integrating
+            structured and unstructured data in a single platform. This supports
+            comprehensive business intelligence and analytics, providing a
+            holistic view of the data.
+          </p>
+        </li>
+        <li>
+          <p><u>Operation Analytics</u></p>
+          <p>
+            Can support operational analytics by integrating data from sensors,
+            machines, and production systems. This facilitates real-time
+            monitoring, predictive maintenance, and process optimization.
+          </p>
+        </li>
+        <li>
+          <p><u>Advanced analytics and ML</u></p>
+          <p>
+            Enable organizations to apply advanced analytics and machine
+            learning algorithms to their data. The unified architecture
+            simplifies data preparation and model training by leveraging both
+            structured and unstructured data.
+          </p>
+        </li>
+        <li>
+          <p><u>360 degree view </u></p>
+          <p>
+            can consolidate data from various touchpoints, providing a
+            360-degree view. This supports personalized marketing, customer
+            service, and experience optimization.
+          </p>
+        </li>
+      </ul>
+      <h2>Data Lake features</h2>
+      <ul>
+        <li>
+          <p><u>ACID Transactions</u></p>
+          <p>
+            Delta Lake provides ACID (Atomicity, Consistency, Isolation, and
+            Durability) transactions, which ensures that data updates are always
+            consistent and complete. This makes it well-suited for critical
+            workloads where data integrity is paramount.
+          </p>
+        </li>
+        <li>
+          <p><u>Scalable Metadata</u></p>
+          <p>
+            Delta Lake's metadata is designed to scale to petabyte-scale tables
+            with billions of partitions and files. It uses a tiered storage
+            approach to efficiently store and manage metadata across multiple
+            levels.
+          </p>
+        </li>
+        <li>
+          <p><u>Time Travel</u></p>
+          <p>
+            Delta Lake enables time travel, allowing users to query and analyze
+            historical versions of data as they evolve over time. This is
+            particularly useful for auditing purposes, identifying data lineage,
+            and performing rollbacks.
+          </p>
+        </li>
+        <li>
+          <p><u>Unified Batch or Streaming</u></p>
+          <p>
+            Delta Lake supports both batch and streaming workloads, providing a
+            unified table format for both types of data processing. This
+            eliminates the need to manage separate tables for batch and
+            streaming data, simplifying data management and processing.
+          </p>
+        </li>
+        <li>
+          <p><u>Schema Evolution or Enforcement</u></p>
+          <p>
+            Delta Lake supports schema evolution, allowing users to add or
+            modify table schema without disrupting existing data. It also
+            provides schema enforcement, ensuring that data always adheres to
+            the defined schema.
+          </p>
+        </li>
+        <li>
+          <p><u>Audit History</u></p>
+          <p>
+            Delta Lake maintains a detailed audit history of all data changes,
+            providing a comprehensive record of data lineage and modifications.
+            This is valuable for auditing purposes and identifying data quality
+            issues.
+          </p>
+        </li>
+      </ul>
+      <h2>Data Visualisation</h2>
+      <p>
+        Data visualization is the representation of information and data using
+        charts, graphs, maps, and other visual tools. <br />
+        These visualizations allow us to easily understand any patterns, trends,
+        or outliers in a data set. Data visualization also presents data to the
+        general public or specific audiences without technical knowledge in an
+        accessible manner.
+      </p>
+      <ul>
+        <li>
+          <p><u>Storytelling</u></p>
+          <p>
+            People are drawn to colors and patterns in clothing, arts and
+            culture, architecture, and more. Data is no different—colors and
+            patterns allow us to visualize the story within the data.
+          </p>
+        </li>
+        <li>
+          <p><u>Accessibility</u></p>
+          <p>
+            Information is shared in an accessible, easy-to-understand manner
+            for a variety of audiences.
+          </p>
+        </li>
+        <li>
+          <p><u>Visualize relationships</u></p>
+          <p>
+            It's easier to spot the relationships and patterns within a data set
+            when the information is presented in a graph or chart.
+          </p>
+        </li>
+        <li>
+          <p><u>Exploration</u></p>
+          <p>
+            More accessible data means more opportunities to explore,
+            collaborate, and inform actionable decisions.
+          </p>
+        </li>
+      </ul>
+      <h2>Data transformations</h2>
+      <ul>
+        <li>
+          <p><u>Filtering</u></p>
+          <p>
+            Selecting a subset of rows or columns based on specified criteria.
+          </p>
+        </li>
+        <li>
+          <p><u>Sorting</u></p>
+          <p>
+            Arranging data in a specific order, often based on one or more
+            columns.
+          </p>
+        </li>
+        <li>
+          <p><u>Aggregation</u></p>
+          <p>
+            Combining multiple rows into a single summary row, usually involves
+            mathematical operations like sum, average, count, etc.
+          </p>
+        </li>
+        <li>
+          <p><u>Joining</u></p>
+          <p>
+            Combining data from multiple sources based on a common key or
+            attribute. • Mapping: Replacing values in a column with
+            corresponding values from a lookup table.
+          </p>
+        </li>
+        <li>
+          <p><u>Derivation</u></p>
+          <p>Creating new columns or calculations based on existing data.</p>
+        </li>
+        <li>
+          <p><u>Normalization</u></p>
+          <p>
+            Ensuring data consistency by organizing it into a standardized
+            format, often involves breaking down data into smaller, more
+            manageable tables.
+          </p>
+        </li>
+        <li>
+          <p><u>Cleaning</u></p>
+          <p>
+            Handling missing or incorrect data, dealing with duplicates, and
+            ensuring data quality.
+          </p>
+        </li>
+        <li>
+          <p><u>Validation</u></p>
+          <p>
+            Checking data integrity and accuracy to ensure it meets predefined
+            standards.
+          </p>
+        </li>
+        <li>
+          <p><u>Data Type Conversion</u></p>
+          <p>
+            Converting data from one type to another, such as changing a string
+            to a date or a number.
+          </p>
+        </li>
+        <li>
+          <p><u>Splitting</u></p>
+          <p>
+            Breaking down a column into multiple columns, usually when dealing
+            with composite data.
+          </p>
+        </li>
+        <li>
+          <p><u>Concatenation</u></p>
+          <p>Combining data from multiple columns into a single column.</p>
+        </li>
+        <li>
+          <p><u>Duplication Removal</u></p>
+          <p>Eliminating duplicate records from the dataset.</p>
+        </li>
+        <li>
+          <p><u>Pivoting or Unpivoting</u></p>
+          <p>
+            Transforming data from a wide format to a long format (or vice
+            versa)
+          </p>
+        </li>
+        <li>
+          <p><u>Standardization</u></p>
+          <p>
+            Ensuring consistency in units, formats, or naming conventions across
+            the dataset.
+          </p>
+        </li>
+        <li>
+          <p><u>Enrichment</u></p>
+          <p>
+            Adding additional information to the data from external sources.
+          </p>
+        </li>
+        <li>
+          <p><u>Masking or Anonymization</u></p>
+          <p>
+            Protecting sensitive information by replacing, encrypting, or
+            anonymizing certain data.
+          </p>
+        </li>
+        <li>
+          <p><u>Splitting by Business Logic</u></p>
+          <p>Dividing data into subsets based on business rules or criteria.</p>
+        </li>
+      </ul>
+      <h2>Aggregations</h2>
+      <p>
+        Aggregations in the context of databases and data analysis involve the
+        grouping and summarization of data. Here is a list of common aggregation
+        functions used in SQL and other data analysis tools:
+      </p>
+      <ul>
+        <li>
+          <p><u>Count:</u></p>
+          <p>Counts the number of rows in a result set</p>
+        </li>
+        <li>
+          <p><u>Min:</u></p>
+          <p>Finds the minimum value in a column</p>
+        </li>
+        <li>
+          <p><u>Max:</u></p>
+          <p>Finds the maximum value in a column</p>
+        </li>
+        <li>
+          <p><u>Sum:</u></p>
+          <p>Calculates the sum of values in a numeric column</p>
+        </li>
+        <li>
+          <p><u>Avg:</u></p>
+          <p>Computes the average value of a numeric column</p>
+        </li>
+        <li>
+          <p><u>Count Distinct:</u></p>
+          <p>Count without duplicate values from a result set</p>
+        </li>
+      </ul>
+      <h2>Slowly Changing Dimension</h2>
+      <p>
+        In the context of data warehousing and database design, Slowly Changing
+        Dimensions (SCD) refer to the way in which historical data is managed
+        when there are changes to the dimension attributes over time. <br />
+        There are several types of Slowly Changing Dimensions, commonly denoted
+        as SCD Type 1, SCD Type 2, and SCD Type 3.
+      </p>
+      <h2>SCD Type 1</h2>
+      <p>
+        In SCD Type 1, when a change occurs, the existing dimension record is
+        simply updated with the new data. There is no tracking of historical
+        values, so only the current information is retained.
+      </p>
+      <h2>SCD Type 2</h2>
+      <p>
+        In SCD Type 2, a new record is added to the dimension table for each
+        change. The original record is marked as inactive, and the new record
+        contains the updated information. This way, a history of changes is
+        preserved.
+      </p>
+      <h2>SCD Type 3</h2>
+      <p>
+        In SCD Type 3, a limited amount of historical data is maintained.
+        Instead of creating a new record for each change, only certain
+        attributes are updated, and additional columns are added to the table to
+        capture this limited history.
+      </p>
+      <h2>SCD Type 4</h2>
+      <p>
+        SCD Type 4 is a hybrid approach that combines elements of both SCD Type
+        1 and SCD Type 2. It typically involves creating a separate table to
+        store historical changes while maintaining a current record in the main
+        dimension table.
+      </p>
+      <h2>ELT</h2>
+      <p>
+        ELT is a variation of the Extract, Transform, Load (ETL), a data
+        integration process in which transformation takes place on an
+        intermediate server before it is loaded into the target. In contrast,
+        ELT allows raw data to be loaded directly into the target and
+        transformed there. <br />
+        With an ELT approach, a data extraction tool is used to obtain data from
+        a source or sources, and the extracted data is stored in a staging area
+        or database. Any required business rules and data integrity checks can
+        be run on the data in the staging area before it is loaded into the data
+        warehouse. All data transformations occur in the data warehouse after
+        the data is loaded.
+      </p>
+      <h2>ELT Process</h2>
+      <ul>
+        <li>
+          <p>
+            <u
+              >A more recent technology made possible by high-speed, cloud-based
+              servers:</u
+            >
+          </p>
+          <p>
+            ELT is a relatively new technology made possible because of modern,
+            cloud-based server technologies. Cloud-based data warehouses offer
+            near-endless storage capabilities and scalable processing power. For
+            example, platforms like Amazon Redshift and Google Big Query make
+            ELT pipelines possible because of their incredible processing
+            capabilities.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Ingest anything and everything as the data becomes available:</u>
+          </p>
+          <p>
+            ELT paired with a data lake lets you immediately ingest an
+            ever-expanding pool of raw data as it becomes available. There's no
+            requirement to transform the data into a special format before
+            saving it in the data lake.
+          </p>
+        </li>
+      </ul>
+      <h2>ELT Process</h2>
+      <ul>
+        <li>
+          <p><u>Transforms only the data you need:</u></p>
+          <p>
+            ELT transforms only the data required for a particular analysis.
+            Although it can slow down the process of analyzing the data, it
+            offers more flexibility because you can transform the data in
+            different ways on the fly to produce different types of metrics,
+            forecasts, and reports. Conversely, with ETL, the entire ETL
+            pipeline and the structure of the data in the OLAP warehouse may
+            require modification if the previously decided upon structure
+            doesn't allow for a new type of analysis.
+          </p>
+        </li>
+        <li>
+          <p><u>ELT has more specific use cases than ETL:</u></p>
+          <p>
+            It's important to note that the tools and systems of ELT are still
+            evolving, so they're not as reliable as ETL paired with an OLAP
+            database. Although it takes more effort to set up, ETL provides more
+            accurate insights when dealing with massive pools of data. Also, ELT
+            developers who know how to use ELT technology are generally more
+            difficult to find than ETL developers.
           </p>
         </li>
       </ul>

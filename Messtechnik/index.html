@@ -12,33 +12,63 @@
     <link rel="stylesheet" href="/css/reset.css" />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/chapter-index.css" />
+    <link rel="stylesheet" href="/css/sub-index.css" />
     <script defer src="/javascript/navigator.js"></script>
     <script defer src="/javascript/footer.js"></script>
-
+    <script defer src="/javascript/collapser.js"></script>
     <script defer src="/settings/settings.js"></script>
 
     <title>Messtechnik</title>
   </head>
   <body>
-    <div class="chapter-index-wrapper">
-      <h1>Messtechnik</h1>
-      <h2>Grundlagen</h2>
-      <ol>
-        <li>
-          <a href="Grundlagen/messtechnik.html" class="index-link"
-            >Messtechnik</a
+    <header>
+      <h1>Messtechnik Index</h1>
+    </header>
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Grundlagen</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
-      <h2>Laboratory</h2>
-      <ol>
-        <li>
-          <a href="Laboratory/error-calculation.html" class="index-link"
-            >Error calculation</a
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Grundlagen/messtechnik.html" class="solution-link"
+              >Messtechnik</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="exercise-section">
+      <div class="topic-item">
+        <button class="collapsible">
+          <p>Laboratory</p>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
           >
-        </li>
-      </ol>
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+        <div class="content">
+          <div class="exercise-solution">
+            <a href="Laboratory/error-calculation.html" class="solution-link"
+              >Error Calculation</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <footer></footer>
   </body>
