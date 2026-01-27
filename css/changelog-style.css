@@ -1,28 +1,12 @@
 .wrapper {
   padding: 1rem;
-  margin: 0.5rem;
+  margin-top: 1.5rem;
   width: 80%;
   margin: 0 auto;
-}
-h1 {
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  text-decoration: underline;
-  text-transform: uppercase;
-  text-align: left;
-  font-family: Arial;
-  font-size: 2rem;
-  font-weight: bolder;
-  letter-spacing: -0.05rem;
-  color: var(--black);
-}
+  max-width: 80ch;
 
-h2 {
-  color: var(--black);
-  padding: 1rem;
-  font-size: 2rem;
-
-  text-decoration: underline;
+  /* border: 2px solid rgba(187, 187, 187, 0.235);
+  border-radius: 5px; */
 }
 
 p {
@@ -31,30 +15,26 @@ p {
   margin: 0 2rem;
 }
 
-main {
-  padding: 2rem;
+time {
+  color: var(--black);
+  margin-left: 1.8rem;
+}
 
-  time {
-    color: var(--black);
-    margin-left: 1.8rem;
-  }
+h3 {
+  color: var(--black);
+  font-weight: bold;
+  padding: 1rem;
+}
 
-  h3 {
-    color: var(--black);
-    font-weight: bold;
-    padding: 1rem;
-  }
+ul {
+  margin-left: 2.1rem;
+}
 
-  ul {
-    margin-left: 2.1rem;
-  }
-
-  li {
-    font-size: 1.1rem;
-    list-style-type: disc;
-    padding: 0.6rem;
-    color: var(--changelog-main-text-color);
-    line-height: 1.2rem;
-    max-width: 65ch;
-  }
+.wrapper li {
+  font-size: 1.1rem;
+  list-style-type: disc;
+  padding: 0.6rem;
+  color: var(--changelog-main-text-color);
+  line-height: 1.2rem;
+  max-width: 65ch;
 }

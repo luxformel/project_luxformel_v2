@@ -42,6 +42,7 @@ URL_EXCLUSION_LIST = [
     "https://beta.luxformel.info/readme.html",
     "https://beta.luxformel.info/changelog.html",
     "https://beta.luxformel.info/astellungen.html",
+    "https://beta.luxformel.info/eluxa.html",
     "https://beta.luxformel.info/Archiv/",
     "https://beta.luxformel.info/Documentation/",
     "https://beta.luxformel.info/Mathe/Tableaux/",

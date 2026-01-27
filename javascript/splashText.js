@@ -748,7 +748,9 @@ var splashTexts = [
   "I come from a land down under <br> Where beer does flow and men chunder",
   "Coming in 2 years!! <br> Since 10 years...",
   "Don't miss the Luxformel investor call!",
-  "1/750",
+  "modus ponens",
+  "modus tollens",
+  "1/752",
 ];
 function generateRandomText() {
   var randomNumber = Math.floor(Math.random() * splashTexts.length);
