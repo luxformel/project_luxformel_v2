@@ -1,0 +1,335 @@
+import requests
+from bs4 import BeautifulSoup
+import os
+import re
+import io
+from PyPDF2 import PdfReader, PdfWriter
+from playwright.sync_api import sync_playwright
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import mm
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+
+# ============================================================================
+# FONT REGISTRATION
+# ============================================================================
+try:
+    pdfmetrics.registerFont(TTFont('RobotoMono', 'RobotoMono-Regular.ttf'))
+    pdfmetrics.registerFont(TTFont('RobotoMono-Bold', 'RobotoMono-Bold.ttf'))
+    MAIN_FONT = "RobotoMono"
+    BOLD_FONT = "RobotoMono-Bold"
+except Exception as e:
+    print(f"⚠️ Roboto Mono fonts not found: {e}. Falling back to Courier.")
+    MAIN_FONT = "Courier"
+    BOLD_FONT = "Courier-Bold"
+
+# ============================================================================
+# CONFIGURATION
+# ============================================================================
+BASE_URL = "https://luxformel.info/"
+SITEMAP_URL = BASE_URL + "sitemap.html"
+OUTPUT_DIR = "Archiv/Dokumenter/pdf/Website"
+OUTPUT_PATH = os.path.join(OUTPUT_DIR, "luxformel_book.pdf")
+TEMP_PDF_DIR = "temp"
+
+PREPEND_PDFS = [os.path.join(OUTPUT_DIR, "Luxformel_book_cover.pdf")] 
+APPEND_PDFS = [os.path.join(OUTPUT_DIR, "Luxformel_book_backcover.pdf")]
+
+URL_EXCLUSION_LIST = [
+    "https://luxformel.info/Programmen/",
+    "https://luxformel.info/Error/",
+    "https://luxformel.info/readme.html",
+    "https://luxformel.info/changelog.html",
+    "https://luxformel.info/astellungen.html",
+    "https://luxformel.info/Archiv/",
+    "https://luxformel.info/Documentation/",
+    "https://luxformel.info/Mathe/Tableaux/",
+    "https://luxformel.info/Physik/Tabellen/",
+    "https://luxformel.info/Informatik/Tabellen/",
+    "https://luxformel.info/Chemie/Tabellen/",
+    "https://luxformel.info/Chemie/Allgemeine-Chemie/periodensystem-der-elemente.html",
+    "https://luxformel.info/Physik/Kernphysik/formelsammlung-radioaktivitaet.html",
+    "https://luxformel.info/Physik/Optik/formelsammlung-strahlenoptik.html",
+    "https://luxformel.info/Physik/Optik/formelsammlung-wellenoptik.html",
+    "https://luxformel.info/Physik/Quantenphysik/formelsammlung-quantenmechanik.html",
+    "https://luxformel.info/Physik/Relativitaetstheorie/formelsammlung-relativitaetstheorie.html",
+    # "https://luxformel.info/Chemie/",
+    # "https://luxformel.info/Divers/",
+    # "https://luxformel.info/Elektrotechnik/",
+    # "https://luxformel.info/Informatik/",
+    # "https://luxformel.info/Mathe/",
+    # "https://luxformel.info/Messtechnik/",
+    # "https://luxformel.info/Technologie/",
+]
+
+EXCLUDE_PATTERNS = [
+    r"index\.html$", 
+    r"Error", 
+    r"sitemap", 
+    r"Tabellen", 
+    r"Tableaux",
+    r"/$" # This specifically excludes URLs ending in a trailing slash (directory roots)
+]
+
+def clean_url(url):
+    """Removes trailing slashes and common index files for uniform comparison."""
+    url = url.split('#')[0].split('?')[0] # Remove fragments and queries
+    url = re.sub(r'/index\.html$', '', url, flags=re.IGNORECASE)
+    return url.rstrip('/')
+
+# Clean the exclusion list once for efficiency
+CLEAN_EXCLUSION_LIST = [clean_url(url) for url in URL_EXCLUSION_LIST]
+
+def normalize_url(url):
+    """
+    Standardizes a URL by removing trailing slashes and index.html 
+    to ensure comparisons are reliable.
+    """
+    u = url.strip().lower()
+    u = re.sub(r'/index\.html$', '', u)
+    u = u.rstrip('/')
+    return u
+
+# Pre-normalize the exclusion list for faster/accurate matching
+CLEAN_EXCLUSION_SET = {normalize_url(u) for u in URL_EXCLUSION_LIST}
+
+def should_exclude(url):
+    normalized_target = normalize_url(url)
+    
+    # 1. ABSOLUTE CHECK: Is this URL (or its root) in the exclusion list?
+    if normalized_target in CLEAN_EXCLUSION_SET:
+        return True
+    
+    # 2. HIERARCHY CHECK: Does this URL live inside an excluded directory?
+    # This catches "https://luxformel.info/Archiv/somepage.html" if "Archiv" is excluded.
+    for excluded in CLEAN_EXCLUSION_SET:
+        if normalized_target.startswith(excluded + '/'):
+            return True
+
+    # 3. PATTERN CHECK: Check against regex (index.html, Error, etc.)
+    if any(re.search(pattern, url, re.IGNORECASE) for pattern in EXCLUDE_PATTERNS):
+        return True
+        
+    return False
+
+# ============================================================================
+# UNIFIED SCALING HELPER
+# ============================================================================
+
+def force_page_to_a4(page):
+    """Strictly enforces A4 dimensions and centers content for any PDF page."""
+    target_w = float(A4[0])
+    target_h = float(A4[1])
+    
+    current_w = float(page.mediabox.width)
+    current_h = float(page.mediabox.height)
+    
+    # Calculate scale to fit within target A4
+    scale = min(target_w / current_w, target_h / current_h)
+    page.scale(scale, scale)
+    
+    # Calculate offsets to center the scaled content
+    new_w = current_w * scale
+    new_h = current_h * scale
+    offset_x = (target_w - new_w) / 2
+    offset_y = (target_h - new_h) / 2
+    
+    # Apply translation to center
+    page.add_transformation([1, 0, 0, 1, offset_x, offset_y])
+    
+    # Explicitly set the media box to standard A4 points
+    page.mediabox.lower_left = (0, 0)
+    page.mediabox.upper_right = (target_w, target_h)
+    
+    return page
+
+# ============================================================================
+# DATA FETCHING & STRUCTURE
+# ============================================================================
+
+def get_book_structure(url):
+    try:
+        res = requests.get(url)
+        res.encoding = 'utf-8' 
+        res.raise_for_status()
+        soup = BeautifulSoup(res.text, 'html.parser')
+        structure = []
+        sections = soup.find_all('section')
+        last_main_cat = None
+        
+        for sec in sections:
+            valid_links = []
+            for a in sec.find_all('a'):
+                href = a.get('href', '')
+                # Build absolute URL
+                full_url = href if href.startswith('http') else BASE_URL.rstrip('/') + '/' + href.lstrip('/')
+                
+                # STRICT FILTERING
+                if should_exclude(full_url):
+                    continue  # Stop here and don't add to valid_links
+                
+                valid_links.append({
+                    'type': 'link', 
+                    'text': a.get_text(strip=True), 
+                    'url': full_url, 
+                    'level': 3
+                })
+
+            if valid_links:
+                h2 = sec.find('h2')
+                if h2:
+                    raw_title = h2.get_text(strip=True)
+                    if "/" in raw_title:
+                        parts = raw_title.split('/')
+                        main_cat, sub_cat = parts[0].strip(), parts[1].strip()
+                        if main_cat != last_main_cat:
+                            structure.append({'type': 'heading', 'text': main_cat, 'level': 1})
+                            last_main_cat = main_cat
+                        structure.append({'type': 'heading', 'text': sub_cat, 'level': 2})
+                    else:
+                        structure.append({'type': 'heading', 'text': raw_title, 'level': 1})
+                        last_main_cat = raw_title
+                structure.extend(valid_links)
+        return structure
+    except Exception as e:
+        print(f"Error: {e}"); return []
+    
+
+# ============================================================================
+# COMPONENT GENERATION (TOC & OVERLAYS)
+# ============================================================================
+
+def create_toc_page(entries):
+    packet = io.BytesIO()
+    can = canvas.Canvas(packet, pagesize=A4)
+    width, height = A4
+    y = height - 80
+    page_num_x = width - 60 
+    
+    for item in entries:
+        level = item.get('level', 1)
+        
+        if y < height - 80:
+            if level == 1: y -= 25
+            elif level == 2: y -= 15
+
+        if y < 70:
+            can.showPage()
+            y = height - 70
+            
+        x_pos = 50 if level == 1 else (75 if level == 2 else 100)
+        f_size = 20 if level == 1 else (16 if level == 2 else 12)
+        f_name = BOLD_FONT if level < 3 else MAIN_FONT
+        can.setFont(f_name, f_size)
+        
+        text = item['text'].upper() if level < 3 else item['text']
+        can.drawString(x_pos, y, text)
+        
+        if item['type'] == 'link':
+            page_num = str(item.get('page', '??'))
+            text_w = can.stringWidth(text, f_name, f_size)
+            dots_start = x_pos + text_w + 12
+            if page_num_x - 15 > dots_start:
+                dot_w = can.stringWidth(".", f_name, f_size)
+                num_dots = int((page_num_x - 15 - dots_start) / dot_w)
+                can.drawString(dots_start, y, "." * num_dots)
+            can.drawRightString(page_num_x, y, page_num)
+
+        y -= (38 if level == 1 else (28 if level == 2 else 20))
+            
+    can.save()
+    packet.seek(0)
+    return PdfReader(packet)
+
+def create_num_overlay(number):
+    packet = io.BytesIO()
+    can = canvas.Canvas(packet, pagesize=A4)
+    can.setFont(MAIN_FONT, 10)
+    can.drawCentredString(A4[0]/2, 15*mm, f"{number}")
+    can.save(); packet.seek(0)
+    return PdfReader(packet).pages[0]
+
+# ============================================================================
+# MAIN RUNNER
+# ============================================================================
+
+def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(TEMP_PDF_DIR, exist_ok=True)
+    
+    structure = get_book_structure(SITEMAP_URL)
+    if not structure: return
+
+    final_writer = PdfWriter()
+    content_writer = PdfWriter()
+    toc_data = []
+    
+    start_offset = 0
+    for pdf_path in PREPEND_PDFS:
+        if os.path.exists(pdf_path):
+            start_offset += len(PdfReader(pdf_path).pages)
+    
+    current_content_page = start_offset + 2 # Initial estimate for TOC
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+
+        for item in structure:
+            if item['type'] == 'heading':
+                toc_data.append(item)
+                continue
+            
+            print(f"📖 Printing: {item['text']}")
+            try:
+                page.goto(item['url'], wait_until='networkidle', timeout=60000)
+                temp_file = os.path.join(TEMP_PDF_DIR, f"temp_{current_content_page}.pdf")
+                
+                page.pdf(path=temp_file, format="A4", print_background=True,
+                         margin={"top": "15mm", "bottom": "25mm", "left": "15mm", "right": "15mm"})
+                
+                reader = PdfReader(temp_file)
+                item['page'] = current_content_page
+                toc_data.append(item)
+                
+                for p_obj in reader.pages:
+                    # Inner content scaling for margins
+                    p_obj.scale_by(0.88) 
+                    overlay = create_num_overlay(current_content_page)
+                    p_obj.merge_page(overlay)
+                    content_writer.add_page(p_obj)
+                    current_content_page += 1
+
+            except Exception as e:
+                print(f"⚠️ Skipped {item['url']}: {e}")
+                continue
+        browser.close()
+
+    # --- FINAL ASSEMBLY WITH GLOBAL SIZE ENFORCEMENT ---
+    
+    # 1. Prepend PDFs
+    for path in PREPEND_PDFS:
+        if os.path.exists(path):
+            reader = PdfReader(path)
+            for p in reader.pages: final_writer.add_page(force_page_to_a4(p))
+
+    # 2. TOC
+    toc_reader = create_toc_page(toc_data)
+    for p in toc_reader.pages: final_writer.add_page(force_page_to_a4(p))
+
+    # 3. Content
+    for p in content_writer.pages: final_writer.add_page(force_page_to_a4(p))
+    
+    # 4. Append PDFs
+    for path in APPEND_PDFS:
+        if os.path.exists(path):
+            reader = PdfReader(path)
+            for p in reader.pages: final_writer.add_page(force_page_to_a4(p))
+
+    with open(OUTPUT_PATH, "wb") as f:
+        final_writer.write(f)
+    print(f"\n✅ SUCCESS: Final uniform book generated at {OUTPUT_PATH}.")
+
+if __name__ == "__main__":
+    main()

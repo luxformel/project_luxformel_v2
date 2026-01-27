@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/javascript/header.js"></script>
+
+    <script defer src="/themes/themes.js"></script>
+
+    <link rel="stylesheet" id="theme-set" href="/themes/default.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/chapter.css" />
+
+    <script defer src="/javascript/navigator.js"></script>
+    <script defer src="/javascript/side-navigator.js"></script>
+    <script defer src="/javascript/scroll-button.js"></script>
+
+    <script src="/javascript/mathjax.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script defer src="/settings/settings.js"></script>
+
+    <title>Cryptography</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <h1>Cryptography</h1>
+      <h2>One-Time Pad, OTP</h2>
+      <p>
+        One-Time Pad is a cryptographic technique that uses a random key of the
+        same length as the plaintext message. It is theoretically unbreakable if
+        used correctly but impractical because a large amount of storage is
+        required for the key material.
+      </p>
+      <img
+        src="../img/Cryptography/one-time-pad.png"
+        alt="one-time-pad"
+        class="zeichnungen"
+      />
+      <p>
+        The plaintext $P$ is transformed into the ciphertext $C$ using a XOR
+        operation with the key $K$.
+      </p>
+      $$ C = P \oplus K $$ $$ P = C \oplus K $$
+      <p>
+        The one-time pad must be the same length as the plaintext $P$ and must
+        be newly generated for each encryption.
+      </p>
+      <h2>Perfect security, Information-theoretic security</h2>
+      <p>
+        Means that a cryptographic scheme is secure from an
+        information-theoretic perspective. Even if an attacker tries all
+        possible keys, they gain no information about the original plaintext.
+      </p>
+      <h2>Practical security, Computational security</h2>
+      <p>
+        Means that breaking the encryption is theoretically possible, but
+        computationally infeasible within a reasonable time and with limited
+        resources.
+      </p>
+      <h2>Kerckhoff's principle</h2>
+      <h3>Definition</h3>
+      <p>
+        Kerckhoff's Principle states that a cryptographic system should remain
+        secure even if everything about the system, except the key, is public
+        knowledge.
+      </p>
+      <h2>Symmetric encryption</h2>
+      <p>
+        Symmetric encryption is a method of cryptography where the same key is
+        used for both encryption and decryption. It is fast and efficient,
+        making it suitable for encrypting large amounts of data. Both the sender
+        and receiver must securely share the same secret key.
+      </p>
+      <h2>Stream cipher</h2>
+      <h3>Definition</h3>
+      <p>
+        A stream cipher is a symmetric encryption algorithm that encrypts data
+        bit by bit or byte by byte. It generates a keystream, which is combined
+        with the plaintext using an XOR operation to produce the ciphertext.
+      </p>
+      <img
+        src="../img/Cryptography/stream-ciphers.png"
+        alt="stream-ciphers"
+        class="zeichnungen-big"
+      />
+      <h2>Nonce, Initial value, IV</h2>
+      <h3>Definition</h3>
+      <p>
+        A nonce is a number or bit string used only once in a cryptographic
+        communication. It is often a random or pseudo-random value that ensures
+        that old communications cannot be reused in replay attacks.
+      </p>
+      <h2>Modern Stream Ciphers</h2>
+      <p>
+        Stream ciphers mimic the principle of a OTP, but generate a
+        pseudo-random keystream $KS$ from a secret key $K$ and a nonce $N$:
+      </p>
+      $$ KS = SC(K,N) $$
+      <ul>
+        <li>
+          <p><u>Decryption:</u></p>
+          $$ P = C \oplus KS $$
+        </li>
+        <li>
+          <p><u>Encryption:</u></p>
+          $$ C = P \oplus KS $$
+        </li>
+      </ul>
+      <h3>Remark</h3>
+      <p>
+        Compared to OTP, stream ciphers are practical because the keystream can
+        be generated on the fly from a short key, rather than requiring a key as
+        long as the message.
+      </p>
+      <h2>Reusing a nonce</h2>
+      <p>
+        Reusing a nonce with the same key in stream ciphers can lead to serious
+        security vulnerabilities. If an attacker knows or can guess the
+        plaintext of one message, they can easily derive the keystream and use
+        it to decrypt other messages encrypted with the same nonce and key.
+        <br />
+        Same key and same nonce imply the same keystream $KS$:
+      </p>
+      $$ C_1 = P_1 \oplus KS $$ $$ C_2 = P_2 \oplus KS $$
+      <p>An attacker can always compute:</p>
+      $$ C_1 \oplus C_2 = P_1 \oplus P_2 $$
+      <h2>Feedback Shift Registers, FSR</h2>
+      <p>
+        A Feedback Shift Register or FSR, is a type of shift register used in
+        stream ciphers to generate a pseudo-random keystream. It consists of a
+        series of flip-flops connected in a linear or non-linear feedback
+        configuration.
+      </p>
+      <h2>Linear and Non-Linear FSR</h2>
+      <p>
+        A linear FSR uses only XOR operations in its feedback function, while a
+        non-linear FSR uses more complex functions. Non-linear FSRs are
+        generally more secure and harder to break. For cryptographic security,
+        FSRs must have long periods and be combined with non-linear functions.
+        Practical designs combine several LFSRs with a non-linear combining
+        function to produce a less predictable keystream.
+      </p>
+      <h2>Block cipher</h2>
+      <h3>Definition</h3>
+      <p>
+        A block cipher is a symmetric encryption algorithm that operates on
+        fixed-size blocks of data. It uses a secret key $K$ to transform a
+        plaintext block $P$ into a ciphertext block $C$, and vice versa.
+      </p>
+      <ul>
+        <li>
+          <p><u>Encryption:</u></p>
+          $C= E (K , P)$
+        </li>
+        <li>
+          <p><u>Decryption:</u></p>
+          $P= D (K , C)$
+        </li>
+      </ul>
+      <h2>AES, Advanced Encryption Standard</h2>
+      <p>
+        AES is a widely used symmetric block cipher that operates on 128-bit
+        blocks and supports key sizes of 128, 192, or 256 bits. It is known for
+        its security and efficiency and is used in various applications,
+        including secure communications and data storage.
+      </p>
+      <h2>Electronic Codebook Mode, ECB</h2>
+      <p>
+        ECB is a mode of operation for block ciphers where each block of
+        plaintext is encrypted independently. This can lead to patterns in the
+        ciphertext if the same plaintext blocks are encrypted.
+      </p>
+      <img
+        src="../img/Cryptography/ecb.png"
+        alt="Electronic Codebook Mode, ECB"
+        class="zeichnungen-big"
+      />
+      <h2>Cipher Block Chaining, CBC</h2>
+      <p>
+        CBC is a mode of operation for block ciphers where each block of
+        plaintext is XORed with the previous ciphertext block before being
+        encrypted. This ensures that identical plaintext blocks produce
+        different ciphertext blocks, making patterns less visible.
+      </p>
+      <img
+        src="../img/Cryptography/cbc.png"
+        alt="Cipher Block Chaining"
+        class="zeichnungen-big"
+      />
+      <h2>Counter Mode, CTR, AES stream cipher mode</h2>
+      <p>
+        CTR is a mode of operation for block ciphers that turns a block cipher
+        into a stream cipher. It uses a counter value that is encrypted with the
+        key to generate a keystream, which is then XORed with the plaintext.
+      </p>
+      <img
+        src="../img/Cryptography/ctr.png"
+        alt="Counter Mode, CTR"
+        class="zeichnungen-big"
+      />
+      <h2>Padding in AES</h2>
+      <p>
+        Padding is used in AES to ensure that the plaintext is a multiple of the
+        block size, the padding bytes are added to make the total length a
+        multiple of 16 bytes.
+      </p>
+      <img
+        src="../img/Cryptography/padding.png"
+        alt="padding in aes"
+        class="zeichnungen"
+      />
+      <h2>One-way functions</h2>
+      <p>
+        A one-way function is a mathematical function that is easy to compute in
+        one direction but computationally infeasible to inverse of the function.
+      </p>
+      <h2>Complexity theory</h2>
+      <p>
+        Complexity theory studies the resources required to solve computational
+        problems, such as time and space. It classifies problems based on their
+        inherent difficulty and the efficiency of algorithms that solve them.
+        The focus is on the algorithm, not on implementation or hardware. <br />
+        Complexity theory distinguishes problems solvable in polynomial time
+        from those that are not.
+      </p>
+      <h2>RSA</h2>
+      <p>
+        RSA is a public-key cryptosystem that uses the product of two large
+        prime numbers for encryption and decryption. It is widely used for
+        secure data transmission and digital signatures.
+      </p>
+      <h3>Remark</h3>
+      <p>
+        The name RSA stands for Rivest, Shamir, and Adleman, the three inventors
+        of the algorithm.
+      </p>
+      <img src="../img/Cryptography/rsa.png" alt="RSA" class="zeichnungen" />
+      <h2>Euler's totient function</h2>
+      <h3>Definition</h3>
+      <p>
+        Euler's totient function $\phi(n)$ counts the positive integers up to
+        $n$ that are relatively prime to $n$. For two distinct prime numbers $p$
+        and $q$, $\phi(p \cdot q) = (p-1)(q-1)$.
+      </p>
+      <h2>RSA Algorithm</h2>
+      <ul>
+        <li>
+          <p><u>Key Generation:</u></p>
+          <ol>
+            <li><p>Select two large prime numbers $p$ and $q$.</p></li>
+            <li><p>Compute $n = p \cdot q$.</p></li>
+            <li><p>Compute the totient $\phi(n) = (p-1)(q-1)$.</p></li>
+            <li>
+              <p>
+                Choose an integer $e$ such that $1 < e < \phi(n)$ and $\gcd(e,
+                \phi(n)) = 1$.
+              </p>
+            </li>
+            <li>
+              <p>Compute $d$ such that $d \cdot e \equiv 1 \mod \phi(n)$.</p>
+            </li>
+            <li>
+              <p>The public key is $(e, n)$ and the private key is $(d, n)$.</p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p><u>Encryption:</u></p>
+          $$ C = P^e \mod n $$
+        </li>
+        <li>
+          <p><u>Decryption:</u></p>
+          $$ P = C^d \mod n $$
+        </li>
+      </ul>
+      <h2>Digital signatures</h2>
+      <p>
+        A digital signature is a cryptographic technique used to verify the
+        authenticity and integrity of a digital message or document. It provides
+        assurance that the message was created by a known sender and has not
+        been altered in transit. Signatures rely on asymmetric cryptography,
+        where the sender uses their private key to sign the message, and the
+        recipient uses the sender's public key to verify the signature.
+      </p>
+      <h2>Signing a message</h2>
+      <p>
+        To sign a message $x$, the sender computes a hash of the message using a
+        cryptographic hash function $h(x)$, then encrypts the hash with their
+        private key $d$ to create the digital signature $S$:
+      </p>
+      <img
+        src="../img/Cryptography/signing-message.png"
+        alt="signing a message"
+        class="zeichnungen"
+      />
+      <h2>Verifying a signature</h2>
+      <p>
+        To verify the signature, the recipient decrypts the signature $S$ using
+        the sender's public key $e$ to obtain the hash value $h(x)$, then
+        computes the hash of the received message and compares it to the
+        decrypted hash. If they match, the signature is valid.
+      </p>
+      <img
+        src="../img/Cryptography/verifying-message.png"
+        alt="verifying a message"
+        class="zeichnungen"
+      />
+      <h2>RSA signing and verification</h2>
+      <p>
+        The same RSA operations can be used either for encryption or for
+        signing, depending on which key is used.
+      </p>
+      <ul>
+        <li>
+          <p><u>Signing:</u></p>
+          $$ S = h(x)^d \mod n $$
+        </li>
+        <li>
+          <p><u>Verifying:</u></p>
+          $$ h(x) \stackrel{?}{=} S^e \mod n $$
+        </li>
+      </ul>
+      <h2>Security properties of hash functions</h2>
+      <p>A secure hash function should have the following properties:</p>
+      <img
+        src="../img/Cryptography/security-properties-of-hash-functions.png"
+        alt="Security properties of hash functions"
+        class="zeichnungen"
+      />
+      <ul>
+        <li>
+          <p>
+            <u>Preimage resistance:</u> Given a hash value $h$, it is
+            computationally infeasible to find a message $x$ such that $h(x) =
+            h$.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Second preimage resistance:</u> Given a message $x_1$, it is
+            computationally infeasible to find a different message $x_2$ such
+            that $h(x_1) = h(x_2)$.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Collision resistance:</u> It is computationally infeasible to
+            find two different messages $x_1$ and $x_2$ such that $h(x_1) =
+            h(x_2)$.
+          </p>
+        </li>
+      </ul>
+      <h2>Requirements for cryptographic hash functions</h2>
+      <ul>
+        <li>
+          <p>
+            <u>Efficiency:</u>
+          </p>
+          <p>The function should be fast to compute for any input size.</p>
+        </li>
+        <li>
+          <p>
+            <u>Avalanche effect:</u>
+          </p>
+          <p>
+            A small change in the input should drastically change the output.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Preimage resistance:</u>
+          </p>
+          <p>
+            Given a hash output, it should be infeasible to find an input that
+            produces it.
+          </p>
+        </li>
+        <li>
+          <p>
+            <u>Second preimage resistance:</u>
+          </p>
+          <p>
+            Given one input, it should be infeasible to find another input with
+            the same hash.
+          </p>
+        </li>
+        <li>
+          <p><u>Collision resistance:</u></p>
+          <p>
+            It should be infeasible to find two different inputs that hash to
+            the same value.
+          </p>
+        </li>
+      </ul>
+      <h2>Compression-based hash functions, Merkle-Damgård constructions</h2>
+      <p>
+        The Merkle-Damgård construction is a method for building cryptographic
+        hash functions from a fixed-size compression function. It processes the
+        input message in fixed-size blocks, updating an internal state with each
+        block using the compression function. The final hash value is produced
+        after all blocks have been processed.
+      </p>
+      <img
+        src="../img/Cryptography/m-d-construction.png"
+        alt="Merkle-Damgård construction"
+        class="zeichnungen-big"
+      />
+      <h3>Properties</h3>
+      <ul>
+        <li>
+          <p><u>Handles messages of arbitrary length:</u></p>
+          <p>
+            Any message, short or long, can be processed by splitting it into
+            fixed-size blocks.
+          </p>
+        </li>
+        <li>
+          <p><u>Memory efficiency:</u></p>
+          <p>
+            Only the current block and intermediate hash need to be stored, not
+            the entire message.
+          </p>
+        </li>
+        <li>
+          <p><u>Strong security properties:</u></p>
+          <p>
+            Small changes in the message produce a completely different hash,
+            and security proofs rely on the compression function.
+          </p>
+        </li>
+        <li>
+          <p><u>Modularity and flexibility:</u></p>
+          <p>
+            Different secure compression functions can be used without changing
+            the overall structure.
+          </p>
+        </li>
+      </ul>
+      <h2>Sponge functions</h2>
+      <p>
+        A sponge function is a type of cryptographic hash function that
+        processes input data of arbitrary length to produce an output of
+        arbitrary length. It operates in two phases: the absorbing phase, where
+        input data is mixed into an internal state, and the squeezing phase,
+        where output data is extracted from the state. XOR and other operations
+        are used to mix the data thoroughly.
+      </p>
+      <img
+        src="../img/Cryptography/sponge-functions.png"
+        alt="sponge function"
+        class="zeichnungen"
+      />
+      <h3>Properties</h3>
+      <ul>
+        <li>
+          <p><u>Flexible output length:</u></p>
+          <p>
+            Can produce hashes of arbitrary length, unlike fixed-length
+            Merkle-Dåmgard constructions.
+          </p>
+        </li>
+        <li>
+          <p><u>Stronger security properties:</u></p>
+          <p>
+            Resistant to length-extension attacks that affect some
+            Merkle-Dåmgard hashes.
+          </p>
+        </li>
+        <li>
+          <p><u>Unified design:</u></p>
+          <p>
+            The same structure can be used for hashing, message authentication
+            codes, and pseudo-random number generation.
+          </p>
+        </li>
+        <li>
+          <p><u>Efficient for large data:</u></p>
+          <p>
+            Processes input block by block without needing to store the entire
+            message in memory.
+          </p>
+        </li>
+      </ul>
+      <h2>SHA, Secure Hash Algorithm</h2>
+      <p>
+        SHA is a family of cryptographic hash functions designed to provide data
+        integrity and security.
+      </p>
+      <ul>
+        <li>
+          <p><u>SHA-0:</u></p>
+          <p>
+            Merkle-Damgård construction; withdrawn due to a design flaw; never
+            widely used.
+          </p>
+        </li>
+        <li>
+          <p><u>SHA-1:</u></p>
+          <p>
+            Merkle-Damgård construction; considered insecure today; vulnerable
+            to collision attacks.
+          </p>
+        </li>
+        <li>
+          <p><u>SHA-2:</u></p>
+          <p>
+            Merkle-Damgård construction; available in four variants: SHA-224,
+            SHA-256, SHA-384, SHA-512. The number indicates the hash length in
+            bits.
+          </p>
+        </li>
+        <li>
+          <p><u>SHA-3, Keccak:</u></p>
+          <p>
+            Sponge construction; also available in four variants: SHA3-224,
+            SHA3-256, SHA3-384, SHA3-512.
+          </p>
+        </li>
+      </ul>
+      <h2>BLAKE Hash Functions</h2>
+      <p>
+        < BLAKE is a family of cryptographic hash functions based on the BLAKE
+        construction, which is a variant of the sponge construction. It was
+        designed to be faster and more secure than SHA-2.
+      </p>
+      <ul>
+        <li>
+          <p><u>BLAKE2:</u></p>
+          <p>
+            BLAKE2 is based on the HAIFA construction, an improved
+            Merkle-Damgård variant with built-in salting, counters, and optional
+            tree hashing for parallelism. It is fast and optimized for many
+            platforms, including single-core and multi-core systems.
+          </p>
+        </li>
+        <li>
+          <p><u>BLAKE3:</u></p>
+          <p>
+            BLAKE3 uses a Merkle-tree based structure and internal BLAKE2-style
+            permutation functions, offering very high performance and
+            parallelism.
+          </p>
+        </li>
+      </ul>
+      <h3>Remark</h3>
+      <p>
+        Both BLAKE2 and BLAKE3 are widely available, for example included in
+        OpenSSL.
+      </p>
+      <h2>Keyed hashing</h2>
+      <p>
+        Keyed hashing involves using a secret key in conjunction with a hash
+        function to produce a hash value that provides both data integrity and
+        authenticity.
+      </p>
+      <h2>Message Authentication Code, MAC</h2>
+      <p>
+        A Message Authentication Code is a cryptographic technique used to
+        ensure the integrity and authenticity of a message. It combines a secret
+        key with the message data to produce a tag that can be verified by the
+        recipient.
+      </p>
+      <h2>HMAC</h2>
+      <p>
+        HMAC is a specific type of MAC that uses a cryptographic hash function
+        along with a secret key. It provides strong security properties and is
+        widely used in various applications, including secure communications
+        protocols.
+      </p>
+      <h2>HMAC algorithm</h2>
+      <ul>
+        <li>
+          <p>
+            Apply the key with inner padding or ipad, to the message and hash
+            it.
+          </p>
+        </li>
+        <li>
+          <p>
+            Apply the key with outer padding or opad, to the result and hash
+            again.
+          </p>
+        </li>
+      </ul>
+      <img
+        src="../img/Cryptography/hmac.png"
+        alt="hmac algorithm"
+        class="zeichnungen-big"
+      />
+      <h2>CMAC</h2>
+      <p>
+        CMAC is a block cipher-based MAC that uses a symmetric key block cipher
+        algorithm, such as AES, to provide data integrity and authenticity. It
+        is designed to be secure and efficient for use in various applications.
+      </p>
+      <h2>CMAC algorithm</h2>
+      <ul>
+        <li><p>The message is divided into blocks.</p></li>
+        <li>
+          <p>
+            Each block is processed with the block cipher using a secret key
+            $K$.
+          </p>
+        </li>
+        <li><p>The final block produces the CMAC output.</p></li>
+      </ul>
+      <img
+        src="../img/Cryptography/cmac.png"
+        alt="cmac algorithm"
+        class="zeichnungen-big"
+      />
+      <h2>Authenticated encryption</h2>
+      <p>
+        Authenticated encryption is a cryptographic technique that combines
+        encryption and authentication to provide both confidentiality and
+        integrity for data. It ensures that the data is not only kept secret but
+        also has not been tampered with during transmission.
+      </p>
+      <h3>Formula</h3>
+      $$ \text{AD}(K , C , T ) = P $$
+      <p>
+        where $AD$ stands for authenticated encryption, $P$ is the plaintext,
+        $K$ the key, $C$ the ciphertext, and $T$ the authentication tag.
+      </p>
+      <h2>Authenticated encryption workflow</h2>
+      <p>
+        Authenticated encryption ensures both the confidentiality of the message
+        and its integrity. Two common approaches:
+      </p>
+      <img
+        src="../img/Cryptography/authenticated-encryption-workflow.png"
+        alt="Authenticated encryption workflow"
+        class="zeichnungen-big"
+      />
+      <ol>
+        <li>
+          <p><u>Encrypt-then-MAC:</u></p>
+          <p>
+            This method first encrypts the plaintext to create a ciphertext,
+            ensuring confidentiality. Then, it generates a Message
+            Authentication Code (MAC) over the resulting ciphertext. This
+            approach is considered the most secure because the MAC protects the
+            encrypted data, and any tampering will be detected before
+            decryption.
+          </p>
+        </li>
+        <li>
+          <p><u>MAC-then-Encrypt:</u></p>
+          <p>
+            This method first generates a MAC over the original plaintext to
+            ensure its integrity. Then, it encrypts both the plaintext and the
+            MAC together. This approach is less secure because the MAC is based
+            on the unencrypted data, making it vulnerable to certain attacks,
+            such as padding oracle attacks.
+          </p>
+        </li>
+      </ol>
+      <h2>AES-GCM, Advanced Encryption Standard, Galois/Counter Mode</h2>
+      <p>
+        AES-GCM is a widely used authenticated encryption mode that provides
+        both confidentiality and integrity. It uses AES in CTR mode for
+        encryption and a Galois field multiplication mechanism to generate an
+        authentication tag. AES-GCM is fast, parallelizable, and supports
+        associated data, making it ideal for secure communication protocols such
+        as TLS and IPsec. It requires a unique nonce for each encryption to
+        ensure security.
+      </p>
+      <h2>OCB, Offset Codebook</h2>
+      <p>
+        OCB is a highly efficient authenticated encryption mode that combines
+        encryption and authentication in a single pass, similar to AES-GCM. It
+        uses AES to encrypt data while generating a message authentication code
+        or MAC, internally, ensuring both confidentiality and integrity. OCB is
+        faster than many other modes because it processes data in parallel and
+        requires only one encryption call per block. However, it is less widely
+        adopted due to patent restrictions, and AES-GCM is more commonly used in
+        practice.
+      </p>
+    </div>
+  </body>
+</html>
