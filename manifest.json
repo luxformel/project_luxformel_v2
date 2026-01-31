@@ -1,10 +1,16 @@
 {
   "name": "luxformel.info",
   "short_name": "luxformel",
-  "start_url": ".",
+  "description": "Léiert Formele wéi nach ni!",
+  "start_url": "/",
+  "scope": "/",
   "background_color": "#ffffff",
   "theme_color": "#7d68f9",
   "display": "standalone",
+  "lang": "lb",
+  "dir": "ltr",
+  "orientation": "any",
+  "categories": ["education", "reference"],
   "icons": [
     {
       "src": "/img/logos/192/logo192.png",
@@ -18,5 +24,6 @@
       "type": "image/png",
       "purpose": "maskable any"
     }
-  ]
+  ],
+  "prefer_related_applications": false
 }

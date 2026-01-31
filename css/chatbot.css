@@ -1,0 +1,98 @@
+/* Simple floating chatbot styles */
+.chatbot-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #005fcc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 9999;
+}
+.chatbot-window {
+  position: fixed;
+  right: 20px;
+  bottom: 88px;
+  width: 320px;
+  max-height: 60vh;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+}
+.chatbot-header {
+  background: #005fcc;
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
+}
+.chatbot-messages {
+  padding: 10px;
+  overflow: auto;
+  flex: 1 1 auto;
+}
+.chatbot-input {
+  border-top: 1px solid #eee;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+}
+.chatbot-input input {
+  flex: 1 1 auto;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.chatbot-input button {
+  background: #005fcc;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.msg {
+  margin: 8px 0;
+  display: block;
+}
+.msg.bot {
+  background: #f1f5ff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  max-width: 100%;
+}
+.msg.user {
+  text-align: right;
+}
+.suggestion-list {
+  margin-top: 6px;
+  padding: 0;
+  list-style: none;
+}
+.suggestion-list li {
+  margin: 6px 0;
+}
+.suggestion-list a {
+  color: #005fcc;
+  text-decoration: none;
+}
+.small-desc {
+  color: #666;
+  font-size: 0.9em;
+}

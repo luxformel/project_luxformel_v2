@@ -204,3 +204,62 @@ lines.append('</html>')
 
 OUT.write_text('\n'.join(lines), encoding='utf-8')
 print(f'Wrote {OUT} with {len(html_files)} entries')
+# --- Generate sitemap.xml ---
+try:
+    import json
+    from datetime import datetime, timezone
+
+    # try to detect a base URL from manifest.json or env var
+    base = None
+    mf = ROOT / 'manifest.json'
+    if mf.exists():
+        try:
+            m = json.loads(mf.read_text(encoding='utf-8'))
+            for k in ('start_url', 'homepage', 'url', 'site_url', 'site', 'base_url'):
+                if k in m:
+                    base = m[k]
+                    break
+        except Exception:
+            base = None
+    base = os.environ.get('SITEMAP_BASE', base or '/')
+    if not base.endswith('/'):
+        base = base + '/'
+
+    xml_lines = []
+    xml_lines.append('<?xml version="1.0" encoding="UTF-8"?>')
+    xml_lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+
+    for p in html_files:
+        full = ROOT / p
+        parts = str(p).replace('\\\\', '/').split('/')
+        # convert index.html to directory URL
+        if parts[-1].lower() == 'index.html':
+            url_path = '/'.join(parts[:-1])
+            if url_path:
+                loc = base.rstrip('/') + '/' + url_path + '/'
+            else:
+                loc = base.rstrip('/') + '/'
+        else:
+            loc = base.rstrip('/') + '/' + '/'.join(parts)
+
+        # normalize duplicate slashes (but keep scheme if present)
+        loc = re.sub(r'(?<!:)//+', '/', loc)
+
+        try:
+            lm = datetime.fromtimestamp(full.stat().st_mtime, timezone.utc).date().isoformat()
+        except Exception:
+            lm = None
+
+        xml_lines.append('  <url>')
+        xml_lines.append(f'    <loc>{loc}</loc>')
+        if lm:
+            xml_lines.append(f'    <lastmod>{lm}</lastmod>')
+        xml_lines.append('  </url>')
+
+    xml_lines.append('</urlset>')
+
+    OUT_XML = ROOT / 'sitemap.xml'
+    OUT_XML.write_text('\n'.join(xml_lines), encoding='utf-8')
+    print(f'Wrote {OUT_XML} with {len(html_files)} entries')
+except Exception as e:
+    print('Failed to write sitemap.xml:', e)

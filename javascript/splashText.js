@@ -750,7 +750,11 @@ var splashTexts = [
   "Don't miss the Luxformel investor call!",
   "modus ponens",
   "modus tollens",
-  "1/752",
+  "Use Eluxa to navigate the website!",
+  "Benotzt Eluxa fir Saachen um Site ze fannen!",
+  "Benutzen Sie Eluxa um Luxformel zu entdecken!",
+  "Déi Kaz mat dräi Been vu Maacher!",
+  "1/756",
 ];
 function generateRandomText() {
   var randomNumber = Math.floor(Math.random() * splashTexts.length);
